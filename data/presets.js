@@ -1,4 +1,4 @@
-const presets = [
+export const presets = [
   {
     id: 'preset1',
     name: 'Clean Basic',
@@ -18,43 +18,43 @@ const presets = [
   {
     id: 'preset3',
     name: 'Crunch Universal',
-    description: 'Medium‑gain crunch on a Plexi 45. Versatile for rock, punk or blues – responsive to your picking dynamics.',
+    description: 'Medium-gain crunch on a Plexi 45. Versatile for rock, punk or blues – responsive to your picking dynamics.',
     references: ['AC/DC', 'Led Zeppelin', 'Foo Fighters', 'Nirvana'],
     file: 'presets/preset3.json',
     qr: 'qrcodes/preset3.png'
   },
   {
     id: 'preset4',
-    name: 'Heavy Rhythm – Brit 800',
-    description: 'High‑gain rhythm tone based on a Marshall JCM800 with a Tube Screamer push. Tight low end and articulate attack.',
+    name: 'Heavy Rhythm – Brit 800',
+    description: 'High-gain rhythm tone based on a Marshall JCM800 with a Tube Screamer push. Tight low end and articulate attack.',
     references: ['Metallica', 'Megadeth', 'Judas Priest', 'Slayer'],
     file: 'presets/preset4.json',
     qr: 'qrcodes/preset4.png'
   },
   {
     id: 'preset5',
-    name: 'Metal Lead – Brit 800',
-    description: 'Lead version of the Brit 800 with extra mids, delay and hall reverb. Designed for soaring solos that cut through the mix.',
-    references: ['Iron Maiden', "Guns N' Roses", 'Dream Theater', 'Metallica'],
+    name: 'Metal Lead – Brit 800',
+    description: 'Lead version of the Brit 800 with extra mids, delay and hall reverb. Designed for soaring solos that cut through the mix.',
+    references: ['Iron Maiden', "Guns N' Roses", 'Dream Theater', 'Metallica'],
     file: 'presets/preset5.json',
     qr: 'qrcodes/preset5.png'
   },
   {
     id: 'preset6',
     name: 'Ambient Clean Mod',
-    description: 'Wide clean tone with stereo chorus, delay and shimmer reverb. Great for 80s‑inspired parts and dreamy textures.',
-    references: ['The Cure', 'The Police', 'Slowdive', 'Cocteau Twins'],
+    description: 'Wide clean tone with stereo chorus, delay and shimmer reverb. Great for 80s-inspired parts and dreamy textures.',
+    references: ['The Cure', 'The Police', 'Slowdive', 'Cocteau Twins'],
     file: 'presets/preset6.json',
     qr: 'qrcodes/preset6.png'
   },
   {
     id: 'preset7',
     name: 'OctaSpace Lead',
-    description: 'An experimental lead sound with detune, tape echo and shimmer. Ideal for psychedelic, post‑rock and shoegaze.',
-    references: ['Radiohead', 'Smashing Pumpkins', 'Tame Impala', 'My Bloody Valentine'],
+    description: 'An experimental lead sound with detune, tape echo and shimmer. Ideal for psychedelic, post-rock and shoegaze.',
+    references: ['Radiohead', 'Smashing Pumpkins', 'Tame Impala', 'My Bloody Valentine'],
     file: 'presets/preset7.json',
     qr: 'qrcodes/preset7.png'
   }
 ];
 
-module.exports = { presets };
+export default presets;
