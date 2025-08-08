@@ -3,23 +3,27 @@ import path from 'path';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';
+import Knob from '../../components/Knob';
 import { presets } from '../../data/presets';
 import { deviceMappings } from '../../data/deviceMappings';
 
-function Knob({ label, value }) {
-  const angle = (value / 100) * 270 - 135;
-  return (
-    <div className="flex flex-col items-center w-16">
-      <div className="relative w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-xs font-mono">
-        <div
-          className="absolute left-1/2 top-1/2 w-1 h-4 bg-red-500 origin-bottom"
-          style={{ transform: `translate(-50%, -100%) rotate(${angle}deg)` }}
-        />
-        <span className="text-gray-200">{value}</span>
-      </div>
-      <span className="mt-1 text-xs text-gray-400 text-center">{label}</span>
-    </div>
-  );
+const slotColors = {
+  Noisegate: '#10b981',
+  Compressor: '#eab308',
+  EFX: '#f97316',
+  DLY: '#7dd3fc',
+  Amp: '#ef4444',
+  IR: '#3b82f6',
+  EQ: '#9ca3af',
+  Mod: '#a855f7',
+  RVB: '#d946ef'
+};
+
+function formatLabel(key) {
+  return key
+    .replace(/_db$/i, ' dB')
+    .replace(/_Hz$/i, ' Hz')
+    .replace(/_/g, ' ');
 }
 
 function EqDisplay({ params }) {
@@ -57,7 +61,7 @@ function EqDisplay({ params }) {
               />
               <div className="absolute top-1/2 left-0 w-full h-px bg-gray-600" />
             </div>
-            <span className="mt-1 text-xs text-gray-400">{freq}</span>
+            <span className="mt-1 text-xs text-gray-400">{freq.replace('Hz', ' Hz')}</span>
           </div>
         );
       })}
@@ -81,10 +85,15 @@ export default function PresetPage({ preset, data }) {
       <ol className="space-y-4 mb-4">
         {data.chain.map((block, idx) => {
           const realName = deviceMappings[block.slot]?.[block.model];
+          const color = slotColors[block.slot];
           return (
-            <li key={idx} className="p-4 rounded bg-gray-800">
+            <li
+              key={idx}
+              className="relative p-4 rounded bg-gray-800 border-2"
+              style={{ borderColor: color }}
+            >
               <div className="font-semibold mb-2">
-                {block.slot}: {block.model}
+                {block.model}
                 {realName && <span className="text-gray-400"> — {realName}</span>}
               </div>
               {block.slot === 'EQ' ? (
@@ -92,10 +101,21 @@ export default function PresetPage({ preset, data }) {
               ) : (
                 <div className="flex flex-wrap gap-4">
                   {Object.entries(block.params).map(([key, value]) => (
-                    <Knob key={key} label={key} value={Number(value)} />
+                    <Knob
+                      key={key}
+                      label={formatLabel(key)}
+                      value={Number(value)}
+                      color={color}
+                    />
                   ))}
                 </div>
               )}
+              <span
+                className="absolute bottom-1 right-1 px-2 py-0.5 text-xs font-semibold rounded"
+                style={{ backgroundColor: color, color: '#000' }}
+              >
+                {block.slot}
+              </span>
             </li>
           );
         })}
