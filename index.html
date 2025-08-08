@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Must‑Have Presets for NUX Mighty Plug</title>
+  <meta name="description" content="Download essential presets for the NUX Mighty Plug headphone amplifier. Scan the QR codes to load clean, crunch, metal and ambient tones instantly with Mightier Amp.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Must‑Have Presets for NUX Mighty Plug</h1>
+    <p>
+      We’ve spent hours tweaking tones so you don’t have to. Below you’ll find carefully balanced presets for the NUX Mighty Plug and Mighty Plug Pro. Each card includes a short description, musical references and a QR code that contains the full preset as a JSON definition. Scan it with the <em>Mightier Amp</em> app to load the sound instantly, or download the JSON file to import manually.
+    </p>
+
+    <input type="text" id="preset-filter" placeholder="Search presets...">
+
+    <div class="preset-list">
+      <!-- Clean Basic -->
+      <div class="preset card">
+        <h3>Clean Basic</h3>
+        <p>A classic clean tone for chords and arpeggios. Slight compression and a hall reverb keep it smooth without getting muddy.</p>
+        <p><strong>References:</strong></p>
+        <ul class="refs">
+          <li>Pink Floyd</li>
+          <li>Dire Straits</li>
+          <li>The Police</li>
+          <li>Stevie Ray Vaughan</li>
+        </ul>
+        <a class="download-link" href="presets/preset1.json" download>Download preset</a>
+        <img src="qrcodes/preset1.png" alt="QR code for Clean Basic preset">
+      </div>
+
+      <!-- Atmospheric Clean -->
+      <div class="preset card">
+        <h3>Atmospheric Clean</h3>
+        <p>Ambient clean tone with digital delay and shimmer reverb. Perfect for slow intros and spacious soundscapes.</p>
+        <p><strong>References:</strong></p>
+        <ul class="refs">
+          <li>Sigur Rós</li>
+          <li>Explosions in the Sky</li>
+          <li>U2</li>
+          <li>Coldplay</li>
+        </ul>
+        <a class="download-link" href="presets/preset2.json" download>Download preset</a>
+        <img src="qrcodes/preset2.png" alt="QR code for Atmospheric Clean preset">
+      </div>
+
+      <!-- Crunch Universal -->
+      <div class="preset card">
+        <h3>Crunch Universal</h3>
+        <p>Medium‑gain crunch on a Plexi 45. Versatile for rock, punk or blues – responsive to your picking dynamics.</p>
+        <p><strong>References:</strong></p>
+        <ul class="refs">
+          <li>AC/DC</li>
+          <li>Led Zeppelin</li>
+          <li>Foo Fighters</li>
+          <li>Nirvana</li>
+        </ul>
+        <a class="download-link" href="presets/preset3.json" download>Download preset</a>
+        <img src="qrcodes/preset3.png" alt="QR code for Crunch Universal preset">
+      </div>
+
+      <!-- Heavy Rhythm -->
+      <div class="preset card">
+        <h3>Heavy Rhythm – Brit 800</h3>
+        <p>High‑gain rhythm tone based on a Marshall JCM800 with a Tube Screamer push. Tight low end and articulate attack.</p>
+        <p><strong>References:</strong></p>
+        <ul class="refs">
+          <li>Metallica</li>
+          <li>Megadeth</li>
+          <li>Judas Priest</li>
+          <li>Slayer</li>
+        </ul>
+        <a class="download-link" href="presets/preset4.json" download>Download preset</a>
+        <img src="qrcodes/preset4.png" alt="QR code for Heavy Rhythm Brit 800 preset">
+      </div>
+
+      <!-- Metal Lead -->
+      <div class="preset card">
+        <h3>Metal Lead – Brit 800</h3>
+        <p>Lead version of the Brit 800 with extra mids, delay and hall reverb. Designed for soaring solos that cut through the mix.</p>
+        <p><strong>References:</strong></p>
+        <ul class="refs">
+          <li>Iron Maiden</li>
+          <li>Guns N' Roses</li>
+          <li>Dream Theater</li>
+          <li>Metallica</li>
+        </ul>
+        <a class="download-link" href="presets/preset5.json" download>Download preset</a>
+        <img src="qrcodes/preset5.png" alt="QR code for Metal Lead Brit 800 preset">
+      </div>
+
+      <!-- Ambient Clean Mod -->
+      <div class="preset card">
+        <h3>Ambient Clean Mod</h3>
+        <p>Wide clean tone with stereo chorus, delay and shimmer reverb. Great for 80s‑inspired parts and dreamy textures.</p>
+        <p><strong>References:</strong></p>
+        <ul class="refs">
+          <li>The Cure</li>
+          <li>The Police</li>
+          <li>Slowdive</li>
+          <li>Cocteau Twins</li>
+        </ul>
+        <a class="download-link" href="presets/preset6.json" download>Download preset</a>
+        <img src="qrcodes/preset6.png" alt="QR code for Ambient Clean Mod preset">
+      </div>
+
+      <!-- OctaSpace Lead -->
+      <div class="preset card">
+        <h3>OctaSpace Lead</h3>
+        <p>An experimental lead sound with detune, tape echo and shimmer. Ideal for psychedelic, post‑rock and shoegaze.</p>
+        <p><strong>References:</strong></p>
+        <ul class="refs">
+          <li>Radiohead</li>
+          <li>Smashing Pumpkins</li>
+          <li>Tame Impala</li>
+          <li>My Bloody Valentine</li>
+        </ul>
+        <a class="download-link" href="presets/preset7.json" download>Download preset</a>
+        <img src="qrcodes/preset7.png" alt="QR code for OctaSpace Lead preset">
+      </div>
+    </div>
+
+    <p><a class="download-link" href="mailto:1fokingleb@gmail.com">Make me a preset</a></p>
+  </main>
+  <script>
+    const filterInput = document.getElementById('preset-filter');
+    filterInput.addEventListener('input', () => {
+      const query = filterInput.value.toLowerCase();
+      document.querySelectorAll('.preset.card').forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        const desc = card.querySelector('p').textContent.toLowerCase();
+        const refs = Array.from(card.querySelectorAll('.refs li'))
+          .map(li => li.textContent.toLowerCase())
+          .join(' ');
+        if (name.includes(query) || desc.includes(query) || refs.includes(query)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
