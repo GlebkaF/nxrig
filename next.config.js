@@ -2,6 +2,10 @@
 const nextConfig = {
   output: 'export',
   images: { unoptimized: true },
+  basePath: '/nux-must-have-site',     // repository name
+  assetPrefix: '/nux-must-have-site',
+  trailingSlash: true,
 };
+
 
 module.exports = nextConfig;
