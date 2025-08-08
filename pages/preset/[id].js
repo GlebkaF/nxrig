@@ -1,18 +1,52 @@
 import fs from 'fs';
 import path from 'path';
-import { Fragment } from 'react';
+import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import { presets } from '../../data/presets';
 import { deviceMappings } from '../../data/deviceMappings';
 
+function Knob({ label, value }) {
+  const angle = (value / 100) * 270 - 135;
+  return (
+    <div className="flex flex-col items-center w-16">
+      <div className="relative w-12 h-12 rounded-full bg-gray-700">
+        <div
+          className="absolute left-1/2 top-1/2 w-1 h-4 bg-red-500 origin-bottom"
+          style={{ transform: `translate(-50%, -100%) rotate(${angle}deg)` }}
+        />
+      </div>
+      <span className="mt-1 text-xs text-gray-400 text-center">{label}</span>
+    </div>
+  );
+}
+
+function EqDisplay({ params }) {
+  return (
+    <div className="flex items-end h-24 space-x-2">
+      {Object.entries(params).map(([freq, value]) => (
+        <div key={freq} className="flex flex-col items-center">
+          <div className="w-3 bg-gray-700 h-20 relative">
+            <div
+              className="bg-red-500 absolute bottom-0 w-full"
+              style={{ height: `${value}%` }}
+            />
+          </div>
+          <span className="mt-1 text-xs text-gray-400">{freq}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function PresetPage({ preset, data }) {
+  const { basePath } = useRouter();
   return (
     <div className="min-h-screen p-4 bg-gray-900 text-gray-100">
       <Header />
       <h1 className="text-2xl font-bold mb-2">{preset.name}</h1>
       <p className="mb-4">{preset.description}</p>
       <img
-        src={preset.qr}
+        src={`${basePath}/${preset.qr}`}
         alt={`${preset.name} QR`}
         className="w-48 h-48 mx-auto mb-6"
       />
@@ -21,24 +55,20 @@ export default function PresetPage({ preset, data }) {
         {data.chain.map((block, idx) => {
           const realName = deviceMappings[block.slot]?.[block.model];
           return (
-            <li
-              key={idx}
-              className="border border-gray-700 p-4 rounded bg-gray-800"
-            >
+            <li key={idx} className="p-4 rounded bg-gray-800">
               <div className="font-semibold mb-2">
                 {block.slot}: {block.model}
-                {realName && (
-                  <span className="text-gray-400"> — {realName}</span>
-                )}
+                {realName && <span className="text-gray-400"> — {realName}</span>}
               </div>
-              <dl className="grid grid-cols-2 gap-1 text-sm">
-                {Object.entries(block.params).map(([key, value]) => (
-                  <Fragment key={key}>
-                    <dt className="text-gray-400">{key}</dt>
-                    <dd className="text-right">{value}</dd>
-                  </Fragment>
-                ))}
-              </dl>
+              {block.slot === 'EQ' ? (
+                <EqDisplay params={block.params} />
+              ) : (
+                <div className="flex flex-wrap gap-4">
+                  {Object.entries(block.params).map(([key, value]) => (
+                    <Knob key={key} label={key} value={Number(value)} />
+                  ))}
+                </div>
+              )}
             </li>
           );
         })}

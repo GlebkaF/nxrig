@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import { presets } from '../data/presets';
 
 export default function Home({ presets }) {
+  const { basePath } = useRouter();
   return (
     <div className="min-h-screen p-4 bg-gray-900 text-gray-100">
       <Header />
@@ -16,7 +18,7 @@ export default function Home({ presets }) {
             >
               <h2 className="text-xl font-semibold">{preset.name}</h2>
               <img
-                src={preset.qr}
+                src={`${basePath}/${preset.qr}`}
                 alt={`${preset.name} QR`}
                 className="w-40 h-40 mx-auto"
               />
