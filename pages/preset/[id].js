@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
-import Link from 'next/link';
+import Header from '../../components/Header';
 import { presets } from '../../data/presets';
 
 export default function PresetPage({ preset, data }) {
   return (
     <div className="min-h-screen p-4">
-      <Link href="/" className="text-blue-600 underline">← Back</Link>
+      <Header />
       <h1 className="text-2xl font-bold mb-2">{preset.name}</h1>
       <p className="mb-4">{preset.description}</p>
       <h2 className="text-xl font-semibold mb-2">Signal chain</h2>
@@ -22,9 +22,6 @@ export default function PresetPage({ preset, data }) {
           </li>
         ))}
       </ol>
-      <a href={`/${preset.file}`} className="text-blue-600 underline" download>
-        Download JSON
-      </a>
     </div>
   );
 }
