@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import { presets } from '../../data/presets';
@@ -22,20 +23,44 @@ function Knob({ label, value }) {
 }
 
 function EqDisplay({ params }) {
+  const freqs = Object.keys(params);
+  const [levels, setLevels] = useState(
+    freqs.reduce((acc, f) => ({ ...acc, [f]: 50 }), {})
+  );
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLevels(params), 100);
+    return () => clearTimeout(timer);
+  }, [params]);
+
   return (
-    <div className="flex items-end h-24 space-x-2">
-      {Object.entries(params).map(([freq, value]) => (
-        <div key={freq} className="flex flex-col items-center">
-          <span className="mb-1 text-xs text-gray-200">{value}</span>
-          <div className="w-3 bg-gray-700 h-20 relative">
-            <div
-              className="bg-red-500 absolute bottom-0 w-full"
-              style={{ height: `${value}%` }}
-            />
+    <div className="flex items-center h-32 space-x-3 p-4 bg-gray-900 rounded-lg border border-gray-700">
+      {freqs.map((freq) => {
+        const val = Number(levels[freq]);
+        const pos = Math.max(0, val - 50) * 2;
+        const neg = Math.max(0, 50 - val) * 2;
+        const display = Number(params[freq]) - 50;
+        return (
+          <div key={freq} className="flex flex-col items-center">
+            <span className="mb-1 text-xs text-gray-200">
+              {display >= 0 ? '+' : ''}
+              {display}
+            </span>
+            <div className="relative w-4 h-28 bg-gray-800 rounded overflow-hidden group">
+              <div
+                className="absolute bottom-1/2 w-full bg-gradient-to-t from-red-600 via-pink-500 to-yellow-300 transition-all duration-700 ease-out shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:animate-eqGlow"
+                style={{ height: `${pos}%` }}
+              />
+              <div
+                className="absolute top-1/2 w-full bg-gradient-to-b from-red-600 via-pink-500 to-yellow-300 transition-all duration-700 ease-out shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:animate-eqGlow"
+                style={{ height: `${neg}%` }}
+              />
+              <div className="absolute top-1/2 left-0 w-full h-px bg-gray-600" />
+            </div>
+            <span className="mt-1 text-xs text-gray-400">{freq}</span>
           </div>
-          <span className="mt-1 text-xs text-gray-400">{freq}</span>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
