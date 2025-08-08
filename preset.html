@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preset Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="preset-detail"></main>
+  <script src="presets.js"></script>
+  <script>
+    const container = document.getElementById('preset-detail');
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const preset = presets.find(p => p.id === id);
+    if (!preset) {
+      container.textContent = 'Preset not found.';
+    } else {
+      const title = document.createElement('h1');
+      title.textContent = preset.name;
+      container.appendChild(title);
+
+      const desc = document.createElement('p');
+      desc.textContent = preset.description;
+      container.appendChild(desc);
+
+      const refsTitle = document.createElement('p');
+      refsTitle.innerHTML = '<strong>References:</strong>';
+      container.appendChild(refsTitle);
+      const refsList = document.createElement('ul');
+      refsList.className = 'refs';
+      preset.references.forEach(r => {
+        const li = document.createElement('li');
+        li.textContent = r;
+        refsList.appendChild(li);
+      });
+      container.appendChild(refsList);
+
+      fetch(preset.file)
+        .then(res => res.json())
+        .then(data => {
+          const chainDiv = document.createElement('div');
+          chainDiv.className = 'card';
+          const chainTitle = document.createElement('h2');
+          chainTitle.textContent = 'Signal Chain';
+          chainDiv.appendChild(chainTitle);
+
+          data.chain.forEach(slot => {
+            const slotDiv = document.createElement('div');
+            slotDiv.className = 'slot';
+            const slotTitle = document.createElement('h3');
+            slotTitle.textContent = `${slot.slot} – ${slot.model}`;
+            slotDiv.appendChild(slotTitle);
+            const ul = document.createElement('ul');
+            Object.entries(slot.params).forEach(([k, v]) => {
+              const li = document.createElement('li');
+              li.textContent = `${k}: ${v}`;
+              ul.appendChild(li);
+            });
+            slotDiv.appendChild(ul);
+            chainDiv.appendChild(slotDiv);
+          });
+
+          container.appendChild(chainDiv);
+
+          const download = document.createElement('a');
+          download.className = 'download-link';
+          download.href = preset.file;
+          download.download = '';
+          download.textContent = 'Download preset';
+          container.appendChild(download);
+
+          const img = document.createElement('img');
+          img.src = preset.qr;
+          img.alt = `QR code for ${preset.name} preset`;
+          container.appendChild(img);
+        })
+        .catch(() => {
+          const error = document.createElement('p');
+          error.textContent = 'Unable to load preset details.';
+          container.appendChild(error);
+        });
+    }
+  </script>
+</body>
+</html>
