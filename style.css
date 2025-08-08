@@ -24,17 +24,6 @@ p {
   margin: 0.6em 0;
 }
 
-.language-switch {
-  text-align: right;
-  margin-bottom: 10px;
-  font-size: 0.9em;
-}
-
-.language-switch a {
-  color: #58a6ff;
-  text-decoration: none;
-  margin-left: 10px;
-}
 
 .card {
   border: 1px solid #30363d;
@@ -85,13 +74,10 @@ a.download-link:hover {
   background-color: #2ea043;
 }
 
-.faq-item {
-  margin-bottom: 1em;
-}
 
-.footer {
-  text-align: center;
-  font-size: 0.8em;
-  color: #8b949e;
-  margin-top: 40px;
+#preset-filter {
+  width: 100%;
+  padding: 8px;
+  margin: 20px 0;
+  box-sizing: border-box;
 }
