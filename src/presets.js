@@ -35,7 +35,7 @@ const presets = [
     id: 'preset5',
     name: 'Metal Lead – Brit 800',
     description: 'Lead version of the Brit 800 with extra mids, delay and hall reverb. Designed for soaring solos that cut through the mix.',
-    references: ['Iron Maiden', "Guns N'\u00a0Roses", 'Dream Theater', 'Metallica'],
+    references: ['Iron Maiden', "Guns N' Roses", 'Dream Theater', 'Metallica'],
     file: 'presets/preset5.json',
     qr: 'qrcodes/preset5.png'
   },
@@ -57,6 +57,4 @@ const presets = [
   }
 ];
 
-if (typeof module !== 'undefined') {
-  module.exports = { presets };
-}
+module.exports = { presets };
