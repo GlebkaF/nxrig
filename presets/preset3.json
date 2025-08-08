@@ -1,0 +1,55 @@
+{
+  "name": "Crunch Universal (NUX)",
+  "notes": "Средний перегруз на основе Marshall Plexi 45. Универсален для рока, панка и блюза.",
+  "chain": [
+    {
+      "slot": "Noisegate",
+      "model": "Noise Gate",
+      "params": {
+        "Sens": 40,
+        "Decay": 40
+      }
+    },
+    {
+      "slot": "Amp",
+      "model": "Plexi 45",
+      "params": {
+        "Gain": 50,
+        "Master": 50,
+        "Bass": 55,
+        "Middle": 60,
+        "Treble": 62,
+        "Presence": 55
+      }
+    },
+    {
+      "slot": "IR",
+      "model": "M1960AV",
+      "params": {
+        "Level_db": 0,
+        "Low Cut_hz": 75,
+        "High Cut_hz": 12000
+      }
+    },
+    {
+      "slot": "EQ",
+      "model": "6-Band",
+      "params": {
+        "100": 1,
+        "220": 0,
+        "500": 0,
+        "1.2K": 2,
+        "2.6K": 2,
+        "6.4K": 1
+      }
+    },
+    {
+      "slot": "RVB",
+      "model": "Spring",
+      "params": {
+        "Decay": 20,
+        "Level": 15
+      }
+    }
+  ]
+}

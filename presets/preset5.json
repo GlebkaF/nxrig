@@ -1,0 +1,75 @@
+{
+  "name": "Metal Lead Brit 800 (NUX)",
+  "notes": "Соло-метал на основе Marshall JCM800: больше мидов, дилей и длинный холл.",
+  "chain": [
+    {
+      "slot": "Noisegate",
+      "model": "Noise Gate",
+      "params": {
+        "Sens": 55,
+        "Decay": 25
+      }
+    },
+    {
+      "slot": "EFX",
+      "model": "T Screamer",
+      "params": {
+        "Drive": 10,
+        "Tone": 60,
+        "Level": 72
+      }
+    },
+    {
+      "slot": "Amp",
+      "model": "Brit 800",
+      "params": {
+        "Gain": 75,
+        "Master": 45,
+        "Bass": 55,
+        "Middle": 55,
+        "Treble": 65,
+        "Presence": 63
+      }
+    },
+    {
+      "slot": "IR",
+      "model": "M1960AV",
+      "params": {
+        "Level_db": 0,
+        "Low Cut_hz": 80,
+        "High Cut_hz": 11000
+      }
+    },
+    {
+      "slot": "EQ",
+      "model": "6-Band",
+      "params": {
+        "100": 2,
+        "220": 0,
+        "500": -1,
+        "1.2K": 2,
+        "2.6K": 4,
+        "6.4K": 1
+      }
+    },
+    {
+      "slot": "DLY",
+      "model": "Digital",
+      "params": {
+        "E.Level": 22,
+        "F.Back": 22,
+        "D.Time_ms": 375
+      }
+    },
+    {
+      "slot": "RVB",
+      "model": "Hall",
+      "params": {
+        "Decay": 20,
+        "Pre Delay": 25,
+        "Liveliness": 60,
+        "Level": 12
+      }
+    }
+  ]
+}
