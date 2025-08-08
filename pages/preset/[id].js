@@ -9,11 +9,12 @@ function Knob({ label, value }) {
   const angle = (value / 100) * 270 - 135;
   return (
     <div className="flex flex-col items-center w-16">
-      <div className="relative w-12 h-12 rounded-full bg-gray-700">
+      <div className="relative w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-xs font-mono">
         <div
           className="absolute left-1/2 top-1/2 w-1 h-4 bg-red-500 origin-bottom"
           style={{ transform: `translate(-50%, -100%) rotate(${angle}deg)` }}
         />
+        <span className="text-gray-200">{value}</span>
       </div>
       <span className="mt-1 text-xs text-gray-400 text-center">{label}</span>
     </div>
@@ -25,6 +26,7 @@ function EqDisplay({ params }) {
     <div className="flex items-end h-24 space-x-2">
       {Object.entries(params).map(([freq, value]) => (
         <div key={freq} className="flex flex-col items-center">
+          <span className="mb-1 text-xs text-gray-200">{value}</span>
           <div className="w-3 bg-gray-700 h-20 relative">
             <div
               className="bg-red-500 absolute bottom-0 w-full"

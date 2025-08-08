@@ -8,7 +8,8 @@ export default function Home({ presets }) {
   return (
     <div className="min-h-screen p-4 bg-gray-900 text-gray-100">
       <Header />
-      <h1 className="text-2xl font-bold mb-6">Preset Library</h1>
+      <h1 className="text-2xl font-bold mb-2">Preset Library</h1>
+      <p className="mb-6 text-gray-300">All presets work as-is with native cabs.</p>
       <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {presets.map((preset) => (
           <li key={preset.id}>
