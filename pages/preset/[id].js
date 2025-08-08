@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import { presets } from '../../data/presets';
 import { deviceMappings } from '../../data/deviceMappings';
+import SignalChain from '../../components/SignalChain';
 
 function Knob({ label, value }) {
   const angle = (value / 100) * 270 - 135;
@@ -53,6 +54,7 @@ export default function PresetPage({ preset, data }) {
         className="w-48 h-48 mx-auto mb-6"
       />
       <h2 className="text-xl font-semibold mb-2">Signal chain</h2>
+      <SignalChain chain={data.chain} />
       <ol className="space-y-4 mb-4">
         {data.chain.map((block, idx) => {
           const realName = deviceMappings[block.slot]?.[block.model];
