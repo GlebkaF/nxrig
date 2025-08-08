@@ -2,7 +2,7 @@ import React from 'react';
 
 const RADIUS = 45;
 
-export default function Knob({ label, value }) {
+export default function Knob({ label, value, color = '#ef4444' }) {
   const angle = (value / 100) * 270 - 135;
   return (
     <div className="flex flex-col items-center w-20">
@@ -12,7 +12,7 @@ export default function Knob({ label, value }) {
             cx="50"
             cy="50"
             r={RADIUS}
-            stroke="#ef4444"
+            stroke={color}
             strokeWidth="10"
             fill="none"
             className="drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]"

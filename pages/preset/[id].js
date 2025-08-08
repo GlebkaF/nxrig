@@ -7,6 +7,18 @@ import Knob from '../../components/Knob';
 import { presets } from '../../data/presets';
 import { deviceMappings } from '../../data/deviceMappings';
 
+const slotColors = {
+  Noisegate: '#10b981',
+  Compressor: '#eab308',
+  EFX: '#f97316',
+  DLY: '#7dd3fc',
+  Amp: '#ef4444',
+  IR: '#3b82f6',
+  EQ: '#9ca3af',
+  Mod: '#a855f7',
+  RVB: '#d946ef'
+};
+
 function EqDisplay({ params }) {
   const freqs = Object.keys(params);
   const [levels, setLevels] = useState(
@@ -77,7 +89,12 @@ export default function PresetPage({ preset, data }) {
               ) : (
                 <div className="flex flex-wrap gap-4">
                   {Object.entries(block.params).map(([key, value]) => (
-                    <Knob key={key} label={key} value={Number(value)} />
+                    <Knob
+                      key={key}
+                      label={key}
+                      value={Number(value)}
+                      color={slotColors[block.slot]}
+                    />
                   ))}
                 </div>
               )}
