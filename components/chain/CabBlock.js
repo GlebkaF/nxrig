@@ -6,9 +6,9 @@ import { SLOT_COLORS, mapCabLevelToDb, mapCabLowCutToHz, mapCabHighCutToHz } fro
 export default function CabBlock({ block }) {
   const color = SLOT_COLORS.IR;
   const realName = deviceMappings['IR']?.[block.model];
-  const level = Number(block.params?.Level ?? block.params?.Level_db ?? 50);
-  const low = Number(block.params?.Low_Cut_hz ?? block.params?.Low_Cut ?? block.params?.lowcut ?? 50);
-  const high = Number(block.params?.High_Cut_hz ?? block.params?.High_Cut ?? block.params?.hicut ?? 50);
+  const level = Number(block.params?.level ?? 50);
+  const low = Number(block.params?.lowcut ?? 50);
+  const high = Number(block.params?.hicut ?? 50);
   const levelDb = mapCabLevelToDb(level);
   const lowHz = mapCabLowCutToHz(low);
   const hiHz = mapCabHighCutToHz(high);

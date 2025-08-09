@@ -6,7 +6,6 @@ export default function CompressorBlock({ block }) {
   const color = SLOT_COLORS.Compressor;
   const model = block.model || 'Compressor';
   const params = block.params || {};
-
   const cfg = processorConfig.Compressor?.types?.[model] || null;
   if (cfg?.buildUiParams) {
     const uiParams = cfg.buildUiParams(params);
@@ -24,8 +23,6 @@ export default function CompressorBlock({ block }) {
       </li>
     );
   }
-
-  // Fallback generic
   const GenericBlock = require('./GenericBlock').default;
   return <GenericBlock block={block} />;
 }
