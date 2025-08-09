@@ -8,7 +8,7 @@ export interface ParamMeta {
 }
 
 // Slot and per-slot parameter key unions using device-native names
-export type Slot = 'Noisegate' | 'Compressor' | 'EFX' | 'DLY' | 'Delay' | 'Amp' | 'IR' | 'Cabinet' | 'EQ' | 'Mod' | 'RVB';
+export type Slot = 'Noisegate' | 'Compressor' | 'EFX' | 'Delay' | 'Amp' | 'Cabinet' | 'EQ' | 'Mod' | 'RVB';
 
 export type CompressorParamKey = 'CMP_Para1' | 'CMP_Para2' | 'CMP_Para3' | 'CMP_Para4';
 export type DelayParamKey = 'DLY_Para1' | 'DLY_Para2' | 'DLY_Para3' | 'DLY_Para4' | 'DLY_Para5' | 'DLY_Para6' | 'DLY_Para7' | 'DLY_Para8';
@@ -24,10 +24,8 @@ export interface ParamsBySlot {
   Noisegate: Partial<Record<NoisegateParamKey, ParamMeta>>;
   Compressor: Partial<Record<CompressorParamKey, ParamMeta>>;
   EFX: Partial<Record<EfxParamKey, ParamMeta>>;
-  DLY: Partial<Record<DelayParamKey, ParamMeta>>;
   Delay: Partial<Record<DelayParamKey, ParamMeta>>;
   Amp: Partial<Record<AmpParamKey, ParamMeta>>;
-  IR: Partial<Record<IRParamKey, ParamMeta>>;
   Cabinet: Partial<Record<IRParamKey, ParamMeta>>;
   EQ: Partial<Record<EqParamKey, ParamMeta>>;
   Mod: Partial<Record<ModParamKey, ParamMeta>>;
@@ -50,10 +48,8 @@ export const SLOT_COLORS: Record<Slot, string> = {
   Noisegate: '#10b981',
   Compressor: '#eab308',
   EFX: '#f97316',
-  DLY: '#7dd3fc',
   Delay: '#7dd3fc',
   Amp: '#ef4444',
-  IR: '#3b82f6',
   Cabinet: '#3b82f6',
   EQ: '#9ca3af',
   Mod: '#a855f7',
@@ -97,18 +93,6 @@ export const processorConfig: ProcessorConfig = {
       },
     },
   },
-  IR: {
-    types: {
-      JZ120: {
-        realName: 'Roland JC-120 2x12',
-        params: {
-          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
-          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
-          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
-        },
-      },
-    },
-  },
   Cabinet: {
     types: {
       JZ120: {
@@ -117,17 +101,6 @@ export const processorConfig: ProcessorConfig = {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
           CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
-        },
-      },
-    },
-  },
-  DLY: {
-    types: {
-      'Digital Delay': {
-        params: {
-          DLY_Para1: { label: 'E.Level', unit: '%', min: 0, max: 100 },
-          DLY_Para2: { label: 'F.Back', unit: '%', min: 0, max: 100 },
-          DLY_Para3: { label: 'D.Time', unit: 'bpm', min: 752, max: 61 },
         },
       },
     },
