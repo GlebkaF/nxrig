@@ -6,6 +6,7 @@ import { z } from 'zod';
 import { NextSeo } from 'next-seo';
 import { flatPresetToQrString } from '../../lib/encoder';
 import { FlatPresetSchema } from '../../lib/flatPresetSchema';
+import { qrStringToFlatPreset } from '../../lib/encoder';
 
 const QRCodeCanvas = dynamic(() => import('qrcode.react').then((m) => m.QRCodeCanvas), { ssr: false });
 
@@ -47,6 +48,7 @@ export default function Mp3QrPage() {
   const [err, setErr] = useState('');
   const [vizData, setVizData] = useState(null);
   const canvasRef = useRef(null);
+  const [qrInput, setQrInput] = useState('');
 
   function randomFlatPreset() {
     const rnd = () => (Math.random() * 101) | 0;
@@ -64,6 +66,16 @@ export default function Mp3QrPage() {
       delay: { enabled: on(), type: 'Analog Delay', time: rnd(), feedback: rnd(), mix: rnd() },
       reverb: { enabled: on(), type: 'Room', decay: rnd(), tone: rnd(), mix: rnd() },
     };
+  }
+
+  function onImportFromQr() {
+    try {
+      const preset = qrStringToFlatPreset(qrInput.trim());
+      setText(JSON.stringify(preset, null, 2));
+      setErr('');
+    } catch (e) {
+      setErr(e.message || String(e));
+    }
   }
 
   useEffect(() => {
@@ -106,9 +118,18 @@ export default function Mp3QrPage() {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-gray-800 rounded-2xl p-4 border border-gray-700">
             <textarea className="w-full h-96 font-mono text-sm p-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100" value={text} onChange={(e) => setText(e.target.value)} />
-            <div className="flex gap-3 mt-3">
+            <div className="flex flex-wrap gap-3 mt-3 items-center">
               <button onClick={() => setText(JSON.stringify(SAMPLE_FLAT_JSON, null, 2))} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Reset</button>
               <button onClick={() => setText(JSON.stringify(randomFlatPreset(), null, 2))} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Random</button>
+              <div className="flex gap-2 items-center ml-auto w-full md:w-auto">
+                <input
+                  className="flex-1 md:w-72 px-3 py-2 rounded-lg bg-gray-900 border border-gray-700 text-sm"
+                  placeholder="Paste QR string (nux://...)"
+                  value={qrInput}
+                  onChange={(e) => setQrInput(e.target.value)}
+                />
+                <button onClick={onImportFromQr} className="px-3 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-sm">Import</button>
+              </div>
             </div>
             {err && (
               <div className="mt-3 p-3 rounded-xl border border-red-400 text-sm bg-red-950 text-red-200 whitespace-pre-wrap">{err}</div>
