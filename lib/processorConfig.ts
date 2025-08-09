@@ -35,7 +35,7 @@ export interface ParamsBySlot {
 export interface ProcessorTypeConfig<S extends Slot> {
   aliasOf?: string;
   realName?: string;
-  params: ParamsBySlot[S];
+  params?: ParamsBySlot[S];
 }
 
 export type ProcessorConfig = {
@@ -758,8 +758,8 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       // Aliases for encoder compatibility
-      'Analog Delay': { aliasOf: 'Analog V2', params: {} as any },
-      'Mod Delay': { aliasOf: 'Modulation', params: {} as any },
+      'Analog Delay': { aliasOf: 'Analog V2' },
+      'Mod Delay': { aliasOf: 'Modulation' },
     },
   },
   Amp: {

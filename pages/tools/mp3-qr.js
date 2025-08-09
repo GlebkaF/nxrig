@@ -5,7 +5,7 @@ import React, { useRef, useState, useEffect } from 'react';
 
 import Header from '../../components/Header';
 import SignalChain from '../../components/SignalChain';
-import { flatPresetToQrString, qrStringToFlatPreset, AMP_TYPES, EFX_TYPES, COMP_TYPES, MOD_TYPES, DELAY_TYPES, REVERB_TYPES, CABINET_TYPES } from '../../lib/encoder';
+import { flatPresetToQrString, qrStringToFlatPreset } from '../../lib/encoder';
 import { FlatPresetSchema } from '../../lib/flatPresetSchema';
 import { processorConfig } from '../../lib/processorConfig.ts';
 

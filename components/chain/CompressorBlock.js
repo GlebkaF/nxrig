@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { processorConfig, SLOT_COLORS, toUnitString } from '../../lib/processorConfig.ts';
+
 import Knob from '../Knob';
 import GenericBlock from './GenericBlock';
 

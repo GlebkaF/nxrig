@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+
 import { flatPresetToQrString, qrStringToFlatPreset } from '../lib/encoder.js';
 
 function rand01() { return Math.random() > 0.5; }

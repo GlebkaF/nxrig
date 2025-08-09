@@ -1,7 +1,8 @@
-import { describe, it, expect } from 'vitest';
 import jsQR from 'jsqr';
-import qrcodegen from 'qrcode-generator';
 import { PNG } from 'pngjs';
+import qrcodegen from 'qrcode-generator';
+import { describe, it, expect } from 'vitest';
+
 import { flatPresetToQrString, qrStringToFlatPreset } from '../lib/encoder.js';
 
 function renderQrPngData(text, scale = 4, margin = 2) {
