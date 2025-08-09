@@ -96,117 +96,117 @@ export const processorConfig: ProcessorConfig = {
   EFX: {
     types: {
       'Distortion+': {
-        realName: 'MXR Distortion+',
+        realName: 'Distortion+',
         params: {
-          EFX_Para1: { label: 'Output', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Sensitivity', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Output', unit: '%', min: 0, max: 100 }, // default: 75, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Sensitivity', unit: '%', min: 0, max: 100 }, // default: 80, formatter: ValueFormatters.percentageMPPro
         },
       },
       'RC Boost': {
-        realName: 'Xotic RC Booster',
+        realName: 'RC Boost',
         params: {
-          EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 },
-          EFX_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
-          EFX_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
-          EFX_Para4: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 }, // default: 40, formatter: ValueFormatters.percentageMPPro
+          EFX_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 }, // default: 35, formatter: ValueFormatters.percentageMPPro
+          EFX_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 }, // default: 35, formatter: ValueFormatters.percentageMPPro
+          EFX_Para4: { label: 'Treble', unit: '%', min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
         },
       },
       'AC Boost': {
-        realName: 'Xotic AC Booster',
+        realName: 'AC Boost',
         params: {
-          EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 },
-          EFX_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
-          EFX_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
-          EFX_Para4: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 }, // default: 40, formatter: ValueFormatters.percentageMPPro
+          EFX_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+          EFX_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 }, // default: 35, formatter: ValueFormatters.percentageMPPro
+          EFX_Para4: { label: 'Treble', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
         },
       },
       'Dist One': {
-        realName: 'BOSS DS-1',
+        realName: 'Dist One',
         params: {
-          EFX_Para1: { label: 'Level', unit: '%', min: 0, max: 100 },
-          EFX_Para3: { label: 'Drive', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          EFX_Para3: { label: 'Drive', unit: '%', min: 0, max: 100 }, // default: 40, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 }, // default: 55, formatter: ValueFormatters.percentageMPPro
         },
       },
       'T Screamer': {
-        realName: 'Ibanez Tube Screamer',
+        realName: 'T Screamer',
         params: {
-          EFX_Para3: { label: 'Level', unit: '%', min: 0, max: 100 },
-          EFX_Para1: { label: 'Drive', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 55, formatter: ValueFormatters.percentageMPPro
+          EFX_Para1: { label: 'Drive', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
         },
       },
       'Blues Drive': {
-        realName: 'BOSS BD-2 Blues Driver',
+        realName: 'Blues Drive',
         params: {
-          EFX_Para1: { label: 'Level', unit: '%', min: 0, max: 100 },
-          EFX_Para3: { label: 'Gain', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 40, formatter: ValueFormatters.percentageMPPro
+          EFX_Para3: { label: 'Gain', unit: '%', min: 0, max: 100 }, // default: 65, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
         },
       },
       'Morning Drive': {
-        realName: 'JHS Morning Glory',
+        realName: 'Morning Drive',
         params: {
-          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Drive', unit: '%', min: 0, max: 100 },
-          EFX_Para3: { label: 'Tone', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Drive', unit: '%', min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
+          EFX_Para3: { label: 'Tone', unit: '%', min: 0, max: 100 }, // default: 65, formatter: ValueFormatters.percentageMPPro
         },
       },
       'Eat Dist': {
-        // realName intentionally omitted (uncertain mapping)
+        realName: 'Eat Dist',
         params: {
-          EFX_Para3: { label: 'Volume', unit: '%', min: 0, max: 100 },
-          EFX_Para1: { label: 'Distortion', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Filter', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Volume', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+          EFX_Para1: { label: 'Distortion', unit: '%', min: 0, max: 100 }, // default: 65, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Filter', unit: '%', min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
         },
       },
       'Red Dirt': {
-        realName: 'Keeley Red Dirt',
+        realName: 'Red Dirt',
         params: {
-          EFX_Para3: { label: 'Level', unit: '%', min: 0, max: 100 },
-          EFX_Para1: { label: 'Drive', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          EFX_Para1: { label: 'Drive', unit: '%', min: 0, max: 100 }, // default: 65, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
         },
       },
       Crunch: {
-        // realName intentionally omitted (generic crunch drive)
+        realName: 'Crunch',
         params: {
-          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
-          EFX_Para3: { label: 'Gain', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 }, // default: 25, formatter: ValueFormatters.percentageMPPro
+          EFX_Para3: { label: 'Gain', unit: '%', min: 0, max: 100 }, // default: 45, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
         },
       },
       'Muff Fuzz': {
-        realName: 'Electro‑Harmonix Big Muff Pi',
+        realName: 'Muff Fuzz',
         params: {
-          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
-          EFX_Para3: { label: 'Sustain', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 }, // default: 40, formatter: ValueFormatters.percentageMPPro
+          EFX_Para3: { label: 'Sustain', unit: '%', min: 0, max: 100 }, // default: 40, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
         },
       },
       Katana: {
-        realName: 'Keeley Katana Boost',
+        realName: 'Katana',
         params: {
-          EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 },
-          EFX_Para1: { label: 'Boost', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 }, // default: 45, formatter: ValueFormatters.percentageMPPro
+          EFX_Para1: { label: 'Boost', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.boostModePro
         },
       },
       'ST Singer': {
-        // realName intentionally omitted (uncertain mapping)
+        realName: 'ST Singer',
         params: {
-          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Gain', unit: '%', min: 0, max: 100 },
-          EFX_Para3: { label: 'Filter', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          EFX_Para2: { label: 'Gain', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          EFX_Para3: { label: 'Filter', unit: '%', min: 0, max: 100 }, // default: 40, formatter: ValueFormatters.percentageMPPro
         },
       },
       'Touch Wah': {
-        realName: 'Auto Wah (Envelope Filter)',
+        realName: 'Touch Wah',
         params: {
-          EFX_Para1: { label: 'Type', unit: '%', min: 0, max: 100 },
-          EFX_Para2: { label: 'Wow', unit: '%', min: 0, max: 100 },
-          EFX_Para3: { label: 'Sense', unit: '%', min: 0, max: 100 },
-          EFX_Para5: { label: 'Level', unit: '%', min: 0, max: 100 },
-          EFX_Para4: { label: 'Up/Down Switch', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Type', unit: '%', min: 0, max: 100 }, // default: 1, formatter: ValueFormatters.touchWahFormatterLiteMk2
+          EFX_Para2: { label: 'Wow', unit: '%', min: 0, max: 100 }, // default: 35, formatter: ValueFormatters.percentageMPPro
+          EFX_Para3: { label: 'Sense', unit: '%', min: 0, max: 100 }, // default: 90, formatter: ValueFormatters.percentageMPPro
+          EFX_Para5: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 100, formatter: ValueFormatters.percentageMPPro
+          EFX_Para4: { label: 'Up/Down Switch', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.touchWahDirectionFormatterPro
         },
       },
     },
