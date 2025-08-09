@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import Header from '../../components/Header';
 import SignalChain from '../../components/SignalChain';
 import { NextSeo } from 'next-seo';
-import { flatPresetToQrString, qrStringToFlatPreset } from '../../lib/encoder';
+import { flatPresetToQrString, qrStringToFlatPreset, AMP_TYPES, EFX_TYPES, COMP_TYPES, MOD_TYPES, DELAY_TYPES, REVERB_TYPES, CABINET_TYPES } from '../../lib/encoder';
 import { FlatPresetSchema } from '../../lib/flatPresetSchema';
 import jsQR from 'jsqr';
 
@@ -14,19 +14,38 @@ const CHAIN_ORDER = ['Noisegate', 'Compressor', 'EFX', 'Amp', 'IR', 'EQ', 'Mod',
 function flatPresetToVisualizationChain(preset) {
   const chain = [];
   if (preset.noise_gate) chain.push({ slot: 'Noisegate', model: 'Noise Gate', enabled: preset.noise_gate.enabled, params: { Sens: preset.noise_gate.sensitivity ?? 50, Decay: preset.noise_gate.decay ?? 50 } });
-  if (preset.comp) chain.push({ slot: 'Compressor', model: preset.comp.type, enabled: preset.comp.enabled, params: { Sustain: preset.comp.sustain ?? 50, Level: preset.comp.level ?? 50, Attack: preset.comp.attack ?? 50, Blend: preset.comp.blend ?? 50 } });
-  if (preset.efx) chain.push({ slot: 'EFX', model: preset.efx.type, enabled: preset.efx.enabled, params: Object.fromEntries(Object.entries(preset.efx).filter(([k]) => !['enabled', 'type'].includes(k)).map(([k, v]) => [k, Number(v)])) });
-  if (preset.amp) chain.push({ slot: 'Amp', model: preset.amp.type, enabled: preset.amp.enabled, params: { Gain: preset.amp.gain ?? 50, Master: preset.amp.master ?? 50, Bass: preset.amp.bass ?? 50, Middle: preset.amp.mid ?? 50, Treble: preset.amp.treble ?? 50, Bright: preset.amp.bright ?? 0 } });
-  if (preset.cab) chain.push({ slot: 'IR', model: preset.cab.type, enabled: preset.cab.enabled, params: { Level_db: preset.cab.level ?? 0, Low_Cut_hz: Math.round((preset.cab.lowcut / 100) * 980 + 20), High_Cut_hz: Math.round((preset.cab.hicut / 100) * 19000 + 1000) } });
-  if (preset.mod) chain.push({ slot: 'Mod', model: preset.mod.type, enabled: preset.mod.enabled, params: Object.fromEntries(Object.entries(preset.mod).filter(([k]) => !['enabled', 'type'].includes(k)).map(([k, v]) => [k, Number(v)])) });
-  if (preset.delay) chain.push({ slot: 'DLY', model: preset.delay.type, enabled: preset.delay.enabled, params: Object.fromEntries(Object.entries(preset.delay).filter(([k]) => !['enabled', 'type'].includes(k)).map(([k, v]) => [k, Number(v)])) });
-  if (preset.reverb) chain.push({ slot: 'RVB', model: preset.reverb.type, enabled: preset.reverb.enabled, params: Object.fromEntries(Object.entries(preset.reverb).filter(([k]) => !['enabled', 'type'].includes(k)).map(([k, v]) => [k, Number(v)])) });
-  if (preset.eq) chain.push({ slot: 'EQ', model: preset.eq.type, enabled: preset.eq.enabled, params: Object.fromEntries(Object.entries(preset.eq).filter(([k]) => !['enabled', 'type'].includes(k)).map(([k, v]) => [k, Number(v)])) });
+  if (preset.comp) chain.push({ slot: 'Compressor', model: preset.comp.type, enabled: preset.comp.enabled, params: preset.comp });
+  if (preset.efx) chain.push({ slot: 'EFX', model: preset.efx.type, enabled: preset.efx.enabled, params: preset.efx });
+  if (preset.amp) chain.push({ slot: 'Amp', model: preset.amp.type, enabled: preset.amp.enabled, params: preset.amp });
+  if (preset.cab) chain.push({ slot: 'IR', model: preset.cab.type, enabled: preset.cab.enabled, params: preset.cab });
+  if (preset.mod) chain.push({ slot: 'Mod', model: preset.mod.type, enabled: preset.mod.enabled, params: preset.mod });
+  if (preset.delay) chain.push({ slot: 'DLY', model: preset.delay.type, enabled: preset.delay.enabled, params: preset.delay });
+  if (preset.reverb) chain.push({ slot: 'RVB', model: preset.reverb.type, enabled: preset.reverb.enabled, params: preset.reverb });
+  if (preset.eq) chain.push({ slot: 'EQ', model: preset.eq.type, enabled: preset.eq.enabled, params: preset.eq });
   return { chain: chain.filter((b) => b.enabled !== false).sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };
 }
 
+function rand01() { return Math.random() > 0.5; }
+function rand100() { return (Math.random() * 101) | 0; }
+function randKey(obj) { const k = Object.keys(obj); return k[(Math.random() * k.length) | 0]; }
+function randomPreset() {
+  return {
+    product_id: 15,
+    version: 1,
+    master: rand100(),
+    noise_gate: { enabled: rand01(), sensitivity: rand100(), decay: rand100() },
+    comp: { enabled: rand01(), type: randKey(COMP_TYPES), sustain: rand100(), level: rand100(), attack: rand100(), blend: rand100(), clipping: rand100(), gain: rand100(), threshold: rand100(), ratio: rand100(), release: rand100() },
+    efx: { enabled: rand01(), type: randKey(EFX_TYPES), var1: rand100(), var2: rand100(), var3: rand100() },
+    amp: { enabled: rand01(), type: randKey(AMP_TYPES), gain: rand100(), master: rand100(), bass: rand100(), mid: rand100(), treble: rand100(), bright: rand100() },
+    cab: { enabled: rand01(), type: randKey(CABINET_TYPES), level: rand100(), lowcut: rand100(), hicut: rand100() },
+    mod: { enabled: rand01(), type: randKey(MOD_TYPES), rate: rand100(), depth: rand100(), mix: rand100() },
+    delay: { enabled: rand01(), type: randKey(DELAY_TYPES), time: rand100(), feedback: rand100(), mix: rand100() },
+    reverb: { enabled: rand01(), type: randKey(REVERB_TYPES), decay: rand100(), tone: rand100(), mix: rand100() },
+  };
+}
+
 export default function Mp3QrPage() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState(() => JSON.stringify(randomPreset(), null, 2));
   const [qr, setQr] = useState('');
   const [err, setErr] = useState('');
   const [vizData, setVizData] = useState(null);
@@ -122,7 +141,7 @@ export default function Mp3QrPage() {
           <div className="bg-gray-800 rounded-2xl p-4 border border-gray-700">
             <div className="flex gap-3 items-center mb-3">
               <button onClick={onPickFileClick} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Import from QR image</button>
-              <button onClick={() => setText(JSON.stringify(randomFlatPreset(), null, 2))} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Random</button>
+              <button onClick={() => setText(JSON.stringify(randomPreset(), null, 2))} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Random</button>
               <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={onFileSelected} />
             </div>
             <textarea className="w-full h-96 font-mono text-sm p-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100" placeholder="JSON will appear here after import..." value={text} onChange={(e) => setText(e.target.value)} />
