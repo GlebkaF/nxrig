@@ -211,6 +211,231 @@ export const processorConfig: ProcessorConfig = {
       },
     },
   },
+  EQ: {
+    types: {
+      '6-Band': {
+        realName: '6-Band',
+        params: {
+          EQ_Para1: { label: '100', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para2: { label: '220', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para3: { label: '500', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para4: { label: '1.2K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para5: { label: '2.6K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para6: { label: '6.4K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+        },
+      },
+      '10-Band': {
+        realName: '10-Band',
+        params: {
+          EQ_Para1: { label: 'Vol', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para2: { label: '31', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para3: { label: '62', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para4: { label: '125', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para5: { label: '250', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para6: { label: '500', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para7: { label: '1K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para8: { label: '2K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para9: { label: '4K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para10: { label: '8K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para11: { label: '16K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+        },
+      },
+      'Bluetooth EQ': {
+        realName: 'Bluetooth EQ',
+        params: {
+          EQ_Para1: { label: 'Vol', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para2: { label: '31', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para3: { label: '62', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para4: { label: '125', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para5: { label: '250', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para6: { label: '500', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para7: { label: '1K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para8: { label: '2K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para9: { label: '4K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para10: { label: '8K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para11: { label: '16K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+        },
+      },
+      'Speaker EQ': {
+        realName: 'Speaker EQ',
+        params: {
+          EQ_Para1: { label: 'Vol', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para2: { label: '31', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para3: { label: '62', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para4: { label: '125', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para5: { label: '250', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para6: { label: '500', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para7: { label: '1K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para8: { label: '2K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para9: { label: '4K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para10: { label: '8K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+          EQ_Para11: { label: '16K', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.decibelEQ
+        },
+      },
+    },
+  },
+  Mod: {
+    types: {
+      'CE-1': {
+        realName: 'CE-1',
+        params: {
+          MOD_Para3: { label: 'Rate', unit: '%', min: 0, max: 100 }, // default: 39, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Depth', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+          MOD_Para1: { label: 'Intensity', unit: '%', min: 0, max: 100 }, // default: 32, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      'CE-2': {
+        realName: 'CE-2',
+        params: {
+          MOD_Para1: { label: 'Rate', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Depth', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      'ST Chorus': {
+        realName: 'ST Chorus',
+        params: {
+          MOD_Para3: { label: 'Rate', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Width', unit: '%', min: 0, max: 100 }, // default: 36, formatter: ValueFormatters.percentageMPPro
+          MOD_Para1: { label: 'Intensity', unit: '%', min: 0, max: 100 }, // default: 74, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      Vibrato: {
+        realName: 'Vibrato',
+        params: {
+          MOD_Para1: { label: 'Rate', unit: '%', min: 0, max: 100 }, // default: 56, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Depth', unit: '%', min: 0, max: 100 }, // default: 68, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      Detune: {
+        realName: 'Detune',
+        params: {
+          MOD_Para1: { label: 'Shift-L', unit: '%', min: 0, max: 100 }, // default: 54, formatter: ValueFormatters.percentageMPPro
+          MOD_Para3: { label: 'Shift-R', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Mix', unit: '%', min: 0, max: 100 }, // default: 80, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      Flanger: {
+        realName: 'Flanger',
+        params: {
+          MOD_Para2: { label: 'Rate', unit: '%', min: 0, max: 100 }, // default: 59, formatter: ValueFormatters.percentageMPPro
+          MOD_Para3: { label: 'Width', unit: '%', min: 0, max: 100 }, // default: 63, formatter: ValueFormatters.percentageMPPro
+          MOD_Para1: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 59, formatter: ValueFormatters.percentageMPPro
+          MOD_Para4: { label: 'Feedback', unit: '%', min: 0, max: 100 }, // default: 63, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      'Phase 90': {
+        realName: 'Phase 90',
+        params: {
+          MOD_Para1: { label: 'Speed', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      'Phase 100': {
+        realName: 'Phase 100',
+        params: {
+          MOD_Para2: { label: 'Speed', unit: '%', min: 0, max: 100 }, // default: 39, formatter: ValueFormatters.percentageMPPro
+          MOD_Para1: { label: 'Intensity', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      'S.C.F.': {
+        realName: 'S.C.F.',
+        params: {
+          MOD_Para1: { label: 'Speed', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Width', unit: '%', min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
+          MOD_Para4: { label: 'Intensity', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+          MOD_Para3: { label: 'Mode', unit: '%', min: 0, max: 100 }, // default: 1, formatter: ValueFormatters.scfMode
+        },
+      },
+      'U-Vibe': {
+        realName: 'U-Vibe',
+        params: {
+          MOD_Para1: { label: 'Speed', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 }, // default: 80, formatter: ValueFormatters.percentageMPPro
+          MOD_Para3: { label: 'Intensity', unit: '%', min: 0, max: 100 }, // default: 80, formatter: ValueFormatters.percentageMPPro
+          MOD_Para4: { label: 'Mode', unit: '%', min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.vibeModePro
+        },
+      },
+      Tremolo: {
+        realName: 'Tremolo',
+        params: {
+          MOD_Para1: { label: 'Rate', unit: '%', min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Depth', unit: '%', min: 0, max: 100 }, // default: 15, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      Rotary: {
+        realName: 'Rotary',
+        params: {
+          MOD_Para2: { label: 'Speed', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          MOD_Para1: { label: 'Balance', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      'SCH-1': {
+        realName: 'SCH-1',
+        params: {
+          MOD_Para1: { label: 'Rate', unit: '%', min: 0, max: 100 }, // default: 30, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Depth', unit: '%', min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
+          MOD_Para3: { label: 'Tone', unit: '%', min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      'Mono Octave': {
+        realName: 'Mono Octave',
+        params: {
+          MOD_Para1: { label: 'Sub', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          MOD_Para2: { label: 'Dry', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          MOD_Para3: { label: 'Up', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+    },
+  },
+  RVB: {
+    types: {
+      Room: {
+        realName: 'Room',
+        params: {
+          RVB_Para3: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para1: { label: 'Decay', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      Hall: {
+        realName: 'Hall',
+        params: {
+          RVB_Para4: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para1: { label: 'Decay', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para2: { label: 'Pre Delay', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para3: { label: 'Liveliness', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      Plate: {
+        realName: 'Plate',
+        params: {
+          RVB_Para2: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para1: { label: 'Decay', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      Spring: {
+        realName: 'Spring',
+        params: {
+          RVB_Para2: { label: 'Level', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para1: { label: 'Decay', unit: '%', min: 0, max: 100 }, // default: 32, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      Shimmer: {
+        realName: 'Shimmer',
+        params: {
+          RVB_Para1: { label: 'Mix', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para2: { label: 'Decay', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para3: { label: 'Shimmer', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+      Damp: {
+        realName: 'Damp',
+        params: {
+          RVB_Para1: { label: 'Mix', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+          RVB_Para2: { label: 'Depth', unit: '%', min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
+        },
+      },
+    },
+  },
   Cabinet: {
     types: {
       JZ120: {
