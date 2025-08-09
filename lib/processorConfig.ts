@@ -1,4 +1,4 @@
-export type Unit = 'dB' | 'Hz' | 'ms' | 'bpm' | '%';
+export type Unit = 'dB' | 'Hz' | 'ms' | 'bpm' | '%' | 'bool';
 
 export interface ParamMeta {
   label: string;
@@ -126,7 +126,7 @@ export const processorConfig: ProcessorConfig = {
           AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
           AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
           AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
-          AMP_Para6: { label: 'Bright', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Bright', unit: 'bool', min: 0, max: 100 },
         },
       },
       'Deluxe Rvb': {
@@ -306,7 +306,7 @@ export const processorConfig: ProcessorConfig = {
           AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
           AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
           AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
-          AMP_Para6: { label: 'Bright', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Bright', unit: 'bool', min: 0, max: 100 },
         },
       },
       Budda: {
@@ -412,7 +412,18 @@ export const processorConfig: ProcessorConfig = {
           AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
           AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
           AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
-          AMP_Para6: { label: 'Bright', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Bright', unit: 'bool', min: 0, max: 100 },
+        },
+      },
+      'Vibro King': {
+        realName: 'Fender Vibro‑King',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Bright', unit: 'bool', min: 0, max: 100 },
         },
       },
     },
