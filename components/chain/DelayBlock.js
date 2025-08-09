@@ -17,7 +17,8 @@ export default function DelayBlock({ block }) {
         <div className="font-semibold mb-2">{model}</div>
         <div className="flex flex-wrap gap-4">
           {entries.map(([key, meta]) => {
-            const val = Number(params[key] ?? 50);
+            const effectiveVal = params[key] ?? (key === 'DLY_Para1' ? params.mix : key === 'DLY_Para2' ? params.feedback : key === 'DLY_Para3' ? params.time : undefined);
+            const val = Number(effectiveVal ?? 50);
             const dv = toUnitString(val, meta);
             const label = dv ? `${meta.label}\n${dv}` : meta.label;
             return <Knob key={key} label={label} value={val} color={color} />;

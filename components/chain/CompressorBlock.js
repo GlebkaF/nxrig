@@ -14,7 +14,7 @@ export default function CompressorBlock({ block }) {
     const entries = Object.entries(cfgParams);
     return (
       <li className="relative p-4 rounded bg-gray-800 border-2 w-fit" style={{ borderColor: color }}>
-        <div className="font-semibold mb-2">{model}</div>
+        <div className="font-semibold mb-2">{model}{cfg?.realName && <span className="text-gray-400"> — {cfg.realName}</span>}</div>
         <div className="flex flex-wrap gap-4">
           {entries.map(([key, meta]) => {
             const val = Number(params[key] ?? 50);

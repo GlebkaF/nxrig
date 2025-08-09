@@ -117,84 +117,85 @@ export const PresetDataIndex = {
 // Indices mapping per parameter set (kept in sync with device indices)
 export const ParamIndex = {
   CMP_PARAMS: {
-    sustain: PresetDataIndex.CMP_Para1,
-    level: PresetDataIndex.CMP_Para2,
-    // For compressors, Para3/Para4 are model-dependent (e.g., clipping, gain, ratio, release)
+    CMP_Para1: PresetDataIndex.CMP_Para1,
+    CMP_Para2: PresetDataIndex.CMP_Para2,
+    CMP_Para3: PresetDataIndex.CMP_Para3,
+    CMP_Para4: PresetDataIndex.CMP_Para4,
   },
   EFX_PARAMS: {
-    var1: PresetDataIndex.EFX_Para1,
-    var2: PresetDataIndex.EFX_Para2,
-    var3: PresetDataIndex.EFX_Para3,
-    var4: PresetDataIndex.EFX_Para4,
-    var5: PresetDataIndex.EFX_Para5,
-    var6: PresetDataIndex.EFX_Para6,
+    EFX_Para1: PresetDataIndex.EFX_Para1,
+    EFX_Para2: PresetDataIndex.EFX_Para2,
+    EFX_Para3: PresetDataIndex.EFX_Para3,
+    EFX_Para4: PresetDataIndex.EFX_Para4,
+    EFX_Para5: PresetDataIndex.EFX_Para5,
+    EFX_Para6: PresetDataIndex.EFX_Para6,
   },
   AMP_PARAMS: {
-    gain: PresetDataIndex.AMP_Para1,
-    master: PresetDataIndex.AMP_Para2,
-    bass: PresetDataIndex.AMP_Para3,
-    mid: PresetDataIndex.AMP_Para4,
-    treble: PresetDataIndex.AMP_Para5,
-    bright: PresetDataIndex.AMP_Para6,
-    param7: PresetDataIndex.AMP_Para7,
-    param8: PresetDataIndex.AMP_Para8,
+    AMP_Para1: PresetDataIndex.AMP_Para1,
+    AMP_Para2: PresetDataIndex.AMP_Para2,
+    AMP_Para3: PresetDataIndex.AMP_Para3,
+    AMP_Para4: PresetDataIndex.AMP_Para4,
+    AMP_Para5: PresetDataIndex.AMP_Para5,
+    AMP_Para6: PresetDataIndex.AMP_Para6,
+    AMP_Para7: PresetDataIndex.AMP_Para7,
+    AMP_Para8: PresetDataIndex.AMP_Para8,
   },
   EQ_PARAMS: {
-    eq1: PresetDataIndex.EQ_Para1,
-    eq2: PresetDataIndex.EQ_Para2,
-    eq3: PresetDataIndex.EQ_Para3,
-    eq4: PresetDataIndex.EQ_Para4,
-    eq5: PresetDataIndex.EQ_Para5,
-    eq6: PresetDataIndex.EQ_Para6,
-    eq7: PresetDataIndex.EQ_Para7,
-    eq8: PresetDataIndex.EQ_Para8,
-    eq9: PresetDataIndex.EQ_Para9,
-    eq10: PresetDataIndex.EQ_Para10,
-    eq11: PresetDataIndex.EQ_Para11,
-    eq12: PresetDataIndex.EQ_Para12,
+    EQ_Para1: PresetDataIndex.EQ_Para1,
+    EQ_Para2: PresetDataIndex.EQ_Para2,
+    EQ_Para3: PresetDataIndex.EQ_Para3,
+    EQ_Para4: PresetDataIndex.EQ_Para4,
+    EQ_Para5: PresetDataIndex.EQ_Para5,
+    EQ_Para6: PresetDataIndex.EQ_Para6,
+    EQ_Para7: PresetDataIndex.EQ_Para7,
+    EQ_Para8: PresetDataIndex.EQ_Para8,
+    EQ_Para9: PresetDataIndex.EQ_Para9,
+    EQ_Para10: PresetDataIndex.EQ_Para10,
+    EQ_Para11: PresetDataIndex.EQ_Para11,
+    EQ_Para12: PresetDataIndex.EQ_Para12,
   },
   NG_PARAMS: {
-    sensitivity: PresetDataIndex.NG_Para1,
-    decay: PresetDataIndex.NG_Para2,
-    param3: PresetDataIndex.NG_Para3,
-    param4: PresetDataIndex.NG_Para4,
+    NG_Para1: PresetDataIndex.NG_Para1,
+    NG_Para2: PresetDataIndex.NG_Para2,
+    NG_Para3: PresetDataIndex.NG_Para3,
+    NG_Para4: PresetDataIndex.NG_Para4,
   },
   MOD_PARAMS: {
-    rate: PresetDataIndex.MOD_Para1,
-    depth: PresetDataIndex.MOD_Para2,
-    mix: PresetDataIndex.MOD_Para3,
-    param4: PresetDataIndex.MOD_Para4,
-    param5: PresetDataIndex.MOD_Para5,
-    param6: PresetDataIndex.MOD_Para6,
+    MOD_Para1: PresetDataIndex.MOD_Para1,
+    MOD_Para2: PresetDataIndex.MOD_Para2,
+    MOD_Para3: PresetDataIndex.MOD_Para3,
+    MOD_Para4: PresetDataIndex.MOD_Para4,
+    MOD_Para5: PresetDataIndex.MOD_Para5,
+    MOD_Para6: PresetDataIndex.MOD_Para6,
   },
   DLY_PARAMS: {
-    time: PresetDataIndex.DLY_Para3, // matches device mapping (D.Time)
-    feedback: PresetDataIndex.DLY_Para2,
-    mix: PresetDataIndex.DLY_Para1,
-    param4: PresetDataIndex.DLY_Para4,
-    param5: PresetDataIndex.DLY_Para5,
-    param6: PresetDataIndex.DLY_Para6,
-    param7: PresetDataIndex.DLY_Para7,
-    param8: PresetDataIndex.DLY_Para8,
+    DLY_Para1: PresetDataIndex.DLY_Para1,
+    DLY_Para2: PresetDataIndex.DLY_Para2,
+    DLY_Para3: PresetDataIndex.DLY_Para3,
+    DLY_Para4: PresetDataIndex.DLY_Para4,
+    DLY_Para5: PresetDataIndex.DLY_Para5,
+    DLY_Para6: PresetDataIndex.DLY_Para6,
+    DLY_Para7: PresetDataIndex.DLY_Para7,
+    DLY_Para8: PresetDataIndex.DLY_Para8,
   },
   RVB_PARAMS: {
-    decay: PresetDataIndex.RVB_Para1,
-    tone: PresetDataIndex.RVB_Para2,
-    mix: PresetDataIndex.RVB_Para3,
-    predelay: PresetDataIndex.RVB_Para4,
+    RVB_Para1: PresetDataIndex.RVB_Para1,
+    RVB_Para2: PresetDataIndex.RVB_Para2,
+    RVB_Para3: PresetDataIndex.RVB_Para3,
+    RVB_Para4: PresetDataIndex.RVB_Para4,
   },
   CAB_PARAMS: {
-    param1: PresetDataIndex.CAB_Para1,
-    param2: PresetDataIndex.CAB_Para2,
-    param3: PresetDataIndex.CAB_Para3,
-    level: PresetDataIndex.CAB_Para4,
-    lowcut: PresetDataIndex.CAB_Para5,
-    hicut: PresetDataIndex.CAB_Para6,
+    CAB_Para1: PresetDataIndex.CAB_Para1,
+    CAB_Para2: PresetDataIndex.CAB_Para2,
+    CAB_Para3: PresetDataIndex.CAB_Para3,
+    CAB_Para4: PresetDataIndex.CAB_Para4,
+    CAB_Para5: PresetDataIndex.CAB_Para5,
+    CAB_Para6: PresetDataIndex.CAB_Para6,
   },
 } as const;
 
-// Allowed parameter keys per slot
-export type CompressorParamKey = 'sustain' | 'level' | 'clipping' | 'gain' | 'threshold' | 'ratio' | 'release';
+// Allowed parameter keys per slot (now using *_ParaN keys directly)
+export type CompressorParamKey = keyof typeof ParamIndex.CMP_PARAMS;
 export type EfxParamKey = keyof typeof ParamIndex.EFX_PARAMS;
 export type AmpParamKey = keyof typeof ParamIndex.AMP_PARAMS;
 export type EqParamKey = keyof typeof ParamIndex.EQ_PARAMS;
@@ -229,6 +230,7 @@ export interface ParamsBySlot {
 
 export interface ProcessorTypeConfig<S extends Slot> {
   aliasOf?: string;
+  realName?: string;
   params: ParamsBySlot[S];
 }
 
@@ -260,58 +262,33 @@ export function toUnitString(value0100: number, { min, max, unit }: { min?: numb
   return unit ? `${String(rounded)} ${unit}` : String(rounded);
 }
 
-// ---------- Real device names (subset; extend as needed) ----------
-export const realNames: Partial<Record<Exclude<Slot, 'Noisegate' | 'EQ'>, Record<string, string>>> = {
-  EFX: {
-    'Distortion+': 'MXR Distortion+',
-    'RC Boost': 'Xotic RC Booster',
-    'AC Boost': 'Xotic AC Booster',
-    'Dist One': 'Boss DS-1',
-    'T Screamer': 'Ibanez Tube Screamer',
-    'Blues Drive': 'Boss Blues Driver',
-    'Morning Drive': 'JHS Morning Glory',
-    'Eat Dist': 'ProCo RAT',
-    'Red Dirt': 'Keeley Red Dirt',
-    Crunch: 'JHS Angry Charlie',
-    'Muff Fuzz': 'Electro-Harmonix Big Muff',
-    Katana: 'Keeley Katana',
-  },
-  IR: {
-    JZ120: 'Roland JC-120 2x12',
-    M1960AV: 'Marshall 1960AV 4x12',
-  },
-  Amp: {
-    'Jazz Clean': 'Roland JC-120',
-    'Deluxe Rvb': 'Fender Deluxe Reverb',
-    'Twin Reverb': 'Fender Twin Reverb',
-    'Brit 800': 'Marshall JCM800',
-  },
-};
-
 // ---------- Processor registry ----------
 // params: key -> { label, unit?, min?, max?, index? }
 export const processorConfig: ProcessorConfig = {
   Compressor: {
     types: {
       'K Comp': {
+        realName: 'Keeley Compressor (K Comp)',
         params: {
-          level: { label: 'Level', index: PresetDataIndex.CMP_Para2 },
-          sustain: { label: 'Sustain', index: PresetDataIndex.CMP_Para1 },
-          clipping: { label: 'Clipping', index: PresetDataIndex.CMP_Para3 },
+          CMP_Para2: { label: 'Level', index: PresetDataIndex.CMP_Para2 },
+          CMP_Para1: { label: 'Sustain', index: PresetDataIndex.CMP_Para1 },
+          CMP_Para3: { label: 'Clipping', index: PresetDataIndex.CMP_Para3 },
         },
       },
       'Studio Comp': {
+        realName: 'Studio Compressor',
         params: {
-          gain: { label: 'Gain', index: PresetDataIndex.CMP_Para3 },
-          threshold: { label: 'Threshold', index: PresetDataIndex.CMP_Para1 },
-          ratio: { label: 'Ratio', index: PresetDataIndex.CMP_Para2 },
-          release: { label: 'Release', index: PresetDataIndex.CMP_Para4 },
+          CMP_Para3: { label: 'Gain', index: PresetDataIndex.CMP_Para3 },
+          CMP_Para1: { label: 'Threshold', index: PresetDataIndex.CMP_Para1 },
+          CMP_Para2: { label: 'Ratio', index: PresetDataIndex.CMP_Para2 },
+          CMP_Para4: { label: 'Release', index: PresetDataIndex.CMP_Para4 },
         },
       },
       'Rose Comp': {
+        realName: 'Keeley Compressor (Rose Comp)',
         params: {
-          level: { label: 'Level', index: PresetDataIndex.CMP_Para2 },
-          sustain: { label: 'Sustain', index: PresetDataIndex.CMP_Para1 },
+          CMP_Para2: { label: 'Level', index: PresetDataIndex.CMP_Para2 },
+          CMP_Para1: { label: 'Sustain', index: PresetDataIndex.CMP_Para1 },
         },
       },
     },
@@ -319,17 +296,18 @@ export const processorConfig: ProcessorConfig = {
   IR: {
     types: {
       JZ120: {
+        realName: 'Roland JC-120 2x12',
         params: {
-          level: { label: 'Level', unit: 'dB', min: -12, max: 12, index: ParamIndex.CAB_PARAMS.level },
-          lowcut: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300, index: ParamIndex.CAB_PARAMS.lowcut },
-          hicut: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000, index: ParamIndex.CAB_PARAMS.hicut },
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12, index: ParamIndex.CAB_PARAMS.CAB_Para4 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300, index: ParamIndex.CAB_PARAMS.CAB_Para5 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000, index: ParamIndex.CAB_PARAMS.CAB_Para6 },
         },
       },
       default: {
         params: {
-          level: { label: 'Level', unit: 'dB', min: -12, max: 12, index: ParamIndex.CAB_PARAMS.level },
-          lowcut: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300, index: ParamIndex.CAB_PARAMS.lowcut },
-          hicut: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000, index: ParamIndex.CAB_PARAMS.hicut },
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12, index: ParamIndex.CAB_PARAMS.CAB_Para4 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300, index: ParamIndex.CAB_PARAMS.CAB_Para5 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000, index: ParamIndex.CAB_PARAMS.CAB_Para6 },
         },
       },
     },
@@ -338,9 +316,9 @@ export const processorConfig: ProcessorConfig = {
     types: {
       'Digital Delay': {
         params: {
-          mix: { label: 'E.Level', min: 0, max: 100, index: ParamIndex.DLY_PARAMS.mix },
-          feedback: { label: 'F.Back', min: 0, max: 100, index: ParamIndex.DLY_PARAMS.feedback },
-          time: { label: 'D.Time', unit: 'ms', min: 61, max: 752, index: ParamIndex.DLY_PARAMS.time },
+          DLY_Para1: { label: 'E.Level', min: 0, max: 100, index: ParamIndex.DLY_PARAMS.DLY_Para1 },
+          DLY_Para2: { label: 'F.Back', min: 0, max: 100, index: ParamIndex.DLY_PARAMS.DLY_Para2 },
+          DLY_Para3: { label: 'D.Time', unit: 'ms', min: 61, max: 752, index: ParamIndex.DLY_PARAMS.DLY_Para3 },
         },
       },
     },

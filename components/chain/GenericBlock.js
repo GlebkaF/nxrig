@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { deviceMappings } from '../../data/deviceMappings';
-import { processorConfig, SLOT_COLORS, realNames } from '../../lib/processorConfig.ts';
+import { processorConfig, SLOT_COLORS } from '../../lib/processorConfig.ts';
 import Knob from '../Knob';
 import Toggle from '../Toggle';
 
@@ -11,12 +11,12 @@ function formatLabel(key) {
 
 export default function GenericBlock({ block }) {
   const color = SLOT_COLORS[block.slot] || '#9ca3af';
-  const realName = realNames[block.slot]?.[block.model] || deviceMappings[block.slot]?.[block.model];
-
-  // Unsupported type check
   const slotCfg = processorConfig[block.slot];
-  const typeKnown = !!slotCfg?.types?.[block.model] || block.slot === 'EFX' || block.slot === 'Amp' || block.slot === 'Mod' || block.slot === 'RVB' || block.slot === 'EQ';
-  if (slotCfg && slotCfg.types && !slotCfg.types[block.model] && block.slot !== 'EQ') {
+  const typeCfg = slotCfg?.types?.[block.model];
+  const realName = typeCfg?.realName || deviceMappings[block.slot]?.[block.model];
+
+  const typeKnown = !!typeCfg || block.slot === 'EFX' || block.slot === 'Amp' || block.slot === 'Mod' || block.slot === 'RVB' || block.slot === 'EQ';
+  if (slotCfg && slotCfg.types && !typeCfg && block.slot !== 'EQ') {
     return (
       <li className="relative p-4 rounded bg-gray-800 border-2 w-fit" style={{ borderColor: color }}>
         <div className="font-semibold mb-2">{block.model}{realName && <span className="text-gray-400"> — {realName}</span>}</div>
@@ -38,13 +38,15 @@ export default function GenericBlock({ block }) {
         <div className="text-xs text-gray-300">EQ visualization handled elsewhere</div>
       ) : (
         <div className="flex flex-wrap gap-4">
-          {Object.entries(block.params || {}).map(([key, value]) =>
-            String(key).toLowerCase() === 'bright' ? (
-              <Toggle key={key} label={formatLabel(key)} value={Number(value)} color={color} />
+          {Object.entries(block.params || {}).map(([key, value]) => {
+            const meta = typeCfg?.params?.[key] || {};
+            const label = meta.label || formatLabel(key);
+            return String(key).toLowerCase() === 'bright' ? (
+              <Toggle key={key} label={label} value={Number(value)} color={color} />
             ) : (
-              <Knob key={key} label={formatLabel(key)} value={Number(value)} color={color} />
-            )
-          )}
+              <Knob key={key} label={label} value={Number(value)} color={color} />
+            );
+          })}
         </div>
       )}
       <span className="absolute bottom-1 right-1 px-2 py-0.5 text-xs font-semibold rounded" style={{ backgroundColor: color, color: '#000' }}>
