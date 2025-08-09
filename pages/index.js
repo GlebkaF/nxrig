@@ -3,10 +3,17 @@ import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import { presets } from '../data/presets';
 
+import { NextSeo } from 'next-seo';
+
 export default function Home({ presets }) {
   const { basePath } = useRouter();
   return (
     <div className="min-h-screen p-4 bg-gray-900 text-gray-100">
+      <NextSeo
+        title="Preset Library"
+        description="NUX Mighty preset library: clean, crunch and high gain tones. Ready-to-import QR codes."
+        openGraph={{ title: 'Preset Library', description: 'NUX Mighty preset library: clean, crunch and high gain tones. Ready-to-import QR codes.' }}
+      />
       <Header />
       <h1 className="text-2xl font-bold mb-2">Preset Library</h1>
       <p className="mb-6 text-gray-300">All presets work as-is with native cabs.</p>
