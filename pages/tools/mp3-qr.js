@@ -209,10 +209,7 @@ function sortEqKeys(a, b) {
   return Number.isFinite(pa) && Number.isFinite(pb) ? pa - pb : a.localeCompare(b);
 }
 
-function jsonToQrStringFromSite(siteJson) {
-  const bytes = buildPayloadFromSiteJson(siteJson);
-  return NUX_PREFIX + bytesToB64(bytes);
-}
+import { siteJsonToQrString } from '../../lib/encoder';
 
 // ---------------- SAMPLE JSON (site shape) ----------------
 const SAMPLE_SITE_JSON = {
@@ -248,7 +245,7 @@ export default function Mp3QrPage() {
       // Deterministic chain order in UI
       const ordered = { ...result.data, chain: [...result.data.chain].filter((b) => b.enabled !== false).sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };
       setSiteData(ordered);
-      setQr(jsonToQrStringFromSite(ordered));
+      setQr(siteJsonToQrString(ordered));
     } catch (e) {
       setErr(e.message || String(e));
       setQr('');
