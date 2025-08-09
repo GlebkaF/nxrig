@@ -103,6 +103,237 @@ export const processorConfig: ProcessorConfig = {
           CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
         },
       },
+      DR112: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      TR212: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      HIWIRE412: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'CALI 112': {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      A112: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      GB412: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1960AX: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1960AV: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1960TV: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      SLO412: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'FIREMAN 412': {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'RECT 412': {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      DIE412: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      MATCH212: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      UBER412: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      BS410: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      A212: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1960AHW: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1936: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      BUDDA112: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      Z212: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      SUPERVERB410: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      VIBROKING310: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      AGL_DB810: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      AMP_SV212: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      AMP_SV410: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      AMP_SV810: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      BASSGUY410: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      EDEN410: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      MKB410: {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'G-HBIRD': {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'G-J15': {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'M-D45': {
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
     },
   },
   Delay: {
