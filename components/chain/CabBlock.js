@@ -6,15 +6,15 @@ import Knob from '../Knob';
 
 export default function CabBlock({ block }) {
   const color = SLOT_COLORS.IR;
-  const typeCfg = processorConfig.IR?.types?.[block.model] || processorConfig.IR?.types?.default;
+  const typeCfg = processorConfig.IR?.types?.[block.model];
   const realName = typeCfg?.realName || deviceMappings['IR']?.[block.model];
-  const cfgParams = typeCfg?.params;
+  const cfgParams = typeCfg?.params || {};
   const level = Number(block.params?.CAB_Para4 ?? block.params?.level ?? 50);
   const low = Number(block.params?.CAB_Para5 ?? block.params?.lowcut ?? 50);
   const high = Number(block.params?.CAB_Para6 ?? block.params?.hicut ?? 50);
-  const levelDv = toUnitString(level, cfgParams?.CAB_Para4 || cfgParams?.level || {});
-  const lowDv = toUnitString(low, cfgParams?.CAB_Para5 || cfgParams?.lowcut || {});
-  const highDv = toUnitString(high, cfgParams?.CAB_Para6 || cfgParams?.hicut || {});
+  const levelDv = cfgParams.CAB_Para4 ? toUnitString(level, cfgParams.CAB_Para4) : undefined;
+  const lowDv = cfgParams.CAB_Para5 ? toUnitString(low, cfgParams.CAB_Para5) : undefined;
+  const highDv = cfgParams.CAB_Para6 ? toUnitString(high, cfgParams.CAB_Para6) : undefined;
   return (
     <li className="relative p-4 rounded bg-gray-800 border-2 w-fit" style={{ borderColor: color }}>
       <div className="font-semibold mb-2">

@@ -103,13 +103,6 @@ export const processorConfig: ProcessorConfig = {
           CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
         },
       },
-      default: {
-        params: {
-          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
-          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
-          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
-        },
-      },
     },
   },
   DLY: {
