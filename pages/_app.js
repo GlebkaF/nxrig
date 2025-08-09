@@ -1,19 +1,19 @@
 import '../styles/globals.css';
 import { DefaultSeo } from 'next-seo';
 
+import { siteConfig } from '../lib/siteConfig';
+
 const defaultSEO = {
-  titleTemplate: '%s | MightyPatch NUX Presets',
-  defaultTitle: 'MightyPatch NUX Presets',
-  description: 'Коллекция пресетов NUX Mighty и инструмент генерации QR для Mighty Plug Pro 3. Визуализация цепочки эффектов и удобные ссылки.',
+  titleTemplate: siteConfig.titleTemplate,
+  defaultTitle: siteConfig.defaultTitle,
+  description: siteConfig.defaultDescription,
   openGraph: {
     type: 'website',
-    locale: 'ru_RU',
-    url: 'https://example.com/',
-    siteName: 'MightyPatch',
+    locale: 'en_US',
+    url: siteConfig.siteUrl,
+    siteName: siteConfig.siteName,
   },
-  twitter: {
-    cardType: 'summary_large_image',
-  },
+  twitter: siteConfig.twitter,
 };
 
 export default function App({ Component, pageProps }) {

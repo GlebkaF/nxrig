@@ -234,6 +234,26 @@ export default function Mp3QrPage() {
   const [siteData, setSiteData] = useState(null);
   const canvasRef = useRef(null);
 
+  // Random preset helper for the site JSON shape
+  function randomPresetSiteShape() {
+    const take = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+    const on = () => Math.random() > 0.5;
+    return {
+      name: 'Random Preset',
+      chain: [
+        { slot: 'Noisegate', model: 'Noise Gate', enabled: on(), params: { Sens: take(0, 100), Decay: take(0, 100) } },
+        { slot: 'Compressor', model: 'Rose Comp', enabled: on(), params: { Sustain: take(0, 100), Level: take(0, 100), Attack: take(0, 100), Blend: take(0, 100) } },
+        { slot: 'EFX', model: 'Distortion+', enabled: on(), params: { Drive: take(0, 100), Tone: take(0, 100), Level: take(0, 100) } },
+        { slot: 'Amp', model: 'Jazz Clean', enabled: true, params: { Gain: take(0, 100), Master: take(0, 100), Bass: take(0, 100), Middle: take(0, 100), Treble: take(0, 100), Bright: on() ? 100 : 0 } },
+        { slot: 'IR', model: 'JZ120', enabled: true, params: { Level_db: 0, Low_Cut_hz: take(20, 1000), High_Cut_hz: take(1000, 20000) } },
+        { slot: 'EQ', model: '6-Band', enabled: on(), params: { '100': take(0, 100), '220': take(0, 100), '500': take(0, 100), '1.2K': take(0, 100), '2.6K': take(0, 100), '6.4K': take(0, 100) } },
+        { slot: 'Mod', model: 'ST Chorus', enabled: on(), params: { Rate: take(0, 100), Depth: take(0, 100), Mix: take(0, 100) } },
+        { slot: 'DLY', model: 'Digital Delay', enabled: on(), params: { 'D.Time_ms': 375, 'F.Back': take(0, 100), 'E.Level': take(0, 100) } },
+        { slot: 'RVB', model: 'Room', enabled: on(), params: { Decay: take(0, 100), Tone: take(0, 100), Level: take(0, 100) } },
+      ],
+    };
+  }
+
   useEffect(() => {
     try {
       setErr('');
@@ -266,8 +286,8 @@ export default function Mp3QrPage() {
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <NextSeo
         title="Mighty Plug Pro 3 — JSON → QR"
-        description="Генератор QR для NUX Mighty Plug Pro 3. Вставьте JSON пресета и получите QR, плюс визуализацию цепочки."
-        openGraph={{ title: 'Mighty Plug Pro 3 — JSON → QR', description: 'Генератор QR для NUX Mighty Plug Pro 3. Вставьте JSON пресета и получите QR, плюс визуализацию цепочки.' }}
+        description="QR generator for NUX Mighty Plug Pro 3. Paste preset JSON to get QR and visualize the signal chain."
+        openGraph={{ title: 'Mighty Plug Pro 3 — JSON → QR', description: 'QR generator for NUX Mighty Plug Pro 3. Paste preset JSON to get QR and visualize the signal chain.' }}
       />
       <Header />
       <div className="container mx-auto px-4 pb-8">
@@ -277,6 +297,7 @@ export default function Mp3QrPage() {
             <textarea className="w-full h-96 font-mono text-sm p-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100" value={text} onChange={(e) => setText(e.target.value)} />
             <div className="flex gap-3 mt-3">
               <button onClick={() => setText(JSON.stringify(SAMPLE_SITE_JSON, null, 2))} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Reset</button>
+              <button onClick={() => setText(JSON.stringify(randomPresetSiteShape(), null, 2))} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Random</button>
             </div>
             {err && (
               <div className="mt-3 p-3 rounded-xl border border-red-400 text-sm bg-red-950 text-red-200 whitespace-pre-wrap">{err}</div>

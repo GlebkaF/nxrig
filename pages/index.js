@@ -11,8 +11,8 @@ export default function Home({ presets }) {
     <div className="min-h-screen p-4 bg-gray-900 text-gray-100">
       <NextSeo
         title="Preset Library"
-        description="Библиотека пресетов для NUX Mighty: чистые, кранч и хайгейн. Готовые QR для импорта."
-        openGraph={{ title: 'Preset Library', description: 'Библиотека пресетов для NUX Mighty: чистые, кранч и хайгейн. Готовые QR для импорта.' }}
+        description="NUX Mighty preset library: clean, crunch and high gain tones. Ready-to-import QR codes."
+        openGraph={{ title: 'Preset Library', description: 'NUX Mighty preset library: clean, crunch and high gain tones. Ready-to-import QR codes.' }}
       />
       <Header />
       <h1 className="text-2xl font-bold mb-2">Preset Library</h1>
