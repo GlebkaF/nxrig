@@ -2,18 +2,15 @@ import React, { useRef, useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Header from '../../components/Header';
 import SignalChain from '../../components/SignalChain';
-import { z } from 'zod';
 import { NextSeo } from 'next-seo';
-import { flatPresetToQrString } from '../../lib/encoder';
+import { flatPresetToQrString, qrStringToFlatPreset } from '../../lib/encoder';
 import { FlatPresetSchema } from '../../lib/flatPresetSchema';
-import { qrStringToFlatPreset } from '../../lib/encoder';
+import jsQR from 'jsqr';
 
 const QRCodeCanvas = dynamic(() => import('qrcode.react').then((m) => m.QRCodeCanvas), { ssr: false });
 
-// Order for SignalChain visualization only
 const CHAIN_ORDER = ['Noisegate', 'Compressor', 'EFX', 'Amp', 'IR', 'EQ', 'Mod', 'DLY', 'RVB'];
 
-// Adapter ONLY for visualization (does not change the canonical data shape)
 function flatPresetToVisualizationChain(preset) {
   const chain = [];
   if (preset.noise_gate) chain.push({ slot: 'Noisegate', model: 'Noise Gate', enabled: preset.noise_gate.enabled, params: { Sens: preset.noise_gate.sensitivity ?? 50, Decay: preset.noise_gate.decay ?? 50 } });
@@ -28,64 +25,21 @@ function flatPresetToVisualizationChain(preset) {
   return { chain: chain.filter((b) => b.enabled !== false).sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };
 }
 
-const SAMPLE_FLAT_JSON = {
-  product_id: 15,
-  version: 1,
-  master: 80,
-  noise_gate: { enabled: true, sensitivity: 50, decay: 50 },
-  comp: { enabled: true, type: 'Rose Comp', sustain: 50, level: 50, attack: 50, blend: 50 },
-  efx: { enabled: false, type: 'Distortion+', var1: 50, var2: 50, var3: 50 },
-  amp: { enabled: true, type: 'Jazz Clean', gain: 65, master: 70, bass: 50, mid: 65, treble: 55, bright: 0 },
-  cab: { enabled: true, type: 'JZ120', level: 0, lowcut: 20, hicut: 100 },
-  mod: { enabled: false, type: 'CE-1', rate: 50, depth: 50, mix: 50 },
-  delay: { enabled: false, type: 'Analog Delay', time: 50, feedback: 50, mix: 50 },
-  reverb: { enabled: true, type: 'Room', decay: 50, tone: 50, mix: 50 },
-};
-
 export default function Mp3QrPage() {
-  const [text, setText] = useState(() => JSON.stringify(SAMPLE_FLAT_JSON, null, 2));
+  const [text, setText] = useState('');
   const [qr, setQr] = useState('');
   const [err, setErr] = useState('');
   const [vizData, setVizData] = useState(null);
   const canvasRef = useRef(null);
-  const [qrInput, setQrInput] = useState('');
-
-  function randomFlatPreset() {
-    const rnd = () => (Math.random() * 101) | 0;
-    const on = () => Math.random() > 0.5;
-    return {
-      product_id: 15,
-      version: 1,
-      master: rnd(),
-      noise_gate: { enabled: on(), sensitivity: rnd(), decay: rnd() },
-      comp: { enabled: on(), type: 'Rose Comp', sustain: rnd(), level: rnd(), attack: rnd(), blend: rnd() },
-      efx: { enabled: on(), type: 'Distortion+', var1: rnd(), var2: rnd(), var3: rnd() },
-      amp: { enabled: on(), type: 'Jazz Clean', gain: rnd(), master: rnd(), bass: rnd(), mid: rnd(), treble: rnd(), bright: rnd() },
-      cab: { enabled: on(), type: 'JZ120', level: 0, lowcut: rnd(), hicut: rnd() },
-      mod: { enabled: on(), type: 'CE-1', rate: rnd(), depth: rnd(), mix: rnd() },
-      delay: { enabled: on(), type: 'Analog Delay', time: rnd(), feedback: rnd(), mix: rnd() },
-      reverb: { enabled: on(), type: 'Room', decay: rnd(), tone: rnd(), mix: rnd() },
-    };
-  }
-
-  function onImportFromQr() {
-    try {
-      const preset = qrStringToFlatPreset(qrInput.trim());
-      setText(JSON.stringify(preset, null, 2));
-      setErr('');
-    } catch (e) {
-      setErr(e.message || String(e));
-    }
-  }
+  const fileInputRef = useRef(null);
 
   useEffect(() => {
+    if (!text) { setQr(''); setVizData(null); setErr(''); return; }
     try {
       setErr('');
       const parsed = JSON.parse(text);
       const result = FlatPresetSchema.safeParse(parsed);
-      if (!result.success) {
-        throw new Error('Invalid preset JSON:\n' + result.error.issues.map((i) => `- ${i.path.join('.')}: ${i.message}`).join('\n'));
-      }
+      if (!result.success) throw new Error('Invalid preset JSON:\n' + result.error.issues.map((i) => `- ${i.path.join('.')}: ${i.message}`).join('\n'));
       const flat = result.data;
       setQr(flatPresetToQrString(flat));
       setVizData(flatPresetToVisualizationChain(flat));
@@ -105,32 +59,72 @@ export default function Mp3QrPage() {
     a.href = url; a.download = 'mp3_qr.png'; a.click();
   }
 
+  async function onPickFileClick() {
+    fileInputRef.current?.click();
+  }
+
+  async function onFileSelected(e) {
+    try {
+      setErr('');
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const bmp = await readImageBitmap(file);
+      const qrText = scanQrFromImage(bmp);
+      if (!qrText) throw new Error('QR not found on image');
+      const preset = qrStringToFlatPreset(qrText);
+      setText(JSON.stringify(preset, null, 2));
+      e.target.value = '';
+    } catch (ex) {
+      setErr(ex.message || String(ex));
+    }
+  }
+
+  function scanQrFromImage(imageBitmap) {
+    const canvas = document.createElement('canvas');
+    canvas.width = imageBitmap.width;
+    canvas.height = imageBitmap.height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(imageBitmap, 0, 0);
+    const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const code = jsQR(imgData.data, imgData.width, imgData.height);
+    return code?.data || '';
+  }
+
+  function readImageBitmap(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error('Failed to read file'));
+      reader.onload = () => {
+        createImageBitmap(new Blob([reader.result]))
+          .then(resolve)
+          .catch(() => {
+            const img = new Image();
+            img.onload = () => resolve(createImageBitmap(img));
+            img.onerror = () => reject(new Error('Invalid image'));
+            img.src = reader.result;
+          });
+      };
+      reader.readAsArrayBuffer(file);
+    });
+  }
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <NextSeo
         title="Mighty Plug Pro 3 — JSON → QR"
-        description="QR generator for NUX Mighty Plug Pro 3. Paste preset JSON to get QR and visualize the signal chain."
-        openGraph={{ title: 'Mighty Plug Pro 3 — JSON → QR', description: 'QR generator for NUX Mighty Plug Pro 3. Paste preset JSON to get QR and visualize the signal chain.' }}
+        description="QR generator for NUX Mighty Plug Pro 3. Import from QR image to get JSON and visualize the signal chain."
+        openGraph={{ title: 'Mighty Plug Pro 3 — JSON → QR', description: 'QR generator for NUX Mighty Plug Pro 3. Import from QR image to get JSON and visualize the signal chain.' }}
       />
       <Header />
       <div className="container mx-auto px-4 pb-8">
-        <h1 className="text-2xl font-bold mb-4">Mighty Plug Pro 3 — JSON → QR</h1>
+        <h1 className="text-2xl font-bold mb-4">Mighty Plug Pro 3 — JSON ↔ QR</h1>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-gray-800 rounded-2xl p-4 border border-gray-700">
-            <textarea className="w-full h-96 font-mono text-sm p-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100" value={text} onChange={(e) => setText(e.target.value)} />
-            <div className="flex flex-wrap gap-3 mt-3 items-center">
-              <button onClick={() => setText(JSON.stringify(SAMPLE_FLAT_JSON, null, 2))} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Reset</button>
-              <button onClick={() => setText(JSON.stringify(randomFlatPreset(), null, 2))} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Random</button>
-              <div className="flex gap-2 items-center ml-auto w-full md:w-auto">
-                <input
-                  className="flex-1 md:w-72 px-3 py-2 rounded-lg bg-gray-900 border border-gray-700 text-sm"
-                  placeholder="Paste QR string (nux://...)"
-                  value={qrInput}
-                  onChange={(e) => setQrInput(e.target.value)}
-                />
-                <button onClick={onImportFromQr} className="px-3 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-sm">Import</button>
-              </div>
+            <div className="flex gap-3 items-center mb-3">
+              <button onClick={onPickFileClick} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Import from QR image</button>
+              <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={onFileSelected} />
             </div>
+            <textarea className="w-full h-96 font-mono text-sm p-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100" placeholder="JSON will appear here after import..." value={text} onChange={(e) => setText(e.target.value)} />
             {err && (
               <div className="mt-3 p-3 rounded-xl border border-red-400 text-sm bg-red-950 text-red-200 whitespace-pre-wrap">{err}</div>
             )}
@@ -149,12 +143,11 @@ export default function Mp3QrPage() {
                 <div ref={canvasRef}><QRCodeCanvas value={qr} size={256} includeMargin={true} /></div>
                 <textarea readOnly className="w-full h-32 mt-4 font-mono text-xs p-3 rounded-xl border border-gray-700 bg-gray-900 text-gray-100" value={qr} />
                 <div className="flex gap-2 mt-2">
-                  <a className="px-3 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-sm" href={`data:text/plain;charset=utf-8,${encodeURIComponent(qr)}`} download="mp3_qr.txt">Download string</a>
                   <button className="px-3 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-sm" onClick={onDownloadPng}>Download PNG</button>
                 </div>
               </>
             ) : (
-              <div className="text-gray-400 text-sm">QR is invalid.</div>
+              <div className="text-gray-400 text-sm">No QR generated yet.</div>
             )}
           </div>
         </div>
