@@ -104,6 +104,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       DR112: {
+        realName: 'Fender Deluxe Reverb 1x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -111,6 +112,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       TR212: {
+        realName: 'Fender Twin Reverb 2x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -118,6 +120,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       HIWIRE412: {
+        realName: 'Hiwatt 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -125,6 +128,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'CALI 112': {
+        realName: 'Mesa/Boogie 1x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -132,6 +136,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       A112: {
+        realName: 'American 1x12 (Open Back)',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -139,6 +144,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       GB412: {
+        realName: 'Celestion Greenback 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -146,6 +152,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       M1960AX: {
+        realName: 'Marshall 1960AX 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -153,6 +160,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       M1960AV: {
+        realName: 'Marshall 1960AV 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -160,6 +168,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       M1960TV: {
+        realName: 'Marshall 1960TV 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -167,6 +176,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       SLO412: {
+        realName: 'Soldano 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -174,6 +184,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'FIREMAN 412': {
+        realName: 'Friedman 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -181,6 +192,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'RECT 412': {
+        realName: 'Mesa Boogie Rectifier 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -188,6 +200,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       DIE412: {
+        realName: 'Diezel 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -195,6 +208,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       MATCH212: {
+        realName: 'Matchless 2x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -202,6 +216,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       UBER412: {
+        realName: 'Bogner Uberkab 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -209,6 +224,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       BS410: {
+        realName: 'Fender Bassman 4x10',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -216,6 +232,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       A212: {
+        realName: 'American 2x12 (Open Back)',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -223,6 +240,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       M1960AHW: {
+        realName: 'Marshall 1960AHW 4x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -230,6 +248,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       M1936: {
+        realName: 'Marshall 1936 2x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -237,6 +256,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       BUDDA112: {
+        realName: 'Budda 1x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -244,6 +264,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       Z212: {
+        realName: 'Dr. Z 2x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -251,6 +272,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       SUPERVERB410: {
+        realName: 'Fender Super Reverb 4x10',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -258,6 +280,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       VIBROKING310: {
+        realName: 'Fender Vibro‑King 3x10',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -265,6 +288,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       AGL_DB810: {
+        realName: 'Aguilar DB810 8x10',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -272,6 +296,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       AMP_SV212: {
+        realName: 'Ampeg SVT 2x12',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -279,6 +304,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       AMP_SV410: {
+        realName: 'Ampeg SVT 4x10',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -286,6 +312,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       AMP_SV810: {
+        realName: 'Ampeg SVT 8x10',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -293,6 +320,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       BASSGUY410: {
+        realName: 'Fender Bassman 4x10',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -300,6 +328,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       EDEN410: {
+        realName: 'Eden 4x10',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -307,6 +336,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       MKB410: {
+        realName: 'Markbass 4x10',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -314,6 +344,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'G-HBIRD': {
+        realName: 'Gibson Hummingbird (Acoustic IR)',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -321,6 +352,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'G-J15': {
+        realName: 'Gibson J‑15 (Acoustic IR)',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
@@ -328,6 +360,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'M-D45': {
+        realName: 'Martin D‑45 (Acoustic IR)',
         params: {
           CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
           CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
