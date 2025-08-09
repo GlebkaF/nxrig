@@ -29,6 +29,8 @@ function formatLabel(key) {
 
 export default function PresetPage({ preset, data }) {
   const { basePath } = useRouter();
+  const CHAIN_ORDER = ['Noisegate', 'Compressor', 'EFX', 'Amp', 'IR', 'EQ', 'Mod', 'DLY', 'RVB'];
+  const ordered = { ...data, chain: [...data.chain].sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };
   return (
     <div className="min-h-screen p-4 bg-gray-900 text-gray-100">
       <Header />
@@ -40,7 +42,7 @@ export default function PresetPage({ preset, data }) {
         className="w-48 h-48 mx-auto mb-6"
       />
       <h2 className="text-xl font-semibold mb-2">Signal chain</h2>
-      <SignalChain data={data} />
+      <SignalChain data={ordered} />
     </div>
   );
 }
