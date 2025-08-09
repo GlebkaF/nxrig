@@ -5,7 +5,6 @@ export interface ParamMeta {
   unit?: Unit;
   min?: number;
   max?: number;
-  index?: number; // device preset index (e.g., CMP_Para1)
 }
 
 // PresetDataIndex-style constants (subset relevant for params)
@@ -263,32 +262,32 @@ export function toUnitString(value0100: number, { min, max, unit }: { min?: numb
 }
 
 // ---------- Processor registry ----------
-// params: key -> { label, unit?, min?, max?, index? }
+// params: key -> { label, unit?, min?, max? }
 export const processorConfig: ProcessorConfig = {
   Compressor: {
     types: {
       'K Comp': {
         realName: 'Keeley Compressor (K Comp)',
         params: {
-          CMP_Para2: { label: 'Level', index: PresetDataIndex.CMP_Para2 },
-          CMP_Para1: { label: 'Sustain', index: PresetDataIndex.CMP_Para1 },
-          CMP_Para3: { label: 'Clipping', index: PresetDataIndex.CMP_Para3 },
+          CMP_Para2: { label: 'Level' },
+          CMP_Para1: { label: 'Sustain' },
+          CMP_Para3: { label: 'Clipping' },
         },
       },
       'Studio Comp': {
         realName: 'Studio Compressor',
         params: {
-          CMP_Para3: { label: 'Gain', index: PresetDataIndex.CMP_Para3 },
-          CMP_Para1: { label: 'Threshold', index: PresetDataIndex.CMP_Para1 },
-          CMP_Para2: { label: 'Ratio', index: PresetDataIndex.CMP_Para2 },
-          CMP_Para4: { label: 'Release', index: PresetDataIndex.CMP_Para4 },
+          CMP_Para3: { label: 'Gain' },
+          CMP_Para1: { label: 'Threshold' },
+          CMP_Para2: { label: 'Ratio' },
+          CMP_Para4: { label: 'Release' },
         },
       },
       'Rose Comp': {
         realName: 'Keeley Compressor (Rose Comp)',
         params: {
-          CMP_Para2: { label: 'Level', index: PresetDataIndex.CMP_Para2 },
-          CMP_Para1: { label: 'Sustain', index: PresetDataIndex.CMP_Para1 },
+          CMP_Para2: { label: 'Level' },
+          CMP_Para1: { label: 'Sustain' },
         },
       },
     },
@@ -298,16 +297,16 @@ export const processorConfig: ProcessorConfig = {
       JZ120: {
         realName: 'Roland JC-120 2x12',
         params: {
-          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12, index: ParamIndex.CAB_PARAMS.CAB_Para4 },
-          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300, index: ParamIndex.CAB_PARAMS.CAB_Para5 },
-          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000, index: ParamIndex.CAB_PARAMS.CAB_Para6 },
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
         },
       },
       default: {
         params: {
-          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12, index: ParamIndex.CAB_PARAMS.CAB_Para4 },
-          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300, index: ParamIndex.CAB_PARAMS.CAB_Para5 },
-          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000, index: ParamIndex.CAB_PARAMS.CAB_Para6 },
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
         },
       },
     },
@@ -316,9 +315,9 @@ export const processorConfig: ProcessorConfig = {
     types: {
       'Digital Delay': {
         params: {
-          DLY_Para1: { label: 'E.Level', min: 0, max: 100, index: ParamIndex.DLY_PARAMS.DLY_Para1 },
-          DLY_Para2: { label: 'F.Back', min: 0, max: 100, index: ParamIndex.DLY_PARAMS.DLY_Para2 },
-          DLY_Para3: { label: 'D.Time', unit: 'ms', min: 61, max: 752, index: ParamIndex.DLY_PARAMS.DLY_Para3 },
+          DLY_Para1: { label: 'E.Level', min: 0, max: 100 },
+          DLY_Para2: { label: 'F.Back', min: 0, max: 100 },
+          DLY_Para3: { label: 'D.Time', unit: 'ms', min: 61, max: 752 },
         },
       },
     },
