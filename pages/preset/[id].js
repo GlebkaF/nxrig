@@ -27,12 +27,19 @@ function formatLabel(key) {
 }
 
 
+import { NextSeo } from 'next-seo';
+
 export default function PresetPage({ preset, data }) {
   const { basePath } = useRouter();
   const CHAIN_ORDER = ['Noisegate', 'Compressor', 'EFX', 'Amp', 'IR', 'EQ', 'Mod', 'DLY', 'RVB'];
   const ordered = { ...data, chain: [...data.chain].sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };
   return (
     <div className="min-h-screen p-4 bg-gray-900 text-gray-100">
+      <NextSeo
+        title={`${preset.name}`}
+        description={preset.description}
+        openGraph={{ title: preset.name, description: preset.description }}
+      />
       <Header />
       <h1 className="text-2xl font-bold mb-2">{preset.name}</h1>
       <p className="mb-4">{preset.description}</p>

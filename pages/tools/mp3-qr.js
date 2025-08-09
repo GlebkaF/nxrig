@@ -228,6 +228,8 @@ const SAMPLE_SITE_JSON = {
   ],
 };
 
+import { NextSeo } from 'next-seo';
+
 export default function Mp3QrPage() {
   const [text, setText] = useState(() => JSON.stringify(SAMPLE_SITE_JSON, null, 2));
   const [qr, setQr] = useState('');
@@ -244,7 +246,7 @@ export default function Mp3QrPage() {
         throw new Error('Invalid preset JSON:\n' + result.error.issues.map((i) => `- ${i.path.join('.')}: ${i.message}`).join('\n'));
       }
       // Deterministic chain order in UI
-      const ordered = { ...result.data, chain: [...result.data.chain].sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };
+      const ordered = { ...result.data, chain: [...result.data.chain].filter((b) => b.enabled !== false).sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };
       setSiteData(ordered);
       setQr(jsonToQrStringFromSite(ordered));
     } catch (e) {
@@ -265,6 +267,11 @@ export default function Mp3QrPage() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
+      <NextSeo
+        title="Mighty Plug Pro 3 — JSON → QR"
+        description="Генератор QR для NUX Mighty Plug Pro 3. Вставьте JSON пресета и получите QR, плюс визуализацию цепочки."
+        openGraph={{ title: 'Mighty Plug Pro 3 — JSON → QR', description: 'Генератор QR для NUX Mighty Plug Pro 3. Вставьте JSON пресета и получите QR, плюс визуализацию цепочки.' }}
+      />
       <Header />
       <div className="container mx-auto px-4 pb-8">
         <h1 className="text-2xl font-bold mb-4">Mighty Plug Pro 3 — JSON → QR</h1>

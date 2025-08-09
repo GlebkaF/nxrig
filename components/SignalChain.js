@@ -73,9 +73,10 @@ function EqDisplay({ params, color = '#9ca3af' }) {
 
 export default function SignalChain({ data }) {
   if (!data || !Array.isArray(data.chain)) return null;
+  const visibleChain = data.chain.filter((b) => b.enabled !== false);
   return (
     <ol className="flex flex-wrap items-start gap-4 mb-4 pr-4">
-      {data.chain.map((block, idx) => {
+      {visibleChain.map((block, idx) => {
         const realName = deviceMappings[block.slot]?.[block.model];
         const color = slotColors[block.slot] || '#9ca3af';
         return (
