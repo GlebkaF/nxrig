@@ -8,8 +8,7 @@ export default function DelayBlock({ block }) {
   const params = block.params || {};
   const model = block.model || 'Digital Delay';
 
-  const sourceCfg = processorConfig.Delay?.types?.[model];
-  const typeCfg = sourceCfg?.aliasOf ? processorConfig.Delay?.types?.[sourceCfg.aliasOf] : sourceCfg;
+  const typeCfg = processorConfig.Delay?.types?.[model] || null;
   const cfgParams = typeCfg?.params;
   if (cfgParams) {
     const entries = Object.entries(cfgParams);
