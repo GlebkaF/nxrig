@@ -116,6 +116,307 @@ export const processorConfig: ProcessorConfig = {
       },
     },
   },
+  Amp: {
+    types: {
+      'Jazz Clean': {
+        realName: 'Roland JC-120',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Bright', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Deluxe Rvb': {
+        realName: 'Fender Deluxe Reverb',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Bass Mate': {
+        realName: 'Fender Bassman',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      Tweedy: {
+        realName: 'Fender Tweed Deluxe',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Tone', unit: '%', min: 0, max: 100 },
+        },
+      },
+      Hiwire: {
+        realName: 'Hiwatt DR103',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Cali Crunch': {
+        realName: 'Mesa Boogie Mark I',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Class A15': {
+        realName: 'Vox AC15',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Cut', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Class A30': {
+        realName: 'Vox AC30',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Cut', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Plexi 100': {
+        realName: 'Marshall JTM45 100W',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Plexi 45': {
+        realName: 'Marshall JTM45 45W',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Brit 800': {
+        realName: 'Marshall JCM800',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      '1987 X 50': {
+        realName: 'Marshall JCM1987X',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'SLO 100': {
+        realName: 'Soldano SLO-100',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Fireman HBE': {
+        realName: 'Friedman BE-100',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Dual Rect': {
+        realName: 'Mesa Boogie Dual Rectifier',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Die VH4': {
+        realName: 'Diezel VH4',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Mr. Z38': {
+        realName: 'Dr. Z MAZ 38',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Cut', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Super Rvb': {
+        realName: 'Fender Super Reverb',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Bright', unit: '%', min: 0, max: 100 },
+        },
+      },
+      Budda: {
+        realName: 'Budda Superdrive',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Cut', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Brit Blues': {
+        realName: 'Marshall Bluesbreaker',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Match D30': {
+        realName: 'Matchless DC-30',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Cut', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Brit 2000': {
+        realName: 'Marshall JCM2000',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Uber HiGain': {
+        realName: 'Bogner Uberschall',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Presence', unit: '%', min: 0, max: 100 },
+        },
+      },
+      AGL: {
+        realName: 'Aguilar Tone Hammer',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Mid Freq', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+        },
+      },
+      MLD: {
+        realName: 'NUX Melvin Lee Davis Preamp',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Mid Freq', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Optima Air': {
+        realName: 'NUX Optima Air',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+        },
+      },
+      Stageman: {
+        realName: 'NUX Stageman AC-50',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Twin Reverb': {
+        realName: 'Fender Twin Reverb',
+        params: {
+          AMP_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          AMP_Para2: { label: 'Master', unit: '%', min: 0, max: 100 },
+          AMP_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          AMP_Para4: { label: 'Middle', unit: '%', min: 0, max: 100 },
+          AMP_Para5: { label: 'Treble', unit: '%', min: 0, max: 100 },
+          AMP_Para6: { label: 'Bright', unit: '%', min: 0, max: 100 },
+        },
+      },
+    },
+  },
 };
 
 export default processorConfig;
