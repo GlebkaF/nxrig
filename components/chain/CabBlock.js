@@ -7,7 +7,7 @@ import Knob from '../Knob';
 export default function CabBlock({ block }) {
   const color = SLOT_COLORS.IR;
   const typeCfg = processorConfig.IR?.types?.[block.model];
-  const realName = typeCfg?.realName || deviceMappings['IR']?.[block.model];
+  const realName = typeCfg?.realName || deviceMappings['Cabinet']?.[block.model];
   const cfgParams = typeCfg?.params || {};
   const level = Number(block.params?.CAB_Para4 ?? block.params?.level ?? 50);
   const low = Number(block.params?.CAB_Para5 ?? block.params?.lowcut ?? 50);

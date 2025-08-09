@@ -25,7 +25,7 @@ export default function DelayBlock({ block }) {
           })}
         </div>
         <span className="absolute bottom-1 right-1 px-2 py-0.5 text-xs font-semibold rounded" style={{ backgroundColor: color, color: '#000' }}>
-          DLY
+          Delay
         </span>
       </li>
     );
@@ -41,7 +41,7 @@ export default function DelayBlock({ block }) {
         ))}
       </div>
       <span className="absolute bottom-1 right-1 px-2 py-0.5 text-xs font-semibold rounded" style={{ backgroundColor: color, color: '#000' }}>
-        DLY
+        Delay
       </span>
     </li>
   );

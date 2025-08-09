@@ -49,7 +49,7 @@ export const deviceMappings = {
     "Optima Air": "NUX Optima Air",
     "Stageman": "NUX Stageman AC-50",
   },
-  IR: {
+  Cabinet: {
     "JZ120": "Roland JC-120 2x12",
     "M1960AV": "Marshall 1960AV 4x12",
   },
