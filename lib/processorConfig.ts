@@ -369,13 +369,49 @@ export const processorConfig: ProcessorConfig = {
       },
     },
   },
-  Delay: {
+Delay: {
     types: {
       'Digital Delay': {
         params: {
           DLY_Para1: { label: 'E.Level', unit: '%', min: 0, max: 100 },
           DLY_Para2: { label: 'F.Back', unit: '%', min: 0, max: 100 },
-          DLY_Para3: { label: 'D.Time', unit: 'bpm', min: 752, max: 61 },
+          DLY_Para3: { label: 'D.Time', unit: 'ms', min: 61, max: 752 },
+        },
+      },
+      'Analog V2': {
+        params: {
+          DLY_Para3: { label: 'Intensity', unit: '%', min: 0, max: 100 },
+          DLY_Para1: { label: 'Rate', unit: 'ms', min: 61, max: 752 },
+          DLY_Para2: { label: 'Echo', unit: '%', min: 0, max: 100 },
+        },
+      },
+      Modulation: {
+        params: {
+          DLY_Para2: { label: 'Level', unit: '%', min: 0, max: 100 },
+          DLY_Para1: { label: 'Time', unit: 'ms', min: 61, max: 752 },
+          DLY_Para4: { label: 'Repeat', unit: '%', min: 0, max: 100 },
+          DLY_Para3: { label: 'Mod', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Tape Echo': {
+        params: {
+          DLY_Para2: { label: 'Level', unit: '%', min: 0, max: 100 },
+          DLY_Para1: { label: 'Time', unit: 'ms', min: 61, max: 752 },
+          DLY_Para3: { label: 'Repeat', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Pan Delay': {
+        params: {
+          DLY_Para3: { label: 'Level', unit: '%', min: 0, max: 100 },
+          DLY_Para1: { label: 'Time', unit: 'ms', min: 61, max: 752 },
+          DLY_Para2: { label: 'Repeat', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Phi Delay': {
+        params: {
+          DLY_Para1: { label: 'Time', unit: 'ms', min: 61, max: 752 },
+          DLY_Para2: { label: 'Repeat', unit: '%', min: 0, max: 100 },
+          DLY_Para3: { label: 'Mix', unit: '%', min: 0, max: 100 },
         },
       },
     },
