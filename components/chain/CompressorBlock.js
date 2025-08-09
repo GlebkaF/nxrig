@@ -1,6 +1,8 @@
 import React from 'react';
-import Knob from '../Knob';
+
 import { processorConfig, SLOT_COLORS, toUnitString } from '../../lib/processorConfig';
+import Knob from '../Knob';
+import GenericBlock from './GenericBlock';
 
 export default function CompressorBlock({ block }) {
   const color = SLOT_COLORS.Compressor;
@@ -27,6 +29,5 @@ export default function CompressorBlock({ block }) {
       </li>
     );
   }
-  const GenericBlock = require('./GenericBlock').default;
   return <GenericBlock block={block} />;
 }

@@ -1,11 +1,11 @@
 import fs from 'fs';
-import path from 'path';
-import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
+import path from 'path';
+
 import Header from '../../components/Header';
 import SignalChain from '../../components/SignalChain';
 import { presets } from '../../data/presets';
-import { deviceMappings } from '../../data/deviceMappings';
 
 const slotColors = {
   Noisegate: '#10b981',
@@ -27,7 +27,6 @@ function formatLabel(key) {
 }
 
 
-import { NextSeo } from 'next-seo';
 
 export default function PresetPage({ preset, data }) {
   const { basePath } = useRouter();

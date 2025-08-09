@@ -1,6 +1,7 @@
 import React from 'react';
-import Knob from '../Knob';
+
 import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorConfig';
+import Knob from '../Knob';
 
 export default function DelayBlock({ block }) {
   const color = SLOT_COLORS.DLY;

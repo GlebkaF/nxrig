@@ -1,8 +1,9 @@
 import React from 'react';
-import Knob from '../Knob';
-import Toggle from '../Toggle';
+
 import { deviceMappings } from '../../data/deviceMappings';
 import { processorConfig, SLOT_COLORS, realNames } from '../../lib/processorConfig';
+import Knob from '../Knob';
+import Toggle from '../Toggle';
 
 function formatLabel(key) {
   return String(key).replace(/_db$/i, ' dB').replace(/_hz$/i, ' Hz').replace(/_/g, ' ');
