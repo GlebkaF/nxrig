@@ -7,28 +7,96 @@ export interface ParamMeta {
   max?: number;
 }
 
-// Allowed parameter keys per slot
-export type CompressorParamKey = 'sustain' | 'level' | 'attack' | 'blend';
-export type EfxParamKey = 'var1' | 'var2' | 'var3' | 'var4' | 'var5' | 'var6';
-export type AmpParamKey = 'gain' | 'master' | 'bass' | 'mid' | 'treble' | 'bright' | 'param7' | 'param8';
-export type EqParamKey =
-  | 'eq1'
-  | 'eq2'
-  | 'eq3'
-  | 'eq4'
-  | 'eq5'
-  | 'eq6'
-  | 'eq7'
-  | 'eq8'
-  | 'eq9'
-  | 'eq10'
-  | 'eq11'
-  | 'eq12';
-export type NoisegateParamKey = 'sensitivity' | 'decay' | 'param3' | 'param4';
-export type ModParamKey = 'rate' | 'depth' | 'mix' | 'param4' | 'param5' | 'param6';
-export type DelayParamKey = 'time' | 'feedback' | 'mix' | 'param4' | 'param5' | 'param6' | 'param7' | 'param8';
-export type ReverbParamKey = 'decay' | 'tone' | 'mix' | 'predelay';
-export type CabParamKey = 'param1' | 'param2' | 'param3' | 'level' | 'lowcut' | 'hicut';
+// Indices mapping per parameter set (kept in sync with device indices)
+export const ParamIndex = {
+  CMP_PARAMS: {
+    sustain: 15,
+    level: 16,
+    attack: 17,
+    blend: 18,
+  },
+  EFX_PARAMS: {
+    var1: 20,
+    var2: 21,
+    var3: 22,
+    var4: 23,
+    var5: 24,
+    var6: 25,
+  },
+  AMP_PARAMS: {
+    gain: 27,
+    master: 28,
+    bass: 29,
+    mid: 30,
+    treble: 31,
+    bright: 32,
+    param7: 33,
+    param8: 34,
+  },
+  EQ_PARAMS: {
+    eq1: 36,
+    eq2: 37,
+    eq3: 38,
+    eq4: 39,
+    eq5: 40,
+    eq6: 41,
+    eq7: 42,
+    eq8: 43,
+    eq9: 44,
+    eq10: 45,
+    eq11: 46,
+    eq12: 47,
+  },
+  NG_PARAMS: {
+    sensitivity: 49,
+    decay: 50,
+    param3: 51,
+    param4: 52,
+  },
+  MOD_PARAMS: {
+    rate: 54,
+    depth: 55,
+    mix: 56,
+    param4: 57,
+    param5: 58,
+    param6: 59,
+  },
+  DLY_PARAMS: {
+    time: 61,
+    feedback: 62,
+    mix: 63,
+    param4: 64,
+    param5: 65,
+    param6: 66,
+    param7: 67,
+    param8: 68,
+  },
+  RVB_PARAMS: {
+    decay: 70,
+    tone: 71,
+    mix: 72,
+    predelay: 73,
+  },
+  CAB_PARAMS: {
+    param1: 75,
+    param2: 76,
+    param3: 77,
+    level: 78,
+    lowcut: 79,
+    hicut: 80,
+  },
+} as const;
+
+// Allowed parameter keys per slot, derived from ParamIndex
+export type CompressorParamKey = keyof typeof ParamIndex.CMP_PARAMS;
+export type EfxParamKey = keyof typeof ParamIndex.EFX_PARAMS;
+export type AmpParamKey = keyof typeof ParamIndex.AMP_PARAMS;
+export type EqParamKey = keyof typeof ParamIndex.EQ_PARAMS;
+export type NoisegateParamKey = keyof typeof ParamIndex.NG_PARAMS;
+export type ModParamKey = keyof typeof ParamIndex.MOD_PARAMS;
+export type DelayParamKey = keyof typeof ParamIndex.DLY_PARAMS;
+export type ReverbParamKey = keyof typeof ParamIndex.RVB_PARAMS;
+export type CabParamKey = keyof typeof ParamIndex.CAB_PARAMS;
 
 export type Slot =
   | 'Noisegate'
@@ -41,7 +109,7 @@ export type Slot =
   | 'Mod'
   | 'RVB';
 
-export type ParamsBySlot = {
+export interface ParamsBySlot {
   Noisegate: Partial<Record<NoisegateParamKey, ParamMeta>>;
   Compressor: Partial<Record<CompressorParamKey, ParamMeta>>;
   EFX: Partial<Record<EfxParamKey, ParamMeta>>;
@@ -51,7 +119,7 @@ export type ParamsBySlot = {
   EQ: Partial<Record<EqParamKey, ParamMeta>>;
   Mod: Partial<Record<ModParamKey, ParamMeta>>;
   RVB: Partial<Record<ReverbParamKey, ParamMeta>>;
-};
+}
 
 export interface ProcessorTypeConfig<S extends Slot> {
   aliasOf?: string;
@@ -80,10 +148,10 @@ export const SLOT_COLORS: Record<Slot, string> = {
 // Linear mapper 0..100 -> [min..max] and formatter
 export function toUnitString(value0100: number, { min, max, unit }: { min?: number; max?: number; unit?: Unit }) {
   if (min === undefined || max === undefined) return undefined;
-  const v = Number(value0100);
-  const mapped = min + (v / 100) * (max - min);
+  const v = value0100;
+  const mapped = (min as number) + (v / 100) * ((max as number) - (min as number));
   const rounded = unit === 'dB' ? Math.round(mapped * 10) / 10 : Math.round(mapped);
-  return unit ? `${rounded} ${unit}` : String(rounded);
+  return unit ? `${String(rounded)} ${unit}` : String(rounded);
 }
 
 // ---------- Real device names (subset; extend as needed) ----------
