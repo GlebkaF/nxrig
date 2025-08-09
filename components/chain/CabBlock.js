@@ -5,8 +5,8 @@ import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorC
 import Knob from '../Knob';
 
 export default function CabBlock({ block }) {
-  const color = SLOT_COLORS.IR;
-  const typeCfg = processorConfig.IR?.types?.[block.model];
+  const color = SLOT_COLORS.Cabinet;
+  const typeCfg = processorConfig.Cabinet?.types?.[block.model];
   const realName = typeCfg?.realName || deviceMappings['Cabinet']?.[block.model];
   const cfgParams = typeCfg?.params || {};
   const level = Number(block.params?.CAB_Para4 ?? block.params?.level ?? 50);
@@ -27,7 +27,7 @@ export default function CabBlock({ block }) {
         <Knob label={`High Cut${highDv ? `\n${highDv}` : ''}`} value={high} color={color} />
       </div>
       <span className="absolute bottom-1 right-1 px-2 py-0.5 text-xs font-semibold rounded" style={{ backgroundColor: color, color: '#000' }}>
-        IR
+        Cabinet
       </span>
     </li>
   );

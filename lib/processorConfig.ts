@@ -103,6 +103,270 @@ export const processorConfig: ProcessorConfig = {
           CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
         },
       },
+      DR112: {
+        realName: 'Fender Deluxe Reverb 1x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      TR212: {
+        realName: 'Fender Twin Reverb 2x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      HIWIRE412: {
+        realName: 'Hiwatt 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'CALI 112': {
+        realName: 'Mesa/Boogie 1x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      A112: {
+        realName: 'American 1x12 (Open Back)',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      GB412: {
+        realName: 'Celestion Greenback 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1960AX: {
+        realName: 'Marshall 1960AX 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1960AV: {
+        realName: 'Marshall 1960AV 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1960TV: {
+        realName: 'Marshall 1960TV 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      SLO412: {
+        realName: 'Soldano 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'FIREMAN 412': {
+        realName: 'Friedman 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'RECT 412': {
+        realName: 'Mesa Boogie Rectifier 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      DIE412: {
+        realName: 'Diezel 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      MATCH212: {
+        realName: 'Matchless 2x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      UBER412: {
+        realName: 'Bogner Uberkab 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      BS410: {
+        realName: 'Fender Bassman 4x10',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      A212: {
+        realName: 'American 2x12 (Open Back)',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1960AHW: {
+        realName: 'Marshall 1960AHW 4x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      M1936: {
+        realName: 'Marshall 1936 2x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      BUDDA112: {
+        realName: 'Budda 1x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      Z212: {
+        realName: 'Dr. Z 2x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      SUPERVERB410: {
+        realName: 'Fender Super Reverb 4x10',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      VIBROKING310: {
+        realName: 'Fender Vibro‑King 3x10',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      AGL_DB810: {
+        realName: 'Aguilar DB810 8x10',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      AMP_SV212: {
+        realName: 'Ampeg SVT 2x12',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      AMP_SV410: {
+        realName: 'Ampeg SVT 4x10',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      AMP_SV810: {
+        realName: 'Ampeg SVT 8x10',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      BASSGUY410: {
+        realName: 'Fender Bassman 4x10',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      EDEN410: {
+        realName: 'Eden 4x10',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      MKB410: {
+        realName: 'Markbass 4x10',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'G-HBIRD': {
+        realName: 'Gibson Hummingbird (Acoustic IR)',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'G-J15': {
+        realName: 'Gibson J‑15 (Acoustic IR)',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
+      'M-D45': {
+        realName: 'Martin D‑45 (Acoustic IR)',
+        params: {
+          CAB_Para4: { label: 'Level', unit: 'dB', min: -12, max: 12 },
+          CAB_Para5: { label: 'Low Cut', unit: 'Hz', min: 20, max: 300 },
+          CAB_Para6: { label: 'High Cut', unit: 'Hz', min: 5000, max: 20000 },
+        },
+      },
     },
   },
   Delay: {
