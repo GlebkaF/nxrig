@@ -5,7 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "echo \"No tests\" && exit 0"
+    "test": "echo \"No tests\" && exit 0",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "jsqr": "^1.4.0",
@@ -17,8 +19,20 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/node": "^24.2.1",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
     "autoprefixer": "^10.4.16",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.4.6",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.4.4"
-  }
+    "prettier": "^3.6.2",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.9.2"
+  },
+  "type": "module"
 }

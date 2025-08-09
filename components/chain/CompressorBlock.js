@@ -1,6 +1,7 @@
 import React from 'react';
-import Knob from '../Knob';
+
 import { processorConfig, SLOT_COLORS, toUnitString } from '../../lib/processorConfig';
+import Knob from '../Knob';
 
 export default function CompressorBlock({ block }) {
   const color = SLOT_COLORS.Compressor;

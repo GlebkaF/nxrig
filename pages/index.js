@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
+
 import Header from '../components/Header';
 import { presets } from '../data/presets';
 
-import { NextSeo } from 'next-seo';
 
 export default function Home({ presets }) {
   const { basePath } = useRouter();

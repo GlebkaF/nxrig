@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import GenericBlock from './chain/GenericBlock';
+
 import CabBlock from './chain/CabBlock';
+import GenericBlock from './chain/GenericBlock';
 
 function EqDisplay({ params, color = '#9ca3af' }) {
   const freqs = Object.keys(params);

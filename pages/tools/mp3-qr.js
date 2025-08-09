@@ -1,11 +1,13 @@
-import React, { useRef, useState, useEffect } from 'react';
+import jsQR from 'jsqr';
 import dynamic from 'next/dynamic';
+import { NextSeo } from 'next-seo';
+import React, { useRef, useState, useEffect } from 'react';
+
 import Header from '../../components/Header';
 import SignalChain from '../../components/SignalChain';
-import { NextSeo } from 'next-seo';
 import { flatPresetToQrString, qrStringToFlatPreset, AMP_TYPES, EFX_TYPES, COMP_TYPES, MOD_TYPES, DELAY_TYPES, REVERB_TYPES, CABINET_TYPES } from '../../lib/encoder';
 import { FlatPresetSchema } from '../../lib/flatPresetSchema';
-import jsQR from 'jsqr';
+
 
 const QRCodeCanvas = dynamic(() => import('qrcode.react').then((m) => m.QRCodeCanvas), { ssr: false });
 
