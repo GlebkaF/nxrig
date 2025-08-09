@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import CabBlock from './chain/CabBlock';
+import CompressorBlock from './chain/CompressorBlock';
+import DelayBlock from './chain/DelayBlock';
 import GenericBlock from './chain/GenericBlock';
 
 function EqDisplay({ params, color = '#9ca3af' }) {
@@ -61,11 +63,9 @@ export default function SignalChain({ data }) {
           return <CabBlock key={idx} block={block} />;
         }
         if (block.slot === 'DLY') {
-          const DelayBlock = require('./chain/DelayBlock').default;
           return <DelayBlock key={idx} block={block} />;
         }
         if (block.slot === 'Compressor') {
-          const CompressorBlock = require('./chain/CompressorBlock').default;
           return <CompressorBlock key={idx} block={block} />;
         }
         return <GenericBlock key={idx} block={block} />;
