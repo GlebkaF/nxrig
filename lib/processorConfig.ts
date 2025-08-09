@@ -93,6 +93,110 @@ export const processorConfig: ProcessorConfig = {
       },
     },
   },
+  EFX: {
+    types: {
+      'Distortion+': {
+        params: {
+          EFX_Para1: { label: 'Output', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Sensitivity', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'RC Boost': {
+        params: {
+          EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          EFX_Para4: { label: 'Treble', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'AC Boost': {
+        params: {
+          EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Bass', unit: '%', min: 0, max: 100 },
+          EFX_Para4: { label: 'Treble', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Dist One': {
+        params: {
+          EFX_Para1: { label: 'Level', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Drive', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'T Screamer': {
+        params: {
+          EFX_Para3: { label: 'Level', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Drive', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Blues Drive': {
+        params: {
+          EFX_Para1: { label: 'Level', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Morning Drive': {
+        params: {
+          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Drive', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Tone', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Eat Dist': {
+        params: {
+          EFX_Para3: { label: 'Volume', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Distortion', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Filter', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Red Dirt': {
+        params: {
+          EFX_Para3: { label: 'Level', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Drive', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+        },
+      },
+      Crunch: {
+        params: {
+          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Muff Fuzz': {
+        params: {
+          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Sustain', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Tone', unit: '%', min: 0, max: 100 },
+        },
+      },
+      Katana: {
+        params: {
+          EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 },
+          EFX_Para1: { label: 'Boost', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'ST Singer': {
+        params: {
+          EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Filter', unit: '%', min: 0, max: 100 },
+        },
+      },
+      'Touch Wah': {
+        params: {
+          EFX_Para1: { label: 'Type', unit: '%', min: 0, max: 100 },
+          EFX_Para2: { label: 'Wow', unit: '%', min: 0, max: 100 },
+          EFX_Para3: { label: 'Sense', unit: '%', min: 0, max: 100 },
+          EFX_Para5: { label: 'Level', unit: '%', min: 0, max: 100 },
+          EFX_Para4: { label: 'Up/Down Switch', unit: '%', min: 0, max: 100 },
+        },
+      },
+    },
+  },
   Cabinet: {
     types: {
       JZ120: {
