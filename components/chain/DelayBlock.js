@@ -1,32 +1,22 @@
 import React from 'react';
 import Knob from '../Knob';
-
-const color = '#7dd3fc';
-
-function mapTimeToMs(v) {
-  // 0 -> 752 ms, 100 -> 61 ms (inverse linear)
-  const x = Number(v);
-  const ms = 752 - (x / 100) * (752 - 61);
-  return Math.round(ms);
-}
+import { SLOT_COLORS, processorConfig } from '../../lib/processorConfig';
 
 export default function DelayBlock({ block }) {
+  const color = SLOT_COLORS.DLY;
   const params = block.params || {};
   const model = block.model || 'Digital Delay';
 
-  if (model === 'Digital Delay' || model === 'Digital') {
-    const timeVal = Number(params.time ?? 50);
-    const feedbackVal = Number(params.feedback ?? 50);
-    const mixVal = Number(params.mix ?? 50);
-    const timeMs = mapTimeToMs(timeVal);
-
+  const typeCfg = processorConfig.DLY?.types?.[model] || processorConfig.DLY?.types?.[processorConfig.DLY?.types?.[model]?.aliasOf] || null;
+  if (typeCfg?.buildUiParams) {
+    const uiParams = typeCfg.buildUiParams(params);
     return (
       <li className="relative p-4 rounded bg-gray-800 border-2 w-fit" style={{ borderColor: color }}>
         <div className="font-semibold mb-2">{model}</div>
         <div className="flex flex-wrap gap-4">
-          <Knob label={`E.Level`} value={mixVal} color={color} />
-          <Knob label={`F.Back`} value={feedbackVal} color={color} />
-          <Knob label={`D.Time\n${timeMs} ms`} value={timeVal} color={color} />
+          {uiParams.map(({ key, label, value }) => (
+            <Knob key={key} label={label} value={Number(value)} color={color} />
+          ))}
         </div>
         <span className="absolute bottom-1 right-1 px-2 py-0.5 text-xs font-semibold rounded" style={{ backgroundColor: color, color: '#000' }}>
           DLY
@@ -35,7 +25,7 @@ export default function DelayBlock({ block }) {
     );
   }
 
-  // Fallback generic rendering
+  // Fallback generic
   return (
     <li className="relative p-4 rounded bg-gray-800 border-2 w-fit" style={{ borderColor: color }}>
       <div className="font-semibold mb-2">{model}</div>
