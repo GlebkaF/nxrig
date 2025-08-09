@@ -1,10 +1,10 @@
-export type Unit = 'dB' | 'Hz' | 'ms' | undefined;
+export type Unit = 'dB' | 'Hz' | 'ms' | 'bpm' | '%' ;
 
 export interface ParamMeta {
   label: string;
-  unit?: Unit;
-  min?: number;
-  max?: number;
+  unit: Unit;
+  min: number;
+  max: number;
 }
 
 // PresetDataIndex-style constants (subset relevant for params)
@@ -253,41 +253,40 @@ export const SLOT_COLORS: Record<Slot, string> = {
 };
 
 // Linear mapper 0..100 -> [min..max] and formatter
-export function toUnitString(value0100: number, { min, max, unit }: { min?: number; max?: number; unit?: Unit }) {
-  if (min === undefined || max === undefined) return undefined;
+export function toUnitString(value0100: number, { min, max, unit }: { min: number; max: number; unit: Unit }) {
   const v = value0100;
   const mapped = min + (v / 100) * (max - min);
   const rounded = unit === 'dB' ? Math.round(mapped * 10) / 10 : Math.round(mapped);
-  return unit ? `${String(rounded)} ${unit}` : String(rounded);
+  return `${String(rounded)} ${unit}`;
 }
 
 // ---------- Processor registry ----------
-// params: key -> { label, unit?, min?, max? }
+// params: key -> { label, unit, min, max }
 export const processorConfig: ProcessorConfig = {
   Compressor: {
     types: {
       'K Comp': {
-        realName: 'Keeley Compressor (K Comp)',
+        realName: 'Keeley Compressor',
         params: {
-          CMP_Para2: { label: 'Level' },
-          CMP_Para1: { label: 'Sustain' },
-          CMP_Para3: { label: 'Clipping' },
+          CMP_Para2: { label: 'Level', unit: '%', min: 0, max: 100 },
+          CMP_Para1: { label: 'Sustain', unit: '%', min: 0, max: 100 },
+          CMP_Para3: { label: 'Clipping', unit: '%', min: 0, max: 100 },
         },
       },
       'Studio Comp': {
         realName: 'Studio Compressor',
         params: {
-          CMP_Para3: { label: 'Gain' },
-          CMP_Para1: { label: 'Threshold' },
-          CMP_Para2: { label: 'Ratio' },
-          CMP_Para4: { label: 'Release' },
+          CMP_Para3: { label: 'Gain', unit: '%', min: 0, max: 100 },
+          CMP_Para1: { label: 'Threshold', unit: '%', min: 0, max: 100 },
+          CMP_Para2: { label: 'Ratio', unit: '%', min: 0, max: 100 },
+          CMP_Para4: { label: 'Release', unit: '%', min: 0, max: 100 },
         },
       },
       'Rose Comp': {
-        realName: 'Keeley Compressor (Rose Comp)',
+        realName: 'Keeley Compressor',
         params: {
-          CMP_Para2: { label: 'Level' },
-          CMP_Para1: { label: 'Sustain' },
+          CMP_Para2: { label: 'Level', unit: '%', min: 0, max: 100 },
+          CMP_Para1: { label: 'Sustain', unit: '%', min: 0, max: 100 },
         },
       },
     },
@@ -315,9 +314,9 @@ export const processorConfig: ProcessorConfig = {
     types: {
       'Digital Delay': {
         params: {
-          DLY_Para1: { label: 'E.Level', min: 0, max: 100 },
-          DLY_Para2: { label: 'F.Back', min: 0, max: 100 },
-          DLY_Para3: { label: 'D.Time', unit: 'ms', min: 61, max: 752 },
+          DLY_Para1: { label: 'E.Level', unit: '%', min: 0, max: 100 },
+          DLY_Para2: { label: 'F.Back', unit: '%', min: 0, max: 100 },
+          DLY_Para3: { label: 'D.Time', unit: 'bpm', min: 752, max: 61 },
         },
       },
     },
