@@ -59,6 +59,10 @@ export default function SignalChain({ data }) {
         if (block.slot === 'IR') {
           return <CabBlock key={idx} block={block} />;
         }
+        if (block.slot === 'DLY') {
+          const DelayBlock = require('./chain/DelayBlock').default;
+          return <DelayBlock key={idx} block={block} />;
+        }
         return <GenericBlock key={idx} block={block} />;
       })}
     </ol>
