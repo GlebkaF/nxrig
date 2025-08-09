@@ -11,9 +11,9 @@ const slotColors = {
   Noisegate: '#10b981',
   Compressor: '#eab308',
   EFX: '#f97316',
-  DLY: '#7dd3fc',
+  Delay: '#7dd3fc',
   Amp: '#ef4444',
-  IR: '#3b82f6',
+  Cabinet: '#3b82f6',
   EQ: '#9ca3af',
   Mod: '#a855f7',
   RVB: '#d946ef'
@@ -30,7 +30,7 @@ function formatLabel(key) {
 
 export default function PresetPage({ preset, data }) {
   const { basePath } = useRouter();
-  const CHAIN_ORDER = ['Noisegate', 'Compressor', 'EFX', 'Amp', 'IR', 'EQ', 'Mod', 'DLY', 'RVB'];
+  const CHAIN_ORDER = ['Noisegate', 'Compressor', 'EFX', 'Amp', 'Cabinet', 'EQ', 'Mod', 'Delay', 'RVB'];
   const ordered = { ...data, chain: [...data.chain].sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };
   return (
     <div className="min-h-screen p-4 bg-gray-900 text-gray-100">

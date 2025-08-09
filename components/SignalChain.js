@@ -59,10 +59,10 @@ export default function SignalChain({ data }) {
             </li>
           );
         }
-        if (block.slot === 'IR') {
+        if (block.slot === 'Cabinet') {
           return <CabBlock key={idx} block={block} />;
         }
-        if (block.slot === 'DLY') {
+        if (block.slot === 'Delay') {
           return <DelayBlock key={idx} block={block} />;
         }
         if (block.slot === 'Compressor') {

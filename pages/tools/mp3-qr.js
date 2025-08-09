@@ -11,7 +11,7 @@ import { FlatPresetSchema } from '../../lib/flatPresetSchema';
 
 const QRCodeCanvas = dynamic(() => import('qrcode.react').then((m) => m.QRCodeCanvas), { ssr: false });
 
-const CHAIN_ORDER = ['Noisegate', 'Compressor', 'EFX', 'Amp', 'IR', 'EQ', 'Mod', 'DLY', 'RVB'];
+const CHAIN_ORDER = ['Noisegate', 'Compressor', 'EFX', 'Amp', 'Cabinet', 'EQ', 'Mod', 'Delay', 'RVB'];
 
 function flatPresetToVisualizationChain(preset) {
   const chain = [];
@@ -19,9 +19,9 @@ function flatPresetToVisualizationChain(preset) {
   if (preset.comp) chain.push({ slot: 'Compressor', model: preset.comp.type, enabled: preset.comp.enabled, params: preset.comp });
   if (preset.efx) chain.push({ slot: 'EFX', model: preset.efx.type, enabled: preset.efx.enabled, params: preset.efx });
   if (preset.amp) chain.push({ slot: 'Amp', model: preset.amp.type, enabled: preset.amp.enabled, params: preset.amp });
-  if (preset.cab) chain.push({ slot: 'IR', model: preset.cab.type, enabled: preset.cab.enabled, params: preset.cab });
+  if (preset.cab) chain.push({ slot: 'Cabinet', model: preset.cab.type, enabled: preset.cab.enabled, params: preset.cab });
   if (preset.mod) chain.push({ slot: 'Mod', model: preset.mod.type, enabled: preset.mod.enabled, params: preset.mod });
-  if (preset.delay) chain.push({ slot: 'DLY', model: preset.delay.type, enabled: preset.delay.enabled, params: preset.delay });
+  if (preset.delay) chain.push({ slot: 'Delay', model: preset.delay.type, enabled: preset.delay.enabled, params: preset.delay });
   if (preset.reverb) chain.push({ slot: 'RVB', model: preset.reverb.type, enabled: preset.reverb.enabled, params: preset.reverb });
   if (preset.eq) chain.push({ slot: 'EQ', model: preset.eq.type, enabled: preset.eq.enabled, params: preset.eq });
   return { chain: chain.filter((b) => b.enabled !== false).sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };

@@ -1,19 +1,20 @@
 import React from 'react';
 
 import { deviceMappings } from '../../data/deviceMappings';
-import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorConfig';
+import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorConfig.ts';
 import Knob from '../Knob';
 
 export default function CabBlock({ block }) {
   const color = SLOT_COLORS.IR;
-  const realName = deviceMappings['IR']?.[block.model];
-  const cfgParams = processorConfig.IR?.types?.default?.params;
-  const level = Number(block.params?.level ?? 50);
-  const low = Number(block.params?.lowcut ?? 50);
-  const high = Number(block.params?.hicut ?? 50);
-  const levelDv = toUnitString(level, cfgParams.level);
-  const lowDv = toUnitString(low, cfgParams.lowcut);
-  const highDv = toUnitString(high, cfgParams.hicut);
+  const typeCfg = processorConfig.IR?.types?.[block.model];
+  const realName = typeCfg?.realName || deviceMappings['Cabinet']?.[block.model];
+  const cfgParams = typeCfg?.params || {};
+  const level = Number(block.params?.CAB_Para4 ?? block.params?.level ?? 50);
+  const low = Number(block.params?.CAB_Para5 ?? block.params?.lowcut ?? 50);
+  const high = Number(block.params?.CAB_Para6 ?? block.params?.hicut ?? 50);
+  const levelDv = cfgParams.CAB_Para4 ? toUnitString(level, cfgParams.CAB_Para4) : undefined;
+  const lowDv = cfgParams.CAB_Para5 ? toUnitString(low, cfgParams.CAB_Para5) : undefined;
+  const highDv = cfgParams.CAB_Para6 ? toUnitString(high, cfgParams.CAB_Para6) : undefined;
   return (
     <li className="relative p-4 rounded bg-gray-800 border-2 w-fit" style={{ borderColor: color }}>
       <div className="font-semibold mb-2">
