@@ -96,12 +96,14 @@ export const processorConfig: ProcessorConfig = {
   EFX: {
     types: {
       'Distortion+': {
+        realName: 'MXR Distortion+',
         params: {
           EFX_Para1: { label: 'Output', unit: '%', min: 0, max: 100 },
           EFX_Para2: { label: 'Sensitivity', unit: '%', min: 0, max: 100 },
         },
       },
       'RC Boost': {
+        realName: 'Xotic RC Booster',
         params: {
           EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 },
           EFX_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
@@ -110,6 +112,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'AC Boost': {
+        realName: 'Xotic AC Booster',
         params: {
           EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 },
           EFX_Para1: { label: 'Gain', unit: '%', min: 0, max: 100 },
@@ -118,6 +121,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'Dist One': {
+        realName: 'BOSS DS-1',
         params: {
           EFX_Para1: { label: 'Level', unit: '%', min: 0, max: 100 },
           EFX_Para3: { label: 'Drive', unit: '%', min: 0, max: 100 },
@@ -125,6 +129,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'T Screamer': {
+        realName: 'Ibanez Tube Screamer',
         params: {
           EFX_Para3: { label: 'Level', unit: '%', min: 0, max: 100 },
           EFX_Para1: { label: 'Drive', unit: '%', min: 0, max: 100 },
@@ -132,6 +137,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'Blues Drive': {
+        realName: 'BOSS BD-2 Blues Driver',
         params: {
           EFX_Para1: { label: 'Level', unit: '%', min: 0, max: 100 },
           EFX_Para3: { label: 'Gain', unit: '%', min: 0, max: 100 },
@@ -139,6 +145,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'Morning Drive': {
+        realName: 'JHS Morning Glory',
         params: {
           EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
           EFX_Para2: { label: 'Drive', unit: '%', min: 0, max: 100 },
@@ -146,6 +153,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'Eat Dist': {
+        // realName intentionally omitted (uncertain mapping)
         params: {
           EFX_Para3: { label: 'Volume', unit: '%', min: 0, max: 100 },
           EFX_Para1: { label: 'Distortion', unit: '%', min: 0, max: 100 },
@@ -153,6 +161,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'Red Dirt': {
+        realName: 'Keeley Red Dirt',
         params: {
           EFX_Para3: { label: 'Level', unit: '%', min: 0, max: 100 },
           EFX_Para1: { label: 'Drive', unit: '%', min: 0, max: 100 },
@@ -160,6 +169,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       Crunch: {
+        // realName intentionally omitted (generic crunch drive)
         params: {
           EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
           EFX_Para3: { label: 'Gain', unit: '%', min: 0, max: 100 },
@@ -167,6 +177,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'Muff Fuzz': {
+        realName: 'Electro‑Harmonix Big Muff Pi',
         params: {
           EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
           EFX_Para3: { label: 'Sustain', unit: '%', min: 0, max: 100 },
@@ -174,12 +185,14 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       Katana: {
+        realName: 'Keeley Katana Boost',
         params: {
           EFX_Para2: { label: 'Volume', unit: '%', min: 0, max: 100 },
           EFX_Para1: { label: 'Boost', unit: '%', min: 0, max: 100 },
         },
       },
       'ST Singer': {
+        // realName intentionally omitted (uncertain mapping)
         params: {
           EFX_Para1: { label: 'Volume', unit: '%', min: 0, max: 100 },
           EFX_Para2: { label: 'Gain', unit: '%', min: 0, max: 100 },
@@ -187,6 +200,7 @@ export const processorConfig: ProcessorConfig = {
         },
       },
       'Touch Wah': {
+        realName: 'Auto Wah (Envelope Filter)',
         params: {
           EFX_Para1: { label: 'Type', unit: '%', min: 0, max: 100 },
           EFX_Para2: { label: 'Wow', unit: '%', min: 0, max: 100 },
