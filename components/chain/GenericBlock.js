@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { deviceMappings } from '../../data/deviceMappings';
-import { processorConfig, SLOT_COLORS, realNames } from '../../lib/processorConfig';
+import { processorConfig, SLOT_COLORS, realNames } from '../../lib/processorConfig.ts';
 import Knob from '../Knob';
 import Toggle from '../Toggle';
 

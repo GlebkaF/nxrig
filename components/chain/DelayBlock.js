@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorConfig';
+import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorConfig.ts';
 import Knob from '../Knob';
 
 export default function DelayBlock({ block }) {

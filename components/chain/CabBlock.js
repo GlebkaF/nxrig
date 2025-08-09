@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { deviceMappings } from '../../data/deviceMappings';
-import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorConfig';
+import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorConfig.ts';
 import Knob from '../Knob';
 
 export default function CabBlock({ block }) {
