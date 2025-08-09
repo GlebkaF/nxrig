@@ -7,42 +7,127 @@ import Header from '../../components/Header';
 import SignalChain from '../../components/SignalChain';
 import { flatPresetToQrString, qrStringToFlatPreset, AMP_TYPES, EFX_TYPES, COMP_TYPES, MOD_TYPES, DELAY_TYPES, REVERB_TYPES, CABINET_TYPES } from '../../lib/encoder';
 import { FlatPresetSchema } from '../../lib/flatPresetSchema';
+import { processorConfig } from '../../lib/processorConfig.ts';
 
 
 const QRCodeCanvas = dynamic(() => import('qrcode.react').then((m) => m.QRCodeCanvas), { ssr: false });
 
 const CHAIN_ORDER = ['Noisegate', 'Compressor', 'EFX', 'Amp', 'Cabinet', 'EQ', 'Mod', 'Delay', 'RVB'];
 
+function labelToFlatKey(label) {
+  const k = String(label).toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+  return k;
+}
+
+function buildParamsForVisualization(slot, model, section) {
+  const cfg = processorConfig[slot]?.types?.[model] || null;
+  if (!cfg || !cfg.params) return section || {};
+  const out = {};
+  const add = (k, v) => { if (v !== undefined) out[k] = v; };
+
+  if (slot === 'Amp') {
+    add('AMP_Para1', section?.gain);
+    add('AMP_Para2', section?.master);
+    add('AMP_Para3', section?.bass);
+    add('AMP_Para4', section?.mid);
+    add('AMP_Para5', section?.treble);
+    add('AMP_Para6', section?.bright);
+    return out;
+  }
+  if (slot === 'Cabinet') {
+    add('CAB_Para4', section?.level);
+    add('CAB_Para5', section?.lowcut);
+    add('CAB_Para6', section?.hicut);
+    return out;
+  }
+  if (slot === 'Delay') {
+    add('DLY_Para1', section?.mix ?? section?.time);
+    add('DLY_Para2', section?.feedback);
+    add('DLY_Para3', section?.time ?? section?.mix);
+    return out;
+  }
+  if (slot === 'Compressor') {
+    for (const [key, meta] of Object.entries(cfg.params)) {
+      const flatKey = labelToFlatKey(meta.label);
+      add(key, section?.[flatKey]);
+    }
+    return out;
+  }
+  if (slot === 'EFX') {
+    add('EFX_Para1', section?.var1);
+    add('EFX_Para2', section?.var2);
+    add('EFX_Para3', section?.var3);
+    add('EFX_Para4', section?.var4);
+    add('EFX_Para5', section?.var5);
+    add('EFX_Para6', section?.var6);
+    return out;
+  }
+  if (slot === 'Mod') {
+    add('MOD_Para1', section?.rate);
+    add('MOD_Para2', section?.depth);
+    add('MOD_Para3', section?.mix);
+    return out;
+  }
+  if (slot === 'RVB') {
+    // Map decay/tone/mix to the appropriate parameter keys by labels
+    let levelKey;
+    for (const [k, meta] of Object.entries(cfg.params)) {
+      const lbl = String(meta.label).toLowerCase();
+      if (!levelKey && (lbl === 'level' || lbl === 'mix')) levelKey = k;
+    }
+    for (const [k, meta] of Object.entries(cfg.params)) {
+      const lbl = String(meta.label).toLowerCase();
+      if (lbl.includes('decay')) add(k, section?.decay);
+      if (lbl.includes('tone') || lbl.includes('liveliness')) add(k, section?.tone);
+    }
+    if (levelKey) add(levelKey, section?.mix);
+    return out;
+  }
+  if (slot === 'EQ') {
+    const outEq = {};
+    for (const [k, meta] of Object.entries(cfg.params)) {
+      const suffix = Number(String(k).split('Para')[1] || '0');
+      const val = section?.[`eq${suffix}`];
+      if (val !== undefined) outEq[meta.label] = val;
+    }
+    return outEq;
+  }
+  return section || {};
+}
+
 function flatPresetToVisualizationChain(preset) {
   const chain = [];
   if (preset.noise_gate) chain.push({ slot: 'Noisegate', model: 'Noise Gate', enabled: preset.noise_gate.enabled, params: { Sens: preset.noise_gate.sensitivity ?? 50, Decay: preset.noise_gate.decay ?? 50 } });
-  if (preset.comp) chain.push({ slot: 'Compressor', model: preset.comp.type, enabled: preset.comp.enabled, params: preset.comp });
-  if (preset.efx) chain.push({ slot: 'EFX', model: preset.efx.type, enabled: preset.efx.enabled, params: preset.efx });
-  if (preset.amp) chain.push({ slot: 'Amp', model: preset.amp.type, enabled: preset.amp.enabled, params: preset.amp });
-  if (preset.cab) chain.push({ slot: 'Cabinet', model: preset.cab.type, enabled: preset.cab.enabled, params: preset.cab });
-  if (preset.mod) chain.push({ slot: 'Mod', model: preset.mod.type, enabled: preset.mod.enabled, params: preset.mod });
-  if (preset.delay) chain.push({ slot: 'Delay', model: preset.delay.type, enabled: preset.delay.enabled, params: preset.delay });
-  if (preset.reverb) chain.push({ slot: 'RVB', model: preset.reverb.type, enabled: preset.reverb.enabled, params: preset.reverb });
-  if (preset.eq) chain.push({ slot: 'EQ', model: preset.eq.type, enabled: preset.eq.enabled, params: preset.eq });
+  if (preset.comp) chain.push({ slot: 'Compressor', model: preset.comp.type, enabled: preset.comp.enabled, params: buildParamsForVisualization('Compressor', preset.comp.type, preset.comp) });
+  if (preset.efx) chain.push({ slot: 'EFX', model: preset.efx.type, enabled: preset.efx.enabled, params: buildParamsForVisualization('EFX', preset.efx.type, preset.efx) });
+  if (preset.amp) chain.push({ slot: 'Amp', model: preset.amp.type, enabled: preset.amp.enabled, params: buildParamsForVisualization('Amp', preset.amp.type, preset.amp) });
+  if (preset.cab) chain.push({ slot: 'Cabinet', model: preset.cab.type, enabled: preset.cab.enabled, params: buildParamsForVisualization('Cabinet', preset.cab.type, preset.cab) });
+  if (preset.mod) chain.push({ slot: 'Mod', model: preset.mod.type, enabled: preset.mod.enabled, params: buildParamsForVisualization('Mod', preset.mod.type, preset.mod) });
+  if (preset.delay) chain.push({ slot: 'Delay', model: preset.delay.type, enabled: preset.delay.enabled, params: buildParamsForVisualization('Delay', preset.delay.type, preset.delay) });
+  if (preset.reverb) chain.push({ slot: 'RVB', model: preset.reverb.type, enabled: preset.reverb.enabled, params: buildParamsForVisualization('RVB', preset.reverb.type, preset.reverb) });
+  if (preset.eq) chain.push({ slot: 'EQ', model: preset.eq.type, enabled: preset.eq.enabled, params: buildParamsForVisualization('EQ', preset.eq.type, preset.eq) });
   return { chain: chain.filter((b) => b.enabled !== false).sort((a, b) => CHAIN_ORDER.indexOf(a.slot) - CHAIN_ORDER.indexOf(b.slot)) };
 }
 
 function rand01() { return Math.random() > 0.5; }
 function rand100() { return (Math.random() * 101) | 0; }
 function randKey(obj) { const k = Object.keys(obj); return k[(Math.random() * k.length) | 0]; }
+
 function randomPreset() {
+  const randType = (slot) => randKey(processorConfig[slot]?.types || {});
   return {
     product_id: 15,
     version: 1,
     master: rand100(),
     noise_gate: { enabled: rand01(), sensitivity: rand100(), decay: rand100() },
-    comp: { enabled: rand01(), type: randKey(COMP_TYPES), sustain: rand100(), level: rand100(), attack: rand100(), blend: rand100(), clipping: rand100(), gain: rand100(), threshold: rand100(), ratio: rand100(), release: rand100() },
-    efx: { enabled: rand01(), type: randKey(EFX_TYPES), var1: rand100(), var2: rand100(), var3: rand100() },
-    amp: { enabled: rand01(), type: randKey(AMP_TYPES), gain: rand100(), master: rand100(), bass: rand100(), mid: rand100(), treble: rand100(), bright: rand100() },
-    cab: { enabled: rand01(), type: randKey(CABINET_TYPES), level: rand100(), lowcut: rand100(), hicut: rand100() },
-    mod: { enabled: rand01(), type: randKey(MOD_TYPES), rate: rand100(), depth: rand100(), mix: rand100() },
-    delay: { enabled: rand01(), type: randKey(DELAY_TYPES), time: rand100(), feedback: rand100(), mix: rand100() },
-    reverb: { enabled: rand01(), type: randKey(REVERB_TYPES), decay: rand100(), tone: rand100(), mix: rand100() },
+    comp: { enabled: rand01(), type: randType('Compressor'), sustain: rand100(), level: rand100(), attack: rand100(), blend: rand100(), clipping: rand100(), gain: rand100(), threshold: rand100(), ratio: rand100(), release: rand100() },
+    efx: { enabled: rand01(), type: randType('EFX'), var1: rand100(), var2: rand100(), var3: rand100(), var4: rand100(), var5: rand100(), var6: rand100() },
+    amp: { enabled: rand01(), type: randType('Amp'), gain: rand100(), master: rand100(), bass: rand100(), mid: rand100(), treble: rand100(), bright: rand01() ? 100 : 0 },
+    cab: { enabled: rand01(), type: randType('Cabinet'), level: rand100(), lowcut: rand100(), hicut: rand100() },
+    mod: { enabled: rand01(), type: randType('Mod'), rate: rand100(), depth: rand100(), mix: rand100() },
+    delay: { enabled: rand01(), type: randType('Delay'), time: rand100(), feedback: rand100(), mix: rand100() },
+    reverb: { enabled: rand01(), type: randType('RVB'), decay: rand100(), tone: rand100(), mix: rand100() },
+    eq: { enabled: rand01(), type: '6-Band', eq1: rand100(), eq2: rand100(), eq3: rand100(), eq4: rand100(), eq5: rand100(), eq6: rand100() },
   };
 }
 

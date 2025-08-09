@@ -4,11 +4,12 @@ import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorC
 import Knob from '../Knob';
 
 export default function DelayBlock({ block }) {
-  const color = SLOT_COLORS.DLY;
+  const color = SLOT_COLORS.Delay;
   const params = block.params || {};
   const model = block.model || 'Digital Delay';
 
-  const typeCfg = processorConfig.DLY?.types?.[model] || processorConfig.DLY?.types?.[processorConfig.DLY?.types?.[model]?.aliasOf] || null;
+  const sourceCfg = processorConfig.Delay?.types?.[model];
+  const typeCfg = sourceCfg?.aliasOf ? processorConfig.Delay?.types?.[sourceCfg.aliasOf] : sourceCfg;
   const cfgParams = typeCfg?.params;
   if (cfgParams) {
     const entries = Object.entries(cfgParams);
@@ -17,7 +18,9 @@ export default function DelayBlock({ block }) {
         <div className="font-semibold mb-2">{model}</div>
         <div className="flex flex-wrap gap-4">
           {entries.map(([key, meta]) => {
-            const effectiveVal = params[key] ?? (key === 'DLY_Para1' ? params.mix : key === 'DLY_Para2' ? params.feedback : key === 'DLY_Para3' ? params.time : undefined);
+            const effectiveVal =
+              params[key] ??
+              (key === 'DLY_Para1' ? params.mix : key === 'DLY_Para2' ? params.feedback : key === 'DLY_Para3' ? params.time : undefined);
             const val = Number(effectiveVal ?? 50);
             const dv = toUnitString(val, meta);
             const label = dv ? `${meta.label}\n${dv}` : meta.label;

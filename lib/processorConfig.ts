@@ -712,7 +712,7 @@ export const processorConfig: ProcessorConfig = {
       },
     },
   },
-Delay: {
+  Delay: {
     types: {
       'Digital Delay': {
         params: {
@@ -757,6 +757,9 @@ Delay: {
           DLY_Para3: { label: 'Mix', unit: '%', min: 0, max: 100 },
         },
       },
+      // Aliases for encoder compatibility
+      'Analog Delay': { aliasOf: 'Analog V2', params: {} as any },
+      'Mod Delay': { aliasOf: 'Modulation', params: {} as any },
     },
   },
   Amp: {
