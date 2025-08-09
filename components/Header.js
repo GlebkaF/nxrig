@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -6,9 +6,6 @@ export default function Header() {
       <nav className="container mx-auto flex items-center gap-6">
         <Link href="/" className="text-xl font-bold">
           MightyPatch
-        </Link>
-        <Link href="/tools/mp3-qr" className="text-sm text-gray-300 hover:text-white">
-          MP-3 QR Generator
         </Link>
       </nav>
     </header>
