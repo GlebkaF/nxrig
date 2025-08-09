@@ -122,6 +122,7 @@ export default function Mp3QrPage() {
           <div className="bg-gray-800 rounded-2xl p-4 border border-gray-700">
             <div className="flex gap-3 items-center mb-3">
               <button onClick={onPickFileClick} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Import from QR image</button>
+              <button onClick={() => setText(JSON.stringify(randomFlatPreset(), null, 2))} className="px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600">Random</button>
               <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={onFileSelected} />
             </div>
             <textarea className="w-full h-96 font-mono text-sm p-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100" placeholder="JSON will appear here after import..." value={text} onChange={(e) => setText(e.target.value)} />
