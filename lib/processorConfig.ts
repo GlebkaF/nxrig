@@ -35,7 +35,7 @@ export interface ParamsBySlot {
 export interface ProcessorTypeConfig<S extends Slot> {
   aliasOf?: string;
   realName?: string;
-  params: ParamsBySlot[S];
+  params?: ParamsBySlot[S];
 }
 
 export type ProcessorConfig = {
@@ -712,7 +712,7 @@ export const processorConfig: ProcessorConfig = {
       },
     },
   },
-Delay: {
+  Delay: {
     types: {
       'Digital Delay': {
         params: {
@@ -721,14 +721,14 @@ Delay: {
           DLY_Para3: { label: 'D.Time', unit: 'ms', min: 61, max: 752 },
         },
       },
-      'Analog V2': {
+      'Analog Delay': {
         params: {
           DLY_Para3: { label: 'Intensity', unit: '%', min: 0, max: 100 },
           DLY_Para1: { label: 'Rate', unit: 'ms', min: 61, max: 752 },
           DLY_Para2: { label: 'Echo', unit: '%', min: 0, max: 100 },
         },
       },
-      Modulation: {
+      'Mod Delay': {
         params: {
           DLY_Para2: { label: 'Level', unit: '%', min: 0, max: 100 },
           DLY_Para1: { label: 'Time', unit: 'ms', min: 61, max: 752 },
@@ -756,7 +756,7 @@ Delay: {
           DLY_Para2: { label: 'Repeat', unit: '%', min: 0, max: 100 },
           DLY_Para3: { label: 'Mix', unit: '%', min: 0, max: 100 },
         },
-      },
+      }
     },
   },
   Amp: {

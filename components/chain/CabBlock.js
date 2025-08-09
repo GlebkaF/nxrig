@@ -1,13 +1,12 @@
 import React from 'react';
 
-import { deviceMappings } from '../../data/deviceMappings';
 import { SLOT_COLORS, processorConfig, toUnitString } from '../../lib/processorConfig.ts';
 import Knob from '../Knob';
 
 export default function CabBlock({ block }) {
   const color = SLOT_COLORS.Cabinet;
   const typeCfg = processorConfig.Cabinet?.types?.[block.model];
-  const realName = typeCfg?.realName || deviceMappings['Cabinet']?.[block.model];
+  const realName = typeCfg?.realName;
   const cfgParams = typeCfg?.params || {};
   const level = Number(block.params?.CAB_Para4 ?? block.params?.level ?? 50);
   const low = Number(block.params?.CAB_Para5 ?? block.params?.lowcut ?? 50);

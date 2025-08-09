@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { deviceMappings } from '../../data/deviceMappings';
-import { processorConfig, SLOT_COLORS } from '../../lib/processorConfig.ts';
+import { SLOT_COLORS, processorConfig } from '../../lib/processorConfig.ts';
 import Knob from '../Knob';
 import Toggle from '../Toggle';
 
@@ -13,9 +12,8 @@ export default function GenericBlock({ block }) {
   const color = SLOT_COLORS[block.slot] || '#9ca3af';
   const slotCfg = processorConfig[block.slot];
   const typeCfg = slotCfg?.types?.[block.model];
-  const realName = typeCfg?.realName || deviceMappings[block.slot]?.[block.model];
+  const realName = typeCfg?.realName;
 
-  const typeKnown = !!typeCfg || block.slot === 'EFX' || block.slot === 'Amp' || block.slot === 'Mod' || block.slot === 'RVB' || block.slot === 'EQ';
   if (slotCfg && slotCfg.types && !typeCfg && block.slot !== 'EQ') {
     return (
       <li className="relative p-4 rounded bg-gray-800 border-2 w-fit" style={{ borderColor: color }}>

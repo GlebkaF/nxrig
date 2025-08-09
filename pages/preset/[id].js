@@ -1,7 +1,8 @@
 import fs from 'fs';
+import path from 'path';
+
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import path from 'path';
 
 import Header from '../../components/Header';
 import SignalChain from '../../components/SignalChain';

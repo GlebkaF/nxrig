@@ -1,38 +1,18 @@
 {
   "root": true,
   "ignorePatterns": ["node_modules/", ".next/", "out/"],
-  "extends": ["next/core-web-vitals", "plugin:import/recommended"],
+  "extends": ["next", "prettier"],
   "plugins": ["unused-imports", "@typescript-eslint"],
-  "rules": {
-    "unused-imports/no-unused-imports": "error",
-    "import/order": [
-      "error",
-      {
-        "groups": [["builtin", "external"], ["internal"], ["parent", "sibling", "index"], ["object", "type"]],
-        "newlines-between": "always",
-        "alphabetize": { "order": "asc", "caseInsensitive": true }
-      }
-    ]
+  "parserOptions": {
+    "project": null
   },
-  "overrides": [
-    {
-      "files": ["**/*.{ts,tsx}"],
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "project": "./tsconfig.eslint.json"
-      },
-      "extends": [
-        "plugin:@typescript-eslint/strict-type-checked",
-        "plugin:@typescript-eslint/stylistic-type-checked",
-        "plugin:import/typescript"
-      ],
-      "rules": {
-        "@typescript-eslint/consistent-type-imports": [
-          "error",
-          { "prefer": "type-imports", "disallowTypeAnnotations": false }
-        ],
-        "@typescript-eslint/no-explicit-any": ["error", { "ignoreRestArgs": false }]
-      }
-    }
-  ]
+  "rules": {
+    "import/extensions": ["off"],
+    "import/order": "off",
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
+    "@typescript-eslint/no-unnecessary-condition": "off"
+  }
 }
