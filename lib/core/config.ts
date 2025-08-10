@@ -24,29 +24,3 @@ export const config: ChainConfig = {
   [Blocks.Reverb]: reverb,
   [Blocks.Delay]: delay,
 };
-
-type Chain = {
-  [Blocks.Noisegate]: null;
-  [Blocks.Compressor]: null;
-  [Blocks.Modulation]: null;
-  [Blocks.Effect]: null;
-  [Blocks.Amplifier]: null;
-  [Blocks.Cabinet]: null;
-  [Blocks.Eq]: null;
-  [Blocks.Reverb]: null;
-  [Blocks.Delay]: null;
-};
-
-const chain: Chain = {
-  [Blocks.Noisegate]: null,
-  [Blocks.Compressor]: null,
-  [Blocks.Modulation]: null,
-  [Blocks.Effect]: null,
-  [Blocks.Amplifier]: null,
-  [Blocks.Cabinet]: null,
-  [Blocks.Eq]: null,
-  [Blocks.Reverb]: null,
-  [Blocks.Delay]: null,
-};
-
-console.log(chain);

@@ -25,3 +25,11 @@ export enum Blocks {
   Reverb = "reverb",
   Delay = "delay",
 }
+
+export type ChainItem<T extends string, P extends string> = {
+  type: T;
+  enabled: boolean;
+  params: {
+    [key in P]: number;
+  };
+};
