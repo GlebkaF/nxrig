@@ -2,15 +2,8 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import React, { useState, useEffect } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
-import { encodeDefaultChain, debugEncoding } from '../lib/core/encoder';
+import { encodeDefaultChain, debugEncoding, type DebugItem } from '../lib/core/encoder';
 import { createDefaultChain } from '../lib/core/helpers/create-default-chain';
-
-interface DebugItem {
-  index: number;
-  value: number;
-  description: string;
-  enabled?: boolean;
-}
 
 export default function TestEncoderPage(): React.ReactElement {
   const [defaultChain, setDefaultChain] = useState<ReturnType<typeof createDefaultChain> | null>(null);
@@ -39,11 +32,11 @@ export default function TestEncoderPage(): React.ReactElement {
       // Энкодируем его
       const encoded = encodeDefaultChain();
       setQrCode(encoded.qrCode);
-      setBytes(encoded.rawBytes);
+      setBytes([...encoded.rawBytes]);
 
       // Получаем отладочную информацию
       const debug = debugEncoding(chain);
-      setDebugInfo(debug.debug);
+      setDebugInfo([...debug.debug]);
 
       setIsLoading(false);
     } catch (error) {

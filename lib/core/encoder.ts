@@ -1,188 +1,151 @@
+/* eslint-disable @typescript-eslint/typedef */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
+
 import { config } from './config';
 import { createDefaultChain } from './helpers/create-default-chain';
-import { Blocks, BlockConfig, TypeParamConfig } from './interface';
+import { Blocks } from './interface';
 import { NuxMp3PresetIndex } from './const';
 
-// Тип для блока чейна
-type ChainBlock = {
-  type: string;
-  enabled: boolean;
-  params: Record<string, number>;
+// Улучшенные типы
+type Chain = ReturnType<typeof createDefaultChain>;
+type ChainBlock = Chain[keyof Chain];
+
+// Константы NUX
+const NUX_PREFIX = 'nux://MightyAmp:' as const;
+const DISABLED_FLAG = 0x40 as const;
+const TYPE_MASK = 0x3f as const;
+const DATA_SIZE = 113 as const;
+const HEADER_SIZE = 2 as const;
+const TOTAL_SIZE = 115 as const; // HEADER_SIZE + DATA_SIZE
+const PRODUCT_ID = 15 as const;
+const VERSION = 1 as const;
+const DEFAULT_MASTER = 50 as const;
+const CHAIN_ORDER = [5, 1, 6, 2, 3, 9, 4, 8, 7] as const;
+
+// Результат энкодинга
+export interface EncodedChain {
+  readonly bytes: Uint8Array;
+  readonly qrCode: string;
+  readonly rawBytes: readonly number[];
+}
+
+// Отладочная информация
+export interface DebugItem {
+  readonly index: number;
+  readonly value: number;
+  readonly description: string;
+  readonly enabled?: boolean;
+}
+
+export interface DebugInfo {
+  readonly encoding: EncodedChain;
+  readonly debug: readonly DebugItem[];
+}
+
+// Утилиты
+const clamp = (value: number): number => Math.max(0, Math.min(100, value));
+
+const bytesToB64 = (bytes: Uint8Array): string => {
+  const chars = Array.from(bytes, byte => String.fromCharCode(byte)).join('');
+  return typeof window !== 'undefined' 
+    ? window.btoa(chars)
+    : Buffer.from(chars, 'binary').toString('base64');
 };
 
-// Константы для NUX совместимости
-const NUX_PREFIX: string = 'nux://MightyAmp:';
-const DISABLED_FLAG: number = 0x40;
-const TYPE_MASK: number = 0x3f;
+const getHeadIndex = (blockType: Blocks): number => {
+  const headMap: Record<Blocks, keyof typeof NuxMp3PresetIndex> = {
+    [Blocks.Noisegate]: 'Head_iNG',
+    [Blocks.Compressor]: 'Head_iCMP', 
+    [Blocks.Effect]: 'Head_iEFX',
+    [Blocks.Amplifier]: 'Head_iAMP',
+    [Blocks.Cabinet]: 'Head_iCAB',
+    [Blocks.Eq]: 'Head_iEQ',
+    [Blocks.Modulation]: 'Head_iMOD',
+    [Blocks.Delay]: 'Head_iDLY',
+    [Blocks.Reverb]: 'Head_iRVB',
+  };
+  return NuxMp3PresetIndex[headMap[blockType]] ?? -1;
+};
 
-// Тип для результата энкодинга
-export interface EncodedChain {
-  bytes: Uint8Array;
-  qrCode: string;
-  rawBytes: number[];
-}
+const getIndexDescription = (index: number): string => {
+  const entry = Object.entries(NuxMp3PresetIndex).find(([, value]) => value === index);
+  return entry?.[0] ?? `Unknown index ${index}`;
+};
 
-// Функции для base64 кодирования (совместимость с браузером и Node.js)
-function bytesToB64(bytes: Uint8Array): string {
-  let s: string = '';
-  for (let i: number = 0; i < bytes.length; i++) {
-    s += String.fromCharCode(bytes[i] as number);
-  }
-  if (typeof window !== 'undefined') {
-    return window.btoa(s);
-  }
-  return Buffer.from(s, 'binary').toString('base64');
-}
+// Основная функция энкодера (максимально упрощенная)
+export const encodeChainToBytes = (chain: Chain): EncodedChain => {
+  const data = new Uint8Array(DATA_SIZE);
+  data[NuxMp3PresetIndex.MASTER] = DEFAULT_MASTER;
 
-/**
- * Основная функция энкодера
- * Принимает чейн из createDefaultChain() и конвертирует его в байтовый массив для QR кода
- * Использует config.ts как источник истины для структуры байтов
- */
-export function encodeChainToBytes(chain: ReturnType<typeof createDefaultChain>): EncodedChain {
-  // Инициализируем массив байтов (113 элементов для NUX совместимости)
-  const data: Uint8Array = new Uint8Array(113);
-  
-  // Устанавливаем мастер уровень (по умолчанию 50)
-  data[NuxMp3PresetIndex.MASTER] = 50;
-  
-  // Проходим по всем блокам в чейне
-  Object.entries(chain).forEach(([blockKey, blockData]: [string, ChainBlock]) => {
-    const blockType: Blocks = blockKey as Blocks;
-    const blockConfig: BlockConfig | undefined = config[blockType];
+  // Энкодируем блоки
+  for (const [blockKey, blockData] of Object.entries(chain)) {
+    const blockType = blockKey as Blocks;
+    const blockConfig = config[blockType];
     
-    if (!blockConfig?.types) {
-      console.warn(`No config found for block type: ${blockType}`);
-      return;
-    }
+    if (!blockConfig?.types) continue;
     
-    // Находим конфигурацию для текущего типа блока
-    const typeConfig: { label: string; realName: string; encodeType: number; params: TypeParamConfig[] } | undefined = blockConfig.types.find((type: { label: string; realName: string; encodeType: number; params: TypeParamConfig[] }) => type.label === blockData.type);
+    const typeConfig = blockConfig.types.find(t => t.label === blockData.type);
+    if (!typeConfig) continue;
     
-    if (!typeConfig) {
-      console.warn(`No type config found for ${blockData.type} in ${blockType}`);
-      return;
-    }
-    
-    // Устанавливаем тип блока в соответствующий заголовок
-    const headIndex: number = getHeadIndex(blockType);
-    if (headIndex !== -1) {
-      let value: number = typeConfig.encodeType & TYPE_MASK;
-      if (!blockData.enabled) {
-        value |= DISABLED_FLAG;
-      }
+    // Устанавливаем заголовок блока
+    const headIndex = getHeadIndex(blockType);
+    if (headIndex >= 0) {
+      let value = typeConfig.encodeType & TYPE_MASK;
+      if (!blockData.enabled) value |= DISABLED_FLAG;
       data[headIndex] = value;
     }
     
-    // Устанавливаем параметры блока согласно конфигурации
-    typeConfig.params.forEach((paramConfig: TypeParamConfig) => {
-      const paramValue: number | undefined = blockData.params[paramConfig.label];
+    // Устанавливаем параметры
+    for (const paramConfig of typeConfig.params) {
+      const params = blockData.params as Record<string, number>;
+      const paramValue = params[paramConfig.label];
       if (paramValue !== undefined) {
-        data[paramConfig.encodeIndex] = Math.max(0, Math.min(100, paramValue));
+        data[paramConfig.encodeIndex] = clamp(paramValue);
       }
-    });
-  });
-  
-  // Устанавливаем дефолтный порядок чейна
-  const chainOrder: number[] = [5, 1, 6, 2, 3, 9, 4, 8, 7]; // CHAIN_DEFAULT из старого энкодера
-  chainOrder.forEach((fxid: number, i: number) => {
-    data[NuxMp3PresetIndex.LINK1 + i] = fxid;
-  });
-  
-  // Добавляем заголовок с product_id и version
-  const productId: number = 15; // NUX MP-3 product ID
-  const version: number = 1;
-  const head: Uint8Array = new Uint8Array([productId, version]);
-  const allBytes: Uint8Array = new Uint8Array(head.length + data.length);
-  allBytes.set(head, 0);
-  allBytes.set(data, head.length);
-  
-  // Создаем NUX совместимый QR код
-  const qrCode: string = NUX_PREFIX + bytesToB64(allBytes);
-  
-  return {
-    bytes: allBytes,
-    qrCode,
-    rawBytes: Array.from(allBytes)
-  };
-}
-
-/**
- * Получает индекс заголовка для блока из константы NuxMp3PresetIndex
- */
-function getHeadIndex(blockType: Blocks): number {
-  switch (blockType) {
-    case Blocks.Noisegate:
-      return NuxMp3PresetIndex.Head_iNG;
-    case Blocks.Compressor:
-      return NuxMp3PresetIndex.Head_iCMP;
-    case Blocks.Modulation:
-      return NuxMp3PresetIndex.Head_iMOD;
-    case Blocks.Effect:
-      return NuxMp3PresetIndex.Head_iEFX;
-    case Blocks.Amplifier:
-      return NuxMp3PresetIndex.Head_iAMP;
-    case Blocks.Cabinet:
-      return NuxMp3PresetIndex.Head_iCAB;
-    case Blocks.Eq:
-      return NuxMp3PresetIndex.Head_iEQ;
-    case Blocks.Reverb:
-      return NuxMp3PresetIndex.Head_iRVB;
-    case Blocks.Delay:
-      return NuxMp3PresetIndex.Head_iDLY;
-    default:
-      return -1;
-  }
-}
-
-/**
- * Вспомогательная функция для энкодинга дефолтного чейна
- */
-export function encodeDefaultChain(): EncodedChain {
-  const defaultChain: ReturnType<typeof createDefaultChain> = createDefaultChain();
-  return encodeChainToBytes(defaultChain);
-}
-
-/**
- * Функция для отладки - показывает какие байты установлены
- */
-export function debugEncoding(chain: ReturnType<typeof createDefaultChain>): {
-  encoding: EncodedChain;
-  debug: Array<{ index: number; value: number; description: string; enabled?: boolean }>;
-} {
-  const encoding: EncodedChain = encodeChainToBytes(chain);
-  const debug: Array<{ index: number; value: number; description: string; enabled?: boolean }> = Array.from(encoding.bytes)
-    .map((value: number, index: number) => {
-      const description: string = getIndexDescription(index);
-      const isHeader: boolean = description.startsWith('Head_');
-      const actualValue: number = isHeader ? value & TYPE_MASK : value;
-      
-      const result: { index: number; value: number; description: string; enabled?: boolean } = { 
-        index, 
-        value: actualValue, 
-        description
-      };
-      
-      if (isHeader) {
-        result.enabled = (value & DISABLED_FLAG) === 0;
-      }
-      
-      return result;
-    })
-    .filter((item: { index: number; value: number; description: string; enabled?: boolean }) => item.value !== 0);
-  
-  return { encoding, debug };
-}
-
-/**
- * Получает описание для индекса байта (для отладки)
- */
-function getIndexDescription(index: number): string {
-  // Поиск в константах NuxMp3PresetIndex
-  for (const [key, value] of Object.entries(NuxMp3PresetIndex)) {
-    if (value === index) {
-      return key;
     }
   }
-  return `Unknown index ${index.toString()}`;
-}
+
+  // Устанавливаем порядок чейна
+  CHAIN_ORDER.forEach((fxid, i) => {
+    data[NuxMp3PresetIndex.LINK1 + i] = fxid;
+  });
+
+  // Создаем финальный массив с заголовком
+  const result = new Uint8Array(TOTAL_SIZE);
+  result.set([PRODUCT_ID, VERSION], 0);
+  result.set(data, HEADER_SIZE);
+
+  return {
+    bytes: result,
+    qrCode: NUX_PREFIX + bytesToB64(result),
+    rawBytes: Array.from(result),
+  };
+};
+
+// Упрощенные утилиты
+export const encodeDefaultChain = (): EncodedChain => 
+  encodeChainToBytes(createDefaultChain());
+
+export const debugEncoding = (chain: Chain): DebugInfo => {
+  const encoding = encodeChainToBytes(chain);
+  
+  const debug = Array.from(encoding.bytes, (value, index) => {
+    const description = getIndexDescription(index);
+    const isHeader = description.startsWith('Head_');
+    const actualValue = isHeader ? value & TYPE_MASK : value;
+    
+    const item: DebugItem = { 
+      index, 
+      value: actualValue, 
+      description,
+      ...(isHeader && { enabled: (value & DISABLED_FLAG) === 0 })
+    };
+    
+    return item;
+  }).filter(item => item.value !== 0);
+
+  return { encoding, debug };
+};
