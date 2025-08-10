@@ -126,10 +126,10 @@ export const SLOT_COLORS: Record<Slot, string> = {
 export function toUnitString(
   value0100: number,
   { min, max, unit }: { min: number; max: number; unit: Unit }
-) {
-  const v = value0100;
-  const mapped = min + (v / 100) * (max - min);
-  const rounded =
+): string {
+  const v: number = value0100;
+  const mapped: number = min + (v / 100) * (max - min);
+  const rounded: number =
     unit === "dB" ? Math.round(mapped * 10) / 10 : Math.round(mapped);
   return `${String(rounded)} ${unit}`;
 }
