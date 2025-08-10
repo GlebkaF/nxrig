@@ -29,7 +29,6 @@ export enum Blocks {
 export type ChainItem<T extends string, P extends string> = {
   type: T;
   enabled: boolean;
-  encoderHeadIndex: number;
   params: {
     [key in P]: number;
   };

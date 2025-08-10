@@ -4,7 +4,7 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
 
-import { config, encoderConfig } from './config';
+import { config, blockHeadMapping, encoderConfig } from './config';
 import { createDefaultChain } from './helpers/create-default-chain';
 import { Blocks } from './interface';
 import { NuxMp3PresetIndex } from './const';
@@ -41,6 +41,10 @@ const bytesToB64 = (bytes: Uint8Array): string => {
     : Buffer.from(chars, 'binary').toString('base64');
 };
 
+const getHeadIndex = (blockType: Blocks): number => {
+  return NuxMp3PresetIndex[blockHeadMapping[blockType]] ?? -1;
+};
+
 // Основная функция энкодера (максимально упрощенная)
 export const encodeChain = (chain: Chain): EncodedChain => {
   const data = new Uint8Array(DATA_SIZE);
@@ -57,7 +61,7 @@ export const encodeChain = (chain: Chain): EncodedChain => {
     if (!typeConfig) continue;
     
     // Устанавливаем заголовок блока
-    const headIndex = blockData.encoderHeadIndex;
+    const headIndex = getHeadIndex(blockType);
     if (headIndex >= 0) {
       let value = typeConfig.encodeType & TYPE_MASK;
       if (!blockData.enabled) value |= DISABLED_FLAG;

@@ -14,7 +14,18 @@ interface ChainConfig {
   [key: string]: BlockConfig;
 }
 
-
+// Маппинг блоков на заголовки в NuxMp3PresetIndex
+export const blockHeadMapping: Record<Blocks, keyof typeof NuxMp3PresetIndex> = {
+  [Blocks.Noisegate]: 'Head_iNG',
+  [Blocks.Compressor]: 'Head_iCMP', 
+  [Blocks.Effect]: 'Head_iEFX',
+  [Blocks.Amplifier]: 'Head_iAMP',
+  [Blocks.Cabinet]: 'Head_iCAB',
+  [Blocks.Eq]: 'Head_iEQ',
+  [Blocks.Modulation]: 'Head_iMOD',
+  [Blocks.Delay]: 'Head_iDLY',
+  [Blocks.Reverb]: 'Head_iRVB',
+};
 
 // Настройки энкодера
 export const encoderConfig: {
