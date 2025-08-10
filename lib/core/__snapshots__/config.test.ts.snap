@@ -1,0 +1,405 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Config > compressor should to match snapshot 1`] = `
+{
+  "amplifier": {
+    "types": [
+      {
+        "encodeType": 1,
+        "label": "Jazz Clean",
+        "params": [
+          {
+            "encodeIndex": 27,
+            "label": "Gain",
+          },
+          {
+            "encodeIndex": 28,
+            "label": "Master",
+          },
+          {
+            "encodeIndex": 29,
+            "label": "Bass",
+          },
+          {
+            "encodeIndex": 30,
+            "label": "Middle",
+          },
+          {
+            "encodeIndex": 31,
+            "label": "Treble",
+          },
+          {
+            "encodeIndex": 32,
+            "label": "Bright",
+          },
+        ],
+        "realName": "Jazz Clean",
+      },
+    ],
+  },
+  "cabinet": {
+    "types": [
+      {
+        "encodeType": 1,
+        "label": "JZ120",
+        "params": [
+          {
+            "encodeIndex": 78,
+            "label": "Level",
+          },
+          {
+            "encodeIndex": 79,
+            "label": "Low Cut",
+          },
+          {
+            "encodeIndex": 80,
+            "label": "High Cut",
+          },
+        ],
+        "realName": "Roland JC-120 2x12",
+      },
+    ],
+  },
+  "compressor": {
+    "types": [
+      {
+        "encodeType": 2,
+        "label": "K Comp",
+        "params": [
+          {
+            "encodeIndex": 16,
+            "label": "Level",
+          },
+          {
+            "encodeIndex": 15,
+            "label": "Sustain",
+          },
+          {
+            "encodeIndex": 17,
+            "label": "Clipping",
+          },
+        ],
+        "realName": "Keeley Compressor",
+      },
+      {
+        "encodeType": 3,
+        "label": "Studio Comp",
+        "params": [
+          {
+            "encodeIndex": 17,
+            "label": "Gain",
+          },
+          {
+            "encodeIndex": 15,
+            "label": "Threshold",
+          },
+          {
+            "encodeIndex": 16,
+            "label": "Ratio",
+          },
+          {
+            "encodeIndex": 18,
+            "label": "Release",
+          },
+        ],
+        "realName": "Studio Compressor",
+      },
+      {
+        "encodeType": 1,
+        "label": "Rose Comp",
+        "params": [
+          {
+            "encodeIndex": 16,
+            "label": "Level",
+          },
+          {
+            "encodeIndex": 15,
+            "label": "Sustain",
+          },
+        ],
+        "realName": "Keeley Compressor",
+      },
+    ],
+  },
+  "delay": {
+    "types": [
+      {
+        "encodeType": 1,
+        "label": "Analog Delay",
+        "params": [
+          {
+            "encodeIndex": 63,
+            "label": "Intensity",
+          },
+          {
+            "encodeIndex": 61,
+            "label": "Rate",
+          },
+          {
+            "encodeIndex": 62,
+            "label": "Echo",
+          },
+        ],
+        "realName": "Analog Delay",
+      },
+    ],
+  },
+  "effect": {
+    "types": [
+      {
+        "encodeType": 1,
+        "label": "Distortion+",
+        "params": [
+          {
+            "encodeIndex": 20,
+            "label": "Output",
+          },
+          {
+            "encodeIndex": 21,
+            "label": "Sensitivity",
+          },
+        ],
+        "realName": "Distortion+",
+      },
+    ],
+  },
+  "eq": {
+    "types": [
+      {
+        "encodeType": 1,
+        "label": "6-Band",
+        "params": [
+          {
+            "encodeIndex": 36,
+            "label": "100",
+          },
+          {
+            "encodeIndex": 37,
+            "label": "220",
+          },
+          {
+            "encodeIndex": 38,
+            "label": "500",
+          },
+          {
+            "encodeIndex": 39,
+            "label": "1.2K",
+          },
+          {
+            "encodeIndex": 40,
+            "label": "2.6K",
+          },
+          {
+            "encodeIndex": 41,
+            "label": "6.4K",
+          },
+        ],
+        "realName": "6-Band",
+      },
+      {
+        "encodeType": 3,
+        "label": "10-Band",
+        "params": [
+          {
+            "encodeIndex": 36,
+            "label": "Vol",
+          },
+          {
+            "encodeIndex": 37,
+            "label": "31",
+          },
+          {
+            "encodeIndex": 38,
+            "label": "62",
+          },
+          {
+            "encodeIndex": 39,
+            "label": "125",
+          },
+          {
+            "encodeIndex": 40,
+            "label": "250",
+          },
+          {
+            "encodeIndex": 41,
+            "label": "500",
+          },
+          {
+            "encodeIndex": 42,
+            "label": "1K",
+          },
+          {
+            "encodeIndex": 43,
+            "label": "2K",
+          },
+          {
+            "encodeIndex": 44,
+            "label": "4K",
+          },
+          {
+            "encodeIndex": 45,
+            "label": "8K",
+          },
+          {
+            "encodeIndex": 46,
+            "label": "16K",
+          },
+        ],
+        "realName": "10-Band",
+      },
+    ],
+  },
+  "modulation": {
+    "types": [
+      {
+        "encodeType": 1,
+        "label": "CE-1",
+        "params": [
+          {
+            "encodeIndex": 56,
+            "label": "Rate",
+          },
+          {
+            "encodeIndex": 55,
+            "label": "Depth",
+          },
+          {
+            "encodeIndex": 54,
+            "label": "Intensity",
+          },
+        ],
+        "realName": "CE-1",
+      },
+    ],
+  },
+  "noisegate": {
+    "types": [
+      {
+        "encodeType": 1,
+        "label": "Noise Gate",
+        "params": [
+          {
+            "encodeIndex": 49,
+            "label": "Sensitivity",
+          },
+          {
+            "encodeIndex": 50,
+            "label": "Decay",
+          },
+        ],
+        "realName": "Noise Gate",
+      },
+    ],
+  },
+  "reverb": {
+    "types": [
+      {
+        "encodeType": 1,
+        "label": "Room",
+        "params": [
+          {
+            "encodeIndex": 72,
+            "label": "Level",
+          },
+          {
+            "encodeIndex": 70,
+            "label": "Decay",
+          },
+          {
+            "encodeIndex": 71,
+            "label": "Tone",
+          },
+        ],
+        "realName": "Room Reverb",
+      },
+      {
+        "encodeType": 2,
+        "label": "Hall",
+        "params": [
+          {
+            "encodeIndex": 73,
+            "label": "Level",
+          },
+          {
+            "encodeIndex": 70,
+            "label": "Decay",
+          },
+          {
+            "encodeIndex": 71,
+            "label": "Pre Delay",
+          },
+          {
+            "encodeIndex": 72,
+            "label": "Liveliness",
+          },
+        ],
+        "realName": "Hall Reverb",
+      },
+      {
+        "encodeType": 3,
+        "label": "Plate",
+        "params": [
+          {
+            "encodeIndex": 71,
+            "label": "Level",
+          },
+          {
+            "encodeIndex": 70,
+            "label": "Decay",
+          },
+        ],
+        "realName": "Plate Reverb",
+      },
+      {
+        "encodeType": 4,
+        "label": "Spring",
+        "params": [
+          {
+            "encodeIndex": 71,
+            "label": "Level",
+          },
+          {
+            "encodeIndex": 70,
+            "label": "Decay",
+          },
+        ],
+        "realName": "Spring Reverb",
+      },
+      {
+        "encodeType": 5,
+        "label": "Shimmer",
+        "params": [
+          {
+            "encodeIndex": 70,
+            "label": "Mix",
+          },
+          {
+            "encodeIndex": 71,
+            "label": "Decay",
+          },
+          {
+            "encodeIndex": 72,
+            "label": "Shimmer",
+          },
+        ],
+        "realName": "Shimmer Reverb",
+      },
+      {
+        "encodeType": 6,
+        "label": "Damp",
+        "params": [
+          {
+            "encodeIndex": 70,
+            "label": "Mix",
+          },
+          {
+            "encodeIndex": 71,
+            "label": "Depth",
+          },
+        ],
+        "realName": "Damp Reverb",
+      },
+    ],
+  },
+}
+`;

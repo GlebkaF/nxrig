@@ -1,3 +1,5 @@
+// Тут все ок
+// eslint-disable-next-line @typescript-eslint/typedef
 export const NuxMp3PresetIndex = {
   // Heads
   Head_iWAH: 0,
@@ -101,4 +103,4 @@ export const NuxMp3PresetIndex = {
   LINK9: 97,
   LINK10: 98,
   LINK11: 99,
-} as const;
+};
