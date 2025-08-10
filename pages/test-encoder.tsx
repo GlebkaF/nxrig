@@ -2,14 +2,13 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import React, { useState, useEffect } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
-import { encodeDefaultChain, debugEncoding, type DebugItem } from '../lib/core/encoder';
+import { encodeDefaultChain } from '../lib/core/encoder';
 import { createDefaultChain } from '../lib/core/helpers/create-default-chain';
 
 export default function TestEncoderPage(): React.ReactElement {
   const [defaultChain, setDefaultChain] = useState<ReturnType<typeof createDefaultChain> | null>(null);
   const [qrCode, setQrCode] = useState<string>('');
   const [bytes, setBytes] = useState<number[]>([]);
-  const [debugInfo, setDebugInfo] = useState<DebugItem[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const downloadQRCode = (): void => {
@@ -33,10 +32,6 @@ export default function TestEncoderPage(): React.ReactElement {
       const encoded = encodeDefaultChain();
       setQrCode(encoded.qrCode);
       setBytes([...encoded.rawBytes]);
-
-      // Получаем отладочную информацию
-      const debug = debugEncoding(chain);
-      setDebugInfo([...debug.debug]);
 
       setIsLoading(false);
     } catch (error) {
@@ -200,7 +195,6 @@ export default function TestEncoderPage(): React.ReactElement {
             <div className="grid grid-cols-10 gap-2 text-xs font-mono">
               {bytes.map((byte, index) => {
                 const isNonZero = byte !== 0;
-                const isHeader = debugInfo.some(item => item.index === index && item.description.startsWith('Head_'));
                 
                 return (
                   <div
@@ -208,13 +202,11 @@ export default function TestEncoderPage(): React.ReactElement {
                     className={`
                       p-2 text-center rounded border transition-all duration-200
                       ${isNonZero 
-                        ? isHeader 
-                          ? 'bg-yellow-100 border-yellow-400 font-bold text-yellow-800' 
-                          : 'bg-green-100 border-green-400 font-bold text-green-800'
+                        ? 'bg-green-100 border-green-400 font-bold text-green-800'
                         : 'bg-gray-50 border-gray-200 text-gray-500'
                       }
                     `}
-                    title={`Index ${index}: ${byte} ${debugInfo.find(item => item.index === index)?.description || ''}`}
+                    title={`Index ${index}: ${byte}`}
                   >
                     {index}:{byte}
                   </div>
@@ -224,80 +216,7 @@ export default function TestEncoderPage(): React.ReactElement {
           </div>
         </div>
 
-        {/* Debug Table */}
-        <div className="mt-8 bg-white rounded-lg shadow-md overflow-hidden">
-          <div className="bg-gray-50 px-6 py-4 border-b">
-            <h2 className="text-xl font-semibold text-gray-900 flex items-center">
-              🔍 Отладочная информация (ненулевые байты)
-            </h2>
-          </div>
-          <div className="p-6">
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Индекс
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Значение
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Описание
-                    </th>
-                                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                       Тип
-                     </th>
-                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                       Статус
-                     </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {debugInfo.map((item) => (
-                    <tr key={item.index} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">
-                        {item.index}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">
-                        {item.value}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">
-                        {item.description}
-                      </td>
-                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                         <span className={`
-                           inline-flex px-2 py-1 text-xs font-semibold rounded-full
-                           ${item.description.startsWith('Head_') 
-                             ? 'bg-yellow-100 text-yellow-800' 
-                             : 'bg-green-100 text-green-800'
-                           }
-                         `}>
-                           {item.description.startsWith('Head_') ? 'Header' : 'Parameter'}
-                         </span>
-                       </td>
-                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                         {item.enabled !== undefined ? (
-                           <span className={`
-                             inline-flex px-2 py-1 text-xs font-semibold rounded-full
-                             ${item.enabled 
-                               ? 'bg-green-100 text-green-800' 
-                               : 'bg-red-100 text-red-800'
-                             }
-                           `}>
-                             {item.enabled ? 'Enabled' : 'Disabled'}
-                           </span>
-                         ) : (
-                           <span className="text-gray-400">-</span>
-                         )}
-                       </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+
 
         {/* Large QR Code Section */}
         <div className="mt-8 bg-white rounded-lg shadow-md overflow-hidden">

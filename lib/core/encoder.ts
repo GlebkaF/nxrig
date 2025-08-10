@@ -31,19 +31,6 @@ export interface EncodedChain {
   readonly rawBytes: readonly number[];
 }
 
-// Отладочная информация
-export interface DebugItem {
-  readonly index: number;
-  readonly value: number;
-  readonly description: string;
-  readonly enabled?: boolean;
-}
-
-export interface DebugInfo {
-  readonly encoding: EncodedChain;
-  readonly debug: readonly DebugItem[];
-}
-
 // Утилиты
 const clamp = (value: number): number => Math.max(0, Math.min(100, value));
 
@@ -58,13 +45,8 @@ const getHeadIndex = (blockType: Blocks): number => {
   return NuxMp3PresetIndex[blockHeadMapping[blockType]] ?? -1;
 };
 
-const getIndexDescription = (index: number): string => {
-  const entry = Object.entries(NuxMp3PresetIndex).find(([, value]) => value === index);
-  return entry?.[0] ?? `Unknown index ${index}`;
-};
-
 // Основная функция энкодера (максимально упрощенная)
-export const encodeChainToBytes = (chain: Chain): EncodedChain => {
+export const encodeChain = (chain: Chain): EncodedChain => {
   const data = new Uint8Array(DATA_SIZE);
   data[encoderConfig.masterIndex] = DEFAULT_MASTER;
 
@@ -113,27 +95,6 @@ export const encodeChainToBytes = (chain: Chain): EncodedChain => {
   };
 };
 
-// Упрощенные утилиты
+// Утилита для энкодинга дефолтного чейна
 export const encodeDefaultChain = (): EncodedChain => 
-  encodeChainToBytes(createDefaultChain());
-
-export const debugEncoding = (chain: Chain): DebugInfo => {
-  const encoding = encodeChainToBytes(chain);
-  
-  const debug = Array.from(encoding.bytes, (value, index) => {
-    const description = getIndexDescription(index);
-    const isHeader = description.startsWith('Head_');
-    const actualValue = isHeader ? value & TYPE_MASK : value;
-    
-    const item: DebugItem = { 
-      index, 
-      value: actualValue, 
-      description,
-      ...(isHeader && { enabled: (value & DISABLED_FLAG) === 0 })
-    };
-    
-    return item;
-  }).filter(item => item.value !== 0);
-
-  return { encoding, debug };
-};
+  encodeChain(createDefaultChain());

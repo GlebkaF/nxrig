@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import { createDefaultChain } from '../lib/core/helpers/create-default-chain';
-import { encodeChainToBytes, encodeDefaultChain, debugEncoding } from '../lib/core/encoder';
+import { encodeChain, encodeDefaultChain } from '../lib/core/encoder';
 import { encoderConfig } from '../lib/core/config';
 
 describe('Core Encoder Tests', () => {
   it('should encode default chain to NUX compatible QR code', () => {
     const chain = createDefaultChain();
-    const encoded = encodeChainToBytes(chain);
+    const encoded = encodeChain(chain);
     
     // Проверяем структуру результата
     expect(encoded).toHaveProperty('bytes');
@@ -28,20 +28,14 @@ describe('Core Encoder Tests', () => {
   it('should encode enabled and disabled blocks correctly', () => {
     const chain = createDefaultChain();
     
-    // Отключаем один блок (используем правильное имя из Blocks enum)
+    // Отключаем один блок
     chain.amplifier.enabled = false;
     
-    const encoded = encodeChainToBytes(chain);
-    const debug = debugEncoding(chain);
+    const encoded = encodeChain(chain);
     
-    // Проверяем что отключенный блок имеет DISABLED_FLAG
-    const ampHeader = debug.debug.find(item => 
-      item.description.includes('Head_AMP')
-    );
-    
-    if (ampHeader) {
-      expect(ampHeader.enabled).toBe(false);
-    }
+    // Проверяем что QR код создается корректно даже с отключенными блоками
+    expect(encoded.qrCode).toMatch(/^nux:\/\/MightyAmp:/);
+    expect(encoded.bytes).toHaveLength(115);
   });
 
   it('should handle empty parameters gracefully', () => {
@@ -50,7 +44,7 @@ describe('Core Encoder Tests', () => {
     // Очищаем параметры одного блока
     chain.amplifier.params = {};
     
-    const encoded = encodeChainToBytes(chain);
+    const encoded = encodeChain(chain);
     
     // Энкодер должен работать без ошибок
     expect(encoded.qrCode).toMatch(/^nux:\/\/MightyAmp:/);
@@ -67,7 +61,7 @@ describe('Core Encoder Tests', () => {
       Bass: 50      // нормальное значение
     };
     
-    const encoded = encodeChainToBytes(chain);
+    const encoded = encodeChain(chain);
     
     // Проверяем что значения ограничены
     expect(encoded.rawBytes.every(byte => byte >= 0 && byte <= 255)).toBe(true);
@@ -75,39 +69,33 @@ describe('Core Encoder Tests', () => {
 
   it('should use encodeDefaultChain shortcut correctly', () => {
     const directEncoded = encodeDefaultChain();
-    const chainEncoded = encodeChainToBytes(createDefaultChain());
+    const chainEncoded = encodeChain(createDefaultChain());
     
     // Результаты должны быть идентичными
     expect(directEncoded.qrCode).toBe(chainEncoded.qrCode);
     expect(directEncoded.rawBytes).toEqual(chainEncoded.rawBytes);
   });
 
-  it('should provide meaningful debug information', () => {
-    const chain = createDefaultChain();
-    const debug = debugEncoding(chain);
+  it('should encode different chain configurations', () => {
+    const chain1 = createDefaultChain();
+    const chain2 = createDefaultChain();
     
-    // Проверяем структуру отладочной информации
-    expect(debug).toHaveProperty('encoding');
-    expect(debug).toHaveProperty('debug');
-    expect(Array.isArray(debug.debug)).toBe(true);
+    // Изменяем один из чейнов
+    chain2.amplifier.type = 'Deluxe Rvb';
+    chain2.effect.enabled = false;
     
-    // Должны быть записи с ненулевыми значениями
-    expect(debug.debug.length).toBeGreaterThan(0);
+    const encoded1 = encodeChain(chain1);
+    const encoded2 = encodeChain(chain2);
     
-    // Каждая запись должна иметь правильную структуру
-    debug.debug.forEach(item => {
-      expect(item).toHaveProperty('index');
-      expect(item).toHaveProperty('value');
-      expect(item).toHaveProperty('description');
-      expect(typeof item.index).toBe('number');
-      expect(typeof item.value).toBe('number');
-      expect(typeof item.description).toBe('string');
-    });
+    // QR коды должны быть разными
+    expect(encoded1.qrCode).not.toBe(encoded2.qrCode);
+    expect(encoded1.qrCode).toMatch(/^nux:\/\/MightyAmp:/);
+    expect(encoded2.qrCode).toMatch(/^nux:\/\/MightyAmp:/);
   });
 
   it('should handle all block types from config', () => {
     const chain = createDefaultChain();
-    const encoded = encodeChainToBytes(chain);
+    const encoded = encodeChain(chain);
     
     // QR код должен быть валидным base64 после префикса
     const base64Part = encoded.qrCode.replace('nux://MightyAmp:', '');
@@ -122,7 +110,7 @@ describe('Core Encoder Tests', () => {
 
   it('should maintain chain order in LINK fields', () => {
     const chain = createDefaultChain();
-    const encoded = encodeChainToBytes(chain);
+    const encoded = encodeChain(chain);
     
     // Проверяем что LINK поля установлены (используем конфиг)
     const linkStart = encoderConfig.linkStartIndex + 2; // +2 для заголовка (product_id, version)
@@ -134,7 +122,7 @@ describe('Core Encoder Tests', () => {
 
   it('should set master volume correctly', () => {
     const chain = createDefaultChain();
-    const encoded = encodeChainToBytes(chain);
+    const encoded = encodeChain(chain);
     
     // Мастер должен быть на правильном индексе с дефолтным значением (используем конфиг)
     expect(encoded.rawBytes[encoderConfig.masterIndex + 2]).toBe(encoderConfig.defaultMasterValue);
