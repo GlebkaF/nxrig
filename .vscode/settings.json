@@ -1,0 +1,17 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "testing.automaticallyOpenPeekView": "never",
+  "vitest.enable": true,
+  "vitest.commandLine": "npm run test:watch --",
+  "javascript.test.runner": "vitest"
+}
+

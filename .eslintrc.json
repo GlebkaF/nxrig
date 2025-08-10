@@ -3,16 +3,52 @@
   "ignorePatterns": ["node_modules/", ".next/", "out/"],
   "extends": ["next", "prettier"],
   "plugins": ["unused-imports", "@typescript-eslint"],
-  "parserOptions": {
-    "project": null
-  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": ".",
+        "sourceType": "module"
+      },
+      "extends": [
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:@typescript-eslint/strict-type-checked",
+        "prettier"
+      ],
+      "rules": {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          { "argsIgnorePattern": "^_" }
+        ],
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          { "allowExpressions": false }
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": ["error"],
+        "@typescript-eslint/typedef": [
+          "error",
+          {
+            "arrayDestructuring": true,
+            "arrowParameter": true,
+            "memberVariableDeclaration": true,
+            "objectDestructuring": true,
+            "parameter": true,
+            "propertyDeclaration": true,
+            "variableDeclaration": true
+          }
+        ],
+        "@typescript-eslint/no-unnecessary-condition": ["error"],
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": ["error"],
+        "@typescript-eslint/no-unnecessary-type-arguments": ["error"]
+      }
+    }
+  ],
   "rules": {
     "import/extensions": ["off"],
     "import/order": "off",
-    "no-unused-vars": "off",
-    "unused-imports/no-unused-imports": "error",
-    "@typescript-eslint/prefer-nullish-coalescing": "off",
-    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
-    "@typescript-eslint/no-unnecessary-condition": "off"
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
   }
 }
