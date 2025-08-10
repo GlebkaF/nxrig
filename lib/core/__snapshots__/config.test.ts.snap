@@ -49,11 +49,11 @@ exports[`Config > compressor should to match snapshot 1`] = `
           },
           {
             "encodeIndex": 79,
-            "label": "Low Cut",
+            "label": "LowCut",
           },
           {
             "encodeIndex": 80,
-            "label": "High Cut",
+            "label": "HighCut",
           },
         ],
         "realName": "Roland JC-120 2x12",
@@ -183,15 +183,15 @@ exports[`Config > compressor should to match snapshot 1`] = `
           },
           {
             "encodeIndex": 39,
-            "label": "1.2K",
+            "label": "1200",
           },
           {
             "encodeIndex": 40,
-            "label": "2.6K",
+            "label": "2600",
           },
           {
             "encodeIndex": 41,
-            "label": "6.4K",
+            "label": "6400",
           },
         ],
         "realName": "6-Band",
@@ -226,23 +226,23 @@ exports[`Config > compressor should to match snapshot 1`] = `
           },
           {
             "encodeIndex": 42,
-            "label": "1K",
+            "label": "1000",
           },
           {
             "encodeIndex": 43,
-            "label": "2K",
+            "label": "2000",
           },
           {
             "encodeIndex": 44,
-            "label": "4K",
+            "label": "4000",
           },
           {
             "encodeIndex": 45,
-            "label": "8K",
+            "label": "8000",
           },
           {
             "encodeIndex": 46,
-            "label": "16K",
+            "label": "16000",
           },
         ],
         "realName": "10-Band",
@@ -326,7 +326,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
           },
           {
             "encodeIndex": 71,
-            "label": "Pre Delay",
+            "label": "PreDelay",
           },
           {
             "encodeIndex": 72,
