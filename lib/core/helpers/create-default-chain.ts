@@ -9,6 +9,7 @@ import { CabinetParams, CabinetType } from "../blocks/cabinet";
 import { EqParams, EqType } from "../blocks/eq";
 import { ReverbParams } from "../blocks/reverb";
 import { DelayParams, DelayType } from "../blocks/delay";
+import { NuxMp3PresetIndex } from "../const";
 
 type Chain = {
   [Blocks.Noisegate]: NoisegateParams;
@@ -27,6 +28,7 @@ export function createDefaultChain(): Chain {
     [Blocks.Noisegate]: {
       type: NoiseGateType.NoiseGate,
       enabled: true,
+      encoderHeadIndex: NuxMp3PresetIndex.Head_iNG,
       params: {
         Sensitivity: 50,
         Decay: 50,
@@ -35,6 +37,7 @@ export function createDefaultChain(): Chain {
     [Blocks.Compressor]: {
       type: CompressorType.KComp,
       enabled: true,
+      encoderHeadIndex: NuxMp3PresetIndex.Head_iCMP,
       params: {
         Level: 50,
         Sustain: 50,
@@ -44,6 +47,7 @@ export function createDefaultChain(): Chain {
     [Blocks.Modulation]: {
       type: ModulationType.CE1,
       enabled: true,
+      encoderHeadIndex: NuxMp3PresetIndex.Head_iMOD,
       params: {
         Rate: 50,
         Depth: 50,
@@ -53,6 +57,7 @@ export function createDefaultChain(): Chain {
     [Blocks.Effect]: {
       type: EffectType.DistortionPlus,
       enabled: true,
+      encoderHeadIndex: NuxMp3PresetIndex.Head_iEFX,
       params: {
         Output: 50,
         Sensitivity: 50,
@@ -61,6 +66,7 @@ export function createDefaultChain(): Chain {
     [Blocks.Amplifier]: {
       type: AmplifierType.JazzClean,
       enabled: true,
+      encoderHeadIndex: NuxMp3PresetIndex.Head_iAMP,
       params: {
         Gain: 50,
         Master: 50,
@@ -73,6 +79,7 @@ export function createDefaultChain(): Chain {
     [Blocks.Cabinet]: {
       type: CabinetType.JZ120,
       enabled: true,
+      encoderHeadIndex: NuxMp3PresetIndex.Head_iCAB,
       params: {
         Level: 50,
         LowCut: 50,
@@ -82,6 +89,7 @@ export function createDefaultChain(): Chain {
     [Blocks.Eq]: {
       type: EqType.SixBand,
       enabled: true,
+      encoderHeadIndex: NuxMp3PresetIndex.Head_iEQ,
       params: {
         "100": 50,
         "220": 50,
@@ -94,6 +102,7 @@ export function createDefaultChain(): Chain {
     [Blocks.Reverb]: {
       type: ReverbType.Room,
       enabled: true,
+      encoderHeadIndex: NuxMp3PresetIndex.Head_iRVB,
       params: {
         Level: 50,
         Decay: 50,
@@ -103,6 +112,7 @@ export function createDefaultChain(): Chain {
     [Blocks.Delay]: {
       type: DelayType.AnalogDelay,
       enabled: true,
+      encoderHeadIndex: NuxMp3PresetIndex.Head_iDLY,
       params: {
         Intensity: 50,
         Rate: 50,
