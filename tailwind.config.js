@@ -1,5 +1,5 @@
-export default {
-  content: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
+const config = {
+  content: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       keyframes: {
@@ -15,3 +15,5 @@ export default {
   },
   plugins: [],
 };
+
+export default config;
