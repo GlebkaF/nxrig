@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎸 Chain Encoder Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        h2 {
+            color: #555;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .json-output {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 13px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .qr-code {
+            background: #fff;
+            border: 3px solid #28a745;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 11px;
+            word-break: break-all;
+            line-height: 1.6;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        button {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+        
+        button:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+        }
+        
+        .info {
+            background: linear-gradient(90deg, #e7f3ff, #f0f8ff);
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .bytes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 8px;
+            margin: 20px 0;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 11px;
+        }
+        
+        .byte-cell {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px 6px;
+            text-align: center;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        
+        .byte-cell.non-zero {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            border-color: #28a745;
+            font-weight: bold;
+            transform: scale(1.02);
+        }
+        
+        .byte-cell.header {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border-color: #ffc107;
+            font-weight: bold;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .debug-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 12px;
+        }
+        
+        .debug-table th,
+        .debug-table td {
+            border: 1px solid #dee2e6;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        
+        .debug-table th {
+            background: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        .debug-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎸 Chain Encoder Test</h1>
+        <div class="subtitle">Тестирование нового энкодера для конвертации чейна в QR код</div>
+        
+        <div class="info">
+            <strong>📋 Описание:</strong> Этот энкодер принимает дефолтный чейн эффектов из <code>create-default-chain.ts</code>, 
+            мапит его на конфигурацию из <code>config.ts</code> и генерирует байтовый массив для QR кода. 
+            Конфиг является источником истины для структуры байтов.
+        </div>
+        
+        <button onclick="generateEncoding()">🚀 Сгенерировать энкодинг</button>
+        
+        <h2>📋 Дефолтный чейн (JSON)</h2>
+        <div id="defaultChain" class="json-output">Нажмите кнопку для генерации...</div>
+        
+        <h2>📊 Статистика</h2>
+        <div id="statsGrid" class="stats-grid"></div>
+        
+        <h2>🔢 Байтовый массив (визуализация)</h2>
+        <div id="bytesGrid" class="bytes-grid"></div>
+        
+        <h2>🔍 Отладочная информация</h2>
+        <table id="debugTable" class="debug-table">
+            <thead>
+                <tr>
+                    <th>Индекс</th>
+                    <th>Значение</th>
+                    <th>Описание</th>
+                    <th>Тип</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        
+        <h2>📱 QR код (строка)</h2>
+        <div id="qrCode" class="qr-code">Нажмите кнопку для генерации...</div>
+    </div>
+
+    <script type="module">
+        // Константы и типы (импортированы из TypeScript файлов)
+        const Blocks = {
+            Noisegate: "noisegate",
+            Compressor: "compressor", 
+            Modulation: "modulation",
+            Effect: "effect",
+            Amplifier: "amplifier",
+            Cabinet: "cabinet",
+            Eq: "eq",
+            Reverb: "reverb",
+            Delay: "delay"
+        };
+        
+        const NuxMp3PresetIndex = {
+            // Заголовки блоков
+            Head_iNG: 5,
+            Head_iCMP: 1,
+            Head_iMOD: 6,
+            Head_iEFX: 2,
+            Head_iAMP: 3,
+            Head_iCAB: 9,
+            Head_iEQ: 4,
+            Head_iRVB: 8,
+            Head_iDLY: 7,
+            
+            // Параметры блоков
+            NG_Para1: 49, NG_Para2: 50,
+            CMP_Para1: 15, CMP_Para2: 16, CMP_Para3: 17,
+            MOD_Para1: 54, MOD_Para2: 55, MOD_Para3: 56,
+            EFX_Para1: 20, EFX_Para2: 21,
+            AMP_Para1: 27, AMP_Para2: 28, AMP_Para3: 29, AMP_Para4: 30, AMP_Para5: 31, AMP_Para6: 32,
+            CAB_Para1: 75, CAB_Para2: 76, CAB_Para3: 77,
+            EQ_Para1: 36, EQ_Para2: 37, EQ_Para3: 38, EQ_Para4: 39, EQ_Para5: 40, EQ_Para6: 41,
+            RVB_Para1: 70, RVB_Para2: 71, RVB_Para3: 72,
+            DLY_Para1: 61, DLY_Para2: 62, DLY_Para3: 63
+        };
+        
+        // Типы эффектов и их коды (упрощенная версия для демо)
+        const typeEncodingMap = {
+            "Noise Gate": 1,
+            "K-Comp": 1,
+            "CE-1": 1,
+            "Distortion+": 1,
+            "Jazz Clean": 1,
+            "JZ-120": 1,
+            "6-Band": 1,
+            "Room": 1,
+            "Analog Delay": 1
+        };
+        
+        // Конфигурация маппинга параметров (источник истины из config.ts)
+        const paramMapping = {
+            [Blocks.Noisegate]: {
+                "Sensitivity": NuxMp3PresetIndex.NG_Para1,
+                "Decay": NuxMp3PresetIndex.NG_Para2
+            },
+            [Blocks.Compressor]: {
+                "Level": NuxMp3PresetIndex.CMP_Para1,
+                "Sustain": NuxMp3PresetIndex.CMP_Para2,
+                "Clipping": NuxMp3PresetIndex.CMP_Para3
+            },
+            [Blocks.Modulation]: {
+                "Rate": NuxMp3PresetIndex.MOD_Para1,
+                "Depth": NuxMp3PresetIndex.MOD_Para2,
+                "Intensity": NuxMp3PresetIndex.MOD_Para3
+            },
+            [Blocks.Effect]: {
+                "Output": NuxMp3PresetIndex.EFX_Para1,
+                "Sensitivity": NuxMp3PresetIndex.EFX_Para2
+            },
+            [Blocks.Amplifier]: {
+                "Gain": NuxMp3PresetIndex.AMP_Para1,
+                "Master": NuxMp3PresetIndex.AMP_Para2,
+                "Bass": NuxMp3PresetIndex.AMP_Para3,
+                "Middle": NuxMp3PresetIndex.AMP_Para4,
+                "Treble": NuxMp3PresetIndex.AMP_Para5,
+                "Bright": NuxMp3PresetIndex.AMP_Para6
+            },
+            [Blocks.Cabinet]: {
+                "Level": NuxMp3PresetIndex.CAB_Para1,
+                "LowCut": NuxMp3PresetIndex.CAB_Para2,
+                "HighCut": NuxMp3PresetIndex.CAB_Para3
+            },
+            [Blocks.Eq]: {
+                "100": NuxMp3PresetIndex.EQ_Para1,
+                "220": NuxMp3PresetIndex.EQ_Para2,
+                "500": NuxMp3PresetIndex.EQ_Para3,
+                "1200": NuxMp3PresetIndex.EQ_Para4,
+                "2600": NuxMp3PresetIndex.EQ_Para5,
+                "6400": NuxMp3PresetIndex.EQ_Para6
+            },
+            [Blocks.Reverb]: {
+                "Level": NuxMp3PresetIndex.RVB_Para1,
+                "Decay": NuxMp3PresetIndex.RVB_Para2,
+                "Tone": NuxMp3PresetIndex.RVB_Para3
+            },
+            [Blocks.Delay]: {
+                "Intensity": NuxMp3PresetIndex.DLY_Para1,
+                "Rate": NuxMp3PresetIndex.DLY_Para2,
+                "Echo": NuxMp3PresetIndex.DLY_Para3
+            }
+        };
+        
+        // Создание дефолтного чейна (из create-default-chain.ts)
+        function createDefaultChain() {
+            return {
+                [Blocks.Noisegate]: {
+                    type: "Noise Gate",
+                    enabled: true,
+                    params: {
+                        Sensitivity: 50,
+                        Decay: 50,
+                    },
+                },
+                [Blocks.Compressor]: {
+                    type: "K-Comp",
+                    enabled: true,
+                    params: {
+                        Level: 50,
+                        Sustain: 50,
+                        Clipping: 50,
+                    },
+                },
+                [Blocks.Modulation]: {
+                    type: "CE-1",
+                    enabled: true,
+                    params: {
+                        Rate: 50,
+                        Depth: 50,
+                        Intensity: 50,
+                    },
+                },
+                [Blocks.Effect]: {
+                    type: "Distortion+",
+                    enabled: true,
+                    params: {
+                        Output: 50,
+                        Sensitivity: 50,
+                    },
+                },
+                [Blocks.Amplifier]: {
+                    type: "Jazz Clean",
+                    enabled: true,
+                    params: {
+                        Gain: 50,
+                        Master: 50,
+                        Bass: 50,
+                        Middle: 50,
+                        Treble: 50,
+                        Bright: 50,
+                    },
+                },
+                [Blocks.Cabinet]: {
+                    type: "JZ-120",
+                    enabled: true,
+                    params: {
+                        Level: 50,
+                        LowCut: 50,
+                        HighCut: 50,
+                    },
+                },
+                [Blocks.Eq]: {
+                    type: "6-Band",
+                    enabled: true,
+                    params: {
+                        "100": 50,
+                        "220": 50,
+                        "500": 50,
+                        "1200": 50,
+                        "2600": 50,
+                        "6400": 50,
+                    },
+                },
+                [Blocks.Reverb]: {
+                    type: "Room",
+                    enabled: true,
+                    params: {
+                        Level: 50,
+                        Decay: 50,
+                        Tone: 50,
+                    },
+                },
+                [Blocks.Delay]: {
+                    type: "Analog Delay",
+                    enabled: true,
+                    params: {
+                        Intensity: 50,
+                        Rate: 50,
+                        Echo: 50,
+                    },
+                },
+            };
+        }
+        
+        // Новый энкодер (использует config.ts как источник истины)
+        function encodeChainToBytes(chain) {
+            const bytes = new Array(100).fill(0);
+            
+            Object.entries(chain).forEach(([blockKey, blockData]) => {
+                const blockType = blockKey;
+                
+                // Устанавливаем тип блока в заголовок (из config.ts)
+                const headIndex = getHeadIndex(blockType);
+                if (headIndex !== -1) {
+                    const encodeType = typeEncodingMap[blockData.type] || 1;
+                    bytes[headIndex] = blockData.enabled ? encodeType : 0;
+                }
+                
+                // Устанавливаем параметры блока (маппинг из config.ts)
+                const mapping = paramMapping[blockType];
+                if (mapping && blockData.params) {
+                    Object.entries(blockData.params).forEach(([paramName, paramValue]) => {
+                        const index = mapping[paramName];
+                        if (index !== undefined && typeof paramValue === 'number') {
+                            bytes[index] = paramValue;
+                        }
+                    });
+                }
+            });
+            
+            return bytes;
+        }
+        
+        function getHeadIndex(blockType) {
+            switch (blockType) {
+                case Blocks.Noisegate: return NuxMp3PresetIndex.Head_iNG;
+                case Blocks.Compressor: return NuxMp3PresetIndex.Head_iCMP;
+                case Blocks.Modulation: return NuxMp3PresetIndex.Head_iMOD;
+                case Blocks.Effect: return NuxMp3PresetIndex.Head_iEFX;
+                case Blocks.Amplifier: return NuxMp3PresetIndex.Head_iAMP;
+                case Blocks.Cabinet: return NuxMp3PresetIndex.Head_iCAB;
+                case Blocks.Eq: return NuxMp3PresetIndex.Head_iEQ;
+                case Blocks.Reverb: return NuxMp3PresetIndex.Head_iRVB;
+                case Blocks.Delay: return NuxMp3PresetIndex.Head_iDLY;
+                default: return -1;
+            }
+        }
+        
+        function getIndexDescription(index) {
+            for (const [key, value] of Object.entries(NuxMp3PresetIndex)) {
+                if (value === index) {
+                    return key;
+                }
+            }
+            return `Unknown_${index}`;
+        }
+        
+        function getIndexType(index) {
+            const desc = getIndexDescription(index);
+            if (desc.startsWith('Head_')) return 'Header';
+            if (desc.includes('_Para')) return 'Parameter';
+            return 'Other';
+        }
+        
+        // Главная функция генерации
+        function generateEncoding() {
+            console.log('🎸 Генерируем энкодинг...');
+            
+            // Создаем дефолтный чейн
+            const defaultChain = createDefaultChain();
+            console.log('📋 Дефолтный чейн создан:', defaultChain);
+            
+            // Энкодируем с помощью нового энкодера
+            const bytes = encodeChainToBytes(defaultChain);
+            const qrCode = bytes.map(byte => byte.toString().padStart(3, '0')).join('');
+            
+            console.log('🔢 Байты сгенерированы:', bytes);
+            console.log('📱 QR код создан:', qrCode);
+            
+            // Отображаем дефолтный чейн
+            document.getElementById('defaultChain').textContent = JSON.stringify(defaultChain, null, 2);
+            
+            // Статистика
+            const nonZeroBytes = bytes.filter(b => b !== 0);
+            const enabledBlocks = Object.values(defaultChain).filter(block => block.enabled);
+            
+            const statsGrid = document.getElementById('statsGrid');
+            statsGrid.innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-number">${bytes.length}</div>
+                    <div class="stat-label">Всего байтов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${nonZeroBytes.length}</div>
+                    <div class="stat-label">Ненулевых байтов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${qrCode.length}</div>
+                    <div class="stat-label">Длина QR кода</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${enabledBlocks.length}</div>
+                    <div class="stat-label">Активных блоков</div>
+                </div>
+            `;
+            
+            // Отображаем байтовый массив в виде сетки
+            const bytesGrid = document.getElementById('bytesGrid');
+            bytesGrid.innerHTML = '';
+            bytes.forEach((byte, index) => {
+                const cell = document.createElement('div');
+                const isHeader = getIndexType(index) === 'Header';
+                const isNonZero = byte !== 0;
+                
+                cell.className = `byte-cell ${isNonZero ? 'non-zero' : ''} ${isHeader ? 'header' : ''}`;
+                cell.textContent = `${index}: ${byte}`;
+                cell.title = `Index ${index}: ${byte} (${getIndexDescription(index)})`;
+                bytesGrid.appendChild(cell);
+            });
+            
+            // Отладочная таблица
+            const debugTableBody = document.querySelector('#debugTable tbody');
+            debugTableBody.innerHTML = '';
+            
+            bytes.forEach((byte, index) => {
+                if (byte !== 0) {
+                    const row = debugTableBody.insertRow();
+                    row.insertCell(0).textContent = index;
+                    row.insertCell(1).textContent = byte;
+                    row.insertCell(2).textContent = getIndexDescription(index);
+                    row.insertCell(3).textContent = getIndexType(index);
+                }
+            });
+            
+            // Отображаем QR код
+            document.getElementById('qrCode').textContent = qrCode;
+            
+            console.log('✅ Энкодинг завершен успешно!');
+        }
+        
+        // Автоматически генерируем при загрузке
+        window.addEventListener('load', () => {
+            console.log('🌟 Страница загружена, начинаем тестирование энкодера...');
+            generateEncoding();
+        });
+        
+        // Дополнительные функции для интерактивности
+        window.createCustomChain = function() {
+            const customChain = createDefaultChain();
+            // Модифицируем некоторые параметры для демонстрации
+            customChain[Blocks.Amplifier].params.Gain = 75;
+            customChain[Blocks.Effect].params.Output = 80;
+            customChain[Blocks.Reverb].enabled = false;
+            
+            const bytes = encodeChainToBytes(customChain);
+            const qrCode = bytes.map(byte => byte.toString().padStart(3, '0')).join('');
+            
+            alert(`Кастомный чейн создан!\nНенулевых байтов: ${bytes.filter(b => b !== 0).length}\nQR код: ${qrCode.substring(0, 50)}...`);
+        };
+        
+        // Экспортируем функции для консоли
+        window.testEncoder = {
+            createDefaultChain,
+            encodeChainToBytes,
+            generateEncoding,
+            createCustomChain
+        };
+        
+        console.log('🔧 Функции энкодера доступны в window.testEncoder');
+    </script>
+</body>
+</html>
