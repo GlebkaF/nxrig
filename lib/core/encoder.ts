@@ -4,7 +4,7 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
 
-import { config } from './config';
+import { config, blockHeadMapping, encoderConfig } from './config';
 import { createDefaultChain } from './helpers/create-default-chain';
 import { Blocks } from './interface';
 import { NuxMp3PresetIndex } from './const';
@@ -22,8 +22,7 @@ const HEADER_SIZE = 2 as const;
 const TOTAL_SIZE = 115 as const; // HEADER_SIZE + DATA_SIZE
 const PRODUCT_ID = 15 as const;
 const VERSION = 1 as const;
-const DEFAULT_MASTER = 50 as const;
-const CHAIN_ORDER = [5, 1, 6, 2, 3, 9, 4, 8, 7] as const;
+const DEFAULT_MASTER = encoderConfig.defaultMasterValue;
 
 // Результат энкодинга
 export interface EncodedChain {
@@ -56,18 +55,7 @@ const bytesToB64 = (bytes: Uint8Array): string => {
 };
 
 const getHeadIndex = (blockType: Blocks): number => {
-  const headMap: Record<Blocks, keyof typeof NuxMp3PresetIndex> = {
-    [Blocks.Noisegate]: 'Head_iNG',
-    [Blocks.Compressor]: 'Head_iCMP', 
-    [Blocks.Effect]: 'Head_iEFX',
-    [Blocks.Amplifier]: 'Head_iAMP',
-    [Blocks.Cabinet]: 'Head_iCAB',
-    [Blocks.Eq]: 'Head_iEQ',
-    [Blocks.Modulation]: 'Head_iMOD',
-    [Blocks.Delay]: 'Head_iDLY',
-    [Blocks.Reverb]: 'Head_iRVB',
-  };
-  return NuxMp3PresetIndex[headMap[blockType]] ?? -1;
+  return NuxMp3PresetIndex[blockHeadMapping[blockType]] ?? -1;
 };
 
 const getIndexDescription = (index: number): string => {
@@ -78,7 +66,7 @@ const getIndexDescription = (index: number): string => {
 // Основная функция энкодера (максимально упрощенная)
 export const encodeChainToBytes = (chain: Chain): EncodedChain => {
   const data = new Uint8Array(DATA_SIZE);
-  data[NuxMp3PresetIndex.MASTER] = DEFAULT_MASTER;
+  data[encoderConfig.masterIndex] = DEFAULT_MASTER;
 
   // Энкодируем блоки
   for (const [blockKey, blockData] of Object.entries(chain)) {
@@ -109,8 +97,8 @@ export const encodeChainToBytes = (chain: Chain): EncodedChain => {
   }
 
   // Устанавливаем порядок чейна
-  CHAIN_ORDER.forEach((fxid, i) => {
-    data[NuxMp3PresetIndex.LINK1 + i] = fxid;
+  encoderConfig.chainOrder.forEach((fxid, i) => {
+    data[encoderConfig.linkStartIndex + i] = fxid;
   });
 
   // Создаем финальный массив с заголовком

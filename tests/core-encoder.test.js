@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { createDefaultChain } from '../lib/core/helpers/create-default-chain';
 import { encodeChainToBytes, encodeDefaultChain, debugEncoding } from '../lib/core/encoder';
+import { encoderConfig } from '../lib/core/config';
 
 describe('Core Encoder Tests', () => {
   it('should encode default chain to NUX compatible QR code', () => {
@@ -123,11 +124,10 @@ describe('Core Encoder Tests', () => {
     const chain = createDefaultChain();
     const encoded = encodeChainToBytes(chain);
     
-    // Проверяем что LINK поля установлены (начиная с индекса 89, но с учетом заголовка +2)
-    const linkStart = 89 + 2; // +2 для заголовка (product_id, version)
-    const chainOrder = [5, 1, 6, 2, 3, 9, 4, 8, 7];
+    // Проверяем что LINK поля установлены (используем конфиг)
+    const linkStart = encoderConfig.linkStartIndex + 2; // +2 для заголовка (product_id, version)
     
-    chainOrder.forEach((expectedValue, i) => {
+    encoderConfig.chainOrder.forEach((expectedValue, i) => {
       expect(encoded.rawBytes[linkStart + i]).toBe(expectedValue);
     });
   });
@@ -136,7 +136,7 @@ describe('Core Encoder Tests', () => {
     const chain = createDefaultChain();
     const encoded = encodeChainToBytes(chain);
     
-    // Мастер должен быть на индексе 84+2 (с учетом заголовка) со значением 50
-    expect(encoded.rawBytes[84 + 2]).toBe(50);
+    // Мастер должен быть на правильном индексе с дефолтным значением (используем конфиг)
+    expect(encoded.rawBytes[encoderConfig.masterIndex + 2]).toBe(encoderConfig.defaultMasterValue);
   });
 });
