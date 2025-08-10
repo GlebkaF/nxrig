@@ -1,7 +1,14 @@
 import { config } from './config';
 import { createDefaultChain } from './helpers/create-default-chain';
-import { Blocks } from './interface';
+import { Blocks, BlockConfig, TypeParamConfig } from './interface';
 import { NuxMp3PresetIndex } from './const';
+
+// Тип для блока чейна
+type ChainBlock = {
+  type: string;
+  enabled: boolean;
+  params: Record<string, number>;
+};
 
 // Тип для результата энкодинга
 export interface EncodedChain {
@@ -16,20 +23,20 @@ export interface EncodedChain {
  */
 export function encodeChainToBytes(chain: ReturnType<typeof createDefaultChain>): EncodedChain {
   // Инициализируем массив байтов (100 элементов согласно константам)
-  const bytes = new Array(100).fill(0);
+  const bytes: number[] = Array.from({ length: 100 }, () => 0);
   
   // Проходим по всем блокам в чейне
-  Object.entries(chain).forEach(([blockKey, blockData]) => {
-    const blockType = blockKey as Blocks;
-    const blockConfig = config[blockType];
+  Object.entries(chain).forEach(([blockKey, blockData]: [string, ChainBlock]) => {
+    const blockType: Blocks = blockKey as Blocks;
+    const blockConfig: BlockConfig | undefined = config[blockType];
     
-    if (!blockConfig || !blockConfig.types) {
+    if (!blockConfig?.types) {
       console.warn(`No config found for block type: ${blockType}`);
       return;
     }
     
     // Находим конфигурацию для текущего типа блока
-    const typeConfig = blockConfig.types.find(type => type.label === blockData.type);
+    const typeConfig: { label: string; realName: string; encodeType: number; params: TypeParamConfig[] } | undefined = blockConfig.types.find((type: { label: string; realName: string; encodeType: number; params: TypeParamConfig[] }) => type.label === blockData.type);
     
     if (!typeConfig) {
       console.warn(`No type config found for ${blockData.type} in ${blockType}`);
@@ -37,14 +44,14 @@ export function encodeChainToBytes(chain: ReturnType<typeof createDefaultChain>)
     }
     
     // Устанавливаем тип блока в соответствующий заголовок
-    const headIndex = getHeadIndex(blockType);
+    const headIndex: number = getHeadIndex(blockType);
     if (headIndex !== -1) {
       bytes[headIndex] = blockData.enabled ? typeConfig.encodeType : 0;
     }
     
     // Устанавливаем параметры блока согласно конфигурации
-    typeConfig.params.forEach(paramConfig => {
-      const paramValue = blockData.params[paramConfig.label];
+    typeConfig.params.forEach((paramConfig: TypeParamConfig) => {
+      const paramValue: number | undefined = blockData.params[paramConfig.label];
       if (paramValue !== undefined) {
         bytes[paramConfig.encodeIndex] = paramValue;
       }
@@ -52,7 +59,7 @@ export function encodeChainToBytes(chain: ReturnType<typeof createDefaultChain>)
   });
   
   // Конвертируем байты в строку для QR кода (каждый байт в 3-значное число)
-  const qrCode = bytes.map(byte => byte.toString().padStart(3, '0')).join('');
+  const qrCode: string = bytes.map((byte: number) => byte.toString().padStart(3, '0')).join('');
   
   return {
     bytes,
@@ -92,7 +99,7 @@ function getHeadIndex(blockType: Blocks): number {
  * Вспомогательная функция для энкодинга дефолтного чейна
  */
 export function encodeDefaultChain(): EncodedChain {
-  const defaultChain = createDefaultChain();
+  const defaultChain: ReturnType<typeof createDefaultChain> = createDefaultChain();
   return encodeChainToBytes(defaultChain);
 }
 
@@ -103,10 +110,10 @@ export function debugEncoding(chain: ReturnType<typeof createDefaultChain>): {
   encoding: EncodedChain;
   debug: Array<{ index: number; value: number; description: string }>;
 } {
-  const encoding = encodeChainToBytes(chain);
-  const debug = encoding.bytes
-    .map((value, index) => ({ index, value, description: getIndexDescription(index) }))
-    .filter(item => item.value !== 0);
+  const encoding: EncodedChain = encodeChainToBytes(chain);
+  const debug: Array<{ index: number; value: number; description: string }> = encoding.bytes
+    .map((value: number, index: number) => ({ index, value, description: getIndexDescription(index) }))
+    .filter((item: { index: number; value: number; description: string }) => item.value !== 0);
   
   return { encoding, debug };
 }
@@ -121,5 +128,5 @@ function getIndexDescription(index: number): string {
       return key;
     }
   }
-  return `Unknown index ${index}`;
+  return `Unknown index ${index.toString()}`;
 }
