@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/typedef */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import React, { useState, useEffect } from 'react';
+import { QRCodeCanvas } from 'qrcode.react';
 import { encodeDefaultChain, debugEncoding } from '../lib/core/encoder';
 import { createDefaultChain } from '../lib/core/helpers/create-default-chain';
 
@@ -16,6 +17,17 @@ export default function TestEncoderPage(): React.ReactElement {
   const [bytes, setBytes] = useState<number[]>([]);
   const [debugInfo, setDebugInfo] = useState<DebugItem[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const downloadQRCode = (): void => {
+    const canvas = document.querySelector('canvas');
+    if (canvas) {
+      const url = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.download = 'chain-qr-code.png';
+      link.href = url;
+      link.click();
+    }
+  };
 
   useEffect(() => {
     try {
@@ -106,7 +118,7 @@ export default function TestEncoderPage(): React.ReactElement {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Default Chain JSON */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="bg-gray-50 px-6 py-4 border-b">
@@ -121,7 +133,46 @@ export default function TestEncoderPage(): React.ReactElement {
             </div>
           </div>
 
-          {/* QR Code */}
+          {/* QR Code Image */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-gray-50 px-6 py-4 border-b">
+              <h2 className="text-xl font-semibold text-gray-900 flex items-center">
+                🖼️ QR код (изображение)
+              </h2>
+            </div>
+            <div className="p-6">
+              <div className="flex flex-col items-center">
+                <div className="bg-white p-4 rounded-lg border-2 border-gray-200 shadow-inner">
+                  <QRCodeCanvas
+                    value={qrCode}
+                    size={200}
+                    level="M"
+                    includeMargin={true}
+                    bgColor="#ffffff"
+                    fgColor="#000000"
+                  />
+                </div>
+                <button
+                  onClick={downloadQRCode}
+                  className="mt-4 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-2"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Скачать QR код
+                </button>
+                <div className="mt-4 text-sm text-gray-600 text-center">
+                  <p><strong>Размер:</strong> 200x200 пикселей</p>
+                  <p><strong>Уровень коррекции:</strong> M (15%)</p>
+                  <p className="mt-2 text-xs text-gray-500">
+                    Сканируйте для получения байтовых данных чейна
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* QR Code String */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="bg-gray-50 px-6 py-4 border-b">
               <h2 className="text-xl font-semibold text-gray-900 flex items-center">
@@ -234,10 +285,53 @@ export default function TestEncoderPage(): React.ReactElement {
           </div>
         </div>
 
+        {/* Large QR Code Section */}
+        <div className="mt-8 bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="bg-gray-50 px-6 py-4 border-b">
+            <h2 className="text-xl font-semibold text-gray-900 flex items-center">
+              📱 Большой QR код для сканирования
+            </h2>
+          </div>
+          <div className="p-6">
+            <div className="flex flex-col items-center">
+                             <div className="bg-white p-6 rounded-xl border-4 border-blue-200 shadow-lg">
+                 <QRCodeCanvas
+                   value={qrCode}
+                   size={300}
+                   level="H"
+                   includeMargin={true}
+                   bgColor="#ffffff"
+                   fgColor="#000000"
+                 />
+               </div>
+              <div className="mt-6 text-center">
+                <button
+                  onClick={downloadQRCode}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2 mx-auto"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Скачать QR код (PNG)
+                </button>
+                <p className="mt-3 text-sm text-gray-600">
+                  <strong>Размер:</strong> 300x300 пикселей | <strong>Уровень коррекции:</strong> H (30%)
+                </p>
+                <p className="mt-2 text-xs text-gray-500">
+                  Высокое качество для надежного сканирования
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Footer */}
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>
             ✅ Энкодер успешно использует <code>config.ts</code> как источник истины для структуры байтов
+          </p>
+          <p className="mt-2">
+            🎸 QR код содержит полную информацию о чейне эффектов для NUX устройства
           </p>
         </div>
       </div>
