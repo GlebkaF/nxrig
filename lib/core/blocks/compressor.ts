@@ -1,7 +1,7 @@
 import { NuxMp3PresetIndex } from "../const";
-import { BlockConfig } from "../interface";
+import { BlockConfig, ChainItem } from "../interface";
 
-enum CompressorType {
+export enum CompressorType {
   RoseComp = "Rose Comp",
   KComp = "K Comp",
   StudioComp = "Studio Comp",
@@ -12,6 +12,14 @@ const COMP_TYPES: Record<CompressorType, number> = {
   [CompressorType.KComp]: 2,
   [CompressorType.StudioComp]: 3,
 };
+
+export type CompressorParams =
+  | ChainItem<CompressorType.KComp, "Level" | "Sustain" | "Clipping">
+  | ChainItem<
+      CompressorType.StudioComp,
+      "Gain" | "Threshold" | "Ratio" | "Release"
+    >
+  | ChainItem<CompressorType.RoseComp, "Level" | "Sustain">;
 
 export const compressor: BlockConfig = {
   types: [

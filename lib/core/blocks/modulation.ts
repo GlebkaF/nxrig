@@ -1,5 +1,5 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
-import { BlockConfig } from "lib/core/interface";
+import { BlockConfig, ChainItem } from "lib/core/interface";
 
 // Mod: {
 //   types: {
@@ -106,7 +106,7 @@ import { BlockConfig } from "lib/core/interface";
 //   },
 // },
 
-enum Type {
+export enum ModulationType {
   CE1 = "CE-1",
   CE2 = "CE-2",
   STChorus = "ST Chorus",
@@ -123,29 +123,34 @@ enum Type {
   MonoOctave = "Mono Octave",
 }
 
-const TYPES: Record<Type, number> = {
-  [Type.CE1]: 1,
-  [Type.CE2]: 2,
-  [Type.STChorus]: 3,
-  [Type.Vibrato]: 4,
-  [Type.Detune]: 5,
-  [Type.Flanger]: 6,
-  [Type.Phase90]: 7,
-  [Type.Phase100]: 8,
-  [Type.SCF]: 9,
-  [Type.UVibe]: 10,
-  [Type.Tremolo]: 11,
-  [Type.Rotary]: 12,
-  [Type.SCH1]: 13,
-  [Type.MonoOctave]: 14,
+export type ModulationParams = ChainItem<
+  ModulationType.CE1,
+  "Rate" | "Depth" | "Intensity"
+>;
+
+const TYPES: Record<ModulationType, number> = {
+  [ModulationType.CE1]: 1,
+  [ModulationType.CE2]: 2,
+  [ModulationType.STChorus]: 3,
+  [ModulationType.Vibrato]: 4,
+  [ModulationType.Detune]: 5,
+  [ModulationType.Flanger]: 6,
+  [ModulationType.Phase90]: 7,
+  [ModulationType.Phase100]: 8,
+  [ModulationType.SCF]: 9,
+  [ModulationType.UVibe]: 10,
+  [ModulationType.Tremolo]: 11,
+  [ModulationType.Rotary]: 12,
+  [ModulationType.SCH1]: 13,
+  [ModulationType.MonoOctave]: 14,
 };
 
 export const modulation: BlockConfig = {
   types: [
     {
-      label: Type.CE1,
+      label: ModulationType.CE1,
       realName: "CE-1",
-      encodeType: TYPES[Type.CE1],
+      encodeType: TYPES[ModulationType.CE1],
       params: [
         {
           label: "Rate",

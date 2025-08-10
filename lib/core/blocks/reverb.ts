@@ -1,7 +1,7 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
-import { BlockConfig } from "lib/core/interface";
+import { BlockConfig, ChainItem } from "lib/core/interface";
 
-enum Type {
+export enum ReverbType {
   Room = "Room",
   Hall = "Hall",
   Plate = "Plate",
@@ -10,21 +10,29 @@ enum Type {
   Damp = "Damp",
 }
 
-const TYPES: Record<Type, number> = {
-  [Type.Room]: 1,
-  [Type.Hall]: 2,
-  [Type.Plate]: 3,
-  [Type.Spring]: 4,
-  [Type.Shimmer]: 5,
-  [Type.Damp]: 6,
+const TYPES: Record<ReverbType, number> = {
+  [ReverbType.Room]: 1,
+  [ReverbType.Hall]: 2,
+  [ReverbType.Plate]: 3,
+  [ReverbType.Spring]: 4,
+  [ReverbType.Shimmer]: 5,
+  [ReverbType.Damp]: 6,
 };
+
+export type ReverbParams =
+  | ChainItem<ReverbType.Room, "Level" | "Decay" | "Tone">
+  | ChainItem<ReverbType.Hall, "Level" | "Decay" | "PreDelay" | "Liveliness">
+  | ChainItem<ReverbType.Plate, "Level" | "Decay">
+  | ChainItem<ReverbType.Spring, "Level" | "Decay">
+  | ChainItem<ReverbType.Shimmer, "Mix" | "Decay" | "Shimmer">
+  | ChainItem<ReverbType.Damp, "Mix" | "Depth">;
 
 export const reverb: BlockConfig = {
   types: [
     {
-      label: Type.Room,
+      label: ReverbType.Room,
       realName: "Room Reverb",
-      encodeType: TYPES[Type.Room],
+      encodeType: TYPES[ReverbType.Room],
       params: [
         {
           label: "Level",
@@ -45,9 +53,9 @@ export const reverb: BlockConfig = {
     },
 
     {
-      label: Type.Hall,
+      label: ReverbType.Hall,
       realName: "Hall Reverb",
-      encodeType: TYPES[Type.Hall],
+      encodeType: TYPES[ReverbType.Hall],
       params: [
         {
           label: "Level",
@@ -60,7 +68,7 @@ export const reverb: BlockConfig = {
           // formatter: ValueFormatters.percentageMPPro
         },
         {
-          label: "Pre Delay",
+          label: "PreDelay",
           encodeIndex: NuxMp3PresetIndex.RVB_Para2,
           // formatter: ValueFormatters.percentageMPPro
         },
@@ -72,9 +80,9 @@ export const reverb: BlockConfig = {
       ],
     },
     {
-      label: Type.Plate,
+      label: ReverbType.Plate,
       realName: "Plate Reverb",
-      encodeType: TYPES[Type.Plate],
+      encodeType: TYPES[ReverbType.Plate],
       params: [
         {
           label: "Level",
@@ -89,9 +97,9 @@ export const reverb: BlockConfig = {
       ],
     },
     {
-      label: Type.Spring,
+      label: ReverbType.Spring,
       realName: "Spring Reverb",
-      encodeType: TYPES[Type.Spring],
+      encodeType: TYPES[ReverbType.Spring],
       params: [
         {
           label: "Level",
@@ -106,9 +114,9 @@ export const reverb: BlockConfig = {
       ],
     },
     {
-      label: Type.Shimmer,
+      label: ReverbType.Shimmer,
       realName: "Shimmer Reverb",
-      encodeType: TYPES[Type.Shimmer],
+      encodeType: TYPES[ReverbType.Shimmer],
       params: [
         {
           label: "Mix",
@@ -128,9 +136,9 @@ export const reverb: BlockConfig = {
       ],
     },
     {
-      label: Type.Damp,
+      label: ReverbType.Damp,
       realName: "Damp Reverb",
-      encodeType: TYPES[Type.Damp],
+      encodeType: TYPES[ReverbType.Damp],
       params: [
         {
           label: "Mix",

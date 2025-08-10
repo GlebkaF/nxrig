@@ -1,22 +1,39 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
-import { BlockConfig } from "lib/core/interface";
+import { BlockConfig, ChainItem } from "lib/core/interface";
 
-enum Type {
+export enum EqType {
   SixBand = "6-Band",
   TenBand = "10-Band",
 }
 
-const TYPES: Record<Type, number> = {
-  [Type.SixBand]: 1,
-  [Type.TenBand]: 3,
+const TYPES: Record<EqType, number> = {
+  [EqType.SixBand]: 1,
+  [EqType.TenBand]: 3,
 };
+
+export type EqParams =
+  | ChainItem<EqType.SixBand, "100" | "220" | "500" | "1200" | "2600" | "6400">
+  | ChainItem<
+      EqType.TenBand,
+      | "Vol"
+      | "31"
+      | "62"
+      | "125"
+      | "250"
+      | "500"
+      | "1000"
+      | "2000"
+      | "4000"
+      | "8000"
+      | "16000"
+    >;
 
 export const eq: BlockConfig = {
   types: [
     {
-      label: Type.SixBand,
+      label: EqType.SixBand,
       realName: "6-Band",
-      encodeType: TYPES[Type.SixBand],
+      encodeType: TYPES[EqType.SixBand],
       params: [
         {
           label: "100",
@@ -35,26 +52,26 @@ export const eq: BlockConfig = {
           // formatter: ValueFormatters.decibelEQ
         },
         {
-          label: "1.2K",
+          label: "1200",
           encodeIndex: NuxMp3PresetIndex.EQ_Para4,
           // formatter: ValueFormatters.decibelEQ
         },
         {
-          label: "2.6K",
+          label: "2600",
           encodeIndex: NuxMp3PresetIndex.EQ_Para5,
           // formatter: ValueFormatters.decibelEQ
         },
         {
-          label: "6.4K",
+          label: "6400",
           encodeIndex: NuxMp3PresetIndex.EQ_Para6,
           // formatter: ValueFormatters.decibelEQ
         },
       ],
     },
     {
-      label: Type.TenBand,
+      label: EqType.TenBand,
       realName: "10-Band",
-      encodeType: TYPES[Type.TenBand],
+      encodeType: TYPES[EqType.TenBand],
       params: [
         {
           label: "Vol",
@@ -88,27 +105,27 @@ export const eq: BlockConfig = {
           // formatter: ValueFormatters.decibelEQ
         },
         {
-          label: "1K",
+          label: "1000",
           encodeIndex: NuxMp3PresetIndex.EQ_Para7,
           // formatter: ValueFormatters.decibelEQ
         },
         {
-          label: "2K",
+          label: "2000",
           encodeIndex: NuxMp3PresetIndex.EQ_Para8,
           // formatter: ValueFormatters.decibelEQ
         },
         {
-          label: "4K",
+          label: "4000",
           encodeIndex: NuxMp3PresetIndex.EQ_Para9,
           // formatter: ValueFormatters.decibelEQ
         },
         {
-          label: "8K",
+          label: "8000",
           encodeIndex: NuxMp3PresetIndex.EQ_Para10,
           // formatter: ValueFormatters.decibelEQ
         },
         {
-          label: "16K",
+          label: "16000",
           encodeIndex: NuxMp3PresetIndex.EQ_Para11,
           // formatter: ValueFormatters.decibelEQ
         },

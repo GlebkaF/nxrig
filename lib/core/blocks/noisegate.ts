@@ -9,7 +9,10 @@ const NOISE_GATE_TYPES: Record<NoiseGateType, number> = {
   [NoiseGateType.NoiseGate]: 1,
 };
 
-export type NoisegateParams = ChainItem<NoiseGateType, "Sensitivity" | "Decay">;
+export type NoisegateParams = ChainItem<
+  NoiseGateType.NoiseGate,
+  "Sensitivity" | "Decay"
+>;
 
 export const noisegate: BlockConfig = {
   types: [

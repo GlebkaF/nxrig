@@ -1,5 +1,5 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
-import { BlockConfig } from "lib/core/interface";
+import { BlockConfig, ChainItem } from "lib/core/interface";
 // Delay: {
 //   types: {
 //     "Digital Delay": {
@@ -42,7 +42,7 @@ import { BlockConfig } from "lib/core/interface";
 //   },
 // },
 
-enum Type {
+export enum DelayType {
   DigitalDelay = "Digital Delay",
   AnalogDelay = "Analog Delay",
   ModDelay = "Mod Delay",
@@ -51,21 +51,26 @@ enum Type {
   PhiDelay = "Phi Delay",
 }
 
-const TYPES: Record<Type, number> = {
-  [Type.AnalogDelay]: 1,
-  [Type.DigitalDelay]: 2,
-  [Type.ModDelay]: 3,
-  [Type.TapeEcho]: 4,
-  [Type.PanDelay]: 5,
-  [Type.PhiDelay]: 6,
+const TYPES: Record<DelayType, number> = {
+  [DelayType.AnalogDelay]: 1,
+  [DelayType.DigitalDelay]: 2,
+  [DelayType.ModDelay]: 3,
+  [DelayType.TapeEcho]: 4,
+  [DelayType.PanDelay]: 5,
+  [DelayType.PhiDelay]: 6,
 };
+
+export type DelayParams = ChainItem<
+  DelayType.AnalogDelay,
+  "Intensity" | "Rate" | "Echo"
+>;
 
 export const delay: BlockConfig = {
   types: [
     {
-      label: Type.AnalogDelay,
+      label: DelayType.AnalogDelay,
       realName: "Analog Delay",
-      encodeType: TYPES[Type.AnalogDelay],
+      encodeType: TYPES[DelayType.AnalogDelay],
       params: [
         {
           label: "Intensity",

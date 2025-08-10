@@ -1,5 +1,5 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
-import { BlockConfig } from "lib/core/interface";
+import { BlockConfig, ChainItem } from "lib/core/interface";
 
 // EFX: {
 //   types: {
@@ -113,7 +113,7 @@ import { BlockConfig } from "lib/core/interface";
 //   },
 // },
 
-enum Type {
+export enum EffectType {
   DistortionPlus = "Distortion+",
   RCBoost = "RC Boost",
   ACBoost = "AC Boost",
@@ -130,29 +130,34 @@ enum Type {
   TouchWah = "Touch Wah",
 }
 
-const TYPES: Record<Type, number> = {
-  [Type.DistortionPlus]: 1,
-  [Type.RCBoost]: 2,
-  [Type.ACBoost]: 3,
-  [Type.DistOne]: 4,
-  [Type.TScreamer]: 5,
-  [Type.BluesDrive]: 6,
-  [Type.MorningDrive]: 7,
-  [Type.EatDist]: 8,
-  [Type.RedDirt]: 9,
-  [Type.Crunch]: 10,
-  [Type.MuffFuzz]: 11,
-  [Type.Katana]: 12,
-  [Type.STSinger]: 13,
-  [Type.TouchWah]: 14,
+export type EffectParams = ChainItem<
+  EffectType.DistortionPlus,
+  "Output" | "Sensitivity"
+>;
+
+const TYPES: Record<EffectType, number> = {
+  [EffectType.DistortionPlus]: 1,
+  [EffectType.RCBoost]: 2,
+  [EffectType.ACBoost]: 3,
+  [EffectType.DistOne]: 4,
+  [EffectType.TScreamer]: 5,
+  [EffectType.BluesDrive]: 6,
+  [EffectType.MorningDrive]: 7,
+  [EffectType.EatDist]: 8,
+  [EffectType.RedDirt]: 9,
+  [EffectType.Crunch]: 10,
+  [EffectType.MuffFuzz]: 11,
+  [EffectType.Katana]: 12,
+  [EffectType.STSinger]: 13,
+  [EffectType.TouchWah]: 14,
 };
 
 export const effect: BlockConfig = {
   types: [
     {
-      label: Type.DistortionPlus,
+      label: EffectType.DistortionPlus,
       realName: "Distortion+",
-      encodeType: TYPES[Type.DistortionPlus],
+      encodeType: TYPES[EffectType.DistortionPlus],
       params: [
         {
           label: "Output",

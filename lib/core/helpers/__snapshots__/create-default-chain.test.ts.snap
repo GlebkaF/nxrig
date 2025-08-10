@@ -1,0 +1,91 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`create-default-chain > should match snapshot 1`] = `
+{
+  "amplifier": {
+    "enabled": true,
+    "params": {
+      "Bass": 50,
+      "Bright": 50,
+      "Gain": 50,
+      "Master": 50,
+      "Middle": 50,
+      "Treble": 50,
+    },
+    "type": "Jazz Clean",
+  },
+  "cabinet": {
+    "enabled": true,
+    "params": {
+      "HighCut": 50,
+      "Level": 50,
+      "LowCut": 50,
+    },
+    "type": "JZ120",
+  },
+  "compressor": {
+    "enabled": true,
+    "params": {
+      "Clipping": 50,
+      "Level": 50,
+      "Sustain": 50,
+    },
+    "type": "K Comp",
+  },
+  "delay": {
+    "enabled": true,
+    "params": {
+      "Echo": 50,
+      "Intensity": 50,
+      "Rate": 50,
+    },
+    "type": "Analog Delay",
+  },
+  "effect": {
+    "enabled": true,
+    "params": {
+      "Output": 50,
+      "Sensitivity": 50,
+    },
+    "type": "Distortion+",
+  },
+  "eq": {
+    "enabled": true,
+    "params": {
+      "100": 50,
+      "1200": 50,
+      "220": 50,
+      "2600": 50,
+      "500": 50,
+      "6400": 50,
+    },
+    "type": "6-Band",
+  },
+  "modulation": {
+    "enabled": true,
+    "params": {
+      "Depth": 50,
+      "Intensity": 50,
+      "Rate": 50,
+    },
+    "type": "CE-1",
+  },
+  "noisegate": {
+    "enabled": true,
+    "params": {
+      "Decay": 50,
+      "Sensitivity": 50,
+    },
+    "type": "Noise Gate",
+  },
+  "reverb": {
+    "enabled": true,
+    "params": {
+      "Decay": 50,
+      "Level": 50,
+      "Tone": 50,
+    },
+    "type": "Room",
+  },
+}
+`;

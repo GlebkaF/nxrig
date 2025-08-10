@@ -1,5 +1,5 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
-import { BlockConfig } from "lib/core/interface";
+import { BlockConfig, ChainItem } from "lib/core/interface";
 
 // Amp: {
 //   types: {
@@ -303,7 +303,7 @@ import { BlockConfig } from "lib/core/interface";
 //   },
 // },
 
-enum Type {
+export enum AmplifierType {
   JazzClean = "Jazz Clean",
   DeluxeRvb = "Deluxe Rvb",
   BassMate = "Bass Mate",
@@ -335,44 +335,49 @@ enum Type {
   UberHiGain = "Uber HiGain",
 }
 
-const TYPES: Record<Type, number> = {
-  [Type.JazzClean]: 1,
-  [Type.DeluxeRvb]: 2,
-  [Type.BassMate]: 3,
-  [Type.Tweedy]: 4,
-  [Type.Hiwire]: 6,
-  [Type.CaliCrunch]: 7,
-  [Type.ClassA15]: 8,
-  [Type.ClassA30]: 9,
-  [Type.Plexi100]: 10,
-  [Type.Plexi45]: 11,
-  [Type.Brit800]: 12,
-  [Type.Amp1987X50]: 13,
-  [Type.Slo100]: 14,
-  [Type.FiremanHbe]: 15,
-  [Type.DualRect]: 16,
-  [Type.DieVh4]: 17,
-  [Type.MrZ38]: 20,
-  [Type.SuperRvb]: 21,
-  [Type.Agl]: 26,
-  [Type.Mld]: 27,
-  [Type.OptimaAir]: 28,
-  [Type.Stageman]: 29,
-  [Type.TwinReverb]: 5,
-  [Type.VibroKing]: 18,
-  [Type.Budda]: 19,
-  [Type.BritBlues]: 22,
-  [Type.MatchD30]: 23,
-  [Type.Brit2000]: 24,
-  [Type.UberHiGain]: 25,
+const TYPES: Record<AmplifierType, number> = {
+  [AmplifierType.JazzClean]: 1,
+  [AmplifierType.DeluxeRvb]: 2,
+  [AmplifierType.BassMate]: 3,
+  [AmplifierType.Tweedy]: 4,
+  [AmplifierType.Hiwire]: 6,
+  [AmplifierType.CaliCrunch]: 7,
+  [AmplifierType.ClassA15]: 8,
+  [AmplifierType.ClassA30]: 9,
+  [AmplifierType.Plexi100]: 10,
+  [AmplifierType.Plexi45]: 11,
+  [AmplifierType.Brit800]: 12,
+  [AmplifierType.Amp1987X50]: 13,
+  [AmplifierType.Slo100]: 14,
+  [AmplifierType.FiremanHbe]: 15,
+  [AmplifierType.DualRect]: 16,
+  [AmplifierType.DieVh4]: 17,
+  [AmplifierType.MrZ38]: 20,
+  [AmplifierType.SuperRvb]: 21,
+  [AmplifierType.Agl]: 26,
+  [AmplifierType.Mld]: 27,
+  [AmplifierType.OptimaAir]: 28,
+  [AmplifierType.Stageman]: 29,
+  [AmplifierType.TwinReverb]: 5,
+  [AmplifierType.VibroKing]: 18,
+  [AmplifierType.Budda]: 19,
+  [AmplifierType.BritBlues]: 22,
+  [AmplifierType.MatchD30]: 23,
+  [AmplifierType.Brit2000]: 24,
+  [AmplifierType.UberHiGain]: 25,
 };
+
+export type AmplifierParams = ChainItem<
+  AmplifierType.JazzClean,
+  "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Bright"
+>;
 
 export const amplifier: BlockConfig = {
   types: [
     {
-      label: Type.JazzClean,
+      label: AmplifierType.JazzClean,
       realName: "Jazz Clean",
-      encodeType: TYPES[Type.JazzClean],
+      encodeType: TYPES[AmplifierType.JazzClean],
       params: [
         {
           label: "Gain",

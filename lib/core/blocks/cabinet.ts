@@ -1,5 +1,5 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
-import { BlockConfig, TypeParamConfig } from "lib/core/interface";
+import { BlockConfig, ChainItem, TypeParamConfig } from "lib/core/interface";
 
 // Cabinet: {
 //   types: {
@@ -268,7 +268,7 @@ import { BlockConfig, TypeParamConfig } from "lib/core/interface";
 //         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
 //       },
 
-enum Type {
+export enum CabinetType {
   JZ120 = "JZ120",
   DR112 = "DR112",
   TR212 = "TR212",
@@ -304,42 +304,47 @@ enum Type {
   G_J15 = "G-J15",
   M_D45 = "M-D45",
 }
-const TYPES: Record<Type, number> = {
-  [Type.JZ120]: 1,
-  [Type.DR112]: 2,
-  [Type.TR212]: 3,
-  [Type.HIWIRE412]: 4,
-  [Type.CALI112]: 5,
-  [Type.A112]: 6,
-  [Type.GB412]: 7,
-  [Type.M1960AX]: 8,
-  [Type.M1960AV]: 9,
-  [Type.M1960TV]: 10,
-  [Type.SLO412]: 11,
-  [Type.FIREMAN412]: 12,
-  [Type.RECT412]: 13,
-  [Type.DIE412]: 14,
-  [Type.MATCH212]: 15,
-  [Type.UBER412]: 16,
-  [Type.BS410]: 17,
-  [Type.A212]: 18,
-  [Type.M1960AHW]: 19,
-  [Type.M1936]: 20,
-  [Type.BUDDA112]: 21,
-  [Type.Z212]: 22,
-  [Type.SUPERVERB410]: 23,
-  [Type.VIBROKING310]: 24,
-  [Type.AGL_DB810]: 25,
-  [Type.AMP_SV212]: 26,
-  [Type.AMP_SV410]: 27,
-  [Type.AMP_SV810]: 28,
-  [Type.BASSGUY410]: 29,
-  [Type.EDEN410]: 30,
-  [Type.MKB410]: 31,
-  [Type.G_HBIRD]: 32,
-  [Type.G_J15]: 33,
-  [Type.M_D45]: 34,
+const TYPES: Record<CabinetType, number> = {
+  [CabinetType.JZ120]: 1,
+  [CabinetType.DR112]: 2,
+  [CabinetType.TR212]: 3,
+  [CabinetType.HIWIRE412]: 4,
+  [CabinetType.CALI112]: 5,
+  [CabinetType.A112]: 6,
+  [CabinetType.GB412]: 7,
+  [CabinetType.M1960AX]: 8,
+  [CabinetType.M1960AV]: 9,
+  [CabinetType.M1960TV]: 10,
+  [CabinetType.SLO412]: 11,
+  [CabinetType.FIREMAN412]: 12,
+  [CabinetType.RECT412]: 13,
+  [CabinetType.DIE412]: 14,
+  [CabinetType.MATCH212]: 15,
+  [CabinetType.UBER412]: 16,
+  [CabinetType.BS410]: 17,
+  [CabinetType.A212]: 18,
+  [CabinetType.M1960AHW]: 19,
+  [CabinetType.M1936]: 20,
+  [CabinetType.BUDDA112]: 21,
+  [CabinetType.Z212]: 22,
+  [CabinetType.SUPERVERB410]: 23,
+  [CabinetType.VIBROKING310]: 24,
+  [CabinetType.AGL_DB810]: 25,
+  [CabinetType.AMP_SV212]: 26,
+  [CabinetType.AMP_SV410]: 27,
+  [CabinetType.AMP_SV810]: 28,
+  [CabinetType.BASSGUY410]: 29,
+  [CabinetType.EDEN410]: 30,
+  [CabinetType.MKB410]: 31,
+  [CabinetType.G_HBIRD]: 32,
+  [CabinetType.G_J15]: 33,
+  [CabinetType.M_D45]: 34,
 };
+
+export type CabinetParams = ChainItem<
+  CabinetType.JZ120,
+  "Level" | "LowCut" | "HighCut"
+>;
 
 const cabParams: TypeParamConfig[] = [
   {
@@ -348,12 +353,12 @@ const cabParams: TypeParamConfig[] = [
     // formatter: ValueFormatters.percentageMPPro
   },
   {
-    label: "Low Cut",
+    label: "LowCut",
     encodeIndex: NuxMp3PresetIndex.CAB_Para5,
     // formatter: low cut hz
   },
   {
-    label: "High Cut",
+    label: "HighCut",
     encodeIndex: NuxMp3PresetIndex.CAB_Para6,
     // formatter: high cut hz
   },
@@ -362,9 +367,9 @@ const cabParams: TypeParamConfig[] = [
 export const cabinet: BlockConfig = {
   types: [
     {
-      label: Type.JZ120,
+      label: CabinetType.JZ120,
       realName: "Roland JC-120 2x12",
-      encodeType: TYPES[Type.JZ120],
+      encodeType: TYPES[CabinetType.JZ120],
       params: cabParams,
     },
     // TODO: add other types
