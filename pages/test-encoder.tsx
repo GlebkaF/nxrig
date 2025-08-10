@@ -9,6 +9,7 @@ interface DebugItem {
   index: number;
   value: number;
   description: string;
+  enabled?: boolean;
 }
 
 export default function TestEncoderPage(): React.ReactElement {
@@ -38,7 +39,7 @@ export default function TestEncoderPage(): React.ReactElement {
       // Энкодируем его
       const encoded = encodeDefaultChain();
       setQrCode(encoded.qrCode);
-      setBytes(encoded.bytes);
+      setBytes(encoded.rawBytes);
 
       // Получаем отладочную информацию
       const debug = debugEncoding(chain);
@@ -92,7 +93,9 @@ export default function TestEncoderPage(): React.ReactElement {
                 <code className="bg-blue-100 px-2 py-1 rounded">create-default-chain.ts</code>, 
                 мапит его на конфигурацию из{' '}
                 <code className="bg-blue-100 px-2 py-1 rounded">config.ts</code>{' '}
-                и генерирует байтовый массив для QR кода. Конфиг является источником истины для структуры байтов.
+                и генерирует <strong>NUX совместимый QR код</strong> с префиксом{' '}
+                <code className="bg-green-100 px-2 py-1 rounded text-green-800">nux://MightyAmp:</code>.{' '}
+                QR код можно сканировать на NUX устройствах.
               </p>
             </div>
           </div>
@@ -249,9 +252,12 @@ export default function TestEncoderPage(): React.ReactElement {
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Описание
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Тип
-                    </th>
+                                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                       Тип
+                     </th>
+                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                       Статус
+                     </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
@@ -266,17 +272,32 @@ export default function TestEncoderPage(): React.ReactElement {
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">
                         {item.description}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <span className={`
-                          inline-flex px-2 py-1 text-xs font-semibold rounded-full
-                          ${item.description.startsWith('Head_') 
-                            ? 'bg-yellow-100 text-yellow-800' 
-                            : 'bg-green-100 text-green-800'
-                          }
-                        `}>
-                          {item.description.startsWith('Head_') ? 'Header' : 'Parameter'}
-                        </span>
-                      </td>
+                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                         <span className={`
+                           inline-flex px-2 py-1 text-xs font-semibold rounded-full
+                           ${item.description.startsWith('Head_') 
+                             ? 'bg-yellow-100 text-yellow-800' 
+                             : 'bg-green-100 text-green-800'
+                           }
+                         `}>
+                           {item.description.startsWith('Head_') ? 'Header' : 'Parameter'}
+                         </span>
+                       </td>
+                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                         {item.enabled !== undefined ? (
+                           <span className={`
+                             inline-flex px-2 py-1 text-xs font-semibold rounded-full
+                             ${item.enabled 
+                               ? 'bg-green-100 text-green-800' 
+                               : 'bg-red-100 text-red-800'
+                             }
+                           `}>
+                             {item.enabled ? 'Enabled' : 'Disabled'}
+                           </span>
+                         ) : (
+                           <span className="text-gray-400">-</span>
+                         )}
+                       </td>
                     </tr>
                   ))}
                 </tbody>

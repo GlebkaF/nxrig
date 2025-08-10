@@ -10,10 +10,28 @@ type ChainBlock = {
   params: Record<string, number>;
 };
 
+// Константы для NUX совместимости
+const NUX_PREFIX: string = 'nux://MightyAmp:';
+const DISABLED_FLAG: number = 0x40;
+const TYPE_MASK: number = 0x3f;
+
 // Тип для результата энкодинга
 export interface EncodedChain {
-  bytes: number[];
+  bytes: Uint8Array;
   qrCode: string;
+  rawBytes: number[];
+}
+
+// Функции для base64 кодирования (совместимость с браузером и Node.js)
+function bytesToB64(bytes: Uint8Array): string {
+  let s: string = '';
+  for (let i: number = 0; i < bytes.length; i++) {
+    s += String.fromCharCode(bytes[i] as number);
+  }
+  if (typeof window !== 'undefined') {
+    return window.btoa(s);
+  }
+  return Buffer.from(s, 'binary').toString('base64');
 }
 
 /**
@@ -22,8 +40,11 @@ export interface EncodedChain {
  * Использует config.ts как источник истины для структуры байтов
  */
 export function encodeChainToBytes(chain: ReturnType<typeof createDefaultChain>): EncodedChain {
-  // Инициализируем массив байтов (100 элементов согласно константам)
-  const bytes: number[] = Array.from({ length: 100 }, () => 0);
+  // Инициализируем массив байтов (113 элементов для NUX совместимости)
+  const data: Uint8Array = new Uint8Array(113);
+  
+  // Устанавливаем мастер уровень (по умолчанию 50)
+  data[NuxMp3PresetIndex.MASTER] = 50;
   
   // Проходим по всем блокам в чейне
   Object.entries(chain).forEach(([blockKey, blockData]: [string, ChainBlock]) => {
@@ -46,24 +67,43 @@ export function encodeChainToBytes(chain: ReturnType<typeof createDefaultChain>)
     // Устанавливаем тип блока в соответствующий заголовок
     const headIndex: number = getHeadIndex(blockType);
     if (headIndex !== -1) {
-      bytes[headIndex] = blockData.enabled ? typeConfig.encodeType : 0;
+      let value: number = typeConfig.encodeType & TYPE_MASK;
+      if (!blockData.enabled) {
+        value |= DISABLED_FLAG;
+      }
+      data[headIndex] = value;
     }
     
     // Устанавливаем параметры блока согласно конфигурации
     typeConfig.params.forEach((paramConfig: TypeParamConfig) => {
       const paramValue: number | undefined = blockData.params[paramConfig.label];
       if (paramValue !== undefined) {
-        bytes[paramConfig.encodeIndex] = paramValue;
+        data[paramConfig.encodeIndex] = Math.max(0, Math.min(100, paramValue));
       }
     });
   });
   
-  // Конвертируем байты в строку для QR кода (каждый байт в 3-значное число)
-  const qrCode: string = bytes.map((byte: number) => byte.toString().padStart(3, '0')).join('');
+  // Устанавливаем дефолтный порядок чейна
+  const chainOrder: number[] = [5, 1, 6, 2, 3, 9, 4, 8, 7]; // CHAIN_DEFAULT из старого энкодера
+  chainOrder.forEach((fxid: number, i: number) => {
+    data[NuxMp3PresetIndex.LINK1 + i] = fxid;
+  });
+  
+  // Добавляем заголовок с product_id и version
+  const productId: number = 15; // NUX MP-3 product ID
+  const version: number = 1;
+  const head: Uint8Array = new Uint8Array([productId, version]);
+  const allBytes: Uint8Array = new Uint8Array(head.length + data.length);
+  allBytes.set(head, 0);
+  allBytes.set(data, head.length);
+  
+  // Создаем NUX совместимый QR код
+  const qrCode: string = NUX_PREFIX + bytesToB64(allBytes);
   
   return {
-    bytes,
-    qrCode
+    bytes: allBytes,
+    qrCode,
+    rawBytes: Array.from(allBytes)
   };
 }
 
@@ -108,12 +148,28 @@ export function encodeDefaultChain(): EncodedChain {
  */
 export function debugEncoding(chain: ReturnType<typeof createDefaultChain>): {
   encoding: EncodedChain;
-  debug: Array<{ index: number; value: number; description: string }>;
+  debug: Array<{ index: number; value: number; description: string; enabled?: boolean }>;
 } {
   const encoding: EncodedChain = encodeChainToBytes(chain);
-  const debug: Array<{ index: number; value: number; description: string }> = encoding.bytes
-    .map((value: number, index: number) => ({ index, value, description: getIndexDescription(index) }))
-    .filter((item: { index: number; value: number; description: string }) => item.value !== 0);
+  const debug: Array<{ index: number; value: number; description: string; enabled?: boolean }> = Array.from(encoding.bytes)
+    .map((value: number, index: number) => {
+      const description: string = getIndexDescription(index);
+      const isHeader: boolean = description.startsWith('Head_');
+      const actualValue: number = isHeader ? value & TYPE_MASK : value;
+      
+      const result: { index: number; value: number; description: string; enabled?: boolean } = { 
+        index, 
+        value: actualValue, 
+        description
+      };
+      
+      if (isHeader) {
+        result.enabled = (value & DISABLED_FLAG) === 0;
+      }
+      
+      return result;
+    })
+    .filter((item: { index: number; value: number; description: string; enabled?: boolean }) => item.value !== 0);
   
   return { encoding, debug };
 }
