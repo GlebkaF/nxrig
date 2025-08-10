@@ -13,3 +13,15 @@ export interface TypeParamConfig {
   label: string;
   encodeIndex: number;
 }
+
+export enum Blocks {
+  Noisegate = "noisegate",
+  Compressor = "compressor",
+  Modulation = "modulation",
+  Effect = "effect",
+  Amplifier = "amplifier",
+  Cabinet = "cabinet",
+  Eq = "eq",
+  Reverb = "reverb",
+  Delay = "delay",
+}

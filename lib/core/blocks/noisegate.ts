@@ -9,6 +9,8 @@ const NOISE_GATE_TYPES: Record<NoiseGateType, number> = {
   [NoiseGateType.NoiseGate]: 1,
 };
 
+type NoiseGateParams = "Sensitivity" | "Decay";
+
 export const noisegate: BlockConfig = {
   types: [
     {
@@ -17,11 +19,11 @@ export const noisegate: BlockConfig = {
       encodeType: NOISE_GATE_TYPES[NoiseGateType.NoiseGate],
       params: [
         {
-          label: "Sensitivity",
+          label: "Sensitivity" as NoiseGateParams,
           encodeIndex: NuxMp3PresetIndex.NG_Para1,
         },
         {
-          label: "Decay",
+          label: "Decay" as NoiseGateParams,
           encodeIndex: NuxMp3PresetIndex.NG_Para2,
         },
       ],

@@ -1,6 +1,6 @@
 import { noisegate } from "lib/core/blocks/noisegate";
 import { compressor } from "./blocks/compressor";
-import { BlockConfig } from "./interface";
+import { BlockConfig, Blocks } from "./interface";
 import { modulation } from "lib/core/blocks/modulation";
 import { effect } from "lib/core/blocks/effect";
 import { amplifier } from "lib/core/blocks/amplifier";
@@ -14,15 +14,39 @@ interface ChainConfig {
 }
 
 export const config: ChainConfig = {
-  noisegate,
-  compressor,
-  modulation,
-  effect,
-  amplifier,
-  cabinet,
-  eq,
-  reverb,
-  delay,
+  [Blocks.Noisegate]: noisegate,
+  [Blocks.Compressor]: compressor,
+  [Blocks.Modulation]: modulation,
+  [Blocks.Effect]: effect,
+  [Blocks.Amplifier]: amplifier,
+  [Blocks.Cabinet]: cabinet,
+  [Blocks.Eq]: eq,
+  [Blocks.Reverb]: reverb,
+  [Blocks.Delay]: delay,
 };
 
-export default config;
+type Chain = {
+  [Blocks.Noisegate]: null;
+  [Blocks.Compressor]: null;
+  [Blocks.Modulation]: null;
+  [Blocks.Effect]: null;
+  [Blocks.Amplifier]: null;
+  [Blocks.Cabinet]: null;
+  [Blocks.Eq]: null;
+  [Blocks.Reverb]: null;
+  [Blocks.Delay]: null;
+};
+
+const chain: Chain = {
+  [Blocks.Noisegate]: null,
+  [Blocks.Compressor]: null,
+  [Blocks.Modulation]: null,
+  [Blocks.Effect]: null,
+  [Blocks.Amplifier]: null,
+  [Blocks.Cabinet]: null,
+  [Blocks.Eq]: null,
+  [Blocks.Reverb]: null,
+  [Blocks.Delay]: null,
+};
+
+console.log(chain);
