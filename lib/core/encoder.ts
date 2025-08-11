@@ -46,9 +46,7 @@ export const encodeChain = (chain: Chain): EncodedChain => {
     const blockType = blockKey as Blocks;
     const blockConfig = config[blockType];
 
-    // graceful handling of missing block config
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    if (!blockConfig.types) continue;
+    if (!blockConfig?.types) continue;
 
     const typeConfig = blockConfig.types.find(
       (t) => t.label === blockData.type
