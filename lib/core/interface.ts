@@ -55,3 +55,15 @@ export type Chain = {
   [Blocks.Reverb]: ReverbParams;
   [Blocks.Delay]: DelayParams;
 };
+
+export type ChainConfig = {
+  [Blocks.Noisegate]: BlockConfig;
+  [Blocks.Compressor]: BlockConfig;
+  [Blocks.Modulation]: BlockConfig;
+  [Blocks.Effect]: BlockConfig;
+  [Blocks.Amplifier]: BlockConfig;
+  [Blocks.Cabinet]: BlockConfig;
+  [Blocks.Eq]: BlockConfig;
+  [Blocks.Reverb]: BlockConfig;
+  [Blocks.Delay]: BlockConfig;
+};
