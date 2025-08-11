@@ -46,6 +46,7 @@ describe("Core Encoder Tests", () => {
       const chain = createDefaultChain();
 
       // Очищаем параметры одного блока
+      // @ts-expect-error: Проверяем обработку некорректного типа блока
       chain.amplifier.params = {};
 
       const encoded = encodeChain(chain);
@@ -63,6 +64,9 @@ describe("Core Encoder Tests", () => {
         Gain: 150, // > 100
         Master: -10, // < 0
         Bass: 50, // нормальное значение
+        Middle: 50,
+        Treble: 50,
+        Bright: 50,
       };
 
       const encoded = encodeChain(chain);
@@ -89,7 +93,7 @@ describe("Core Encoder Tests", () => {
       const chain2 = createDefaultChain();
 
       // Изменяем один из чейнов
-      chain2.amplifier.type = "Deluxe Rvb";
+      chain2.amplifier.params.Bass = 99;
       chain2.effect.enabled = false;
 
       const encoded1 = encodeChain(chain1);
@@ -108,7 +112,7 @@ describe("Core Encoder Tests", () => {
       // QR код должен быть валидным base64 после префикса
       const base64Part = encoded.qrCode.replace("nux://MightyAmp:", "");
       expect(() => {
-        if (typeof window !== "undefined" && window.atob) {
+        if (typeof window !== "undefined") {
           window.atob(base64Part);
         } else {
           Buffer.from(base64Part, "base64");
@@ -145,14 +149,11 @@ describe("Core Encoder Tests", () => {
       const encoded = encodeChain(chain);
 
       // Проверяем, что каждый блок закодирован с правильным индексом заголовка
-      Object.entries(blockHeadMapping).forEach(([blockType, headKey]) => {
+      Object.entries(blockHeadMapping).forEach(([_blockType, headKey]) => {
         const expectedIndex = NuxMp3PresetIndex[headKey];
-        const blockConfig = chain[blockType as Blocks];
 
-        if (blockConfig && expectedIndex !== undefined) {
-          // Проверяем, что байт на ожидаемом индексе не равен 0 (должен содержать тип блока)
-          expect(encoded.rawBytes[expectedIndex + 2]).not.toBe(0); // +2 для заголовка
-        }
+        // Проверяем, что байт на ожидаемом индексе не равен 0 (должен содержать тип блока)
+        expect(encoded.rawBytes[expectedIndex + 2]).not.toBe(0); // +2 для заголовка
       });
     });
 
@@ -168,12 +169,11 @@ describe("Core Encoder Tests", () => {
       const encoded = encodeChain(chain);
 
       // Проверяем, что все блоки закодированы с флагом DISABLED
-      Object.entries(blockHeadMapping).forEach(([blockType, headKey]) => {
+      Object.entries(blockHeadMapping).forEach(([_blockType, headKey]) => {
         const index = NuxMp3PresetIndex[headKey];
-        if (index !== undefined) {
-          const value = encoded.rawBytes[index + 2]; // +2 для заголовка
-          expect(value & DISABLED_FLAG).toBe(DISABLED_FLAG);
-        }
+
+        const value = encoded.rawBytes[index + 2] as number; // +2 для заголовка
+        expect(value & DISABLED_FLAG).toBe(DISABLED_FLAG);
       });
     });
 
