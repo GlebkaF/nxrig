@@ -58,13 +58,20 @@ export type Chain = {
 };
 
 export type ChainConfig = {
-  [Blocks.Noisegate]: BlockConfig;
-  [Blocks.Compressor]: BlockConfig;
-  [Blocks.Modulation]: BlockConfig;
-  [Blocks.Effect]: BlockConfig;
-  [Blocks.Amplifier]: BlockConfig;
-  [Blocks.Cabinet]: BlockConfig;
-  [Blocks.Eq]: BlockConfig;
-  [Blocks.Reverb]: BlockConfig;
-  [Blocks.Delay]: BlockConfig;
+  encoder: {
+    masterIndex: number;
+    linkStartIndex: number;
+    chainOrder: number[];
+  };
+  blocks: {
+    [Blocks.Noisegate]: BlockConfig;
+    [Blocks.Compressor]: BlockConfig;
+    [Blocks.Modulation]: BlockConfig;
+    [Blocks.Effect]: BlockConfig;
+    [Blocks.Amplifier]: BlockConfig;
+    [Blocks.Cabinet]: BlockConfig;
+    [Blocks.Eq]: BlockConfig;
+    [Blocks.Reverb]: BlockConfig;
+    [Blocks.Delay]: BlockConfig;
+  };
 };

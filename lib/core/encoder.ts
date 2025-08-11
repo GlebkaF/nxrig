@@ -1,8 +1,7 @@
-import { config, encoderConfig } from "./config";
-import { createDefaultChain } from "./helpers/create-default-chain";
+import { config } from "./config";
 import { Blocks, Chain } from "./interface";
 
-// Константы NUX
+// Константы NUX MP3, если появятся другие устройства, то их нужно будет перенести в конфиг
 const NUX_PREFIX = "nux://MightyAmp:" as const;
 const DISABLED_FLAG = 0x40 as const;
 const TYPE_MASK = 0x3f as const;
@@ -11,10 +10,10 @@ const HEADER_SIZE = 2 as const;
 const TOTAL_SIZE = 115 as const; // HEADER_SIZE + DATA_SIZE
 const PRODUCT_ID = 15 as const;
 const VERSION = 1 as const;
-const DEFAULT_MASTER = encoderConfig.defaultMasterValue;
+const DEFAULT_MASTER = 50;
 
 // Результат энкодинга
-export interface EncodedChain {
+interface EncodedChain {
   readonly bytes: Uint8Array;
   readonly qrCode: string;
   readonly rawBytes: readonly number[];
@@ -22,7 +21,6 @@ export interface EncodedChain {
 
 // Утилиты
 const clamp = (value: number): number => Math.max(0, Math.min(100, value));
-
 const bytesToB64 = (bytes: Uint8Array): string => {
   const chars = Array.from(bytes, (byte) => String.fromCharCode(byte)).join("");
   return typeof window !== "undefined"
@@ -30,15 +28,14 @@ const bytesToB64 = (bytes: Uint8Array): string => {
     : Buffer.from(chars, "binary").toString("base64");
 };
 
-// Основная функция энкодера (максимально упрощенная)
 export const encodeChain = (chain: Chain): EncodedChain => {
   const data = new Uint8Array(DATA_SIZE);
-  data[encoderConfig.masterIndex] = DEFAULT_MASTER;
+  data[config.encoder.masterIndex] = DEFAULT_MASTER;
 
   // Энкодируем блоки
   for (const [blockKey, blockData] of Object.entries(chain)) {
     const blockType = blockKey as Blocks;
-    const blockConfig = config[blockType];
+    const blockConfig = config.blocks[blockType];
 
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!blockConfig?.types) continue;
@@ -68,8 +65,8 @@ export const encodeChain = (chain: Chain): EncodedChain => {
   }
 
   // Устанавливаем порядок чейна
-  encoderConfig.chainOrder.forEach((fxid, i) => {
-    data[encoderConfig.linkStartIndex + i] = fxid;
+  config.encoder.chainOrder.forEach((fxid, i) => {
+    data[config.encoder.linkStartIndex + i] = fxid;
   });
 
   // Создаем финальный массив с заголовком
@@ -83,7 +80,3 @@ export const encodeChain = (chain: Chain): EncodedChain => {
     rawBytes: Array.from(result),
   };
 };
-
-// Утилита для энкодинга дефолтного чейна
-export const encodeDefaultChain = (): EncodedChain =>
-  encodeChain(createDefaultChain());

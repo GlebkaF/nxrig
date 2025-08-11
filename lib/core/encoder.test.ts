@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { createDefaultChain } from "./helpers/create-default-chain";
-import { encodeChain, encodeDefaultChain } from "./encoder";
-import { encoderConfig, config } from "./config";
+import { encodeChain } from "./encoder";
+import { config } from "./config";
 import { Blocks } from "./interface";
 
 describe("Core Encoder Tests", () => {
@@ -74,15 +74,6 @@ describe("Core Encoder Tests", () => {
         true
       );
     });
-
-    it("should use encodeDefaultChain shortcut correctly", () => {
-      const directEncoded = encodeDefaultChain();
-      const chainEncoded = encodeChain(createDefaultChain());
-
-      // Результаты должны быть идентичными
-      expect(directEncoded.qrCode).toBe(chainEncoded.qrCode);
-      expect(directEncoded.rawBytes).toEqual(chainEncoded.rawBytes);
-    });
   });
 
   describe("Chain Configuration", () => {
@@ -123,9 +114,9 @@ describe("Core Encoder Tests", () => {
       const encoded = encodeChain(chain);
 
       // Проверяем что LINK поля установлены (используем конфиг)
-      const linkStart = encoderConfig.linkStartIndex + 2; // +2 для заголовка (product_id, version)
+      const linkStart = config.encoder.linkStartIndex + 2; // +2 для заголовка (product_id, version)
 
-      encoderConfig.chainOrder.forEach((expectedValue, i) => {
+      config.encoder.chainOrder.forEach((expectedValue, i) => {
         expect(encoded.rawBytes[linkStart + i]).toBe(expectedValue);
       });
     });
@@ -135,9 +126,7 @@ describe("Core Encoder Tests", () => {
       const encoded = encodeChain(chain);
 
       // Мастер должен быть на правильном индексе с дефолтным значением (используем конфиг)
-      expect(encoded.rawBytes[encoderConfig.masterIndex + 2]).toBe(
-        encoderConfig.defaultMasterValue
-      );
+      expect(encoded.rawBytes[config.encoder.masterIndex + 2]).toBe(50);
     });
   });
 
@@ -147,7 +136,7 @@ describe("Core Encoder Tests", () => {
       const encoded = encodeChain(chain);
 
       // Проверяем что все блоки закодированы в правильных позициях
-      Object.entries(config).forEach(([_blockType, blockConfig]) => {
+      Object.entries(config.blocks).forEach(([_blockType, blockConfig]) => {
         const headIndex = blockConfig.encoderHeadIndex;
         if (headIndex >= 0) {
           // Проверяем что в позиции заголовка есть какое-то значение (не 0)
@@ -168,7 +157,7 @@ describe("Core Encoder Tests", () => {
       const encoded = encodeChain(chain);
 
       // Проверяем что все блоки имеют флаг DISABLED
-      Object.entries(config).forEach(([_blockType, blockConfig]) => {
+      Object.entries(config.blocks).forEach(([_blockType, blockConfig]) => {
         const headIndex = blockConfig.encoderHeadIndex;
         if (headIndex >= 0) {
           const value = encoded.rawBytes[headIndex + 2] ?? 0;
