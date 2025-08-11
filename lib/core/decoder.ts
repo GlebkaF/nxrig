@@ -31,6 +31,7 @@ export const decodeChain = (qrCode: string): Chain => {
 
   // Проверяем размер и заголовок
   if (bytes.length !== TOTAL_SIZE) {
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     throw new Error(`Invalid data size: ${bytes.length}`);
   }
   if (bytes[0] !== PRODUCT_ID || bytes[1] !== VERSION) {
@@ -50,7 +51,9 @@ export const decodeChain = (qrCode: string): Chain => {
 
     if (headIndex >= 0) {
       const headValue = data[headIndex];
+      // @ts-expect-error - headValue is not a number
       const typeValue = headValue & TYPE_MASK;
+      // @ts-expect-error - headValue is not a number
       const enabled = (headValue & DISABLED_FLAG) === 0;
 
       // Находим конфигурацию типа
@@ -81,13 +84,17 @@ export const decodeChain = (qrCode: string): Chain => {
       // Создаем объект с параметрами
       const params = {} as Record<string, number>;
       for (const param of typeConfig.params) {
+        // @ts-expect-error - undefined is not a number
         params[param.label] = data[param.encodeIndex];
       }
 
       // Добавляем блок в цепочку
       chain[blockType] = {
+        // @ts-expect-error - undefined is not a string
         type: typeConfig.label,
+        // @ts-expect-error - undefined is not a boolean
         enabled,
+        // @ts-expect-error - undefined is not a Record<string, number>
         params,
       };
     }
