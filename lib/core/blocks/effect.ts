@@ -153,6 +153,7 @@ const TYPES: Record<EffectType, number> = {
 };
 
 export const effect: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iEFX,
   types: [
     {
       label: EffectType.DistortionPlus,

@@ -9,6 +9,7 @@ import { NoisegateParams } from "lib/core/blocks/noisegate";
 import { ReverbParams } from "lib/core/blocks/reverb";
 
 export interface BlockConfig {
+  encoderHeadIndex: number;
   types: TypeConfig[];
 }
 

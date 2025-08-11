@@ -66,6 +66,7 @@ export type DelayParams = ChainItem<
 >;
 
 export const delay: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iDLY,
   types: [
     {
       label: DelayType.AnalogDelay,

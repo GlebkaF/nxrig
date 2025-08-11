@@ -365,6 +365,7 @@ const cabParams: TypeParamConfig[] = [
 ];
 
 export const cabinet: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iCAB,
   types: [
     {
       label: CabinetType.JZ120,

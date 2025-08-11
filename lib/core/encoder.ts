@@ -46,9 +46,11 @@ export const encodeChain = (chain: Chain): EncodedChain => {
     const blockType = blockKey as Blocks;
     const blockConfig = config[blockType];
 
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!blockConfig?.types) continue;
 
     const typeConfig = blockConfig.types.find(
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
       (t) => t.label === blockData.type
     );
     if (!typeConfig) continue;

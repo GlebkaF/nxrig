@@ -15,6 +15,7 @@ export type NoisegateParams = ChainItem<
 >;
 
 export const noisegate: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iNG,
   types: [
     {
       label: NoiseGateType.NoiseGate,

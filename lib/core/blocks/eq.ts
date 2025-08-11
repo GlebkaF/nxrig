@@ -29,6 +29,7 @@ export type EqParams =
     >;
 
 export const eq: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iEQ,
   types: [
     {
       label: EqType.SixBand,

@@ -3,6 +3,7 @@
 exports[`Config > compressor should to match snapshot 1`] = `
 {
   "amplifier": {
+    "encoderHeadIndex": 3,
     "types": [
       {
         "encodeType": 1,
@@ -38,6 +39,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
     ],
   },
   "cabinet": {
+    "encoderHeadIndex": 9,
     "types": [
       {
         "encodeType": 1,
@@ -61,6 +63,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
     ],
   },
   "compressor": {
+    "encoderHeadIndex": 1,
     "types": [
       {
         "encodeType": 2,
@@ -122,6 +125,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
     ],
   },
   "delay": {
+    "encoderHeadIndex": 7,
     "types": [
       {
         "encodeType": 1,
@@ -145,6 +149,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
     ],
   },
   "effect": {
+    "encoderHeadIndex": 2,
     "types": [
       {
         "encodeType": 1,
@@ -164,6 +169,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
     ],
   },
   "eq": {
+    "encoderHeadIndex": 4,
     "types": [
       {
         "encodeType": 1,
@@ -250,6 +256,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
     ],
   },
   "modulation": {
+    "encoderHeadIndex": 6,
     "types": [
       {
         "encodeType": 1,
@@ -273,6 +280,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
     ],
   },
   "noisegate": {
+    "encoderHeadIndex": 5,
     "types": [
       {
         "encodeType": 1,
@@ -292,6 +300,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
     ],
   },
   "reverb": {
+    "encoderHeadIndex": 8,
     "types": [
       {
         "encodeType": 1,

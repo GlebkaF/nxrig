@@ -373,6 +373,7 @@ export type AmplifierParams = ChainItem<
 >;
 
 export const amplifier: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iAMP,
   types: [
     {
       label: AmplifierType.JazzClean,

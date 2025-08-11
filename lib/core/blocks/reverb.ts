@@ -28,6 +28,7 @@ export type ReverbParams =
   | ChainItem<ReverbType.Damp, "Mix" | "Depth">;
 
 export const reverb: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iRVB,
   types: [
     {
       label: ReverbType.Room,

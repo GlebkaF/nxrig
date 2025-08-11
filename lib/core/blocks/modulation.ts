@@ -146,6 +146,7 @@ const TYPES: Record<ModulationType, number> = {
 };
 
 export const modulation: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iMOD,
   types: [
     {
       label: ModulationType.CE1,
