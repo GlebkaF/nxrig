@@ -1,9 +1,3 @@
-/* eslint-disable @typescript-eslint/typedef */
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-/* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
-
 import { config, blockHeadMapping, encoderConfig } from "./config";
 import { createDefaultChain } from "./helpers/create-default-chain";
 import { Blocks, Chain } from "./interface";
@@ -38,6 +32,7 @@ const bytesToB64 = (bytes: Uint8Array): string => {
 };
 
 const getHeadIndex = (blockType: Blocks): number => {
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   return NuxMp3PresetIndex[blockHeadMapping[blockType]] ?? -1;
 };
 
@@ -51,7 +46,9 @@ export const encodeChain = (chain: Chain): EncodedChain => {
     const blockType = blockKey as Blocks;
     const blockConfig = config[blockType];
 
-    if (!blockConfig?.types) continue;
+    // graceful handling of missing block config
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    if (!blockConfig.types) continue;
 
     const typeConfig = blockConfig.types.find(
       (t) => t.label === blockData.type
