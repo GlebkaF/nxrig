@@ -2,404 +2,2470 @@
 
 exports[`Config > compressor should to match snapshot 1`] = `
 {
-  "amplifier": {
-    "types": [
-      {
-        "encodeType": 1,
-        "label": "Jazz Clean",
-        "params": [
-          {
-            "encodeIndex": 27,
-            "label": "Gain",
-          },
-          {
-            "encodeIndex": 28,
-            "label": "Master",
-          },
-          {
-            "encodeIndex": 29,
-            "label": "Bass",
-          },
-          {
-            "encodeIndex": 30,
-            "label": "Middle",
-          },
-          {
-            "encodeIndex": 31,
-            "label": "Treble",
-          },
-          {
-            "encodeIndex": 32,
-            "label": "Bright",
-          },
-        ],
-        "realName": "Jazz Clean",
-      },
-    ],
+  "blocks": {
+    "amplifier": {
+      "encoderHeadIndex": 3,
+      "types": [
+        {
+          "encodeType": 1,
+          "label": "Jazz Clean",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Bright",
+            },
+          ],
+          "realName": "Jazz Clean",
+        },
+        {
+          "encodeType": 2,
+          "label": "Deluxe Rvb",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+          ],
+          "realName": "Fender Deluxe Reverb",
+        },
+        {
+          "encodeType": 3,
+          "label": "Bass Mate",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Fender Bassman",
+        },
+        {
+          "encodeType": 4,
+          "label": "Tweedy",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Tone",
+            },
+          ],
+          "realName": "Fender Tweed Deluxe",
+        },
+        {
+          "encodeType": 6,
+          "label": "Hiwire",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Hiwatt DR103",
+        },
+        {
+          "encodeType": 7,
+          "label": "Cali Crunch",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Mesa Boogie Mark I",
+        },
+        {
+          "encodeType": 8,
+          "label": "Class A15",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Cut",
+            },
+          ],
+          "realName": "Vox AC15",
+        },
+        {
+          "encodeType": 9,
+          "label": "Class A30",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Cut",
+            },
+          ],
+          "realName": "Vox AC30",
+        },
+        {
+          "encodeType": 10,
+          "label": "Plexi 100",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Marshall JTM45 100W",
+        },
+        {
+          "encodeType": 11,
+          "label": "Plexi 45",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Marshall JTM45 45W",
+        },
+        {
+          "encodeType": 12,
+          "label": "Brit 800",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Marshall JCM800",
+        },
+        {
+          "encodeType": 13,
+          "label": "1987 X 50",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Marshall JCM1987X",
+        },
+        {
+          "encodeType": 14,
+          "label": "SLO 100",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Soldano SLO-100",
+        },
+        {
+          "encodeType": 15,
+          "label": "Fireman HBE",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Friedman BE-100",
+        },
+        {
+          "encodeType": 16,
+          "label": "Dual Rect",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Mesa Boogie Dual Rectifier",
+        },
+        {
+          "encodeType": 17,
+          "label": "Die VH4",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Diezel VH4",
+        },
+        {
+          "encodeType": 20,
+          "label": "Mr. Z38",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Cut",
+            },
+          ],
+          "realName": "Dr. Z MAZ 38",
+        },
+        {
+          "encodeType": 21,
+          "label": "Super Rvb",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Bright",
+            },
+          ],
+          "realName": "Fender Super Reverb",
+        },
+        {
+          "encodeType": 19,
+          "label": "Budda",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Cut",
+            },
+          ],
+          "realName": "Budda Superdrive",
+        },
+        {
+          "encodeType": 22,
+          "label": "Brit Blues",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Marshall Bluesbreaker",
+        },
+        {
+          "encodeType": 23,
+          "label": "Match D30",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Cut",
+            },
+          ],
+          "realName": "Matchless DC-30",
+        },
+        {
+          "encodeType": 24,
+          "label": "Brit 2000",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Marshall JCM2000",
+        },
+        {
+          "encodeType": 25,
+          "label": "Uber HiGain",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Presence",
+            },
+          ],
+          "realName": "Bogner Uberschall",
+        },
+        {
+          "encodeType": 26,
+          "label": "AGL",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Mid Freq",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+          ],
+          "realName": "Aguilar Tone Hammer",
+        },
+        {
+          "encodeType": 27,
+          "label": "MLD",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Mid Freq",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+          ],
+          "realName": "NUX Melvin Lee Davis Preamp",
+        },
+        {
+          "encodeType": 28,
+          "label": "Optima Air",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+          ],
+          "realName": "NUX Optima Air",
+        },
+        {
+          "encodeType": 29,
+          "label": "Stageman",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+          ],
+          "realName": "NUX Stageman AC-50",
+        },
+        {
+          "encodeType": 5,
+          "label": "Twin Reverb",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Bright",
+            },
+          ],
+          "realName": "Fender Twin Reverb",
+        },
+        {
+          "encodeType": 18,
+          "label": "Vibro King",
+          "params": [
+            {
+              "encodeIndex": 27,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 28,
+              "label": "Master",
+            },
+            {
+              "encodeIndex": 29,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 30,
+              "label": "Middle",
+            },
+            {
+              "encodeIndex": 31,
+              "label": "Treble",
+            },
+            {
+              "encodeIndex": 32,
+              "label": "Bright",
+            },
+          ],
+          "realName": "Fender Vibro‑King",
+        },
+      ],
+    },
+    "cabinet": {
+      "encoderHeadIndex": 9,
+      "types": [
+        {
+          "encodeType": 1,
+          "label": "JZ120",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Roland JC-120 2x12",
+        },
+        {
+          "encodeType": 2,
+          "label": "DR112",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Fender Deluxe Reverb 1x12",
+        },
+        {
+          "encodeType": 3,
+          "label": "TR212",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Fender Twin Reverb 2x12",
+        },
+        {
+          "encodeType": 4,
+          "label": "HIWIRE412",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Hiwatt 4x12",
+        },
+        {
+          "encodeType": 5,
+          "label": "CALI 112",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Mesa/Boogie 1x12",
+        },
+        {
+          "encodeType": 6,
+          "label": "A112",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "American 1x12 (Open Back)",
+        },
+        {
+          "encodeType": 7,
+          "label": "GB412",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Celestion Greenback 4x12",
+        },
+        {
+          "encodeType": 8,
+          "label": "M1960AX",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Marshall 1960AX 4x12",
+        },
+        {
+          "encodeType": 9,
+          "label": "M1960AV",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Marshall 1960AV 4x12",
+        },
+        {
+          "encodeType": 10,
+          "label": "M1960TV",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Marshall 1960TV 4x12",
+        },
+        {
+          "encodeType": 11,
+          "label": "SLO412",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Soldano 4x12",
+        },
+        {
+          "encodeType": 12,
+          "label": "FIREMAN 412",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Friedman 4x12",
+        },
+        {
+          "encodeType": 13,
+          "label": "RECT 412",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Mesa Boogie Rectifier 4x12",
+        },
+        {
+          "encodeType": 14,
+          "label": "DIE412",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Diezel 4x12",
+        },
+        {
+          "encodeType": 15,
+          "label": "MATCH212",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Matchless 2x12",
+        },
+        {
+          "encodeType": 16,
+          "label": "UBER412",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Bogner Uberkab 4x12",
+        },
+        {
+          "encodeType": 17,
+          "label": "BS410",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Fender Bassman 4x10",
+        },
+        {
+          "encodeType": 18,
+          "label": "A212",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "American 2x12 (Open Back)",
+        },
+        {
+          "encodeType": 19,
+          "label": "M1960AHW",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Marshall 1960AHW 4x12",
+        },
+        {
+          "encodeType": 20,
+          "label": "M1936",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Marshall 1936 2x12",
+        },
+        {
+          "encodeType": 21,
+          "label": "BUDDA112",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Budda 1x12",
+        },
+        {
+          "encodeType": 22,
+          "label": "Z212",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Dr. Z 2x12",
+        },
+        {
+          "encodeType": 23,
+          "label": "SUPERVERB410",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Fender Super Reverb 4x10",
+        },
+        {
+          "encodeType": 24,
+          "label": "VIBROKING310",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Fender Vibro‑King 3x10",
+        },
+        {
+          "encodeType": 25,
+          "label": "AGL_DB810",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Aguilar DB810 8x10",
+        },
+        {
+          "encodeType": 26,
+          "label": "AMP_SV212",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Ampeg SVT 2x12",
+        },
+        {
+          "encodeType": 27,
+          "label": "AMP_SV410",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Ampeg SVT 4x10",
+        },
+        {
+          "encodeType": 28,
+          "label": "AMP_SV810",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Ampeg SVT 8x10",
+        },
+        {
+          "encodeType": 29,
+          "label": "BASSGUY410",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Fender Bassman 4x10",
+        },
+        {
+          "encodeType": 30,
+          "label": "EDEN410",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Eden 4x10",
+        },
+        {
+          "encodeType": 31,
+          "label": "MKB410",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Markbass 4x10",
+        },
+        {
+          "encodeType": 32,
+          "label": "G-HBIRD",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Gibson Hummingbird (Acoustic IR)",
+        },
+        {
+          "encodeType": 33,
+          "label": "G-J15",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Gibson J‑15 (Acoustic IR)",
+        },
+        {
+          "encodeType": 34,
+          "label": "M-D45",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Martin D‑45 (Acoustic IR)",
+        },
+      ],
+    },
+    "compressor": {
+      "encoderHeadIndex": 1,
+      "types": [
+        {
+          "encodeType": 2,
+          "label": "K Comp",
+          "params": [
+            {
+              "encodeIndex": 16,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 15,
+              "label": "Sustain",
+            },
+            {
+              "encodeIndex": 17,
+              "label": "Clipping",
+            },
+          ],
+          "realName": "Keeley Compressor",
+        },
+        {
+          "encodeType": 3,
+          "label": "Studio Comp",
+          "params": [
+            {
+              "encodeIndex": 17,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 15,
+              "label": "Threshold",
+            },
+            {
+              "encodeIndex": 16,
+              "label": "Ratio",
+            },
+            {
+              "encodeIndex": 18,
+              "label": "Release",
+            },
+          ],
+          "realName": "Studio Compressor",
+        },
+        {
+          "encodeType": 1,
+          "label": "Rose Comp",
+          "params": [
+            {
+              "encodeIndex": 16,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 15,
+              "label": "Sustain",
+            },
+          ],
+          "realName": "Keeley Compressor",
+        },
+      ],
+    },
+    "delay": {
+      "encoderHeadIndex": 7,
+      "types": [
+        {
+          "encodeType": 1,
+          "label": "Analog Delay",
+          "params": [
+            {
+              "encodeIndex": 63,
+              "label": "Intensity",
+            },
+            {
+              "encodeIndex": 61,
+              "label": "Rate",
+            },
+            {
+              "encodeIndex": 62,
+              "label": "Echo",
+            },
+          ],
+          "realName": "Analog Delay",
+        },
+        {
+          "encodeType": 2,
+          "label": "Digital Delay",
+          "params": [
+            {
+              "encodeIndex": 61,
+              "label": "E.Level",
+            },
+            {
+              "encodeIndex": 62,
+              "label": "Feedback",
+            },
+            {
+              "encodeIndex": 63,
+              "label": "Time",
+            },
+          ],
+          "realName": "Digital Delay",
+        },
+        {
+          "encodeType": 3,
+          "label": "Mod Delay",
+          "params": [
+            {
+              "encodeIndex": 62,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 61,
+              "label": "Time",
+            },
+            {
+              "encodeIndex": 64,
+              "label": "Repeat",
+            },
+            {
+              "encodeIndex": 63,
+              "label": "Mod",
+            },
+          ],
+          "realName": "Modulation Delay",
+        },
+        {
+          "encodeType": 4,
+          "label": "Tape Echo",
+          "params": [
+            {
+              "encodeIndex": 62,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 61,
+              "label": "Time",
+            },
+            {
+              "encodeIndex": 63,
+              "label": "Repeat",
+            },
+          ],
+          "realName": "Tape Echo",
+        },
+        {
+          "encodeType": 5,
+          "label": "Pan Delay",
+          "params": [
+            {
+              "encodeIndex": 63,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 61,
+              "label": "Time",
+            },
+            {
+              "encodeIndex": 62,
+              "label": "Repeat",
+            },
+          ],
+          "realName": "Pan Delay",
+        },
+        {
+          "encodeType": 6,
+          "label": "Phi Delay",
+          "params": [
+            {
+              "encodeIndex": 61,
+              "label": "Time",
+            },
+            {
+              "encodeIndex": 62,
+              "label": "Repeat",
+            },
+            {
+              "encodeIndex": 63,
+              "label": "Mix",
+            },
+          ],
+          "realName": "Phi Delay",
+        },
+      ],
+    },
+    "effect": {
+      "encoderHeadIndex": 2,
+      "types": [
+        {
+          "encodeType": 1,
+          "label": "Distortion+",
+          "params": [
+            {
+              "encodeIndex": 20,
+              "label": "Output",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Sensitivity",
+            },
+          ],
+          "realName": "Distortion+",
+        },
+        {
+          "encodeType": 2,
+          "label": "RC Boost",
+          "params": [
+            {
+              "encodeIndex": 21,
+              "label": "Volume",
+            },
+            {
+              "encodeIndex": 20,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 22,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 23,
+              "label": "Treble",
+            },
+          ],
+          "realName": "RC Boost",
+        },
+        {
+          "encodeType": 3,
+          "label": "AC Boost",
+          "params": [
+            {
+              "encodeIndex": 21,
+              "label": "Volume",
+            },
+            {
+              "encodeIndex": 20,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 22,
+              "label": "Bass",
+            },
+            {
+              "encodeIndex": 23,
+              "label": "Treble",
+            },
+          ],
+          "realName": "AC Boost",
+        },
+        {
+          "encodeType": 4,
+          "label": "Dist One",
+          "params": [
+            {
+              "encodeIndex": 20,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 22,
+              "label": "Drive",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Tone",
+            },
+          ],
+          "realName": "Dist One",
+        },
+        {
+          "encodeType": 5,
+          "label": "T Screamer",
+          "params": [
+            {
+              "encodeIndex": 22,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 20,
+              "label": "Drive",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Tone",
+            },
+          ],
+          "realName": "T Screamer",
+        },
+        {
+          "encodeType": 6,
+          "label": "Blues Drive",
+          "params": [
+            {
+              "encodeIndex": 20,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 22,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Tone",
+            },
+          ],
+          "realName": "Blues Drive",
+        },
+        {
+          "encodeType": 7,
+          "label": "Morning Drive",
+          "params": [
+            {
+              "encodeIndex": 20,
+              "label": "Volume",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Drive",
+            },
+            {
+              "encodeIndex": 22,
+              "label": "Tone",
+            },
+          ],
+          "realName": "Morning Drive",
+        },
+        {
+          "encodeType": 8,
+          "label": "Eat Dist",
+          "params": [
+            {
+              "encodeIndex": 22,
+              "label": "Volume",
+            },
+            {
+              "encodeIndex": 20,
+              "label": "Distortion",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Filter",
+            },
+          ],
+          "realName": "Eat Dist",
+        },
+        {
+          "encodeType": 9,
+          "label": "Red Dirt",
+          "params": [
+            {
+              "encodeIndex": 22,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 20,
+              "label": "Drive",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Tone",
+            },
+          ],
+          "realName": "Red Dirt",
+        },
+        {
+          "encodeType": 10,
+          "label": "Crunch",
+          "params": [
+            {
+              "encodeIndex": 20,
+              "label": "Volume",
+            },
+            {
+              "encodeIndex": 22,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Tone",
+            },
+          ],
+          "realName": "Crunch",
+        },
+        {
+          "encodeType": 11,
+          "label": "Muff Fuzz",
+          "params": [
+            {
+              "encodeIndex": 20,
+              "label": "Volume",
+            },
+            {
+              "encodeIndex": 22,
+              "label": "Sustain",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Tone",
+            },
+          ],
+          "realName": "Muff Fuzz",
+        },
+        {
+          "encodeType": 12,
+          "label": "Katana",
+          "params": [
+            {
+              "encodeIndex": 21,
+              "label": "Volume",
+            },
+            {
+              "encodeIndex": 20,
+              "label": "Boost",
+            },
+          ],
+          "realName": "Katana",
+        },
+        {
+          "encodeType": 13,
+          "label": "ST Singer",
+          "params": [
+            {
+              "encodeIndex": 20,
+              "label": "Volume",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Gain",
+            },
+            {
+              "encodeIndex": 22,
+              "label": "Filter",
+            },
+          ],
+          "realName": "ST Singer",
+        },
+        {
+          "encodeType": 14,
+          "label": "Touch Wah",
+          "params": [
+            {
+              "encodeIndex": 20,
+              "label": "Type",
+            },
+            {
+              "encodeIndex": 21,
+              "label": "Wow",
+            },
+            {
+              "encodeIndex": 22,
+              "label": "Sense",
+            },
+            {
+              "encodeIndex": 24,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 23,
+              "label": "Up/Down Switch",
+            },
+          ],
+          "realName": "Touch Wah",
+        },
+      ],
+    },
+    "eq": {
+      "encoderHeadIndex": 4,
+      "types": [
+        {
+          "encodeType": 1,
+          "label": "6-Band",
+          "params": [
+            {
+              "encodeIndex": 36,
+              "label": "100",
+            },
+            {
+              "encodeIndex": 37,
+              "label": "220",
+            },
+            {
+              "encodeIndex": 38,
+              "label": "500",
+            },
+            {
+              "encodeIndex": 39,
+              "label": "1200",
+            },
+            {
+              "encodeIndex": 40,
+              "label": "2600",
+            },
+            {
+              "encodeIndex": 41,
+              "label": "6400",
+            },
+          ],
+          "realName": "6-Band",
+        },
+        {
+          "encodeType": 3,
+          "label": "10-Band",
+          "params": [
+            {
+              "encodeIndex": 36,
+              "label": "Vol",
+            },
+            {
+              "encodeIndex": 37,
+              "label": "31",
+            },
+            {
+              "encodeIndex": 38,
+              "label": "62",
+            },
+            {
+              "encodeIndex": 39,
+              "label": "125",
+            },
+            {
+              "encodeIndex": 40,
+              "label": "250",
+            },
+            {
+              "encodeIndex": 41,
+              "label": "500",
+            },
+            {
+              "encodeIndex": 42,
+              "label": "1000",
+            },
+            {
+              "encodeIndex": 43,
+              "label": "2000",
+            },
+            {
+              "encodeIndex": 44,
+              "label": "4000",
+            },
+            {
+              "encodeIndex": 45,
+              "label": "8000",
+            },
+            {
+              "encodeIndex": 46,
+              "label": "16000",
+            },
+          ],
+          "realName": "10-Band",
+        },
+      ],
+    },
+    "modulation": {
+      "encoderHeadIndex": 6,
+      "types": [
+        {
+          "encodeType": 1,
+          "label": "CE-1",
+          "params": [
+            {
+              "encodeIndex": 56,
+              "label": "Rate",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Depth",
+            },
+            {
+              "encodeIndex": 54,
+              "label": "Intensity",
+            },
+          ],
+          "realName": "CE-1",
+        },
+        {
+          "encodeType": 2,
+          "label": "CE-2",
+          "params": [
+            {
+              "encodeIndex": 54,
+              "label": "Rate",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Depth",
+            },
+          ],
+          "realName": "CE-2",
+        },
+        {
+          "encodeType": 3,
+          "label": "ST Chorus",
+          "params": [
+            {
+              "encodeIndex": 56,
+              "label": "Rate",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Width",
+            },
+            {
+              "encodeIndex": 54,
+              "label": "Intensity",
+            },
+          ],
+          "realName": "ST Chorus",
+        },
+        {
+          "encodeType": 4,
+          "label": "Vibrato",
+          "params": [
+            {
+              "encodeIndex": 54,
+              "label": "Rate",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Depth",
+            },
+          ],
+          "realName": "Vibrato",
+        },
+        {
+          "encodeType": 5,
+          "label": "Detune",
+          "params": [
+            {
+              "encodeIndex": 54,
+              "label": "Shift-L",
+            },
+            {
+              "encodeIndex": 56,
+              "label": "Shift-R",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Mix",
+            },
+          ],
+          "realName": "Detune",
+        },
+        {
+          "encodeType": 6,
+          "label": "Flanger",
+          "params": [
+            {
+              "encodeIndex": 55,
+              "label": "Rate",
+            },
+            {
+              "encodeIndex": 56,
+              "label": "Width",
+            },
+            {
+              "encodeIndex": 54,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 57,
+              "label": "Feedback",
+            },
+          ],
+          "realName": "Flanger",
+        },
+        {
+          "encodeType": 7,
+          "label": "Phase 90",
+          "params": [
+            {
+              "encodeIndex": 54,
+              "label": "Speed",
+            },
+          ],
+          "realName": "Phase 90",
+        },
+        {
+          "encodeType": 8,
+          "label": "Phase 100",
+          "params": [
+            {
+              "encodeIndex": 55,
+              "label": "Speed",
+            },
+            {
+              "encodeIndex": 54,
+              "label": "Intensity",
+            },
+          ],
+          "realName": "Phase 100",
+        },
+        {
+          "encodeType": 9,
+          "label": "S.C.F.",
+          "params": [
+            {
+              "encodeIndex": 54,
+              "label": "Speed",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Width",
+            },
+            {
+              "encodeIndex": 57,
+              "label": "Intensity",
+            },
+            {
+              "encodeIndex": 56,
+              "label": "Mode",
+            },
+          ],
+          "realName": "S.C.F.",
+        },
+        {
+          "encodeType": 10,
+          "label": "U-Vibe",
+          "params": [
+            {
+              "encodeIndex": 54,
+              "label": "Speed",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Volume",
+            },
+            {
+              "encodeIndex": 56,
+              "label": "Intensity",
+            },
+            {
+              "encodeIndex": 57,
+              "label": "Mode",
+            },
+          ],
+          "realName": "U-Vibe",
+        },
+        {
+          "encodeType": 11,
+          "label": "Tremolo",
+          "params": [
+            {
+              "encodeIndex": 54,
+              "label": "Rate",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Depth",
+            },
+          ],
+          "realName": "Tremolo",
+        },
+        {
+          "encodeType": 12,
+          "label": "Rotary",
+          "params": [
+            {
+              "encodeIndex": 55,
+              "label": "Speed",
+            },
+            {
+              "encodeIndex": 54,
+              "label": "Balance",
+            },
+          ],
+          "realName": "Rotary",
+        },
+        {
+          "encodeType": 13,
+          "label": "SCH-1",
+          "params": [
+            {
+              "encodeIndex": 54,
+              "label": "Rate",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Depth",
+            },
+            {
+              "encodeIndex": 56,
+              "label": "Tone",
+            },
+          ],
+          "realName": "SCH-1",
+        },
+        {
+          "encodeType": 14,
+          "label": "Mono Octave",
+          "params": [
+            {
+              "encodeIndex": 54,
+              "label": "Sub",
+            },
+            {
+              "encodeIndex": 55,
+              "label": "Dry",
+            },
+            {
+              "encodeIndex": 56,
+              "label": "Up",
+            },
+          ],
+          "realName": "Mono Octave",
+        },
+      ],
+    },
+    "noisegate": {
+      "encoderHeadIndex": 5,
+      "types": [
+        {
+          "encodeType": 1,
+          "label": "Noise Gate",
+          "params": [
+            {
+              "encodeIndex": 49,
+              "label": "Sensitivity",
+            },
+            {
+              "encodeIndex": 50,
+              "label": "Decay",
+            },
+          ],
+          "realName": "Noise Gate",
+        },
+      ],
+    },
+    "reverb": {
+      "encoderHeadIndex": 8,
+      "types": [
+        {
+          "encodeType": 1,
+          "label": "Room",
+          "params": [
+            {
+              "encodeIndex": 72,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 70,
+              "label": "Decay",
+            },
+            {
+              "encodeIndex": 71,
+              "label": "Tone",
+            },
+          ],
+          "realName": "Room Reverb",
+        },
+        {
+          "encodeType": 2,
+          "label": "Hall",
+          "params": [
+            {
+              "encodeIndex": 73,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 70,
+              "label": "Decay",
+            },
+            {
+              "encodeIndex": 71,
+              "label": "PreDelay",
+            },
+            {
+              "encodeIndex": 72,
+              "label": "Liveliness",
+            },
+          ],
+          "realName": "Hall Reverb",
+        },
+        {
+          "encodeType": 3,
+          "label": "Plate",
+          "params": [
+            {
+              "encodeIndex": 71,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 70,
+              "label": "Decay",
+            },
+          ],
+          "realName": "Plate Reverb",
+        },
+        {
+          "encodeType": 4,
+          "label": "Spring",
+          "params": [
+            {
+              "encodeIndex": 71,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 70,
+              "label": "Decay",
+            },
+          ],
+          "realName": "Spring Reverb",
+        },
+        {
+          "encodeType": 5,
+          "label": "Shimmer",
+          "params": [
+            {
+              "encodeIndex": 70,
+              "label": "Mix",
+            },
+            {
+              "encodeIndex": 71,
+              "label": "Decay",
+            },
+            {
+              "encodeIndex": 72,
+              "label": "Shimmer",
+            },
+          ],
+          "realName": "Shimmer Reverb",
+        },
+        {
+          "encodeType": 6,
+          "label": "Damp",
+          "params": [
+            {
+              "encodeIndex": 70,
+              "label": "Mix",
+            },
+            {
+              "encodeIndex": 71,
+              "label": "Depth",
+            },
+          ],
+          "realName": "Damp Reverb",
+        },
+      ],
+    },
   },
-  "cabinet": {
-    "types": [
-      {
-        "encodeType": 1,
-        "label": "JZ120",
-        "params": [
-          {
-            "encodeIndex": 78,
-            "label": "Level",
-          },
-          {
-            "encodeIndex": 79,
-            "label": "LowCut",
-          },
-          {
-            "encodeIndex": 80,
-            "label": "HighCut",
-          },
-        ],
-        "realName": "Roland JC-120 2x12",
-      },
+  "encoder": {
+    "chainOrder": [
+      5,
+      1,
+      6,
+      2,
+      3,
+      9,
+      4,
+      7,
+      8,
     ],
-  },
-  "compressor": {
-    "types": [
-      {
-        "encodeType": 2,
-        "label": "K Comp",
-        "params": [
-          {
-            "encodeIndex": 16,
-            "label": "Level",
-          },
-          {
-            "encodeIndex": 15,
-            "label": "Sustain",
-          },
-          {
-            "encodeIndex": 17,
-            "label": "Clipping",
-          },
-        ],
-        "realName": "Keeley Compressor",
-      },
-      {
-        "encodeType": 3,
-        "label": "Studio Comp",
-        "params": [
-          {
-            "encodeIndex": 17,
-            "label": "Gain",
-          },
-          {
-            "encodeIndex": 15,
-            "label": "Threshold",
-          },
-          {
-            "encodeIndex": 16,
-            "label": "Ratio",
-          },
-          {
-            "encodeIndex": 18,
-            "label": "Release",
-          },
-        ],
-        "realName": "Studio Compressor",
-      },
-      {
-        "encodeType": 1,
-        "label": "Rose Comp",
-        "params": [
-          {
-            "encodeIndex": 16,
-            "label": "Level",
-          },
-          {
-            "encodeIndex": 15,
-            "label": "Sustain",
-          },
-        ],
-        "realName": "Keeley Compressor",
-      },
-    ],
-  },
-  "delay": {
-    "types": [
-      {
-        "encodeType": 1,
-        "label": "Analog Delay",
-        "params": [
-          {
-            "encodeIndex": 63,
-            "label": "Intensity",
-          },
-          {
-            "encodeIndex": 61,
-            "label": "Rate",
-          },
-          {
-            "encodeIndex": 62,
-            "label": "Echo",
-          },
-        ],
-        "realName": "Analog Delay",
-      },
-    ],
-  },
-  "effect": {
-    "types": [
-      {
-        "encodeType": 1,
-        "label": "Distortion+",
-        "params": [
-          {
-            "encodeIndex": 20,
-            "label": "Output",
-          },
-          {
-            "encodeIndex": 21,
-            "label": "Sensitivity",
-          },
-        ],
-        "realName": "Distortion+",
-      },
-    ],
-  },
-  "eq": {
-    "types": [
-      {
-        "encodeType": 1,
-        "label": "6-Band",
-        "params": [
-          {
-            "encodeIndex": 36,
-            "label": "100",
-          },
-          {
-            "encodeIndex": 37,
-            "label": "220",
-          },
-          {
-            "encodeIndex": 38,
-            "label": "500",
-          },
-          {
-            "encodeIndex": 39,
-            "label": "1200",
-          },
-          {
-            "encodeIndex": 40,
-            "label": "2600",
-          },
-          {
-            "encodeIndex": 41,
-            "label": "6400",
-          },
-        ],
-        "realName": "6-Band",
-      },
-      {
-        "encodeType": 3,
-        "label": "10-Band",
-        "params": [
-          {
-            "encodeIndex": 36,
-            "label": "Vol",
-          },
-          {
-            "encodeIndex": 37,
-            "label": "31",
-          },
-          {
-            "encodeIndex": 38,
-            "label": "62",
-          },
-          {
-            "encodeIndex": 39,
-            "label": "125",
-          },
-          {
-            "encodeIndex": 40,
-            "label": "250",
-          },
-          {
-            "encodeIndex": 41,
-            "label": "500",
-          },
-          {
-            "encodeIndex": 42,
-            "label": "1000",
-          },
-          {
-            "encodeIndex": 43,
-            "label": "2000",
-          },
-          {
-            "encodeIndex": 44,
-            "label": "4000",
-          },
-          {
-            "encodeIndex": 45,
-            "label": "8000",
-          },
-          {
-            "encodeIndex": 46,
-            "label": "16000",
-          },
-        ],
-        "realName": "10-Band",
-      },
-    ],
-  },
-  "modulation": {
-    "types": [
-      {
-        "encodeType": 1,
-        "label": "CE-1",
-        "params": [
-          {
-            "encodeIndex": 56,
-            "label": "Rate",
-          },
-          {
-            "encodeIndex": 55,
-            "label": "Depth",
-          },
-          {
-            "encodeIndex": 54,
-            "label": "Intensity",
-          },
-        ],
-        "realName": "CE-1",
-      },
-    ],
-  },
-  "noisegate": {
-    "types": [
-      {
-        "encodeType": 1,
-        "label": "Noise Gate",
-        "params": [
-          {
-            "encodeIndex": 49,
-            "label": "Sensitivity",
-          },
-          {
-            "encodeIndex": 50,
-            "label": "Decay",
-          },
-        ],
-        "realName": "Noise Gate",
-      },
-    ],
-  },
-  "reverb": {
-    "types": [
-      {
-        "encodeType": 1,
-        "label": "Room",
-        "params": [
-          {
-            "encodeIndex": 72,
-            "label": "Level",
-          },
-          {
-            "encodeIndex": 70,
-            "label": "Decay",
-          },
-          {
-            "encodeIndex": 71,
-            "label": "Tone",
-          },
-        ],
-        "realName": "Room Reverb",
-      },
-      {
-        "encodeType": 2,
-        "label": "Hall",
-        "params": [
-          {
-            "encodeIndex": 73,
-            "label": "Level",
-          },
-          {
-            "encodeIndex": 70,
-            "label": "Decay",
-          },
-          {
-            "encodeIndex": 71,
-            "label": "PreDelay",
-          },
-          {
-            "encodeIndex": 72,
-            "label": "Liveliness",
-          },
-        ],
-        "realName": "Hall Reverb",
-      },
-      {
-        "encodeType": 3,
-        "label": "Plate",
-        "params": [
-          {
-            "encodeIndex": 71,
-            "label": "Level",
-          },
-          {
-            "encodeIndex": 70,
-            "label": "Decay",
-          },
-        ],
-        "realName": "Plate Reverb",
-      },
-      {
-        "encodeType": 4,
-        "label": "Spring",
-        "params": [
-          {
-            "encodeIndex": 71,
-            "label": "Level",
-          },
-          {
-            "encodeIndex": 70,
-            "label": "Decay",
-          },
-        ],
-        "realName": "Spring Reverb",
-      },
-      {
-        "encodeType": 5,
-        "label": "Shimmer",
-        "params": [
-          {
-            "encodeIndex": 70,
-            "label": "Mix",
-          },
-          {
-            "encodeIndex": 71,
-            "label": "Decay",
-          },
-          {
-            "encodeIndex": 72,
-            "label": "Shimmer",
-          },
-        ],
-        "realName": "Shimmer Reverb",
-      },
-      {
-        "encodeType": 6,
-        "label": "Damp",
-        "params": [
-          {
-            "encodeIndex": 70,
-            "label": "Mix",
-          },
-          {
-            "encodeIndex": 71,
-            "label": "Depth",
-          },
-        ],
-        "realName": "Damp Reverb",
-      },
-    ],
+    "linkStartIndex": 89,
+    "masterIndex": 84,
   },
 }
 `;

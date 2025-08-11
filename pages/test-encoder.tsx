@@ -4,26 +4,86 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
 /* eslint-disable @typescript-eslint/no-confusing-void-expression */
-import React, { useState, useEffect, useCallback } from 'react';
-import { QRCodeCanvas } from 'qrcode.react';
-import { encodeChain } from '../lib/core/encoder';
-import { createDefaultChain } from '../lib/core/helpers/create-default-chain';
-import { config } from '../lib/core/config';
-import { Blocks } from '../lib/core/interface';
+import React, { useState, useEffect, useCallback, useRef } from "react";
+import { QRCodeCanvas } from "qrcode.react";
+import jsQR from "jsqr";
+import { encodeChain } from "../lib/core/encoder";
+import { decodeChain } from "../lib/core/decoder";
+import { createDefaultChain } from "../lib/core/helpers/create-default-chain";
+import { config } from "../lib/core/config";
+import { Blocks } from "../lib/core/interface";
 
 type Chain = ReturnType<typeof createDefaultChain>;
 
 export default function TestEncoderPage(): React.ReactElement {
   const [chain, setChain] = useState<Chain>(() => createDefaultChain());
-  const [qrCode, setQrCode] = useState<string>('');
+  const [qrCode, setQrCode] = useState<string>("");
   const [bytes, setBytes] = useState<number[]>([]);
+  const [error, setError] = useState<string>("");
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Функции для работы с QR-кодом из изображения
+  const scanQrFromImage = (imageBitmap: ImageBitmap): string => {
+    const canvas = document.createElement("canvas");
+    canvas.width = imageBitmap.width;
+    canvas.height = imageBitmap.height;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("Failed to get canvas context");
+
+    ctx.drawImage(imageBitmap, 0, 0);
+    const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const code = jsQR(imgData.data, imgData.width, imgData.height);
+    return code?.data || "";
+  };
+
+  const readImageBitmap = (file: File): Promise<ImageBitmap> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error("Failed to read file"));
+      reader.onload = () => {
+        createImageBitmap(new Blob([reader.result as ArrayBuffer]))
+          .then(resolve)
+          .catch(() => {
+            const img = new Image();
+            img.onload = () => resolve(createImageBitmap(img));
+            img.onerror = () => reject(new Error("Invalid image"));
+            img.src = reader.result as string;
+          });
+      };
+      reader.readAsArrayBuffer(file);
+    });
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    void (async () => {
+      try {
+        setError("");
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        const bmp = await readImageBitmap(file);
+        const qrText = scanQrFromImage(bmp);
+        if (!qrText) throw new Error("QR код не найден на изображении");
+
+        const decodedChain = decodeChain(qrText);
+        setChain(decodedChain);
+        e.target.value = "";
+      } catch (ex) {
+        setError(ex instanceof Error ? ex.message : String(ex));
+      }
+    })();
+  };
+
+  const handleImportClick = () => {
+    fileInputRef.current?.click();
+  };
 
   const downloadQRCode = (): void => {
-    const canvas = document.querySelector('canvas');
+    const canvas = document.querySelector("canvas");
     if (canvas) {
-      const url = canvas.toDataURL('image/png');
-      const link = document.createElement('a');
-      link.download = 'chain-qr-code.png';
+      const url = canvas.toDataURL("image/png");
+      const link = document.createElement("a");
+      link.download = "chain-qr-code.png";
       link.href = url;
       link.click();
     }
@@ -36,56 +96,62 @@ export default function TestEncoderPage(): React.ReactElement {
       setQrCode(encoded.qrCode);
       setBytes([...encoded.rawBytes]);
     } catch (error) {
-      console.error('Ошибка при энкодинге:', error);
+      console.error("Ошибка при энкодинге:", error);
     }
   }, [chain]);
 
   // Функции для обновления чейна
-  const updateBlockEnabled = useCallback((blockKey: keyof Chain, enabled: boolean) => {
-    setChain(prev => ({
-      ...prev,
-      [blockKey]: {
-        ...prev[blockKey],
-        enabled
-      }
-    }));
-  }, []);
+  const updateBlockEnabled = useCallback(
+    (blockKey: keyof Chain, enabled: boolean) => {
+      setChain((prev) => ({
+        ...prev,
+        [blockKey]: {
+          ...prev[blockKey],
+          enabled,
+        },
+      }));
+    },
+    []
+  );
 
   const updateBlockType = useCallback((blockKey: keyof Chain, type: string) => {
-    setChain(prev => ({
+    setChain((prev) => ({
       ...prev,
       [blockKey]: {
         ...prev[blockKey],
-        type
-      }
+        type,
+      },
     }));
   }, []);
 
-  const updateBlockParam = useCallback((blockKey: keyof Chain, paramName: string, value: number) => {
-    setChain(prev => ({
-      ...prev,
-      [blockKey]: {
-        ...prev[blockKey],
-        params: {
-          ...prev[blockKey].params,
-          [paramName]: value
-        }
-      }
-    }));
-  }, []);
+  const updateBlockParam = useCallback(
+    (blockKey: keyof Chain, paramName: string, value: number) => {
+      setChain((prev) => ({
+        ...prev,
+        [blockKey]: {
+          ...prev[blockKey],
+          params: {
+            ...prev[blockKey].params,
+            [paramName]: value,
+          },
+        },
+      }));
+    },
+    []
+  );
 
   const resetToDefault = () => {
     setChain(createDefaultChain());
   };
 
   const getBlockTypes = (blockKey: Blocks) => {
-    return config[blockKey]?.types?.map(t => t.label) || [];
+    return config.blocks[blockKey]?.types?.map((t) => t.label) || [];
   };
 
   const getBlockParams = (blockKey: keyof Chain) => {
     const blockType = chain[blockKey].type;
-    const blockConfig = config[blockKey as Blocks];
-    const typeConfig = blockConfig?.types?.find(t => t.label === blockType);
+    const blockConfig = config.blocks[blockKey as Blocks];
+    const typeConfig = blockConfig?.types?.find((t) => t.label === blockType);
     return typeConfig?.params || [];
   };
 
@@ -98,7 +164,8 @@ export default function TestEncoderPage(): React.ReactElement {
             🎸 Interactive Chain Editor
           </h1>
           <p className="text-lg text-gray-600">
-            Редактируйте чейн эффектов и получайте NUX совместимый QR код в реальном времени
+            Редактируйте чейн эффектов и получайте NUX совместимый QR код в
+            реальном времени
           </p>
         </div>
 
@@ -106,18 +173,28 @@ export default function TestEncoderPage(): React.ReactElement {
         <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8 rounded-r-lg">
           <div className="flex">
             <div className="flex-shrink-0">
-              <svg className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+              <svg
+                className="h-5 w-5 text-blue-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clipRule="evenodd"
+                />
               </svg>
             </div>
             <div className="ml-3">
               <p className="text-sm text-blue-700">
-                <strong>Описание:</strong> Интерактивный редактор принимает чейн эффектов, 
-                мапит его на конфигурацию из{' '}
-                <code className="bg-blue-100 px-2 py-1 rounded">config.ts</code>{' '}
-                и генерирует <strong>NUX совместимый QR код</strong> с префиксом{' '}
-                <code className="bg-green-100 px-2 py-1 rounded text-green-800">nux://MightyAmp:</code>.{' '}
-                QR код обновляется автоматически при изменении параметров.
+                <strong>Описание:</strong> Интерактивный редактор принимает чейн
+                эффектов, мапит его на конфигурацию из{" "}
+                <code className="bg-blue-100 px-2 py-1 rounded">config.ts</code>{" "}
+                и генерирует <strong>NUX совместимый QR код</strong> с префиксом{" "}
+                <code className="bg-green-100 px-2 py-1 rounded text-green-800">
+                  nux://MightyAmp:
+                </code>
+                . QR код обновляется автоматически при изменении параметров.
               </p>
             </div>
           </div>
@@ -131,20 +208,43 @@ export default function TestEncoderPage(): React.ReactElement {
                 <h2 className="text-xl font-semibold text-gray-900">
                   🔧 Редактор чейна
                 </h2>
-                <button
-                  onClick={resetToDefault}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-                >
-                  Сбросить
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleImportClick}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    📷 Импорт из QR
+                  </button>
+                  <button
+                    onClick={resetToDefault}
+                    className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                  >
+                    Сбросить
+                  </button>
+                </div>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={handleFileSelect}
+                />
               </div>
+              {error && (
+                <div className="m-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
+                  {error}
+                </div>
+              )}
               <div className="p-6 space-y-6">
                 {Object.entries(chain).map(([blockKey, blockData]) => {
                   const blockTypes = getBlockTypes(blockKey as Blocks);
                   const blockParams = getBlockParams(blockKey as keyof Chain);
-                  
+
                   return (
-                    <div key={blockKey} className="border rounded-lg p-4 bg-gray-50">
+                    <div
+                      key={blockKey}
+                      className="border rounded-lg p-4 bg-gray-50"
+                    >
                       <div className="flex items-center justify-between mb-4">
                         <h3 className="text-lg font-medium text-gray-900 capitalize">
                           {blockKey}
@@ -153,13 +253,20 @@ export default function TestEncoderPage(): React.ReactElement {
                           <input
                             type="checkbox"
                             checked={blockData.enabled}
-                            onChange={(e) => updateBlockEnabled(blockKey as keyof Chain, e.target.checked)}
+                            onChange={(e) =>
+                              updateBlockEnabled(
+                                blockKey as keyof Chain,
+                                e.target.checked
+                              )
+                            }
                             className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                           />
-                          <span className="ml-2 text-sm text-gray-700">Включен</span>
+                          <span className="ml-2 text-sm text-gray-700">
+                            Включен
+                          </span>
                         </label>
                       </div>
-                      
+
                       {/* Type Selector */}
                       <div className="mb-4">
                         <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -167,12 +274,19 @@ export default function TestEncoderPage(): React.ReactElement {
                         </label>
                         <select
                           value={blockData.type}
-                          onChange={(e) => updateBlockType(blockKey as keyof Chain, e.target.value)}
+                          onChange={(e) =>
+                            updateBlockType(
+                              blockKey as keyof Chain,
+                              e.target.value
+                            )
+                          }
                           className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
                           disabled={!blockData.enabled}
                         >
-                          {blockTypes.map(type => (
-                            <option key={type} value={type}>{type}</option>
+                          {blockTypes.map((type) => (
+                            <option key={type} value={type}>
+                              {type}
+                            </option>
                           ))}
                         </select>
                       </div>
@@ -180,11 +294,16 @@ export default function TestEncoderPage(): React.ReactElement {
                       {/* Parameters */}
                       {blockParams.length > 0 && (
                         <div className="space-y-3">
-                          <h4 className="text-sm font-medium text-gray-700">Параметры</h4>
-                                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                             {blockParams.map(param => {
-                               const params = blockData.params as Record<string, number>;
-                               const currentValue = params[param.label] || 0;
+                          <h4 className="text-sm font-medium text-gray-700">
+                            Параметры
+                          </h4>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {blockParams.map((param) => {
+                              const params = blockData.params as Record<
+                                string,
+                                number
+                              >;
+                              const currentValue = params[param.label] || 0;
                               return (
                                 <div key={param.label}>
                                   <label className="block text-xs font-medium text-gray-600 mb-1">
@@ -196,11 +315,13 @@ export default function TestEncoderPage(): React.ReactElement {
                                       min="0"
                                       max="100"
                                       value={currentValue}
-                                      onChange={(e) => updateBlockParam(
-                                        blockKey as keyof Chain, 
-                                        param.label, 
-                                        parseInt(e.target.value)
-                                      )}
+                                      onChange={(e) =>
+                                        updateBlockParam(
+                                          blockKey as keyof Chain,
+                                          param.label,
+                                          parseInt(e.target.value)
+                                        )
+                                      }
                                       className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                                       disabled={!blockData.enabled}
                                     />
@@ -209,11 +330,13 @@ export default function TestEncoderPage(): React.ReactElement {
                                       min="0"
                                       max="100"
                                       value={currentValue}
-                                      onChange={(e) => updateBlockParam(
-                                        blockKey as keyof Chain, 
-                                        param.label, 
-                                        parseInt(e.target.value) || 0
-                                      )}
+                                      onChange={(e) =>
+                                        updateBlockParam(
+                                          blockKey as keyof Chain,
+                                          param.label,
+                                          parseInt(e.target.value) || 0
+                                        )
+                                      }
                                       className="w-16 p-1 text-xs border border-gray-300 rounded text-center"
                                       disabled={!blockData.enabled}
                                     />
@@ -242,7 +365,11 @@ export default function TestEncoderPage(): React.ReactElement {
               </div>
               <div className="p-6 text-center">
                 <div className="inline-block p-4 bg-white border-2 border-gray-200 rounded-lg mb-4">
-                  <QRCodeCanvas value={qrCode} size={200} includeMargin={true} />
+                  <QRCodeCanvas
+                    value={qrCode}
+                    size={200}
+                    includeMargin={true}
+                  />
                 </div>
                 <div className="space-y-2">
                   <button
@@ -276,7 +403,8 @@ export default function TestEncoderPage(): React.ReactElement {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="bg-gray-50 px-6 py-4 border-b">
                 <h2 className="text-xl font-semibold text-gray-900">
-                  🔢 Байтовый массив ({bytes.filter(b => b !== 0).length} ненулевых из {bytes.length})
+                  🔢 Байтовый массив ({bytes.filter((b) => b !== 0).length}{" "}
+                  ненулевых из {bytes.length})
                 </h2>
               </div>
               <div className="p-6">
@@ -284,17 +412,18 @@ export default function TestEncoderPage(): React.ReactElement {
                   {bytes.map((byte, index) => {
                     const isNonZero = byte !== 0;
                     const isHeader = index >= 2 && index <= 11; // Примерно заголовки блоков
-                    
+
                     return (
                       <div
                         key={index}
                         className={`
                           p-1 text-center rounded border text-xs
-                          ${isNonZero 
-                            ? isHeader
-                              ? 'bg-yellow-100 border-yellow-400 font-bold text-yellow-800'
-                              : 'bg-green-100 border-green-400 font-bold text-green-800'
-                            : 'bg-gray-50 border-gray-200 text-gray-500'
+                          ${
+                            isNonZero
+                              ? isHeader
+                                ? "bg-yellow-100 border-yellow-400 font-bold text-yellow-800"
+                                : "bg-green-100 border-green-400 font-bold text-green-800"
+                              : "bg-gray-50 border-gray-200 text-gray-500"
                           }
                         `}
                         title={`Index ${index}: ${byte}`}
@@ -319,20 +448,29 @@ export default function TestEncoderPage(): React.ReactElement {
                   <div>
                     <span className="text-gray-600">Активных блоков:</span>
                     <span className="font-bold ml-2">
-                      {Object.values(chain).filter(block => block.enabled).length}
+                      {
+                        Object.values(chain).filter((block) => block.enabled)
+                          .length
+                      }
                     </span>
                   </div>
                   <div>
                     <span className="text-gray-600">Всего блоков:</span>
-                    <span className="font-bold ml-2">{Object.keys(chain).length}</span>
+                    <span className="font-bold ml-2">
+                      {Object.keys(chain).length}
+                    </span>
                   </div>
                   <div>
                     <span className="text-gray-600">Размер QR:</span>
-                    <span className="font-bold ml-2">{qrCode.length} символов</span>
+                    <span className="font-bold ml-2">
+                      {qrCode.length} символов
+                    </span>
                   </div>
                   <div>
                     <span className="text-gray-600">Ненулевых байт:</span>
-                    <span className="font-bold ml-2">{bytes.filter(b => b !== 0).length}</span>
+                    <span className="font-bold ml-2">
+                      {bytes.filter((b) => b !== 0).length}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -349,11 +487,11 @@ export default function TestEncoderPage(): React.ReactElement {
           </div>
           <div className="p-8 text-center">
             <div className="inline-block p-6 bg-white border-2 border-gray-200 rounded-xl shadow-lg">
-              <QRCodeCanvas 
-                value={qrCode} 
-                size={300} 
+              <QRCodeCanvas
+                value={qrCode}
+                size={300}
                 level="H"
-                includeMargin={true} 
+                includeMargin={true}
               />
             </div>
             <div className="mt-4">

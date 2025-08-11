@@ -31,13 +31,13 @@
         "@typescript-eslint/typedef": [
           "error",
           {
-            "arrayDestructuring": true,
-            "arrowParameter": true,
+            "arrayDestructuring": false,
+            "arrowParameter": false,
             "memberVariableDeclaration": true,
             "objectDestructuring": true,
             "parameter": true,
             "propertyDeclaration": true,
-            "variableDeclaration": true
+            "variableDeclaration": false
           }
         ],
         "@typescript-eslint/no-unnecessary-condition": ["error"],

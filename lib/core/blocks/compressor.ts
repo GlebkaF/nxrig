@@ -22,6 +22,7 @@ export type CompressorParams =
   | ChainItem<CompressorType.RoseComp, "Level" | "Sustain">;
 
 export const compressor: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iCMP,
   types: [
     {
       label: CompressorType.KComp,

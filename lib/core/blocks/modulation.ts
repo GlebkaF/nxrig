@@ -1,111 +1,6 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
 import { BlockConfig, ChainItem } from "lib/core/interface";
 
-// Mod: {
-//   types: {
-//     "CE-2": {
-//       realName: "CE-2",
-//       params: {
-//         MOD_Para1: { label: "Rate", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para2: { label: "Depth", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     "ST Chorus": {
-//       realName: "ST Chorus",
-//       params: {
-//         MOD_Para3: { label: "Rate", unit: "%", min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para2: { label: "Width", unit: "%", min: 0, max: 100 }, // default: 36, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para1: { label: "Intensity", unit: "%", min: 0, max: 100 }, // default: 74, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     Vibrato: {
-//       realName: "Vibrato",
-//       params: {
-//         MOD_Para1: { label: "Rate", unit: "%", min: 0, max: 100 }, // default: 56, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para2: { label: "Depth", unit: "%", min: 0, max: 100 }, // default: 68, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     Detune: {
-//       realName: "Detune",
-//       params: {
-//         MOD_Para1: { label: "Shift-L", unit: "%", min: 0, max: 100 }, // default: 54, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para3: { label: "Shift-R", unit: "%", min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para2: { label: "Mix", unit: "%", min: 0, max: 100 }, // default: 80, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     Flanger: {
-//       realName: "Flanger",
-//       params: {
-//         MOD_Para2: { label: "Rate", unit: "%", min: 0, max: 100 }, // default: 59, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para3: { label: "Width", unit: "%", min: 0, max: 100 }, // default: 63, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para1: { label: "Level", unit: "%", min: 0, max: 100 }, // default: 59, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para4: { label: "Feedback", unit: "%", min: 0, max: 100 }, // default: 63, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     "Phase 90": {
-//       realName: "Phase 90",
-//       params: {
-//         MOD_Para1: { label: "Speed", unit: "%", min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     "Phase 100": {
-//       realName: "Phase 100",
-//       params: {
-//         MOD_Para2: { label: "Speed", unit: "%", min: 0, max: 100 }, // default: 39, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para1: { label: "Intensity", unit: "%", min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     "S.C.F.": {
-//       realName: "S.C.F.",
-//       params: {
-//         MOD_Para1: { label: "Speed", unit: "%", min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para2: { label: "Width", unit: "%", min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para4: { label: "Intensity", unit: "%", min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para3: { label: "Mode", unit: "%", min: 0, max: 100 }, // default: 1, formatter: ValueFormatters.scfMode
-//       },
-//     },
-//     "U-Vibe": {
-//       realName: "U-Vibe",
-//       params: {
-//         MOD_Para1: { label: "Speed", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para2: { label: "Volume", unit: "%", min: 0, max: 100 }, // default: 80, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para3: { label: "Intensity", unit: "%", min: 0, max: 100 }, // default: 80, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para4: { label: "Mode", unit: "%", min: 0, max: 100 }, // default: 0, formatter: ValueFormatters.vibeModePro
-//       },
-//     },
-//     Tremolo: {
-//       realName: "Tremolo",
-//       params: {
-//         MOD_Para1: { label: "Rate", unit: "%", min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para2: { label: "Depth", unit: "%", min: 0, max: 100 }, // default: 15, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     Rotary: {
-//       realName: "Rotary",
-//       params: {
-//         MOD_Para2: { label: "Speed", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para1: { label: "Balance", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     "SCH-1": {
-//       realName: "SCH-1",
-//       params: {
-//         MOD_Para1: { label: "Rate", unit: "%", min: 0, max: 100 }, // default: 30, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para2: { label: "Depth", unit: "%", min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para3: { label: "Tone", unit: "%", min: 0, max: 100 }, // default: 60, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//     "Mono Octave": {
-//       realName: "Mono Octave",
-//       params: {
-//         MOD_Para1: { label: "Sub", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para2: { label: "Dry", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
-//         MOD_Para3: { label: "Up", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
-//   },
-// },
-
 export enum ModulationType {
   CE1 = "CE-1",
   CE2 = "CE-2",
@@ -146,6 +41,7 @@ const TYPES: Record<ModulationType, number> = {
 };
 
 export const modulation: BlockConfig = {
+  encoderHeadIndex: NuxMp3PresetIndex.Head_iMOD,
   types: [
     {
       label: ModulationType.CE1,
@@ -155,10 +51,12 @@ export const modulation: BlockConfig = {
         {
           label: "Rate",
           encodeIndex: NuxMp3PresetIndex.MOD_Para3,
+          // formatter: ValueFormatters.percentageMPPro
         },
         {
           label: "Depth",
           encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
         },
         {
           label: "Intensity",
@@ -166,6 +64,276 @@ export const modulation: BlockConfig = {
         },
       ],
     },
-    // TODO: add other types
+    {
+      label: ModulationType.CE2,
+      realName: "CE-2",
+      encodeType: TYPES[ModulationType.CE2],
+      params: [
+        {
+          label: "Rate",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Depth",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+
+    {
+      label: ModulationType.STChorus,
+      realName: "ST Chorus",
+      encodeType: TYPES[ModulationType.STChorus],
+      params: [
+        {
+          label: "Rate",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para3,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Width",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Intensity",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+
+    {
+      label: ModulationType.Vibrato,
+      realName: "Vibrato",
+      encodeType: TYPES[ModulationType.Vibrato],
+      params: [
+        {
+          label: "Rate",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Depth",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+
+    {
+      label: ModulationType.Detune,
+      realName: "Detune",
+      encodeType: TYPES[ModulationType.Detune],
+      params: [
+        {
+          label: "Shift-L",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Shift-R",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para3,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Mix",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+    {
+      label: ModulationType.Flanger,
+      realName: "Flanger",
+      encodeType: TYPES[ModulationType.Flanger],
+      params: [
+        {
+          label: "Rate",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Width",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para3,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Level",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Feedback",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para4,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+    {
+      label: ModulationType.Phase90,
+      realName: "Phase 90",
+      encodeType: TYPES[ModulationType.Phase90],
+      params: [
+        {
+          label: "Speed",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+    {
+      label: ModulationType.Phase100,
+      realName: "Phase 100",
+      encodeType: TYPES[ModulationType.Phase100],
+      params: [
+        {
+          label: "Speed",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Intensity",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+    {
+      label: ModulationType.SCF,
+      realName: "S.C.F.",
+      encodeType: TYPES[ModulationType.SCF],
+      params: [
+        {
+          label: "Speed",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Width",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Intensity",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para4,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Mode",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para3,
+          // Chorus, P.M., Flanger
+          // formatter: ValueFormatters.scfMode
+        },
+      ],
+    },
+    {
+      label: ModulationType.UVibe,
+      realName: "U-Vibe",
+      encodeType: TYPES[ModulationType.UVibe],
+      params: [
+        {
+          label: "Speed",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Volume",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Intensity",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para3,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Mode",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para4,
+          // Chorus, Vibratto
+          // formatter: ValueFormatters.vibeModePro
+        },
+      ],
+    },
+    {
+      label: ModulationType.Tremolo,
+      realName: "Tremolo",
+      encodeType: TYPES[ModulationType.Tremolo],
+      params: [
+        {
+          label: "Rate",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Depth",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+    {
+      label: ModulationType.Rotary,
+      realName: "Rotary",
+      encodeType: TYPES[ModulationType.Rotary],
+      params: [
+        {
+          label: "Speed",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Balance",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+    {
+      label: ModulationType.SCH1,
+      realName: "SCH-1",
+      encodeType: TYPES[ModulationType.SCH1],
+      params: [
+        {
+          label: "Rate",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Depth",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Tone",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para3,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+    {
+      label: ModulationType.MonoOctave,
+      realName: "Mono Octave",
+      encodeType: TYPES[ModulationType.MonoOctave],
+      params: [
+        {
+          label: "Sub",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Dry",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Up",
+          encodeIndex: NuxMp3PresetIndex.MOD_Para3,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
   ],
 };
