@@ -4,17 +4,13 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
 
-import { config, blockHeadMapping, encoderConfig } from './config';
-import { createDefaultChain } from './helpers/create-default-chain';
-import { Blocks } from './interface';
-import { NuxMp3PresetIndex } from './const';
-
-// Улучшенные типы
-type Chain = ReturnType<typeof createDefaultChain>;
-type ChainBlock = Chain[keyof Chain];
+import { config, blockHeadMapping, encoderConfig } from "./config";
+import { createDefaultChain } from "./helpers/create-default-chain";
+import { Blocks, Chain } from "./interface";
+import { NuxMp3PresetIndex } from "./const";
 
 // Константы NUX
-const NUX_PREFIX = 'nux://MightyAmp:' as const;
+const NUX_PREFIX = "nux://MightyAmp:" as const;
 const DISABLED_FLAG = 0x40 as const;
 const TYPE_MASK = 0x3f as const;
 const DATA_SIZE = 113 as const;
@@ -35,10 +31,10 @@ export interface EncodedChain {
 const clamp = (value: number): number => Math.max(0, Math.min(100, value));
 
 const bytesToB64 = (bytes: Uint8Array): string => {
-  const chars = Array.from(bytes, byte => String.fromCharCode(byte)).join('');
-  return typeof window !== 'undefined' 
+  const chars = Array.from(bytes, (byte) => String.fromCharCode(byte)).join("");
+  return typeof window !== "undefined"
     ? window.btoa(chars)
-    : Buffer.from(chars, 'binary').toString('base64');
+    : Buffer.from(chars, "binary").toString("base64");
 };
 
 const getHeadIndex = (blockType: Blocks): number => {
@@ -54,12 +50,14 @@ export const encodeChain = (chain: Chain): EncodedChain => {
   for (const [blockKey, blockData] of Object.entries(chain)) {
     const blockType = blockKey as Blocks;
     const blockConfig = config[blockType];
-    
+
     if (!blockConfig?.types) continue;
-    
-    const typeConfig = blockConfig.types.find(t => t.label === blockData.type);
+
+    const typeConfig = blockConfig.types.find(
+      (t) => t.label === blockData.type
+    );
     if (!typeConfig) continue;
-    
+
     // Устанавливаем заголовок блока
     const headIndex = getHeadIndex(blockType);
     if (headIndex >= 0) {
@@ -67,7 +65,7 @@ export const encodeChain = (chain: Chain): EncodedChain => {
       if (!blockData.enabled) value |= DISABLED_FLAG;
       data[headIndex] = value;
     }
-    
+
     // Устанавливаем параметры
     for (const paramConfig of typeConfig.params) {
       const params = blockData.params as Record<string, number>;
@@ -96,5 +94,5 @@ export const encodeChain = (chain: Chain): EncodedChain => {
 };
 
 // Утилита для энкодинга дефолтного чейна
-export const encodeDefaultChain = (): EncodedChain => 
+export const encodeDefaultChain = (): EncodedChain =>
   encodeChain(createDefaultChain());
