@@ -1,273 +1,6 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
 import { BlockConfig, ChainItem, TypeParamConfig } from "lib/core/interface";
 
-// Cabinet: {
-//   types: {
-
-//     DR112: {
-//       realName: "Fender Deluxe Reverb 1x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     TR212: {
-//       realName: "Fender Twin Reverb 2x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     HIWIRE412: {
-//       realName: "Hiwatt 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     "CALI 112": {
-//       realName: "Mesa/Boogie 1x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     A112: {
-//       realName: "American 1x12 (Open Back)",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     GB412: {
-//       realName: "Celestion Greenback 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     M1960AX: {
-//       realName: "Marshall 1960AX 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     M1960AV: {
-//       realName: "Marshall 1960AV 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     M1960TV: {
-//       realName: "Marshall 1960TV 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     SLO412: {
-//       realName: "Soldano 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     "FIREMAN 412": {
-//       realName: "Friedman 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     "RECT 412": {
-//       realName: "Mesa Boogie Rectifier 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     DIE412: {
-//       realName: "Diezel 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     MATCH212: {
-//       realName: "Matchless 2x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     UBER412: {
-//       realName: "Bogner Uberkab 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     BS410: {
-//       realName: "Fender Bassman 4x10",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     A212: {
-//       realName: "American 2x12 (Open Back)",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     M1960AHW: {
-//       realName: "Marshall 1960AHW 4x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     M1936: {
-//       realName: "Marshall 1936 2x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     BUDDA112: {
-//       realName: "Budda 1x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     Z212: {
-//       realName: "Dr. Z 2x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     SUPERVERB410: {
-//       realName: "Fender Super Reverb 4x10",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     VIBROKING310: {
-//       realName: "Fender Vibro‑King 3x10",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     AGL_DB810: {
-//       realName: "Aguilar DB810 8x10",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     AMP_SV212: {
-//       realName: "Ampeg SVT 2x12",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     AMP_SV410: {
-//       realName: "Ampeg SVT 4x10",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     AMP_SV810: {
-//       realName: "Ampeg SVT 8x10",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     BASSGUY410: {
-//       realName: "Fender Bassman 4x10",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     EDEN410: {
-//       realName: "Eden 4x10",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     MKB410: {
-//       realName: "Markbass 4x10",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     "G-HBIRD": {
-//       realName: "Gibson Hummingbird (Acoustic IR)",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     "G-J15": {
-//       realName: "Gibson J‑15 (Acoustic IR)",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-//     },
-//     "M-D45": {
-//       realName: "Martin D‑45 (Acoustic IR)",
-//       params: {
-//         CAB_Para4: { label: "Level", unit: "dB", min: -12, max: 12 },
-//         CAB_Para5: { label: "Low Cut", unit: "Hz", min: 20, max: 300 },
-//         CAB_Para6: { label: "High Cut", unit: "Hz", min: 5000, max: 20000 },
-//       },
-
 export enum CabinetType {
   JZ120 = "JZ120",
   DR112 = "DR112",
@@ -373,6 +106,203 @@ export const cabinet: BlockConfig = {
       encodeType: TYPES[CabinetType.JZ120],
       params: cabParams,
     },
-    // TODO: add other types
+    {
+      label: CabinetType.DR112,
+      realName: "Fender Deluxe Reverb 1x12",
+      encodeType: TYPES[CabinetType.DR112],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.TR212,
+      realName: "Fender Twin Reverb 2x12",
+      encodeType: TYPES[CabinetType.TR212],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.HIWIRE412,
+      realName: "Hiwatt 4x12",
+      encodeType: TYPES[CabinetType.HIWIRE412],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CALI112,
+      realName: "Mesa/Boogie 1x12",
+      encodeType: TYPES[CabinetType.CALI112],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.A112,
+      realName: "American 1x12 (Open Back)",
+      encodeType: TYPES[CabinetType.A112],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.GB412,
+      realName: "Celestion Greenback 4x12",
+      encodeType: TYPES[CabinetType.GB412],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.M1960AX,
+      realName: "Marshall 1960AX 4x12",
+      encodeType: TYPES[CabinetType.M1960AX],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.M1960AV,
+      realName: "Marshall 1960AV 4x12",
+      encodeType: TYPES[CabinetType.M1960AV],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.M1960TV,
+      realName: "Marshall 1960TV 4x12",
+      encodeType: TYPES[CabinetType.M1960TV],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.SLO412,
+      realName: "Soldano 4x12",
+      encodeType: TYPES[CabinetType.SLO412],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.FIREMAN412,
+      realName: "Friedman 4x12",
+      encodeType: TYPES[CabinetType.FIREMAN412],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.RECT412,
+      realName: "Mesa Boogie Rectifier 4x12",
+      encodeType: TYPES[CabinetType.RECT412],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.DIE412,
+      realName: "Diezel 4x12",
+      encodeType: TYPES[CabinetType.DIE412],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.MATCH212,
+      realName: "Matchless 2x12",
+      encodeType: TYPES[CabinetType.MATCH212],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.UBER412,
+      realName: "Bogner Uberkab 4x12",
+      encodeType: TYPES[CabinetType.UBER412],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.BS410,
+      realName: "Fender Bassman 4x10",
+      encodeType: TYPES[CabinetType.BS410],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.A212,
+      realName: "American 2x12 (Open Back)",
+      encodeType: TYPES[CabinetType.A212],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.M1960AHW,
+      realName: "Marshall 1960AHW 4x12",
+      encodeType: TYPES[CabinetType.M1960AHW],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.M1936,
+      realName: "Marshall 1936 2x12",
+      encodeType: TYPES[CabinetType.M1936],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.BUDDA112,
+      realName: "Budda 1x12",
+      encodeType: TYPES[CabinetType.BUDDA112],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.Z212,
+      realName: "Dr. Z 2x12",
+      encodeType: TYPES[CabinetType.Z212],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.SUPERVERB410,
+      realName: "Fender Super Reverb 4x10",
+      encodeType: TYPES[CabinetType.SUPERVERB410],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.VIBROKING310,
+      realName: "Fender Vibro‑King 3x10",
+      encodeType: TYPES[CabinetType.VIBROKING310],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.AGL_DB810,
+      realName: "Aguilar DB810 8x10",
+      encodeType: TYPES[CabinetType.AGL_DB810],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.AMP_SV212,
+      realName: "Ampeg SVT 2x12",
+      encodeType: TYPES[CabinetType.AMP_SV212],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.AMP_SV410,
+      realName: "Ampeg SVT 4x10",
+      encodeType: TYPES[CabinetType.AMP_SV410],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.AMP_SV810,
+      realName: "Ampeg SVT 8x10",
+      encodeType: TYPES[CabinetType.AMP_SV810],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.BASSGUY410,
+      realName: "Fender Bassman 4x10",
+      encodeType: TYPES[CabinetType.BASSGUY410],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.EDEN410,
+      realName: "Eden 4x10",
+      encodeType: TYPES[CabinetType.EDEN410],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.MKB410,
+      realName: "Markbass 4x10",
+      encodeType: TYPES[CabinetType.MKB410],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.G_HBIRD,
+      realName: "Gibson Hummingbird (Acoustic IR)",
+      encodeType: TYPES[CabinetType.G_HBIRD],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.G_J15,
+      realName: "Gibson J‑15 (Acoustic IR)",
+      encodeType: TYPES[CabinetType.G_J15],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.M_D45,
+      realName: "Martin D‑45 (Acoustic IR)",
+      encodeType: TYPES[CabinetType.M_D45],
+      params: cabParams,
+    },
   ],
 };
