@@ -4,9 +4,11 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
 /* eslint-disable @typescript-eslint/no-confusing-void-expression */
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
+import jsQR from "jsqr";
 import { encodeChain } from "../lib/core/encoder";
+import { decodeChain } from "../lib/core/decoder";
 import { createDefaultChain } from "../lib/core/helpers/create-default-chain";
 import { config } from "../lib/core/config";
 import { Blocks } from "../lib/core/interface";
@@ -17,6 +19,64 @@ export default function TestEncoderPage(): React.ReactElement {
   const [chain, setChain] = useState<Chain>(() => createDefaultChain());
   const [qrCode, setQrCode] = useState<string>("");
   const [bytes, setBytes] = useState<number[]>([]);
+  const [error, setError] = useState<string>("");
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Функции для работы с QR-кодом из изображения
+  const scanQrFromImage = (imageBitmap: ImageBitmap): string => {
+    const canvas = document.createElement("canvas");
+    canvas.width = imageBitmap.width;
+    canvas.height = imageBitmap.height;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("Failed to get canvas context");
+
+    ctx.drawImage(imageBitmap, 0, 0);
+    const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const code = jsQR(imgData.data, imgData.width, imgData.height);
+    return code?.data || "";
+  };
+
+  const readImageBitmap = (file: File): Promise<ImageBitmap> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error("Failed to read file"));
+      reader.onload = () => {
+        createImageBitmap(new Blob([reader.result as ArrayBuffer]))
+          .then(resolve)
+          .catch(() => {
+            const img = new Image();
+            img.onload = () => resolve(createImageBitmap(img));
+            img.onerror = () => reject(new Error("Invalid image"));
+            img.src = reader.result as string;
+          });
+      };
+      reader.readAsArrayBuffer(file);
+    });
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    void (async () => {
+      try {
+        setError("");
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        const bmp = await readImageBitmap(file);
+        const qrText = scanQrFromImage(bmp);
+        if (!qrText) throw new Error("QR код не найден на изображении");
+
+        const decodedChain = decodeChain(qrText);
+        setChain(decodedChain);
+        e.target.value = "";
+      } catch (ex) {
+        setError(ex instanceof Error ? ex.message : String(ex));
+      }
+    })();
+  };
+
+  const handleImportClick = () => {
+    fileInputRef.current?.click();
+  };
 
   const downloadQRCode = (): void => {
     const canvas = document.querySelector("canvas");
@@ -148,13 +208,33 @@ export default function TestEncoderPage(): React.ReactElement {
                 <h2 className="text-xl font-semibold text-gray-900">
                   🔧 Редактор чейна
                 </h2>
-                <button
-                  onClick={resetToDefault}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-                >
-                  Сбросить
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleImportClick}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    📷 Импорт из QR
+                  </button>
+                  <button
+                    onClick={resetToDefault}
+                    className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                  >
+                    Сбросить
+                  </button>
+                </div>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={handleFileSelect}
+                />
               </div>
+              {error && (
+                <div className="m-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
+                  {error}
+                </div>
+              )}
               <div className="p-6 space-y-6">
                 {Object.entries(chain).map(([blockKey, blockData]) => {
                   const blockTypes = getBlockTypes(blockKey as Blocks);
