@@ -1,16 +1,16 @@
-import { config } from "./config";
+import {
+  config,
+  NUX_PREFIX,
+  DISABLED_FLAG,
+  TYPE_MASK,
+  DATA_SIZE,
+  HEADER_SIZE,
+  TOTAL_SIZE,
+  PRODUCT_ID,
+  VERSION,
+  DEFAULT_MASTER,
+} from "./config";
 import { Blocks, Chain } from "./interface";
-
-// Константы NUX MP3, если появятся другие устройства, то их нужно будет перенести в конфиг
-const NUX_PREFIX = "nux://MightyAmp:" as const;
-const DISABLED_FLAG = 0x40 as const;
-const TYPE_MASK = 0x3f as const;
-const DATA_SIZE = 113 as const;
-const HEADER_SIZE = 2 as const;
-const TOTAL_SIZE = 115 as const; // HEADER_SIZE + DATA_SIZE
-const PRODUCT_ID = 15 as const;
-const VERSION = 1 as const;
-const DEFAULT_MASTER = 50;
 
 // Результат энкодинга
 interface EncodedChain {
