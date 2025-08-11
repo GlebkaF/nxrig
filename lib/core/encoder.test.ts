@@ -1,10 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { createDefaultChain } from "./helpers/create-default-chain";
 import { encodeChain, encodeDefaultChain } from "./encoder";
-import { encoderConfig } from "./config";
+import { encoderConfig, config } from "./config";
 import { Blocks } from "./interface";
-import { blockHeadMapping } from "./config";
-import { NuxMp3PresetIndex } from "./const";
 
 describe("Core Encoder Tests", () => {
   describe("Basic Encoding", () => {
@@ -143,47 +141,76 @@ describe("Core Encoder Tests", () => {
     });
   });
 
-  describe("Head Index Tests", () => {
-    it(
-      "should encode blocks with correct head indices",
-      () => {
-        const chain = createDefaultChain();
-        const encoded = encodeChain(chain);
+  describe("Block State and Head Index Tests", () => {
+    it("should encode blocks with correct head indices", () => {
+      const chain = createDefaultChain();
+      const encoded = encodeChain(chain);
 
-        // Проверяем, что каждый блок закодирован с правильным индексом заголовка
-        Object.entries(blockHeadMapping).forEach(([_blockType, headKey]) => {
-          const expectedIndex = NuxMp3PresetIndex[headKey];
+      // Проверяем что все блоки закодированы в правильных позициях
+      Object.entries(config).forEach(([_blockType, blockConfig]) => {
+        const headIndex = blockConfig.encoderHeadIndex;
+        if (headIndex >= 0) {
+          // Проверяем что в позиции заголовка есть какое-то значение (не 0)
+          expect(encoded.rawBytes[headIndex + 2]).toBeGreaterThan(0);
+        }
+      });
+    });
 
-          // Проверяем, что байт на ожидаемом индексе не равен 0 (должен содержать тип блока)
-          expect(encoded.rawBytes[expectedIndex + 2]).not.toBe(0); // +2 для заголовка
-        });
-      },
-      { skip: true }
-    );
+    it("should encode enabled and disabled states with correct flags", () => {
+      const chain = createDefaultChain();
+      const DISABLED_FLAG = 0x40;
 
-    it(
-      "should encode disabled blocks with DISABLED_FLAG",
-      () => {
-        const chain = createDefaultChain();
-        const DISABLED_FLAG = 0x40;
+      // Отключаем все блоки
+      Object.keys(chain).forEach((blockType) => {
+        chain[blockType as Blocks].enabled = false;
+      });
 
-        // Отключаем все блоки
-        Object.keys(chain).forEach((blockType) => {
-          chain[blockType as Blocks].enabled = false;
-        });
+      const encoded = encodeChain(chain);
 
-        const encoded = encodeChain(chain);
-
-        // Проверяем, что все блоки закодированы с флагом DISABLED
-        Object.entries(blockHeadMapping).forEach(([_blockType, headKey]) => {
-          const index = NuxMp3PresetIndex[headKey];
-
-          const value = encoded.rawBytes[index + 2] as number; // +2 для заголовка
+      // Проверяем что все блоки имеют флаг DISABLED
+      Object.entries(config).forEach(([_blockType, blockConfig]) => {
+        const headIndex = blockConfig.encoderHeadIndex;
+        if (headIndex >= 0) {
+          const value = encoded.rawBytes[headIndex + 2] ?? 0;
           expect(value & DISABLED_FLAG).toBe(DISABLED_FLAG);
-        });
-      },
-      { skip: true }
-    );
+        }
+      });
+    });
+    it("should encode blocks with different types correctly", () => {
+      const chain = createDefaultChain();
+      const encoded = encodeChain(chain);
+
+      // Проверяем базовую структуру результата
+      expect(encoded.bytes).toHaveLength(115);
+      expect(encoded.qrCode).toMatch(/^nux:\/\/MightyAmp:/);
+
+      // Проверяем что все блоки закодированы (результат имеет правильный размер)
+      const base64Part = encoded.qrCode.replace("nux://MightyAmp:", "");
+      const decodedLength =
+        typeof window !== "undefined"
+          ? window.atob(base64Part).length
+          : Buffer.from(base64Part, "base64").length;
+      expect(decodedLength).toBe(115);
+    });
+
+    it("should encode chain with all blocks disabled correctly", () => {
+      const chain = createDefaultChain();
+
+      // Отключаем все блоки
+      Object.keys(chain).forEach((blockType) => {
+        chain[blockType as Blocks].enabled = false;
+      });
+
+      const encoded = encodeChain(chain);
+
+      // Проверяем что результат валидный
+      expect(encoded.bytes).toHaveLength(115);
+      expect(encoded.qrCode).toMatch(/^nux:\/\/MightyAmp:/);
+
+      // Проверяем что закодированная цепь отличается от цепи с включенными блоками
+      const enabledChain = encodeChain(createDefaultChain());
+      expect(encoded.qrCode).not.toBe(enabledChain.qrCode);
+    });
 
     it("should handle invalid block types gracefully", () => {
       const chain = createDefaultChain();
