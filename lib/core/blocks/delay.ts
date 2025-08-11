@@ -1,46 +1,5 @@
 import { NuxMp3PresetIndex } from "lib/core/const";
 import { BlockConfig, ChainItem } from "lib/core/interface";
-// Delay: {
-//   types: {
-//     "Digital Delay": {
-//       params: {
-//         DLY_Para1: { label: "E.Level", unit: "%", min: 0, max: 100 },
-//         DLY_Para2: { label: "F.Back", unit: "%", min: 0, max: 100 },
-//         DLY_Para3: { label: "D.Time", unit: "ms", min: 61, max: 752 },
-//       },
-//     },
-
-//     "Mod Delay": {
-//       params: {
-//         DLY_Para2: { label: "Level", unit: "%", min: 0, max: 100 },
-//         DLY_Para1: { label: "Time", unit: "ms", min: 61, max: 752 },
-//         DLY_Para4: { label: "Repeat", unit: "%", min: 0, max: 100 },
-//         DLY_Para3: { label: "Mod", unit: "%", min: 0, max: 100 },
-//       },
-//     },
-//     "Tape Echo": {
-//       params: {
-//         DLY_Para2: { label: "Level", unit: "%", min: 0, max: 100 },
-//         DLY_Para1: { label: "Time", unit: "ms", min: 61, max: 752 },
-//         DLY_Para3: { label: "Repeat", unit: "%", min: 0, max: 100 },
-//       },
-//     },
-//     "Pan Delay": {
-//       params: {
-//         DLY_Para3: { label: "Level", unit: "%", min: 0, max: 100 },
-//         DLY_Para1: { label: "Time", unit: "ms", min: 61, max: 752 },
-//         DLY_Para2: { label: "Repeat", unit: "%", min: 0, max: 100 },
-//       },
-//     },
-//     "Phi Delay": {
-//       params: {
-//         DLY_Para1: { label: "Time", unit: "ms", min: 61, max: 752 },
-//         DLY_Para2: { label: "Repeat", unit: "%", min: 0, max: 100 },
-//         DLY_Para3: { label: "Mix", unit: "%", min: 0, max: 100 },
-//       },
-//     },
-//   },
-// },
 
 export enum DelayType {
   DigitalDelay = "Digital Delay",
@@ -81,7 +40,7 @@ export const delay: BlockConfig = {
         {
           label: "Rate",
           encodeIndex: NuxMp3PresetIndex.DLY_Para1,
-          // formatter: bmp (от 1489bmp до 150bmp)
+          // formatter: bmp (от 1490bmp до 149bmp) - здесь и дальше границы не включаются
         },
         {
           label: "Echo",
@@ -90,6 +49,123 @@ export const delay: BlockConfig = {
         },
       ],
     },
-    // TODO: add other types
+    {
+      label: DelayType.DigitalDelay,
+      realName: "Digital Delay",
+      encodeType: TYPES[DelayType.DigitalDelay],
+      params: [
+        {
+          label: "E.Level",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Feedback",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Time",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para3,
+          // formatter: bmp (от 753bmp до 60bmp)
+        },
+      ],
+    },
+
+    {
+      label: DelayType.ModDelay,
+      realName: "Modulation Delay",
+      encodeType: TYPES[DelayType.ModDelay],
+      params: [
+        {
+          label: "Level",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Time",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para1,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Repeat",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para4,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Mod",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para3,
+          // formatter: bmp (от 3288bmp до 50bmp)
+        },
+      ],
+    },
+
+    {
+      label: DelayType.TapeEcho,
+      realName: "Tape Echo",
+      encodeType: TYPES[DelayType.TapeEcho],
+      params: [
+        {
+          label: "Level",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Time",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para1,
+          // formatter: bmp (от 1126bmp до 110bmp)
+        },
+        {
+          label: "Repeat",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para3,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+
+    {
+      label: DelayType.PanDelay,
+      realName: "Pan Delay",
+      encodeType: TYPES[DelayType.PanDelay],
+      params: [
+        {
+          label: "Level",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para3,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Time",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para1,
+          // formatter: bmp (от 753bmp до 60bmp)
+        },
+        {
+          label: "Repeat",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
+    {
+      label: DelayType.PhiDelay,
+      realName: "Phi Delay",
+      encodeType: TYPES[DelayType.PhiDelay],
+      params: [
+        {
+          label: "Time",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para1,
+          // formatter: bmp (от 753bmp до 60bmp)
+        },
+        {
+          label: "Repeat",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para2,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+        {
+          label: "Mix",
+          encodeIndex: NuxMp3PresetIndex.DLY_Para3,
+          // formatter: ValueFormatters.percentageMPPro
+        },
+      ],
+    },
   ],
 };

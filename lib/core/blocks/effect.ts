@@ -45,14 +45,7 @@ import { BlockConfig, ChainItem } from "lib/core/interface";
 //         EFX_Para2: { label: "Tone", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
 //       },
 //     },
-//     "Morning Drive": {
-//       realName: "Morning Drive",
-//       params: {
-//         EFX_Para1: { label: "Volume", unit: "%", min: 0, max: 100 }, // default: 50, formatter: ValueFormatters.percentageMPPro
-//         EFX_Para2: { label: "Drive", unit: "%", min: 0, max: 100 }, // default: 70, formatter: ValueFormatters.percentageMPPro
-//         EFX_Para3: { label: "Tone", unit: "%", min: 0, max: 100 }, // default: 65, formatter: ValueFormatters.percentageMPPro
-//       },
-//     },
+
 //     "Eat Dist": {
 //       realName: "Eat Dist",
 //       params: {
@@ -170,6 +163,18 @@ export const effect: BlockConfig = {
           encodeIndex: NuxMp3PresetIndex.EFX_Para2,
           // formatter: ValueFormatters.percentageMPPro
         },
+      ],
+    },
+    // ...
+
+    {
+      label: EffectType.MorningDrive,
+      realName: "Morning Drive",
+      encodeType: TYPES[EffectType.MorningDrive],
+      params: [
+        { label: "Volume", encodeIndex: NuxMp3PresetIndex.EFX_Para1 },
+        { label: "Drive", encodeIndex: NuxMp3PresetIndex.EFX_Para2 },
+        { label: "Tone", encodeIndex: NuxMp3PresetIndex.EFX_Para3 },
       ],
     },
     // TODO: add other types
