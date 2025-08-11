@@ -35,4 +35,13 @@ describe("decoder", () => {
       "Invalid product ID or version"
     );
   });
+
+  it("should throw on unknown block type", () => {
+    const invalidQr =
+      "nux://MightyAmp:DwEAAkcBAQFJRAIBAAAAAAAjPAAAADJGQQAAAAAeMjcyPAEAAAAyNTI1OTkAAAAAAAAAKCgAAAA8RgEAAAAABSMUAAAAAAAAGQo8AAAAAAAyEj8AAAAmAAAAAAUBBgIDCQQIBwAAAAAAAAAAAAAAAAAAAA==";
+
+    expect(() => decodeChain(invalidQr)).toThrow(
+      `Unknown type (9) for block "modulation". Known types are: CE-1 (1). This preset might be from a newer firmware version.`
+    );
+  });
 });

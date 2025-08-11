@@ -58,20 +58,38 @@ export const decodeChain = (qrCode: string): Chain => {
         (t) => (t.encodeType & TYPE_MASK) === typeValue
       );
 
-      if (typeConfig) {
-        // Создаем объект с параметрами
-        const params = {} as Record<string, number>;
-        for (const param of typeConfig.params) {
-          params[param.label] = data[param.encodeIndex];
-        }
-
-        // Добавляем блок в цепочку
-        chain[blockType] = {
-          type: typeConfig.label,
-          enabled,
-          params,
-        };
+      if (typeConfig === undefined) {
+        const knownTypes = blockConfig.types
+          .map(
+            (t) =>
+              t.realName + " (" + (t.encodeType & TYPE_MASK).toString() + ")"
+          )
+          .join(", ");
+        throw new Error(
+          "Unknown type (" +
+            typeValue.toString() +
+            ') for block "' +
+            blockType +
+            '". ' +
+            "Known types are: " +
+            knownTypes +
+            ". " +
+            "This preset might be from a newer firmware version."
+        );
       }
+
+      // Создаем объект с параметрами
+      const params = {} as Record<string, number>;
+      for (const param of typeConfig.params) {
+        params[param.label] = data[param.encodeIndex];
+      }
+
+      // Добавляем блок в цепочку
+      chain[blockType] = {
+        type: typeConfig.label,
+        enabled,
+        params,
+      };
     }
   }
 
