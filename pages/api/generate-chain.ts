@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { createDefaultChain } from "../../lib/core/helpers/create-default-chain";
 import { encodeChain } from "../../lib/core/encoder";
 import { Chain } from "../../lib/core/interface";
+import { ChainGeneratorService } from "../../lib/services/chain-generator.service";
 
 interface GenerateChainRequest {
   prompt: string;
@@ -9,18 +9,25 @@ interface GenerateChainRequest {
 
 interface GenerateChainResponse {
   chain: Chain;
+  aiChain?: Chain; // Chain сгенерированный AI (для отладки)
   qrCode: string;
   rawBytes: number[];
+  aiGenerated?: boolean; // Флаг, показывающий, был ли использован AI
 }
 
 interface ErrorResponse {
   error: string;
 }
 
-export default function handler(
+/**
+ * API endpoint для генерации Chain на основе текстового описания
+ * POST /api/generate-chain
+ * Body: { prompt: string }
+ */
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<GenerateChainResponse | ErrorResponse>
-): void {
+): Promise<void> {
   // Проверяем метод запроса
   if (req.method !== "POST") {
     res.status(405).json({ error: "Method not allowed" });
@@ -36,24 +43,34 @@ export default function handler(
       return;
     }
 
-    // В этой итерации всегда возвращаем default chain
-    // В будущем здесь будет интеграция с OpenAI
     console.log("Received prompt:", prompt);
 
-    // Создаём default chain
-    const chain = createDefaultChain();
+    // Создаём сервис генератора
+    const generator = new ChainGeneratorService();
+
+    // Генерируем chain
+    const result = await generator.generateChain(prompt);
 
     // Энкодим chain в QR код
-    const encoded = encodeChain(chain);
+    const encoded = encodeChain(result.chain);
 
-    // Отправляем ответ
-    res.status(200).json({
-      chain,
+    // Формируем ответ
+    const response: GenerateChainResponse = {
+      chain: result.chain,
       qrCode: encoded.qrCode,
       rawBytes: [...encoded.rawBytes],
-    });
+      aiGenerated: result.isAiGenerated,
+    };
+
+    // Если был сгенерирован AI chain, добавляем его для отладки
+    if (result.isAiGenerated) {
+      response.aiChain = result.chain;
+    }
+
+    // Отправляем ответ
+    res.status(200).json(response);
   } catch (error) {
-    console.error("Error generating chain:", error);
+    console.error("Error in generate-chain API:", error);
     res.status(500).json({
       error: error instanceof Error ? error.message : "Internal server error",
     });

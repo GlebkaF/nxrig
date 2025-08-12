@@ -4,11 +4,14 @@ import { Chain } from "../lib/core/interface";
 import Header from "../components/Header";
 
 export default function GeneratorPage(): React.ReactElement {
-  const [prompt, setPrompt] = useState<string>("");
+  const [prompt, setPrompt] = useState<string>(
+    "Metallice Enter Sandman Main Riff"
+  );
   const [chain, setChain] = useState<Chain | null>(null);
   const [qrCode, setQrCode] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
+  const [aiGenerated, setAiGenerated] = useState<boolean>(false);
 
   const handleGenerate = async (): Promise<void> => {
     if (!prompt.trim()) {
@@ -20,6 +23,7 @@ export default function GeneratorPage(): React.ReactElement {
     setError("");
     setChain(null);
     setQrCode("");
+    setAiGenerated(false);
 
     try {
       const response = await fetch("/api/generate-chain", {
@@ -37,6 +41,7 @@ export default function GeneratorPage(): React.ReactElement {
       const data = await response.json();
       setChain(data.chain);
       setQrCode(data.qrCode);
+      setAiGenerated(data.aiGenerated || false);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Произошла ошибка");
     } finally {
@@ -90,7 +95,9 @@ export default function GeneratorPage(): React.ReactElement {
             <div className="p-6">
               <textarea
                 value={prompt}
-                onChange={(e) => setPrompt(e.target.value)}
+                onChange={(e) => {
+                  setPrompt(e.target.value);
+                }}
                 onKeyPress={handleKeyPress}
                 placeholder="Например: Тяжелый металлический звук с дисторшном и ревербом для соло..."
                 className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
@@ -171,10 +178,20 @@ export default function GeneratorPage(): React.ReactElement {
             <div className="space-y-6 animate-fadeIn">
               {/* QR Code */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4 border-b">
+                <div className="bg-gray-50 px-6 py-4 border-b flex justify-between items-center">
                   <h2 className="text-xl font-semibold text-gray-900">
                     📱 Сгенерированный QR код
                   </h2>
+                  {aiGenerated && (
+                    <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                      ✨ AI Generated
+                    </span>
+                  )}
+                  {!aiGenerated && (
+                    <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
+                      📋 Default Chain
+                    </span>
+                  )}
                 </div>
                 <div className="p-6 text-center">
                   <div className="inline-block p-4 bg-white border-2 border-gray-200 rounded-lg mb-4">

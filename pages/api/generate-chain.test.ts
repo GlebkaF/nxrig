@@ -61,7 +61,7 @@ describe("generate-chain API", () => {
     expect(res.json).toHaveBeenCalledWith({ error: "Prompt is required" });
   });
 
-  it("should return chain and QR code for valid prompt", () => {
+  it("should return chain and QR code for valid prompt", async () => {
     const req = {
       method: "POST",
       body: {
@@ -77,7 +77,7 @@ describe("generate-chain API", () => {
     // Mock console.log to verify prompt is being processed
     const consoleLogSpy = vi.spyOn(console, "log").mockImplementation(() => {});
 
-    handler(req, res);
+    await handler(req, res);
 
     expect(consoleLogSpy).toHaveBeenCalledWith(
       "Received prompt:",
@@ -105,7 +105,7 @@ describe("generate-chain API", () => {
     consoleLogSpy.mockRestore();
   });
 
-  it("should validate response structure", () => {
+  it("should validate response structure", async () => {
     const req = {
       method: "POST",
       body: {
@@ -118,7 +118,7 @@ describe("generate-chain API", () => {
       json: vi.fn(),
     } as unknown as NextApiResponse;
 
-    handler(req, res);
+    await handler(req, res);
 
     const callArgs = res.json.mock.calls[0][0];
 
@@ -131,5 +131,30 @@ describe("generate-chain API", () => {
     expect(typeof callArgs.qrCode).toBe("string");
     expect(Array.isArray(callArgs.rawBytes)).toBe(true);
     expect(typeof callArgs.chain).toBe("object");
+
+    // Проверяем новые поля для AI
+    expect("aiGenerated" in callArgs).toBe(true);
+    expect(typeof callArgs.aiGenerated).toBe("boolean");
+  });
+
+  it("should include aiGenerated flag in response", async () => {
+    const req = {
+      method: "POST",
+      body: {
+        prompt: "Blues sound with overdrive",
+      },
+    } as NextApiRequest;
+
+    const res = {
+      status: vi.fn().mockReturnThis(),
+      json: vi.fn(),
+    } as unknown as NextApiResponse;
+
+    await handler(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(200);
+    const response = res.json.mock.calls[0][0];
+    expect(response).toHaveProperty("aiGenerated");
+    expect(typeof response.aiGenerated).toBe("boolean");
   });
 });
