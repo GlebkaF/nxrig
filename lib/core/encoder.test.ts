@@ -82,10 +82,7 @@ describe("Core Encoder Tests", () => {
       const chain2 = createDefaultChain();
 
       // Изменяем один из чейнов
-      // Проверяем что это JazzClean тип (по умолчанию)
-      if (chain2.amplifier.type === "Jazz Clean") {
-        chain2.amplifier.params.Bass = 99;
-      }
+      chain2.amplifier.params.Bass = 99;
       chain2.effect.enabled = false;
 
       const encoded1 = encodeChain(chain1);

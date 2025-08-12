@@ -89,10 +89,12 @@ export const decodeChain = (qrCode: string): Chain => {
       }
 
       // Добавляем блок в цепочку
-      // Используем any для обхода проблемы со сложными union типами
-      (chain as any)[blockType] = {
+      chain[blockType] = {
+        // @ts-expect-error - undefined is not a string
         type: typeConfig.label,
+        // @ts-expect-error - undefined is not a boolean
         enabled,
+        // @ts-expect-error - undefined is not a Record<string, number>
         params,
       };
     }
