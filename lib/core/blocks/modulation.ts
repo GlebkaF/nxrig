@@ -18,10 +18,21 @@ export enum ModulationType {
   MonoOctave = "Mono Octave",
 }
 
-export type ModulationParams = ChainItem<
-  ModulationType.CE1,
-  "Rate" | "Depth" | "Intensity"
->;
+export type ModulationParams = 
+  | ChainItem<ModulationType.CE1, "Rate" | "Depth" | "Intensity">
+  | ChainItem<ModulationType.CE2, "Rate" | "Depth">
+  | ChainItem<ModulationType.STChorus, "Rate" | "Width" | "Intensity">
+  | ChainItem<ModulationType.Vibrato, "Rate" | "Depth">
+  | ChainItem<ModulationType.Detune, "Shift-L" | "Shift-R" | "Mix">
+  | ChainItem<ModulationType.Flanger, "Rate" | "Width" | "Level" | "Feedback">
+  | ChainItem<ModulationType.Phase90, "Speed">
+  | ChainItem<ModulationType.Phase100, "Speed" | "Intensity">
+  | ChainItem<ModulationType.SCF, "Speed" | "Width" | "Intensity" | "Mode">
+  | ChainItem<ModulationType.UVibe, "Speed" | "Volume" | "Intensity" | "Mode">
+  | ChainItem<ModulationType.Tremolo, "Rate" | "Depth">
+  | ChainItem<ModulationType.Rotary, "Speed" | "Balance">
+  | ChainItem<ModulationType.SCH1, "Rate" | "Depth" | "Tone">
+  | ChainItem<ModulationType.MonoOctave, "Sub" | "Dry" | "Up">;
 
 const TYPES: Record<ModulationType, number> = {
   [ModulationType.CE1]: 1,
