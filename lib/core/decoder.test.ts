@@ -29,7 +29,7 @@ describe("decoder", () => {
     const encoded = encodeChain(chain);
     const bytes = new Uint8Array(encoded.bytes);
     bytes[0] = 0; // Неправильный ID продукта
-    const invalidQr = "nux://MightyAmp:" + btoa(String.fromCharCode(...bytes));
+    const invalidQr = "nux://MightyAmp:" + btoa(String.fromCharCode.apply(null, Array.from(bytes)));
 
     expect(() => decodeChain(invalidQr)).toThrow(
       "Invalid product ID or version"
