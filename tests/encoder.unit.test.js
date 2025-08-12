@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 
-import { flatPresetToQrString, qrStringToFlatPreset, AMP_TYPES, EFX_TYPES, COMP_TYPES, MOD_TYPES, DELAY_TYPES, REVERB_TYPES, CABINET_TYPES } from '../lib/encoder.js';
+import { flatPresetToQrString, qrStringToFlatPreset } from '../lib/core/adapter';
+import { AMP_TYPES, EFX_TYPES, COMP_TYPES, MOD_TYPES, DELAY_TYPES, REVERB_TYPES, CABINET_TYPES } from '../lib/encoder.js';
 
 function makeBase() {
   return { product_id: 15, version: 1, master: 50 };
