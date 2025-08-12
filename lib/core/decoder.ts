@@ -84,17 +84,15 @@ export const decodeChain = (qrCode: string): Chain => {
       // Создаем объект с параметрами
       const params = {} as Record<string, number>;
       for (const param of typeConfig.params) {
-        // @ts-expect-error - undefined is not a number
-        params[param.label] = data[param.encodeIndex];
+        params[param.label] = data[param.encodeIndex] ?? 0;
       }
 
       // Добавляем блок в цепочку
-      chain[blockType] = {
-        // @ts-expect-error - undefined is not a string
+      // Use type assertion to avoid union type complexity
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
+      (chain as any)[blockType] = {
         type: typeConfig.label,
-        // @ts-expect-error - undefined is not a boolean
         enabled,
-        // @ts-expect-error - undefined is not a Record<string, number>
         params,
       };
     }
