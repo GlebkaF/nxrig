@@ -74,10 +74,41 @@ const TYPES: Record<CabinetType, number> = {
   [CabinetType.M_D45]: 34,
 };
 
-export type CabinetParams = ChainItem<
-  CabinetType.JZ120,
-  "Level" | "LowCut" | "HighCut"
->;
+export type CabinetParams = 
+  | ChainItem<CabinetType.JZ120, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.DR112, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.TR212, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.HIWIRE412, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CALI112, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.A112, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.GB412, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.M1960AX, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.M1960AV, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.M1960TV, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.SLO412, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.FIREMAN412, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.RECT412, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.DIE412, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.MATCH212, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.UBER412, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.BS410, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.A212, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.M1960AHW, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.M1936, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.BUDDA112, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.Z212, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.SUPERVERB410, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.VIBROKING310, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.AGL_DB810, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.AMP_SV212, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.AMP_SV410, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.AMP_SV810, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.BASSGUY410, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.EDEN410, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.MKB410, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.G_HBIRD, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.G_J15, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.M_D45, "Level" | "LowCut" | "HighCut">;
 
 const cabParams: TypeParamConfig[] = [
   {

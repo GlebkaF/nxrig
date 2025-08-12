@@ -19,10 +19,13 @@ const TYPES: Record<DelayType, number> = {
   [DelayType.PhiDelay]: 6,
 };
 
-export type DelayParams = ChainItem<
-  DelayType.AnalogDelay,
-  "Intensity" | "Rate" | "Echo"
->;
+export type DelayParams = 
+  | ChainItem<DelayType.AnalogDelay, "Intensity" | "Rate" | "Echo">
+  | ChainItem<DelayType.DigitalDelay, "E.Level" | "Feedback" | "Time">
+  | ChainItem<DelayType.ModDelay, "Level" | "Time" | "Repeat" | "Mod">
+  | ChainItem<DelayType.TapeEcho, "Level" | "Time" | "Repeat">
+  | ChainItem<DelayType.PanDelay, "Level" | "Time" | "Repeat">
+  | ChainItem<DelayType.PhiDelay, "Time" | "Repeat" | "Mix">;
 
 export const delay: BlockConfig = {
   encoderHeadIndex: NuxMp3PresetIndex.Head_iDLY,

@@ -65,10 +65,36 @@ const TYPES: Record<AmplifierType, number> = {
   [AmplifierType.UberHiGain]: 25,
 };
 
-export type AmplifierParams = ChainItem<
-  AmplifierType.JazzClean,
-  "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Bright"
->;
+export type AmplifierParams = 
+  | ChainItem<AmplifierType.JazzClean, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Bright">
+  | ChainItem<AmplifierType.DeluxeRvb, "Gain" | "Master" | "Bass" | "Middle" | "Treble">
+  | ChainItem<AmplifierType.BassMate, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.Tweedy, "Gain" | "Master" | "Tone">
+  | ChainItem<AmplifierType.Hiwire, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.CaliCrunch, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.ClassA15, "Gain" | "Master" | "Bass" | "Treble" | "Cut">
+  | ChainItem<AmplifierType.ClassA30, "Gain" | "Master" | "Bass" | "Treble" | "Cut">
+  | ChainItem<AmplifierType.Plexi100, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.Plexi45, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.Brit800, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.Amp1987X50, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.Slo100, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.FiremanHbe, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.DualRect, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.DieVh4, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.MrZ38, "Gain" | "Master" | "Bass" | "Treble" | "Cut">
+  | ChainItem<AmplifierType.SuperRvb, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Bright">
+  | ChainItem<AmplifierType.Agl, "Gain" | "Master" | "Bass" | "Mid Freq" | "Middle" | "Treble">
+  | ChainItem<AmplifierType.Mld, "Gain" | "Master" | "Bass" | "Mid Freq" | "Middle" | "Treble">
+  | ChainItem<AmplifierType.OptimaAir, "Gain" | "Master" | "Bass" | "Middle" | "Treble">
+  | ChainItem<AmplifierType.Stageman, "Gain" | "Master" | "Bass" | "Middle" | "Treble">
+  | ChainItem<AmplifierType.TwinReverb, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Bright">
+  | ChainItem<AmplifierType.VibroKing, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Bright">
+  | ChainItem<AmplifierType.Budda, "Gain" | "Master" | "Bass" | "Treble" | "Cut">
+  | ChainItem<AmplifierType.BritBlues, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.MatchD30, "Gain" | "Master" | "Bass" | "Treble" | "Cut">
+  | ChainItem<AmplifierType.Brit2000, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">
+  | ChainItem<AmplifierType.UberHiGain, "Gain" | "Master" | "Bass" | "Middle" | "Treble" | "Presence">;
 
 export const amplifier: BlockConfig = {
   encoderHeadIndex: NuxMp3PresetIndex.Head_iAMP,

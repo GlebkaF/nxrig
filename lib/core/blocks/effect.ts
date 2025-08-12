@@ -18,10 +18,21 @@ export enum EffectType {
   TouchWah = "Touch Wah",
 }
 
-export type EffectParams = ChainItem<
-  EffectType.DistortionPlus,
-  "Output" | "Sensitivity"
->;
+export type EffectParams = 
+  | ChainItem<EffectType.DistortionPlus, "Output" | "Sensitivity">
+  | ChainItem<EffectType.RCBoost, "Volume" | "Gain" | "Bass" | "Treble">
+  | ChainItem<EffectType.ACBoost, "Volume" | "Gain" | "Bass" | "Treble">
+  | ChainItem<EffectType.DistOne, "Level" | "Drive" | "Tone">
+  | ChainItem<EffectType.TScreamer, "Level" | "Drive" | "Tone">
+  | ChainItem<EffectType.BluesDrive, "Level" | "Gain" | "Tone">
+  | ChainItem<EffectType.MorningDrive, "Volume" | "Drive" | "Tone">
+  | ChainItem<EffectType.EatDist, "Volume" | "Distortion" | "Filter">
+  | ChainItem<EffectType.RedDirt, "Level" | "Drive" | "Tone">
+  | ChainItem<EffectType.Crunch, "Volume" | "Gain" | "Tone">
+  | ChainItem<EffectType.MuffFuzz, "Volume" | "Sustain" | "Tone">
+  | ChainItem<EffectType.Katana, "Volume" | "Boost">
+  | ChainItem<EffectType.STSinger, "Volume" | "Gain" | "Filter">
+  | ChainItem<EffectType.TouchWah, "Type" | "Wow" | "Sense" | "Level" | "Up/Down Switch">;
 
 const TYPES: Record<EffectType, number> = {
   [EffectType.DistortionPlus]: 1,
