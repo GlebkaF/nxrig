@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 
-import { flatPresetToQrString, qrStringToFlatPreset } from '../lib/core/adapter';
+import { flatPresetToQrString, qrStringToFlatPreset } from '../lib/core/adapter-for-tests';
 
 function rand01() { return Math.random() > 0.5; }
 function r100() { return (Math.random() * 101) | 0; }

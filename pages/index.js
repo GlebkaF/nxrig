@@ -4,7 +4,13 @@ import React, { useRef, useState, useEffect } from "react";
 
 import Header from "../components/Header";
 import SignalChain from "../components/SignalChain";
-import { flatPresetToQrString, qrStringToFlatPreset } from "../lib/core/adapter";
+import { 
+  chainToQrString, 
+  qrStringToChain, 
+  parseJsonToChain, 
+  chainToDisplayJson, 
+  chainToVisualizationChain 
+} from "../lib/core/chain-converter";
 import { FlatPresetSchema } from "../lib/flatPresetSchema";
 import { processorConfig } from "../lib/processorConfig.ts";
 
@@ -13,26 +19,10 @@ const QRCodeCanvas = dynamic(
   { ssr: false }
 );
 
-const CHAIN_ORDER = [
-  "Noisegate",
-  "Compressor",
-  "EFX",
-  "Amp",
-  "Cabinet",
-  "EQ",
-  "Mod",
-  "Delay",
-  "RVB",
-];
+// Порядок блоков и вспомогательные функции перенесены в lib/core/chain-converter.ts
 
-function labelToFlatKey(label) {
-  const k = String(label)
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "_")
-    .replace(/^_+|_+$/g, "");
-  return k;
-}
-
+// Удалено - buildParamsForVisualization перенесена в chain-converter.ts
+/*
 function buildParamsForVisualization(slot, model, section) {
   const cfg = processorConfig[slot]?.types?.[model] || null;
   if (!cfg || !cfg.params) return section || {};
@@ -110,7 +100,10 @@ function buildParamsForVisualization(slot, model, section) {
   }
   return section || {};
 }
+*/
 
+// Удалено - flatPresetToVisualizationChain перенесена в chain-converter.ts
+/*
 function flatPresetToVisualizationChain(preset) {
   const chain = [];
   if (preset.noise_gate)
@@ -325,8 +318,9 @@ export default function Mp3QrPage() {
               .join("\n")
         );
       const flat = result.data;
-      setQr(flatPresetToQrString(flat));
-      setVizData(flatPresetToVisualizationChain(flat));
+      const chain = parseJsonToChain(JSON.stringify(flat));
+      setQr(chainToQrString(chain));
+      setVizData(chainToVisualizationChain(chain));
     } catch (e) {
       setErr(e.message || String(e));
       setQr("");
@@ -357,7 +351,8 @@ export default function Mp3QrPage() {
       const bmp = await readImageBitmap(file);
       const qrText = scanQrFromImage(bmp);
       if (!qrText) throw new Error("QR not found on image");
-      const preset = qrStringToFlatPreset(qrText);
+      const chain = qrStringToChain(qrText);
+      const preset = chainToDisplayJson(chain);
       setText(JSON.stringify(preset, null, 2));
       e.target.value = "";
     } catch (ex) {

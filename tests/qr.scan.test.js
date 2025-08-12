@@ -3,7 +3,7 @@ import { PNG } from 'pngjs';
 import qrcodegen from 'qrcode-generator';
 import { describe, it, expect } from 'vitest';
 
-import { flatPresetToQrString, qrStringToFlatPreset } from '../lib/core/adapter';
+import { flatPresetToQrString, qrStringToFlatPreset } from '../lib/core/adapter-for-tests';
 
 function renderQrPngData(text, scale = 4, margin = 2) {
   const qr = qrcodegen(0, 'L');
