@@ -7,6 +7,16 @@ export default function Header() {
         <Link href="/" className="text-xl font-bold">
           MightyPatch
         </Link>
+        <Link href="/" className="hover:text-purple-400 transition-colors">
+          QR Generator
+        </Link>
+        <Link href="/test-encoder" className="hover:text-purple-400 transition-colors">
+          Chain Editor
+        </Link>
+        <Link href="/ai-chain-generator" className="hover:text-purple-400 transition-colors flex items-center gap-2">
+          <span>🤖</span>
+          <span>AI Generator</span>
+        </Link>
       </nav>
     </header>
   );
