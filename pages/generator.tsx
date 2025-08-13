@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import { Blocks, Chain } from "../lib/core/interface";
-import Header from "../components/Header";
+import Header from "../components/Header.js";
 import { CompressorType } from "lib/core/blocks/compressor";
 import { NoiseGateType } from "lib/core/blocks/noisegate";
 import { ModulationType } from "lib/core/blocks/modulation";
@@ -26,18 +26,6 @@ const availableBlockTypes = {
 };
 
 export default function GeneratorPage(): React.ReactElement {
-  // {
-  //   "noisegate": "Noise Gate",
-  //   "compressor": null,
-  //   "modulation": null,
-  //   "effect": "T Screamer",
-  //   "amplifier": "Dual Rect",
-  //   "cabinet": "RECT 412",
-  //   "eq": "10-Band",
-  //   "reverb": null,
-  //   "delay": null
-  // }
-
   const chai = createEmptyChain({
     [Blocks.Noisegate]: NoiseGateType.NoiseGate,
     [Blocks.Compressor]: null,
@@ -49,7 +37,10 @@ export default function GeneratorPage(): React.ReactElement {
     [Blocks.Reverb]: null,
     [Blocks.Delay]: null,
   });
-  console.log(JSON.stringify(chai, null, 2));
+  console.log({
+    chai,
+    availableBlockTypes,
+  });
 
   const [prompt, setPrompt] = useState<string>(
     "Metallice Enter Sandman Main Riff"
@@ -85,9 +76,13 @@ export default function GeneratorPage(): React.ReactElement {
         throw new Error(`Ошибка: ${response.statusText}`);
       }
 
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const data = await response.json();
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
       setChain(data.chain);
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
       setQrCode(data.qrCode);
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
       setAiGenerated(data.aiGenerated || false);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Произошла ошибка");
@@ -145,7 +140,7 @@ export default function GeneratorPage(): React.ReactElement {
                 onChange={(e) => {
                   setPrompt(e.target.value);
                 }}
-                onKeyPress={handleKeyPress}
+                onKeyUp={handleKeyPress}
                 placeholder="Например: Тяжелый металлический звук с дисторшном и ревербом для соло..."
                 className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
                 rows={4}
@@ -156,7 +151,9 @@ export default function GeneratorPage(): React.ReactElement {
                   Нажмите Enter для генерации или используйте кнопку
                 </p>
                 <button
-                  onClick={handleGenerate}
+                  onClick={() => {
+                    void handleGenerate();
+                  }}
                   disabled={isLoading || !prompt.trim()}
                   className={`px-6 py-3 rounded-lg font-medium transition-all ${
                     isLoading || !prompt.trim()
