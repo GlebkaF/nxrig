@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { encodeChain } from "../../lib/core/encoder";
 import { Chain } from "../../lib/core/interface";
-import { ChainGeneratorService } from "../../lib/services/chain-generator.service";
+import { createGenerator } from "lib/ai-generator/create-generator";
 
 interface GenerateChainRequest {
   prompt: string;
@@ -43,29 +43,18 @@ export default async function handler(
       return;
     }
 
-    console.log("Received prompt:", prompt);
-
-    // Создаём сервис генератора
-    const generator = new ChainGeneratorService();
-
-    // Генерируем chain
-    const result = await generator.generateChain(prompt);
-
+    const generator = await createGenerator();
+    const aiChain = await generator.generate(prompt);
     // Энкодим chain в QR код
-    const encoded = encodeChain(result.chain);
+    const encoded = encodeChain(aiChain);
 
     // Формируем ответ
     const response: GenerateChainResponse = {
-      chain: result.chain,
+      chain: aiChain,
       qrCode: encoded.qrCode,
       rawBytes: [...encoded.rawBytes],
-      aiGenerated: result.isAiGenerated,
+      aiGenerated: true,
     };
-
-    // Если был сгенерирован AI chain, добавляем его для отладки
-    if (result.isAiGenerated) {
-      response.aiChain = result.chain;
-    }
 
     // Отправляем ответ
     res.status(200).json(response);
