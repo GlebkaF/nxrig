@@ -102,7 +102,7 @@ export function createDefaultChain(): Chain {
   return chain;
 }
 
-interface TmpIf {
+export interface BlockTypesConfig {
   [Blocks.Noisegate]: NoiseGateType | null;
   [Blocks.Compressor]: CompressorType | null;
   [Blocks.Modulation]: ModulationType | null;
@@ -114,7 +114,7 @@ interface TmpIf {
   [Blocks.Delay]: DelayType | null;
 }
 
-export function createEmptyChain(types: TmpIf): Chain {
+export function createEmptyChain(types: BlockTypesConfig): Chain {
   const createTypeParams = (
     block: Blocks,
     type: string | null
