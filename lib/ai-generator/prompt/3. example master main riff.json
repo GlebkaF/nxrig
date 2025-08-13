@@ -1,0 +1,11 @@
+{
+  "noisegate": "Noise Gate",
+  "compressor": null,
+  "modulation": null,
+  "effect": "T Screamer",
+  "amplifier": "Dual Rect",
+  "cabinet": "RECT 412",
+  "eq": "10-Band",
+  "reverb": null,
+  "delay": null
+}

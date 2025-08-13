@@ -24,10 +24,7 @@ export class ChainGeneratorService {
     this.config = {
       apiKey: config?.apiKey || process.env.OPENAI_API_KEY,
       model: config?.model || process.env.OPENAI_MODEL || "gpt-4o-mini",
-      proxyUrl:
-        config?.proxyUrl ||
-        process.env.PROXY_URL ||
-        "http://infra-proxy-prod.skyeng.link:3128",
+      proxyUrl: config?.proxyUrl || process.env.PROXY_URL,
     };
   }
 

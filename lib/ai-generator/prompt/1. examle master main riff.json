@@ -1,0 +1,11 @@
+{
+  "genre": "Thrash Metal",
+  "sound_description": "Sharp, aggressive, tight, palm-muted chug, mid-scooped, high-gain with clarity and strong attack.",
+  "guitar_rig_description": "Noise Gate: Used to eliminate unwanted noise and keep palm-muted riffing tight. Compressor: Not used, as dynamics are largely controlled by the player's right hand attack. Overdrive/Distortion/Boost: Classic mid-gain overdrive pedal (TS-style) used as a boost in front of a high-gain amplifier for added tightness and definition, not for primary distortion. Amplifier: High-gain tube amp head (Mesa/Boogie style) provides the main saturated distortion with an aggressive and tight character. Cabinet: 4x12 closed-back cabinet with Celestion speakers emulates the punch and articulation of the original recording. EQ: Graphic or amp EQ with scooped mids, accentuated lows and highs to match 80s thrash tones. Modulation: Not used. Delay: Not used. Reverb: Not used, or minimal to dry; tone is focused and direct, as on the original recording.",
+  "references": [
+    "Metallica - Master of Puppets",
+    "Metallica - Battery",
+    "Slayer - Raining Blood"
+  ],
+  "additional_info": "Use the bridge humbucker pickup for maximum output and aggressive palm mute attack. Heavier gauge strings recommended (10-46 or higher), tuned to standard E. Downpicking technique is essential for authentic attack and articulation."
+}

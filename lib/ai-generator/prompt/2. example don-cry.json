@@ -1,0 +1,72 @@
+{
+  "pedalboard": [
+    "Keeley Compressor Plus",
+    "Boss SD-1 Super OverDrive",
+    "Boss CE-2W Chorus",
+    "Strymon El Capistan dTape Echo",
+    "Boss EQ-200 Graphic Equalizer",
+    "Strymon BlueSky Reverberator"
+  ],
+  "amplifier": "Marshall JCM Slash Signature AFD100",
+  "cabinet": "Marshall 1936 2x12 with Celestion G12T-75 speakers (open-back mod or open-back reissue)",
+  "settings": {
+    "amp": {
+      "channel": "Clean for intro/verses (Input 1), Lead channel or boosted for solos",
+      "gain": {
+        "clean": 4,
+        "lead": 7
+      },
+      "bass": 5,
+      "middle": 6,
+      "treble": 7,
+      "presence": 6,
+      "master": 4,
+      "masterNote": "adjust for venue/room"
+    },
+    "compressor": {
+      "sustain": "9 o'clock (light/medium)",
+      "level": "Match unity",
+      "blend": 50,
+      "attack": "Fast (10–11 o'clock)"
+    },
+    "overdrive": {
+      "drive": "8–9 o'clock (very mild for boost)",
+      "tone": "11 o'clock (neutral, just a touch of sparkle)",
+      "level": "2 o'clock (to boost solos)"
+    },
+    "chorus": {
+      "rate": "9 o'clock (slow)",
+      "depth": "10 o'clock (subtle)",
+      "level": "Match unity (not too prominent; off for solos)"
+    },
+    "delay": {
+      "time": 380,
+      "timeUnit": "ms",
+      "repeats": "2–3",
+      "mix": 20,
+      "mixNote": "low, for ambience in solos only; off in cleans"
+    },
+    "eq": {
+      "80Hz": -3,
+      "250Hz": 0,
+      "800Hz": 1,
+      "1.6kHz": 2,
+      "4kHz": 2,
+      "8kHz": -1,
+      "unit": "dB"
+    },
+    "reverb": {
+      "type": "Plate",
+      "typeNote": "switch to Hall for more space in solos",
+      "mix": {
+        "intro": 15,
+        "solos": 22
+      },
+      "decay": {
+        "intro": 1.8,
+        "solos": 2.4
+      },
+      "decayUnit": "s"
+    }
+  }
+}

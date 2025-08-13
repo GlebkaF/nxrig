@@ -1,9 +1,56 @@
 import React, { useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
-import { Chain } from "../lib/core/interface";
+import { Blocks, Chain } from "../lib/core/interface";
 import Header from "../components/Header";
+import { CompressorType } from "lib/core/blocks/compressor";
+import { NoiseGateType } from "lib/core/blocks/noisegate";
+import { ModulationType } from "lib/core/blocks/modulation";
+import { EffectType } from "lib/core/blocks/effect";
+import { AmplifierType } from "lib/core/blocks/amplifier";
+import { CabinetType } from "lib/core/blocks/cabinet";
+import { EqType } from "lib/core/blocks/eq";
+import { ReverbType } from "lib/core/blocks/reverb";
+import { DelayType } from "lib/core/blocks/delay";
+import { createEmptyChain } from "lib/core/helpers/create-default-chain";
+
+const availableBlockTypes = {
+  [Blocks.Noisegate]: Array.from(Object.values(NoiseGateType)),
+  [Blocks.Compressor]: Array.from(Object.values(CompressorType)),
+  [Blocks.Modulation]: Array.from(Object.values(ModulationType)),
+  [Blocks.Effect]: Array.from(Object.values(EffectType)),
+  [Blocks.Amplifier]: Array.from(Object.values(AmplifierType)),
+  [Blocks.Cabinet]: Array.from(Object.values(CabinetType)),
+  [Blocks.Eq]: Array.from(Object.values(EqType)),
+  [Blocks.Reverb]: Array.from(Object.values(ReverbType)),
+  [Blocks.Delay]: Array.from(Object.values(DelayType)),
+};
 
 export default function GeneratorPage(): React.ReactElement {
+  // {
+  //   "noisegate": "Noise Gate",
+  //   "compressor": null,
+  //   "modulation": null,
+  //   "effect": "T Screamer",
+  //   "amplifier": "Dual Rect",
+  //   "cabinet": "RECT 412",
+  //   "eq": "10-Band",
+  //   "reverb": null,
+  //   "delay": null
+  // }
+
+  const chai = createEmptyChain({
+    [Blocks.Noisegate]: NoiseGateType.NoiseGate,
+    [Blocks.Compressor]: null,
+    [Blocks.Modulation]: null,
+    [Blocks.Effect]: EffectType.TScreamer,
+    [Blocks.Amplifier]: AmplifierType.DualRect,
+    [Blocks.Cabinet]: CabinetType.RECT412,
+    [Blocks.Eq]: EqType.TenBand,
+    [Blocks.Reverb]: null,
+    [Blocks.Delay]: null,
+  });
+  console.log(JSON.stringify(chai, null, 2));
+
   const [prompt, setPrompt] = useState<string>(
     "Metallice Enter Sandman Main Riff"
   );
