@@ -1,11 +1,19 @@
 /** @type {import('next').NextConfig} */
+
+// Определяем режим работы на основе переменной окружения
+const isProduction = process.env.NODE_ENV === "production";
+const isStaticExport = process.env.STATIC_EXPORT === "true";
+
 const nextConfig = {
-  output: 'export',
+  // Используем static export только для production билда (GitHub Pages)
+  ...(isStaticExport && { output: "export" }),
   images: { unoptimized: true },
-  basePath: '/nux-must-have-site',     // repository name
-  assetPrefix: '/nux-must-have-site',
+  // basePath и assetPrefix только для production
+  ...(isProduction && {
+    basePath: "/nux-must-have-site", // repository name
+    assetPrefix: "/nux-must-have-site",
+  }),
   trailingSlash: true,
 };
-
 
 export default nextConfig;

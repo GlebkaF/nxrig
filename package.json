@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:static": "STATIC_EXPORT=true next build",
     "start": "next start",
     "test": "vitest run",
     "test:watch": "vitest watch",
@@ -11,8 +12,11 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "https-proxy-agent": "^7.0.6",
     "jsqr": "^1.4.0",
     "next": "^14.2.3",
+    "node-fetch": "^2.7.0",
+    "openai": "^5.12.2",
     "qrcode.react": "^3.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
