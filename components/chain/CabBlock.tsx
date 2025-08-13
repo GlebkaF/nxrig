@@ -1,0 +1,68 @@
+import React from "react";
+import {
+  SLOT_COLORS,
+  processorConfig,
+  toUnitString,
+} from "../../lib/processorConfig";
+import Knob from "../Knob";
+import { CabinetBlock } from "../types/chain";
+
+interface CabBlockProps {
+  block: CabinetBlock;
+}
+
+const CabBlock: React.FC<CabBlockProps> = ({ block }) => {
+  const color = SLOT_COLORS.Cabinet;
+  const typeCfg = processorConfig.Cabinet?.types[block.model];
+  const realName = typeCfg?.realName;
+  const cfgParams = typeCfg?.params || {};
+  const level = block.params?.CAB_Para4 ?? block.params?.level ?? 50;
+  const low = block.params?.CAB_Para5 ?? block.params?.lowcut ?? 50;
+  const high = block.params?.CAB_Para6 ?? block.params?.hicut ?? 50;
+  const levelDv = cfgParams.CAB_Para4
+    ? toUnitString(level, cfgParams.CAB_Para4)
+    : undefined;
+  const lowDv = cfgParams.CAB_Para5
+    ? toUnitString(low, cfgParams.CAB_Para5)
+    : undefined;
+  const highDv = cfgParams.CAB_Para6
+    ? toUnitString(high, cfgParams.CAB_Para6)
+    : undefined;
+
+  return (
+    <li
+      className="relative p-4 rounded bg-gray-800 border-2 w-fit"
+      style={{ borderColor: color }}
+    >
+      <div className="font-semibold mb-2">
+        {block.model}
+        {realName && <span className="text-gray-400"> — {realName}</span>}
+      </div>
+      <div className="flex flex-wrap gap-4">
+        <Knob
+          label={`Level${levelDv ? `\n${levelDv}` : ""}`}
+          value={level}
+          color={color}
+        />
+        <Knob
+          label={`Low Cut${lowDv ? `\n${lowDv}` : ""}`}
+          value={low}
+          color={color}
+        />
+        <Knob
+          label={`High Cut${highDv ? `\n${highDv}` : ""}`}
+          value={high}
+          color={color}
+        />
+      </div>
+      <span
+        className="absolute bottom-1 right-1 px-2 py-0.5 text-xs font-semibold rounded"
+        style={{ backgroundColor: color, color: "#000" }}
+      >
+        Cabinet
+      </span>
+    </li>
+  );
+};
+
+export default CabBlock;

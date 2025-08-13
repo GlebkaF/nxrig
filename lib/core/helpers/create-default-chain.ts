@@ -1,6 +1,6 @@
 import { ModulationType } from "../blocks/modulation";
-import { CompressorParams, CompressorType } from "../blocks/compressor";
-import { NoisegateParams, NoiseGateType } from "../blocks/noisegate";
+import { CompressorType } from "../blocks/compressor";
+import { NoiseGateType } from "../blocks/noisegate";
 import { ReverbType } from "../blocks/reverb";
 import { Blocks, Chain, ChainItem } from "../interface";
 import { EffectType } from "../blocks/effect";
