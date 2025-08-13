@@ -13,12 +13,12 @@ interface CabBlockProps {
 
 const CabBlock: React.FC<CabBlockProps> = ({ block }) => {
   const color = SLOT_COLORS.Cabinet;
-  const typeCfg = processorConfig.Cabinet?.types?.[block.model];
+  const typeCfg = processorConfig.Cabinet?.types[block.model];
   const realName = typeCfg?.realName;
   const cfgParams = typeCfg?.params || {};
-  const level = Number(block.params?.CAB_Para4 ?? block.params?.level ?? 50);
-  const low = Number(block.params?.CAB_Para5 ?? block.params?.lowcut ?? 50);
-  const high = Number(block.params?.CAB_Para6 ?? block.params?.hicut ?? 50);
+  const level = block.params?.CAB_Para4 ?? block.params?.level ?? 50;
+  const low = block.params?.CAB_Para5 ?? block.params?.lowcut ?? 50;
+  const high = block.params?.CAB_Para6 ?? block.params?.hicut ?? 50;
   const levelDv = cfgParams.CAB_Para4
     ? toUnitString(level, cfgParams.CAB_Para4)
     : undefined;

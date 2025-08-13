@@ -16,7 +16,7 @@ const CompressorBlock: React.FC<CompressorBlockProps> = ({ block }) => {
   const color = SLOT_COLORS.Compressor;
   const model = block.model || "Compressor";
   const params = block.params || {};
-  const cfg = processorConfig.Compressor?.types?.[model] || null;
+  const cfg = processorConfig.Compressor?.types[model] || null;
   const cfgParams = cfg?.params;
 
   if (cfgParams) {
@@ -28,13 +28,13 @@ const CompressorBlock: React.FC<CompressorBlockProps> = ({ block }) => {
       >
         <div className="font-semibold mb-2">
           {model}
-          {cfg?.realName && (
+          {cfg.realName && (
             <span className="text-gray-400"> — {cfg.realName}</span>
           )}
         </div>
         <div className="flex flex-wrap gap-4">
           {entries.map(([key, meta]) => {
-            const val = Number(params[key] ?? 50);
+            const val = params[key] ?? 50;
             const dv = toUnitString(val, meta);
             const label = dv ? `${meta.label}\n${dv}` : meta.label;
             return <Knob key={key} label={label} value={val} color={color} />;

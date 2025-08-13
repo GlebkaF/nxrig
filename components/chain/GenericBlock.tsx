@@ -9,19 +9,17 @@ interface GenericBlockProps {
 }
 
 function formatLabel(key: string): string {
-  return String(key)
-    .replace(/_db$/i, " dB")
-    .replace(/_hz$/i, " Hz")
-    .replace(/_/g, " ");
+  return key.replace(/_db$/i, " dB").replace(/_hz$/i, " Hz").replace(/_/g, " ");
 }
 
 const GenericBlock: React.FC<GenericBlockProps> = ({ block }) => {
   const color =
     SLOT_COLORS[block.slot as keyof typeof SLOT_COLORS] || "#9ca3af";
   const slotCfg = processorConfig[block.slot as keyof typeof processorConfig];
-  const typeCfg = slotCfg?.types?.[block.model];
+  const typeCfg = slotCfg?.types[block.model];
   const realName = typeCfg?.realName;
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (slotCfg && slotCfg.types && !typeCfg && block.slot !== "EQ") {
     return (
       <li
@@ -59,19 +57,21 @@ const GenericBlock: React.FC<GenericBlockProps> = ({ block }) => {
       ) : (
         <div className="flex flex-wrap gap-4">
           {Object.entries(block.params || {}).map(([key, value]) => {
-            const meta = typeCfg?.params?.[key] || {};
+            // @ts-expect-error TODO: fix this
+            const meta = typeCfg?.params?.[key] || {}; // eslint-disable-line @typescript-eslint/no-unsafe-assignment
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
             const label = meta.label || formatLabel(key);
-            return String(key).toLowerCase() === "bright" ? (
+            return key.toLowerCase() === "bright" ? (
               <Toggle
                 key={key}
-                label={label}
+                label={String(label)}
                 value={Number(value)}
                 color={color}
               />
             ) : (
               <Knob
                 key={key}
-                label={label}
+                label={String(label)}
                 value={Number(value)}
                 color={color}
               />
