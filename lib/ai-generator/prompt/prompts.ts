@@ -15,6 +15,7 @@ Example json output:
 "sound_description": "Key tone characteristics: aggressiveness, thickness, attack, brightness, depth, dynamics",
 "guitar_rig_description": "Explicitly list all effect blocks in signal chain order, with a short functional description for each; if unused, say 'not used'",
 "references": ["Example band or song 1", "Example band or song 2", "Example band or song 3"],
+"song_part": "main riff, solo, etc.",
 "additional_info": "Any other useful details (pickup choice, playing technique, string gauge, etc.)"
 }
 \`\`\`

@@ -18,7 +18,7 @@ export enum ModulationType {
   MonoOctave = "Mono Octave",
 }
 
-export type ModulationParams = 
+export type ModulationParams =
   | ChainItem<ModulationType.CE1, "Rate" | "Depth" | "Intensity">
   | ChainItem<ModulationType.CE2, "Rate" | "Depth">
   | ChainItem<ModulationType.STChorus, "Rate" | "Width" | "Intensity">
@@ -56,7 +56,7 @@ export const modulation: BlockConfig = {
   types: [
     {
       label: ModulationType.CE1,
-      realName: "CE-1",
+      realName: "BOSS CE-1 Chorus Ensemble",
       encodeType: TYPES[ModulationType.CE1],
       params: [
         {
@@ -77,7 +77,7 @@ export const modulation: BlockConfig = {
     },
     {
       label: ModulationType.CE2,
-      realName: "CE-2",
+      realName: "BOSS CE-2W",
       encodeType: TYPES[ModulationType.CE2],
       params: [
         {

@@ -13,10 +13,9 @@ import {
   createRealRigToBlocksSystemPrompt,
   createProperChainSystemPrompt,
 } from "lib/ai-generator/prompt/prompts";
-// import { ReverbType } from "lib/core/blocks/reverb";
-// import { DelayType } from "lib/core/blocks/delay";
 
 const GPT_41_MINI_MODEL = "gpt-4.1-mini";
+const GPT_41_MODEL = "gpt-4.1";
 
 interface ProDescription {
   genre: string;
@@ -44,8 +43,6 @@ class ChainGenerator {
 
     console.log(proDescription);
     console.log(realRig);
-    console.log(emptyChain);
-    // console.log(finalChain[Blocks.Amplifier]);
 
     return finalChain;
   }
@@ -119,7 +116,7 @@ class ChainGenerator {
     userPrompt: string
   ): Promise<unknown> {
     const completion = await this.openai.chat.completions.create({
-      model: GPT_41_MINI_MODEL,
+      model: GPT_41_MODEL,
       messages: [
         {
           role: "system",
