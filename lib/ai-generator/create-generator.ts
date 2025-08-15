@@ -6,6 +6,8 @@ import {
   BlockTypesConfig,
   createEmptyChain,
 } from "lib/core/helpers/create-default-chain";
+import fs from "fs/promises";
+import path from "path";
 
 import {
   createProDescriptionSystemPrompt,
@@ -14,7 +16,6 @@ import {
   createProperChainSystemPrompt,
 } from "lib/ai-generator/prompt/prompts";
 
-const GPT_41_MINI_MODEL = "gpt-4.1-mini";
 const GPT_41_MODEL = "gpt-4.1";
 
 interface ProDescription {
@@ -32,6 +33,15 @@ interface RealRig {
   settings: unknown;
 }
 
+interface GeneratorResult {
+  timestamp: string;
+  originalPrompt: string;
+  proDescription: ProDescription;
+  realRig: RealRig;
+
+  finalChain: Chain;
+}
+
 class ChainGenerator {
   constructor(private openai: OpenAI) {}
 
@@ -43,6 +53,15 @@ class ChainGenerator {
 
     console.log(proDescription);
     console.log(realRig);
+
+    // Сохраняем результаты в файл
+    await this.saveResults({
+      timestamp: new Date().toISOString(),
+      originalPrompt: prompt,
+      proDescription,
+      realRig,
+      finalChain,
+    });
 
     return finalChain;
   }
@@ -138,6 +157,30 @@ class ChainGenerator {
     }
 
     return JSON.parse(responseText) as unknown;
+  }
+
+  private async saveResults(result: GeneratorResult): Promise<void> {
+    try {
+      // Создаём директорию для результатов, если её нет
+      const resultsDir = path.join(process.cwd(), "generator-results");
+      await fs.mkdir(resultsDir, { recursive: true });
+
+      // Формируем имя файла с временной меткой
+      const timestamp = new Date()
+        .toISOString()
+        .replace(/[:.]/g, "-")
+        .slice(0, -5); // Убираем миллисекунды и Z
+      const filename = `chain-generation-${timestamp}.json`;
+      const filepath = path.join(resultsDir, filename);
+
+      // Сохраняем результаты в файл
+      await fs.writeFile(filepath, JSON.stringify(result, null, 2), "utf-8");
+
+      console.log(`\n✅ Результаты сохранены в: ${filepath}`);
+    } catch (error) {
+      console.error("❌ Ошибка при сохранении результатов:", error);
+      // Не прерываем выполнение, если сохранение не удалось
+    }
   }
 }
 
