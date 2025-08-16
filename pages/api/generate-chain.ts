@@ -1,6 +1,4 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { encodeChain } from "../../lib/core/encoder";
-import { Chain } from "../../lib/core/interface";
 import { createGenerator } from "lib/ai-generator/create-generator";
 
 interface GenerateChainRequest {
@@ -8,11 +6,8 @@ interface GenerateChainRequest {
 }
 
 interface GenerateChainResponse {
-  chain: Chain;
-  aiChain?: Chain; // Chain сгенерированный AI (для отладки)
-  qrCode: string;
-  rawBytes: number[];
-  aiGenerated?: boolean; // Флаг, показывающий, был ли использован AI
+  generationId: string;
+  message: string;
 }
 
 interface ErrorResponse {
@@ -44,16 +39,12 @@ export default async function handler(
     }
 
     const generator = await createGenerator();
-    const aiChain = await generator.generate(prompt);
-    // Энкодим chain в QR код
-    const encoded = encodeChain(aiChain);
+    const generationId = await generator.generate(prompt);
 
     // Формируем ответ
     const response: GenerateChainResponse = {
-      chain: aiChain,
-      qrCode: encoded.qrCode,
-      rawBytes: [...encoded.rawBytes],
-      aiGenerated: true,
+      generationId,
+      message: "Generation created successfully",
     };
 
     // Отправляем ответ

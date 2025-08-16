@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import { QRCodeCanvas } from "qrcode.react";
-import { Chain } from "../lib/core/interface";
+import { useRouter } from "next/router";
 import Header from "../components/Header";
-import ChainEditor from "../components/chain/ChainEditor";
 
 export default function GeneratorPage(): React.ReactElement {
+  const router = useRouter();
   const [prompt, setPrompt] = useState<string>(
     "Metallice Enter Sandman Main Riff"
   );
-  const [chain, setChain] = useState<Chain | null>(null);
-  const [qrCode, setQrCode] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
 
@@ -21,8 +18,6 @@ export default function GeneratorPage(): React.ReactElement {
 
     setIsLoading(true);
     setError("");
-    setChain(null);
-    setQrCode("");
 
     try {
       const response = await fetch("/api/generate-chain", {
@@ -37,27 +32,16 @@ export default function GeneratorPage(): React.ReactElement {
         throw new Error(`Ошибка: ${response.statusText}`);
       }
 
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      const data = await response.json();
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-      setChain(data.chain);
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-      setQrCode(data.qrCode);
+      const data = (await response.json()) as {
+        generationId: string;
+        message: string;
+      };
+
+      // Перенаправляем на страницу с результатом генерации
+      await router.push(`/generation/${data.generationId}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Произошла ошибка");
-    } finally {
       setIsLoading(false);
-    }
-  };
-
-  const downloadQRCode = (): void => {
-    const canvas = document.querySelector("canvas");
-    if (canvas) {
-      const url = canvas.toDataURL("image/png");
-      const link = document.createElement("a");
-      link.download = "generated-chain-qr.png";
-      link.href = url;
-      link.click();
     }
   };
 
@@ -176,92 +160,21 @@ export default function GeneratorPage(): React.ReactElement {
             </div>
           )}
 
-          {/* Results Section */}
-          {chain && qrCode && (
-            <div className="space-y-6 animate-fadeIn">
-              {/* QR Code */}
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4 border-b flex justify-between items-center">
-                  <h2 className="text-xl font-semibold text-gray-900">
-                    📱 Сгенерированный QR код
-                  </h2>
-
-                  <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
-                    ✨ AI Generated
-                  </span>
-                </div>
-                <div className="p-6 text-center">
-                  <div className="inline-block p-4 bg-white border-2 border-gray-200 rounded-lg mb-4">
-                    <QRCodeCanvas
-                      value={qrCode}
-                      size={250}
-                      level="H"
-                      includeMargin={true}
-                    />
-                  </div>
-                  <div className="space-y-3">
-                    <button
-                      onClick={downloadQRCode}
-                      className="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                    >
-                      💾 Скачать QR код
-                    </button>
-                    <div className="text-xs text-gray-500 break-all font-mono bg-gray-50 p-3 rounded">
-                      {qrCode}
-                    </div>
-                  </div>
+          {/* Loading state info */}
+          {isLoading && (
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-8">
+              <div className="flex">
+                <div className="ml-3">
+                  <p className="text-sm text-blue-700">
+                    Генерация может занять до 30 секунд. После завершения вы
+                    будете перенаправлены на страницу с результатом.
+                  </p>
                 </div>
               </div>
-
-              {/* Chain Editor */}
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4 border-b">
-                  <h2 className="text-xl font-semibold text-gray-900">
-                    🎛️ Редактор чейна
-                  </h2>
-                </div>
-                <div className="p-6">
-                  <ChainEditor
-                    chain={chain}
-                    onChange={setChain}
-                    readonly={true}
-                  />
-                </div>
-              </div>
-
-              {/* JSON View */}
-              <details className="bg-white rounded-lg shadow-md overflow-hidden">
-                <summary className="bg-gray-50 px-6 py-4 border-b cursor-pointer hover:bg-gray-100">
-                  <span className="text-xl font-semibold text-gray-900">
-                    📋 JSON представление
-                  </span>
-                </summary>
-                <div className="p-6">
-                  <pre className="text-xs bg-gray-50 p-4 rounded-lg overflow-auto max-h-96 border">
-                    {JSON.stringify(chain, null, 2)}
-                  </pre>
-                </div>
-              </details>
             </div>
           )}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.5s ease-out;
-        }
-      `}</style>
     </div>
   );
 }

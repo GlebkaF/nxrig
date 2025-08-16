@@ -19,7 +19,7 @@ export const noisegate: BlockConfig = {
   types: [
     {
       label: NoiseGateType.NoiseGate,
-      realName: "Noise Gate",
+      realName: "Boss NS-2 Noise Suppressor",
       encodeType: NOISE_GATE_TYPES[NoiseGateType.NoiseGate],
       params: [
         {
