@@ -1,8 +1,38 @@
 import React from "react";
-import { SLOT_COLORS, processorConfig } from "../../lib/processorConfig";
 import Knob from "../Knob";
 import Toggle from "../Toggle";
 import { BaseBlock } from "../types/chain";
+
+// Временные константы до восстановления processorConfig
+const SLOT_COLORS: Record<string, string> = {
+  EQ: "#10b981",
+  Cabinet: "#f59e0b",
+  Delay: "#3b82f6",
+  Compressor: "#ef4444",
+  Amplifier: "#8b5cf6",
+  Effect: "#f97316",
+  Modulation: "#06b6d4",
+  Reverb: "#84cc16",
+  Noisegate: "#6b7280",
+};
+
+// Типы для конфигурации процессора
+interface ProcessorParam {
+  label: string;
+  [key: string]: unknown;
+}
+
+interface ProcessorType {
+  realName: string;
+  params?: Record<string, ProcessorParam>;
+}
+
+interface ProcessorSlot {
+  types: Record<string, ProcessorType>;
+}
+
+// Заглушка для processorConfig
+const processorConfig: Record<string, ProcessorSlot> = {};
 
 interface GenericBlockProps {
   block: BaseBlock;
@@ -13,9 +43,8 @@ function formatLabel(key: string): string {
 }
 
 const GenericBlock: React.FC<GenericBlockProps> = ({ block }) => {
-  const color =
-    SLOT_COLORS[block.slot as keyof typeof SLOT_COLORS] || "#9ca3af";
-  const slotCfg = processorConfig[block.slot as keyof typeof processorConfig];
+  const color = SLOT_COLORS[block.slot] || "#9ca3af";
+  const slotCfg = processorConfig[block.slot];
   const typeCfg = slotCfg?.types[block.model];
   const realName = typeCfg?.realName;
 
@@ -57,21 +86,25 @@ const GenericBlock: React.FC<GenericBlockProps> = ({ block }) => {
       ) : (
         <div className="flex flex-wrap gap-4">
           {Object.entries(block.params || {}).map(([key, value]) => {
-            // @ts-expect-error TODO: fix this
-            const meta = typeCfg?.params?.[key] || {}; // eslint-disable-line @typescript-eslint/no-unsafe-assignment
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-            const label = meta.label || formatLabel(key);
+            const meta = typeCfg?.params?.[key];
+            const label =
+              meta &&
+              typeof meta === "object" &&
+              "label" in meta &&
+              typeof meta.label === "string"
+                ? meta.label
+                : formatLabel(key);
             return key.toLowerCase() === "bright" ? (
               <Toggle
                 key={key}
-                label={String(label)}
+                label={label}
                 value={Number(value)}
                 color={color}
               />
             ) : (
               <Knob
                 key={key}
-                label={String(label)}
+                label={label}
                 value={Number(value)}
                 color={color}
               />

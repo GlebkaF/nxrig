@@ -11,7 +11,6 @@ export interface EqBlock extends BaseBlock {
   params: Record<string, number>;
 }
 
-// @ts-expect-error TODO: fix this
 export interface CabinetBlock extends BaseBlock {
   slot: "Cabinet";
   params?: {
@@ -25,7 +24,6 @@ export interface CabinetBlock extends BaseBlock {
   };
 }
 
-// @ts-expect-error TODO: fix this
 export interface DelayBlock extends BaseBlock {
   slot: "Delay";
   params?: {
