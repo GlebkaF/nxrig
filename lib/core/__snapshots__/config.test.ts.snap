@@ -1512,6 +1512,386 @@ exports[`Config > compressor should to match snapshot 1`] = `
           ],
           "realName": "Martin D‑45 (Acoustic IR)",
         },
+        {
+          "encodeType": 35,
+          "label": "Custom Cabinet 35",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 35",
+        },
+        {
+          "encodeType": 36,
+          "label": "Custom Cabinet 36",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 36",
+        },
+        {
+          "encodeType": 37,
+          "label": "Custom Cabinet 37",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 37",
+        },
+        {
+          "encodeType": 38,
+          "label": "Custom Cabinet 38",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 38",
+        },
+        {
+          "encodeType": 39,
+          "label": "Custom Cabinet 39",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 39",
+        },
+        {
+          "encodeType": 40,
+          "label": "Custom Cabinet 40",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 40",
+        },
+        {
+          "encodeType": 41,
+          "label": "Custom Cabinet 41",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 41",
+        },
+        {
+          "encodeType": 42,
+          "label": "Custom Cabinet 42",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 42",
+        },
+        {
+          "encodeType": 43,
+          "label": "Custom Cabinet 43",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 43",
+        },
+        {
+          "encodeType": 44,
+          "label": "Custom Cabinet 44",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 44",
+        },
+        {
+          "encodeType": 45,
+          "label": "Custom Cabinet 45",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 45",
+        },
+        {
+          "encodeType": 46,
+          "label": "Custom Cabinet 46",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 46",
+        },
+        {
+          "encodeType": 47,
+          "label": "Custom Cabinet 47",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 47",
+        },
+        {
+          "encodeType": 48,
+          "label": "Custom Cabinet 48",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 48",
+        },
+        {
+          "encodeType": 49,
+          "label": "Custom Cabinet 49",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 49",
+        },
+        {
+          "encodeType": 50,
+          "label": "Custom Cabinet 50",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 50",
+        },
+        {
+          "encodeType": 51,
+          "label": "Custom Cabinet 51",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 51",
+        },
+        {
+          "encodeType": 52,
+          "label": "Custom Cabinet 52",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 52",
+        },
+        {
+          "encodeType": 53,
+          "label": "Custom Cabinet 53",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 53",
+        },
+        {
+          "encodeType": 54,
+          "label": "Custom Cabinet 54",
+          "params": [
+            {
+              "encodeIndex": 78,
+              "label": "Level",
+            },
+            {
+              "encodeIndex": 79,
+              "label": "LowCut",
+            },
+            {
+              "encodeIndex": 80,
+              "label": "HighCut",
+            },
+          ],
+          "realName": "Custom Cabinet 54",
+        },
       ],
     },
     "compressor": {
@@ -2085,7 +2465,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Intensity",
             },
           ],
-          "realName": "CE-1",
+          "realName": "BOSS CE-1 Chorus Ensemble",
         },
         {
           "encodeType": 2,
@@ -2100,7 +2480,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Depth",
             },
           ],
-          "realName": "CE-2",
+          "realName": "BOSS CE-2W",
         },
         {
           "encodeType": 3,
