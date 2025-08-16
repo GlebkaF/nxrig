@@ -1,4 +1,3 @@
-// import { createDefaultChain } from "lib/core/helpers/create-default-chain";
 import { Chain } from "../core/interface";
 import OpenAI from "openai";
 import { createOpenAIClient } from "lib/ai-generator/helpers/create-openai-client";
@@ -6,8 +5,7 @@ import {
   BlockTypesConfig,
   createEmptyChain,
 } from "lib/core/helpers/create-chain";
-import fs from "fs/promises";
-import path from "path";
+import { generationDb } from "../jsondb";
 
 import {
   createProDescriptionSystemPrompt,
@@ -33,19 +31,10 @@ interface RealRig {
   settings: unknown;
 }
 
-interface GeneratorResult {
-  timestamp: string;
-  originalPrompt: string;
-  proDescription: ProDescription;
-  realRig: RealRig;
-
-  finalChain: Chain;
-}
-
 class ChainGenerator {
   constructor(private openai: OpenAI) {}
 
-  async generate(prompt: string): Promise<Chain> {
+  async generate(prompt: string): Promise<string> {
     const proDescription = await this.createProDescription(prompt);
     const realRig = await this.createRealRig(proDescription);
     const emptyChain = await this.createEmptyChain(realRig);
@@ -54,8 +43,8 @@ class ChainGenerator {
     console.log(proDescription);
     console.log(realRig);
 
-    // Сохраняем результаты в файл
-    await this.saveResults({
+    // Сохраняем результаты в базу данных
+    const generationId = await this.saveToDatabase({
       timestamp: new Date().toISOString(),
       originalPrompt: prompt,
       proDescription,
@@ -63,7 +52,7 @@ class ChainGenerator {
       finalChain,
     });
 
-    return finalChain;
+    return generationId;
   }
 
   private async createProDescription(prompt: string): Promise<ProDescription> {
@@ -144,27 +133,19 @@ class ChainGenerator {
     return JSON.parse(responseText) as unknown;
   }
 
-  private async saveResults(result: GeneratorResult): Promise<void> {
+  private async saveToDatabase(result: {
+    timestamp: string;
+    originalPrompt: string;
+    proDescription: ProDescription;
+    realRig: RealRig;
+    finalChain: Chain;
+  }): Promise<string> {
     try {
-      // Создаём директорию для результатов, если её нет
-      const resultsDir = path.join(process.cwd(), "generator-results");
-      await fs.mkdir(resultsDir, { recursive: true });
-
-      // Формируем имя файла с временной меткой
-      const timestamp = new Date()
-        .toISOString()
-        .replace(/[:.]/g, "-")
-        .slice(0, -5); // Убираем миллисекунды и Z
-      const filename = `chain-generation-${timestamp}.json`;
-      const filepath = path.join(resultsDir, filename);
-
-      // Сохраняем результаты в файл
-      await fs.writeFile(filepath, JSON.stringify(result, null, 2), "utf-8");
-
-      console.log(`\n✅ Результаты сохранены в: ${filepath}`);
+      const generationId = await generationDb.addGeneration(result);
+      return generationId;
     } catch (error) {
-      console.error("❌ Ошибка при сохранении результатов:", error);
-      // Не прерываем выполнение, если сохранение не удалось
+      console.error("❌ Ошибка при сохранении в базу данных:", error);
+      throw error;
     }
   }
 }

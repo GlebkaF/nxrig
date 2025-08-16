@@ -35,7 +35,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Bright",
             },
           ],
-          "realName": "Jazz Clean",
+          "realName": "Roland Jazz Chorus-120",
         },
         {
           "encodeType": 2,
@@ -1952,7 +1952,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Sustain",
             },
           ],
-          "realName": "Keeley Compressor",
+          "realName": "Ross Compressor",
         },
       ],
     },
@@ -2095,7 +2095,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Sensitivity",
             },
           ],
-          "realName": "Distortion+",
+          "realName": "MXR Distortion+",
         },
         {
           "encodeType": 2,
@@ -2118,7 +2118,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Treble",
             },
           ],
-          "realName": "RC Boost",
+          "realName": "Xotic RC Booster",
         },
         {
           "encodeType": 3,
@@ -2141,7 +2141,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Treble",
             },
           ],
-          "realName": "AC Boost",
+          "realName": "Xotic AC Booster",
         },
         {
           "encodeType": 4,
@@ -2160,7 +2160,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Tone",
             },
           ],
-          "realName": "Dist One",
+          "realName": "Boss DS-1 Distortion",
         },
         {
           "encodeType": 5,
@@ -2179,7 +2179,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Tone",
             },
           ],
-          "realName": "T Screamer",
+          "realName": "Ibanez Tube Screamer",
         },
         {
           "encodeType": 6,
@@ -2198,7 +2198,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Tone",
             },
           ],
-          "realName": "Blues Drive",
+          "realName": "Boss BD-2 Blues Driver",
         },
         {
           "encodeType": 7,
@@ -2217,7 +2217,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Tone",
             },
           ],
-          "realName": "Morning Drive",
+          "realName": "Marshall Blues Breaker",
         },
         {
           "encodeType": 8,
@@ -2236,7 +2236,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Filter",
             },
           ],
-          "realName": "Eat Dist",
+          "realName": "ProCo RAT 2",
         },
         {
           "encodeType": 9,
@@ -2255,7 +2255,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Tone",
             },
           ],
-          "realName": "Red Dirt",
+          "realName": "JHS Red Dirt",
         },
         {
           "encodeType": 10,
@@ -2274,7 +2274,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Tone",
             },
           ],
-          "realName": "Crunch",
+          "realName": "Marshall Crunch",
         },
         {
           "encodeType": 11,
@@ -2293,7 +2293,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Tone",
             },
           ],
-          "realName": "Muff Fuzz",
+          "realName": "Electro-Harmonix Big Muff",
         },
         {
           "encodeType": 12,
@@ -2308,7 +2308,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Boost",
             },
           ],
-          "realName": "Katana",
+          "realName": "Boss Katana Clean Boost",
         },
         {
           "encodeType": 13,
@@ -2327,7 +2327,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Filter",
             },
           ],
-          "realName": "ST Singer",
+          "realName": "Single Tube Singer",
         },
         {
           "encodeType": 14,
@@ -2354,7 +2354,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Up/Down Switch",
             },
           ],
-          "realName": "Touch Wah",
+          "realName": "Dunlop Crybaby Touch Wah",
         },
       ],
     },
@@ -2716,7 +2716,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Decay",
             },
           ],
-          "realName": "Noise Gate",
+          "realName": "Boss NS-2 Noise Suppressor",
         },
       ],
     },
@@ -2740,7 +2740,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Tone",
             },
           ],
-          "realName": "Room Reverb",
+          "realName": "Room",
         },
         {
           "encodeType": 2,
@@ -2763,7 +2763,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Liveliness",
             },
           ],
-          "realName": "Hall Reverb",
+          "realName": "Hall",
         },
         {
           "encodeType": 3,
@@ -2778,7 +2778,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Decay",
             },
           ],
-          "realName": "Plate Reverb",
+          "realName": "Plate",
         },
         {
           "encodeType": 4,
@@ -2793,7 +2793,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Decay",
             },
           ],
-          "realName": "Spring Reverb",
+          "realName": "Spring",
         },
         {
           "encodeType": 5,
@@ -2812,7 +2812,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Shimmer",
             },
           ],
-          "realName": "Shimmer Reverb",
+          "realName": "Shimmer",
         },
         {
           "encodeType": 6,
@@ -2827,7 +2827,7 @@ exports[`Config > compressor should to match snapshot 1`] = `
               "label": "Depth",
             },
           ],
-          "realName": "Damp Reverb",
+          "realName": "Damp",
         },
       ],
     },
