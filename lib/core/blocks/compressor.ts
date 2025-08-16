@@ -75,7 +75,7 @@ export const compressor: BlockConfig = {
     },
     {
       label: "Rose Comp",
-      realName: "Keeley Compressor",
+      realName: "Ross Compressor",
       encodeType: COMP_TYPES[CompressorType.RoseComp],
       params: [
         {

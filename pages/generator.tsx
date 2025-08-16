@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import { Chain } from "../lib/core/interface";
 import Header from "../components/Header";
+import ChainEditor from "../components/chain/ChainEditor";
 
 export default function GeneratorPage(): React.ReactElement {
   const [prompt, setPrompt] = useState<string>(
@@ -212,70 +213,19 @@ export default function GeneratorPage(): React.ReactElement {
                 </div>
               </div>
 
-              {/* Chain Details */}
+              {/* Chain Editor */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="bg-gray-50 px-6 py-4 border-b">
                   <h2 className="text-xl font-semibold text-gray-900">
-                    🎛️ Параметры чейна
+                    🎛️ Редактор чейна
                   </h2>
                 </div>
                 <div className="p-6">
-                  <div className="space-y-4">
-                    {Object.entries(chain).map(([blockKey, blockData]) => (
-                      <div
-                        key={blockKey}
-                        className={`border rounded-lg p-4 ${
-                          blockData.enabled
-                            ? "bg-green-50 border-green-200"
-                            : "bg-gray-50 border-gray-200"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between mb-2">
-                          <h3 className="text-lg font-medium text-gray-900 capitalize">
-                            {blockKey}
-                          </h3>
-                          <span
-                            className={`px-2 py-1 text-xs rounded-full ${
-                              blockData.enabled
-                                ? "bg-green-100 text-green-800"
-                                : "bg-gray-100 text-gray-600"
-                            }`}
-                          >
-                            {blockData.enabled ? "Включен" : "Выключен"}
-                          </span>
-                        </div>
-                        {blockData.enabled && (
-                          <>
-                            <div className="text-sm text-gray-600 mb-2">
-                              Тип:{" "}
-                              <span className="font-medium">
-                                {blockData.type}
-                              </span>
-                            </div>
-                            {Object.keys(blockData.params).length > 0 && (
-                              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-3">
-                                {Object.entries(blockData.params).map(
-                                  ([param, value]) => (
-                                    <div
-                                      key={param}
-                                      className="bg-white rounded px-3 py-2 border border-gray-200"
-                                    >
-                                      <div className="text-xs text-gray-500">
-                                        {param}
-                                      </div>
-                                      <div className="text-sm font-medium">
-                                        {value}%
-                                      </div>
-                                    </div>
-                                  )
-                                )}
-                              </div>
-                            )}
-                          </>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+                  <ChainEditor
+                    chain={chain}
+                    onChange={setChain}
+                    readonly={true}
+                  />
                 </div>
               </div>
 
