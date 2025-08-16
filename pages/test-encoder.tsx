@@ -9,11 +9,9 @@ import { QRCodeCanvas } from "qrcode.react";
 import jsQR from "jsqr";
 import { encodeChain } from "../lib/core/encoder";
 import { decodeChain } from "../lib/core/decoder";
-import { createDefaultChain } from "../lib/core/helpers/create-default-chain";
+import { createDefaultChain } from "../lib/core/helpers/create-chain";
 import { config } from "../lib/core/config";
-import { Blocks } from "../lib/core/interface";
-
-type Chain = ReturnType<typeof createDefaultChain>;
+import { Blocks, Chain } from "../lib/core/interface";
 
 const exampleChain = {
   noisegate: {

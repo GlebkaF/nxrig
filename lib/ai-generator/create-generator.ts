@@ -5,7 +5,7 @@ import { createOpenAIClient } from "lib/ai-generator/helpers/create-openai-clien
 import {
   BlockTypesConfig,
   createEmptyChain,
-} from "lib/core/helpers/create-default-chain";
+} from "lib/core/helpers/create-chain";
 import fs from "fs/promises";
 import path from "path";
 
