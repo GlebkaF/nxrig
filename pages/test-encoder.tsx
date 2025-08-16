@@ -4,14 +4,14 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
 /* eslint-disable @typescript-eslint/no-confusing-void-expression */
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import jsQR from "jsqr";
 import { encodeChain } from "../lib/core/encoder";
 import { decodeChain } from "../lib/core/decoder";
 import { createDefaultChain } from "../lib/core/helpers/create-chain";
-import { config } from "../lib/core/config";
-import { Blocks, Chain } from "../lib/core/interface";
+import { Chain } from "../lib/core/interface";
+import ChainEditor from "../components/chain/ChainEditor";
 
 export default function TestEncoderPage(): React.ReactElement {
   const [chain, setChain] = useState<Chain>(createDefaultChain());
@@ -98,59 +98,8 @@ export default function TestEncoderPage(): React.ReactElement {
     }
   }, [chain]);
 
-  // Функции для обновления чейна
-  const updateBlockEnabled = useCallback(
-    (blockKey: keyof Chain, enabled: boolean) => {
-      setChain((prev) => ({
-        ...prev,
-        [blockKey]: {
-          ...prev[blockKey],
-          enabled,
-        },
-      }));
-    },
-    []
-  );
-
-  const updateBlockType = useCallback((blockKey: keyof Chain, type: string) => {
-    setChain((prev) => ({
-      ...prev,
-      [blockKey]: {
-        ...prev[blockKey],
-        type,
-      },
-    }));
-  }, []);
-
-  const updateBlockParam = useCallback(
-    (blockKey: keyof Chain, paramName: string, value: number) => {
-      setChain((prev) => ({
-        ...prev,
-        [blockKey]: {
-          ...prev[blockKey],
-          params: {
-            ...prev[blockKey].params,
-            [paramName]: value,
-          },
-        },
-      }));
-    },
-    []
-  );
-
   const resetToDefault = () => {
     setChain(createDefaultChain());
-  };
-
-  const getBlockTypes = (blockKey: Blocks) => {
-    return config.blocks[blockKey]?.types?.map((t) => t.label) || [];
-  };
-
-  const getBlockParams = (blockKey: keyof Chain) => {
-    const blockType = chain[blockKey].type;
-    const blockConfig = config.blocks[blockKey as Blocks];
-    const typeConfig = blockConfig?.types?.find((t) => t.label === blockType);
-    return typeConfig?.params || [];
   };
 
   return (
@@ -233,121 +182,8 @@ export default function TestEncoderPage(): React.ReactElement {
                   {error}
                 </div>
               )}
-              <div className="p-6 space-y-6">
-                {Object.entries(chain).map(([blockKey, blockData]) => {
-                  const blockTypes = getBlockTypes(blockKey as Blocks);
-                  const blockParams = getBlockParams(blockKey as keyof Chain);
-
-                  return (
-                    <div
-                      key={blockKey}
-                      className="border rounded-lg p-4 bg-gray-50"
-                    >
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-medium text-gray-900 capitalize">
-                          {blockKey}
-                        </h3>
-                        <label className="flex items-center">
-                          <input
-                            type="checkbox"
-                            checked={blockData.enabled}
-                            onChange={(e) =>
-                              updateBlockEnabled(
-                                blockKey as keyof Chain,
-                                e.target.checked
-                              )
-                            }
-                            className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                          />
-                          <span className="ml-2 text-sm text-gray-700">
-                            Включен
-                          </span>
-                        </label>
-                      </div>
-
-                      {/* Type Selector */}
-                      <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Тип эффекта
-                        </label>
-                        <select
-                          value={blockData.type}
-                          onChange={(e) =>
-                            updateBlockType(
-                              blockKey as keyof Chain,
-                              e.target.value
-                            )
-                          }
-                          className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                          disabled={!blockData.enabled}
-                        >
-                          {blockTypes.map((type) => (
-                            <option key={type} value={type}>
-                              {type}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-
-                      {/* Parameters */}
-                      {blockParams.length > 0 && (
-                        <div className="space-y-3">
-                          <h4 className="text-sm font-medium text-gray-700">
-                            Параметры
-                          </h4>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            {blockParams.map((param) => {
-                              const params = blockData.params as Record<
-                                string,
-                                number
-                              >;
-                              const currentValue = params[param.label] || 0;
-                              return (
-                                <div key={param.label}>
-                                  <label className="block text-xs font-medium text-gray-600 mb-1">
-                                    {param.label}
-                                  </label>
-                                  <div className="flex items-center space-x-2">
-                                    <input
-                                      type="range"
-                                      min="0"
-                                      max="100"
-                                      value={currentValue}
-                                      onChange={(e) =>
-                                        updateBlockParam(
-                                          blockKey as keyof Chain,
-                                          param.label,
-                                          parseInt(e.target.value)
-                                        )
-                                      }
-                                      className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                                      disabled={!blockData.enabled}
-                                    />
-                                    <input
-                                      type="number"
-                                      min="0"
-                                      max="100"
-                                      value={currentValue}
-                                      onChange={(e) =>
-                                        updateBlockParam(
-                                          blockKey as keyof Chain,
-                                          param.label,
-                                          parseInt(e.target.value) || 0
-                                        )
-                                      }
-                                      className="w-16 p-1 text-xs border border-gray-300 rounded text-center"
-                                      disabled={!blockData.enabled}
-                                    />
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+              <div className="p-6">
+                <ChainEditor chain={chain} onChange={setChain} />
               </div>
             </div>
           </div>
