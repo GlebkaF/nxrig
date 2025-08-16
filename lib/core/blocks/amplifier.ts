@@ -185,7 +185,7 @@ export const amplifier: BlockConfig = {
   types: [
     {
       label: AmplifierType.JazzClean,
-      realName: "Jazz Clean",
+      realName: "Roland Jazz Chorus-120",
       encodeType: TYPES[AmplifierType.JazzClean],
       params: [
         {

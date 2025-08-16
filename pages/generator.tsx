@@ -224,7 +224,7 @@ export default function GeneratorPage(): React.ReactElement {
                   <ChainEditor
                     chain={chain}
                     onChange={setChain}
-                    disabled={true}
+                    readonly={true}
                   />
                 </div>
               </div>

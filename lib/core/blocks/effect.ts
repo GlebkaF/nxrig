@@ -18,7 +18,7 @@ export enum EffectType {
   TouchWah = "Touch Wah",
 }
 
-export type EffectParams = 
+export type EffectParams =
   | ChainItem<EffectType.DistortionPlus, "Output" | "Sensitivity">
   | ChainItem<EffectType.RCBoost, "Volume" | "Gain" | "Bass" | "Treble">
   | ChainItem<EffectType.ACBoost, "Volume" | "Gain" | "Bass" | "Treble">
@@ -32,7 +32,10 @@ export type EffectParams =
   | ChainItem<EffectType.MuffFuzz, "Volume" | "Sustain" | "Tone">
   | ChainItem<EffectType.Katana, "Volume" | "Boost">
   | ChainItem<EffectType.STSinger, "Volume" | "Gain" | "Filter">
-  | ChainItem<EffectType.TouchWah, "Type" | "Wow" | "Sense" | "Level" | "Up/Down Switch">;
+  | ChainItem<
+      EffectType.TouchWah,
+      "Type" | "Wow" | "Sense" | "Level" | "Up/Down Switch"
+    >;
 
 const TYPES: Record<EffectType, number> = {
   [EffectType.DistortionPlus]: 1,
@@ -56,7 +59,7 @@ export const effect: BlockConfig = {
   types: [
     {
       label: EffectType.DistortionPlus,
-      realName: "Distortion+",
+      realName: "MXR Distortion+",
       encodeType: TYPES[EffectType.DistortionPlus],
       params: [
         {
@@ -73,7 +76,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.RCBoost,
-      realName: "RC Boost",
+      realName: "Xotic RC Booster",
       encodeType: TYPES[EffectType.RCBoost],
       params: [
         {
@@ -100,7 +103,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.ACBoost,
-      realName: "AC Boost",
+      realName: "Xotic AC Booster",
       encodeType: TYPES[EffectType.ACBoost],
       params: [
         {
@@ -127,7 +130,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.DistOne,
-      realName: "Dist One",
+      realName: "Boss DS-1 Distortion",
       encodeType: TYPES[EffectType.DistOne],
       params: [
         {
@@ -149,7 +152,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.TScreamer,
-      realName: "T Screamer",
+      realName: "Ibanez Tube Screamer",
       encodeType: TYPES[EffectType.TScreamer],
       params: [
         {
@@ -171,7 +174,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.BluesDrive,
-      realName: "Blues Drive",
+      realName: "Boss BD-2 Blues Driver",
       encodeType: TYPES[EffectType.BluesDrive],
       params: [
         {
@@ -193,7 +196,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.MorningDrive,
-      realName: "Morning Drive",
+      realName: "Marshall Blues Breaker",
       encodeType: TYPES[EffectType.MorningDrive],
       params: [
         { label: "Volume", encodeIndex: NuxMp3PresetIndex.EFX_Para1 },
@@ -203,7 +206,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.EatDist,
-      realName: "Eat Dist",
+      realName: "ProCo RAT 2",
       encodeType: TYPES[EffectType.EatDist],
       params: [
         {
@@ -225,7 +228,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.RedDirt,
-      realName: "Red Dirt",
+      realName: "JHS Red Dirt",
       encodeType: TYPES[EffectType.RedDirt],
       params: [
         {
@@ -247,7 +250,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.Crunch,
-      realName: "Crunch",
+      realName: "Marshall Crunch",
       encodeType: TYPES[EffectType.Crunch],
       params: [
         {
@@ -269,7 +272,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.MuffFuzz,
-      realName: "Muff Fuzz",
+      realName: "Electro-Harmonix Big Muff",
       encodeType: TYPES[EffectType.MuffFuzz],
       params: [
         {
@@ -291,7 +294,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.Katana,
-      realName: "Katana",
+      realName: "Boss Katana Clean Boost",
       encodeType: TYPES[EffectType.Katana],
       params: [
         {
@@ -309,7 +312,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.STSinger,
-      realName: "ST Singer",
+      realName: "Single Tube Singer",
       encodeType: TYPES[EffectType.STSinger],
       params: [
         {
@@ -331,7 +334,7 @@ export const effect: BlockConfig = {
     },
     {
       label: EffectType.TouchWah,
-      realName: "Touch Wah",
+      realName: "Dunlop Crybaby Touch Wah",
       encodeType: TYPES[EffectType.TouchWah],
       params: [
         {

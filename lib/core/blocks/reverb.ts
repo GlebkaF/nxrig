@@ -32,7 +32,7 @@ export const reverb: BlockConfig = {
   types: [
     {
       label: ReverbType.Room,
-      realName: "Room Reverb",
+      realName: "Room",
       encodeType: TYPES[ReverbType.Room],
       params: [
         {
@@ -55,7 +55,7 @@ export const reverb: BlockConfig = {
 
     {
       label: ReverbType.Hall,
-      realName: "Hall Reverb",
+      realName: "Hall",
       encodeType: TYPES[ReverbType.Hall],
       params: [
         {
@@ -82,7 +82,7 @@ export const reverb: BlockConfig = {
     },
     {
       label: ReverbType.Plate,
-      realName: "Plate Reverb",
+      realName: "Plate",
       encodeType: TYPES[ReverbType.Plate],
       params: [
         {
@@ -99,7 +99,7 @@ export const reverb: BlockConfig = {
     },
     {
       label: ReverbType.Spring,
-      realName: "Spring Reverb",
+      realName: "Spring",
       encodeType: TYPES[ReverbType.Spring],
       params: [
         {
@@ -116,7 +116,7 @@ export const reverb: BlockConfig = {
     },
     {
       label: ReverbType.Shimmer,
-      realName: "Shimmer Reverb",
+      realName: "Shimmer",
       encodeType: TYPES[ReverbType.Shimmer],
       params: [
         {
@@ -138,7 +138,7 @@ export const reverb: BlockConfig = {
     },
     {
       label: ReverbType.Damp,
-      realName: "Damp Reverb",
+      realName: "Damp",
       encodeType: TYPES[ReverbType.Damp],
       params: [
         {

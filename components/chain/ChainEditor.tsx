@@ -2,16 +2,29 @@ import React, { useCallback } from "react";
 import { Blocks, Chain } from "../../lib/core/interface";
 import { config } from "../../lib/core/config";
 
+// Цвета для блоков из конфигурации
+const SLOT_COLORS: Record<string, string> = {
+  noisegate: "#10b981",
+  compressor: "#eab308",
+  effect: "#f97316",
+  delay: "#7dd3fc",
+  amplifier: "#ef4444",
+  cabinet: "#3b82f6",
+  eq: "#6b7280", // более насыщенный серый, чем у выключенных блоков
+  modulation: "#a855f7",
+  reverb: "#d946ef",
+};
+
 interface ChainEditorProps {
   chain: Chain;
   onChange: (chain: Chain) => void;
-  disabled?: boolean;
+  readonly?: boolean;
 }
 
 const ChainEditor: React.FC<ChainEditorProps> = ({
   chain,
   onChange,
-  disabled = false,
+  readonly = false,
 }) => {
   // Функции для обновления чейна
   const updateBlockEnabled = useCallback(
@@ -69,6 +82,48 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
     return typeConfig?.params || [];
   };
 
+  const getTypeDisplayName = (blockKey: Blocks, typeLabel: string): string => {
+    const blockConfig = config.blocks[blockKey];
+    const typeConfig = blockConfig.types.find((t) => t.label === typeLabel);
+    const realName = typeConfig?.realName;
+
+    // Если realName отличается от label, добавляем его в скобках
+    if (realName && realName !== typeLabel) {
+      return `${typeLabel} — ${realName}`;
+    }
+    return typeLabel;
+  };
+
+  const getBlockColor = (blockKey: string): string => {
+    return SLOT_COLORS[blockKey.toLowerCase()] || "#6b7280";
+  };
+
+  const hexToRgba = (hex: string, alpha: number): string => {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r.toString()}, ${g.toString()}, ${b.toString()}, ${alpha.toString()})`;
+  };
+
+  const getBlockStyles = (
+    blockKey: string,
+    enabled: boolean
+  ): React.CSSProperties => {
+    const color = getBlockColor(blockKey);
+    if (enabled) {
+      return {
+        backgroundColor: hexToRgba(color, 0.1), // 10% прозрачности
+        borderColor: hexToRgba(color, 0.3), // 30% прозрачности
+        borderWidth: "2px",
+      };
+    }
+    return {
+      backgroundColor: "#f9fafb",
+      borderColor: "#e5e7eb",
+      borderWidth: "1px",
+    };
+  };
+
   return (
     <div className="space-y-6">
       {Object.entries(chain).map(([blockKey, blockData]) => {
@@ -78,18 +133,22 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
         return (
           <div
             key={blockKey}
-            className={`border rounded-lg p-4 transition-colors ${
-              blockData.enabled && !disabled
-                ? "bg-green-50 border-green-200"
-                : "bg-gray-50 border-gray-200"
-            }`}
+            className="rounded-lg p-4 transition-all border"
+            style={getBlockStyles(blockKey, blockData.enabled)}
           >
             <div
               className={`flex items-center justify-between ${blockData.enabled ? "mb-4" : ""}`}
             >
-              <h3 className="text-lg font-medium text-gray-900 capitalize">
-                {blockKey}
-              </h3>
+              <div
+                className="px-3 py-1 rounded-md text-sm font-medium text-white shadow-sm"
+                style={{
+                  backgroundColor: blockData.enabled
+                    ? getBlockColor(blockKey)
+                    : "#9ca3af", // серый для выключенных блоков
+                }}
+              >
+                {blockKey.toUpperCase()}
+              </div>
               <label className="flex items-center">
                 <input
                   type="checkbox"
@@ -100,7 +159,7 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
                       e.target.checked
                     );
                   }}
-                  disabled={disabled}
+                  disabled={readonly}
                   className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 disabled:opacity-50"
                 />
                 <span className="ml-2 text-sm text-gray-700">
@@ -113,7 +172,7 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
             {blockData.enabled && (
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Тип эффекта
+                  Тип
                 </label>
                 <select
                   value={blockData.type}
@@ -121,11 +180,11 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
                     updateBlockType(blockKey as keyof Chain, e.target.value);
                   }}
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50 disabled:bg-gray-100"
-                  disabled={disabled}
+                  disabled={readonly}
                 >
                   {blockTypes.map((type) => (
                     <option key={type} value={type}>
-                      {type}
+                      {getTypeDisplayName(blockKey as Blocks, type)}
                     </option>
                   ))}
                 </select>
@@ -160,7 +219,7 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
                               );
                             }}
                             className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer disabled:opacity-50"
-                            disabled={!blockData.enabled || disabled}
+                            disabled={!blockData.enabled || readonly}
                           />
                           <input
                             type="number"
@@ -175,7 +234,7 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
                               );
                             }}
                             className="w-16 p-1 text-xs border border-gray-300 rounded text-center disabled:opacity-50 disabled:bg-gray-100"
-                            disabled={!blockData.enabled || disabled}
+                            disabled={!blockData.enabled || readonly}
                           />
                         </div>
                       </div>
