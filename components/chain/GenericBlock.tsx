@@ -1,7 +1,13 @@
 import React from "react";
 import Knob from "../Knob";
 import Toggle from "../Toggle";
-import { BaseBlock } from "../types/chain";
+
+interface BaseBlock {
+  slot: string;
+  model: string;
+  enabled?: boolean;
+  params?: Record<string, number | string>;
+}
 
 // Временные константы до восстановления processorConfig
 const SLOT_COLORS: Record<string, string> = {
@@ -79,39 +85,28 @@ const GenericBlock: React.FC<GenericBlockProps> = ({ block }) => {
         {block.model}
         {realName && <span className="text-gray-400"> — {realName}</span>}
       </div>
-      {block.slot === "EQ" ? (
-        <div className="text-xs text-gray-300">
-          EQ visualization handled elsewhere
-        </div>
-      ) : (
-        <div className="flex flex-wrap gap-4">
-          {Object.entries(block.params || {}).map(([key, value]) => {
-            const meta = typeCfg?.params?.[key];
-            const label =
-              meta &&
-              typeof meta === "object" &&
-              "label" in meta &&
-              typeof meta.label === "string"
-                ? meta.label
-                : formatLabel(key);
-            return key.toLowerCase() === "bright" ? (
-              <Toggle
-                key={key}
-                label={label}
-                value={Number(value)}
-                color={color}
-              />
-            ) : (
-              <Knob
-                key={key}
-                label={label}
-                value={Number(value)}
-                color={color}
-              />
-            );
-          })}
-        </div>
-      )}
+      <div className="flex flex-wrap gap-4">
+        {Object.entries(block.params || {}).map(([key, value]) => {
+          const meta = typeCfg?.params?.[key];
+          const label =
+            meta &&
+            typeof meta === "object" &&
+            "label" in meta &&
+            typeof meta.label === "string"
+              ? meta.label
+              : formatLabel(key);
+          return key.toLowerCase() === "bright" ? (
+            <Toggle
+              key={key}
+              label={label}
+              value={Number(value)}
+              color={color}
+            />
+          ) : (
+            <Knob key={key} label={label} value={Number(value)} color={color} />
+          );
+        })}
+      </div>
       <span
         className="absolute bottom-1 right-1 px-2 py-0.5 text-xs font-semibold rounded"
         style={{ backgroundColor: color, color: "#000" }}
