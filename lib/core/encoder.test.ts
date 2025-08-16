@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { createDefaultChain } from "./helpers/create-default-chain";
+import { createDefaultChain } from "./helpers/create-chain";
 import { encodeChain } from "./encoder";
 import { config } from "./config";
 import { Blocks } from "./interface";
@@ -83,7 +83,7 @@ describe("Core Encoder Tests", () => {
 
       // Изменяем один из чейнов
       // Type guard to ensure we're working with JazzClean amplifier
-      if ('Bass' in chain2.amplifier.params) {
+      if ("Bass" in chain2.amplifier.params) {
         chain2.amplifier.params.Bass = 99;
       }
       chain2.effect.enabled = false;

@@ -36,6 +36,26 @@ export enum CabinetType {
   G_HBIRD = "G-HBIRD",
   G_J15 = "G-J15",
   M_D45 = "M-D45",
+  CUSTOM_CABINET_35 = "Custom Cabinet 35",
+  CUSTOM_CABINET_36 = "Custom Cabinet 36",
+  CUSTOM_CABINET_37 = "Custom Cabinet 37",
+  CUSTOM_CABINET_38 = "Custom Cabinet 38",
+  CUSTOM_CABINET_39 = "Custom Cabinet 39",
+  CUSTOM_CABINET_40 = "Custom Cabinet 40",
+  CUSTOM_CABINET_41 = "Custom Cabinet 41",
+  CUSTOM_CABINET_42 = "Custom Cabinet 42",
+  CUSTOM_CABINET_43 = "Custom Cabinet 43",
+  CUSTOM_CABINET_44 = "Custom Cabinet 44",
+  CUSTOM_CABINET_45 = "Custom Cabinet 45",
+  CUSTOM_CABINET_46 = "Custom Cabinet 46",
+  CUSTOM_CABINET_47 = "Custom Cabinet 47",
+  CUSTOM_CABINET_48 = "Custom Cabinet 48",
+  CUSTOM_CABINET_49 = "Custom Cabinet 49",
+  CUSTOM_CABINET_50 = "Custom Cabinet 50",
+  CUSTOM_CABINET_51 = "Custom Cabinet 51",
+  CUSTOM_CABINET_52 = "Custom Cabinet 52",
+  CUSTOM_CABINET_53 = "Custom Cabinet 53",
+  CUSTOM_CABINET_54 = "Custom Cabinet 54",
 }
 const TYPES: Record<CabinetType, number> = {
   [CabinetType.JZ120]: 1,
@@ -72,9 +92,29 @@ const TYPES: Record<CabinetType, number> = {
   [CabinetType.G_HBIRD]: 32,
   [CabinetType.G_J15]: 33,
   [CabinetType.M_D45]: 34,
+  [CabinetType.CUSTOM_CABINET_35]: 35,
+  [CabinetType.CUSTOM_CABINET_36]: 36,
+  [CabinetType.CUSTOM_CABINET_37]: 37,
+  [CabinetType.CUSTOM_CABINET_38]: 38,
+  [CabinetType.CUSTOM_CABINET_39]: 39,
+  [CabinetType.CUSTOM_CABINET_40]: 40,
+  [CabinetType.CUSTOM_CABINET_41]: 41,
+  [CabinetType.CUSTOM_CABINET_42]: 42,
+  [CabinetType.CUSTOM_CABINET_43]: 43,
+  [CabinetType.CUSTOM_CABINET_44]: 44,
+  [CabinetType.CUSTOM_CABINET_45]: 45,
+  [CabinetType.CUSTOM_CABINET_46]: 46,
+  [CabinetType.CUSTOM_CABINET_47]: 47,
+  [CabinetType.CUSTOM_CABINET_48]: 48,
+  [CabinetType.CUSTOM_CABINET_49]: 49,
+  [CabinetType.CUSTOM_CABINET_50]: 50,
+  [CabinetType.CUSTOM_CABINET_51]: 51,
+  [CabinetType.CUSTOM_CABINET_52]: 52,
+  [CabinetType.CUSTOM_CABINET_53]: 53,
+  [CabinetType.CUSTOM_CABINET_54]: 54,
 };
 
-export type CabinetParams = 
+export type CabinetParams =
   | ChainItem<CabinetType.JZ120, "Level" | "LowCut" | "HighCut">
   | ChainItem<CabinetType.DR112, "Level" | "LowCut" | "HighCut">
   | ChainItem<CabinetType.TR212, "Level" | "LowCut" | "HighCut">
@@ -108,9 +148,30 @@ export type CabinetParams =
   | ChainItem<CabinetType.MKB410, "Level" | "LowCut" | "HighCut">
   | ChainItem<CabinetType.G_HBIRD, "Level" | "LowCut" | "HighCut">
   | ChainItem<CabinetType.G_J15, "Level" | "LowCut" | "HighCut">
-  | ChainItem<CabinetType.M_D45, "Level" | "LowCut" | "HighCut">;
+  | ChainItem<CabinetType.M_D45, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_35, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_36, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_37, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_38, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_39, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_40, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_41, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_42, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_43, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_44, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_45, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_46, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_47, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_48, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_49, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_50, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_51, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_52, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_53, "Level" | "LowCut" | "HighCut">
+  | ChainItem<CabinetType.CUSTOM_CABINET_54, "Level" | "LowCut" | "HighCut">;
 
 const cabParams: TypeParamConfig[] = [
+  // Electric IR
   {
     label: "Level",
     encodeIndex: NuxMp3PresetIndex.CAB_Para4,
@@ -275,6 +336,7 @@ export const cabinet: BlockConfig = {
       encodeType: TYPES[CabinetType.VIBROKING310],
       params: cabParams,
     },
+    // Bass IR
     {
       label: CabinetType.AGL_DB810,
       realName: "Aguilar DB810 8x10",
@@ -317,6 +379,7 @@ export const cabinet: BlockConfig = {
       encodeType: TYPES[CabinetType.MKB410],
       params: cabParams,
     },
+    // Acoustic IR
     {
       label: CabinetType.G_HBIRD,
       realName: "Gibson Hummingbird (Acoustic IR)",
@@ -333,6 +396,126 @@ export const cabinet: BlockConfig = {
       label: CabinetType.M_D45,
       realName: "Martin D‑45 (Acoustic IR)",
       encodeType: TYPES[CabinetType.M_D45],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_35,
+      realName: "Custom Cabinet 35",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_35],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_36,
+      realName: "Custom Cabinet 36",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_36],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_37,
+      realName: "Custom Cabinet 37",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_37],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_38,
+      realName: "Custom Cabinet 38",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_38],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_39,
+      realName: "Custom Cabinet 39",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_39],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_40,
+      realName: "Custom Cabinet 40",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_40],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_41,
+      realName: "Custom Cabinet 41",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_41],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_42,
+      realName: "Custom Cabinet 42",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_42],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_43,
+      realName: "Custom Cabinet 43",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_43],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_44,
+      realName: "Custom Cabinet 44",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_44],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_45,
+      realName: "Custom Cabinet 45",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_45],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_46,
+      realName: "Custom Cabinet 46",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_46],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_47,
+      realName: "Custom Cabinet 47",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_47],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_48,
+      realName: "Custom Cabinet 48",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_48],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_49,
+      realName: "Custom Cabinet 49",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_49],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_50,
+      realName: "Custom Cabinet 50",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_50],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_51,
+      realName: "Custom Cabinet 51",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_51],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_52,
+      realName: "Custom Cabinet 52",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_52],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_53,
+      realName: "Custom Cabinet 53",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_53],
+      params: cabParams,
+    },
+    {
+      label: CabinetType.CUSTOM_CABINET_54,
+      realName: "Custom Cabinet 54",
+      encodeType: TYPES[CabinetType.CUSTOM_CABINET_54],
       params: cabParams,
     },
   ],

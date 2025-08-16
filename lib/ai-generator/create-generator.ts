@@ -5,7 +5,7 @@ import { createOpenAIClient } from "lib/ai-generator/helpers/create-openai-clien
 import {
   BlockTypesConfig,
   createEmptyChain,
-} from "lib/core/helpers/create-default-chain";
+} from "lib/core/helpers/create-chain";
 import fs from "fs/promises";
 import path from "path";
 
@@ -83,22 +83,7 @@ class ChainGenerator {
 
     const config = completion as BlockTypesConfig;
 
-    // console.log(completion);
-
-    // const noisegate = completion.noisegate
-    //   ? parseEnum(NoiseGateType, completion.noisegate)
-    //   : null;
-    // const effect = completion.effect
-    //   ? parseEnum(EffectType, completion.effect)
-    //   : null;
-    // const amplifier = completion.amplifier
-    //   ? parseEnum(AmplifierType, completion.amplifier)
-    //   : null;
-    // const cabinet = completion.cabinet
-    //   ? parseEnum(CabinetType, completion.cabinet)
-    //   : null;
-    // const eq = completion.eq ? parseEnum(EqType, completion.eq) : null;
-
+    // console.log(completion)
     const emptyChain = createEmptyChain(config);
 
     return Promise.resolve(emptyChain);

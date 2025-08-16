@@ -1,47 +1,9 @@
 import React, { useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
-import { Blocks, Chain } from "../lib/core/interface";
-import Header from "../components/Header.js";
-import { CompressorType } from "lib/core/blocks/compressor";
-import { NoiseGateType } from "lib/core/blocks/noisegate";
-import { ModulationType } from "lib/core/blocks/modulation";
-import { EffectType } from "lib/core/blocks/effect";
-import { AmplifierType } from "lib/core/blocks/amplifier";
-import { CabinetType } from "lib/core/blocks/cabinet";
-import { EqType } from "lib/core/blocks/eq";
-import { ReverbType } from "lib/core/blocks/reverb";
-import { DelayType } from "lib/core/blocks/delay";
-import { createEmptyChain } from "lib/core/helpers/create-default-chain";
-
-const availableBlockTypes = {
-  [Blocks.Noisegate]: Array.from(Object.values(NoiseGateType)),
-  [Blocks.Compressor]: Array.from(Object.values(CompressorType)),
-  [Blocks.Modulation]: Array.from(Object.values(ModulationType)),
-  [Blocks.Effect]: Array.from(Object.values(EffectType)),
-  [Blocks.Amplifier]: Array.from(Object.values(AmplifierType)),
-  [Blocks.Cabinet]: Array.from(Object.values(CabinetType)),
-  [Blocks.Eq]: Array.from(Object.values(EqType)),
-  [Blocks.Reverb]: Array.from(Object.values(ReverbType)),
-  [Blocks.Delay]: Array.from(Object.values(DelayType)),
-};
+import { Chain } from "../lib/core/interface";
+import Header from "../components/Header";
 
 export default function GeneratorPage(): React.ReactElement {
-  const chai = createEmptyChain({
-    [Blocks.Noisegate]: NoiseGateType.NoiseGate,
-    [Blocks.Compressor]: null,
-    [Blocks.Modulation]: null,
-    [Blocks.Effect]: EffectType.TScreamer,
-    [Blocks.Amplifier]: AmplifierType.DualRect,
-    [Blocks.Cabinet]: CabinetType.RECT412,
-    [Blocks.Eq]: EqType.TenBand,
-    [Blocks.Reverb]: null,
-    [Blocks.Delay]: null,
-  });
-  console.log({
-    chai,
-    availableBlockTypes,
-  });
-
   const [prompt, setPrompt] = useState<string>(
     "Metallice Enter Sandman Main Riff"
   );
@@ -49,7 +11,6 @@ export default function GeneratorPage(): React.ReactElement {
   const [qrCode, setQrCode] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
-  const [aiGenerated, setAiGenerated] = useState<boolean>(false);
 
   const handleGenerate = async (): Promise<void> => {
     if (!prompt.trim()) {
@@ -61,7 +22,6 @@ export default function GeneratorPage(): React.ReactElement {
     setError("");
     setChain(null);
     setQrCode("");
-    setAiGenerated(false);
 
     try {
       const response = await fetch("/api/generate-chain", {
@@ -82,8 +42,6 @@ export default function GeneratorPage(): React.ReactElement {
       setChain(data.chain);
       // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
       setQrCode(data.qrCode);
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-      setAiGenerated(data.aiGenerated || false);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Произошла ошибка");
     } finally {
@@ -226,16 +184,10 @@ export default function GeneratorPage(): React.ReactElement {
                   <h2 className="text-xl font-semibold text-gray-900">
                     📱 Сгенерированный QR код
                   </h2>
-                  {aiGenerated && (
-                    <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
-                      ✨ AI Generated
-                    </span>
-                  )}
-                  {!aiGenerated && (
-                    <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
-                      📋 Default Chain
-                    </span>
-                  )}
+
+                  <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                    ✨ AI Generated
+                  </span>
                 </div>
                 <div className="p-6 text-center">
                   <div className="inline-block p-4 bg-white border-2 border-gray-200 rounded-lg mb-4">

@@ -41,8 +41,8 @@ export const decodeChain = (qrCode: string): Chain => {
   // Получаем данные без заголовка
   const data = bytes.slice(HEADER_SIZE);
 
-  // Создаем пустую цепочку
-  const chain = {} as Chain;
+  // Создаем пустую цепочку - используем Partial для безопасности
+  const chain: Partial<Chain> = {};
 
   // Декодируем блоки
   for (const [blockKey, blockConfig] of Object.entries(config.blocks)) {
@@ -51,9 +51,15 @@ export const decodeChain = (qrCode: string): Chain => {
 
     if (headIndex >= 0) {
       const headValue = data[headIndex];
-      // @ts-expect-error - headValue is not a number
+
+      // Проверяем, что headValue существует и это число
+      if (typeof headValue !== "number") {
+        throw new Error(
+          `Invalid head value at index ${headIndex.toString()} for block ${blockType}`
+        );
+      }
+
       const typeValue = headValue & TYPE_MASK;
-      // @ts-expect-error - headValue is not a number
       const enabled = (headValue & DISABLED_FLAG) === 0;
 
       // Находим конфигурацию типа
@@ -84,19 +90,39 @@ export const decodeChain = (qrCode: string): Chain => {
       // Создаем объект с параметрами
       const params = {} as Record<string, number>;
       for (const param of typeConfig.params) {
-        params[param.label] = data[param.encodeIndex] ?? 0;
+        const paramValue = data[param.encodeIndex];
+        if (typeof paramValue !== "number") {
+          throw new Error(
+            `Invalid parameter value at index ${param.encodeIndex.toString()} for param ${param.label}`
+          );
+        }
+        params[param.label] = paramValue;
       }
 
-      // Добавляем блок в цепочку
-      // Use type assertion to avoid union type complexity
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-      (chain as any)[blockType] = {
+      // Добавляем блок в цепочку с безопасной типизацией
+      const blockData = {
         type: typeConfig.label,
         enabled,
         params,
       };
+
+      // Используем безопасное присваивание через индексный доступ
+      (chain as Record<string, typeof blockData>)[blockType] = blockData;
     }
   }
 
-  return chain;
+  // Проверяем, что все блоки были декодированы
+  const allBlocks = Object.values(Blocks);
+  const decodedBlocks = Object.keys(chain);
+
+  if (decodedBlocks.length !== allBlocks.length) {
+    const missingBlocks = allBlocks.filter(
+      (block) => !decodedBlocks.includes(block)
+    );
+    throw new Error(
+      `Missing blocks in decoded chain: ${missingBlocks.join(", ")}`
+    );
+  }
+
+  return chain as Chain;
 };
