@@ -5,14 +5,15 @@ import { PresetStatus } from "../../../../lib/jsondb/types";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
+): Promise<void> {
   if (req.method !== "POST") {
     res.status(405).json({ error: "Method not allowed" });
     return;
   }
 
   const { id } = req.query;
-  const { status } = req.body as { status: PresetStatus };
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const { status } = req.body as { status: PresetStatus | undefined };
 
   if (!id || typeof id !== "string") {
     res.status(400).json({ error: "Invalid generation ID" });
@@ -34,8 +35,7 @@ export default async function handler(
 
     const updatedGeneration = {
       ...generation,
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      status: status as PresetStatus,
+      status,
     };
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call

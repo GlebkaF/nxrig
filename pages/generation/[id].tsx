@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps, GetStaticPaths } from "next";
 import { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -455,10 +455,30 @@ export default function GenerationPage({
   );
 }
 
-export const getServerSideProps: GetServerSideProps<
-  GenerationPageProps
-> = async (context) => {
-  const { id } = context.params || {};
+export const getStaticPaths: GetStaticPaths = async () => {
+  try {
+    const generations = await generationDb.getAllGenerations();
+    const paths = generations.map((gen) => ({
+      params: { id: gen.id },
+    }));
+
+    return {
+      paths,
+      fallback: "blocking", // Позволяет генерировать новые страницы на лету
+    };
+  } catch (error) {
+    console.error("Error fetching generations for paths:", error);
+    return {
+      paths: [],
+      fallback: "blocking",
+    };
+  }
+};
+
+export const getStaticProps: GetStaticProps<GenerationPageProps> = async ({
+  params,
+}) => {
+  const { id } = params || {};
 
   if (!id || typeof id !== "string") {
     return {
@@ -498,7 +518,7 @@ export const getServerSideProps: GetServerSideProps<
       props: {
         generation: JSON.parse(
           JSON.stringify(withVersions)
-        ) as GenerationRecord, // Сериализация для Next.js
+        ) as GenerationRecord,
       },
     };
   } catch (error) {
