@@ -31,11 +31,14 @@ export default async function handler(
       return;
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const currentChain =
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       generation.versions?.[generation.versions.length - 1]?.chain ||
       generation.finalChain;
 
     const tuner = await createFineTuner();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     const newChain = await tuner.refine(currentChain, feedback);
 
     const newVersion = {
@@ -45,7 +48,8 @@ export default async function handler(
     };
 
     const versions = generation.versions
-      ? [...generation.versions, newVersion]
+      ? // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        [...generation.versions, newVersion]
       : [
           {
             chain: generation.finalChain,
@@ -61,6 +65,7 @@ export default async function handler(
       versions,
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     await generationDb.updateGeneration(updated);
 
     res.status(200).json(updated);

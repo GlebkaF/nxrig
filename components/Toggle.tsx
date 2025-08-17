@@ -17,7 +17,7 @@ const Toggle: React.FC<ToggleProps> = ({
 }) => {
   const on = Boolean(value);
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     if (!disabled && onChange) {
       onChange(!on);
     }
