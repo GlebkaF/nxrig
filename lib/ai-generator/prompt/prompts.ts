@@ -237,6 +237,9 @@ You will receive:
 - Keep the exact same JSON structure, keys, order, and \`"type"\` values.
 - Do not rename or remove any keys.
 - For EQ and any \`"Level"\` parameter in cabinets: 50 = neutral/center (0 dB), lower = negative dB, higher = positive dB.
+- For Noisegate:
+  - \`"decay"\` — 0 = fast, 100 = slow.
+  - \`"Sensitivity"\` = 50 for standard high-gain sound already does a good job of turning off the noise.
 - Avoid extreme values unless clearly required by the style.
 - Maintain proper gain staging: avoid clipping and balance between blocks.
   Return only the filled JSON, no comments or text.

@@ -1,64 +1,64 @@
 {
   "generations": [
     {
-      "timestamp": "2025-08-16T09:35:41.591Z",
-      "originalPrompt": "Metallice Master of Puppets\n Main Riff",
+      "timestamp": "2025-08-17T04:07:27.854Z",
+      "originalPrompt": "Metallice Master Of Puppets\n Main Riff",
       "proDescription": {
         "genre": "Thrash Metal",
-        "sound_description": "Highly aggressive and tight with pronounced attack, palm-muted percussiveness, thick midrange, high clarity, and minimal ambience. The tone is dry, razor-sharp, and extremely articulate, emphasizing fast alternate picking and heavy riffing.",
-        "guitar_rig_description": "Noise gate: Used to tightly control unwanted noise and hum, crucial for palm-muted clarity and tight stops. Compressor: Not used, as natural dynamics and attack are preferred. Overdrive/Distortion: High-gain distortion pedal (like a Tube Screamer or Boss SD-1) as a boost in front of a high-gain amp, adding bite, tightening bass, and increasing sustain. Amplifier: High-gain tube amplifier (Mesa/Boogie Mark IIC+ or similar) set for aggressive, saturated distortion with a pronounced midrange and tight low end. Cabinet: 4x12 closed-back cabinet with Celestion speakers for punch and projection. EQ: Graphic EQ (optional) for further sculpting—slightly scooped mids, tight low end, and clear top end. Modulation: Not used. Delay: Not used. Reverb: Not used, as a dry sound is essential for tightness and definition.",
+        "sound_description": "Highly aggressive, tight, and percussive with a sharp attack. Thick and saturated distortion, very little excess noise or muddiness. Bright but not piercing, with enough low end for power. Minimal ambience or effects, focused on clarity and chugging dynamics.",
+        "guitar_rig_description": "1. Noise gate: Used to cut unwanted noise and maintain tightness during fast palm-muted passages. 2. Compressor: Not used, as natural picking dynamics are preferred. 3. Overdrive/Distortion: High-gain distortion from a pedal or amp, set for heavy saturation while retaining note definition. 4. Amplifier: High-gain tube amp or amp model, voiced for sharp attack and punchy mids. 5. Cabinet: 4x12 closed-back cabinet emulation with Celestion-style speakers for tight low end and focused mids. 6. EQ: Used post-distortion to scoop mids slightly, tighten bass, and add presence in the upper frequencies. 7. Modulation: Not used. 8. Delay: Not used. 9. Reverb: Not used; totally dry for maximum punch and clarity.",
         "references": [
           "Metallica - Master of Puppets",
           "Metallica - Battery",
-          "Slayer - Raining Blood"
+          "Metallica - Disposable Heroes"
         ],
         "song_part": "Main riff",
-        "additional_info": "Use bridge humbucker pickup for maximum attack. Heavier string gauges (e.g., .010-.046 or heavier) for tightness. Aggressive right-hand palm-muting and alternate picking. Downpicking technique is essential for authenticity. No effects in the effects loop; all effects are placed before the amp input."
+        "additional_info": "Bridge pickup (humbucker), palm muting technique is critical, down picking for tightness, medium to heavy gauge strings (typically .010–.046 or heavier). Guitar should be tuned to standard E."
       },
       "realRig": {
         "pedalboard": [
           "Boss NS-2 Noise Suppressor",
-          "Ibanez TS9 Tube Screamer",
+          "Maxon OD808 Overdrive",
           "MXR 10-Band EQ"
         ],
         "amplifier": "Mesa/Boogie Mark IIC+",
         "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
         "settings": {
           "amp": {
-            "Gain (Lead Drive)": 7,
+            "Lead Gain": 7,
             "Bass": 4,
-            "Middle": 6,
+            "Middle": 3,
             "Treble": 7,
             "Presence": 6,
             "Master": 3,
             "Graphic EQ": {
-              "80Hz": -3,
-              "240Hz": 0,
-              "750Hz": -4,
-              "2.2kHz": 6,
-              "6.6kHz": 4
+              "80Hz": "-2dB",
+              "240Hz": "0dB",
+              "750Hz": "-6dB",
+              "2200Hz": "+4dB",
+              "6600Hz": "+6dB"
             }
           },
-          "noise_gate": {
-            "Threshold": "Just above noise floor (between 11–1 o’clock)",
-            "Decay": "Minimum"
-          },
           "overdrive": {
-            "Drive": 0,
+            "Drive": 2,
             "Tone": 5,
             "Level": 8
           },
+          "noise_gate": {
+            "Threshold": "just above noise floor",
+            "Decay": "medium-fast"
+          },
           "eq": {
-            "31.25Hz": "-6dB",
-            "62.5Hz": "-3dB",
-            "125Hz": "0dB",
-            "250Hz": "-2dB",
-            "500Hz": "-2dB",
-            "1kHz": "0dB",
-            "2kHz": "+2dB",
-            "4kHz": "+2dB",
-            "8kHz": "+1dB",
-            "16kHz": "0dB"
+            "31.25Hz": "-3dB",
+            "62.5Hz": "-2dB",
+            "125Hz": "+1dB",
+            "250Hz": "0dB",
+            "500Hz": "-1dB",
+            "1kHz": "-3dB",
+            "2kHz": "+3dB",
+            "4kHz": "+4dB",
+            "8kHz": "+2dB",
+            "16kHz": "+1dB"
           }
         }
       },
@@ -93,9 +93,9 @@
           "type": "T Screamer",
           "enabled": true,
           "params": {
-            "Level": 70,
+            "Level": 60,
             "Drive": 20,
-            "Tone": 75
+            "Tone": 70
           }
         },
         "amplifier": {
@@ -104,30 +104,30 @@
           "params": {
             "Gain": 85,
             "Master": 60,
-            "Bass": 40,
-            "Middle": 55,
-            "Treble": 75,
-            "Presence": 70
+            "Bass": 55,
+            "Middle": 35,
+            "Treble": 70,
+            "Presence": 65
           }
         },
         "cabinet": {
           "type": "RECT 412",
           "enabled": true,
           "params": {
-            "Level": 60,
-            "LowCut": 65,
-            "HighCut": 60
+            "Level": 55,
+            "LowCut": 60,
+            "HighCut": 55
           }
         },
         "eq": {
           "type": "10-Band",
           "enabled": true,
           "params": {
-            "31": 35,
-            "62": 40,
-            "125": 45,
-            "250": 45,
-            "500": 45,
+            "31": 45,
+            "62": 45,
+            "125": 48,
+            "250": 48,
+            "500": 35,
             "1000": 40,
             "2000": 55,
             "4000": 65,
@@ -155,295 +155,110 @@
           }
         }
       },
-      "id": "gen_mee2akgr_wisokxdqs"
-    },
-    {
-      "timestamp": "2025-08-16T09:34:54.158Z",
-      "originalPrompt": "RCHP scar tissues\n",
-      "proDescription": {
-        "genre": "Alternative Rock / Funk Rock",
-        "sound_description": "Clean, warm, chiming tone with a slight vintage character. The sound is dynamic, open, and has a touch of airiness, with subtle breakup when picking hard. Not overly bright or harsh, retaining a smooth and laid-back vibe.",
-        "guitar_rig_description": "Noise gate: not used (the tone is clean and dynamic, so gating is unnecessary). Compressor: used subtly to even out picking dynamics and add sustain, but set to preserve natural feel. Overdrive/distortion/boost: not used (the amp provides all necessary breakup). Amplifier: vintage-style clean combo amp (e.g., Fender Twin Reverb or similar), set just at the edge of breakup for a touch of warmth and sparkle. Cabinet: matching 2x12 or 4x10 open-back cab, chosen for its airy and present top-end. EQ: used for slight mid-scooping and to roll off excessive highs, keeping the tone smooth. Modulation: not used. Delay: not used. Reverb: spring reverb from the amp, set for a subtle ambient wash.",
-        "references": [
-          "Red Hot Chili Peppers - Scar Tissue",
-          "Red Hot Chili Peppers - Californication",
-          "John Frusciante live performances (late 1990s)"
-        ],
-        "song_part": "main riff and verses",
-        "additional_info": "Single-coil pickups (preferably bridge or neck/middle positions on a Stratocaster), light to moderate picking, light string gauge (e.g., .009–.042), use of fingers or very light pick attack for phrasing nuance."
-      },
-      "realRig": {
-        "pedalboard": [
-          "MXR Dyna Comp Mini",
-          "Boss GE-7 Graphic Equalizer"
-        ],
-        "amplifier": "Fender Twin Reverb '65 Reissue",
-        "cabinet": "Fender Twin Reverb 2x12 open-back with Jensen C12K speakers",
-        "settings": {
-          "amp": {
-            "Volume": 4.5,
-            "Treble": 4.5,
-            "Middle": 4,
-            "Bass": 5,
-            "Reverb": 3,
-            "Bright Switch": "ON"
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 75,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 20,
+                "Tone": 70
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 85,
+                "Master": 60,
+                "Bass": 55,
+                "Middle": 35,
+                "Treble": 70,
+                "Presence": 65
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 55
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 45,
+                "62": 45,
+                "125": 48,
+                "250": 48,
+                "500": 35,
+                "1000": 40,
+                "2000": 55,
+                "4000": 65,
+                "8000": 70,
+                "16000": 60,
+                "Vol": 55
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
           },
-          "compressor": {
-            "Output": 2.5,
-            "Sensitivity": 2,
-            "Blend": "60% dry / 40% effect (if available)"
-          },
-          "eq": {
-            "100Hz": "-1dB",
-            "200Hz": "+1dB",
-            "800Hz": "-2dB",
-            "1.6kHz": "-1dB",
-            "3.2kHz": "+1dB",
-            "6.4kHz": "-2dB",
-            "Level": "unity"
-          }
+          "prompt": "Metallice Master Of Puppets\n Main Riff",
+          "timestamp": "2025-08-17T04:07:27.854Z"
         }
-      },
-      "finalChain": {
-        "noisegate": {
-          "type": "Noise Gate",
-          "enabled": false,
-          "params": {
-            "Sensitivity": 50,
-            "Decay": 50
-          }
-        },
-        "compressor": {
-          "type": "K Comp",
-          "enabled": true,
-          "params": {
-            "Level": 53,
-            "Sustain": 42,
-            "Clipping": 35
-          }
-        },
-        "modulation": {
-          "type": "CE-1",
-          "enabled": false,
-          "params": {
-            "Rate": 50,
-            "Depth": 50,
-            "Intensity": 50
-          }
-        },
-        "effect": {
-          "type": "Distortion+",
-          "enabled": false,
-          "params": {
-            "Output": 50,
-            "Sensitivity": 50
-          }
-        },
-        "amplifier": {
-          "type": "Twin Reverb",
-          "enabled": true,
-          "params": {
-            "Gain": 62,
-            "Master": 58,
-            "Bass": 55,
-            "Middle": 45,
-            "Treble": 52,
-            "Bright": 55
-          }
-        },
-        "cabinet": {
-          "type": "TR212",
-          "enabled": true,
-          "params": {
-            "Level": 52,
-            "LowCut": 48,
-            "HighCut": 43
-          }
-        },
-        "eq": {
-          "type": "6-Band",
-          "enabled": true,
-          "params": {
-            "100": 48,
-            "220": 47,
-            "500": 44,
-            "1200": 46,
-            "2600": 50,
-            "6400": 40
-          }
-        },
-        "reverb": {
-          "type": "Spring",
-          "enabled": true,
-          "params": {
-            "Level": 38,
-            "Decay": 44
-          }
-        },
-        "delay": {
-          "type": "Analog Delay",
-          "enabled": false,
-          "params": {
-            "Intensity": 50,
-            "Rate": 50,
-            "Echo": 50
-          }
-        }
-      },
-      "id": "gen_mee29jva_l01y7urj3"
-    },
-    {
-      "timestamp": "2025-08-16T09:30:58.522Z",
-      "originalPrompt": "Metallice Enter Sandman Main Riff",
-      "proDescription": {
-        "genre": "Heavy Metal / Classic Metal",
-        "sound_description": "Aggressive, tight, mid-focused, high-gain rhythm tone with solid low end, pronounced attack, clear articulation, and a slight sense of space.",
-        "guitar_rig_description": "Noise gate: used to control unwanted hiss and maintain tightness between palm-muted chugs. Compressor: not used. Overdrive/boost: a classic overdrive pedal placed before the amp, set for low drive and high level, to tighten the low end and add attack. Distortion: comes primarily from the high-gain amplifier. Amplifier: a high-gain tube amp head (e.g., Mesa/Boogie or Marshall) set for saturated rhythm crunch, with pronounced mids and tight bass. Cabinet: 4x12 closed-back cabinet with vintage-voiced speakers, mic’d with a dynamic microphone close to the cone for punch. EQ: optional post-amp EQ to cut excessive low end and add a touch of upper mids for clarity. Modulation: not used. Delay: not used. Reverb: subtle room reverb or short plate, just enough to prevent dryness but not to wash out the tight riffing.",
-        "references": [
-          "Metallica - Enter Sandman",
-          "Metallica - Sad But True",
-          "Metallica - The Unforgiven"
-        ],
-        "song_part": "Main riff",
-        "additional_info": "Bridge humbucker pickup, palm-muting technique for chugs, medium to heavy gauge strings (10-46 or thicker) for tight response, aggressive right-hand picking."
-      },
-      "realRig": {
-        "pedalboard": [
-          "Boss NS-2 Noise Suppressor",
-          "Ibanez TS9 Tube Screamer",
-          "MXR 10-Band EQ"
-        ],
-        "amplifier": "Mesa/Boogie Dual Rectifier Solo Head (3-Channel)",
-        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 Cabinet with Celestion Vintage 30 speakers",
-        "settings": {
-          "amp": {
-            "Channel": "Red (Modern)",
-            "Gain": 6.5,
-            "Bass": 4,
-            "Middle": 6.5,
-            "Treble": 6,
-            "Presence": 5,
-            "Master": 3.5,
-            "Output": "as needed for room volume"
-          },
-          "overdrive": {
-            "Drive": 2,
-            "Tone": 6,
-            "Level": 8
-          },
-          "noise_gate": {
-            "Threshold": "just above amp noise floor (start at 11 o'clock)",
-            "Decay": "10-11 o'clock"
-          },
-          "eq": {
-            "80Hz": "-2dB",
-            "750Hz": "+2dB",
-            "1.6kHz": "+2dB",
-            "3.2kHz": "+3dB"
-          },
-          "reverb": {
-            "Type": "Short plate or small room (amp built-in or pedal)",
-            "Mix": "Low (8-10%)"
-          }
-        }
-      },
-      "finalChain": {
-        "noisegate": {
-          "type": "Noise Gate",
-          "enabled": true,
-          "params": {
-            "Sensitivity": 68,
-            "Decay": 40
-          }
-        },
-        "compressor": {
-          "type": "K Comp",
-          "enabled": false,
-          "params": {
-            "Level": 50,
-            "Sustain": 50,
-            "Clipping": 50
-          }
-        },
-        "modulation": {
-          "type": "CE-1",
-          "enabled": false,
-          "params": {
-            "Rate": 50,
-            "Depth": 50,
-            "Intensity": 50
-          }
-        },
-        "effect": {
-          "type": "T Screamer",
-          "enabled": true,
-          "params": {
-            "Level": 80,
-            "Drive": 18,
-            "Tone": 62
-          }
-        },
-        "amplifier": {
-          "type": "Dual Rect",
-          "enabled": true,
-          "params": {
-            "Gain": 80,
-            "Master": 60,
-            "Bass": 43,
-            "Middle": 68,
-            "Treble": 55,
-            "Presence": 58
-          }
-        },
-        "cabinet": {
-          "type": "RECT 412",
-          "enabled": true,
-          "params": {
-            "Level": 56,
-            "LowCut": 60,
-            "HighCut": 48
-          }
-        },
-        "eq": {
-          "type": "10-Band",
-          "enabled": true,
-          "params": {
-            "31": 38,
-            "62": 41,
-            "125": 48,
-            "250": 52,
-            "500": 61,
-            "1000": 63,
-            "2000": 59,
-            "4000": 54,
-            "8000": 50,
-            "16000": 48,
-            "Vol": 53
-          }
-        },
-        "reverb": {
-          "type": "Plate",
-          "enabled": true,
-          "params": {
-            "Level": 23,
-            "Decay": 27
-          }
-        },
-        "delay": {
-          "type": "Analog Delay",
-          "enabled": false,
-          "params": {
-            "Intensity": 50,
-            "Rate": 50,
-            "Echo": 50
-          }
-        }
-      },
-      "id": "gen_mee24i1p_vu2wtheqc"
+      ],
+      "id": "gen_mef60bcg_yg238a8yb"
     }
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-08-16T09:35:41.596Z"
+    "lastUpdated": "2025-08-17T04:07:27.857Z"
   }
 }
