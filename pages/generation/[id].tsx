@@ -5,9 +5,16 @@ import Head from "next/head";
 import Link from "next/link";
 import { QRCodeCanvas } from "qrcode.react";
 import ChainEditor from "../../components/chain/ChainEditor";
+import DiffViewer from "../../components/DiffViewer";
 import { encodeChain } from "../../lib/core/encoder";
+import { Chain } from "../../lib/core/interface";
 import { generationDb, type GenerationRecord } from "../../lib/jsondb";
 import { diffObjects } from "../../lib/utils/diff";
+
+interface Version {
+  chain: Chain;
+  prompt: string;
+}
 
 interface GenerationPageProps {
   generation: GenerationRecord | null;
@@ -22,6 +29,7 @@ export default function GenerationPage({
   const [feedback, setFeedback] = useState<string>("");
   const [isTuning, setIsTuning] = useState<boolean>(false);
   const [tuneError, setTuneError] = useState<string>("");
+  const [selectedVersion, setSelectedVersion] = useState<number>(0);
   const router = useRouter();
 
   // Функция для подсчета включенных эффектов в цепи
@@ -70,7 +78,14 @@ export default function GenerationPage({
     );
   }
 
-  const versions = generation.versions ?? [];
+  const versions: Version[] = (
+    generation.versions as
+      | Array<{ chain: unknown; prompt: unknown }>
+      | undefined
+  )?.map((v) => ({
+    chain: v.chain as Chain,
+    prompt: String(v.prompt),
+  })) ?? [{ chain: generation.finalChain, prompt: generation.originalPrompt }];
 
   const formatTimestamp = (timestamp: string): string => {
     return new Date(timestamp).toLocaleString("ru-RU", {
@@ -89,11 +104,14 @@ export default function GenerationPage({
     setIsTuning(true);
     setTuneError("");
     try {
-      const response = await fetch(`/api/generation/${generation.id}/fine-tune`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ feedback }),
-      });
+      const response = await fetch(
+        `/api/generation/${generation.id}/fine-tune`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ feedback }),
+        }
+      );
       if (!response.ok) {
         throw new Error(await response.text());
       }
@@ -143,14 +161,38 @@ export default function GenerationPage({
             {/* Chain Editor - основная колонка */}
             <div className="xl:col-span-2">
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">
-                  Цепочка эффектов
-                </h2>
-                <ChainEditor
-                  chain={generation.finalChain}
-                  onChange={() => {}} // Пустая функция, так как редактирование отключено
-                  readonly={true}
-                />
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="text-xl font-semibold text-gray-900">
+                    Цепочка эффектов
+                  </h2>
+                  <div className="flex items-center gap-2">
+                    <select
+                      value={selectedVersion}
+                      onChange={(e) => {
+                        setSelectedVersion(Number(e.target.value));
+                      }}
+                      className="px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    >
+                      {versions.map((_, index: number) => (
+                        <option key={index} value={index}>
+                          Версия {index + 1}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-sm font-medium text-gray-500 mb-2">
+                    Версия {selectedVersion + 1}
+                  </h3>
+                  {versions[selectedVersion] && (
+                    <ChainEditor
+                      chain={versions[selectedVersion].chain}
+                      onChange={() => {}}
+                      readonly={true}
+                    />
+                  )}
+                </div>
               </div>
               <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">
@@ -320,11 +362,13 @@ export default function GenerationPage({
                         <p className="font-medium text-gray-900">
                           Версия {index + 1}
                         </p>
-                        <p className="text-sm text-gray-600">Запрос: {v.prompt}</p>
+                        <p className="text-sm text-gray-600">
+                          Запрос: {v.prompt}
+                        </p>
                         {diff && (
-                          <pre className="mt-2 bg-gray-50 p-2 rounded text-xs overflow-x-auto">
-                            {JSON.stringify(diff, null, 2)}
-                          </pre>
+                          <div className="mt-2">
+                            <DiffViewer diff={diff} />
+                          </div>
                         )}
                       </div>
                     );
@@ -380,7 +424,9 @@ export const getServerSideProps: GetServerSideProps<
 
     return {
       props: {
-        generation: JSON.parse(JSON.stringify(withVersions)) as GenerationRecord, // Сериализация для Next.js
+        generation: JSON.parse(
+          JSON.stringify(withVersions)
+        ) as GenerationRecord, // Сериализация для Next.js
       },
     };
   } catch (error) {
