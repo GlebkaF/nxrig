@@ -1,6 +1,13 @@
 import { Chain } from "../core/interface";
 
 // Интерфейсы для JSON DB
+
+export interface GenerationVersion {
+  chain: Chain;
+  prompt: string;
+  timestamp: string;
+}
+
 export interface GenerationRecord {
   id: string;
   timestamp: string;
@@ -19,6 +26,7 @@ export interface GenerationRecord {
     settings: unknown;
   };
   finalChain: Chain;
+  versions?: GenerationVersion[];
 }
 
 export interface JsonDatabase {

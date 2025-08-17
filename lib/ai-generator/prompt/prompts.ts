@@ -254,3 +254,13 @@ ${JSON.stringify(emptyChain, null, 2)}
 \`\`\`
   `;
 };
+
+export const createFineTuneSystemPrompt = (currentChain: Chain): string => {
+  return `You are an expert guitarist. You will receive a current chain configuration for the NUX Mighty Plug 3 in JSON format. Adjust the chain based on user feedback while keeping the same structure and keys. Return only valid JSON with the updated chain.
+
+Current chain:
+\`\`\`json
+${JSON.stringify(currentChain, null, 2)}
+\`\`\`
+`;
+};

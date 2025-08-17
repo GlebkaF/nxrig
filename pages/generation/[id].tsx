@@ -1,11 +1,13 @@
 import { GetServerSideProps } from "next";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import { QRCodeCanvas } from "qrcode.react";
 import ChainEditor from "../../components/chain/ChainEditor";
 import { encodeChain } from "../../lib/core/encoder";
 import { generationDb, type GenerationRecord } from "../../lib/jsondb";
+import { diffObjects } from "../../lib/utils/diff";
 
 interface GenerationPageProps {
   generation: GenerationRecord | null;
@@ -17,6 +19,10 @@ export default function GenerationPage({
   error,
 }: GenerationPageProps): React.ReactElement {
   const [qrCodeData, setQrCodeData] = useState<string>("");
+  const [feedback, setFeedback] = useState<string>("");
+  const [isTuning, setIsTuning] = useState<boolean>(false);
+  const [tuneError, setTuneError] = useState<string>("");
+  const router = useRouter();
 
   // Функция для подсчета включенных эффектов в цепи
   const getEnabledEffectsCount = (
@@ -64,6 +70,8 @@ export default function GenerationPage({
     );
   }
 
+  const versions = generation.versions ?? [];
+
   const formatTimestamp = (timestamp: string): string => {
     return new Date(timestamp).toLocaleString("ru-RU", {
       year: "numeric",
@@ -72,6 +80,30 @@ export default function GenerationPage({
       hour: "2-digit",
       minute: "2-digit",
     });
+  };
+
+  const handleFineTune = async (): Promise<void> => {
+    if (!feedback.trim()) {
+      return;
+    }
+    setIsTuning(true);
+    setTuneError("");
+    try {
+      const response = await fetch(`/api/generation/${generation.id}/fine-tune`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ feedback }),
+      });
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
+      setFeedback("");
+      await router.replace(router.asPath);
+    } catch (err) {
+      setTuneError(err instanceof Error ? err.message : "Ошибка");
+    } finally {
+      setIsTuning(false);
+    }
   };
 
   return (
@@ -119,6 +151,37 @@ export default function GenerationPage({
                   onChange={() => {}} // Пустая функция, так как редактирование отключено
                   readonly={true}
                 />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">
+                  Тонкая настройка
+                </h2>
+                <textarea
+                  value={feedback}
+                  onChange={(e) => {
+                    setFeedback(e.target.value);
+                  }}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  rows={3}
+                  placeholder="Например: слишком глухой"
+                  disabled={isTuning}
+                />
+                {tuneError && (
+                  <p className="text-sm text-red-600 mt-2">{tuneError}</p>
+                )}
+                <button
+                  onClick={() => {
+                    void handleFineTune();
+                  }}
+                  disabled={isTuning || !feedback.trim()}
+                  className={`mt-4 px-4 py-2 rounded-lg font-medium transition-all ${
+                    isTuning || !feedback.trim()
+                      ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                      : "bg-purple-600 text-white hover:bg-purple-700"
+                  }`}
+                >
+                  {isTuning ? "Обновление..." : "Отправить"}
+                </button>
               </div>
             </div>
 
@@ -244,6 +307,30 @@ export default function GenerationPage({
                   )}
                 </div>
               </div>
+              {versions.length > 0 && (
+                <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    Версии
+                  </h3>
+                  {versions.map((v, index) => {
+                    const prev = index > 0 ? versions[index - 1]?.chain : null;
+                    const diff = prev ? diffObjects(prev, v.chain) : null;
+                    return (
+                      <div key={index} className="mb-4">
+                        <p className="font-medium text-gray-900">
+                          Версия {index + 1}
+                        </p>
+                        <p className="text-sm text-gray-600">Запрос: {v.prompt}</p>
+                        {diff && (
+                          <pre className="mt-2 bg-gray-50 p-2 rounded text-xs overflow-x-auto">
+                            {JSON.stringify(diff, null, 2)}
+                          </pre>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
         </main>
@@ -278,9 +365,22 @@ export const getServerSideProps: GetServerSideProps<
       };
     }
 
+    const withVersions = generation.versions
+      ? generation
+      : {
+          ...generation,
+          versions: [
+            {
+              chain: generation.finalChain,
+              prompt: generation.originalPrompt,
+              timestamp: generation.timestamp,
+            },
+          ],
+        };
+
     return {
       props: {
-        generation: JSON.parse(JSON.stringify(generation)) as GenerationRecord, // Сериализация для Next.js
+        generation: JSON.parse(JSON.stringify(withVersions)) as GenerationRecord, // Сериализация для Next.js
       },
     };
   } catch (error) {
