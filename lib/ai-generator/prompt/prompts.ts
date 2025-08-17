@@ -11,11 +11,13 @@ Important for downstream processing:
 Example json output:
 \`\`\`json
 {
+"tone_title": "Title of the song",
 "genre": "Music genre / style, clearly defined",
 "sound_description": "Key tone characteristics: aggressiveness, thickness, attack, brightness, depth, dynamics",
 "guitar_rig_description": "Explicitly list all effect blocks in signal chain order, with a short functional description for each; if unused, say 'not used'",
 "references": ["Example band or song 1", "Example band or song 2", "Example band or song 3"],
 "song_part": "main riff, solo, etc.",
+"preferred_pickup": "bridge humbucker, tone = 5",
 "additional_info": "Any other useful details (pickup choice, playing technique, string gauge, etc.)"
 }
 \`\`\`
@@ -237,6 +239,9 @@ You will receive:
 - Keep the exact same JSON structure, keys, order, and \`"type"\` values.
 - Do not rename or remove any keys.
 - For EQ and any \`"Level"\` parameter in cabinets: 50 = neutral/center (0 dB), lower = negative dB, higher = positive dB.
+- For Noisegate:
+  - \`"decay"\` — 0 = fast, 100 = slow.
+  - \`"Sensitivity"\` = 50 for standard high-gain sound already does a good job of turning off the noise.
 - Avoid extreme values unless clearly required by the style.
 - Maintain proper gain staging: avoid clipping and balance between blocks.
   Return only the filled JSON, no comments or text.
@@ -253,4 +258,14 @@ config:
 ${JSON.stringify(emptyChain, null, 2)}
 \`\`\`
   `;
+};
+
+export const createFineTuneSystemPrompt = (currentChain: Chain): string => {
+  return `You are an expert guitarist. You will receive a current chain configuration for the NUX Mighty Plug 3 in JSON format. Adjust the chain based on user feedback while keeping the same structure and keys. Return only valid JSON with the updated chain.
+
+Current chain:
+\`\`\`json
+${JSON.stringify(currentChain, null, 2)}
+\`\`\`
+`;
 };

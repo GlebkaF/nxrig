@@ -1,11 +1,16 @@
-import { GetServerSideProps } from "next";
-import { useState, useEffect } from "react";
+import { GetStaticProps, GetStaticPaths } from "next";
+import { useState, useEffect, useMemo } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import { QRCodeCanvas } from "qrcode.react";
 import ChainEditor from "../../components/chain/ChainEditor";
+import DiffViewer from "../../components/DiffViewer";
+import Toggle from "../../components/Toggle";
 import { encodeChain } from "../../lib/core/encoder";
+import { Chain } from "../../lib/core/interface";
 import { generationDb, type GenerationRecord } from "../../lib/jsondb";
+import { diffObjects } from "../../lib/utils/diff";
 
 interface GenerationPageProps {
   generation: GenerationRecord | null;
@@ -17,6 +22,27 @@ export default function GenerationPage({
   error,
 }: GenerationPageProps): React.ReactElement {
   const [qrCodeData, setQrCodeData] = useState<string>("");
+  const [feedback, setFeedback] = useState<string>("");
+  const [isTuning, setIsTuning] = useState<boolean>(false);
+  const [tuneError, setTuneError] = useState<string>("");
+  const [selectedVersion, setSelectedVersion] = useState<number>(-1);
+  const router = useRouter();
+
+  const versions = useMemo(() => {
+    if (!generation) return [];
+    return (
+      (
+        generation.versions as
+          | Array<{ chain: unknown; prompt: unknown }>
+          | undefined
+      )?.map((v) => ({
+        chain: v.chain as Chain,
+        prompt: String(v.prompt),
+      })) ?? [
+        { chain: generation.finalChain, prompt: generation.originalPrompt },
+      ]
+    );
+  }, [generation]);
 
   // Функция для подсчета включенных эффектов в цепи
   const getEnabledEffectsCount = (
@@ -40,6 +66,13 @@ export default function GenerationPage({
       }
     }
   }, [generation]);
+
+  // Устанавливаем последнюю версию при загрузке
+  useEffect(() => {
+    if (versions.length) {
+      setSelectedVersion(versions.length - 1);
+    }
+  }, [versions]);
 
   if (error || !generation) {
     return (
@@ -74,6 +107,33 @@ export default function GenerationPage({
     });
   };
 
+  const handleFineTune = async (): Promise<void> => {
+    if (!feedback.trim()) {
+      return;
+    }
+    setIsTuning(true);
+    setTuneError("");
+    try {
+      const response = await fetch(
+        `/api/generation/${generation.id}/fine-tune`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ feedback }),
+        }
+      );
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
+      setFeedback("");
+      await router.replace(router.asPath);
+    } catch (err) {
+      setTuneError(err instanceof Error ? err.message : "Ошибка");
+    } finally {
+      setIsTuning(false);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -89,12 +149,44 @@ export default function GenerationPage({
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-6xl mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
-              <Link
-                href="/"
-                className="inline-flex items-center px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
-              >
-                ← Назад к каталогу
-              </Link>
+              <div className="flex items-center gap-2">
+                <Link
+                  href="/"
+                  className="inline-flex items-center px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                >
+                  ← Назад к каталогу
+                </Link>
+                <button
+                  onClick={() => {
+                    if (
+                      window.confirm(
+                        "Вы уверены, что хотите удалить эту генерацию?"
+                      )
+                    ) {
+                      void (async (): Promise<void> => {
+                        try {
+                          const response = await fetch(
+                            `/api/generation/${generation.id}/delete`,
+                            {
+                              method: "DELETE",
+                            }
+                          );
+                          if (!response.ok) {
+                            throw new Error(await response.text());
+                          }
+                          await router.push("/");
+                        } catch (err) {
+                          console.error("Error deleting generation:", err);
+                          alert("Ошибка при удалении генерации");
+                        }
+                      })();
+                    }
+                  }}
+                  className="inline-flex items-center px-3 py-2 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+                >
+                  Удалить
+                </button>
+              </div>
               <h1 className="text-xl font-bold text-gray-900">
                 Генерация {generation.id}
               </h1>
@@ -111,14 +203,69 @@ export default function GenerationPage({
             {/* Chain Editor - основная колонка */}
             <div className="xl:col-span-2">
               <div className="bg-white rounded-lg shadow-sm p-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="text-xl font-semibold text-gray-900">
+                    Цепочка эффектов
+                  </h2>
+                  <div className="flex items-center gap-2">
+                    <select
+                      value={selectedVersion}
+                      onChange={(e) => {
+                        setSelectedVersion(Number(e.target.value));
+                      }}
+                      className="px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    >
+                      {versions.map((_, index: number) => (
+                        <option key={index} value={index}>
+                          Версия {index + 1}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-sm font-medium text-gray-500 mb-2">
+                    Версия {selectedVersion + 1}
+                  </h3>
+                  {versions[selectedVersion] && (
+                    <ChainEditor
+                      chain={versions[selectedVersion].chain}
+                      onChange={() => {}}
+                      readonly={true}
+                    />
+                  )}
+                </div>
+              </div>
+              <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">
-                  Цепочка эффектов
+                  Тонкая настройка
                 </h2>
-                <ChainEditor
-                  chain={generation.finalChain}
-                  onChange={() => {}} // Пустая функция, так как редактирование отключено
-                  readonly={true}
+                <textarea
+                  value={feedback}
+                  onChange={(e) => {
+                    setFeedback(e.target.value);
+                  }}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  rows={3}
+                  placeholder="Например: слишком глухой"
+                  disabled={isTuning}
                 />
+                {tuneError && (
+                  <p className="text-sm text-red-600 mt-2">{tuneError}</p>
+                )}
+                <button
+                  onClick={() => {
+                    void handleFineTune();
+                  }}
+                  disabled={isTuning || !feedback.trim()}
+                  className={`mt-4 px-4 py-2 rounded-lg font-medium transition-all ${
+                    isTuning || !feedback.trim()
+                      ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                      : "bg-purple-600 text-white hover:bg-purple-700"
+                  }`}
+                >
+                  {isTuning ? "Обновление..." : "Отправить"}
+                </button>
               </div>
             </div>
 
@@ -126,9 +273,39 @@ export default function GenerationPage({
             <div className="space-y-6">
               {/* QR Code */}
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  QR-код для загрузки
-                </h3>
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    QR-код для загрузки
+                  </h3>
+                  <Toggle
+                    label="Готов"
+                    value={generation.status === "ready"}
+                    onChange={(newValue) => {
+                      void (async (): Promise<void> => {
+                        try {
+                          const response = await fetch(
+                            `/api/generation/${generation.id}/update-status`,
+                            {
+                              method: "POST",
+                              headers: { "Content-Type": "application/json" },
+                              body: JSON.stringify({
+                                status: newValue ? "ready" : "draft",
+                              }),
+                            }
+                          );
+                          if (!response.ok) {
+                            throw new Error(await response.text());
+                          }
+                          await router.replace(router.asPath);
+                        } catch (err) {
+                          console.error("Error updating status:", err);
+                          // TODO: Add error handling UI
+                        }
+                      })();
+                    }}
+                    color="#22c55e"
+                  />
+                </div>
                 {qrCodeData ? (
                   <div className="flex justify-center">
                     <QRCodeCanvas
@@ -244,6 +421,32 @@ export default function GenerationPage({
                   )}
                 </div>
               </div>
+              {versions.length > 0 && (
+                <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    Версии
+                  </h3>
+                  {versions.map((v, index) => {
+                    const prev = index > 0 ? versions[index - 1]?.chain : null;
+                    const diff = prev ? diffObjects(prev, v.chain) : null;
+                    return (
+                      <div key={index} className="mb-4">
+                        <p className="font-medium text-gray-900">
+                          Версия {index + 1}
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          Запрос: {v.prompt}
+                        </p>
+                        {diff && (
+                          <div className="mt-2">
+                            <DiffViewer diff={diff} />
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
         </main>
@@ -252,10 +455,30 @@ export default function GenerationPage({
   );
 }
 
-export const getServerSideProps: GetServerSideProps<
-  GenerationPageProps
-> = async (context) => {
-  const { id } = context.params || {};
+export const getStaticPaths: GetStaticPaths = async () => {
+  try {
+    const generations = await generationDb.getAllGenerations();
+    const paths = generations.map((gen) => ({
+      params: { id: gen.id },
+    }));
+
+    return {
+      paths,
+      fallback: "blocking", // Позволяет генерировать новые страницы на лету
+    };
+  } catch (error) {
+    console.error("Error fetching generations for paths:", error);
+    return {
+      paths: [],
+      fallback: "blocking",
+    };
+  }
+};
+
+export const getStaticProps: GetStaticProps<GenerationPageProps> = async ({
+  params,
+}) => {
+  const { id } = params || {};
 
   if (!id || typeof id !== "string") {
     return {
@@ -278,9 +501,24 @@ export const getServerSideProps: GetServerSideProps<
       };
     }
 
+    const withVersions = generation.versions
+      ? generation
+      : {
+          ...generation,
+          versions: [
+            {
+              chain: generation.finalChain,
+              prompt: generation.originalPrompt,
+              timestamp: generation.timestamp,
+            },
+          ],
+        };
+
     return {
       props: {
-        generation: JSON.parse(JSON.stringify(generation)) as GenerationRecord, // Сериализация для Next.js
+        generation: JSON.parse(
+          JSON.stringify(withVersions)
+        ) as GenerationRecord,
       },
     };
   } catch (error) {

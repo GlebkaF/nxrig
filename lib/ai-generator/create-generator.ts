@@ -44,12 +44,20 @@ class ChainGenerator {
     console.log(realRig);
 
     // Сохраняем результаты в базу данных
+    const now = new Date().toISOString();
     const generationId = await this.saveToDatabase({
-      timestamp: new Date().toISOString(),
+      timestamp: now,
       originalPrompt: prompt,
       proDescription,
       realRig,
       finalChain,
+      versions: [
+        {
+          chain: finalChain,
+          prompt,
+          timestamp: now,
+        },
+      ],
     });
 
     return generationId;
@@ -139,6 +147,7 @@ class ChainGenerator {
     proDescription: ProDescription;
     realRig: RealRig;
     finalChain: Chain;
+    versions: Array<{ chain: Chain; prompt: string; timestamp: string }>;
   }): Promise<string> {
     try {
       const generationId = await generationDb.addGeneration(result);

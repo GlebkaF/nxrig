@@ -5,7 +5,7 @@ import Header from "../components/Header";
 export default function GeneratorPage(): React.ReactElement {
   const router = useRouter();
   const [prompt, setPrompt] = useState<string>(
-    "Metallice Enter Sandman Main Riff"
+    "Metallice Enter Sandman Rhythm Guitar Main Riff"
   );
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");

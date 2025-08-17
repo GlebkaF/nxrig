@@ -21,7 +21,7 @@ class GenerationDatabase {
   private async acquireLock(): Promise<void> {
     try {
       await fs.writeFile(this.lockPath, process.pid.toString(), { flag: "wx" });
-    } catch (error) {
+    } catch {
       // Ждём и пробуем снова
       await new Promise((resolve) => setTimeout(resolve, 100));
       return this.acquireLock();
@@ -31,7 +31,7 @@ class GenerationDatabase {
   private async releaseLock(): Promise<void> {
     try {
       await fs.unlink(this.lockPath);
-    } catch (error) {
+    } catch {
       // Игнорируем ошибки при удалении блокировки
     }
   }
@@ -43,7 +43,7 @@ class GenerationDatabase {
     try {
       const data = await fs.readFile(this.dbPath, "utf-8");
       return JSON.parse(data) as JsonDatabase;
-    } catch (error) {
+    } catch {
       // Если файл не существует, создаём пустую базу
       const emptyDb: JsonDatabase = {
         generations: [],
@@ -66,7 +66,7 @@ class GenerationDatabase {
 
   // Добавление новой генерации
   async addGeneration(
-    generation: Omit<GenerationRecord, "id">
+    generation: Omit<GenerationRecord, "id" | "status">
   ): Promise<string> {
     await this.acquireLock();
 
@@ -78,6 +78,7 @@ class GenerationDatabase {
       const newGeneration: GenerationRecord = {
         ...generation,
         id,
+        status: "draft",
       };
 
       db.generations.unshift(newGeneration); // Добавляем в начало массива (новые первыми)
@@ -85,6 +86,24 @@ class GenerationDatabase {
 
       console.log(`✅ Генерация сохранена в базу с ID: ${id}`);
       return id;
+    } finally {
+      await this.releaseLock();
+    }
+  }
+
+  // Обновление существующей генерации
+  async updateGeneration(updated: GenerationRecord): Promise<void> {
+    await this.acquireLock();
+
+    try {
+      const db = await this.read();
+      const index = db.generations.findIndex((g) => g.id === updated.id);
+      if (index === -1) {
+        throw new Error(`Generation ${updated.id} not found`);
+      }
+      db.generations[index] = updated;
+      await this.write(db);
+      console.log(`✅ Генерация ${updated.id} обновлена`);
     } finally {
       await this.releaseLock();
     }
@@ -131,7 +150,7 @@ class GenerationDatabase {
   // Генерация уникального ID
   private generateId(): string {
     const timestamp = Date.now().toString(36);
-    const random = Math.random().toString(36).substr(2, 9);
+    const random = Math.random().toString(36).slice(2, 11);
     return `gen_${timestamp}_${random}`;
   }
 
@@ -139,16 +158,27 @@ class GenerationDatabase {
   async getStats(): Promise<GenerationStats> {
     const db = await this.read();
     const genresCount: Record<string, number> = {};
+    const statusCount = {
+      ready: 0,
+      draft: 0,
+    };
 
     db.generations.forEach((gen) => {
       const genre = gen.proDescription.genre;
       genresCount[genre] = (genresCount[genre] || 0) + 1;
+      
+      if (gen.status === "ready") {
+        statusCount.ready += 1;
+      } else {
+        statusCount.draft += 1;
+      }
     });
 
     return {
       totalGenerations: db.generations.length,
       latestGeneration: db.generations[0]?.timestamp || null,
       genresCount,
+      statusCount,
     };
   }
 }

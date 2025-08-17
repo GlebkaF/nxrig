@@ -99,12 +99,26 @@ export default function HomePage(): React.ReactElement {
         <div className="container mx-auto px-4 pb-8">
           {/* Статистика */}
           {stats && (
-            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="mb-8 grid grid-cols-1 md:grid-cols-4 gap-4">
               <div className="bg-gray-800 rounded-lg p-6 text-center">
                 <h3 className="text-2xl font-bold text-white">
                   {stats.totalGenerations}
                 </h3>
                 <p className="text-gray-400">Всего генераций</p>
+              </div>
+
+              <div className="bg-gray-800 rounded-lg p-6 text-center">
+                <h3 className="text-lg font-semibold text-white">
+                  Статус пресетов
+                </h3>
+                <div className="mt-2 space-y-1">
+                  <div className="text-sm text-green-400">
+                    Готовых: {stats.statusCount.ready}
+                  </div>
+                  <div className="text-sm text-yellow-400">
+                    В работе: {stats.statusCount.draft}
+                  </div>
+                </div>
               </div>
 
               <div className="bg-gray-800 rounded-lg p-6 text-center">
@@ -193,6 +207,15 @@ export default function HomePage(): React.ReactElement {
                       <div className="flex items-center gap-2 mb-2">
                         <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded">
                           {generation.proDescription.genre}
+                        </span>
+                        <span 
+                          className={`px-2 py-1 text-xs rounded ${
+                            generation.status === "ready" 
+                              ? "bg-green-600 text-white" 
+                              : "bg-yellow-600 text-white"
+                          }`}
+                        >
+                          {generation.status === "ready" ? "Готов" : "В работе"}
                         </span>
                       </div>
 
