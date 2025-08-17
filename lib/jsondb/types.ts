@@ -8,10 +8,13 @@ export interface GenerationVersion {
   timestamp: string;
 }
 
+export type PresetStatus = "draft" | "ready";
+
 export interface GenerationRecord {
   id: string;
   timestamp: string;
   originalPrompt: string;
+  status: PresetStatus;
   proDescription: {
     genre: string;
     sound_description: string;
@@ -41,4 +44,8 @@ export interface GenerationStats {
   totalGenerations: number;
   latestGeneration: string | null;
   genresCount: Record<string, number>;
+  statusCount: {
+    ready: number;
+    draft: number;
+  };
 }

@@ -66,7 +66,7 @@ class GenerationDatabase {
 
   // Добавление новой генерации
   async addGeneration(
-    generation: Omit<GenerationRecord, "id">
+    generation: Omit<GenerationRecord, "id" | "status">
   ): Promise<string> {
     await this.acquireLock();
 
@@ -78,6 +78,7 @@ class GenerationDatabase {
       const newGeneration: GenerationRecord = {
         ...generation,
         id,
+        status: "draft",
       };
 
       db.generations.unshift(newGeneration); // Добавляем в начало массива (новые первыми)
@@ -157,16 +158,27 @@ class GenerationDatabase {
   async getStats(): Promise<GenerationStats> {
     const db = await this.read();
     const genresCount: Record<string, number> = {};
+    const statusCount = {
+      ready: 0,
+      draft: 0,
+    };
 
     db.generations.forEach((gen) => {
       const genre = gen.proDescription.genre;
       genresCount[genre] = (genresCount[genre] || 0) + 1;
+      
+      if (gen.status === "ready") {
+        statusCount.ready += 1;
+      } else {
+        statusCount.draft += 1;
+      }
     });
 
     return {
       totalGenerations: db.generations.length,
       latestGeneration: db.generations[0]?.timestamp || null,
       genresCount,
+      statusCount,
     };
   }
 }

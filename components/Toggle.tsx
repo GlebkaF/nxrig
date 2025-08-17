@@ -4,22 +4,39 @@ interface ToggleProps {
   label: string;
   value: number | boolean;
   color?: string;
+  onChange?: (newValue: boolean) => void;
+  disabled?: boolean;
 }
 
-const Toggle: React.FC<ToggleProps> = ({ label, value, color = "#ef4444" }) => {
+const Toggle: React.FC<ToggleProps> = ({
+  label,
+  value,
+  color = "#ef4444",
+  onChange,
+  disabled = false,
+}) => {
   const on = Boolean(value);
+
+  const handleClick = () => {
+    if (!disabled && onChange) {
+      onChange(!on);
+    }
+  };
 
   return (
     <div className="flex flex-col items-center w-20">
-      <div
-        className="w-10 h-6 rounded-full flex items-center px-1"
+      <button
+        type="button"
+        onClick={handleClick}
+        disabled={disabled}
+        className={`w-10 h-6 rounded-full flex items-center px-1 ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
         style={{ backgroundColor: on ? color : "#4b5563" }}
       >
         <div
           className="w-4 h-4 bg-gray-100 rounded-full transition-transform"
           style={{ transform: on ? "translateX(1rem)" : "translateX(0)" }}
         />
-      </div>
+      </button>
       <span className="mt-2 text-xs text-gray-200 text-center">
         {label}
         <br />

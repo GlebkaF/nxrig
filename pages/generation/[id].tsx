@@ -1,20 +1,16 @@
 import { GetServerSideProps } from "next";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import { QRCodeCanvas } from "qrcode.react";
 import ChainEditor from "../../components/chain/ChainEditor";
 import DiffViewer from "../../components/DiffViewer";
+import Toggle from "../../components/Toggle";
 import { encodeChain } from "../../lib/core/encoder";
 import { Chain } from "../../lib/core/interface";
 import { generationDb, type GenerationRecord } from "../../lib/jsondb";
 import { diffObjects } from "../../lib/utils/diff";
-
-interface Version {
-  chain: Chain;
-  prompt: string;
-}
 
 interface GenerationPageProps {
   generation: GenerationRecord | null;
@@ -29,8 +25,24 @@ export default function GenerationPage({
   const [feedback, setFeedback] = useState<string>("");
   const [isTuning, setIsTuning] = useState<boolean>(false);
   const [tuneError, setTuneError] = useState<string>("");
-  const [selectedVersion, setSelectedVersion] = useState<number>(0);
+  const [selectedVersion, setSelectedVersion] = useState<number>(-1);
   const router = useRouter();
+
+  const versions = useMemo(() => {
+    if (!generation) return [];
+    return (
+      (
+        generation.versions as
+          | Array<{ chain: unknown; prompt: unknown }>
+          | undefined
+      )?.map((v) => ({
+        chain: v.chain as Chain,
+        prompt: String(v.prompt),
+      })) ?? [
+        { chain: generation.finalChain, prompt: generation.originalPrompt },
+      ]
+    );
+  }, [generation]);
 
   // Функция для подсчета включенных эффектов в цепи
   const getEnabledEffectsCount = (
@@ -55,6 +67,13 @@ export default function GenerationPage({
     }
   }, [generation]);
 
+  // Устанавливаем последнюю версию при загрузке
+  useEffect(() => {
+    if (versions.length) {
+      setSelectedVersion(versions.length - 1);
+    }
+  }, [versions]);
+
   if (error || !generation) {
     return (
       <div className="min-h-screen bg-gray-100 py-8">
@@ -77,15 +96,6 @@ export default function GenerationPage({
       </div>
     );
   }
-
-  const versions: Version[] = (
-    generation.versions as
-      | Array<{ chain: unknown; prompt: unknown }>
-      | undefined
-  )?.map((v) => ({
-    chain: v.chain as Chain,
-    prompt: String(v.prompt),
-  })) ?? [{ chain: generation.finalChain, prompt: generation.originalPrompt }];
 
   const formatTimestamp = (timestamp: string): string => {
     return new Date(timestamp).toLocaleString("ru-RU", {
@@ -139,12 +149,44 @@ export default function GenerationPage({
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-6xl mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
-              <Link
-                href="/"
-                className="inline-flex items-center px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
-              >
-                ← Назад к каталогу
-              </Link>
+              <div className="flex items-center gap-2">
+                <Link
+                  href="/"
+                  className="inline-flex items-center px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                >
+                  ← Назад к каталогу
+                </Link>
+                <button
+                  onClick={() => {
+                    if (
+                      window.confirm(
+                        "Вы уверены, что хотите удалить эту генерацию?"
+                      )
+                    ) {
+                      void (async (): Promise<void> => {
+                        try {
+                          const response = await fetch(
+                            `/api/generation/${generation.id}/delete`,
+                            {
+                              method: "DELETE",
+                            }
+                          );
+                          if (!response.ok) {
+                            throw new Error(await response.text());
+                          }
+                          await router.push("/");
+                        } catch (err) {
+                          console.error("Error deleting generation:", err);
+                          alert("Ошибка при удалении генерации");
+                        }
+                      })();
+                    }
+                  }}
+                  className="inline-flex items-center px-3 py-2 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+                >
+                  Удалить
+                </button>
+              </div>
               <h1 className="text-xl font-bold text-gray-900">
                 Генерация {generation.id}
               </h1>
@@ -231,9 +273,39 @@ export default function GenerationPage({
             <div className="space-y-6">
               {/* QR Code */}
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  QR-код для загрузки
-                </h3>
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    QR-код для загрузки
+                  </h3>
+                  <Toggle
+                    label="Готов"
+                    value={generation.status === "ready"}
+                    onChange={(newValue) => {
+                      void (async (): Promise<void> => {
+                        try {
+                          const response = await fetch(
+                            `/api/generation/${generation.id}/update-status`,
+                            {
+                              method: "POST",
+                              headers: { "Content-Type": "application/json" },
+                              body: JSON.stringify({
+                                status: newValue ? "ready" : "draft",
+                              }),
+                            }
+                          );
+                          if (!response.ok) {
+                            throw new Error(await response.text());
+                          }
+                          await router.replace(router.asPath);
+                        } catch (err) {
+                          console.error("Error updating status:", err);
+                          // TODO: Add error handling UI
+                        }
+                      })();
+                    }}
+                    color="#22c55e"
+                  />
+                </div>
                 {qrCodeData ? (
                   <div className="flex justify-center">
                     <QRCodeCanvas
