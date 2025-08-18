@@ -30,24 +30,19 @@ export default function GenerationPage({
 
   const versions = useMemo(() => {
     if (!generation) return [];
-    return (
-      (
-        generation.versions as
-          | Array<{ chain: unknown; prompt: unknown }>
-          | undefined
-      )?.map((v) => ({
-        chain: v.chain as Chain,
-        prompt: String(v.prompt),
-      })) ?? [
-        { chain: generation.finalChain, prompt: generation.originalPrompt },
-      ]
-    );
-  }, [generation]);
+    const mappedVersions = generation.versions.map((v) => ({
+      chain: v.chain,
+      prompt: v.prompt,
+    }));
+    // Устанавливаем последнюю версию при изменении списка версий
+    if (mappedVersions.length > 0 && selectedVersion === -1) {
+      setSelectedVersion(mappedVersions.length - 1);
+    }
+    return mappedVersions;
+  }, [generation, selectedVersion]);
 
   // Функция для подсчета включенных эффектов в цепи
-  const getEnabledEffectsCount = (
-    chain: GenerationRecord["finalChain"]
-  ): number => {
+  const getEnabledEffectsCount = (chain: Chain): number => {
     return Object.values(chain).filter(
       (block) =>
         typeof block === "object" &&
@@ -57,22 +52,15 @@ export default function GenerationPage({
   };
 
   useEffect(() => {
-    if (generation?.finalChain) {
+    if (generation && versions[selectedVersion]) {
       try {
-        const encoded = encodeChain(generation.finalChain);
+        const encoded = encodeChain(versions[selectedVersion].chain);
         setQrCodeData(encoded.qrCode);
       } catch (err) {
         console.error("Error encoding chain:", err);
       }
     }
-  }, [generation]);
-
-  // Устанавливаем последнюю версию при загрузке
-  useEffect(() => {
-    if (versions.length) {
-      setSelectedVersion(versions.length - 1);
-    }
-  }, [versions]);
+  }, [generation, versions, selectedVersion]);
 
   if (error || !generation) {
     return (
@@ -86,7 +74,7 @@ export default function GenerationPage({
               {error || "Запрошенная генерация не существует"}
             </p>
             <Link
-              href="/"
+              href="/admin"
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               ← Назад к каталогу
@@ -151,7 +139,7 @@ export default function GenerationPage({
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Link
-                  href="/"
+                  href="/admin"
                   className="inline-flex items-center px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
                 >
                   ← Назад к каталогу
@@ -403,7 +391,14 @@ export default function GenerationPage({
                       Включенных эффектов:
                     </span>
                     <span className="ml-2 text-gray-700">
-                      {getEnabledEffectsCount(generation.finalChain)}
+                      {(() => {
+                        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+                        const latestVersion =
+                          generation.versions[generation.versions.length - 1];
+                        return latestVersion
+                          ? getEnabledEffectsCount(latestVersion.chain)
+                          : 0;
+                      })()}
                     </span>
                   </div>
                   {generation.realRig.pedalboard.length > 0 && (
@@ -501,18 +496,7 @@ export const getStaticProps: GetStaticProps<GenerationPageProps> = async ({
       };
     }
 
-    const withVersions = generation.versions
-      ? generation
-      : {
-          ...generation,
-          versions: [
-            {
-              chain: generation.finalChain,
-              prompt: generation.originalPrompt,
-              timestamp: generation.timestamp,
-            },
-          ],
-        };
+    const withVersions = generation;
 
     return {
       props: {

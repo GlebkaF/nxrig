@@ -31,11 +31,8 @@ export default async function handler(
       return;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const currentChain =
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-      generation.versions?.[generation.versions.length - 1]?.chain ||
-      generation.finalChain;
+      generation.versions[generation.versions.length - 1].chain;
 
     const tuner = await createFineTuner();
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
@@ -47,21 +44,10 @@ export default async function handler(
       timestamp: new Date().toISOString(),
     };
 
-    const versions = generation.versions
-      ? // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        [...generation.versions, newVersion]
-      : [
-          {
-            chain: generation.finalChain,
-            prompt: generation.originalPrompt,
-            timestamp: generation.timestamp,
-          },
-          newVersion,
-        ];
+    const versions = [...generation.versions, newVersion];
 
     const updated: GenerationRecord = {
       ...generation,
-      finalChain: newChain,
       versions,
     };
 

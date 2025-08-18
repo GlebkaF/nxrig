@@ -28,8 +28,7 @@ export interface GenerationRecord {
     cabinet: string;
     settings: unknown;
   };
-  finalChain: Chain;
-  versions?: GenerationVersion[];
+  versions: GenerationVersion[];
 }
 
 export interface JsonDatabase {

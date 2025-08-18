@@ -4,6 +4,7 @@ import Link from "next/link";
 import { QRCodeCanvas } from "qrcode.react";
 import Header from "../../components/Header";
 import type { GenerationRecord, GenerationStats } from "../../lib/jsondb";
+import type { Chain } from "../../lib/core/interface";
 import { encodeChain } from "../../lib/core/encoder";
 
 export default function HomePage(): React.ReactElement {
@@ -61,9 +62,7 @@ export default function HomePage(): React.ReactElement {
   };
 
   // Функция для подсчета включенных эффектов в цепи
-  const getEnabledEffectsCount = (
-    chain: GenerationRecord["finalChain"]
-  ): number => {
+  const getEnabledEffectsCount = (chain: Chain): number => {
     return Object.values(chain).filter(
       (block) =>
         typeof block === "object" &&
@@ -73,7 +72,7 @@ export default function HomePage(): React.ReactElement {
   };
 
   // Функция для генерации QR-кода
-  const generateQRCode = (chain: GenerationRecord["finalChain"]): string => {
+  const generateQRCode = (chain: Chain): string => {
     try {
       const encoded = encodeChain(chain);
       return encoded.qrCode;
@@ -184,10 +183,14 @@ export default function HomePage(): React.ReactElement {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {generations.map((generation) => {
-                const qrCode = generateQRCode(generation.finalChain);
-                const enabledEffectsCount = getEnabledEffectsCount(
-                  generation.finalChain
-                );
+                const latestVersion =
+                  generation.versions[generation.versions.length - 1];
+                const qrCode = latestVersion
+                  ? generateQRCode(latestVersion.chain)
+                  : "";
+                const enabledEffectsCount = latestVersion
+                  ? getEnabledEffectsCount(latestVersion.chain)
+                  : 0;
 
                 return (
                   <div
