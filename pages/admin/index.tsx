@@ -154,7 +154,7 @@ export default function HomePage(): React.ReactElement {
           <div className="flex justify-between items-center mb-6">
             <h1 className="text-3xl font-bold text-white">Каталог генераций</h1>
             <Link
-              href="/generator"
+              href="/admin/generator"
               className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
             >
               Создать новую генерацию
@@ -175,7 +175,7 @@ export default function HomePage(): React.ReactElement {
             <div className="text-center py-12">
               <p className="text-gray-400 mb-4">Генераций пока нет</p>
               <Link
-                href="/generator"
+                href="/admin/generator"
                 className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
               >
                 Создать первую генерацию
