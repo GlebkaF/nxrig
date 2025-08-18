@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { QRCodeCanvas } from "qrcode.react";
-import Header from "../components/Header";
-import type { GenerationRecord, GenerationStats } from "../lib/jsondb";
-import { encodeChain } from "../lib/core/encoder";
+import Header from "../../components/Header";
+import type { GenerationRecord, GenerationStats } from "../../lib/jsondb";
+import { encodeChain } from "../../lib/core/encoder";
 
 export default function HomePage(): React.ReactElement {
   const [generations, setGenerations] = useState<GenerationRecord[]>([]);
@@ -208,10 +208,10 @@ export default function HomePage(): React.ReactElement {
                         <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded">
                           {generation.proDescription.genre}
                         </span>
-                        <span 
+                        <span
                           className={`px-2 py-1 text-xs rounded ${
-                            generation.status === "ready" 
-                              ? "bg-green-600 text-white" 
+                            generation.status === "ready"
+                              ? "bg-green-600 text-white"
                               : "bg-yellow-600 text-white"
                           }`}
                         >
