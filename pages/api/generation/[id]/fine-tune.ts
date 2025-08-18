@@ -31,8 +31,12 @@ export default async function handler(
       return;
     }
 
-    const currentChain =
-      generation.versions[generation.versions.length - 1].chain;
+    const latestVersion = generation.versions[generation.versions.length - 1];
+    if (!latestVersion) {
+      res.status(400).json({ error: "No versions found" });
+      return;
+    }
+    const currentChain = latestVersion.chain;
 
     const tuner = await createFineTuner();
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument

@@ -391,13 +391,15 @@ export default function GenerationPage({
                       Включенных эффектов:
                     </span>
                     <span className="ml-2 text-gray-700">
-                      {(() => {
-                        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-                        const latestVersion =
-                          generation.versions[generation.versions.length - 1];
-                        return latestVersion
-                          ? getEnabledEffectsCount(latestVersion.chain)
-                          : 0;
+                      {((): number => {
+                        const getEffectsCount = (): number => {
+                          const latestVersion =
+                            generation.versions[generation.versions.length - 1];
+                          return latestVersion
+                            ? getEnabledEffectsCount(latestVersion.chain)
+                            : 0;
+                        };
+                        return getEffectsCount();
                       })()}
                     </span>
                   </div>
