@@ -15,25 +15,27 @@ const Header: React.FC = () => {
         </Link>
         <div className="flex gap-4 ml-auto">
           <Link
-            href="/"
+            href="/admin"
             className={`hover:text-blue-400 transition-colors ${
-              isActive("/") ? "text-blue-400 font-medium" : ""
+              isActive("/admin") ? "text-blue-400 font-medium" : ""
             }`}
           >
-            Редактор
+            Генерации
           </Link>
           <Link
-            href="/generator"
+            href="/admin/generator"
             className={`hover:text-purple-400 transition-colors ${
-              isActive("/generator") ? "text-purple-400 font-medium" : ""
+              isActive("/admin/generator") ? "text-purple-400 font-medium" : ""
             }`}
           >
             AI Генератор
           </Link>
           <Link
-            href="/test-encoder"
+            href="/admin/test-encoder"
             className={`hover:text-green-400 transition-colors ${
-              isActive("/test-encoder") ? "text-green-400 font-medium" : ""
+              isActive("/admin/test-encoder")
+                ? "text-green-400 font-medium"
+                : ""
             }`}
           >
             Тестовый энкодер

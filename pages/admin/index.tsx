@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { QRCodeCanvas } from "qrcode.react";
-import Header from "../components/Header";
-import type { GenerationRecord, GenerationStats } from "../lib/jsondb";
-import { encodeChain } from "../lib/core/encoder";
+import Header from "../../components/Header";
+import type { GenerationRecord, GenerationStats } from "../../lib/jsondb";
+import type { Chain } from "../../lib/core/interface";
+import { encodeChain } from "../../lib/core/encoder";
 
 export default function HomePage(): React.ReactElement {
   const [generations, setGenerations] = useState<GenerationRecord[]>([]);
@@ -61,9 +62,7 @@ export default function HomePage(): React.ReactElement {
   };
 
   // Функция для подсчета включенных эффектов в цепи
-  const getEnabledEffectsCount = (
-    chain: GenerationRecord["finalChain"]
-  ): number => {
+  const getEnabledEffectsCount = (chain: Chain): number => {
     return Object.values(chain).filter(
       (block) =>
         typeof block === "object" &&
@@ -73,7 +72,7 @@ export default function HomePage(): React.ReactElement {
   };
 
   // Функция для генерации QR-кода
-  const generateQRCode = (chain: GenerationRecord["finalChain"]): string => {
+  const generateQRCode = (chain: Chain): string => {
     try {
       const encoded = encodeChain(chain);
       return encoded.qrCode;
@@ -154,7 +153,7 @@ export default function HomePage(): React.ReactElement {
           <div className="flex justify-between items-center mb-6">
             <h1 className="text-3xl font-bold text-white">Каталог генераций</h1>
             <Link
-              href="/generator"
+              href="/admin/generator"
               className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
             >
               Создать новую генерацию
@@ -175,7 +174,7 @@ export default function HomePage(): React.ReactElement {
             <div className="text-center py-12">
               <p className="text-gray-400 mb-4">Генераций пока нет</p>
               <Link
-                href="/generator"
+                href="/admin/generator"
                 className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
               >
                 Создать первую генерацию
@@ -184,10 +183,14 @@ export default function HomePage(): React.ReactElement {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {generations.map((generation) => {
-                const qrCode = generateQRCode(generation.finalChain);
-                const enabledEffectsCount = getEnabledEffectsCount(
-                  generation.finalChain
-                );
+                const latestVersion =
+                  generation.versions[generation.versions.length - 1];
+                const qrCode = latestVersion
+                  ? generateQRCode(latestVersion.chain)
+                  : "";
+                const enabledEffectsCount = latestVersion
+                  ? getEnabledEffectsCount(latestVersion.chain)
+                  : 0;
 
                 return (
                   <div
@@ -208,10 +211,10 @@ export default function HomePage(): React.ReactElement {
                         <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded">
                           {generation.proDescription.genre}
                         </span>
-                        <span 
+                        <span
                           className={`px-2 py-1 text-xs rounded ${
-                            generation.status === "ready" 
-                              ? "bg-green-600 text-white" 
+                            generation.status === "ready"
+                              ? "bg-green-600 text-white"
                               : "bg-yellow-600 text-white"
                           }`}
                         >

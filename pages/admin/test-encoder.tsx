@@ -7,11 +7,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import jsQR from "jsqr";
-import { encodeChain } from "../lib/core/encoder";
-import { decodeChain } from "../lib/core/decoder";
-import { createDefaultChain } from "../lib/core/helpers/create-chain";
-import { Chain } from "../lib/core/interface";
-import ChainEditor from "../components/chain/ChainEditor";
+import { encodeChain } from "../../lib/core/encoder";
+import { decodeChain } from "../../lib/core/decoder";
+import { createDefaultChain } from "../../lib/core/helpers/create-chain";
+import { Chain } from "../../lib/core/interface";
+import ChainEditor from "../../components/chain/ChainEditor";
 
 export default function TestEncoderPage(): React.ReactElement {
   const [chain, setChain] = useState<Chain>(createDefaultChain());
