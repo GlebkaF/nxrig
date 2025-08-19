@@ -63,7 +63,7 @@ export const presets: Preset[] = [
   {
     ...mapGenerationToPreset("gen_meftp13j_wgpgnsr26"),
     origin: {
-      artist: "Rory",
+      artist: "Enter Shikari",
       song: "Sorry You're Not A Winner",
       part: "Intro",
     },
