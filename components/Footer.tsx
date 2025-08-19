@@ -5,37 +5,15 @@ export default function Footer(): React.ReactElement {
     <footer className="bg-black/50 backdrop-blur-sm border-t border-white/10 py-16 mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            NX Rig: Custom Presets for Your NUX Mighty Device
-          </h2>
-
           <div className="space-y-6 text-gray-400">
-            <h3 className="text-xl font-semibold text-white">
-              Discover Your Tone with NX Rig
-            </h3>
+            <h2 className="text-xl font-semibold text-white">
+              Download and Share Patches
+            </h2>
 
             <p>
-              NX Rig offers a growing collection of presets crafted for the NUX
-              Mighty series. From clean tones to heavy distortion, you'll find
-              sounds that fit your music—whether you're just starting out or
-              already an experienced player.
-            </p>
-
-            <p>
-              All presets are created and tested by real musicians, so you can
-              be sure they work great in practice. We cover a wide range of
-              genres, making it easy to find the right tone for your style.
-            </p>
-
-            <p>
-              With NX Rig, you can not only explore ready-made patches but also
-              share your own, rate and review others, and build your personal
-              sound library.
-            </p>
-
-            <p className="text-lg font-medium text-white">
-              Take your NUX Mighty device to the next level—find your tone
-              today.
+              NX Rig is your source for NUX Mighty Plug Pro patches and custom
+              guitar presets for NUX Mighty devices. Explore tones, download
+              free NUX MP-3 patches, and share your presets with the community.
             </p>
           </div>
 

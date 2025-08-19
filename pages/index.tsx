@@ -4,6 +4,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import { useState } from "react";
 import { publicConfig } from "lib/public/config";
+import Head from "next/head";
 
 export default function Home(): React.ReactElement {
   const [searchQuery, setSearchQuery] = useState("");
@@ -28,9 +29,57 @@ export default function Home(): React.ReactElement {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+      <Head>
+        <title>
+          NUX Mighty Plug Pro Patches – Free Guitar Presets Library | NX Rig
+        </title>
+        <meta
+          name="description"
+          content="Download free NUX Mighty Plug Pro patches and guitar presets. Explore authentic tones for rock, blues, and metal. Easy to use, tested by real musicians."
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="NUX Mighty Plug Pro Patches – Free Guitar Presets Library | NX Rig"
+        />
+        <meta
+          property="og:description"
+          content="Download free NUX Mighty Plug Pro patches and guitar presets. Explore authentic tones for rock, blues, and metal. Easy to use, tested by real musicians."
+        />
+        <meta property="og:image" content="/images/og-image.svg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="NUX Mighty Plug Pro Patches – Free Guitar Presets Library | NX Rig"
+        />
+        <meta
+          name="twitter:description"
+          content="Download free NUX Mighty Plug Pro patches and guitar presets. Explore authentic tones for rock, blues, and metal. Easy to use, tested by real musicians."
+        />
+        <meta name="twitter:image" content="/images/og-image.svg" />
+      </Head>
       <Header />
 
       <main className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-center mb-8">
+          NUX Mighty Plug Pro Patches – Guitar Presets Library
+        </h1>
+
+        <div className="text-center mb-12">
+          <h2 className="text-2xl font-semibold mb-6">
+            Free Mighty Plug Pro Presets
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Explore our collection of free, high-quality presets for your NUX
+            Mighty Plug Pro. Each preset is carefully crafted and tested by real
+            musicians.
+          </p>
+        </div>
+
         {/* Search input */}
         <div className="mb-8">
           <input
@@ -44,10 +93,14 @@ export default function Home(): React.ReactElement {
           />
         </div>
 
+        <h2 className="text-2xl font-semibold mb-6">
+          Guitar Presets for NUX Mighty
+        </h2>
+
         {filteredPresets.length > 0 ? (
           <div
             id="presets"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
           >
             {filteredPresets.map((preset) => (
               <PresetCard key={preset.id} preset={preset} />

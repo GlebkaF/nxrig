@@ -11,9 +11,7 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
   const qrCode = encodeChain(preset.chain);
 
   // Определяем фоновое изображение
-  const bgImage = preset.origin?.song
-    .toLowerCase()
-    .includes("master of puppets")
+  const bgImage = preset.origin.song.toLowerCase().includes("master of puppets")
     ? "/images/metallica-master-of-puppets.webp"
     : "/images/default-cover.png";
 
@@ -38,19 +36,15 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
         </div>
 
         <div className="text-center">
-          {preset.origin && (
-            <div className="text-gray-300">
-              <div className="text-lg font-medium">{preset.origin.song}</div>
-              <div className="text-sm text-gray-400">
-                {preset.origin.artist}
+          <div className="text-gray-300">
+            <div className="text-lg font-medium">{preset.origin.song}</div>
+            <div className="text-sm text-gray-400">{preset.origin.artist}</div>
+            {preset.origin.part && (
+              <div className="text-xs text-gray-500 mt-1">
+                {preset.origin.part}
               </div>
-              {preset.origin.part && (
-                <div className="text-xs text-gray-500 mt-1">
-                  {preset.origin.part}
-                </div>
-              )}
-            </div>
-          )}
+            )}
+          </div>
 
           {/* Device and Instrument Type */}
           <div className="mt-4 flex items-center justify-center gap-2 text-xs">
