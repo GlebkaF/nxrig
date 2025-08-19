@@ -11,7 +11,7 @@ const nextConfig = {
   // basePath и assetPrefix только для production
   ...(isProduction && {
     basePath: "/nux-must-have-site", // repository name
-    assetPrefix: "/nux-must-have-site",
+    assetPrefix: "/",
   }),
   trailingSlash: true,
 };
