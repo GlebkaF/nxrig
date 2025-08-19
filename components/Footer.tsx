@@ -1,3 +1,5 @@
+import { publicConfig } from "lib/public/config";
+
 export default function Footer(): React.ReactElement {
   return (
     <footer className="bg-black/50 backdrop-blur-sm border-t border-white/10 py-16 mt-20">
@@ -40,14 +42,14 @@ export default function Footer(): React.ReactElement {
           <div className="mt-12 space-y-3">
             <div className="flex items-center justify-center gap-4">
               <a
-                href="mailto:1fokingleb+nxrig@gmail.com"
+                href={`mailto:${publicConfig.contacts.email}`}
                 className="text-pink-400 hover:text-pink-300 transition-colors"
               >
-                1fokingleb+nxrig@gmail.com
+                {publicConfig.contacts.email}
               </a>
               <span className="text-gray-600">•</span>
               <a
-                href="https://t.me/glebkaf"
+                href={publicConfig.contacts.telegram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-400 hover:text-pink-300 transition-colors flex items-center gap-1"

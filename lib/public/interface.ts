@@ -8,7 +8,7 @@ export interface Preset {
     song: string;
     part: string;
     // imageUrl: string | null;
-  } | null;
+  };
   description: string;
   chain: Chain;
 }
