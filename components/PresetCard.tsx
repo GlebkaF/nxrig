@@ -33,7 +33,7 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
         {/* QR Code */}
         <div className="flex justify-center mb-6">
           <div className="bg-white p-2 rounded">
-            <QRCodeCanvas value={qrCode} size={120} level="M" />
+            <QRCodeCanvas value={qrCode.qrCode} size={180} level="M" />
           </div>
         </div>
 
