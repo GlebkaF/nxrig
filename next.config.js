@@ -10,8 +10,7 @@ const nextConfig = {
   images: { unoptimized: true },
   // basePath и assetPrefix только для production
   ...(isProduction && {
-    basePath: "/nux-must-have-site", // repository name
-    assetPrefix: "/",
+    assetPrefix: ".",
   }),
   trailingSlash: true,
 };
