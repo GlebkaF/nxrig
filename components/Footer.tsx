@@ -4,16 +4,42 @@ export default function Footer(): React.ReactElement {
   return (
     <footer className="bg-black/50 backdrop-blur-sm border-t border-white/10 py-16 mt-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="space-y-6 text-gray-400">
-            <h2 className="text-xl font-semibold text-white">
-              Download and Share Patches
-            </h2>
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="prose prose-invert max-w-6xl mx-auto mt-16">
+            <p className="text-gray-300 mb-6">
+              Welcome to NX Rig – a dedicated library of{" "}
+              <strong>NUX Mighty Plug Pro patches</strong> and custom guitar
+              presets.
+              <br />
+              Our collection is designed for the NUX Mighty Plug Pro, giving you
+              ready-to-play tones for practice, recording, and live playing.
+            </p>
 
-            <p>
-              NX Rig is your source for NUX Mighty Plug Pro patches and custom
-              guitar presets for NUX Mighty devices. Explore tones, download
-              free NUX MP-3 patches, and share your presets with the community.
+            <p className="text-gray-300 mb-6">
+              Whether you need clean tones, classic rock crunch, or heavy metal
+              distortion, our <strong>Mighty Plug Pro presets</strong> make it
+              easy to get the sound you want. All patches are created and tested
+              by real musicians, so they work in real playing situations.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-8 mb-4">
+              Guitar Presets for NUX Mighty Plug Pro
+            </h3>
+            <p className="text-gray-300 mb-6">
+              At NX Rig you&apos;ll find song-based patches inspired by
+              legendary artists. Each preset comes with carefully tuned
+              parameters and can be loaded into your device in seconds.
+            </p>
+
+            <p className="text-gray-300 mb-4">
+              Why choose NX Rig? Free and easy to use, Authentic tones for
+              different genres, Guitar presets created by musicians, for
+              musicians.
+            </p>
+
+            <p className="text-gray-300">
+              Start exploring <strong>guitar presets for NUX Mighty</strong>{" "}
+              today and take your sound to the next level.
             </p>
           </div>
 

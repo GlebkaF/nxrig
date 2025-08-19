@@ -3,7 +3,7 @@ import { Preset } from "lib/public/interface";
 import generations from "data/generations.json";
 import { GenerationRecord } from "lib/jsondb";
 
-const mapGenerationToPreset = (id: string): Preset => {
+const mapGenerationToPreset = (id: string): Omit<Preset, "origin"> => {
   const generation = generations.generations.find((gen) => gen.id === id) as
     | GenerationRecord
     | undefined;
@@ -21,7 +21,6 @@ const mapGenerationToPreset = (id: string): Preset => {
   return {
     id: generation.id,
     title: generation.originalPrompt,
-    origin: null,
     description: generation.proDescription.sound_description,
     chain: version.chain,
   };
