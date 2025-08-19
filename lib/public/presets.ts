@@ -36,7 +36,7 @@ export const presets: Preset[] = [
     },
   },
   {
-    ...mapGenerationToPreset("gen_mefr628f_g8cftbhm4"),
+    ...mapGenerationToPreset("gen_meh81zzg_llzmwnnp5"),
     origin: {
       artist: "AC/DC",
       song: "Back in Black",
@@ -116,7 +116,7 @@ export const presets: Preset[] = [
     },
   },
   {
-    ...mapGenerationToPreset("gen_meh81zzg_llzmwnnp5"),
+    ...mapGenerationToPreset("gen_meh7i6j2_8cr4dyzia"),
     origin: {
       artist: "Metallica",
       song: "Enter Sandman",
