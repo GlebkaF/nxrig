@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useCallback } from "react";
 import { Blocks, Chain } from "../../lib/core/interface";
 import { config } from "../../lib/core/config";

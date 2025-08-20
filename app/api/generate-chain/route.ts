@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import { createGenerator } from "lib/ai-generator/create-generator";
 
 interface GenerateChainRequest {
@@ -19,23 +19,18 @@ interface ErrorResponse {
  * POST /api/generate-chain
  * Body: { prompt: string }
  */
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<GenerateChainResponse | ErrorResponse>
-): Promise<void> {
-  // Проверяем метод запроса
-  if (req.method !== "POST") {
-    res.status(405).json({ error: "Method not allowed" });
-    return;
-  }
-
+export async function POST(
+  request: Request
+): Promise<NextResponse<GenerateChainResponse | ErrorResponse>> {
   try {
     // Получаем prompt из тела запроса
-    const { prompt } = req.body as GenerateChainRequest;
+    const { prompt } = (await request.json()) as GenerateChainRequest;
 
     if (!prompt || typeof prompt !== "string") {
-      res.status(400).json({ error: "Prompt is required" });
-      return;
+      return NextResponse.json(
+        { error: "Prompt is required" },
+        { status: 400 }
+      );
     }
 
     const generator = await createGenerator();
@@ -48,11 +43,14 @@ export default async function handler(
     };
 
     // Отправляем ответ
-    res.status(200).json(response);
+    return NextResponse.json(response);
   } catch (error) {
     console.error("Error in generate-chain API:", error);
-    res.status(500).json({
-      error: error instanceof Error ? error.message : "Internal server error",
-    });
+    return NextResponse.json(
+      {
+        error: error instanceof Error ? error.message : "Internal server error",
+      },
+      { status: 500 }
+    );
   }
 }

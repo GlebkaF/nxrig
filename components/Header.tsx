@@ -1,10 +1,12 @@
+"use client";
+
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Header: React.FC = () => {
-  const router = useRouter();
-  const isAdminPage = router.pathname.startsWith("/admin");
+  const pathname = usePathname();
+  const isAdminPage = pathname.startsWith("/admin");
 
   return (
     <header className="bg-gray-800/50 backdrop-blur-sm border-b border-white/10">
@@ -28,7 +30,7 @@ const Header: React.FC = () => {
           <Link
             href="/admin"
             className={`hover:text-pink-400 transition-colors ${
-              router.pathname === "/admin" ? "text-pink-400 font-medium" : ""
+              pathname === "/admin" ? "text-pink-400 font-medium" : ""
             }`}
           >
             Generations
@@ -36,9 +38,7 @@ const Header: React.FC = () => {
           <Link
             href="/admin/presets"
             className={`hover:text-pink-400 transition-colors ${
-              router.pathname === "/admin/presets"
-                ? "text-pink-400 font-medium"
-                : ""
+              pathname === "/admin/presets" ? "text-pink-400 font-medium" : ""
             }`}
           >
             Presets
