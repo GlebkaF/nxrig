@@ -2,6 +2,7 @@ import { Preset } from "lib/public/interface";
 
 import generations from "data/generations.json";
 import { GenerationRecord } from "lib/jsondb";
+import { createSlug } from "lib/utils/create-slug";
 
 const mapGenerationToPreset = (id: string): Omit<Preset, "origin"> => {
   const generation = generations.generations.find((gen) => gen.id === id) as
@@ -26,6 +27,12 @@ const mapGenerationToPreset = (id: string): Omit<Preset, "origin"> => {
   };
 };
 
+const createPresetSlug = (preset: Preset): string => {
+  return `${createSlug(preset.origin.song)}-guitar-${createSlug(
+    preset.origin.part
+  )}`;
+};
+
 export const presets: Preset[] = [
   {
     ...mapGenerationToPreset("gen_meh734a9_vn6pc6u9f"),
@@ -33,6 +40,7 @@ export const presets: Preset[] = [
       artist: "Metallica",
       song: "Nothing Else Matters",
       part: "Intro",
+      imageUrl: "/images/cover/metallica/the-black-album.jpg",
     },
   },
   {
@@ -41,6 +49,7 @@ export const presets: Preset[] = [
       artist: "AC/DC",
       song: "Back in Black",
       part: "Intro",
+      imageUrl: "/images/cover/acdc/back-in-black.png",
     },
   },
   {
@@ -49,6 +58,8 @@ export const presets: Preset[] = [
       artist: "Rammstein",
       song: "Sonne",
       part: "Main Riff",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/en/4/41/Sonnesingle.jpg",
     },
   },
   {
@@ -57,6 +68,8 @@ export const presets: Preset[] = [
       artist: "Bullet for My Valentine",
       song: "Waking the Demon",
       part: "Main Riff",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/en/2/25/Bullet_for_My_Valentine_-_Waking_The_Demon.jpg",
     },
   },
   {
@@ -65,6 +78,8 @@ export const presets: Preset[] = [
       artist: "Enter Shikari",
       song: "Sorry You're Not A Winner",
       part: "Intro",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/en/6/6e/Taketotheskies2.jpg",
     },
   },
   {
@@ -73,6 +88,8 @@ export const presets: Preset[] = [
       artist: "Slipknot",
       song: "Before I Forget",
       part: "Intro",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/en/e/e9/Slipknot_-_Vol._3-_%28The_Subliminal_Verses%29.jpg",
     },
   },
   {
@@ -81,6 +98,7 @@ export const presets: Preset[] = [
       artist: "Metallica",
       song: "Master Of Puppets",
       part: "Main Riff",
+      imageUrl: "/images/cover/metallica/master-of-puppets.webp",
     },
   },
   {
@@ -89,6 +107,8 @@ export const presets: Preset[] = [
       artist: "Led Zeppelin",
       song: "Stairway to Heaven",
       part: "Intro",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/4/4b/Stairway_to_Heaven_by_Led_Zeppelin_US_promotional_single.png",
     },
   },
   {
@@ -97,6 +117,8 @@ export const presets: Preset[] = [
       artist: "Led Zeppelin",
       song: "Stairway to Heaven",
       part: "Solo",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/4/4b/Stairway_to_Heaven_by_Led_Zeppelin_US_promotional_single.png",
     },
   },
   {
@@ -105,6 +127,8 @@ export const presets: Preset[] = [
       artist: "Guns and Roses",
       song: "Sweet Child o Mine",
       part: "Intro",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/en/6/60/GunsnRosesAppetiteforDestructionalbumcover.jpg",
     },
   },
   {
@@ -113,6 +137,8 @@ export const presets: Preset[] = [
       artist: "Ozzy Osbourne",
       song: "Crazy Train",
       part: "Intro",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/en/7/74/Crazy_Train_45.jpg",
     },
   },
   {
@@ -121,6 +147,12 @@ export const presets: Preset[] = [
       artist: "Metallica",
       song: "Enter Sandman",
       part: "Main Riff",
+      imageUrl: "/images/cover/metallica/the-black-album.jpg",
     },
   },
-];
+].map((preset: Preset) => {
+  return {
+    ...preset,
+    slug: createPresetSlug(preset),
+  };
+});

@@ -28,7 +28,7 @@ export default function Home(): React.ReactElement {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Head>
         <title>
           NUX Mighty Plug Pro Patches – Free Guitar Presets Library | NX Rig
@@ -65,15 +65,15 @@ export default function Home(): React.ReactElement {
       <Header />
 
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8">
+        <h1 className="text-4xl font-bold mb-8">
           NUX Mighty Plug Pro Patches – Guitar Presets Library
         </h1>
 
-        <div className="text-center mb-12">
+        <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">
             Free Mighty Plug Pro Presets
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl">
             Explore our collection of free, high-quality presets for your NUX
             Mighty Plug Pro. Each preset is carefully crafted and tested by real
             musicians.
@@ -89,7 +89,7 @@ export default function Home(): React.ReactElement {
             onChange={(e) => {
               setSearchQuery(e.target.value);
             }}
-            className="w-full max-w-md px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full max-w-md px-4 py-2 rounded-lg bg-gray-800/50 backdrop-blur-sm border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
           />
         </div>
 
@@ -119,7 +119,46 @@ export default function Home(): React.ReactElement {
         )}
       </main>
 
-      <Footer />
+      <Footer>
+        <div className="container mx-auto">
+          <div className="prose prose-invert max-w-none">
+            <p className="text-gray-300 mb-6">
+              Welcome to NX Rig – a dedicated library of{" "}
+              <strong>NUX Mighty Plug Pro patches</strong> and custom guitar
+              presets. Our collection is designed for the NUX Mighty Plug Pro,
+              giving you ready-to-play tones for practice, recording, and live
+              playing.
+            </p>
+
+            <p className="text-gray-300 mb-6">
+              Whether you need clean tones, classic rock crunch, or heavy metal
+              distortion, our <strong>Mighty Plug Pro presets</strong> make it
+              easy to get the sound you want. All patches are created and tested
+              by real musicians, so they work in real playing situations.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-white mt-8 mb-4">
+              Guitar Presets for NUX Mighty Plug Pro
+            </h3>
+            <p className="text-gray-300 mb-6">
+              At NX Rig you&apos;ll find song-based patches inspired by
+              legendary artists. Each preset comes with carefully tuned
+              parameters and can be loaded into your device in seconds.
+            </p>
+
+            <p className="text-gray-300 mb-4">
+              Why choose NX Rig? Free and easy to use, Authentic tones for
+              different genres, Guitar presets created by musicians, for
+              musicians.
+            </p>
+
+            <p className="text-gray-300">
+              Start exploring <strong>guitar presets for NUX Mighty</strong>{" "}
+              today and take your sound to the next level.
+            </p>
+          </div>
+        </div>
+      </Footer>
     </div>
   );
 }

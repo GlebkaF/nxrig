@@ -7,8 +7,9 @@ export interface Preset {
     artist: string;
     song: string;
     part: string;
-    // imageUrl: string | null;
+    imageUrl: string | null;
   };
   description: string;
   chain: Chain;
+  slug: string;
 }

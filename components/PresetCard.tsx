@@ -1,7 +1,9 @@
 import { QRCodeCanvas } from "qrcode.react";
 import Image from "next/image";
+import Link from "next/link";
 import { Preset } from "lib/public/interface";
 import { encodeChain } from "lib/core/encoder";
+import { createPresetLink } from "lib/utils/urls";
 
 interface PresetCardProps {
   preset: Preset;
@@ -11,12 +13,12 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
   const qrCode = encodeChain(preset.chain);
 
   // Определяем фоновое изображение
-  const bgImage = preset.origin.song.toLowerCase().includes("master of puppets")
-    ? "/images/metallica-master-of-puppets.webp"
-    : "/images/default-cover.png";
-
+  const bgImage = preset.origin.imageUrl ?? "/images/cover/default-cover.png";
   return (
-    <div className="bg-black/50 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-[1.02] relative border border-white/10">
+    <Link
+      href={createPresetLink(preset)}
+      className="block bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-[1.02] relative border border-white/10"
+    >
       <div className="absolute inset-0">
         <Image
           src={bgImage}
@@ -57,6 +59,6 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

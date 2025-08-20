@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Script from "next/script";
 import { memo } from "react";
 
