@@ -76,18 +76,16 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
             </button>
           </div>
 
-          {/* <div className="mt-8">
+          <div className="mt-8">
             <h2 className="text-2xl font-semibold mb-4 text-left">
               Chain Configuration
             </h2>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <ChainEditor
-                chain={preset.chain}
-                onChange={() => {}}
-                readonly={true}
-              />
-            </div>
-          </div> */}
+            <ChainEditor
+              chain={preset.chain}
+              onChange={() => {}}
+              readonly={true}
+            />
+          </div>
         </div>
 
         <div className="w-[300px] shrink-0">

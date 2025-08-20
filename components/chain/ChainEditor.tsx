@@ -112,14 +112,14 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
     const color = getBlockColor(blockKey);
     if (enabled) {
       return {
-        backgroundColor: hexToRgba(color, 0.1), // 10% прозрачности
-        borderColor: hexToRgba(color, 0.3), // 30% прозрачности
+        backgroundColor: hexToRgba(color, 0.25),
+        borderColor: hexToRgba(color, 0.6),
         borderWidth: "2px",
       };
     }
     return {
-      backgroundColor: "#f9fafb",
-      borderColor: "#e5e7eb",
+      backgroundColor: "#26282c",
+      borderColor: "rgba(255, 255, 255, 0.2)",
       borderWidth: "1px",
     };
   };
@@ -144,7 +144,7 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
                 style={{
                   backgroundColor: blockData.enabled
                     ? getBlockColor(blockKey)
-                    : "#9ca3af", // серый для выключенных блоков
+                    : "#474b54", // серый для выключенных блоков
                 }}
               >
                 {blockKey.toUpperCase()}
@@ -160,10 +160,10 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
                     );
                   }}
                   disabled={readonly}
-                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 disabled:opacity-50"
+                  className="rounded border-gray-600 bg-gray-800 text-blue-400 focus:ring-blue-500 disabled:opacity-80"
                 />
-                <span className="ml-2 text-sm text-gray-700">
-                  {blockData.enabled ? "Включен" : "Выключен"}
+                <span className="ml-2 text-sm text-white">
+                  {blockData.enabled ? "Enabled" : "Disabled"}
                 </span>
               </label>
             </div>
@@ -171,19 +171,19 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
             {/* Type Selector */}
             {blockData.enabled && (
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Тип
+                <label className="block text-sm font-medium text-white mb-2">
+                  Type
                 </label>
                 <select
                   value={blockData.type}
                   onChange={(e) => {
                     updateBlockType(blockKey as keyof Chain, e.target.value);
                   }}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50 disabled:bg-gray-100"
+                  className="w-full p-2 bg-gray-800 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 disabled:opacity-80 text-white"
                   disabled={readonly}
                 >
                   {blockTypes.map((type) => (
-                    <option key={type} value={type}>
+                    <option key={type} value={type} className="bg-gray-900">
                       {getTypeDisplayName(blockKey as Blocks, type)}
                     </option>
                   ))}
@@ -194,7 +194,7 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
             {/* Parameters */}
             {blockData.enabled && blockParams.length > 0 && (
               <div className="space-y-3">
-                <h4 className="text-sm font-medium text-gray-700">Параметры</h4>
+                <h4 className="text-sm font-medium text-white">Parameters</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {blockParams.map((param) => {
                     const params = blockData.params as Record<string, number>;
@@ -202,7 +202,7 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
 
                     return (
                       <div key={param.label}>
-                        <label className="block text-xs font-medium text-gray-600 mb-1">
+                        <label className="block text-xs font-medium text-white mb-1">
                           {param.label}
                         </label>
                         <div className="flex items-center space-x-2">
@@ -218,7 +218,7 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
                                 parseInt(e.target.value)
                               );
                             }}
-                            className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer disabled:opacity-50"
+                            className="flex-1 h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer disabled:opacity-80"
                             disabled={!blockData.enabled || readonly}
                           />
                           <input
@@ -233,7 +233,7 @@ const ChainEditor: React.FC<ChainEditorProps> = ({
                                 parseInt(e.target.value) || 0
                               );
                             }}
-                            className="w-16 p-1 text-xs border border-gray-300 rounded text-center disabled:opacity-50 disabled:bg-gray-100"
+                            className="w-16 p-1 text-xs bg-gray-800 border border-gray-600 rounded text-center text-white disabled:opacity-80"
                             disabled={!blockData.enabled || readonly}
                           />
                         </div>
