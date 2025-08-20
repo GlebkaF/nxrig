@@ -24,6 +24,7 @@ const mapGenerationToPreset = (id: string): Omit<Preset, "origin"> => {
     title: generation.originalPrompt,
     description: generation.proDescription.sound_description,
     chain: version.chain,
+    slug: "????",
   };
 };
 
