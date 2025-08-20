@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Страницы пресетов
   const presetPages = presets.map((preset) => ({
-    url: `${baseUrl}/preset/${createSlug(preset.origin.artist)}/${preset.slug}`,
+    url: `${baseUrl}/preset/${createSlug(preset.origin.artist)}/${preset.slug}/`,
   }));
 
   return [...staticPages, ...presetPages];
