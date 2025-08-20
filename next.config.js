@@ -10,7 +10,8 @@ const nextConfig = {
   images: { unoptimized: true },
   // basePath и assetPrefix только для production
   ...(isProduction && {
-    assetPrefix: ".",
+    assetPrefix: "",
+    basePath: "",
   }),
   trailingSlash: true,
 };
