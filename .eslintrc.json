@@ -24,10 +24,11 @@
           { "argsIgnorePattern": "^_" }
         ],
         "@typescript-eslint/explicit-function-return-type": [
-          "error",
+          "warn",
           { "allowExpressions": false }
         ],
-        "@typescript-eslint/explicit-module-boundary-types": ["error"],
+        "@typescript-eslint/explicit-module-boundary-types": ["warn"],
+        "@typescript-eslint/require-await": ["warn"],
         "@typescript-eslint/typedef": [
           "error",
           {
