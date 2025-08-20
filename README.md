@@ -1,5 +1,7 @@
 # Nux Mp3 Preset Generator
 
+https://nxrig.com
+
 This is a tool to generate Nux Mp3 presets from a JSON file.
 
 ## 🎸 AI Chain Generator
