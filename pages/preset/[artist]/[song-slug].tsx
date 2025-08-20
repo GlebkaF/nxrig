@@ -1,10 +1,11 @@
-import { GetServerSideProps, NextPage } from "next";
+import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import Head from "next/head";
 import { PresetDetails } from "components/PresetDetails";
 import { Preset } from "lib/public/interface";
 import { presets } from "lib/public/presets";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import { createSlug } from "lib/utils/create-slug";
 
 interface PresetPageProps {
   preset: Preset;
@@ -45,7 +46,22 @@ const PresetPage: NextPage<PresetPageProps> = ({ preset }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<PresetPageProps> = async ({
+// eslint-disable-next-line @typescript-eslint/require-await
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = presets.map((preset) => ({
+    params: {
+      artist: createSlug(preset.origin.artist),
+      "song-slug": preset.slug,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false, // показывать 404 для несуществующих путей
+  };
+};
+
+export const getStaticProps: GetStaticProps<PresetPageProps> = async ({
   params,
   // eslint-disable-next-line @typescript-eslint/require-await
 }) => {
