@@ -1,3 +1,5 @@
+"use client";
+
 import { Preset } from "lib/public/interface";
 import { FC } from "react";
 import { QRCodeCanvas } from "qrcode.react";

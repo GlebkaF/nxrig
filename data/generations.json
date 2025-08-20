@@ -1,6 +1,259 @@
 {
   "generations": [
     {
+      "timestamp": "2025-08-20T10:49:12.940Z",
+      "originalPrompt": "Metallice Enter Sandman Rhythm Guitar Main Riff",
+      "proDescription": {
+        "tone_title": "Enter Sandman Rhythm Guitar Main Riff",
+        "genre": "Heavy Metal / Hard Rock",
+        "sound_description": "Aggressive, tight, palm-muted chug with pronounced attack; thick and saturated distortion with a scooped midrange, bright top end, and controlled low end. Moderate sustain, high clarity for chord definition, and very little ambient effect.",
+        "guitar_rig_description": "Noise gate: used to reduce unwanted hiss and tighten silences between palm mutes. Compressor: not used, as the amp gain provides sufficient sustain and compression. Overdrive/Distortion: mild overdrive or boost pedal in front of a high-gain amp to tighten the low end and add attack; main distortion comes from the amp's high-gain channel. Amplifier: high-gain tube amp (e.g., Mesa/Boogie or Marshall) set for saturated metal rhythm tones with scooped mids. Cabinet: 4x12 closed-back cabinet with dynamic microphones to emphasize punch and clarity. EQ: post-distortion EQ to further scoop mids and enhance lows and highs. Modulation: not used, as a dry, direct tone is essential. Delay: not used, as the riff is dry and percussive. Reverb: minimal or not used, to maintain tightness and clarity.",
+        "references": [
+          "Metallica - Enter Sandman",
+          "Metallica - Sad But True",
+          "Metallica - The Unforgiven"
+        ],
+        "song_part": "main riff / verse rhythm",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use down-picking technique for tightness and aggression; heavy gauge strings (e.g., 10-46 or higher) for stability and chunk. Guitar volume and tone on full for maximum attack and clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Mesa/Boogie Dual Rectifier Solo Head (Rev F or Rev G preferred)",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Channel": "Red (Modern) High Gain",
+            "Gain": 6.5,
+            "Bass": 4,
+            "Middle": 3,
+            "Treble": 7,
+            "Presence": 6,
+            "Master": 3.5
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 6,
+            "Level": 8
+          },
+          "eq": {
+            "31.25Hz": "+2dB",
+            "62.5Hz": "+2dB",
+            "125Hz": "0",
+            "250Hz": "-2dB",
+            "500Hz": "-4dB",
+            "1kHz": "-3dB",
+            "2kHz": "+2dB",
+            "4kHz": "+3dB",
+            "8kHz": "+2dB",
+            "16kHz": "+1dB"
+          },
+          "noise_gate": {
+            "Threshold": "just above amp noise floor; avoid note cutoff",
+            "Decay": "short"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 55,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 20,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 73,
+            "Master": 62,
+            "Bass": 54,
+            "Middle": 28,
+            "Treble": 72,
+            "Presence": 65
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 45,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 54,
+            "62": 56,
+            "125": 60,
+            "250": 55,
+            "500": 38,
+            "1000": 30,
+            "2000": 40,
+            "4000": 68,
+            "8000": 70,
+            "16000": 60,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 55,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 20,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 73,
+                "Master": 62,
+                "Bass": 54,
+                "Middle": 28,
+                "Treble": 72,
+                "Presence": 65
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 45,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 54,
+                "62": 56,
+                "125": 60,
+                "250": 55,
+                "500": 38,
+                "1000": 30,
+                "2000": 40,
+                "4000": 68,
+                "8000": 70,
+                "16000": 60,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Metallice Enter Sandman Rhythm Guitar Main Riff",
+          "timestamp": "2025-08-20T10:49:12.940Z"
+        }
+      ],
+      "id": "gen_mejuoiy9_mjgprozwq",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-08-19T06:11:52.875Z",
       "originalPrompt": "Ария Героя Асфальта основной рифф\n",
       "proDescription": {
@@ -5748,6 +6001,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-08-19T14:35:30.203Z"
+    "lastUpdated": "2025-08-20T15:23:08.847Z"
   }
 }

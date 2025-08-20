@@ -1,19 +1,15 @@
-/* eslint-disable @typescript-eslint/typedef */
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-/* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
-/* eslint-disable @typescript-eslint/no-confusing-void-expression */
+"use client";
+
 import React, { useState, useEffect, useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import jsQR from "jsqr";
-import { encodeChain } from "../../lib/core/encoder";
-import { decodeChain } from "../../lib/core/decoder";
-import { createDefaultChain } from "../../lib/core/helpers/create-chain";
-import { Chain } from "../../lib/core/interface";
-import ChainEditor from "../../components/chain/ChainEditor";
+import { encodeChain } from "../lib/core/encoder";
+import { decodeChain } from "../lib/core/decoder";
+import { createDefaultChain } from "../lib/core/helpers/create-chain";
+import { Chain } from "../lib/core/interface";
+import ChainEditor from "./chain/ChainEditor";
 
-export default function TestEncoderPage(): React.ReactElement {
+export function EncoderTester(): React.ReactElement {
   const [chain, setChain] = useState<Chain>(createDefaultChain());
   const [qrCode, setQrCode] = useState<string>("");
   const [bytes, setBytes] = useState<number[]>([]);
@@ -37,14 +33,20 @@ export default function TestEncoderPage(): React.ReactElement {
   const readImageBitmap = (file: File): Promise<ImageBitmap> => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
-      reader.onerror = () => reject(new Error("Failed to read file"));
+      reader.onerror = () => {
+        reject(new Error("Failed to read file"));
+      };
       reader.onload = () => {
         createImageBitmap(new Blob([reader.result as ArrayBuffer]))
           .then(resolve)
           .catch(() => {
             const img = new Image();
-            img.onload = () => resolve(createImageBitmap(img));
-            img.onerror = () => reject(new Error("Invalid image"));
+            img.onload = () => {
+              resolve(createImageBitmap(img));
+            };
+            img.onerror = () => {
+              reject(new Error("Invalid image"));
+            };
             img.src = reader.result as string;
           });
       };
@@ -260,7 +262,7 @@ export default function TestEncoderPage(): React.ReactElement {
                               : "bg-gray-50 border-gray-200 text-gray-500"
                           }
                         `}
-                        title={`Index ${index}: ${byte}`}
+                        title={`Index ${index.toString()}: ${byte.toString()}`}
                       >
                         {index}:{byte}
                       </div>
