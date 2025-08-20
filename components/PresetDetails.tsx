@@ -20,26 +20,36 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
 
       <div className="flex gap-8 items-start mb-8">
         <div className="flex-1">
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 mb-8 border border-white/10">
-            <h2 className="text-2xl font-semibold mb-4 text-left">
-              Patch Details
-            </h2>
-            <ul className="space-y-2">
-              <li>
-                <strong>Device:</strong> NUX Mighty Plug Pro
-              </li>
-              <li>
-                <strong>Inspired by:</strong> {preset.origin.artist} –{" "}
-                {preset.origin.song}
-              </li>
-              <li>
-                <strong>Instrument:</strong> Guitar
-              </li>
-              <li>
-                <strong>Song part:</strong> {preset.origin.part}
-              </li>
-              <li className="pt-4 text-gray-300">{preset.description}</li>
-            </ul>
+          <div className="flex gap-8 md:items-start flex-col-reverse items-center md:flex-row">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 mb-8 border border-white/10">
+              <h2 className="text-2xl font-semibold mb-4 text-left">
+                Patch Details
+              </h2>
+              <ul className="space-y-2">
+                <li>
+                  <strong>Device:</strong> NUX Mighty Plug Pro
+                </li>
+                <li>
+                  <strong>Inspired by:</strong> {preset.origin.artist} –{" "}
+                  {preset.origin.song}
+                </li>
+                <li>
+                  <strong>Instrument:</strong> Guitar
+                </li>
+                <li>
+                  <strong>Song part:</strong> {preset.origin.part}
+                </li>
+                <li className="pt-4 text-gray-300">{preset.description}</li>
+              </ul>
+            </div>
+            <div className="w-[300px] shrink-0">
+              <div className="bg-white p-4 rounded-lg shadow-lg mb-4">
+                <QRCodeCanvas value={qrCode.qrCode} size={268} level="M" />
+              </div>
+              <p className="text-sm text-gray-400 text-center">
+                Scan QR code with MightyApp
+              </p>
+            </div>
           </div>
 
           <div>
@@ -89,15 +99,6 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
               readonly={true}
             />
           </div>
-        </div>
-
-        <div className="w-[300px] shrink-0">
-          <div className="bg-white p-4 rounded-lg shadow-lg mb-4">
-            <QRCodeCanvas value={qrCode.qrCode} size={268} level="M" />
-          </div>
-          <p className="text-sm text-gray-400 text-center">
-            Scan QR code with MightyApp
-          </p>
         </div>
       </div>
     </div>
