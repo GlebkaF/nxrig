@@ -14,15 +14,40 @@ interface PresetPageProps {
 const PresetPage: NextPage<PresetPageProps> = ({ preset }) => {
   const title = `${preset.origin.song} ${preset.origin.part} – NUX Mighty Plug Pro Patch | Free Guitar Preset`;
   const description = `Play ${preset.origin.song} ${preset.origin.part} with authentic tone using this free NUX Mighty Plug Pro patch. Download the guitar preset, inspired by ${preset.origin.artist}, and load it on your Mighty Plug Pro.`;
+  const imageUrl = preset.origin.imageUrl ?? "/images/cover/default-cover.png";
+  const imageUrlWithProtocol = imageUrl.startsWith("http")
+    ? imageUrl
+    : `https://nxrig.com${imageUrl}`;
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        {/* Можно добавить og:image с изображением пресета, если оно будет доступно */}
+        <meta property="og:image" content={imageUrlWithProtocol} />
+        <meta
+          property="og:url"
+          content={`https://nxrig.com/preset/${createSlug(preset.origin.artist)}/${preset.slug}`}
+        />
+        <meta property="og:site_name" content="NUX Must Have" />
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={imageUrlWithProtocol} />
+        {/* Additional Meta */}
+        <meta name="article:published_time" content="2024-01-01" />{" "}
+        {/* Можно добавить реальную дату публикации */}
+        <meta name="article:author" content="NUX Must Have" />
+        <meta name="article:section" content="Guitar Presets" />
+        <meta
+          name="article:tag"
+          content={`${preset.origin.artist}, Guitar Tone, NUX Mighty Plug Pro, Guitar Preset`}
+        />
       </Head>
       <Header />
       <main className="flex-grow">

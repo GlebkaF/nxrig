@@ -36,6 +36,7 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
               <li>
                 <strong>Song part:</strong> {preset.origin.part}
               </li>
+              <li className="pt-4 text-gray-300">{preset.description}</li>
             </ul>
           </div>
 
