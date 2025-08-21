@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { Metadata } from "next";
 import YandexMetrika from "../components/YandexMetrika";
+import { GoogleTagManager } from "../components/GoogleTagManager";
 
 export const metadata: Metadata = {
   title: "NXRIG",
@@ -48,6 +49,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <GoogleTagManager />
         <YandexMetrika />
         {children}
       </body>
