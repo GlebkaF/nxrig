@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { PresetDetails } from "components/PresetDetails";
+import { RelatedPresets } from "components/RelatedPresets";
 import { Preset } from "lib/public/interface";
 import { presets } from "lib/public/presets";
 import Header from "components/Header";
@@ -99,8 +100,16 @@ export default async function PresetPage({ params }: PresetPageProps) {
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Header />
       <main className="flex-grow">
-        <div className="container mx-auto">
+        <div className="container mx-auto pb-12">
           <PresetDetails preset={preset} />
+          <RelatedPresets
+            title={`More presets by ${preset.origin.artist}`}
+            presets={presets.filter(
+              (p) =>
+                createSlug(p.origin.artist) === createSlug(preset.origin.artist)
+            )}
+            currentPresetId={preset.id}
+          />
         </div>
       </main>
       <Footer>

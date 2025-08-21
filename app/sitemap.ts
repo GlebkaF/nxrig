@@ -16,6 +16,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // Страницы артистов
+  const artists = Array.from(
+    new Set(presets.map((preset) => preset.origin.artist))
+  );
+  const artistPages = artists.map((artist) => ({
+    url: `${baseUrl}preset/${createSlug(artist)}/`,
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
+
   // Страницы пресетов
   const presetPages = presets.map((preset) => ({
     url: `${baseUrl}preset/${createSlug(preset.origin.artist)}/${preset.slug}/`,
@@ -24,5 +35,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...presetPages];
+  return [...staticPages, ...artistPages, ...presetPages];
 }
