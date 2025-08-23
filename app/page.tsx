@@ -2,7 +2,6 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import { Metadata } from "next";
 import ClientSearch from "../components/ClientSearch";
-import { CompatibleDevices } from "../components/DeviceBadge";
 
 export const metadata: Metadata = {
   title:
@@ -36,15 +35,11 @@ export default function Home() {
           NUX Mighty Plug Pro & Mighty Space Patches – Guitar Presets Library
         </h1>
 
-        <div className="mb-8">
-          <CompatibleDevices className="mb-4" />
-        </div>
-
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">
             Free NUX Mighty Presets
-          </h2>
-          <p className="text-gray-300 max-w-2xl">
+          </h2>{" "}
+          <p className="text-gray-300 max-w-3xl">
             Explore our collection of free, high-quality presets for your NUX
             Mighty Plug Pro and NUX Mighty Space. All presets are fully
             compatible with both devices and carefully crafted and tested by
