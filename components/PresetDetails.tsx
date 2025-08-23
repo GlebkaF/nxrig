@@ -32,15 +32,8 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
               </h2>
               <ul className="space-y-2">
                 <li>
-                  <strong>Compatible Devices:</strong> NUX Mighty Plug Pro & NUX
-                  Mighty Space
-                </li>
-                <li>
                   <strong>Inspired by:</strong> {preset.origin.artist} –{" "}
                   {preset.origin.song}
-                </li>
-                <li>
-                  <strong>Instrument:</strong> Guitar
                 </li>
                 <li>
                   <strong>Song part:</strong> {preset.origin.part}

@@ -151,6 +151,25 @@ export const presets: Preset[] = [
       imageUrl: "/images/cover/metallica/the-black-album.jpg",
     },
   },
+  {
+    ...mapGenerationToPreset("gen_menvyq0h_j1ohwnij6"),
+    origin: {
+      artist: "Nirvana",
+      song: "Come As You Are",
+      part: "Intro",
+      imageUrl: "/images/cover/nirvana/nevermind.jpg",
+    },
+  },
+  {
+    ...mapGenerationToPreset("gen_menwg6dy_bc27mjc3s"),
+    origin: {
+      artist: "Lynyrd Skynyrd",
+      song: "Sweet Home Alabama",
+      part: "Intro",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/en/e/e4/Skynyrd-Sweet-Home-Alabama.jpg",
+    },
+  },
 ].map((preset: Preset) => {
   return {
     ...preset,

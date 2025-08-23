@@ -1,6 +1,460 @@
 {
   "generations": [
     {
+      "timestamp": "2025-08-23T06:49:47.341Z",
+      "originalPrompt": "Lynyrd Skynyrd – Sweet Home Alabama Intro",
+      "proDescription": {
+        "tone_title": "Sweet Home Alabama Intro",
+        "genre": "Classic Rock / Southern Rock",
+        "sound_description": "Bright, jangly, and clean with a touch of warmth. The tone has a crisp attack, clear note separation, and slight chime. There’s minimal distortion—just enough edge for presence—while retaining clarity and dynamics.",
+        "guitar_rig_description": "Noise gate: not used (signal is clean and dynamic, no need). Compressor: lightly used to tame peaks and add sustain, enhancing note consistency. Overdrive/distortion/boost: a mild overdrive or amp breakup for a touch of grit and warmth, not heavily saturated. Amplifier: clean to edge-of-breakup tube amp (such as Fender Twin Reverb or Vox AC30), providing sparkle and fullness. Cabinet: 2x12 open-back with vintage-style speakers for airy highs and a natural midrange. EQ: basic amp EQ with a slight mid and treble emphasis for clarity; no additional EQ block. Modulation: not used (intro is dry and clear). Delay: not used. Reverb: spring reverb for subtle ambience and vintage vibe.",
+        "references": [
+          "Lynyrd Skynyrd – Sweet Home Alabama",
+          "The Allman Brothers Band – Ramblin' Man",
+          "Creedence Clearwater Revival – Bad Moon Rising"
+        ],
+        "song_part": "intro riff",
+        "preferred_pickup": "bridge single-coil, tone = 8",
+        "additional_info": "Classic Fender Stratocaster or similar guitar recommended. Use lighter string gauge for easy bends and clarity. Picking should be precise, with occasional double-stops and open-string embellishments for the authentic feel."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Analogman King of Tone (set to low gain, overdrive side only)"
+        ],
+        "amplifier": "Fender '65 Twin Reverb",
+        "cabinet": "Fender 2x12 open-back with Jensen C12K speakers",
+        "settings": {
+          "amp": {
+            "Normal Volume": 4,
+            "Treble": 7,
+            "Middle": 6,
+            "Bass": 4.5,
+            "Reverb": 2.5,
+            "Bright Switch": "On"
+          },
+          "compressor": {
+            "Blend": "11 o'clock",
+            "Volume": "unity gain",
+            "Comp": "9 o'clock"
+          },
+          "overdrive": {
+            "Drive": "8 o'clock (low)",
+            "Tone": "noon",
+            "Volume": "unity gain"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 38,
+            "Clipping": 25
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Blues Drive",
+          "enabled": true,
+          "params": {
+            "Level": 51,
+            "Gain": 23,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 44,
+            "Master": 58,
+            "Bass": 42,
+            "Middle": 61,
+            "Treble": 69,
+            "Bright": 65
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 43,
+            "HighCut": 66
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 38,
+            "Decay": 41
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 38,
+                "Clipping": 25
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Blues Drive",
+              "enabled": true,
+              "params": {
+                "Level": 51,
+                "Gain": 23,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 44,
+                "Master": 58,
+                "Bass": 42,
+                "Middle": 61,
+                "Treble": 69,
+                "Bright": 65
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 43,
+                "HighCut": 66
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 41
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Lynyrd Skynyrd – Sweet Home Alabama Intro",
+          "timestamp": "2025-08-23T06:49:47.341Z"
+        }
+      ],
+      "id": "gen_menwg6dy_bc27mjc3s",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-08-23T06:36:12.971Z",
+      "originalPrompt": "Nirvana Come As You Are Intro",
+      "proDescription": {
+        "tone_title": "Nirvana - Come As You Are (Intro)",
+        "genre": "90s Grunge / Alternative Rock",
+        "sound_description": "Clean, watery, slightly dark and chorus-heavy tone with moderate sustain. The sound is mellow, lacks high-end brightness, and has a swirling, modulated character. Not aggressive or compressed; has a laid-back, loose feel.",
+        "guitar_rig_description": "Noise gate: not used (signal is not high gain and noise is minimal); Compressor: not used (natural dynamics preserved); Overdrive/Distortion/Boost: not used (clean tone required); Amplifier: clean solid-state or clean channel of a tube amp for neutral, uncolored base tone; Cabinet: standard 2x12 or 4x12 guitar cabinet with neutral speakers for full-bodied sound; EQ: slight emphasis on low-mids, highs rolled off to keep tone dark and smooth; Modulation: chorus pedal used after the amp input to create watery, swirling effect; Delay: not used; Reverb: small amount of spring or room reverb to add space without washing out the modulation.",
+        "references": [
+          "Nirvana - Come As You Are",
+          "The Cure - Just Like Heaven (clean chorus tones)",
+          "Alice In Chains - Down in a Hole (clean parts)"
+        ],
+        "song_part": "Intro / Main riff",
+        "preferred_pickup": "neck single coil, tone = 4",
+        "additional_info": "Use a Fender Jaguar or similar guitar with neck pickup for warmth and darkness. Play with fingers or a pick for softer attack. Heavier string gauge helps maintain tuning stability with chorus effect."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss CE-2 Chorus",
+          "Boss RV-6 Reverb"
+        ],
+        "amplifier": "Fender Twin Reverb (’65 Reissue)",
+        "cabinet": "Fender Twin Reverb 2x12 combo (Jensen C12K 12\" speakers)",
+        "settings": {
+          "amp": {
+            "Volume (Normal Channel)": 3.5,
+            "Treble": 3,
+            "Middle": 6,
+            "Bass": 7,
+            "Reverb": 2,
+            "Bright Switch": "Off"
+          },
+          "chorus": {
+            "Rate": 2,
+            "Depth": 7
+          },
+          "reverb": {
+            "Level": 2,
+            "Type": "Spring"
+          },
+          "guitar": {
+            "Pickup": "Neck single coil",
+            "Tone knob": 4
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 45,
+            "Depth": 80
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 38,
+            "Master": 60,
+            "Bass": 62,
+            "Middle": 56,
+            "Treble": 36,
+            "Bright": 40
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 45,
+            "HighCut": 32
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 36,
+            "Decay": 32
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 45,
+                "Depth": 80
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 38,
+                "Master": 60,
+                "Bass": 62,
+                "Middle": 56,
+                "Treble": 36,
+                "Bright": 40
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 45,
+                "HighCut": 32
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 36,
+                "Decay": 32
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Nirvana Come As You Are Intro",
+          "timestamp": "2025-08-23T06:36:12.971Z"
+        }
+      ],
+      "id": "gen_menvyq0h_j1ohwnij6",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-08-20T10:49:12.940Z",
       "originalPrompt": "Metallice Enter Sandman Rhythm Guitar Main Riff",
       "proDescription": {
@@ -6001,6 +6455,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-08-20T15:23:08.847Z"
+    "lastUpdated": "2025-08-23T06:49:47.350Z"
   }
 }
