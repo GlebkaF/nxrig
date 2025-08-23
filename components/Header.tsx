@@ -20,7 +20,7 @@ const Header: React.FC = () => {
           </Link>
 
           <p className="text-gray-400 text-lg mb-0">
-            Professional presets for NUX Mighty Plug Pro
+            Professional presets for NUX Mighty Plug Pro & Mighty Space
           </p>
         </div>
       </div>

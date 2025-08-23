@@ -26,8 +26,8 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${preset.origin.song} ${preset.origin.part} – NUX Mighty Plug Pro Patch | Free Guitar Preset`;
-  const description = `Play ${preset.origin.song} ${preset.origin.part} with authentic tone using this free NUX Mighty Plug Pro patch. Download the guitar preset, inspired by ${preset.origin.artist}, and load it on your Mighty Plug Pro.`;
+  const title = `${preset.origin.song} ${preset.origin.part} – NUX Mighty Plug Pro & Mighty Space Patch | Free Guitar Preset`;
+  const description = `Play ${preset.origin.song} ${preset.origin.part} with authentic tone using this free NUX Mighty Plug Pro and Mighty Space patch. Download the guitar preset, inspired by ${preset.origin.artist}, and load it on your NUX Mighty device.`;
   const imageUrl = preset.origin.imageUrl ?? "/images/cover/default-cover.png";
   const imageUrlWithProtocol = imageUrl.startsWith("http")
     ? imageUrl
@@ -56,7 +56,10 @@ export async function generateMetadata({
       preset.origin.artist,
       "Guitar Tone",
       "NUX Mighty Plug Pro",
+      "NUX mp3",
+      "NUX Mighty Space",
       "Guitar Preset",
+      "NUX Mighty Devices",
     ],
   };
 }
@@ -100,7 +103,7 @@ export default async function PresetPage({ params }: PresetPageProps) {
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Header />
       <main className="flex-grow">
-        <div className="container mx-auto pb-12">
+        <div className="container mx-auto pb-12 px-4 py-8">
           <PresetDetails preset={preset} />
           <RelatedPresets
             title={`More presets by ${preset.origin.artist}`}

@@ -5,6 +5,9 @@ import { FC } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import { encodeChain } from "lib/core/encoder";
 import ChainEditor from "./chain/ChainEditor";
+import { CompatibleDevices } from "./DeviceBadge";
+import Link from "next/link";
+import { createArtistLink } from "lib/utils/urls";
 
 interface PresetDetailsProps {
   preset: Preset;
@@ -13,10 +16,20 @@ interface PresetDetailsProps {
 export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
   const qrCode = encodeChain(preset.chain);
   return (
-    <div className="px-4 py-8">
+    <div>
       <h1 className="text-4xl font-bold mb-8 text-left">
-        {`${preset.origin.artist} – ${preset.origin.song} ${preset.origin.part} Patch for NUX Mighty Plug Pro`}
+        <Link
+          href={createArtistLink(preset)}
+          className="text-pink-400 hover:text-pink-300 transition-colors"
+        >
+          {preset.origin.artist}
+        </Link>{" "}
+        – {preset.origin.song} {preset.origin.part} Patch for NUX Mighty Devices
       </h1>
+
+      <div className="mb-6">
+        <CompatibleDevices />
+      </div>
 
       <div className="flex gap-8 items-start mb-8">
         <div className="flex-1">
@@ -27,14 +40,8 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
               </h2>
               <ul className="space-y-2">
                 <li>
-                  <strong>Device:</strong> NUX Mighty Plug Pro
-                </li>
-                <li>
                   <strong>Inspired by:</strong> {preset.origin.artist} –{" "}
                   {preset.origin.song}
-                </li>
-                <li>
-                  <strong>Instrument:</strong> Guitar
                 </li>
                 <li>
                   <strong>Song part:</strong> {preset.origin.part}
@@ -58,7 +65,10 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
             </h2>
             <ol className="list-decimal list-inside space-y-2">
               <li>Download the patch file or scan QR code.</li>
-              <li>Load it into your NUX Mighty Plug Pro using MightyApp.</li>
+              <li>
+                Load it into your NUX Mighty Plug Pro or NUX Mighty Space using
+                MightyApp.
+              </li>
               <li>
                 Play along with {preset.origin.artist} and enjoy the authentic
                 tone.

@@ -44,7 +44,7 @@ export default function ClientSearch(): React.ReactElement {
       {filteredPresets.length > 0 ? (
         <div
           id="presets"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12"
         >
           {filteredPresets.map((preset) => (
             <PresetCard key={preset.id} preset={preset} />
