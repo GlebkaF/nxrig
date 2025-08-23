@@ -5,6 +5,7 @@ import { FC } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import { encodeChain } from "lib/core/encoder";
 import ChainEditor from "./chain/ChainEditor";
+import { CompatibleDevices } from "./DeviceBadge";
 
 interface PresetDetailsProps {
   preset: Preset;
@@ -15,8 +16,12 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
   return (
     <div className="px-4 py-8">
       <h1 className="text-4xl font-bold mb-8 text-left">
-        {`${preset.origin.artist} – ${preset.origin.song} ${preset.origin.part} Patch for NUX Mighty Plug Pro`}
+        {`${preset.origin.artist} – ${preset.origin.song} ${preset.origin.part} Patch for NUX Mighty Devices`}
       </h1>
+
+      <div className="mb-6">
+        <CompatibleDevices />
+      </div>
 
       <div className="flex gap-8 items-start mb-8">
         <div className="flex-1">
@@ -27,7 +32,8 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
               </h2>
               <ul className="space-y-2">
                 <li>
-                  <strong>Device:</strong> NUX Mighty Plug Pro
+                  <strong>Compatible Devices:</strong> NUX Mighty Plug Pro & NUX
+                  Mighty Space
                 </li>
                 <li>
                   <strong>Inspired by:</strong> {preset.origin.artist} –{" "}
@@ -58,7 +64,10 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
             </h2>
             <ol className="list-decimal list-inside space-y-2">
               <li>Download the patch file or scan QR code.</li>
-              <li>Load it into your NUX Mighty Plug Pro using MightyApp.</li>
+              <li>
+                Load it into your NUX Mighty Plug Pro or NUX Mighty Space using
+                MightyApp.
+              </li>
               <li>
                 Play along with {preset.origin.artist} and enjoy the authentic
                 tone.

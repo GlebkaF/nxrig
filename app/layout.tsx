@@ -5,7 +5,8 @@ import { GoogleTagManager } from "../components/GoogleTagManager";
 
 export const metadata: Metadata = {
   title: "NXRIG",
-  description: "Free guitar presets for NUX Mighty Plug Pro",
+  description:
+    "Free guitar presets for NUX Mighty Plug Pro and NUX Mighty Space - fully compatible with both devices",
   metadataBase: new URL("https://nxrig.com"),
 };
 
@@ -25,7 +26,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "NXRIG",
-              description: "Free guitar presets for NUX Mighty Plug Pro",
+              description:
+                "Free guitar presets for NUX Mighty Plug Pro and NUX Mighty Space - fully compatible with both devices",
               url: "https://nxrig.com",
             }),
           }}

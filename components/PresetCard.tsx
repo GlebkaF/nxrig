@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Preset } from "lib/public/interface";
 import { encodeChain } from "lib/core/encoder";
 import { createPresetLink } from "lib/utils/urls";
+import { CompatibleDevices } from "./DeviceBadge";
 
 interface PresetCardProps {
   preset: Preset;
@@ -55,12 +56,7 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
 
             {/* Device and Instrument Type */}
             <div className="mt-4 flex items-center justify-center md:justify-start gap-2 text-xs">
-              <span className="bg-pink-500/20 text-pink-400 px-2 py-1 rounded">
-                Guitar
-              </span>
-              <span className="bg-violet-500/20 text-violet-400 px-2 py-1 rounded">
-                NUX Mighty Plug Pro
-              </span>
+              <CompatibleDevices />
             </div>
           </div>
         </div>

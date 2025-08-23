@@ -18,8 +18,8 @@ export async function generateMetadata({
   const artistName = params.artist.replace(/-/g, " ").toUpperCase();
 
   return {
-    title: `${artistName} - Guitar Presets for NUX Mighty Plug`,
-    description: `Download free NUX Mighty Plug Pro presets for ${artistName}. Each preset is carefully crafted to match the original guitar tones.`,
+    title: `${artistName} - Guitar Presets for NUX Mighty Plug Pro & Mighty Space`,
+    description: `Download free NUX Mighty Plug Pro and Mighty Space presets for ${artistName}. Each preset is carefully crafted to match the original guitar tones and fully compatible with both devices.`,
   };
 }
 
