@@ -103,7 +103,7 @@ export default async function PresetPage({ params }: PresetPageProps) {
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Header />
       <main className="flex-grow">
-        <div className="container mx-auto pb-12">
+        <div className="container mx-auto pb-12 px-4 py-8">
           <PresetDetails preset={preset} />
           <RelatedPresets
             title={`More presets by ${preset.origin.artist}`}

@@ -6,6 +6,8 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import { ReactElement } from "react";
 
+// TODO: add seo description for artist page
+
 interface ArtistPageProps {
   params: {
     artist: string;

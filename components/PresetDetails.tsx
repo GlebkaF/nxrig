@@ -14,7 +14,7 @@ interface PresetDetailsProps {
 export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
   const qrCode = encodeChain(preset.chain);
   return (
-    <div className="px-4 py-8">
+    <div>
       <h1 className="text-4xl font-bold mb-8 text-left">
         {`${preset.origin.artist} – ${preset.origin.song} ${preset.origin.part} Patch for NUX Mighty Devices`}
       </h1>

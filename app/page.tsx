@@ -88,12 +88,6 @@ export default function Home() {
               Mighty Space.
             </p>
 
-            <p className="text-gray-300 mb-4">
-              Why choose NX Rig? Free and easy to use, Authentic tones for
-              different genres, Guitar presets created by musicians, for
-              musicians, Full compatibility with NUX Mighty devices.
-            </p>
-
             <p className="text-gray-300">
               Start exploring{" "}
               <strong>guitar presets for NUX Mighty devices</strong> today and
