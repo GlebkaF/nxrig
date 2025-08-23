@@ -6,6 +6,8 @@ import { QRCodeCanvas } from "qrcode.react";
 import { encodeChain } from "lib/core/encoder";
 import ChainEditor from "./chain/ChainEditor";
 import { CompatibleDevices } from "./DeviceBadge";
+import Link from "next/link";
+import { createArtistLink } from "lib/utils/urls";
 
 interface PresetDetailsProps {
   preset: Preset;
@@ -16,7 +18,13 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
   return (
     <div>
       <h1 className="text-4xl font-bold mb-8 text-left">
-        {`${preset.origin.artist} – ${preset.origin.song} ${preset.origin.part} Patch for NUX Mighty Devices`}
+        <Link
+          href={createArtistLink(preset)}
+          className="text-pink-400 hover:text-pink-300 transition-colors"
+        >
+          {preset.origin.artist}
+        </Link>{" "}
+        – {preset.origin.song} {preset.origin.part} Patch for NUX Mighty Devices
       </h1>
 
       <div className="mb-6">
