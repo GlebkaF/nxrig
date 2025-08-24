@@ -11,7 +11,6 @@ import { DelayType } from "lib/core/blocks/delay";
 import bulletForMyValentine from "lib/public/artist/bullet-for-my-valentine";
 const preset: Preset = {
   id: "gen_meftgp5v_1uj3ojci1",
-  title: "Waking the Demon",
   description:
     "Aggressive, high-gain, tight low end, percussive attack, moderately scooped mids, bright but controlled highs, clear note separation, substantial sustain, minimal noise.",
   chain: {

@@ -12,7 +12,6 @@ import ozzyOsborn from "lib/public/artist/ozzy-osborn";
 
 const preset: Preset = {
   id: "gen_meh7yxtq_istxg3la5",
-  title: "Crazy Train Ozzy Intro\n",
   description:
     "Bright, aggressive, tight, with pronounced attack and clarity; features a saturated but controlled distortion, moderate sustain, and enough midrange cut to slice through a mix. There's minimal ambience, keeping the riff precise and punchy.",
   chain: {

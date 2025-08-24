@@ -12,7 +12,6 @@ import acDc from "lib/public/artist/ac-dc";
 
 const preset: Preset = {
   id: "gen_meh81zzg_llzmwnnp5",
-  title: "Back in Black Ac\\dc intro\n",
   description:
     "Punchy, mid-focused, crunchy rhythm tone with strong attack and clarity; moderate gain for articulation; bright but not harsh, dynamic and responsive to picking; tight low end with ringing chords.",
   chain: {

@@ -12,7 +12,6 @@ import metallica from "lib/public/artist/metallica";
 
 const preset: Preset = {
   id: "gen_meh734a9_vn6pc6u9f",
-  title: "Metallica Nothing Else Matters Intro",
   description:
     "Warm, clean, and articulate tone with a smooth, rounded attack and moderate sustain. The sound is open and slightly bright, but with a mellow character. There is minimal distortion or breakup, and the dynamics are preserved for expressive fingerpicking. Subtle ambience enhances the atmosphere.",
   chain: {

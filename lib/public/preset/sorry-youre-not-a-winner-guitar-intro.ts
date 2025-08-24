@@ -12,7 +12,6 @@ import enterShikari from "lib/public/artist/enter-shikari";
 
 const preset: Preset = {
   id: "gen_meftp13j_wgpgnsr26",
-  title: "Sorry You're Not A Winner Intro Rory\n",
   description:
     "Very percussive, tight, mid-gain distortion with pronounced attack and clarity. Dry, staccato, and articulate for rapid palm-muted rhythms. Bright top-end for cutting through the mix, but with enough body for fullness.",
   chain: {

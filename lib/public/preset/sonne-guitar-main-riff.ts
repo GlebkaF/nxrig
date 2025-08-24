@@ -12,7 +12,6 @@ import rammstein from "lib/public/artist/rammstein";
 
 const preset: Preset = {
   id: "gen_mefrrfkk_w8x18ppjc",
-  title: "Sonne Rammstein Rhythm Guitar Whole song ",
   description:
     "Heavy, tight, percussive, and aggressive with a thick midrange, pronounced low end, and a slight high-end bite. The tone is focused and modern, cutting through the mix but not overly bright. Palm-muted chugs are punchy and articulate, with minimal noise and maximum clarity.",
   chain: {

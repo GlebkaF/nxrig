@@ -12,7 +12,6 @@ import lynyrdSkynyrd from "lib/public/artist/lynyrd-skynyrd";
 
 const preset: Preset = {
   id: "gen_menwg6dy_bc27mjc3s",
-  title: "Lynyrd Skynyrd – Sweet Home Alabama Intro",
   description:
     "Bright, jangly, and clean with a touch of warmth. The tone has a crisp attack, clear note separation, and slight chime. There’s minimal distortion—just enough edge for presence—while retaining clarity and dynamics.",
   chain: {

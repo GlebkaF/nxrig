@@ -12,7 +12,6 @@ import ledZeppelin from "lib/public/artist/led-zeppelin";
 
 const preset: Preset = {
   id: "gen_meh6yh0e_mpx8o7n8n",
-  title: "Led Zeppelin Stairway to Heaven Solo",
   description:
     "Smooth, singing lead tone with expressive sustain, moderate warmth, clear articulation, and subtle bite without harshness. The sound is dynamic, allowing for expressive playing and note definition, with a touch of ambience.",
   chain: {

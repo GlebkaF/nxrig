@@ -14,7 +14,6 @@ import metallica from "lib/public/artist/metallica";
 
 const preset: Preset = {
   id: "gen_meh65m2y_npavw2gjd",
-  title: "Metallica Master Of Puppets Rhythm Guitar Main Riff",
   description:
     "Aggressive, tight, highly articulate, mid-scooped, palm-muted chug with lots of attack, saturated but not muddy, precise and powerful, with clear pick definition and minimal ambience.",
   chain: {

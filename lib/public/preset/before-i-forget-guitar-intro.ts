@@ -12,7 +12,6 @@ import slipknot from "lib/public/artist/slipknot";
 
 const preset: Preset = {
   id: "gen_meftu2kp_9tm4qgcd9",
-  title: "Slipknot Before I Forget Intro\n",
   description:
     "Aggressive, tight, percussive, mid-heavy with pronounced attack, thick low end, and controlled high frequencies. Slightly scooped mids for clarity, but enough presence to cut through. High gain, minimal noise, dry and direct with little ambience.",
   chain: {

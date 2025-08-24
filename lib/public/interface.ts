@@ -2,7 +2,6 @@ import { Chain } from "lib/core/interface";
 
 export interface Preset {
   id: string;
-  title: string;
   origin: {
     artist: Artist;
     song: string;

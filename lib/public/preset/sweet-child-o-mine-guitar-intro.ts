@@ -12,7 +12,6 @@ import gunsAndRoses from "lib/public/artist/guns-and-roses";
 
 const preset: Preset = {
   id: "gen_meh7c8l4_gf67b392l",
-  title: "Guns and roses sweet child o mine intro\n",
   description:
     "Bright, jangly, articulate, with a singing sustain and mild overdrive. Clear note separation, chimey highs, and a slightly scooped midrange. Not overly aggressive, but with enough bite to cut through the mix.",
   chain: {

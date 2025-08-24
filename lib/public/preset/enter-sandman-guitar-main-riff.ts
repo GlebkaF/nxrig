@@ -12,7 +12,6 @@ import metallica from "lib/public/artist/metallica";
 
 const preset: Preset = {
   id: "gen_meh7i6j2_8cr4dyzia",
-  title: "Metallica Enter Sandman\n Main Riff",
   description:
     "Punchy, aggressive, tight palm-muted chugs with pronounced midrange, moderate high-end clarity, and strong low-end presence. The tone is saturated but not overly compressed, with percussive attack and moderate sustain.",
   chain: {

@@ -12,7 +12,6 @@ import ledZeppelin from "lib/public/artist/led-zeppelin";
 
 const preset: Preset = {
   id: "gen_meh6v9ds_y8jhmhs8n",
-  title: "Led Zeppelin Stairway to Heaven Intro",
   description:
     "Delicate, shimmering, clean tone with warmth and clarity. High dynamics for expressive fingerpicking, with a smooth, airy presence. No distortion or aggressive attack; the sound is intimate and natural.",
   chain: {

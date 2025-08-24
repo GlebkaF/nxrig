@@ -12,7 +12,6 @@ import nirvana from "lib/public/artist/nirvana";
 
 const preset: Preset = {
   id: "gen_menvyq0h_j1ohwnij6",
-  title: "Nirvana Come As You Are Intro",
   description:
     "Clean, watery, slightly dark and chorus-heavy tone with moderate sustain. The sound is mellow, lacks high-end brightness, and has a swirling, modulated character. Not aggressive or compressed; has a laid-back, loose feel.",
   chain: {
