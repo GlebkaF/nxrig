@@ -107,6 +107,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "humbucker",
+    tone: 10,
+    position: "neck",
+  },
   slug: "sweet-child-o-mine-guitar-intro",
   origin: {
     artist: gunsAndRoses,

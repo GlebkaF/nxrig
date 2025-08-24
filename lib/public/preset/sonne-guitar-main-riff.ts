@@ -102,6 +102,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "humbucker",
+    tone: 10,
+    position: "bridge",
+  },
   slug: "sonne-guitar-main-riff",
   origin: {
     artist: rammstein,

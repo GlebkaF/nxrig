@@ -103,6 +103,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "humbucker",
+    tone: 10,
+    position: "bridge",
+  },
   slug: "back-in-black-guitar-intro",
   origin: {
     artist: acDc,

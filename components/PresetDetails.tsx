@@ -36,15 +36,23 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
           <div className="flex gap-8 md:items-start flex-col-reverse items-center md:flex-row">
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 mb-8 border border-white/10">
               <h2 className="text-2xl font-semibold mb-4 text-left">
-                Patch Details
+                Preset Details
               </h2>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 <li>
                   <strong>Inspired by:</strong> {preset.origin.artist.title} –{" "}
                   {preset.origin.song}
                 </li>
                 <li>
                   <strong>Song part:</strong> {preset.origin.part}
+                </li>
+                <li>
+                  <strong>Recommended pickup:</strong>{" "}
+                  {preset.pickup.type.charAt(0).toUpperCase() +
+                    preset.pickup.type.slice(1)}{" "}
+                  {preset.pickup.position.charAt(0).toUpperCase() +
+                    preset.pickup.position.slice(1)}
+                  , tone {preset.pickup.tone}
                 </li>
                 <li className="pt-4 text-gray-300">{preset.description}</li>
               </ul>

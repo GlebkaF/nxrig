@@ -107,6 +107,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "humbucker",
+    tone: 10,
+    position: "bridge",
+  },
   slug: "before-i-forget-guitar-intro",
   origin: {
     artist: slipknot,

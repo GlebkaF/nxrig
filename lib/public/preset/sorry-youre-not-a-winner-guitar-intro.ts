@@ -102,6 +102,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "humbucker",
+    tone: 10,
+    position: "bridge",
+  },
   slug: "sorry-youre-not-a-winner-guitar-intro",
   origin: {
     artist: enterShikari,

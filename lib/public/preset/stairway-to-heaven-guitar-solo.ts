@@ -106,6 +106,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "humbucker",
+    tone: 7,
+    position: "neck",
+  },
   slug: "stairway-to-heaven-guitar-solo",
   origin: {
     artist: ledZeppelin,

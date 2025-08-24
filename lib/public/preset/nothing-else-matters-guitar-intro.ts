@@ -100,6 +100,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "single",
+    tone: 7,
+    position: "neck",
+  },
   slug: "nothing-else-matters-guitar-intro",
   origin: {
     artist: metallica,
