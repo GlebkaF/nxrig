@@ -1,4 +1,4 @@
-# Nux Mp3 Preset Generator
+# Nux Mp3 Preset Generator!
 
 https://nxrig.com
 
