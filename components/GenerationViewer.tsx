@@ -263,7 +263,7 @@ export function GenerationViewer({
                     void (async (): Promise<void> => {
                       try {
                         const response = await fetch(
-                          `/api/generation/${generation.id}/update-status`,
+                          `/api/generation/${generation.id}/update-status/`,
                           {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
