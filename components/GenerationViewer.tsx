@@ -103,7 +103,7 @@ export function GenerationViewer({
     setTuneError("");
     try {
       const response = await fetch(
-        `/api/generation/${generation.id}/fine-tune`,
+        `/api/generation/${generation.id}/fine-tune/`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -145,7 +145,7 @@ export function GenerationViewer({
                     void (async (): Promise<void> => {
                       try {
                         const response = await fetch(
-                          `/api/generation/${generation.id}/delete`,
+                          `/api/generation/${generation.id}/delete/`,
                           {
                             method: "DELETE",
                           }
