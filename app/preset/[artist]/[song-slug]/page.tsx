@@ -108,7 +108,7 @@ export default async function PresetPage({ params }: PresetPageProps) {
           <RelatedPresets
             title={`More presets by ${preset.origin.artist.title}`}
             presets={presets.filter(
-              (p) => p.origin.artist.slug === preset.origin.artist.slug
+              (p) => p.origin.artist.slug === preset.origin.artist.slug,
             )}
             currentPresetId={preset.id}
           />
@@ -118,11 +118,11 @@ export default async function PresetPage({ params }: PresetPageProps) {
         <div className="container mx-auto">
           <p className="text-gray-300">
             This patch for {preset.origin.song} {preset.origin.part} by{" "}
-            {preset.origin.artist.title} is designed for the NUX Mighty Plug
-            Pro. It recreates the original tone with authentic dynamics, perfect
-            for practicing the song or performing live. Download the patch, load
-            it into your device, and play with the legendary{" "}
-            {preset.origin.artist.title} sound.
+            {preset.origin.artist.title} is designed for the NUX Mighty Plug Pro
+            and NUX Mighty Space. It recreates the original tone with authentic
+            dynamics, perfect for practicing the song or performing live.
+            Download the patch, load it into your device, and play with the
+            legendary {preset.origin.artist.title} sound.
           </p>
         </div>
       </Footer>
