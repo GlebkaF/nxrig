@@ -39,7 +39,7 @@ export function GeneratorForm(): React.ReactElement {
       };
 
       // Перенаправляем на страницу с результатом генерации
-      router.push(`/generation/${data.generationId}`);
+      router.push(`/admin/generation/${data.generationId}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Произошла ошибка");
       setIsLoading(false);

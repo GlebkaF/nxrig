@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import { generationDb } from "../../../../../lib/jsondb";
-
 // Исключаем этот API роут из статической генерации
 export function generateStaticParams() {
-  return [];
+  return [{ id: "this-is-a-dummy-id-for-static-build" }];
 }
 
 export async function DELETE(

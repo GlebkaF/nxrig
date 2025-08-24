@@ -2,10 +2,6 @@ import { Metadata } from "next";
 import Header from "../../../components/Header";
 import { GeneratorForm } from "../../../components/GeneratorForm";
 
-export function generateStaticParams() {
-  return [];
-}
-
 export const metadata: Metadata = {
   title: "AI Chain Generator",
   description: "Создайте идеальный чейн эффектов с помощью AI",

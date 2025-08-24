@@ -8,6 +8,11 @@ interface GenerationPageProps {
   };
 }
 
+// Исключаем этот API роут из статической генерации
+export function generateStaticParams() {
+  return [{ id: "this-is-a-dummy-id-for-static-build" }];
+}
+
 export async function generateMetadata({
   params,
 }: GenerationPageProps): Promise<Metadata> {
@@ -24,18 +29,6 @@ export async function generateMetadata({
     title: `Генерация ${generation.id} | Guitar Chain Generator`,
     description: `Генерация гитарной цепочки: ${generation.proDescription.genre} - ${generation.proDescription.sound_description}`,
   };
-}
-
-export async function generateStaticParams() {
-  try {
-    const generations = await generationDb.getAllGenerations();
-    return generations.map((gen) => ({
-      id: gen.id,
-    }));
-  } catch (error) {
-    console.error("Error fetching generations for paths:", error);
-    return [];
-  }
 }
 
 async function getGeneration(

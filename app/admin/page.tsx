@@ -3,10 +3,6 @@ import Link from "next/link";
 import Header from "../../components/Header";
 import { GenerationsList } from "../../components/GenerationsList";
 
-export function generateStaticParams() {
-  return [];
-}
-
 export const metadata: Metadata = {
   title: "Guitar Chain Generator | Каталог генераций",
   description: "Каталог всех сгенерированных гитарных цепочек эффектов",

@@ -226,7 +226,7 @@ export function GenerationsList(): React.ReactElement {
 
                 {/* Кнопка для перехода к детальной странице */}
                 <Link
-                  href={`/generation/${generation.id}`}
+                  href={`/admin/generation/${generation.id}`}
                   className="block w-full text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-colors"
                 >
                   Подробнее

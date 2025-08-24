@@ -2,10 +2,9 @@ import { NextResponse } from "next/server";
 import { generationDb, type GenerationRecord } from "../../../../../lib/jsondb";
 
 import { createFineTuner } from "../../../../../lib/ai-generator/fine-tuner";
-
 // Исключаем этот API роут из статической генерации
 export function generateStaticParams() {
-  return [];
+  return [{ id: "this-is-a-dummy-id-for-static-build" }];
 }
 
 export async function POST(
