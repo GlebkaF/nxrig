@@ -17,11 +17,22 @@ interface ArtistPageProps {
 export async function generateMetadata({
   params,
 }: ArtistPageProps): Promise<Metadata> {
-  const artistName = params.artist.replace(/-/g, " ").toUpperCase();
+  const artistSlug = params.artist;
+  const artistName = artistSlug.replace(/-/g, " ").toUpperCase();
+
+  // Находим пресеты артиста для получения его описания
+  const artistPresets = presets.filter(
+    (preset) => preset.origin.artist.slug === artistSlug,
+  );
+
+  const firstPreset = artistPresets[0];
+  const artistDescription =
+    firstPreset?.origin.artist.description ??
+    `Download free NUX Mighty Plug Pro and Mighty Space presets for ${artistName}. Each preset is carefully crafted to match the original guitar tones and fully compatible with both devices.`;
 
   return {
     title: `${artistName} - Guitar Presets for NUX Mighty Plug Pro & Mighty Space`,
-    description: `Download free NUX Mighty Plug Pro and Mighty Space presets for ${artistName}. Each preset is carefully crafted to match the original guitar tones and fully compatible with both devices.`,
+    description: artistDescription,
   };
 }
 
@@ -37,7 +48,7 @@ export default function ArtistPage({ params }: ArtistPageProps): ReactElement {
   const artistName = artistSlug.replace(/-/g, " ").toUpperCase();
 
   const artistPresets = presets.filter(
-    (preset) => preset.origin.artist.slug === artistSlug
+    (preset) => preset.origin.artist.slug === artistSlug,
   );
 
   if (artistPresets.length === 0) {
@@ -65,11 +76,19 @@ export default function ArtistPage({ params }: ArtistPageProps): ReactElement {
     );
   }
 
+  const firstPreset = artistPresets[0];
+  const artistDescription =
+    firstPreset?.origin.artist.description ?? artistName;
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Header />
       <main className="flex-grow">
-        <ArtistPresets artist={artistName} presets={artistPresets} />
+        <ArtistPresets
+          artist={artistName}
+          presets={artistPresets}
+          description={artistDescription}
+        />
       </main>
       <Footer>
         <div className="container mx-auto px-4">

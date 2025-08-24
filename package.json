@@ -8,7 +8,8 @@
     "test": "vitest run",
     "test:watch": "vitest watch",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
     "https-proxy-agent": "^7.0.6",
@@ -36,6 +37,8 @@
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
     "pngjs": "^7.0.0",
     "postcss": "^8.4.31",
     "prettier": "^3.6.2",
@@ -44,5 +47,14 @@
     "typescript": "^5.9.2",
     "vitest": "^2.0.5"
   },
-  "type": "module"
+  "type": "module",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
+  }
 }
