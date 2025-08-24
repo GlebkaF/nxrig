@@ -15,6 +15,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const isProduction = process.env.NODE_ENV === "production";
+
   return (
     <html lang="en">
       <head>
@@ -69,8 +71,8 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
-        <GoogleTagManager />
-        <YandexMetrika />
+        {isProduction && <GoogleTagManager />}
+        {isProduction && <YandexMetrika />}
         {children}
       </body>
     </html>
