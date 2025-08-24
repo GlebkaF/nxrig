@@ -54,6 +54,19 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
                     preset.pickup.position.slice(1)}
                   , tone {preset.pickup.tone}
                 </li>
+                {preset.tabsUrl && (
+                  <li>
+                    <strong>Tab:</strong>{" "}
+                    <a
+                      href={preset.tabsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-400 hover:text-pink-300 transition-colors underline"
+                    >
+                      Open Songsterr
+                    </a>
+                  </li>
+                )}
                 <li className="pt-4 text-gray-300">{preset.description}</li>
               </ul>
             </div>

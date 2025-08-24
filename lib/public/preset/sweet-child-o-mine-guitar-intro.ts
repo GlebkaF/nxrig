@@ -113,6 +113,8 @@ const preset: Preset = {
     position: "neck",
   },
   slug: "sweet-child-o-mine-guitar-intro",
+  tabsUrl:
+    "https://www.songsterr.com/a/wsa/guns-n-roses-sweet-child-o-mine-tab-s23",
   origin: {
     artist: gunsAndRoses,
     song: "Sweet Child o Mine",

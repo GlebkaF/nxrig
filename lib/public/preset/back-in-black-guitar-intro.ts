@@ -109,6 +109,7 @@ const preset: Preset = {
     position: "bridge",
   },
   slug: "back-in-black-guitar-intro",
+  tabsUrl: "https://www.songsterr.com/a/wsa/ac-dc-back-in-black-tab-s1024",
   origin: {
     artist: acDc,
     song: "Back in Black",

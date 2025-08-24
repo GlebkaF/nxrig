@@ -120,6 +120,8 @@ const preset: Preset = {
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/en/2/25/Bullet_for_My_Valentine_-_Waking_The_Demon.jpg",
   },
+  tabsUrl:
+    "https://www.songsterr.com/a/wsa/bullet-for-my-valentine-waking-the-demon-tab-s23507",
 };
 
 export default preset;

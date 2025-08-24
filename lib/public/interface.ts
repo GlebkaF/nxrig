@@ -12,6 +12,7 @@ export interface Preset {
   chain: Chain;
   pickup: Pickup;
   slug: string;
+  tabsUrl?: string;
 }
 
 export interface Artist {

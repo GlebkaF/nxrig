@@ -115,6 +115,8 @@ const preset: Preset = {
     position: "bridge",
   },
   slug: "master-of-puppets-guitar-main-riff",
+  tabsUrl:
+    "https://www.songsterr.com/a/wsa/metallica-master-of-puppets-tab-s455118t3",
   origin: {
     artist: metallica,
     song: "Master Of Puppets",

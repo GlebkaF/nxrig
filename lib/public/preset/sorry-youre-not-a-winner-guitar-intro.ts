@@ -115,6 +115,8 @@ const preset: Preset = {
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/en/6/6e/Taketotheskies2.jpg",
   },
+  tabsUrl:
+    "https://www.songsterr.com/a/wsa/enter-shikari-sorry-youre-not-a-winner-tab-s34028",
 };
 
 export default preset;

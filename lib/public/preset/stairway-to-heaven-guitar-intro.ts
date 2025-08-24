@@ -106,6 +106,8 @@ const preset: Preset = {
     position: "neck",
   },
   slug: "stairway-to-heaven-guitar-intro",
+  tabsUrl:
+    "https://www.songsterr.com/a/wsa/led-zeppelin-stairway-to-heaven-tab-s27",
   origin: {
     artist: ledZeppelin,
     song: "Stairway to Heaven",

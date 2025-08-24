@@ -120,6 +120,7 @@ const preset: Preset = {
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/en/e/e9/Slipknot_-_Vol._3-_%28The_Subliminal_Verses%29.jpg",
   },
+  tabsUrl: "https://www.songsterr.com/a/wsa/slipknot-before-i-forget-tab-s1379",
 };
 
 export default preset;

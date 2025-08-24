@@ -112,6 +112,8 @@ const preset: Preset = {
     position: "bridge",
   },
   slug: "crazy-train-guitar-intro",
+  tabsUrl:
+    "https://www.songsterr.com/a/wsa/ozzy-osbourne-crazy-train-tab-s61178",
   origin: {
     artist: ozzyOsborn,
     song: "Crazy Train",

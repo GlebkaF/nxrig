@@ -105,6 +105,7 @@ const preset: Preset = {
     position: "neck",
   },
   slug: "come-as-you-are-guitar-intro",
+  tabsUrl: "https://www.songsterr.com/a/wsa/nirvana-come-as-you-are-tab-s14",
   origin: {
     artist: nirvana,
     song: "Come As You Are",

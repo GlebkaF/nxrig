@@ -114,6 +114,7 @@ const preset: Preset = {
     part: "Main Riff",
     imageUrl: "https://upload.wikimedia.org/wikipedia/en/4/41/Sonnesingle.jpg",
   },
+  tabsUrl: "https://www.songsterr.com/a/wsa/rammstein-sonne-tab-s51438",
 };
 
 export default preset;

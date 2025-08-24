@@ -119,6 +119,8 @@ const preset: Preset = {
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/commons/4/4b/Stairway_to_Heaven_by_Led_Zeppelin_US_promotional_single.png",
   },
+  tabsUrl:
+    "https://www.songsterr.com/a/wsa/led-zeppelin-stairway-to-heaven-tab-s27t4",
 };
 
 export default preset;

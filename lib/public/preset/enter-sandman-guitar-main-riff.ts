@@ -113,6 +113,7 @@ const preset: Preset = {
     position: "bridge",
   },
   slug: "enter-sandman-guitar-main-riff",
+  tabsUrl: "https://www.songsterr.com/a/wsa/metallica-enter-sandman-tab-s19",
   origin: {
     artist: metallica,
     song: "Enter Sandman",

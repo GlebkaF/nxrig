@@ -114,6 +114,8 @@ const preset: Preset = {
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/en/e/e4/Skynyrd-Sweet-Home-Alabama.jpg",
   },
+  tabsUrl:
+    "https://www.songsterr.com/a/wsa/lynyrd-skynyrd-sweet-home-alabama-tab-s58984",
 };
 
 export default preset;

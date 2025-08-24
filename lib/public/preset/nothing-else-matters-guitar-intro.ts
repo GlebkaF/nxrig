@@ -106,6 +106,8 @@ const preset: Preset = {
     position: "neck",
   },
   slug: "nothing-else-matters-guitar-intro",
+  tabsUrl:
+    "https://www.songsterr.com/a/wsa/metallica-nothing-else-matters-tab-s439171",
   origin: {
     artist: metallica,
     song: "Nothing Else Matters",
