@@ -106,6 +106,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "humbucker",
+    tone: 10,
+    position: "bridge",
+  },
   slug: "crazy-train-guitar-intro",
   origin: {
     artist: ozzyOsborn,

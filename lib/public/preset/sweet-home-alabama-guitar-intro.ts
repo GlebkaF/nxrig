@@ -101,6 +101,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "single",
+    tone: 8,
+    position: "bridge",
+  },
   slug: "sweet-home-alabama-guitar-intro",
   origin: {
     artist: lynyrdSkynyrd,

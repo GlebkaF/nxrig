@@ -109,6 +109,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "humbucker",
+    tone: 10,
+    position: "bridge",
+  },
   slug: "master-of-puppets-guitar-main-riff",
   origin: {
     artist: metallica,

@@ -107,6 +107,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "humbucker",
+    tone: 10,
+    position: "bridge",
+  },
   slug: "enter-sandman-guitar-main-riff",
   origin: {
     artist: metallica,

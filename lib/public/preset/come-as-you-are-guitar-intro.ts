@@ -99,6 +99,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "single",
+    tone: 4,
+    position: "neck",
+  },
   slug: "come-as-you-are-guitar-intro",
   origin: {
     artist: nirvana,

@@ -100,6 +100,11 @@ const preset: Preset = {
       },
     },
   },
+  pickup: {
+    type: "single",
+    tone: 10,
+    position: "neck",
+  },
   slug: "stairway-to-heaven-guitar-intro",
   origin: {
     artist: ledZeppelin,
