@@ -22,7 +22,7 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
           href={createArtistLink(preset)}
           className="text-pink-400 hover:text-pink-300 transition-colors"
         >
-          {preset.origin.artist}
+          {preset.origin.artist.title}
         </Link>{" "}
         – {preset.origin.song} {preset.origin.part} Patch for NUX Mighty Devices
       </h1>
@@ -40,7 +40,7 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
               </h2>
               <ul className="space-y-2">
                 <li>
-                  <strong>Inspired by:</strong> {preset.origin.artist} –{" "}
+                  <strong>Inspired by:</strong> {preset.origin.artist.title} –{" "}
                   {preset.origin.song}
                 </li>
                 <li>
@@ -70,8 +70,8 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
                 MightyApp.
               </li>
               <li>
-                Play along with {preset.origin.artist} and enjoy the authentic
-                tone.
+                Play along with {preset.origin.artist.title} and enjoy the
+                authentic tone.
               </li>
             </ol>
           </div>
@@ -87,7 +87,7 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
 
                   const element = document.createElement("a");
                   element.href = URL.createObjectURL(blob);
-                  element.download = `${preset.origin.artist} - ${preset.origin.song} ${preset.origin.part}.png`;
+                  element.download = `${preset.origin.artist.title} - ${preset.origin.song} ${preset.origin.part}.png`;
                   document.body.appendChild(element);
                   element.click();
                   document.body.removeChild(element);

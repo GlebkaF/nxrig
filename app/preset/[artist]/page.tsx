@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { presets } from "lib/public/presets";
 import { ArtistPresets } from "components/ArtistPresets";
-import { createSlug } from "lib/utils/create-slug";
+
 import Header from "components/Header";
 import Footer from "components/Footer";
 import { ReactElement } from "react";
@@ -26,9 +26,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<{ artist: string }[]> {
-  const artistSet = new Set(
-    presets.map((preset) => createSlug(preset.origin.artist))
-  );
+  const artistSet = new Set(presets.map((preset) => preset.origin.artist.slug));
   return Array.from(artistSet).map((artist) => ({
     artist,
   }));
@@ -39,7 +37,7 @@ export default function ArtistPage({ params }: ArtistPageProps): ReactElement {
   const artistName = artistSlug.replace(/-/g, " ").toUpperCase();
 
   const artistPresets = presets.filter(
-    (preset) => createSlug(preset.origin.artist) === artistSlug
+    (preset) => preset.origin.artist.slug === artistSlug
   );
 
   if (artistPresets.length === 0) {

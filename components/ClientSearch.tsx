@@ -12,7 +12,9 @@ export default function ClientSearch(): React.ReactElement {
     .filter(
       (preset) =>
         preset.origin.song.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        preset.origin.artist.toLowerCase().includes(searchQuery.toLowerCase())
+        preset.origin.artist.title
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase())
     )
     .sort((a, b) => a.origin.song.localeCompare(b.origin.song));
 

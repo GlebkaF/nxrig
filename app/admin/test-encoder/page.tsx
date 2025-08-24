@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 import { EncoderTester } from "../../../components/EncoderTester";
 
+export function generateStaticParams() {
+  return [];
+}
+
 export const metadata: Metadata = {
   title: "Interactive Chain Editor",
   description:

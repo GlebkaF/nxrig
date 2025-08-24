@@ -45,7 +45,7 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
             <div className="text-gray-300">
               <div className="text-lg font-medium">{preset.origin.song}</div>
               <div className="text-sm text-gray-400">
-                {preset.origin.artist}
+                {preset.origin.artist.title}
               </div>
               {preset.origin.part && (
                 <div className="text-xs text-gray-500 mt-1">

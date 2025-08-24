@@ -3,6 +3,11 @@ import { generationDb, type GenerationRecord } from "../../../../../lib/jsondb";
 
 import { createFineTuner } from "../../../../../lib/ai-generator/fine-tuner";
 
+// Исключаем этот API роут из статической генерации
+export function generateStaticParams() {
+  return [];
+}
+
 export async function POST(
   request: Request,
   { params }: { params: { id: string } }

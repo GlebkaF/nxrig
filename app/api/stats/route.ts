@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import { generationDb, type GenerationStats } from "../../../lib/jsondb";
 
+// Исключаем этот API роут из статической генерации
+export function generateStaticParams() {
+  return [];
+}
+
 export async function GET(): Promise<
   NextResponse<GenerationStats | { error: string }>
 > {

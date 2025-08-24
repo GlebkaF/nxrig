@@ -3,6 +3,11 @@ import { generationDb } from "../../../../../lib/jsondb";
 
 import { PresetStatus } from "../../../../../lib/jsondb/types";
 
+// Исключаем этот API роут из статической генерации
+export function generateStaticParams() {
+  return [];
+}
+
 export async function POST(
   request: Request,
   { params }: { params: { id: string } }
