@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { generationDb, type GenerationRecord } from "../../../lib/jsondb";
-import { GenerationViewer } from "../../../components/GenerationViewer";
+import { generationDb, type GenerationRecord } from "../../../../lib/jsondb";
+import { GenerationViewer } from "../../../../components/GenerationViewer";
 
 interface GenerationPageProps {
   params: {
@@ -32,7 +32,7 @@ export async function generateMetadata({
 }
 
 async function getGeneration(
-  id: string
+  id: string,
 ): Promise<{ generation: GenerationRecord | null; error?: string }> {
   if (!id) {
     return {

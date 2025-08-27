@@ -1,6 +1,234 @@
 {
   "generations": [
     {
+      "timestamp": "2025-08-27T10:29:20.180Z",
+      "originalPrompt": "Deep Purple Smoke On The Water Intro\n",
+      "proDescription": {
+        "tone_title": "Smoke On The Water - Intro",
+        "genre": "Classic Rock / Hard Rock",
+        "sound_description": "Raw, mid-focused, crunchy tone with moderate gain. The sound is punchy and slightly gritty, with good note separation, minimal effects, and a vintage flavor. The attack is clear but not overly sharp, with moderate sustain and a touch of warmth.",
+        "guitar_rig_description": "Noise gate: not used (signal is clean and not heavily compressed). Compressor: not used (dynamics are natural and uncompressed). Overdrive/Distortion/Boost: mild overdrive or amp breakup for classic rock crunch, providing grit and sustain without excessive saturation. Amplifier: vintage-style British tube amp emulation, set to crunchy breakup, providing midrange emphasis and dynamic response. Cabinet: 4x12 closed-back speaker cabinet, classic rock voicing, adding weight and fullness. EQ: minimal EQ shaping; focus on maintaining mids, with some low-end roll-off for clarity. Modulation: not used. Delay: not used. Reverb: subtle spring reverb for slight spatial depth, but kept minimal to maintain punch.",
+        "references": [
+          "Deep Purple - Smoke On The Water",
+          "Led Zeppelin - Whole Lotta Love",
+          "Free - All Right Now"
+        ],
+        "song_part": "intro riff",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use a pick for strong attack; medium gauge strings recommended for punch and sustain. Playing technique: use power chords and avoid excessive palm muting for clarity. Classic rock-style amp (e.g., Marshall Plexi) is ideal."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Ibanez TS808 Tube Screamer",
+          "TC Electronic Hall of Fame Mini (Spring mode, Mix: 9 o'clock, Decay: 8 o'clock)"
+        ],
+        "amplifier": "Marshall 1959SLP Plexi Super Lead 100",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Volume I)": 6,
+            "Gain (Volume II)": 0,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 5,
+            "Master": 4
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 5,
+            "Level": 7
+          },
+          "reverb": {
+            "Mix": 9,
+            "Decay": 8
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 32,
+            "Tone": 45
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 58,
+            "Master": 62,
+            "Bass": 44,
+            "Middle": 64,
+            "Treble": 53,
+            "Presence": 48
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 54,
+            "HighCut": 50
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 24,
+            "Decay": 34
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 32,
+                "Tone": 45
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 58,
+                "Master": 62,
+                "Bass": 44,
+                "Middle": 64,
+                "Treble": 53,
+                "Presence": 48
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 54,
+                "HighCut": 50
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 24,
+                "Decay": 34
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Deep Purple Smoke On The Water Intro\n",
+          "timestamp": "2025-08-27T10:29:20.180Z"
+        }
+      ],
+      "id": "gen_metu1xa2_0wjxdl9lk",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-08-24T06:14:31.470Z",
       "originalPrompt": "test",
       "proDescription": {
@@ -507,10 +735,7 @@
         "additional_info": "Use a Fender Jaguar or similar guitar with neck pickup for warmth and darkness. Play with fingers or a pick for softer attack. Heavier string gauge helps maintain tuning stability with chorus effect."
       },
       "realRig": {
-        "pedalboard": [
-          "Boss CE-2 Chorus",
-          "Boss RV-6 Reverb"
-        ],
+        "pedalboard": ["Boss CE-2 Chorus", "Boss RV-6 Reverb"],
         "amplifier": "Fender Twin Reverb (’65 Reissue)",
         "cabinet": "Fender Twin Reverb 2x12 combo (Jensen C12K 12\" speakers)",
         "settings": {
@@ -1925,9 +2150,7 @@
         "additional_info": "Use a Gibson-style guitar (SG or Les Paul) with medium-gauge strings (e.g., .010–.046); pick attack is important for clarity; keep amp volume high for natural breakup; avoid excessive gain to preserve note definition."
       },
       "realRig": {
-        "pedalboard": [
-          "Xotic RC Booster V2"
-        ],
+        "pedalboard": ["Xotic RC Booster V2"],
         "amplifier": "Marshall 1959SLP Plexi Super Lead 100W",
         "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback (25W, 4x12 configuration)",
         "settings": {
@@ -2402,9 +2625,7 @@
         "additional_info": "Use a Fender Jaguar or similar guitar with humbuckers, heavy strumming, and aggressive attack. Medium to heavy gauge strings recommended. Play with a medium pick for crisp attack. Cobain’s original setup used a Boss DS-1/DS-2 into a clean-ish amp (often a Fender or Mesa Boogie preamp), but the pedal provides most of the distortion. Palm muting between chord hits is crucial for the dynamic chug."
       },
       "realRig": {
-        "pedalboard": [
-          "Boss DS-1 Distortion"
-        ],
+        "pedalboard": ["Boss DS-1 Distortion"],
         "amplifier": "Fender Twin Reverb (Silverface, late 70s)",
         "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
         "settings": {
@@ -4930,10 +5151,7 @@
         "additional_info": "Use a hard pick and aggressive palm-muting for definition. Medium gauge (10-46 or higher) strings. Rory often uses a Fender Telecaster with a humbucker in the bridge position. Keep effects and ambience minimal for precision."
       },
       "realRig": {
-        "pedalboard": [
-          "Boss NS-2 Noise Suppressor",
-          "ProCo Rat 2 Distortion"
-        ],
+        "pedalboard": ["Boss NS-2 Noise Suppressor", "ProCo Rat 2 Distortion"],
         "amplifier": "Peavey 6505+ Head",
         "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
         "settings": {
@@ -6716,6 +6934,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-08-24T06:14:31.478Z"
+    "lastUpdated": "2025-08-27T10:29:20.188Z"
   }
 }
