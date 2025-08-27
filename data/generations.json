@@ -223,170 +223,7 @@
           },
           "prompt": "Deep Purple Smoke On The Water Intro\n",
           "timestamp": "2025-08-27T10:29:20.180Z"
-        }
-      ],
-      "id": "gen_metu1xa2_0wjxdl9lk",
-      "status": "draft"
-    },
-    {
-      "timestamp": "2025-08-24T06:14:31.470Z",
-      "originalPrompt": "test",
-      "proDescription": {
-        "tone_title": "Test Tone",
-        "genre": "Generic Rock",
-        "sound_description": "A balanced, versatile guitar tone with moderate gain, clear attack, and a touch of warmth. Not overly bright or dark, suitable for general rhythm or lead work.",
-        "guitar_rig_description": "Noise gate: not used. Compressor: used subtly to even out dynamics and add sustain. Overdrive/distortion/boost: a mild overdrive for added grit and warmth. Amplifier: mid-gain tube amp model for punch and clarity. Cabinet: matched 4x12 cabinet for fullness and projection. EQ: used to shape mids and tame any excessive highs or lows. Modulation: not used. Delay: not used. Reverb: used lightly for depth and space.",
-        "references": [
-          "Foo Fighters - Everlong",
-          "Green Day - Basket Case",
-          "Paramore - Misery Business"
-        ],
-        "song_part": "general rhythm guitar",
-        "preferred_pickup": "bridge humbucker, tone = 7",
-        "additional_info": "Standard tuning, medium gauge strings, pick attack recommended for clarity."
-      },
-      "realRig": {
-        "pedalboard": [
-          "Xotic SP Compressor",
-          "Ibanez TS9 Tube Screamer",
-          "MXR 10-Band EQ",
-          "TC Electronic Hall of Fame Mini Reverb"
-        ],
-        "amplifier": "Mesa/Boogie Dual Rectifier Solo Head (Orange Channel, Vintage Mode)",
-        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 Cabinet with Celestion Vintage 30 speakers",
-        "settings": {
-          "amp": {
-            "Gain": 4.5,
-            "Bass": 5,
-            "Middle": 6,
-            "Treble": 5,
-            "Presence": 4,
-            "Master": 4
-          },
-          "compressor": {
-            "Blend": 10,
-            "Volume": 11,
-            "Compression": "Lo"
-          },
-          "overdrive": {
-            "Drive": 3.5,
-            "Tone": 5.5,
-            "Level": 7.5
-          },
-          "eq": {
-            "31.25Hz": "-2dB",
-            "62.5Hz": "0dB",
-            "125Hz": "+1dB",
-            "250Hz": "+2dB",
-            "500Hz": "+2dB",
-            "1kHz": "0dB",
-            "2kHz": "+1dB",
-            "4kHz": "0dB",
-            "8kHz": "-1dB",
-            "16kHz": "-2dB"
-          },
-          "reverb": {
-            "Level": 9,
-            "Decay": "short",
-            "Tone": "neutral"
-          }
-        }
-      },
-      "finalChain": {
-        "noisegate": {
-          "type": "Noise Gate",
-          "enabled": false,
-          "params": {
-            "Sensitivity": 50,
-            "Decay": 50
-          }
         },
-        "compressor": {
-          "type": "K Comp",
-          "enabled": true,
-          "params": {
-            "Level": 52,
-            "Sustain": 44,
-            "Clipping": 40
-          }
-        },
-        "modulation": {
-          "type": "CE-1",
-          "enabled": false,
-          "params": {
-            "Rate": 50,
-            "Depth": 50,
-            "Intensity": 50
-          }
-        },
-        "effect": {
-          "type": "T Screamer",
-          "enabled": true,
-          "params": {
-            "Level": 52,
-            "Drive": 35,
-            "Tone": 46
-          }
-        },
-        "amplifier": {
-          "type": "Dual Rect",
-          "enabled": true,
-          "params": {
-            "Gain": 48,
-            "Master": 55,
-            "Bass": 54,
-            "Middle": 58,
-            "Treble": 48,
-            "Presence": 48
-          }
-        },
-        "cabinet": {
-          "type": "RECT 412",
-          "enabled": true,
-          "params": {
-            "Level": 50,
-            "LowCut": 54,
-            "HighCut": 47
-          }
-        },
-        "eq": {
-          "type": "10-Band",
-          "enabled": true,
-          "params": {
-            "31": 46,
-            "62": 48,
-            "125": 53,
-            "250": 53,
-            "500": 54,
-            "1000": 56,
-            "2000": 57,
-            "4000": 54,
-            "8000": 47,
-            "16000": 44,
-            "Vol": 50
-          }
-        },
-        "reverb": {
-          "type": "Hall",
-          "enabled": true,
-          "params": {
-            "Level": 34,
-            "Decay": 38,
-            "PreDelay": 28,
-            "Liveliness": 45
-          }
-        },
-        "delay": {
-          "type": "Analog Delay",
-          "enabled": false,
-          "params": {
-            "Intensity": 50,
-            "Rate": 50,
-            "Echo": 50
-          }
-        }
-      },
-      "versions": [
         {
           "chain": {
             "noisegate": {
@@ -399,11 +236,11 @@
             },
             "compressor": {
               "type": "K Comp",
-              "enabled": true,
+              "enabled": false,
               "params": {
-                "Level": 52,
-                "Sustain": 44,
-                "Clipping": 40
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
               }
             },
             "modulation": {
@@ -419,57 +256,50 @@
               "type": "T Screamer",
               "enabled": true,
               "params": {
-                "Level": 52,
-                "Drive": 35,
-                "Tone": 46
+                "Level": 55,
+                "Drive": 32,
+                "Tone": 48
               }
             },
             "amplifier": {
-              "type": "Dual Rect",
+              "type": "Plexi 100",
               "enabled": true,
               "params": {
-                "Gain": 48,
-                "Master": 55,
-                "Bass": 54,
-                "Middle": 58,
-                "Treble": 48,
-                "Presence": 48
+                "Gain": 58,
+                "Master": 62,
+                "Bass": 38,
+                "Middle": 64,
+                "Treble": 58,
+                "Presence": 54
               }
             },
             "cabinet": {
-              "type": "RECT 412",
+              "type": "M1960AX",
               "enabled": true,
               "params": {
-                "Level": 50,
-                "LowCut": 54,
-                "HighCut": 47
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 45
               }
             },
             "eq": {
-              "type": "10-Band",
-              "enabled": true,
+              "type": "6-Band",
+              "enabled": false,
               "params": {
-                "31": 46,
-                "62": 48,
-                "125": 53,
-                "250": 53,
-                "500": 54,
-                "1000": 56,
-                "2000": 57,
-                "4000": 54,
-                "8000": 47,
-                "16000": 44,
-                "Vol": 50
+                "100": 46,
+                "220": 48,
+                "500": 50,
+                "1200": 52,
+                "2600": 52,
+                "6400": 54
               }
             },
             "reverb": {
-              "type": "Hall",
+              "type": "Spring",
               "enabled": true,
               "params": {
-                "Level": 34,
-                "Decay": 38,
-                "PreDelay": 28,
-                "Liveliness": 45
+                "Level": 24,
+                "Decay": 34
               }
             },
             "delay": {
@@ -482,12 +312,12 @@
               }
             }
           },
-          "prompt": "test",
-          "timestamp": "2025-08-24T06:14:31.470Z"
+          "prompt": "Немного бубнит",
+          "timestamp": "2025-08-27T10:53:15.813Z"
         }
       ],
-      "id": "gen_mepamofp_raa15m7fu",
-      "status": "draft"
+      "id": "gen_metu1xa2_0wjxdl9lk",
+      "status": "ready"
     },
     {
       "timestamp": "2025-08-23T06:49:47.341Z",
@@ -6934,6 +6764,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-08-27T10:29:20.188Z"
+    "lastUpdated": "2025-08-27T13:36:32.525Z"
   }
 }
