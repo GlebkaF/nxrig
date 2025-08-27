@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
-import { generationDb, type GenerationRecord } from "../../../../../lib/jsondb";
+import { generationDb, type GenerationRecord } from "../../../../lib/jsondb";
 
-import { createFineTuner } from "../../../../../lib/ai-generator/fine-tuner";
+import { createFineTuner } from "../../../../lib/ai-generator/fine-tuner";
+
 // Исключаем этот API роут из статической генерации
 export function generateStaticParams() {
   return [{ id: "this-is-a-dummy-id-for-static-build" }];
@@ -9,22 +10,23 @@ export function generateStaticParams() {
 
 export async function POST(
   request: Request,
-  { params }: { params: { id: string } }
 ): Promise<NextResponse<GenerationRecord | { error: string }>> {
   try {
-    const { id } = params;
-    const { feedback } = (await request.json()) as { feedback?: string };
+    const { id, feedback } = (await request.json()) as {
+      id: string;
+      feedback: string;
+    };
 
     if (!id) {
       return NextResponse.json(
         { error: "Generation ID is required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
     if (!feedback || typeof feedback !== "string") {
       return NextResponse.json(
         { error: "Feedback is required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -32,7 +34,7 @@ export async function POST(
     if (!generation) {
       return NextResponse.json(
         { error: "Generation not found" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -67,7 +69,7 @@ export async function POST(
     console.error("Error fine-tuning generation:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

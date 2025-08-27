@@ -1,26 +1,23 @@
 import { NextResponse } from "next/server";
-import { generationDb } from "../../../../../lib/jsondb";
+import { generationDb } from "../../../../lib/jsondb";
 
-import { PresetStatus } from "../../../../../lib/jsondb/types";
+import { PresetStatus } from "../../../../lib/jsondb/types";
 
 // Исключаем этот API роут из статической генерации
 export function generateStaticParams() {
   return [{ id: "this-is-a-dummy-id-for-static-build" }];
 }
 
-export async function POST(
-  request: Request,
-  { params }: { params: { id: string } }
-): Promise<NextResponse> {
-  const { id } = params;
-  const { status } = (await request.json()) as {
+export async function POST(request: Request): Promise<NextResponse> {
+  const { id, status } = (await request.json()) as {
+    id: string;
     status: PresetStatus | undefined;
   };
 
   if (!id) {
     return NextResponse.json(
       { error: "Invalid generation ID" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -28,7 +25,7 @@ export async function POST(
   if (!status || !["draft", "ready"].includes(status)) {
     return NextResponse.json(
       { error: "Invalid status value" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -37,7 +34,7 @@ export async function POST(
     if (!generation) {
       return NextResponse.json(
         { error: "Generation not found" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -53,7 +50,7 @@ export async function POST(
     console.error("Error updating generation status:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

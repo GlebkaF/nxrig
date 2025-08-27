@@ -1,20 +1,18 @@
 import { NextResponse } from "next/server";
-import { generationDb } from "../../../../../lib/jsondb";
+import { generationDb } from "../../../../lib/jsondb";
+
 // Исключаем этот API роут из статической генерации
 export function generateStaticParams() {
   return [{ id: "this-is-a-dummy-id-for-static-build" }];
 }
 
-export async function DELETE(
-  request: Request,
-  { params }: { params: { id: string } }
-): Promise<NextResponse> {
-  const { id } = params;
+export async function DELETE(request: Request): Promise<NextResponse> {
+  const { id } = (await request.json()) as { id: string };
 
   if (!id) {
     return NextResponse.json(
       { error: "Invalid generation ID" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -24,7 +22,7 @@ export async function DELETE(
     if (!success) {
       return NextResponse.json(
         { error: "Generation not found" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -33,7 +31,7 @@ export async function DELETE(
     console.error("Error deleting generation:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

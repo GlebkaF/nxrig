@@ -47,7 +47,7 @@ export function GenerationViewer({
       (block) =>
         typeof block === "object" &&
         "enabled" in block &&
-        (block as { enabled: boolean }).enabled
+        (block as { enabled: boolean }).enabled,
     ).length;
   };
 
@@ -102,14 +102,14 @@ export function GenerationViewer({
     setIsTuning(true);
     setTuneError("");
     try {
-      const response = await fetch(
-        `/api/generation/${generation.id}/fine-tune/`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ feedback }),
-        }
-      );
+      const response = await fetch(`/api/generation/fine-tune`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: generation.id,
+          feedback,
+        }),
+      });
       if (!response.ok) {
         throw new Error(await response.text());
       }
@@ -139,17 +139,16 @@ export function GenerationViewer({
                 onClick={() => {
                   if (
                     window.confirm(
-                      "Вы уверены, что хотите удалить эту генерацию?"
+                      "Вы уверены, что хотите удалить эту генерацию?",
                     )
                   ) {
                     void (async (): Promise<void> => {
                       try {
-                        const response = await fetch(
-                          `/api/generation/${generation.id}/delete/`,
-                          {
-                            method: "DELETE",
-                          }
-                        );
+                        const response = await fetch(`/api/generation/delete`, {
+                          method: "DELETE",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ id: generation.id }),
+                        });
                         if (!response.ok) {
                           throw new Error(await response.text());
                         }
@@ -262,15 +261,17 @@ export function GenerationViewer({
                   onChange={(newValue) => {
                     void (async (): Promise<void> => {
                       try {
+                        console.log("update-status");
                         const response = await fetch(
-                          `/api/generation/${generation.id}/update-status/`,
+                          `/api/generation/update-status`,
                           {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({
+                              id: generation.id,
                               status: newValue ? "ready" : "draft",
                             }),
-                          }
+                          },
                         );
                         if (!response.ok) {
                           throw new Error(await response.text());
