@@ -26,6 +26,7 @@ export function GenerationViewer({
   const [isTuning, setIsTuning] = useState<boolean>(false);
   const [tuneError, setTuneError] = useState<string>("");
   const [selectedVersion, setSelectedVersion] = useState<number>(-1);
+  const [copySuccess, setCopySuccess] = useState<boolean>(false);
   const router = useRouter();
 
   const versions = useMemo(() => {
@@ -93,6 +94,24 @@ export function GenerationViewer({
       hour: "2-digit",
       minute: "2-digit",
     });
+  };
+
+  const handleCopyLatestChain = async (): Promise<void> => {
+    if (!versions.length) return;
+
+    try {
+      const latestVersion = versions[versions.length - 1];
+      if (!latestVersion?.chain) return;
+
+      const latestChain = JSON.stringify(latestVersion.chain, null, 2);
+      await navigator.clipboard.writeText(latestChain);
+      setCopySuccess(true);
+      setTimeout((): void => {
+        setCopySuccess(false);
+      }, 2000);
+    } catch (err) {
+      console.error("Ошибка при копировании:", err);
+    }
   };
 
   const handleFineTune = async (): Promise<void> => {
@@ -199,6 +218,17 @@ export function GenerationViewer({
                       </option>
                     ))}
                   </select>
+                  <button
+                    onClick={() => void handleCopyLatestChain()}
+                    className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
+                      copySuccess
+                        ? "bg-green-500 text-white"
+                        : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                    }`}
+                    title="Скопировать последнюю версию chain"
+                  >
+                    {copySuccess ? "Скопировано!" : "Скопировать последнюю"}
+                  </button>
                 </div>
               </div>
               <div>

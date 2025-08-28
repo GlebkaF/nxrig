@@ -12,6 +12,7 @@ import wakingTheDemonGuitarMainRiff from "./preset/waking-the-demon-guitar-main-
 import sonneGuitarMainRiff from "./preset/sonne-guitar-main-riff";
 import backInBlackGuitarIntro from "./preset/back-in-black-guitar-intro";
 import nothingElseMattersGuitarIntro from "./preset/nothing-else-matters-guitar-intro";
+import panteraFloodsIntro from "./preset/pantera-floods-intro";
 
 export const presets = [
   sweetHomeAlabamaGuitarIntro,
@@ -28,4 +29,5 @@ export const presets = [
   sonneGuitarMainRiff,
   backInBlackGuitarIntro,
   nothingElseMattersGuitarIntro,
+  panteraFloodsIntro,
 ];
