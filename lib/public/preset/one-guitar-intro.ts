@@ -8,7 +8,6 @@ import { CabinetType } from "lib/core/blocks/cabinet";
 import { EqType } from "lib/core/blocks/eq";
 import { ReverbType } from "lib/core/blocks/reverb";
 import { DelayType } from "lib/core/blocks/delay";
-import pantera from "lib/public/artist/pantera";
 import metallica from "lib/public/artist/metallica";
 
 const preset: Preset = {
@@ -18,93 +17,93 @@ const preset: Preset = {
   chain: {
     noisegate: {
       type: NoiseGateType.NoiseGate,
-        "enabled": true,
-        "params": {
-          "Sensitivity": 48,
-          "Decay": 40
-        }
+      enabled: true,
+      params: {
+        Sensitivity: 48,
+        Decay: 40,
       },
-      "compressor": {
-        "type": CompressorType.KComp,
-        "enabled": true,
-        "params": {
-          "Level": 52,
-          "Sustain": 38,
-          "Clipping": 45
-        }
+    },
+    compressor: {
+      type: CompressorType.KComp,
+      enabled: true,
+      params: {
+        Level: 52,
+        Sustain: 38,
+        Clipping: 45,
       },
-      "modulation": {
-        "type": ModulationType.CE2,
-        "enabled": true,
-        "params": {
-          "Rate": 34,
-          "Depth": 26
-        }
+    },
+    modulation: {
+      type: ModulationType.CE2,
+      enabled: true,
+      params: {
+        Rate: 34,
+        Depth: 26,
       },
-      "effect": {
-        "type": EffectType.DistortionPlus,
-        "enabled": false,
-        "params": {
-          "Output": 50,
-          "Sensitivity": 50
-        }
+    },
+    effect: {
+      type: EffectType.DistortionPlus,
+      enabled: false,
+      params: {
+        Output: 50,
+        Sensitivity: 50,
       },
-      "amplifier": {
-        "type": AmplifierType.JazzClean,
-        "enabled": true,
-        "params": {
-          "Gain": 40,
-          "Master": 60,
-          "Bass": 44,
-          "Middle": 42,
-          "Treble": 67,
-          "Bright": 63
-        }
+    },
+    amplifier: {
+      type: AmplifierType.JazzClean,
+      enabled: true,
+      params: {
+        Gain: 40,
+        Master: 60,
+        Bass: 44,
+        Middle: 42,
+        Treble: 67,
+        Bright: 63,
       },
-      "cabinet": {
-        "type": CabinetType.JZ120,
-        "enabled": true,
-        "params": {
-          "Level": 54,
-          "LowCut": 60,
-          "HighCut": 65
-        }
+    },
+    cabinet: {
+      type: CabinetType.JZ120,
+      enabled: true,
+      params: {
+        Level: 54,
+        LowCut: 60,
+        HighCut: 65,
       },
-      "eq": {
-        "type": EqType.TenBand,
-        "enabled": true,
-        "params": {
-          "31": 38,
-          "62": 40,
-          "125": 44,
-          "250": 46,
-          "500": 42,
-          "1000": 46,
-          "2000": 56,
-          "4000": 62,
-          "8000": 67,
-          "16000": 70,
-          "Vol": 50
-        }
+    },
+    eq: {
+      type: EqType.TenBand,
+      enabled: true,
+      params: {
+        "31": 38,
+        "62": 40,
+        "125": 44,
+        "250": 46,
+        "500": 42,
+        "1000": 46,
+        "2000": 56,
+        "4000": 62,
+        "8000": 67,
+        "16000": 70,
+        Vol: 50,
       },
-      "reverb": {
-        "type": ReverbType.Plate,
-        "enabled": true,
-        "params": {
-          "Level": 40,
-          "Decay": 62
-        }
+    },
+    reverb: {
+      type: ReverbType.Plate,
+      enabled: true,
+      params: {
+        Level: 40,
+        Decay: 62,
       },
-      "delay": {
-        "type": DelayType.AnalogDelay,
-        "enabled": false,
-        "params": {
-          "Intensity": 50,
-          "Rate": 50,
-          "Echo": 50
-        }
-      }
-    },  
+    },
+    delay: {
+      type: DelayType.AnalogDelay,
+      enabled: false,
+      params: {
+        Intensity: 50,
+        Rate: 50,
+        Echo: 50,
+      },
+    },
+  },
   pickup: {
     type: "single",
     tone: 8,
