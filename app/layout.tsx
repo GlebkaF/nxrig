@@ -70,13 +70,6 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* Preload критического CSS */}
-        <link
-          rel="preload"
-          href="/_next/static/css/app/layout.css"
-          as="style"
-        />
-
         {/* Preconnect для аналитики */}
         {isProduction && (
           <>
