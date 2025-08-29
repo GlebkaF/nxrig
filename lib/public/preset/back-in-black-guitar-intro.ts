@@ -114,7 +114,7 @@ const preset: Preset = {
     artist: acDc,
     song: "Back in Black",
     part: "Intro",
-    imageUrl: "/images/cover/acdc/back-in-black.png",
+    imageUrl: "/images/cover/acdc/back-in-black.webp",
   },
 };
 

@@ -28,7 +28,7 @@ export async function generateMetadata({
 
   const title = `${preset.origin.song} ${preset.origin.part} – NUX Mighty Plug Pro & Mighty Space Patch | Free Guitar Preset`;
   const description = `Play ${preset.origin.song} ${preset.origin.part} with authentic tone using this free NUX Mighty Plug Pro and Mighty Space patch. Download the guitar preset, inspired by ${preset.origin.artist.title}, and load it on your NUX Mighty device.`;
-  const imageUrl = preset.origin.imageUrl ?? "/images/cover/default-cover.png";
+  const imageUrl = preset.origin.imageUrl ?? "/images/cover/default-cover.webp";
   const imageUrlWithProtocol = imageUrl.startsWith("http")
     ? imageUrl
     : `https://nxrig.com${imageUrl}`;
@@ -108,7 +108,7 @@ export default async function PresetPage({ params }: PresetPageProps) {
           <RelatedPresets
             title={`More presets by ${preset.origin.artist.title}`}
             presets={presets.filter(
-              (p) => p.origin.artist.slug === preset.origin.artist.slug
+              (p) => p.origin.artist.slug === preset.origin.artist.slug,
             )}
             currentPresetId={preset.id}
           />

@@ -118,7 +118,7 @@ const preset: Preset = {
     artist: metallica,
     song: "Enter Sandman",
     part: "Main Riff",
-    imageUrl: "/images/cover/metallica/the-black-album.jpg",
+    imageUrl: "/images/cover/metallica/the-black-album.webp",
   },
 };
 

@@ -112,7 +112,7 @@ const preset: Preset = {
     artist: metallica,
     song: "Nothing Else Matters",
     part: "Intro",
-    imageUrl: "/images/cover/metallica/the-black-album.jpg",
+    imageUrl: "/images/cover/metallica/the-black-album.webp",
   },
 };
 

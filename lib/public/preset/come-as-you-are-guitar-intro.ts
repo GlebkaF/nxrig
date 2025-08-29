@@ -110,7 +110,7 @@ const preset: Preset = {
     artist: nirvana,
     song: "Come As You Are",
     part: "Intro",
-    imageUrl: "/images/cover/nirvana/nevermind.jpg",
+    imageUrl: "/images/cover/nirvana/nevermind.webp",
   },
 };
 

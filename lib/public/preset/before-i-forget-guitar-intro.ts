@@ -117,8 +117,7 @@ const preset: Preset = {
     artist: slipknot,
     song: "Before I Forget",
     part: "Intro",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/en/e/e9/Slipknot_-_Vol._3-_%28The_Subliminal_Verses%29.jpg",
+    imageUrl: "/images/cover/slipknot/vol-3.webp",
   },
   tabsUrl: "https://www.songsterr.com/a/wsa/slipknot-before-i-forget-tab-s1379",
 };

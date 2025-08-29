@@ -118,8 +118,7 @@ const preset: Preset = {
     artist: ozzyOsborn,
     song: "Crazy Train",
     part: "Intro",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/en/7/74/Crazy_Train_45.jpg",
+    imageUrl: "/images/cover/ozzy-osbourne/crazy-train.webp",
   },
 };
 

@@ -117,8 +117,7 @@ const preset: Preset = {
     artist: pantera,
     song: "Floods",
     part: "Outro Solo",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/ru/d/dc/PANTERA_%E2%80%94_TGST.jpg",
+    imageUrl: "/images/cover/pantera/the-great-southern-thunder.webp",
   },
 };
 

@@ -16,7 +16,7 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
   const qrCode = encodeChain(preset.chain);
 
   // Определяем фоновое изображение
-  const bgImage = preset.origin.imageUrl ?? "/images/cover/default-cover.png";
+  const bgImage = preset.origin.imageUrl ?? "/images/cover/default-cover.webp";
   return (
     <Link
       href={createPresetLink(preset)}
@@ -43,15 +43,12 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
 
           <div className="text-center md:text-left flex-grow">
             <div className="text-gray-300">
-              <div className="text-lg font-medium">{preset.origin.song}</div>
+              <div className="text-lg font-medium">
+                {preset.origin.song}&nbsp;—&nbsp;{preset.origin.part}
+              </div>
               <div className="text-sm text-gray-400">
                 {preset.origin.artist.title}
               </div>
-              {preset.origin.part && (
-                <div className="text-xs text-gray-500 mt-1">
-                  {preset.origin.part}
-                </div>
-              )}
             </div>
 
             {/* Device and Instrument Type */}

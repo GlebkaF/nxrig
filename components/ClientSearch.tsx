@@ -14,16 +14,17 @@ export default function ClientSearch(): React.ReactElement {
         preset.origin.song.toLowerCase().includes(searchQuery.toLowerCase()) ||
         preset.origin.artist.title
           .toLowerCase()
-          .includes(searchQuery.toLowerCase())
+          .includes(searchQuery.toLowerCase()) ||
+        preset.origin.part.toLowerCase().includes(searchQuery.toLowerCase()),
     )
     .sort((a, b) => a.origin.song.localeCompare(b.origin.song));
 
   const handleRequestPreset = (): void => {
     const emailSubject = encodeURIComponent(
-      publicConfig.email.subjects.presetRequest
+      publicConfig.email.subjects.presetRequest,
     );
     const emailBody = encodeURIComponent(
-      publicConfig.email.templates.presetRequest(searchQuery)
+      publicConfig.email.templates.presetRequest(searchQuery),
     );
     window.location.href = `mailto:${publicConfig.contacts.email}?subject=${emailSubject}&body=${emailBody}`;
   };
