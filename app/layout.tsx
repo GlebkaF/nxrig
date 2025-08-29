@@ -69,6 +69,26 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Preload критического CSS */}
+        <link
+          rel="preload"
+          href="/_next/static/css/app/layout.css"
+          as="style"
+        />
+
+        {/* Preconnect для аналитики */}
+        {isProduction && (
+          <>
+            <link rel="preconnect" href="https://www.googletagmanager.com" />
+            <link
+              rel="preconnect"
+              href="https://mc.yandex.ru"
+              crossOrigin="anonymous"
+            />
+            <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+          </>
+        )}
       </head>
       <body>
         {isProduction && <GoogleTagManager />}

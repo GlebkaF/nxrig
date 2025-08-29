@@ -25,9 +25,12 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
       <div className="absolute inset-0">
         <Image
           src={bgImage}
-          alt="Background"
+          alt={`${preset.origin.artist.title} - ${preset.origin.song} cover`}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority={true}
           className="object-cover opacity-30"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
       </div>
