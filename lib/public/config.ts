@@ -1,7 +1,7 @@
 export const publicConfig = {
   contacts: {
-    email: "1fokingleb+nxrig@gmail.com",
-    telegram: "https://t.me/glebkaf",
+    email: "request@nxrig.com",
+    telegram: "https://t.me/+JUGLVuLHoKgzZWZi",
   },
   email: {
     subjects: {

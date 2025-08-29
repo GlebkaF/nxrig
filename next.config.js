@@ -11,6 +11,13 @@ const nextConfig = {
   basePath: "",
   images: { unoptimized: true },
   trailingSlash: true,
+  swcMinify: true,
+  experimental: {
+    optimizePackageImports: ["lodash"],
+  },
+  compiler: {
+    removeConsole: isProduction,
+  },
 };
 
 export default nextConfig;
