@@ -21,6 +21,7 @@ export interface GenerationRecord {
     guitar_rig_description: string;
     references: string[];
     additional_info: string;
+    preferred_pickup: string;
   };
   realRig: {
     pedalboard: string[];

@@ -231,6 +231,25 @@ export function GenerationViewer({
                   </button>
                 </div>
               </div>
+
+              <div className="mb-4 p-4 bg-gray-50 rounded-lg">
+                <h3 className="text-sm font-medium text-gray-700 mb-2">
+                  Звукосниматель
+                </h3>
+
+                <div>
+                  <span className="text-sm text-gray-500">
+                    {generation.proDescription.preferred_pickup}
+                  </span>
+                </div>
+                <br />
+                <div>
+                  <span className="text-sm text-gray-500">
+                    {generation.proDescription.additional_info}
+                  </span>
+                </div>
+              </div>
+
               <div>
                 <h3 className="text-sm font-medium text-gray-500 mb-2">
                   Версия {selectedVersion + 1}

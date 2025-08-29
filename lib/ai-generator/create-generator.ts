@@ -22,6 +22,7 @@ interface ProDescription {
   guitar_rig_description: string;
   references: string[];
   additional_info: string;
+  preferred_pickup: string;
 }
 
 interface RealRig {
@@ -66,7 +67,7 @@ class ChainGenerator {
   private async createProDescription(prompt: string): Promise<ProDescription> {
     const completion = await this.createJsonCompletion(
       createProDescriptionSystemPrompt(),
-      prompt
+      prompt,
     );
 
     return completion as ProDescription;
@@ -75,7 +76,7 @@ class ChainGenerator {
   private async createEmptyChain(realRig: RealRig): Promise<Chain> {
     const completion = await this.createJsonCompletion(
       createRealRigToBlocksSystemPrompt(),
-      JSON.stringify(realRig)
+      JSON.stringify(realRig),
     );
 
     const config = completion as BlockTypesConfig;
@@ -87,11 +88,11 @@ class ChainGenerator {
   }
 
   private async createRealRig(
-    proDescription: ProDescription
+    proDescription: ProDescription,
   ): Promise<RealRig> {
     const completion = await this.createJsonCompletion(
       createRealRigSystemPrompt(),
-      JSON.stringify(proDescription)
+      JSON.stringify(proDescription),
     );
 
     return completion as RealRig;
@@ -99,14 +100,14 @@ class ChainGenerator {
 
   private async createFinalChain(
     emptyChain: Chain,
-    proDescription: ProDescription
+    proDescription: ProDescription,
   ): Promise<Chain> {
     const completion = await this.createJsonCompletion(
       createProperChainSystemPrompt(
         emptyChain,
-        JSON.stringify(proDescription, null, 2)
+        JSON.stringify(proDescription, null, 2),
       ),
-      ""
+      "",
     );
 
     return completion as Chain;
@@ -114,7 +115,7 @@ class ChainGenerator {
 
   private async createJsonCompletion(
     systemPrompt: string,
-    userPrompt: string
+    userPrompt: string,
   ): Promise<unknown> {
     const completion = await this.openai.chat.completions.create({
       model: GPT_41_MODEL,
