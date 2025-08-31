@@ -10,7 +10,9 @@ export const createArtistLink = (preset: Preset): string => {
 };
 
 export const createPresetSlug = (preset: Preset): string => {
-  return `${createSlug(preset.origin.song)}-guitar-${createSlug(
-    preset.origin.part,
-  )}`;
+  return createPresetSlugBase(preset.origin.song, preset.origin.part);
+};
+
+export const createPresetSlugBase = (song: string, part: string): string => {
+  return `${createSlug(song)}-guitar-${createSlug(part)}`;
 };

@@ -5,6 +5,8 @@ import { generationDb } from "../../../../lib/jsondb";
 import { validatePresetWithArtist } from "../../../../lib/public/schemas/preset";
 import { validateArtist } from "../../../../lib/public/schemas/artist";
 import { createSlug } from "../../../../lib/utils/create-slug";
+import { createPresetSlugBase } from "lib/utils/urls";
+import { Preset } from "lib/public/interface";
 
 interface CreatePresetRequest {
   generationId: string;
@@ -152,26 +154,17 @@ export async function POST(request: NextRequest) {
 
     const presetId = generation.id;
 
-    // Создаем slug пресета
-    const songSlug = body.song
-      .trim()
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
-    const partSlug = body.part
-      .trim()
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
-    const slug = `${songSlug}-guitar-${partSlug}`;
+    const song = body.song.trim();
+    const part = body.part.trim();
+    const slug = createPresetSlugBase(song, part);
 
     // Создаем объект пресета
     const preset = {
       id: presetId,
       origin: {
         artistId: artistId,
-        song: body.song.trim(),
-        part: body.part.trim(),
+        song: song,
+        part: part,
         imageUrl: body.imageUrl?.trim() || null,
       },
       description: generation.proDescription.sound_description,
@@ -186,7 +179,7 @@ export async function POST(request: NextRequest) {
     };
 
     // Создаем объект для валидации с полным артистом
-    const presetWithArtist = {
+    const presetWithArtist: Preset = {
       id: preset.id,
       origin: {
         artist: artist,
@@ -196,6 +189,7 @@ export async function POST(request: NextRequest) {
       },
       description: preset.description,
       chain: preset.chain,
+      // @ts-expect-error this is fine
       pickup: preset.pickup,
       slug: preset.slug,
       tabsUrl: preset.tabsUrl,
