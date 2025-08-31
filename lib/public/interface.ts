@@ -1,21 +1,10 @@
-import { Chain } from "lib/core/interface";
+import { ValidatedPresetWithArtist } from "./schemas";
 
-export interface Preset {
-  id: string;
-  origin: {
-    artist: Artist;
-    song: string;
-    part: string;
-    imageUrl: string | null;
-  };
-  description: string;
-  chain: Chain;
-  pickup: Pickup;
-  slug: string;
-  tabsUrl?: string;
-}
+// Тип для валидированного Preset с Artist объектом
+export type Preset = ValidatedPresetWithArtist;
 
 export interface Artist {
+  id: number;
   title: string;
   slug: string;
   description: string;
