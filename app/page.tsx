@@ -2,6 +2,9 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import { Metadata } from "next";
 import ClientSearch from "../components/ClientSearch";
+import { presets } from "lib/public/presets";
+
+const presetsCount = presets.length;
 
 export const metadata: Metadata = {
   title:
@@ -40,10 +43,10 @@ export default function Home() {
             Free NUX Mighty Presets
           </h2>{" "}
           <p className="text-gray-300 max-w-3xl">
-            Explore our collection of free, high-quality presets for your NUX
-            Mighty Plug Pro and NUX Mighty Space. All presets are fully
-            compatible with both devices and carefully crafted and tested by
-            real musicians.
+            Explore our collection of {presetsCount} free, high-quality presets
+            for your NUX Mighty Plug Pro and NUX Mighty Space. All presets are
+            fully compatible with both devices and carefully crafted and tested
+            by real musicians.
           </p>
         </div>
 

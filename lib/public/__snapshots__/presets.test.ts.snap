@@ -2452,5 +2452,665 @@ exports[`Presets > presets should match snapshot 1`] = `
     "slug": "smoke-on-the-water-guitar-intro",
     "tabsUrl": "https://www.songsterr.com/a/wsa/deep-purple-smoke-on-the-water-tab-s329",
   },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 40,
+          "Bright": 60,
+          "Gain": 42,
+          "Master": 65,
+          "Middle": 35,
+          "Treble": 65,
+        },
+        "type": "Twin Reverb",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 67,
+          "Level": 52,
+          "LowCut": 56,
+        },
+        "type": "TR212",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 20,
+          "Level": 55,
+          "Sustain": 38,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": true,
+        "params": {
+          "Depth": 28,
+          "Intensity": 30,
+          "Rate": 35,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 44,
+          "Level": 54,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Clean, bright, and chimey with a slight warmth; open and dynamic with gentle attack and sparkling highs. Subtle modulation creates a spacious, dreamy feel, while clarity is maintained throughout.",
+    "id": "preset_1",
+    "origin": {
+      "artist": {
+        "description": "Red Hot Chili Peppers is an American rock band formed in 1983 in Los Angeles, California. The band is known for its fusion of funk, rock, and psychedelic music, and has been credited with popularizing the genre in the 1990s. Red Hot Chili Peppers has released several platinum-selling albums and has toured extensively worldwide.",
+        "id": 14,
+        "slug": "red-hot-chili-peppers",
+        "title": "Red Hot Chili Peppers",
+      },
+      "imageUrl": "/images/cover/default-cover.webp",
+      "part": "Intro",
+      "song": "Californication",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 9,
+      "type": "single",
+    },
+    "slug": "californication-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/red-hot-chili-peppers-californication-tab-s439t2",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 42,
+          "Bright": 56,
+          "Gain": 41,
+          "Master": 66,
+          "Middle": 58,
+          "Treble": 62,
+        },
+        "type": "Twin Reverb",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 56,
+          "Level": 52,
+          "LowCut": 58,
+        },
+        "type": "TR212",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 44,
+          "Level": 54,
+          "Sustain": 38,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": true,
+        "params": {
+          "Depth": 27,
+          "Rate": 34,
+        },
+        "type": "CE-2",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 61,
+          "Level": 40,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Warm, clean tone with a slight shimmer and depth; articulate and dynamic, with a gentle touch of reverb and a touch of chorus for a spacious, emotional feel. The sound is not aggressive; instead, it's inviting and expressive, perfect for melodic phrasing.",
+    "id": "gen_mewxumfy_3tfrhuvhq",
+    "origin": {
+      "artist": {
+        "description": "Legendary hard rock band that dominated the late 80s and early 90s music scene. Guns N' Roses is renowned for their epic ballads, powerful rock anthems, and distinctive guitar work that helped define classic rock.",
+        "id": 5,
+        "slug": "guns-and-roses",
+        "title": "Guns and Roses",
+      },
+      "imageUrl": "/images/cover/default-cover.webp",
+      "part": "Intro",
+      "song": "Don't Cry",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 7,
+      "type": "single",
+    },
+    "slug": "dont-cry-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-dont-cry-tab-s125t2",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 52,
+          "Gain": 65,
+          "Master": 58,
+          "Middle": 68,
+          "Presence": 44,
+          "Treble": 47,
+        },
+        "type": "Brit 800",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 38,
+          "Level": 54,
+          "LowCut": 41,
+        },
+        "type": "M1960AV",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 45,
+          "Level": 52,
+          "Sustain": 58,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": true,
+        "params": {
+          "E.Level": 36,
+          "Feedback": 30,
+          "Time": 33,
+        },
+        "type": "Digital Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 38,
+          "Level": 54,
+          "Tone": 44,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 62,
+          "125": 52,
+          "16000": 38,
+          "2000": 58,
+          "250": 54,
+          "31": 50,
+          "4000": 50,
+          "500": 58,
+          "62": 48,
+          "8000": 42,
+          "Vol": 52,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 61,
+          "Level": 47,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Smooth, singing lead tone with sustain and clarity; slightly mid-forward with creamy overdrive; moderate attack; not overly bright; warm with expressive dynamics and a hint of ambience.",
+    "id": "gen_mewy0ofs_gqhq1p8sj",
+    "origin": {
+      "artist": {
+        "description": "Legendary hard rock band that dominated the late 80s and early 90s music scene. Guns N' Roses is renowned for their epic ballads, powerful rock anthems, and distinctive guitar work that helped define classic rock.",
+        "id": 5,
+        "slug": "guns-and-roses",
+        "title": "Guns and Roses",
+      },
+      "imageUrl": "/images/cover/default-cover.webp",
+      "part": "Solo",
+      "song": "Don't Cry",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 7,
+      "type": "humbucker",
+    },
+    "slug": "dont-cry-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-dont-cry-tab-s125",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 52,
+          "Bright": 64,
+          "Gain": 36,
+          "Master": 58,
+          "Middle": 42,
+          "Treble": 62,
+        },
+        "type": "Jazz Clean",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 62,
+          "Level": 52,
+          "LowCut": 54,
+        },
+        "type": "JZ120",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 40,
+          "Level": 55,
+          "Sustain": 58,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": true,
+        "params": {
+          "E.Level": 37,
+          "Feedback": 24,
+          "Time": 34,
+        },
+        "type": "Digital Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": true,
+        "params": {
+          "Depth": 65,
+          "Rate": 44,
+        },
+        "type": "CE-2",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 56,
+          "Level": 61,
+          "Liveliness": 66,
+          "PreDelay": 38,
+        },
+        "type": "Hall",
+      },
+    },
+    "description": "Crystal-clear, shimmering clean tone with gentle warmth and chorus. Moderate sustain, very little drive or breakup, airy and spacious with subtle movement from modulation. Articulate but not harsh, with a lush, ambient quality.",
+    "id": "gen_mewybc5k_ikasqdtp8",
+    "origin": {
+      "artist": {
+        "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "id": 10,
+        "slug": "metallica",
+        "title": "Metallica",
+      },
+      "imageUrl": "/images/cover/default-cover.webp",
+      "part": "Intro",
+      "song": "Fade To Black",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 9,
+      "type": "single",
+    },
+    "slug": "fade-to-black-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-fade-to-black-tab-s20t1",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 47,
+          "Gain": 58,
+          "Master": 60,
+          "Middle": 62,
+          "Presence": 42,
+          "Treble": 49,
+        },
+        "type": "Dual Rect",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 45,
+          "Level": 51,
+          "LowCut": 58,
+        },
+        "type": "RECT 412",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 40,
+          "Level": 54,
+          "Sustain": 62,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": true,
+        "params": {
+          "E.Level": 37,
+          "Feedback": 27,
+          "Time": 40,
+        },
+        "type": "Digital Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 34,
+          "Level": 55,
+          "Tone": 44,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 62,
+          "125": 48,
+          "16000": 44,
+          "2000": 63,
+          "250": 52,
+          "31": 44,
+          "4000": 57,
+          "500": 58,
+          "62": 46,
+          "8000": 48,
+          "Vol": 48,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 42,
+          "Level": 39,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Smooth, singing lead tone with warm sustain, moderate gain, clear articulation, subtle ambient depth, and expressive dynamics. The sound is not overly aggressive, focusing on melody and clarity with a touch of vintage warmth.",
+    "id": "gen_mewyl08k_df8pjsa7f",
+    "origin": {
+      "artist": {
+        "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "id": 10,
+        "slug": "metallica",
+        "title": "Metallica",
+      },
+      "imageUrl": "/images/cover/default-cover.webp",
+      "part": "Intro Solo",
+      "song": "Fade To Black",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 7,
+      "type": "humbucker",
+    },
+    "slug": "fade-to-black-guitar-intro-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-fade-to-black-tab-s20",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 42,
+          "Cut": 56,
+          "Gain": 26,
+          "Master": 60,
+          "Treble": 62,
+        },
+        "type": "Class A30",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 63,
+          "Level": 50,
+          "LowCut": 58,
+        },
+        "type": "A212",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 35,
+          "Level": 50,
+          "Sustain": 35,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Gain": 18,
+          "Level": 50,
+          "Tone": 60,
+        },
+        "type": "Blues Drive",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "100": 44,
+          "1200": 52,
+          "220": 46,
+          "2600": 56,
+          "500": 50,
+          "6400": 60,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 42,
+          "Level": 37,
+        },
+        "type": "Spring",
+      },
+    },
+    "description": "Clean, slightly gritty, jangly, bright yet warm with moderate sustain and clarity. The intro tone is open and dynamic, with a hint of breakup when strummed harder.",
+    "id": "gen_mewypyih_6xzbvefy",
+    "origin": {
+      "artist": {
+        "description": "Radiohead is one of the most influential alternative rock bands of the modern era. Formed in Oxfordshire, England, the group is known for its groundbreaking sound, blending rock, electronic, and experimental elements. With iconic albums like OK Computer, Kid A, and In Rainbows, Radiohead has consistently pushed the boundaries of music, earning worldwide acclaim and a devoted fan base.",
+        "id": 17,
+        "slug": "radiohead",
+        "title": "Radiohead",
+      },
+      "imageUrl": "/images/cover/default-cover.webp",
+      "part": "Intro",
+      "song": "Creep",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 7,
+      "type": "single",
+    },
+    "slug": "creep-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/radiohead-creep-tab-s97",
+  },
 ]
 `;

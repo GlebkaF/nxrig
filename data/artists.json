@@ -94,5 +94,11 @@
     "title": "Rammstein",
     "slug": "rammstein",
     "description": "German industrial metal band known for their powerful sound, theatrical performances, and unique style combining heavy metal with electronic elements. Rammstein creates intense, atmospheric guitar tones."
+  },
+  {
+    "id": 17,
+    "title": "Radiohead",
+    "slug": "radiohead",
+    "description": "Radiohead is one of the most influential alternative rock bands of the modern era. Formed in Oxfordshire, England, the group is known for its groundbreaking sound, blending rock, electronic, and experimental elements. With iconic albums like OK Computer, Kid A, and In Rainbows, Radiohead has consistently pushed the boundaries of music, earning worldwide acclaim and a devoted fan base."
   }
 ]
