@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { GenerationRecord } from "../lib/jsondb/types";
 import { ValidatedArtist } from "../lib/public/schemas/artist";
 
@@ -40,7 +41,7 @@ export function PresetCreateForm({
     newArtistDescription: "",
     song: "",
     part: "",
-    imageUrl: "",
+    imageUrl: "/images/cover/default-cover.webp",
     tabsUrl: "",
     pickup: {
       type: generation.proDescription.preferred_pickup || "",
@@ -408,7 +409,7 @@ export function PresetCreateForm({
               URL изображения
             </label>
             <input
-              type="url"
+              type="text"
               value={formData.imageUrl}
               onChange={(e) => {
                 setFormData((prev) => ({
@@ -417,8 +418,27 @@ export function PresetCreateForm({
                 }));
               }}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="https://example.com/image.jpg"
+              placeholder="/images/cover/artist-name/song-name.webp или https://example.com/image.jpg"
             />
+            <p className="text-xs text-gray-500 mt-1">
+              Можно использовать локальные пути (например:
+              /images/cover/metallica/master-of-puppets.webp) или внешние URL
+            </p>
+            {formData.imageUrl && (
+              <div className="mt-2">
+                <Image
+                  src={formData.imageUrl}
+                  alt="Предварительный просмотр"
+                  width={80}
+                  height={80}
+                  className="object-cover rounded border"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = "none";
+                  }}
+                />
+              </div>
+            )}
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">

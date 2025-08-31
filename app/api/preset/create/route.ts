@@ -150,16 +150,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Создаем ID пресета
-    const maxPresetId =
-      presetsData.length > 0
-        ? Math.max(
-            ...(presetsData as Array<{ id: string }>).map(
-              (p) => parseInt(p.id.replace("preset_", ""), 10) || 0,
-            ),
-          )
-        : 0;
-    const presetId = `preset_${String(maxPresetId + 1)}`;
+    const presetId = generation.id;
 
     // Создаем slug пресета
     const songSlug = body.song
