@@ -155,7 +155,7 @@ export function GenerationViewer({
                 ← Назад к каталогу
               </Link>
               <Link
-                href={`/admin/preset/create?generationId=${generation.id}`}
+                href={`/admin/preset/create/${generation.id}`}
                 className="inline-flex items-center px-3 py-2 text-sm bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
               >
                 Создать пресет

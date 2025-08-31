@@ -1,12 +1,17 @@
 import { Metadata } from "next";
-import { generationDb } from "../../../../lib/jsondb";
-import { PresetCreateForm } from "../../../../components/PresetCreateForm";
-import artistsRaw from "../../../../data/artists.json";
+import { generationDb } from "../../../../../lib/jsondb";
+import artistsRaw from "../../../../../data/artists.json";
+import { PresetCreateForm } from "components/PresetCreateForm";
 
 interface PresetCreatePageProps {
-  searchParams: {
-    generationId?: string;
+  params: {
+    id: string;
   };
+}
+
+// Исключаем этот API роут из статической генерации
+export function generateStaticParams() {
+  return [{ id: "this-is-a-dummy-id-for-static-build" }];
 }
 
 export const metadata: Metadata = {
@@ -32,11 +37,9 @@ async function getGenerationData(generationId: string | undefined) {
 }
 
 export default async function PresetCreatePage({
-  searchParams,
+  params,
 }: PresetCreatePageProps) {
-  const { generation, error } = await getGenerationData(
-    searchParams.generationId,
-  );
+  const { generation, error } = await getGenerationData(params.id);
 
   if (error || !generation) {
     return (
