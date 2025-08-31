@@ -21,6 +21,7 @@ import myWayCleanGuitarIntro from "./preset/my-way-clean-guitar-intro";
 import jimiHendrixHeyJoeWhole from "./preset/jimi-hendrix-hey-joe-whole";
 import scarTissueGuitarIntro from "./preset/rhcp-scar-tissue-guitar-intro";
 import deepPurpleSmokeOnTheWaterGuitarIntro from "./preset/smoke-on-the-water-guitar-intro";
+import { validateChain } from "lib/core/schemas";
 
 export const presets = [
   sweetHomeAlabamaGuitarIntro,
@@ -46,3 +47,7 @@ export const presets = [
   scarTissueGuitarIntro,
   deepPurpleSmokeOnTheWaterGuitarIntro,
 ];
+
+presets.forEach((preset) => {
+  preset.chain = validateChain(preset.chain);
+});
