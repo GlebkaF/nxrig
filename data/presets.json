@@ -2865,5 +2865,108 @@
     },
     "slug": "fade-to-black-guitar-intro-solo",
     "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-fade-to-black-tab-s20"
+  },
+  {
+    "id": "gen_mewypyih_6xzbvefy",
+    "origin": {
+      "artistId": 17,
+      "song": "Creep",
+      "part": "Intro",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Clean, slightly gritty, jangly, bright yet warm with moderate sustain and clarity. The intro tone is open and dynamic, with a hint of breakup when strummed harder.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "Sustain": 35,
+          "Clipping": 35
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Blues Drive",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "Gain": 18,
+          "Tone": 60
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 26,
+          "Master": 60,
+          "Bass": 42,
+          "Treble": 62,
+          "Cut": 56
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 58,
+          "HighCut": 63
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 44,
+          "220": 46,
+          "500": 50,
+          "1200": 52,
+          "2600": 56,
+          "6400": 60
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 37,
+          "Decay": 42
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "creep-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/radiohead-creep-tab-s97"
   }
 ]
