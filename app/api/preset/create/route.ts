@@ -158,6 +158,30 @@ export async function POST(request: NextRequest) {
     const part = body.part.trim();
     const slug = createPresetSlugBase(song, part);
 
+    // Проверяем уникальность комбинации slug + artistId
+    const existingPreset = (
+      presetsData as Array<{
+        slug: string;
+        origin: { artistId: number };
+      }>
+    ).find(
+      (preset) => preset.slug === slug && preset.origin.artistId === artistId,
+    );
+
+    if (existingPreset) {
+      return NextResponse.json(
+        {
+          error: `Preset with slug "${slug}" for artist ID ${String(artistId)} already exists`,
+          details: {
+            slug,
+            artistId,
+            artistTitle: artist.title,
+          },
+        },
+        { status: 409 },
+      );
+    }
+
     // Создаем объект пресета
     const preset = {
       id: presetId,

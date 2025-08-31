@@ -43,15 +43,15 @@ export default function Home() {
             Free NUX Mighty Presets
           </h2>{" "}
           <p className="text-gray-300 max-w-3xl">
-            Explore our collection of free, high-quality presets for your NUX
-            Mighty Plug Pro and NUX Mighty Space. All presets are fully
-            compatible with both devices and carefully crafted and tested by
-            real musicians.
+            Explore our collection of {presetsCount} free, high-quality presets
+            for your NUX Mighty Plug Pro and NUX Mighty Space. All presets are
+            fully compatible with both devices and carefully crafted and tested
+            by real musicians.
           </p>
         </div>
 
         <h2 className="text-2xl font-semibold mb-6">
-          {presetsCount} Guitar Presets for NUX Mighty Devices
+          Guitar Presets for NUX Mighty Devices
         </h2>
 
         <ClientSearch />
