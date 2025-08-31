@@ -44,6 +44,7 @@ export function PresetCreateForm({
     tabsUrl: "",
     pickup: {
       type: generation.proDescription.preferred_pickup || "",
+      tone: 5,
       position: "bridge",
     },
   });
@@ -96,6 +97,13 @@ export function PresetCreateForm({
       if (!formData.pickup.type.trim()) {
         throw new Error("Тип звукоснимателя обязателен");
       }
+      if (
+        !formData.pickup.tone ||
+        formData.pickup.tone < 1 ||
+        formData.pickup.tone > 10
+      ) {
+        throw new Error("Тон звукоснимателя должен быть от 1 до 10");
+      }
 
       const payload = {
         generationId: generation.id,
@@ -114,6 +122,7 @@ export function PresetCreateForm({
         tabsUrl: formData.tabsUrl.trim() || undefined,
         pickup: {
           type: formData.pickup.type.trim(),
+          tone: formData.pickup.tone,
           position: formData.pickup.position,
         },
       };
@@ -155,9 +164,18 @@ export function PresetCreateForm({
       >
         {/* Информация о генерации */}
         <div className="bg-gray-50 rounded-lg p-4">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
             Данные из генерации
           </h3>
+
+          {/* Исходный промпт */}
+          <div className="mb-4">
+            <span className="font-medium text-gray-700">Исходный запрос:</span>
+            <p className="mt-1 text-sm text-gray-600 italic">
+              &ldquo;{generation.originalPrompt}&rdquo;
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <div>
               <span className="font-medium text-gray-700">Жанр:</span>
@@ -171,6 +189,14 @@ export function PresetCreateForm({
                 {generation.proDescription.sound_description}
               </span>
             </div>
+          </div>
+
+          {/* Исходный промпт */}
+          <div className="mb-4">
+            <span className="font-medium text-gray-700">Pickup:</span>
+            <p className="mt-1 text-sm text-gray-600 italic">
+              &ldquo;{generation.proDescription.preferred_pickup}&rdquo;
+            </p>
           </div>
         </div>
 
@@ -314,11 +340,10 @@ export function PresetCreateForm({
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Звукосниматель
           </label>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <label className="block text-xs text-gray-500 mb-1">Тип *</label>
-              <input
-                type="text"
+              <select
                 value={formData.pickup.type}
                 onChange={(e) => {
                   setFormData((prev) => ({
@@ -327,9 +352,32 @@ export function PresetCreateForm({
                   }));
                 }}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Например: Humbucker, Single Coil"
                 required
-              />
+              >
+                <option value="">Выберите тип</option>
+                <option value="humbucker">Humbucker</option>
+                <option value="single">Single Coil</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Тон *</label>
+              <select
+                value={formData.pickup.tone}
+                onChange={(e) => {
+                  setFormData((prev) => ({
+                    ...prev,
+                    pickup: { ...prev.pickup, tone: Number(e.target.value) },
+                  }));
+                }}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              >
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((tone) => (
+                  <option key={tone} value={tone}>
+                    {tone}
+                  </option>
+                ))}
+              </select>
             </div>
             <div>
               <label className="block text-xs text-gray-500 mb-1">

@@ -19,6 +19,7 @@ interface CreatePresetRequest {
   tabsUrl?: string;
   pickup: {
     type: string;
+    tone: number;
     position: string;
   };
 }
@@ -59,6 +60,13 @@ export async function POST(request: NextRequest) {
     if (!body.pickup?.type?.trim()) {
       return NextResponse.json(
         { error: "Pickup type is required" },
+        { status: 400 },
+      );
+    }
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    if (!body.pickup?.tone || body.pickup.tone < 1 || body.pickup.tone > 10) {
+      return NextResponse.json(
+        { error: "Pickup tone must be between 1 and 10" },
         { status: 400 },
       );
     }
@@ -179,6 +187,7 @@ export async function POST(request: NextRequest) {
       chain: latestChain,
       pickup: {
         type: body.pickup.type.trim(),
+        tone: body.pickup.tone,
         position: body.pickup.position,
       },
       slug: slug,

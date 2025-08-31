@@ -2338,5 +2338,108 @@
       "part": "Intro",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/ae/Smoke_on_the_Water_cover.jpg"
     }
+  },
+  {
+    "id": "preset_1",
+    "origin": {
+      "artistId": 14,
+      "song": "Californication",
+      "part": "Intro",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Clean, bright, and chimey with a slight warmth; open and dynamic with gentle attack and sparkling highs. Subtle modulation creates a spacious, dreamy feel, while clarity is maintained throughout.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 38,
+          "Clipping": 20
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": true,
+        "params": {
+          "Rate": 35,
+          "Depth": 28,
+          "Intensity": 30
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 42,
+          "Master": 65,
+          "Bass": 40,
+          "Middle": 35,
+          "Treble": 65,
+          "Bright": 60
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 56,
+          "HighCut": 67
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Decay": 44
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 9,
+      "position": "neck"
+    },
+    "slug": "californication-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/red-hot-chili-peppers-californication-tab-s439t2"
   }
 ]
