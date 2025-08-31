@@ -8,12 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://nxrig.com";
 
   // Статические страницы
-  const staticPages = [baseUrl + "/"];
+  const staticPages = [baseUrl + "/", baseUrl + "/preset/"];
   const artistPages = presets.map(
-    (preset) => baseUrl + createArtistLink(preset)
+    (preset) => baseUrl + createArtistLink(preset),
   );
   const presetPages = presets.map(
-    (preset) => baseUrl + createPresetLink(preset)
+    (preset) => baseUrl + createPresetLink(preset),
   );
 
   const urls = uniq([...staticPages, ...artistPages, ...presetPages]);
