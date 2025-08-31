@@ -2,6 +2,9 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import { Metadata } from "next";
 import ClientSearch from "../components/ClientSearch";
+import { presets } from "lib/public/presets";
+
+const presetsCount = presets.length;
 
 export const metadata: Metadata = {
   title:
@@ -48,7 +51,7 @@ export default function Home() {
         </div>
 
         <h2 className="text-2xl font-semibold mb-6">
-          Guitar Presets for NUX Mighty Devices
+          {presetsCount} Guitar Presets for NUX Mighty Devices
         </h2>
 
         <ClientSearch />

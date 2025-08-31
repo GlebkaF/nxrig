@@ -2543,5 +2543,327 @@
     },
     "slug": "dont-cry-guitar-intro",
     "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-dont-cry-tab-s125t2"
+  },
+  {
+    "id": "gen_mewy0ofs_gqhq1p8sj",
+    "origin": {
+      "artistId": 5,
+      "song": "Don't Cry",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, singing lead tone with sustain and clarity; slightly mid-forward with creamy overdrive; moderate attack; not overly bright; warm with expressive dynamics and a hint of ambience.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 58,
+          "Clipping": 45
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Drive": 38,
+          "Tone": 44
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 65,
+          "Master": 58,
+          "Bass": 52,
+          "Middle": 68,
+          "Treble": 47,
+          "Presence": 44
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 41,
+          "HighCut": 38
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 50,
+          "62": 48,
+          "125": 52,
+          "250": 54,
+          "500": 58,
+          "1000": 62,
+          "2000": 58,
+          "4000": 50,
+          "8000": 42,
+          "16000": 38,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 47,
+          "Decay": 61
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 36,
+          "Feedback": 30,
+          "Time": 33
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "dont-cry-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-dont-cry-tab-s125"
+  },
+  {
+    "id": "gen_mewybc5k_ikasqdtp8",
+    "origin": {
+      "artistId": 10,
+      "song": "Fade To Black",
+      "part": "Intro",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Crystal-clear, shimmering clean tone with gentle warmth and chorus. Moderate sustain, very little drive or breakup, airy and spacious with subtle movement from modulation. Articulate but not harsh, with a lush, ambient quality.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 58,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 44,
+          "Depth": 65
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Jazz Clean",
+        "enabled": true,
+        "params": {
+          "Gain": 36,
+          "Master": 58,
+          "Bass": 52,
+          "Middle": 42,
+          "Treble": 62,
+          "Bright": 64
+        }
+      },
+      "cabinet": {
+        "type": "JZ120",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 54,
+          "HighCut": 62
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Hall",
+        "enabled": true,
+        "params": {
+          "Level": 61,
+          "Decay": 56,
+          "PreDelay": 38,
+          "Liveliness": 66
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 37,
+          "Feedback": 24,
+          "Time": 34
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 9,
+      "position": "neck"
+    },
+    "slug": "fade-to-black-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-fade-to-black-tab-s20t1"
+  },
+  {
+    "id": "gen_mewyl08k_df8pjsa7f",
+    "origin": {
+      "artistId": 10,
+      "song": "Fade To Black",
+      "part": "Intro Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, singing lead tone with warm sustain, moderate gain, clear articulation, subtle ambient depth, and expressive dynamics. The sound is not overly aggressive, focusing on melody and clarity with a touch of vintage warmth.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 62,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 34,
+          "Tone": 44
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 58,
+          "Master": 60,
+          "Bass": 47,
+          "Middle": 62,
+          "Treble": 49,
+          "Presence": 42
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 51,
+          "LowCut": 58,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 44,
+          "62": 46,
+          "125": 48,
+          "250": 52,
+          "500": 58,
+          "1000": 62,
+          "2000": 63,
+          "4000": 57,
+          "8000": 48,
+          "16000": 44,
+          "Vol": 48
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 39,
+          "Decay": 42
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 37,
+          "Feedback": 27,
+          "Time": 40
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "fade-to-black-guitar-intro-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-fade-to-black-tab-s20"
   }
 ]
