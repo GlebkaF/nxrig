@@ -19,11 +19,7 @@ export const presets = presetsRaw.map((preset) => {
   const validatedPreset: Preset = {
     id: preset.id,
     origin: {
-      artist: {
-        title: artist.title,
-        slug: artist.slug,
-        description: artist.description,
-      },
+      artist: artist,
       song: preset.origin.song,
       part: preset.origin.part,
       imageUrl: preset.origin.imageUrl,

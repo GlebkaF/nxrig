@@ -16,6 +16,7 @@ export interface Preset {
 }
 
 export interface Artist {
+  id: number;
   title: string;
   slug: string;
   description: string;

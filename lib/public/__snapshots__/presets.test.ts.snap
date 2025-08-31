@@ -95,6 +95,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Iconic Southern rock band known for their distinctive guitar harmonies and powerful ballads. Lynyrd Skynyrd created a unique style blending country and rock elements, producing classic American rock anthems.",
+        "id": 9,
         "slug": "lynyrd-skynyrd",
         "title": "Lynyrd Skynyrd",
       },
@@ -201,6 +202,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Iconic grunge band that transformed rock music in the 1990s. Nirvana's unique sound combined raw guitar power with emotional depth, creating alternative rock masterpieces that defined a generation and influenced modern rock music.",
+        "id": 11,
         "slug": "nirvana",
         "title": "Nirvana",
       },
@@ -315,6 +317,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "id": 10,
         "slug": "metallica",
         "title": "Metallica",
       },
@@ -428,6 +431,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "The Prince of Darkness and godfather of heavy metal, former Black Sabbath vocalist and successful solo artist. Ozzy Osbourne is renowned for his unique vocal style and massive influence on metal music development.",
+        "id": 12,
         "slug": "ozzy-osborn",
         "title": "Ozzy Osborn",
       },
@@ -542,6 +546,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Legendary hard rock band that dominated the late 80s and early 90s music scene. Guns N' Roses is renowned for their epic ballads, powerful rock anthems, and distinctive guitar work that helped define classic rock.",
+        "id": 5,
         "slug": "guns-and-roses",
         "title": "Guns and Roses",
       },
@@ -655,6 +660,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "One of the greatest rock bands of all time and pioneers of hard rock and heavy metal. Led Zeppelin created a unique sound blending blues, folk, and rock elements, producing legendary guitar tones and timeless musical masterpieces.",
+        "id": 7,
         "slug": "led-zeppelin",
         "title": "Led Zeppelin",
       },
@@ -762,6 +768,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "One of the greatest rock bands of all time and pioneers of hard rock and heavy metal. Led Zeppelin created a unique sound blending blues, folk, and rock elements, producing legendary guitar tones and timeless musical masterpieces.",
+        "id": 7,
         "slug": "led-zeppelin",
         "title": "Led Zeppelin",
       },
@@ -876,6 +883,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "id": 10,
         "slug": "metallica",
         "title": "Metallica",
       },
@@ -990,6 +998,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "American nu-metal band known for their aggressive sound, masked personas, and powerful performances. Slipknot created a unique style combining heavy metal with industrial elements and complex rhythms.",
+        "id": 15,
         "slug": "slipknot",
         "title": "Slipknot",
       },
@@ -1099,6 +1108,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "British post-hardcore band known for their innovative approach to music, combining rock, electronic elements, and socially conscious lyrics. Enter Shikari creates dynamic guitar tones with modern production.",
+        "id": 4,
         "slug": "enter-shikari",
         "title": "Enter Shikari",
       },
@@ -1214,6 +1224,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Welsh metalcore band known for their melodic approach to metal music, combining aggressive riffs with emotional melodies and powerful vocal performances. Masters of modern metal guitar tones.",
+        "id": 2,
         "slug": "bullet-for-my-valentine",
         "title": "Bullet for My Valentine",
       },
@@ -1323,6 +1334,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "German industrial metal band known for their powerful sound, theatrical performances, and unique style combining heavy metal with electronic elements. Rammstein creates intense, atmospheric guitar tones.",
+        "id": 16,
         "slug": "rammstein",
         "title": "Rammstein",
       },
@@ -1433,6 +1445,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Legendary Australian hard rock band known for their powerful guitar riffs, thunderous sound, and iconic songs. AC/DC has been a driving force in rock music for decades, influencing countless musicians with their high-energy performances and classic rock anthems.",
+        "id": 1,
         "slug": "ac-dc",
         "title": "AC/DC",
       },
@@ -1540,6 +1553,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "id": 10,
         "slug": "metallica",
         "title": "Metallica",
       },
@@ -1647,6 +1661,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Pantera is an American heavy metal band formed in 1981 in Arlington, Texas. The band is known for its aggressive sound, powerful riffs, and innovative use of rhythm guitar. Pantera has been credited with popularizing the groove metal genre and has influenced countless bands in the metal scene.",
+        "id": 13,
         "slug": "pantera",
         "title": "Pantera",
       },
@@ -1760,6 +1775,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Pantera is an American heavy metal band formed in 1981 in Arlington, Texas. The band is known for its aggressive sound, powerful riffs, and innovative use of rhythm guitar. Pantera has been credited with popularizing the groove metal genre and has influenced countless bands in the metal scene.",
+        "id": 13,
         "slug": "pantera",
         "title": "Pantera",
       },
@@ -1873,6 +1889,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Pantera is an American heavy metal band formed in 1981 in Arlington, Texas. The band is known for its aggressive sound, powerful riffs, and innovative use of rhythm guitar. Pantera has been credited with popularizing the groove metal genre and has influenced countless bands in the metal scene.",
+        "id": 13,
         "slug": "pantera",
         "title": "Pantera",
       },
@@ -1984,6 +2001,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "id": 10,
         "slug": "metallica",
         "title": "Metallica",
       },
@@ -2091,6 +2109,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Limp Bizkit is an American rock band formed in 1994 in Jacksonville, Florida. The band is known for its fusion of nu metal, alternative metal, and rap metal, and has been credited with popularizing the genre in the early 2000s. Limp Bizkit has released several platinum-selling albums and has toured extensively worldwide.",
+        "id": 8,
         "slug": "limp-bizkit",
         "title": "Limp Bizkit",
       },
@@ -2200,6 +2219,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Jimi Hendrix was an American guitarist, singer, and songwriter who is widely regarded as one of the most influential and innovative musicians in the history of rock and roll. He is known for his unique guitar playing style, which combined elements of blues, jazz, and rock, and for his contributions to the development of psychedelic rock and the electric guitar.",
+        "id": 6,
         "slug": "jimi-hendrix",
         "title": "Jimi Hendrix",
       },
@@ -2307,6 +2327,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Red Hot Chili Peppers is an American rock band formed in 1983 in Los Angeles, California. The band is known for its fusion of funk, rock, and psychedelic music, and has been credited with popularizing the genre in the 1990s. Red Hot Chili Peppers has released several platinum-selling albums and has toured extensively worldwide.",
+        "id": 14,
         "slug": "red-hot-chili-peppers",
         "title": "Red Hot Chili Peppers",
       },
@@ -2415,6 +2436,7 @@ exports[`Presets > presets should match snapshot 1`] = `
     "origin": {
       "artist": {
         "description": "Deep Purple is an English rock band formed in 1968 in Hertford, England. The band is known for its fusion of blues-rock, hard rock, and progressive rock, and has been credited with popularizing the genre in the 1970s. Deep Purple has released several platinum-selling albums and has toured extensively worldwide.",
+        "id": 3,
         "slug": "deep-purple",
         "title": "Deep Purple",
       },
