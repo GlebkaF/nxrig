@@ -1,0 +1,2434 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Presets > presets should match snapshot 1`] = `
+[
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 42,
+          "Bright": 65,
+          "Gain": 44,
+          "Master": 58,
+          "Middle": 61,
+          "Treble": 69,
+        },
+        "type": "Twin Reverb",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 66,
+          "Level": 52,
+          "LowCut": 43,
+        },
+        "type": "TR212",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 25,
+          "Level": 54,
+          "Sustain": 38,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Gain": 23,
+          "Level": 51,
+          "Tone": 65,
+        },
+        "type": "Blues Drive",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 41,
+          "Level": 38,
+        },
+        "type": "Spring",
+      },
+    },
+    "description": "Bright, jangly, and clean with a touch of warmth. The tone has a crisp attack, clear note separation, and slight chime. There’s minimal distortion—just enough edge for presence—while retaining clarity and dynamics.",
+    "id": "gen_menwg6dy_bc27mjc3s",
+    "origin": {
+      "artist": {
+        "description": "Iconic Southern rock band known for their distinctive guitar harmonies and powerful ballads. Lynyrd Skynyrd created a unique style blending country and rock elements, producing classic American rock anthems.",
+        "slug": "lynyrd-skynyrd",
+        "title": "Lynyrd Skynyrd",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/e4/Skynyrd-Sweet-Home-Alabama.jpg",
+      "part": "Intro",
+      "song": "Sweet Home Alabama",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 8,
+      "type": "single",
+    },
+    "slug": "sweet-home-alabama-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/lynyrd-skynyrd-sweet-home-alabama-tab-s58984",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 62,
+          "Bright": 40,
+          "Gain": 38,
+          "Master": 60,
+          "Middle": 56,
+          "Treble": 36,
+        },
+        "type": "Twin Reverb",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 32,
+          "Level": 52,
+          "LowCut": 45,
+        },
+        "type": "TR212",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": true,
+        "params": {
+          "Depth": 80,
+          "Rate": 45,
+        },
+        "type": "CE-2",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 32,
+          "Level": 36,
+        },
+        "type": "Spring",
+      },
+    },
+    "description": "Clean, watery, slightly dark and chorus-heavy tone with moderate sustain. The sound is mellow, lacks high-end brightness, and has a swirling, modulated character. Not aggressive or compressed; has a laid-back, loose feel.",
+    "id": "gen_menvyq0h_j1ohwnij6",
+    "origin": {
+      "artist": {
+        "description": "Iconic grunge band that transformed rock music in the 1990s. Nirvana's unique sound combined raw guitar power with emotional depth, creating alternative rock masterpieces that defined a generation and influenced modern rock music.",
+        "slug": "nirvana",
+        "title": "Nirvana",
+      },
+      "imageUrl": "/images/cover/nirvana/nevermind.webp",
+      "part": "Intro",
+      "song": "Come As You Are",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 4,
+      "type": "single",
+    },
+    "slug": "come-as-you-are-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/nirvana-come-as-you-are-tab-s14",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 65,
+          "Gain": 70,
+          "Master": 60,
+          "Middle": 40,
+          "Presence": 60,
+          "Treble": 65,
+        },
+        "type": "SLO 100",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 60,
+          "Level": 55,
+          "LowCut": 40,
+        },
+        "type": "RECT 412",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 25,
+          "Level": 55,
+          "Tone": 60,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 46,
+          "125": 54,
+          "16000": 59,
+          "2000": 52,
+          "250": 47,
+          "31": 54,
+          "4000": 58,
+          "500": 44,
+          "62": 56,
+          "8000": 62,
+          "Vol": 53,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 35,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Level": 50,
+          "Tone": 50,
+        },
+        "type": "Room",
+      },
+    },
+    "description": "Punchy, aggressive, tight palm-muted chugs with pronounced midrange, moderate high-end clarity, and strong low-end presence. The tone is saturated but not overly compressed, with percussive attack and moderate sustain.",
+    "id": "gen_meh7i6j2_8cr4dyzia",
+    "origin": {
+      "artist": {
+        "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "slug": "metallica",
+        "title": "Metallica",
+      },
+      "imageUrl": "/images/cover/metallica/the-black-album.webp",
+      "part": "Main Riff",
+      "song": "Enter Sandman",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "enter-sandman-guitar-main-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-enter-sandman-tab-s19",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 44,
+          "Gain": 72,
+          "Master": 62,
+          "Middle": 62,
+          "Presence": 58,
+          "Treble": 69,
+        },
+        "type": "Brit 800",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 46,
+          "Level": 55,
+          "LowCut": 58,
+        },
+        "type": "M1960AV",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Output": 55,
+          "Sensitivity": 68,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 63,
+          "125": 49,
+          "16000": 44,
+          "2000": 68,
+          "250": 50,
+          "31": 42,
+          "4000": 61,
+          "500": 57,
+          "62": 44,
+          "8000": 48,
+          "Vol": 52,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 35,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Level": 50,
+          "Tone": 50,
+        },
+        "type": "Room",
+      },
+    },
+    "description": "Bright, aggressive, tight, with pronounced attack and clarity; features a saturated but controlled distortion, moderate sustain, and enough midrange cut to slice through a mix. There's minimal ambience, keeping the riff precise and punchy.",
+    "id": "gen_meh7yxtq_istxg3la5",
+    "origin": {
+      "artist": {
+        "description": "The Prince of Darkness and godfather of heavy metal, former Black Sabbath vocalist and successful solo artist. Ozzy Osbourne is renowned for his unique vocal style and massive influence on metal music development.",
+        "slug": "ozzy-osborn",
+        "title": "Ozzy Osborn",
+      },
+      "imageUrl": "/images/cover/ozzy-osbourne/crazy-train.webp",
+      "part": "Intro",
+      "song": "Crazy Train",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "crazy-train-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/ozzy-osbourne-crazy-train-tab-s61178",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 44,
+          "Gain": 27,
+          "Master": 62,
+          "Middle": 38,
+          "Presence": 60,
+          "Treble": 67,
+        },
+        "type": "Brit 800",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 65,
+          "Level": 52,
+          "LowCut": 58,
+        },
+        "type": "M1960AV",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 15,
+          "Level": 55,
+          "Sustain": 40,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 18,
+          "Level": 55,
+          "Tone": 65,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 37,
+          "125": 48,
+          "16000": 65,
+          "2000": 52,
+          "250": 47,
+          "31": 45,
+          "4000": 62,
+          "500": 41,
+          "62": 48,
+          "8000": 67,
+          "Vol": 52,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Level": 50,
+          "Tone": 50,
+        },
+        "type": "Room",
+      },
+    },
+    "description": "Bright, jangly, articulate, with a singing sustain and mild overdrive. Clear note separation, chimey highs, and a slightly scooped midrange. Not overly aggressive, but with enough bite to cut through the mix.",
+    "id": "gen_meh7c8l4_gf67b392l",
+    "origin": {
+      "artist": {
+        "description": "Legendary hard rock band that dominated the late 80s and early 90s music scene. Guns N' Roses is renowned for their epic ballads, powerful rock anthems, and distinctive guitar work that helped define classic rock.",
+        "slug": "guns-and-roses",
+        "title": "Guns and Roses",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/60/GunsnRosesAppetiteforDestructionalbumcover.jpg",
+      "part": "Intro",
+      "song": "Sweet Child o Mine",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "sweet-child-o-mine-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-sweet-child-o-mine-tab-s23",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 46,
+          "Gain": 61,
+          "Master": 57,
+          "Middle": 65,
+          "Presence": 53,
+          "Treble": 45,
+        },
+        "type": "Plexi 100",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 44,
+          "Level": 52,
+          "LowCut": 50,
+        },
+        "type": "M1960AX",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 36,
+          "Level": 54,
+          "Sustain": 44,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 32,
+          "Level": 58,
+          "Tone": 42,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 62,
+          "125": 50,
+          "16000": 41,
+          "2000": 60,
+          "250": 52,
+          "31": 48,
+          "4000": 55,
+          "500": 58,
+          "62": 48,
+          "8000": 45,
+          "Vol": 51,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 38,
+          "Level": 32,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Smooth, singing lead tone with expressive sustain, moderate warmth, clear articulation, and subtle bite without harshness. The sound is dynamic, allowing for expressive playing and note definition, with a touch of ambience.",
+    "id": "gen_meh6yh0e_mpx8o7n8n",
+    "origin": {
+      "artist": {
+        "description": "One of the greatest rock bands of all time and pioneers of hard rock and heavy metal. Led Zeppelin created a unique sound blending blues, folk, and rock elements, producing legendary guitar tones and timeless musical masterpieces.",
+        "slug": "led-zeppelin",
+        "title": "Led Zeppelin",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Stairway_to_Heaven_by_Led_Zeppelin_US_promotional_single.png",
+      "part": "Solo",
+      "song": "Stairway to Heaven",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 7,
+      "type": "humbucker",
+    },
+    "slug": "stairway-to-heaven-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/led-zeppelin-stairway-to-heaven-tab-s27t4",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 42,
+          "Bright": 58,
+          "Gain": 38,
+          "Master": 65,
+          "Middle": 54,
+          "Treble": 61,
+        },
+        "type": "Twin Reverb",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 48,
+          "Level": 52,
+          "LowCut": 60,
+        },
+        "type": "TR212",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "100": 43,
+          "1200": 57,
+          "220": 47,
+          "2600": 61,
+          "500": 51,
+          "6400": 54,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 32,
+          "Level": 28,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Delicate, shimmering, clean tone with warmth and clarity. High dynamics for expressive fingerpicking, with a smooth, airy presence. No distortion or aggressive attack; the sound is intimate and natural.",
+    "id": "gen_meh6v9ds_y8jhmhs8n",
+    "origin": {
+      "artist": {
+        "description": "One of the greatest rock bands of all time and pioneers of hard rock and heavy metal. Led Zeppelin created a unique sound blending blues, folk, and rock elements, producing legendary guitar tones and timeless musical masterpieces.",
+        "slug": "led-zeppelin",
+        "title": "Led Zeppelin",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Stairway_to_Heaven_by_Led_Zeppelin_US_promotional_single.png",
+      "part": "Intro",
+      "song": "Stairway to Heaven",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 10,
+      "type": "single",
+    },
+    "slug": "stairway-to-heaven-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/led-zeppelin-stairway-to-heaven-tab-s27",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 65,
+          "Gain": 80,
+          "Master": 60,
+          "Middle": 25,
+          "Presence": 70,
+          "Treble": 75,
+        },
+        "type": "Dual Rect",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 55,
+          "Level": 60,
+          "LowCut": 40,
+        },
+        "type": "RECT 412",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 10,
+          "Level": 70,
+          "Tone": 70,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 25,
+          "125": 65,
+          "16000": 60,
+          "2000": 30,
+          "250": 55,
+          "31": 70,
+          "4000": 65,
+          "500": 30,
+          "62": 75,
+          "8000": 70,
+          "Vol": 50,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 35,
+          "Sensitivity": 55,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Level": 50,
+          "Tone": 50,
+        },
+        "type": "Room",
+      },
+    },
+    "description": "Aggressive, tight, highly articulate, mid-scooped, palm-muted chug with lots of attack, saturated but not muddy, precise and powerful, with clear pick definition and minimal ambience.",
+    "id": "gen_meh65m2y_npavw2gjd",
+    "origin": {
+      "artist": {
+        "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "slug": "metallica",
+        "title": "Metallica",
+      },
+      "imageUrl": "/images/cover/metallica/master-of-puppets.webp",
+      "part": "Main Riff",
+      "song": "Master Of Puppets",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "master-of-puppets-guitar-main-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-master-of-puppets-tab-s455118t3",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 65,
+          "Gain": 85,
+          "Master": 60,
+          "Middle": 40,
+          "Presence": 52,
+          "Treble": 58,
+        },
+        "type": "Dual Rect",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 45,
+          "Level": 55,
+          "LowCut": 60,
+        },
+        "type": "RECT 412",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 20,
+          "Level": 70,
+          "Tone": 60,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 38,
+          "125": 48,
+          "16000": 40,
+          "2000": 48,
+          "250": 44,
+          "31": 48,
+          "4000": 53,
+          "500": 42,
+          "62": 46,
+          "8000": 46,
+          "Vol": 52,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 35,
+          "Sensitivity": 55,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Level": 50,
+          "Tone": 50,
+        },
+        "type": "Room",
+      },
+    },
+    "description": "Aggressive, tight, percussive, mid-heavy with pronounced attack, thick low end, and controlled high frequencies. Slightly scooped mids for clarity, but enough presence to cut through. High gain, minimal noise, dry and direct with little ambience.",
+    "id": "gen_meftu2kp_9tm4qgcd9",
+    "origin": {
+      "artist": {
+        "description": "American nu-metal band known for their aggressive sound, masked personas, and powerful performances. Slipknot created a unique style combining heavy metal with industrial elements and complex rhythms.",
+        "slug": "slipknot",
+        "title": "Slipknot",
+      },
+      "imageUrl": "/images/cover/slipknot/vol-3.webp",
+      "part": "Intro",
+      "song": "Before I Forget",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "before-i-forget-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/slipknot-before-i-forget-tab-s1379",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 44,
+          "Gain": 42,
+          "Master": 60,
+          "Middle": 61,
+          "Presence": 68,
+          "Treble": 71,
+        },
+        "type": "Dual Rect",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 68,
+          "Level": 53,
+          "LowCut": 60,
+        },
+        "type": "RECT 412",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 54,
+          "Level": 58,
+          "Tone": 68,
+        },
+        "type": "Dist One",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "100": 40,
+          "1200": 60,
+          "220": 45,
+          "2600": 65,
+          "500": 50,
+          "6400": 60,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 20,
+          "Sensitivity": 55,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Level": 50,
+          "Tone": 50,
+        },
+        "type": "Room",
+      },
+    },
+    "description": "Very percussive, tight, mid-gain distortion with pronounced attack and clarity. Dry, staccato, and articulate for rapid palm-muted rhythms. Bright top-end for cutting through the mix, but with enough body for fullness.",
+    "id": "gen_meftp13j_wgpgnsr26",
+    "origin": {
+      "artist": {
+        "description": "British post-hardcore band known for their innovative approach to music, combining rock, electronic elements, and socially conscious lyrics. Enter Shikari creates dynamic guitar tones with modern production.",
+        "slug": "enter-shikari",
+        "title": "Enter Shikari",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/6e/Taketotheskies2.jpg",
+      "part": "Intro",
+      "song": "Sorry You're Not A Winner",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "sorry-youre-not-a-winner-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/enter-shikari-sorry-youre-not-a-winner-tab-s34028",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 55,
+          "Gain": 80,
+          "Master": 60,
+          "Middle": 38,
+          "Presence": 65,
+          "Treble": 68,
+        },
+        "type": "Dual Rect",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 58,
+          "Level": 55,
+          "LowCut": 62,
+        },
+        "type": "RECT 412",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Gain": 48,
+          "Ratio": 35,
+          "Release": 30,
+          "Threshold": 42,
+        },
+        "type": "Studio Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 15,
+          "Level": 68,
+          "Tone": 68,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 42,
+          "125": 46,
+          "16000": 48,
+          "2000": 48,
+          "250": 48,
+          "31": 38,
+          "4000": 54,
+          "500": 40,
+          "62": 44,
+          "8000": 53,
+          "Vol": 53,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 35,
+          "Sensitivity": 55,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Level": 50,
+          "Tone": 50,
+        },
+        "type": "Room",
+      },
+    },
+    "description": "Aggressive, high-gain, tight low end, percussive attack, moderately scooped mids, bright but controlled highs, clear note separation, substantial sustain, minimal noise.",
+    "id": "gen_meftgp5v_1uj3ojci1",
+    "origin": {
+      "artist": {
+        "description": "Welsh metalcore band known for their melodic approach to metal music, combining aggressive riffs with emotional melodies and powerful vocal performances. Masters of modern metal guitar tones.",
+        "slug": "bullet-for-my-valentine",
+        "title": "Bullet for My Valentine",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/25/Bullet_for_My_Valentine_-_Waking_The_Demon.jpg",
+      "part": "Main Riff",
+      "song": "Waking the Demon",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "waking-the-demon-guitar-main-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/bullet-for-my-valentine-waking-the-demon-tab-s23507",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 65,
+          "Gain": 75,
+          "Master": 60,
+          "Middle": 70,
+          "Presence": 50,
+          "Treble": 45,
+        },
+        "type": "Die VH4",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 40,
+          "Level": 55,
+          "LowCut": 40,
+        },
+        "type": "RECT 412",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 20,
+          "Level": 55,
+          "Tone": 60,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "100": 40,
+          "1200": 65,
+          "220": 45,
+          "2600": 45,
+          "500": 60,
+          "6400": 35,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 35,
+          "Sensitivity": 55,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Level": 50,
+          "Tone": 50,
+        },
+        "type": "Room",
+      },
+    },
+    "description": "Heavy, tight, percussive, and aggressive with a thick midrange, pronounced low end, and a slight high-end bite. The tone is focused and modern, cutting through the mix but not overly bright. Palm-muted chugs are punchy and articulate, with minimal noise and maximum clarity.",
+    "id": "gen_mefrrfkk_w8x18ppjc",
+    "origin": {
+      "artist": {
+        "description": "German industrial metal band known for their powerful sound, theatrical performances, and unique style combining heavy metal with electronic elements. Rammstein creates intense, atmospheric guitar tones.",
+        "slug": "rammstein",
+        "title": "Rammstein",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/41/Sonnesingle.jpg",
+      "part": "Main Riff",
+      "song": "Sonne",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "sonne-guitar-main-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/rammstein-sonne-tab-s51438",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 44,
+          "Gain": 54,
+          "Master": 68,
+          "Middle": 61,
+          "Presence": 53,
+          "Treble": 57,
+        },
+        "type": "Plexi 100",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 58,
+          "Level": 52,
+          "LowCut": 54,
+        },
+        "type": "M1960AX",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Bass": 46,
+          "Gain": 28,
+          "Treble": 58,
+          "Volume": 55,
+        },
+        "type": "RC Boost",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Level": 50,
+          "Tone": 50,
+        },
+        "type": "Room",
+      },
+    },
+    "description": "Punchy, mid-focused, crunchy rhythm tone with strong attack and clarity; moderate gain for articulation; bright but not harsh, dynamic and responsive to picking; tight low end with ringing chords.",
+    "id": "gen_meh81zzg_llzmwnnp5",
+    "origin": {
+      "artist": {
+        "description": "Legendary Australian hard rock band known for their powerful guitar riffs, thunderous sound, and iconic songs. AC/DC has been a driving force in rock music for decades, influencing countless musicians with their high-energy performances and classic rock anthems.",
+        "slug": "ac-dc",
+        "title": "AC/DC",
+      },
+      "imageUrl": "/images/cover/acdc/back-in-black.webp",
+      "part": "Intro",
+      "song": "Back in Black",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "back-in-black-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/ac-dc-back-in-black-tab-s1024",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 43,
+          "Bright": 55,
+          "Gain": 38,
+          "Master": 58,
+          "Middle": 52,
+          "Treble": 62,
+        },
+        "type": "Twin Reverb",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 54,
+          "Level": 53,
+          "LowCut": 57,
+        },
+        "type": "TR212",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 35,
+          "Level": 52,
+          "Sustain": 38,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 35,
+          "Level": 42,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Warm, clean, and articulate tone with a smooth, rounded attack and moderate sustain. The sound is open and slightly bright, but with a mellow character. There is minimal distortion or breakup, and the dynamics are preserved for expressive fingerpicking. Subtle ambience enhances the atmosphere.",
+    "id": "gen_meh734a9_vn6pc6u9f",
+    "origin": {
+      "artist": {
+        "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "slug": "metallica",
+        "title": "Metallica",
+      },
+      "imageUrl": "/images/cover/metallica/the-black-album.webp",
+      "part": "Intro",
+      "song": "Nothing Else Matters",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 7,
+      "type": "single",
+    },
+    "slug": "nothing-else-matters-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-nothing-else-matters-tab-s439171",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 44,
+          "Bright": 60,
+          "Gain": 35,
+          "Master": 70,
+          "Middle": 38,
+          "Treble": 62,
+        },
+        "type": "Twin Reverb",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 65,
+          "Level": 53,
+          "LowCut": 55,
+        },
+        "type": "RECT 412",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 20,
+          "Level": 53,
+          "Sustain": 40,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": true,
+        "params": {
+          "E.Level": 57,
+          "Feedback": 52,
+          "Time": 72,
+        },
+        "type": "Digital Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": true,
+        "params": {
+          "Intensity": 67,
+          "Rate": 38,
+          "Width": 80,
+        },
+        "type": "ST Chorus",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 60,
+          "Sensitivity": 48,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 74,
+          "Level": 68,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "The tone is crystal clear, glassy, and atmospheric with rich depth and shimmer. There's a pronounced stereo spread from the chorus, lush delays, and a haunting reverb tail. The attack is crisp but not harsh, and the sustain is natural. Overall, it is a clean, slightly compressed sound with a dramatic, spacious feel.",
+    "id": "pantera-floods-intro-",
+    "origin": {
+      "artist": {
+        "description": "Pantera is an American heavy metal band formed in 1981 in Arlington, Texas. The band is known for its aggressive sound, powerful riffs, and innovative use of rhythm guitar. Pantera has been credited with popularizing the groove metal genre and has influenced countless bands in the metal scene.",
+        "slug": "pantera",
+        "title": "Pantera",
+      },
+      "imageUrl": "/images/cover/pantera/the-great-southern-thunder.webp",
+      "part": "Intro",
+      "song": "Floods",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 10,
+      "type": "single",
+    },
+    "slug": "pantera-floods-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/pantera-floods-tab-s84836t2",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 51,
+          "Gain": 86,
+          "Master": 58,
+          "Middle": 66,
+          "Presence": 43,
+          "Treble": 46,
+        },
+        "type": "Dual Rect",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 42,
+          "Level": 54,
+          "LowCut": 44,
+        },
+        "type": "RECT 412",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 48,
+          "Level": 52,
+          "Sustain": 62,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": true,
+        "params": {
+          "Echo": 59,
+          "Intensity": 40,
+          "Rate": 39,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 32,
+          "Level": 71,
+          "Tone": 64,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 69,
+          "125": 51,
+          "16000": 41,
+          "2000": 72,
+          "250": 54,
+          "31": 43,
+          "4000": 65,
+          "500": 62,
+          "62": 47,
+          "8000": 46,
+          "Vol": 53,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 58,
+          "Sensitivity": 47,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 66,
+          "Level": 57,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Expressive, singing lead tone with plenty of sustain and clarity. The sound is thick and saturated with smooth distortion, yet dynamic enough to respond to pick attack. There is pronounced midrange presence for note definition, a touch of warmth, and a wide, ambient spatial effect from delay and reverb. The tone is fluid for legato and bends, with controlled feedback and minimal noise.",
+    "id": "pantera-floods-guitar-solo",
+    "origin": {
+      "artist": {
+        "description": "Pantera is an American heavy metal band formed in 1981 in Arlington, Texas. The band is known for its aggressive sound, powerful riffs, and innovative use of rhythm guitar. Pantera has been credited with popularizing the groove metal genre and has influenced countless bands in the metal scene.",
+        "slug": "pantera",
+        "title": "Pantera",
+      },
+      "imageUrl": "/images/cover/pantera/the-great-southern-thunder.webp",
+      "part": "Solo",
+      "song": "Floods",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 10,
+      "type": "humbucker",
+    },
+    "slug": "pantera-floods-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/pantera-floods-tab-s84836",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 38,
+          "Gain": 82,
+          "Master": 54,
+          "Middle": 73,
+          "Presence": 53,
+          "Treble": 57,
+        },
+        "type": "Uber HiGain",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 43,
+          "Level": 55,
+          "LowCut": 62,
+        },
+        "type": "UBER412",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": true,
+        "params": {
+          "E.Level": 34,
+          "Feedback": 38,
+          "Time": 56,
+        },
+        "type": "Digital Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 22,
+          "Level": 68,
+          "Tone": 46,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 64,
+          "125": 48,
+          "16000": 41,
+          "2000": 64,
+          "250": 48,
+          "31": 40,
+          "4000": 59,
+          "500": 55,
+          "62": 44,
+          "8000": 48,
+          "Vol": 53,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": true,
+        "params": {
+          "Intensity": 42,
+          "Rate": 28,
+          "Width": 65,
+        },
+        "type": "ST Chorus",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 60,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 62,
+          "Level": 38,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Extremely expressive lead tone with rich sustain, strong midrange presence, singing quality, and smooth high end. The tone is thick yet articulate, with fluid legato and pinch harmonics, enhanced by ambient effects and a touch of stereo width.",
+    "id": "pantera-floods-outro-solo",
+    "origin": {
+      "artist": {
+        "description": "Pantera is an American heavy metal band formed in 1981 in Arlington, Texas. The band is known for its aggressive sound, powerful riffs, and innovative use of rhythm guitar. Pantera has been credited with popularizing the groove metal genre and has influenced countless bands in the metal scene.",
+        "slug": "pantera",
+        "title": "Pantera",
+      },
+      "imageUrl": "/images/cover/pantera/the-great-southern-thunder.webp",
+      "part": "Outro Solo",
+      "song": "Floods",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 6,
+      "type": "humbucker",
+    },
+    "slug": "pantera-floods-outro-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/pantera-floods-tab-s84836t4",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 44,
+          "Bright": 63,
+          "Gain": 40,
+          "Master": 60,
+          "Middle": 42,
+          "Treble": 67,
+        },
+        "type": "Jazz Clean",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 65,
+          "Level": 54,
+          "LowCut": 60,
+        },
+        "type": "JZ120",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 45,
+          "Level": 52,
+          "Sustain": 38,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "1000": 46,
+          "125": 44,
+          "16000": 70,
+          "2000": 56,
+          "250": 46,
+          "31": 38,
+          "4000": 62,
+          "500": 42,
+          "62": 40,
+          "8000": 67,
+          "Vol": 50,
+        },
+        "type": "10-Band",
+      },
+      "modulation": {
+        "enabled": true,
+        "params": {
+          "Depth": 26,
+          "Rate": 34,
+        },
+        "type": "CE-2",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 40,
+          "Sensitivity": 48,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 62,
+          "Level": 40,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Crystal clear, glassy clean sound with a shimmering high end, pronounced articulation, and subtle spatial depth. The tone is dynamic with minimal distortion, emphasizing note separation and clarity.",
+    "id": "one-guitar-intro",
+    "origin": {
+      "artist": {
+        "description": "One of the most influential heavy metal bands in music history. Metallica revolutionized thrash metal with their complex compositions, powerful guitar riffs, and innovative approach to songwriting, creating timeless metal classics.",
+        "slug": "metallica",
+        "title": "Metallica",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/fb/Metallica_-_One_cover.jpg",
+      "part": "Intro",
+      "song": "One",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 8,
+      "type": "single",
+    },
+    "slug": "one-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-one-tab-s444t4",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 46,
+          "Bright": 60,
+          "Gain": 42,
+          "Master": 56,
+          "Middle": 54,
+          "Treble": 59,
+        },
+        "type": "Jazz Clean",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 52,
+          "Level": 52,
+          "LowCut": 55,
+        },
+        "type": "JZ120",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 45,
+          "Level": 52,
+          "Sustain": 38,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": true,
+        "params": {
+          "E.Level": 58,
+          "Feedback": 45,
+          "Time": 54,
+        },
+        "type": "Digital Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": true,
+        "params": {
+          "100": 44,
+          "1200": 56,
+          "220": 47,
+          "2600": 60,
+          "500": 50,
+          "6400": 54,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": true,
+        "params": {
+          "Decay": 40,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 38,
+          "Level": 40,
+        },
+        "type": "Plate",
+      },
+    },
+    "description": "Clean, glassy, and slightly compressed tone with a pronounced rhythmic delay. Moderate brightness, tight low end, and percussive attack. The delay effect creates a spacious, echoing texture that is central to the intro’s vibe.",
+    "id": "my-way-clean-guitar-intro",
+    "origin": {
+      "artist": {
+        "description": "Limp Bizkit is an American rock band formed in 1994 in Jacksonville, Florida. The band is known for its fusion of nu metal, alternative metal, and rap metal, and has been credited with popularizing the genre in the early 2000s. Limp Bizkit has released several platinum-selling albums and has toured extensively worldwide.",
+        "slug": "limp-bizkit",
+        "title": "Limp Bizkit",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b1/My_Way_%28Limp_Bizkit_song%29_cover_art.jpg",
+      "part": "Intro",
+      "song": "My Way",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 8,
+      "type": "single",
+    },
+    "slug": "my-way-clean-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/limp-bizkit-my-way-tab-s11567",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 46,
+          "Gain": 32,
+          "Master": 68,
+          "Middle": 65,
+          "Presence": 55,
+          "Treble": 60,
+        },
+        "type": "Plexi 100",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 56,
+          "Level": 52,
+          "LowCut": 45,
+        },
+        "type": "M1960AV",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Sustain": 73,
+          "Tone": 62,
+          "Volume": 55,
+        },
+        "type": "Muff Fuzz",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": true,
+        "params": {
+          "Intensity": 65,
+          "Mode": 30,
+          "Speed": 38,
+          "Volume": 53,
+        },
+        "type": "U-Vibe",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 40,
+          "Level": 28,
+        },
+        "type": "Spring",
+      },
+    },
+    "description": "Warm, slightly overdriven, dynamic, expressive tone with vintage character. Smooth highs, rounded low end, and a touch of ambient depth. Responsive to playing dynamics and volume knob changes, with subtle modulation and a roomy feel.",
+    "id": "hey-joe-whole-song",
+    "origin": {
+      "artist": {
+        "description": "Jimi Hendrix was an American guitarist, singer, and songwriter who is widely regarded as one of the most influential and innovative musicians in the history of rock and roll. He is known for his unique guitar playing style, which combined elements of blues, jazz, and rock, and for his contributions to the development of psychedelic rock and the electric guitar.",
+        "slug": "jimi-hendrix",
+        "title": "Jimi Hendrix",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/73/Jimi_Hendrix_-_Hey_Joe.jpg",
+      "part": "Whole Song",
+      "song": "Hey Joe",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 7,
+      "type": "single",
+    },
+    "slug": "hey-joe-whole-song",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/jimi-hendrix-hey-joe-tab-s22556",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 48,
+          "Bright": 60,
+          "Gain": 42,
+          "Master": 54,
+          "Middle": 42,
+          "Treble": 63,
+        },
+        "type": "Twin Reverb",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 57,
+          "Level": 52,
+          "LowCut": 54,
+        },
+        "type": "TR212",
+      },
+      "compressor": {
+        "enabled": true,
+        "params": {
+          "Clipping": 45,
+          "Level": 54,
+          "Sustain": 38,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Distortion+",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "1200": 50,
+          "220": 50,
+          "2600": 50,
+          "500": 50,
+          "6400": 50,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 44,
+          "Level": 59,
+        },
+        "type": "Spring",
+      },
+    },
+    "description": "Clean, chimey, slightly compressed tone with mild warmth and clarity. Subtle sparkle on top, moderate sustain, and a natural dynamic response. The sound is intimate and expressive, with delicate attack and no harshness.",
+    "id": "scar-tissue-guitar-intro",
+    "origin": {
+      "artist": {
+        "description": "Red Hot Chili Peppers is an American rock band formed in 1983 in Los Angeles, California. The band is known for its fusion of funk, rock, and psychedelic music, and has been credited with popularizing the genre in the 1990s. Red Hot Chili Peppers has released several platinum-selling albums and has toured extensively worldwide.",
+        "slug": "red-hot-chili-peppers",
+        "title": "Red Hot Chili Peppers",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/96/Scartissue.jpg",
+      "part": "Intro",
+      "song": "Scar Tissue",
+    },
+    "pickup": {
+      "position": "neck",
+      "tone": 7,
+      "type": "single",
+    },
+    "slug": "scar-tissue-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/red-hot-chili-peppers-scar-tissue-tab-s49",
+  },
+  {
+    "chain": {
+      "amplifier": {
+        "enabled": true,
+        "params": {
+          "Bass": 38,
+          "Gain": 58,
+          "Master": 62,
+          "Middle": 64,
+          "Presence": 54,
+          "Treble": 58,
+        },
+        "type": "Plexi 100",
+      },
+      "cabinet": {
+        "enabled": true,
+        "params": {
+          "HighCut": 45,
+          "Level": 55,
+          "LowCut": 60,
+        },
+        "type": "M1960AV",
+      },
+      "compressor": {
+        "enabled": false,
+        "params": {
+          "Clipping": 50,
+          "Level": 50,
+          "Sustain": 50,
+        },
+        "type": "K Comp",
+      },
+      "delay": {
+        "enabled": false,
+        "params": {
+          "Echo": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "Analog Delay",
+      },
+      "effect": {
+        "enabled": true,
+        "params": {
+          "Drive": 32,
+          "Level": 55,
+          "Tone": 48,
+        },
+        "type": "T Screamer",
+      },
+      "eq": {
+        "enabled": false,
+        "params": {
+          "100": 46,
+          "1200": 52,
+          "220": 48,
+          "2600": 52,
+          "500": 50,
+          "6400": 54,
+        },
+        "type": "6-Band",
+      },
+      "modulation": {
+        "enabled": false,
+        "params": {
+          "Depth": 50,
+          "Intensity": 50,
+          "Rate": 50,
+        },
+        "type": "CE-1",
+      },
+      "noisegate": {
+        "enabled": false,
+        "params": {
+          "Decay": 50,
+          "Sensitivity": 50,
+        },
+        "type": "Noise Gate",
+      },
+      "reverb": {
+        "enabled": true,
+        "params": {
+          "Decay": 34,
+          "Level": 24,
+        },
+        "type": "Spring",
+      },
+    },
+    "description": "Raw, mid-focused, crunchy tone with moderate gain. The sound is punchy and slightly gritty, with good note separation, minimal effects, and a vintage flavor. The attack is clear but not overly sharp, with moderate sustain and a touch of warmth.",
+    "id": "smoke-on-the-water-guitar-intro",
+    "origin": {
+      "artist": {
+        "description": "Deep Purple is an English rock band formed in 1968 in Hertford, England. The band is known for its fusion of blues-rock, hard rock, and progressive rock, and has been credited with popularizing the genre in the 1970s. Deep Purple has released several platinum-selling albums and has toured extensively worldwide.",
+        "slug": "deep-purple",
+        "title": "Deep Purple",
+      },
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/ae/Smoke_on_the_Water_cover.jpg",
+      "part": "Intro",
+      "song": "Smoke On The Water",
+    },
+    "pickup": {
+      "position": "bridge",
+      "tone": 7,
+      "type": "humbucker",
+    },
+    "slug": "smoke-on-the-water-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/deep-purple-smoke-on-the-water-tab-s329",
+  },
+]
+`;
