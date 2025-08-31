@@ -3,7 +3,7 @@
 import { presets } from "lib/public/presets";
 import { PresetCard } from "components/PresetCard";
 import { useState } from "react";
-import { publicConfig } from "lib/public/config";
+import Link from "next/link";
 
 export default function ClientSearch(): React.ReactElement {
   const [searchQuery, setSearchQuery] = useState("");
@@ -18,16 +18,6 @@ export default function ClientSearch(): React.ReactElement {
         preset.origin.part.toLowerCase().includes(searchQuery.toLowerCase()),
     )
     .sort((a, b) => a.origin.song.localeCompare(b.origin.song));
-
-  const handleRequestPreset = (): void => {
-    const emailSubject = encodeURIComponent(
-      publicConfig.email.subjects.presetRequest,
-    );
-    const emailBody = encodeURIComponent(
-      publicConfig.email.templates.presetRequest(searchQuery),
-    );
-    window.location.href = `mailto:${publicConfig.contacts.email}?subject=${emailSubject}&body=${emailBody}`;
-  };
 
   return (
     <>
@@ -56,12 +46,11 @@ export default function ClientSearch(): React.ReactElement {
       ) : (
         <div className="text-center py-12">
           <p className="text-gray-400 mb-4">No presets found</p>
-          <button
-            onClick={handleRequestPreset}
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
-          >
-            Request preset
-          </button>
+          <Link href="/order">
+            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors">
+              Request Patch
+            </button>
+          </Link>
         </div>
       )}
     </>
