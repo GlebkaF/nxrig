@@ -1,11 +1,6 @@
 import presetsRaw from "data/presets.json";
 import artistsRaw from "data/artists.json";
-import { validateChain } from "lib/core/schemas";
-import { Preset } from "./interface";
-
-presetsRaw.forEach((preset) => {
-  validateChain(preset.chain);
-});
+import { validatePresetWithArtist } from "./schemas";
 
 export const presets = presetsRaw.map((preset) => {
   const artist = artistsRaw.find(
@@ -16,7 +11,8 @@ export const presets = presetsRaw.map((preset) => {
     throw new Error(`Artist not found for preset ${preset.id}`);
   }
 
-  const validatedPreset: Preset = {
+  // Создаем объект с полным artist для валидации
+  const presetWithArtist = {
     id: preset.id,
     origin: {
       artist: artist,
@@ -25,12 +21,14 @@ export const presets = presetsRaw.map((preset) => {
       imageUrl: preset.origin.imageUrl,
     },
     description: preset.description,
-    // @ts-expect-error - TODO: fix this
     chain: preset.chain,
-    // @ts-expect-error - TODO: fix this
     pickup: preset.pickup,
     slug: preset.slug,
     tabsUrl: preset.tabsUrl,
   };
+
+  // Валидируем весь preset с помощью Zod схемы
+  const validatedPreset = validatePresetWithArtist(presetWithArtist);
+
   return validatedPreset;
 });

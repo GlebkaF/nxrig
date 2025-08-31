@@ -10,4 +10,4 @@ export { reverbSchema } from "./reverb";
 export { delaySchema } from "./delay";
 
 // Основные экспорты для работы с Chain
-export { validateChain, type ValidatedChain } from "./chain";
+export { chainSchema, validateChain, type ValidatedChain } from "./chain";
