@@ -1,6 +1,773 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-01T12:26:01.531Z",
+      "originalPrompt": "Metallica Nothing Else Matters Solo",
+      "proDescription": {
+        "tone_title": "Nothing Else Matters Solo",
+        "genre": "Classic Rock / Ballad Metal",
+        "sound_description": "Smooth, singing lead tone with rich sustain, moderate warmth, clarity, and a touch of spaciousness. The sound is expressive and dynamic, with enough gain for fluid legato and vibrato, but retains note definition and avoids harshness.",
+        "guitar_rig_description": "Noise gate: not used (solo is clean enough, no high-gain noise issues). Compressor: light compression for sustain and evenness, enhancing smoothness without squashing dynamics. Overdrive/Distortion/Boost: mild overdrive or boost in front of the amp for added sustain and warmth, but not heavy distortion. Amplifier: classic high-headroom clean or edge-of-breakup tube amp (e.g., Fender Clean or Marshall JCM800 set clean), providing clarity and a touch of tube warmth. Cabinet: 4x12 or 2x12 cabinet with vintage-voiced speakers for rounded highs and full lows. EQ: subtle mid and treble boost to ensure the solo cuts through the mix without excessive brightness. Modulation: not used. Delay: subtle analog or tape-style delay with short repeats, creating depth and enhancing phrasing. Reverb: plate or hall reverb for spatial dimension, but kept moderate to avoid washing out articulation.",
+        "references": [
+          "Metallica - Nothing Else Matters (solo section)",
+          "Guns N' Roses - November Rain (solo)",
+          "Scorpions - Still Loving You (solo)"
+        ],
+        "song_part": "lead solo",
+        "preferred_pickup": "neck humbucker, tone = 7",
+        "additional_info": "Prefer a guitar with humbuckers (e.g., Les Paul or ESP Eclipse). Use expressive vibrato and sustain techniques. Medium or light string gauge (e.g., .010-.046) for comfortable bends. Picking hand muting for noise control. Avoid excessive gain to maintain clarity and articulation."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp (Compression, Sensitivity: 9 o'clock, Output: 1-2 o'clock)",
+          "Ibanez TS808 Tube Screamer (Overdrive, Drive: 9 o'clock, Tone: 11 o'clock, Level: 2 o'clock)",
+          "Boss GE-7 Equalizer (EQ, 800Hz: +2dB, 1.6kHz: +2dB, 3.2kHz: +1dB, 100Hz: flat, Level: +1dB)",
+          "MXR Carbon Copy Analog Delay (Delay, Mix: 10 o'clock, Regen: 9 o'clock, Delay: 11 o'clock)",
+          "TC Electronic Hall of Fame Reverb (Plate mode, Decay: 11 o'clock, Tone: 10 o'clock, Level: 10 o'clock)"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenbacks",
+        "settings": {
+          "amp": {
+            "Gain": 3.5,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 6.5,
+            "Presence": 5,
+            "Master": 4
+          },
+          "compressor": {
+            "Sensitivity": 9,
+            "Output": 2
+          },
+          "overdrive": {
+            "Drive": 3,
+            "Tone": 5.5,
+            "Level": 7
+          },
+          "eq": {
+            "800Hz": "+2dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "+1dB",
+            "100Hz": "0dB",
+            "Level": "+1dB"
+          },
+          "delay": {
+            "Mix": 10,
+            "Regen": 9,
+            "Delay": 11
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": 11,
+            "Tone": 10,
+            "Level": 10
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 58,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Drive": 32,
+            "Tone": 44
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 36,
+            "Master": 60,
+            "Bass": 54,
+            "Middle": 62,
+            "Treble": 58,
+            "Presence": 52
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 55
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 48,
+            "220": 50,
+            "500": 56,
+            "1200": 60,
+            "2600": 62,
+            "6400": 53
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 42,
+            "Decay": 56
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 36,
+            "Rate": 38,
+            "Echo": 44
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 58,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Drive": 32,
+                "Tone": 44
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 36,
+                "Master": 60,
+                "Bass": 54,
+                "Middle": 62,
+                "Treble": 58,
+                "Presence": 52
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 55
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 48,
+                "220": 50,
+                "500": 56,
+                "1200": 60,
+                "2600": 62,
+                "6400": 53
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 42,
+                "Decay": 56
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 36,
+                "Rate": 38,
+                "Echo": 44
+              }
+            }
+          },
+          "prompt": "Metallica Nothing Else Matters Solo",
+          "timestamp": "2025-09-01T12:26:01.531Z"
+        }
+      ],
+      "id": "gen_mf13f8w3_275na8g1h",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-01T12:20:25.656Z",
+      "originalPrompt": "Metallica Nothing Else Matters Solo",
+      "proDescription": {
+        "tone_title": "Nothing Else Matters Solo",
+        "genre": "Classic Metal Ballad / Clean Lead",
+        "sound_description": "Warm, clear, and expressive lead tone with smooth sustain, gentle attack, and subtle ambient depth. The sound is articulate but not overly bright, allowing for emotional phrasing and expressive bends, with enough clarity to cut through the mix without harshness.",
+        "guitar_rig_description": "1. Noise gate: used gently to minimize noise during pauses without choking sustain. 2. Compressor: lightly used to even out dynamics and enhance sustain during softer passages. 3. Overdrive/distortion/boost: mild overdrive/boost to add warmth, sustain, and a touch of grit without heavy distortion. 4. Amplifier: clean-to-crunchy tube amp model with a warm midrange and moderate breakup when picking harder. 5. Cabinet: 4x12 closed-back cabinet simulation for fullness and smooth high-end. 6. EQ: subtle mid boost and slight high cut to maintain clarity and prevent harshness. 7. Modulation: not used. 8. Delay: stereo delay with low mix for subtle repeats, adding space without clutter. 9. Reverb: plate or hall reverb for ambient depth and sustain.",
+        "references": [
+          "Metallica - Nothing Else Matters (album version)",
+          "Guns N' Roses - November Rain (solo tone)",
+          "Bon Jovi - Wanted Dead or Alive (solo)"
+        ],
+        "song_part": "solo",
+        "preferred_pickup": "neck humbucker, tone = 7",
+        "additional_info": "Use neck pickup for warmth and fluidity; play with expressive bends and vibrato. Strings should be fresh but not overly bright; consider slightly heavier gauge for sustain. Use a medium pick and moderate picking attack."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Keeley Compressor Plus",
+          "Ibanez TS9 Tube Screamer",
+          "MXR 10-Band EQ",
+          "Strymon Timeline (Tape Delay)",
+          "Strymon BigSky (Plate Reverb)"
+        ],
+        "amplifier": "Marshall JCM800 2204",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 4.5,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 4.5,
+            "Presence": 4,
+            "Master": 3.5
+          },
+          "compressor": {
+            "Sustain": 11,
+            "Level": 12,
+            "Blend": 10,
+            "Attack": 1
+          },
+          "overdrive": {
+            "Drive": 3,
+            "Tone": 4.5,
+            "Level": 7.5
+          },
+          "eq": {
+            "800Hz": "+3dB",
+            "1.6kHz": "+2dB",
+            "6.4kHz": "-2dB"
+          },
+          "delay": {
+            "Type": "Tape",
+            "Time": 430,
+            "Repeats": 2.5,
+            "Mix": 14,
+            "Modulation": "off"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": 4,
+            "Mix": 17,
+            "Tone": 5
+          },
+          "noise_gate": {
+            "Threshold": "-50dB",
+            "Decay": "medium"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 45,
+            "Decay": 65
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 58,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Drive": 28,
+            "Tone": 38
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 38,
+            "Master": 58,
+            "Bass": 54,
+            "Middle": 62,
+            "Treble": 43,
+            "Presence": 45
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 44
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 48,
+            "62": 51,
+            "125": 54,
+            "250": 55,
+            "500": 58,
+            "1000": 62,
+            "2000": 59,
+            "4000": 46,
+            "8000": 41,
+            "16000": 39,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 43,
+            "Decay": 59
+          }
+        },
+        "delay": {
+          "type": "Tape Echo",
+          "enabled": true,
+          "params": {
+            "Level": 27,
+            "Time": 54,
+            "Repeat": 34
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 45,
+                "Decay": 65
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 58,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Drive": 28,
+                "Tone": 38
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 38,
+                "Master": 58,
+                "Bass": 54,
+                "Middle": 62,
+                "Treble": 43,
+                "Presence": 45
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 44
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 48,
+                "62": 51,
+                "125": 54,
+                "250": 55,
+                "500": 58,
+                "1000": 62,
+                "2000": 59,
+                "4000": 46,
+                "8000": 41,
+                "16000": 39,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 43,
+                "Decay": 59
+              }
+            },
+            "delay": {
+              "type": "Tape Echo",
+              "enabled": true,
+              "params": {
+                "Level": 27,
+                "Time": 54,
+                "Repeat": 34
+              }
+            }
+          },
+          "prompt": "Metallica Nothing Else Matters Solo",
+          "timestamp": "2025-09-01T12:20:25.656Z"
+        }
+      ],
+      "id": "gen_mf1381q9_6eicf9gne",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2025-09-01T12:17:15.091Z",
+      "originalPrompt": "Metallica Nothing Else Matters Solo",
+      "proDescription": {
+        "tone_title": "Nothing Else Matters Solo",
+        "genre": "Classic Rock / Clean Melodic Metal Ballad",
+        "sound_description": "Warm, rounded clean tone with a touch of sustain and subtle breakup; slightly compressed dynamics for smoothness; bright but not harsh highs; lush spatial depth; minimal aggression, high clarity, with melodic singing sustain.",
+        "guitar_rig_description": "Noise gate: not used (signal is clean with low noise); Compressor: used lightly to even out dynamics and enhance sustain; Overdrive/Distortion/Boost: very mild overdrive or clean boost to add a touch of warmth and breakup, but not heavy distortion; Amplifier: clean channel of a high-headroom tube amp (e.g., Fender, Mesa/Boogie Mark IIC+ clean) for a glassy, dynamic response; Cabinet: 2x12 or 4x12 closed-back with bright speakers (e.g., Celestion Vintage 30), miked for clarity; EQ: post-amp EQ used to roll off excessive lows and add presence for solo cut; Modulation: not used; Delay: used subtly, short to medium delay for ambience and to add depth behind the notes; Reverb: plate or hall reverb for lush spatial feel, but not overwhelming.",
+        "references": [
+          "Metallica - Nothing Else Matters (studio version, solo)",
+          "Scorpions - Still Loving You (solo tone reference)",
+          "Guns N' Roses - November Rain (solo outro)"
+        ],
+        "song_part": "guitar solo",
+        "preferred_pickup": "neck humbucker, tone = 7 (rolled off slightly for warmth)",
+        "additional_info": "Use fingers or soft pick for smoother attack; light string gauge (e.g., .010-.046); moderate volume; vibrato and bends for expressiveness."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Klone Centaur Professional Overdrive",
+          "Boss GE-7 Graphic Equalizer",
+          "TC Electronic Flashback Delay",
+          "Strymon blueSky Reverberator"
+        ],
+        "amplifier": "Mesa/Boogie Mark IIC+ (Clean Channel)",
+        "cabinet": "Mesa/Boogie Rectifier 2x12 Vertical Slant with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Channel": "Clean",
+            "Gain": 4,
+            "Bass": 4,
+            "Middle": 5,
+            "Treble": 6.5,
+            "Presence": 6,
+            "Master": 5
+          },
+          "compressor": {
+            "Blend": "11 o'clock",
+            "Volume": "unity",
+            "Compression": "9 o'clock (low, just for gentle sustain)"
+          },
+          "overdrive": {
+            "Gain": "9 o'clock (very low, just a touch of breakup)",
+            "Tone": "noon",
+            "Level": "unity or slight boost"
+          },
+          "eq": {
+            "100Hz": "-2dB",
+            "200Hz": "-1dB",
+            "800Hz": "+1dB",
+            "1.6kHz": "+1.5dB",
+            "3.2kHz": "+2dB",
+            "6.4kHz": "+1dB"
+          },
+          "delay": {
+            "Time": "380ms",
+            "Mix": "15% (barely audible, for ambience)",
+            "Repeats": "2-3"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": "medium (12 o'clock)",
+            "Mix": "9 o'clock (subtle, just enough for lushness)"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 58,
+            "Threshold": 60,
+            "Ratio": 45,
+            "Release": 52
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 55,
+            "Gain": 22,
+            "Bass": 53,
+            "Treble": 47
+          }
+        },
+        "amplifier": {
+          "type": "SLO 100",
+          "enabled": true,
+          "params": {
+            "Gain": 28,
+            "Master": 67,
+            "Bass": 43,
+            "Middle": 56,
+            "Treble": 54,
+            "Presence": 58
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 59,
+            "HighCut": 55
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 41,
+            "220": 46,
+            "500": 51,
+            "1200": 54,
+            "2600": 58,
+            "6400": 61
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 57,
+            "Decay": 63
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 41,
+            "Feedback": 36,
+            "Time": 43
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 58,
+                "Threshold": 60,
+                "Ratio": 45,
+                "Release": 52
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 55,
+                "Gain": 22,
+                "Bass": 53,
+                "Treble": 47
+              }
+            },
+            "amplifier": {
+              "type": "SLO 100",
+              "enabled": true,
+              "params": {
+                "Gain": 28,
+                "Master": 67,
+                "Bass": 43,
+                "Middle": 56,
+                "Treble": 54,
+                "Presence": 58
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 59,
+                "HighCut": 55
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 41,
+                "220": 46,
+                "500": 51,
+                "1200": 54,
+                "2600": 58,
+                "6400": 61
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 57,
+                "Decay": 63
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 41,
+                "Feedback": 36,
+                "Time": 43
+              }
+            }
+          },
+          "prompt": "Metallica Nothing Else Matters Solo",
+          "timestamp": "2025-09-01T12:17:15.091Z"
+        }
+      ],
+      "id": "gen_mf133yos_2a19qulmo",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-08-29T15:03:18.516Z",
       "originalPrompt": "Creep Radiohead Intro \n",
       "proDescription": {
@@ -10621,6 +11388,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-08-29T15:06:04.354Z"
+    "lastUpdated": "2025-09-01T12:26:33.723Z"
   }
 }
