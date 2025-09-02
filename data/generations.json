@@ -1,6 +1,253 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-02T16:25:42.912Z",
+      "originalPrompt": "The Eagles Hotel California Solo ",
+      "proDescription": {
+        "tone_title": "Hotel California - Solo",
+        "genre": "Classic Rock / 70s Rock",
+        "sound_description": "Smooth, singing lead tone with moderate sustain, slight warmth, articulate highs, and a touch of vintage character. The sound is expressive with good note separation and a subtle airiness. Not overly aggressive, with a creamy overdrive that preserves clarity.",
+        "guitar_rig_description": "1. Noise Gate: not used (signal is not high-gain or noisy). 2. Compressor: used lightly at the start of the chain to even out dynamics and add sustain without squashing the tone. 3. Overdrive/Distortion: mild overdrive pedal to push the amp into creamy breakup, emulating classic tube amp overdrive. 4. Amplifier: vintage-style clean-to-mid-gain tube amp (such as a Fender or early Marshall), set for edge-of-breakup tone. 5. Cabinet: 2x12 or 4x12 open-back cab with vintage-voiced speakers for warmth and chime. 6. EQ: used after the amp to gently roll off excess lows and enhance presence for solo clarity. 7. Modulation: not used (core solo is dry, but may have subtle chorus in some live versions; for studio, leave off). 8. Delay: analog or tape-style delay with short repeats and low mix for depth and dimension without distraction. 9. Reverb: plate or spring reverb for natural ambience, subtle to keep the solo forward in the mix.",
+        "references": [
+          "The Eagles - Hotel California (original recording)",
+          "The Eagles - Hell Freezes Over (live version)",
+          "Joe Walsh - Analog Man (for similar lead sounds)"
+        ],
+        "song_part": "guitar solo",
+        "preferred_pickup": "bridge position humbucker or vintage-voiced single-coil, tone = 7",
+        "additional_info": "Use a guitar with a humbucker in the bridge or a Les Paul-style guitar for warmth and sustain. Medium gauge strings (10-46 or 10-52) help with tone and bending. Play with a medium pick and use expressive vibrato and controlled bends. Palm muting and dynamic picking enhance the solo's phrasing."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "Ibanez TS808 Tube Screamer",
+          "MXR Carbon Copy Analog Delay",
+          "Boss RV-6 (Plate mode)",
+          "Boss GE-7 Equalizer"
+        ],
+        "amplifier": "Fender '65 Twin Reverb",
+        "cabinet": "Fender 212 Cabinet with Celestion G12-65 (2x12, open-back)",
+        "settings": {
+          "amp": {
+            "Volume": 5,
+            "Treble": 6,
+            "Middle": 5,
+            "Bass": 4,
+            "Reverb": 2,
+            "Bright Switch": "On"
+          },
+          "compressor": {
+            "Sustain": 9,
+            "Level": 10,
+            "Blend": 10,
+            "Attack": "fast"
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 6,
+            "Level": 7
+          },
+          "delay": {
+            "Delay Time": "380ms",
+            "Repeats": 2,
+            "Mix": 15
+          },
+          "eq": {
+            "100Hz": "-2dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "+1dB"
+          },
+          "reverb": {
+            "Level": 15,
+            "Decay": 20,
+            "Tone": 12
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "Sustain": 43,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 61,
+            "Drive": 33,
+            "Tone": 46
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 64,
+            "Master": 67,
+            "Bass": 46,
+            "Middle": 52,
+            "Treble": 59,
+            "Bright": 55
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 53,
+            "HighCut": 56
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 43,
+            "220": 48,
+            "500": 52,
+            "1200": 56,
+            "2600": 60,
+            "6400": 53
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 38,
+            "Decay": 41
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 26,
+            "Rate": 35,
+            "Echo": 29
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Sustain": 43,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 61,
+                "Drive": 33,
+                "Tone": 46
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 64,
+                "Master": 67,
+                "Bass": 46,
+                "Middle": 52,
+                "Treble": 59,
+                "Bright": 55
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 53,
+                "HighCut": 56
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 43,
+                "220": 48,
+                "500": 52,
+                "1200": 56,
+                "2600": 60,
+                "6400": 53
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 41
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 26,
+                "Rate": 35,
+                "Echo": 29
+              }
+            }
+          },
+          "prompt": "The Eagles Hotel California Solo ",
+          "timestamp": "2025-09-02T16:25:42.912Z"
+        }
+      ],
+      "id": "gen_mf2rfcax_jf3qzejj5",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-02T16:12:03.915Z",
       "originalPrompt": "Metallica For Whom The Bell Tolls \nIntro",
       "proDescription": {
@@ -12102,6 +12349,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-02T16:12:03.925Z"
+    "lastUpdated": "2025-09-02T16:25:42.922Z"
   }
 }

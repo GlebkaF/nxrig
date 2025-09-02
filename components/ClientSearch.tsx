@@ -17,7 +17,17 @@ export default function ClientSearch(): React.ReactElement {
           .includes(searchQuery.toLowerCase()) ||
         preset.origin.part.toLowerCase().includes(searchQuery.toLowerCase()),
     )
-    .sort((a, b) => a.origin.song.localeCompare(b.origin.song));
+    .sort((a, b) => {
+      const isCyrillicA = /^[а-яёА-ЯЁ]/.test(a.origin.song);
+      const isCyrillicB = /^[а-яёА-ЯЁ]/.test(b.origin.song);
+
+      // Если одна песня на кириллице, а другая нет
+      if (isCyrillicA && !isCyrillicB) return 1; // Кириллица идет после
+      if (!isCyrillicA && isCyrillicB) return -1; // Латиница идет первой
+
+      // Если обе на одном алфавите, сортируем по алфавиту
+      return a.origin.song.localeCompare(b.origin.song);
+    });
 
   return (
     <>

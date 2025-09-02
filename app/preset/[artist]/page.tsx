@@ -47,9 +47,9 @@ export default function ArtistPage({ params }: ArtistPageProps): ReactElement {
   const artistSlug = params.artist;
   const artistName = artistSlug.replace(/-/g, " ").toUpperCase();
 
-  const artistPresets = presets.filter(
-    (preset) => preset.origin.artist.slug === artistSlug,
-  );
+  const artistPresets = presets
+    .filter((preset) => preset.origin.artist.slug === artistSlug)
+    .sort((a, b) => a.origin.song.localeCompare(b.origin.song));
 
   if (artistPresets.length === 0) {
     return (
