@@ -1,6 +1,234 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-02T16:12:03.915Z",
+      "originalPrompt": "Metallica For Whom The Bell Tolls \nIntro",
+      "proDescription": {
+        "tone_title": "For Whom The Bell Tolls - Intro",
+        "genre": "Classic Metal / Thrash Metal",
+        "sound_description": "Heavy, saturated, mid-focused tone with pronounced attack; thick and aggressive yet clear; moderate sustain; slightly scooped lows and bright high-end; tight and punchy, suitable for palm-muted power chords.",
+        "guitar_rig_description": "Noise gate: used to maintain tightness and suppress unwanted noise from high-gain settings. Compressor: not used, as dynamics are preserved by palm muting and amp response. Overdrive/Distortion/Boost: classic mid-gain overdrive pedal (such as a Tube Screamer) used in front of the amp to tighten the low end and boost mids. Amplifier: high-gain American-style amp head emulating Mesa/Boogie Mark series, providing saturated distortion, focused mids, and tight bass. Cabinet: 4x12 closed-back cabinet with Celestion speakers, delivering punchy lows and crisp highs. EQ: basic amp EQ with a slight mid scoop, enhanced bass and treble, but not overly extreme. Modulation: not used. Delay: not used. Reverb: subtle amp spring reverb or room reverb for natural ambience, but kept minimal to maintain clarity.",
+        "references": [
+          "Metallica - For Whom The Bell Tolls",
+          "Metallica - Ride The Lightning (album)",
+          "Anthrax - Caught In A Mosh"
+        ],
+        "song_part": "intro riff",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Pick attack is important—use downstrokes with moderate palm muting for tightness. Heavier gauge strings help maintain tuning and punch. James Hetfield typically uses EMG active pickups, but passive humbuckers with high output also work well."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer"
+        ],
+        "amplifier": "Mesa/Boogie Mark IIC+",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Bass": 6,
+            "Middle": 4,
+            "Treble": 7,
+            "Presence": 5,
+            "Master": 3,
+            "Reverb": 2
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 5,
+            "Level": 7
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor",
+            "Decay": "medium-fast"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 40
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 20,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 75,
+            "Master": 60,
+            "Bass": 55,
+            "Middle": 40,
+            "Treble": 65,
+            "Presence": 60
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 45,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 20,
+            "Decay": 30
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 20,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 75,
+                "Master": 60,
+                "Bass": 55,
+                "Middle": 40,
+                "Treble": 65,
+                "Presence": 60
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 45,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 20,
+                "Decay": 30
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Metallica For Whom The Bell Tolls \nIntro",
+          "timestamp": "2025-09-02T16:12:03.915Z"
+        }
+      ],
+      "id": "gen_mf2qxsd0_9i7x9tioy",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-02T06:29:36.391Z",
       "originalPrompt": "Ария Герой Асфальта Intrp\n",
       "proDescription": {
@@ -11874,6 +12102,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-02T06:29:36.405Z"
+    "lastUpdated": "2025-09-02T16:12:03.925Z"
   }
 }
