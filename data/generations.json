@@ -1,6 +1,492 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-02T06:29:36.391Z",
+      "originalPrompt": "Ария Герой Асфальта Intrp\n",
+      "proDescription": {
+        "tone_title": "Герой Асфальта — Интро",
+        "genre": "Советский хэви-метал / классический метал",
+        "sound_description": "Плотный, агрессивный, с выраженной атакой медиатора, средней яркости, с насыщенным перегрузом, но читаемый. Есть объем, но эффекты не мешают основному тону.",
+        "guitar_rig_description": "1. Noise gate: используется для устранения лишних шумов при высоком уровне перегруза. 2. Compressor: не используется, чтобы не съедать динамику атаки. 3. Overdrive/Distortion: основной блок, классический ламповый перегруз с плотной серединой, добавляющий агрессию и читаемость. 4. Amplifier: используется усилитель в стиле Marshall JCM800, обеспечивающий характерный хэви-металлический звук 80-х. 5. Cabinet: кабинеты 4x12 с динамиками Celestion, для густоты и панча. 6. EQ: легкий срез низких и высоких частот для лучшей читаемости, подчеркивание средней частоты. 7. Modulation: не используется. 8. Delay: не используется. 9. Reverb: умеренный plate или hall для придания небольшого пространства, не перебивает основную атаку.",
+        "references": [
+          "Ария — Герой Асфальта (оригинальная запись)",
+          "Iron Maiden — 2 Minutes To Midnight",
+          "Judas Priest — Electric Eye"
+        ],
+        "song_part": "интро (главный рифф)",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Стандартный строй (E), медиатор средней жёсткости, рекомендуется использовать струны 10-46 для плотного низа и читаемой атаки."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer",
+          "MXR 10-Band EQ",
+          "TC Electronic Hall of Fame Reverb"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 5,
+            "Master": 4
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 5,
+            "Level": 7
+          },
+          "eq": {
+            "63Hz": "-2dB",
+            "250Hz": "+1dB",
+            "1kHz": "+2dB",
+            "4kHz": "+1dB",
+            "8kHz": "-3dB"
+          },
+          "noise_suppressor": {
+            "Threshold": "just before gating chords",
+            "Decay": "medium"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": 2.5,
+            "Mix": 15
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 40
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 35,
+            "Tone": 60
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 75,
+            "Master": 60,
+            "Bass": 45,
+            "Middle": 65,
+            "Treble": 60,
+            "Presence": 55
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 60,
+            "HighCut": 40
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 40,
+            "62": 45,
+            "125": 48,
+            "250": 52,
+            "500": 60,
+            "1000": 67,
+            "2000": 62,
+            "4000": 55,
+            "8000": 40,
+            "16000": 35,
+            "Vol": 53
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 28,
+            "Decay": 40
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 35,
+                "Tone": 60
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 75,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 65,
+                "Treble": 60,
+                "Presence": 55
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 40,
+                "62": 45,
+                "125": 48,
+                "250": 52,
+                "500": 60,
+                "1000": 67,
+                "2000": 62,
+                "4000": 55,
+                "8000": 40,
+                "16000": 35,
+                "Vol": 53
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Decay": 40
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Ария Герой Асфальта Intrp\n",
+          "timestamp": "2025-09-02T06:29:36.391Z"
+        }
+      ],
+      "id": "gen_mf264qol_geztlbpen",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-02T06:27:51.163Z",
+      "originalPrompt": "Валентин Стрыкало Кайен Припев\n",
+      "proDescription": {
+        "tone_title": "Кайен — Припев",
+        "genre": "Pop Rock / Indie Rock",
+        "sound_description": "Чистый, яркий, слегка стеклянный тон с небольшим компрессированием и мягким хорусом. Гитара хорошо сидит в миксе, не агрессивная, но присутствует лёгкое движение благодаря модуляции. Средняя атака, умеренная глубина, акцент на прозрачности.",
+        "guitar_rig_description": "1. Noise gate: не используется (тон чистый, гитара не сильно шумит). 2. Compressor: используется для выравнивания динамики и лёгкого сустейна. 3. Overdrive/distortion/boost: не используется (тон чистый). 4. Amplifier: транзисторный или чистый канал лампового комбо-усилителя с акцентом на верхние средние и высокие частоты. 5. Cabinet: 2x12” с динамиками, передающими яркость и стеклянность. 6. EQ: лёгкое убирание низких частот и подчёркивание высоких для большей прозрачности. 7. Modulation: мягкий хорус для создания ширины и небольшого движения. 8. Delay: не используется. 9. Reverb: лёгкий платный реверб для объёма, но без излишней длины хвоста.",
+        "references": [
+          "Валентин Стрыкало — Кайен (живые выступления)",
+          "Звери — Всё, что касается",
+          "Би-2 — Молитва"
+        ],
+        "song_part": "припев",
+        "preferred_pickup": "средний или нековый сингл, ручка тона открыта полностью",
+        "additional_info": "Лучше всего звучит на Fender Stratocaster или аналогичной гитаре с синглами. Используйте лёгкие медиаторы и деликатную атаку для воздушного характера."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Boss CE-2W Chorus (Waza Craft)",
+          "TC Electronic Hall of Fame Mini Reverb"
+        ],
+        "amplifier": "Fender Hot Rod Deluxe IV (чистый канал)",
+        "cabinet": "Fender Hot Rod Deluxe 2x12 Cabinet с Celestion G12P-80 (2x12”, 8 Ом, открытая задняя стенка)",
+        "settings": {
+          "amp": {
+            "Volume": 3.5,
+            "Treble": 7,
+            "Middle": 5,
+            "Bass": 4,
+            "Presence": 6,
+            "Reverb": 0
+          },
+          "compressor": {
+            "Blend": 60,
+            "Volume": 60,
+            "Comp": 30
+          },
+          "chorus": {
+            "Rate": 10,
+            "Depth": 25,
+            "Level": 65
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Level": 20,
+            "Decay": 20
+          },
+          "guitar": {
+            "pickup": "neck or middle single-coil, tone knob fully open"
+          },
+          "eq": {
+            "Low Cut": "до 80–100 Гц",
+            "High Boost": "+2 dB на 4–6 кГц"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 60,
+            "Clipping": 35
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 40,
+            "Depth": 35
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Deluxe Rvb",
+          "enabled": true,
+          "params": {
+            "Gain": 30,
+            "Master": 65,
+            "Bass": 38,
+            "Middle": 52,
+            "Treble": 68
+          }
+        },
+        "cabinet": {
+          "type": "DR112",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 60,
+            "HighCut": 65
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 35,
+            "220": 42,
+            "500": 48,
+            "1200": 54,
+            "2600": 64,
+            "6400": 70
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 38,
+            "Decay": 32
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 60,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 40,
+                "Depth": 35
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 30,
+                "Master": 65,
+                "Bass": 38,
+                "Middle": 52,
+                "Treble": 68
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 60,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 35,
+                "220": 42,
+                "500": 48,
+                "1200": 54,
+                "2600": 64,
+                "6400": 70
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 32
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Валентин Стрыкало Кайен Припев\n",
+          "timestamp": "2025-09-02T06:27:51.163Z"
+        }
+      ],
+      "id": "gen_mf262hhb_8z9pna2r5",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-01T12:26:01.531Z",
       "originalPrompt": "Metallica Nothing Else Matters Solo",
       "proDescription": {
@@ -11388,6 +11874,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-01T12:26:33.723Z"
+    "lastUpdated": "2025-09-02T06:29:36.405Z"
   }
 }

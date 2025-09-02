@@ -3077,5 +3077,114 @@
     },
     "slug": "nothing-else-matters-guitar-solo",
     "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-nothing-else-matters-tab-s439171t6"
+  },
+  {
+    "id": "gen_mf264qol_geztlbpen",
+    "origin": {
+      "artistId": 18,
+      "song": "Герой Асфальта",
+      "part": "Intro",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Dense and aggressive, with a pronounced pick attack and medium brightness. Saturated overdrive, yet still articulate. The tone has depth and space, but effects don’t interfere with the core sound.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 40
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 35,
+          "Tone": 60
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 75,
+          "Master": 60,
+          "Bass": 45,
+          "Middle": 65,
+          "Treble": 60,
+          "Presence": 55
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 60,
+          "HighCut": 40
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 40,
+          "62": 45,
+          "125": 48,
+          "250": 52,
+          "500": 60,
+          "1000": 67,
+          "2000": 62,
+          "4000": 55,
+          "8000": 40,
+          "16000": 35,
+          "Vol": 53
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 28,
+          "Decay": 40
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "geroy-asfalta-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/tab-s25806"
   }
 ]
