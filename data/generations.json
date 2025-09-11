@@ -1,6 +1,238 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-11T15:10:08.078Z",
+      "originalPrompt": "Ac\\dc highway to hell Guitar Intro",
+      "proDescription": {
+        "tone_title": "Highway to Hell - Guitar Intro",
+        "genre": "Classic Rock / Hard Rock",
+        "sound_description": "Raw, punchy, mid-focused crunch with strong attack and moderate sustain. The tone is open and dynamic, with a touch of brightness and minimal saturation, allowing the chord work to sound full and articulate.",
+        "guitar_rig_description": "Noise gate: not used (classic rock tones typically benefit from natural amp noise and dynamics). Compressor: not used (the tone relies on natural picking dynamics). Overdrive/Distortion/Boost: light overdrive or amp breakup, mainly amp-based; if needed, a transparent overdrive pedal for a touch more grit. Amplifier: classic British-style tube amp (Marshall Plexi or JTM45) set to edge-of-breakup/crunch. Cabinet: 4x12 closed-back with vintage-style speakers, mic'd with a dynamic microphone. EQ: subtle mid and treble boost, bass rolled off slightly for clarity. Modulation: not used. Delay: not used. Reverb: subtle room reverb for space, but kept minimal to maintain punch.",
+        "references": [
+          "AC/DC - Highway to Hell",
+          "AC/DC - Back in Black",
+          "Led Zeppelin - Whole Lotta Love"
+        ],
+        "song_part": "intro rhythm guitar",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a solid-body guitar (e.g., Gibson SG), play with strong, percussive strumming, medium gauge strings for fullness, and keep the guitar’s volume and tone controls wide open for maximum bite."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic RC Booster (optional, for a touch more grit and presence if needed)",
+          "TC Electronic Hall of Fame Mini Reverb (set to subtle Room)"
+        ],
+        "amplifier": "Marshall 1959SLP Super Lead Plexi",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Presence": 6,
+            "Bass": 3,
+            "Middle": 7,
+            "Treble": 7,
+            "Volume I": 6,
+            "Volume II": 0
+          },
+          "rc_booster": {
+            "Gain": 1,
+            "Volume": 6,
+            "Treble": 6,
+            "Bass": 5
+          },
+          "reverb": {
+            "Level": 8,
+            "Type": "Room"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 55,
+            "Gain": 28,
+            "Bass": 45,
+            "Treble": 63
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 60,
+            "Master": 66,
+            "Bass": 42,
+            "Middle": 68,
+            "Treble": 62,
+            "Presence": 58
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 58,
+            "HighCut": 55
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": true,
+          "params": {
+            "Level": 19,
+            "Decay": 34,
+            "Tone": 53
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 55,
+                "Gain": 28,
+                "Bass": 45,
+                "Treble": 63
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 60,
+                "Master": 66,
+                "Bass": 42,
+                "Middle": 68,
+                "Treble": 62,
+                "Presence": 58
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 58,
+                "HighCut": 55
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": true,
+              "params": {
+                "Level": 19,
+                "Decay": 34,
+                "Tone": 53
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Ac\\dc highway to hell Guitar Intro",
+          "timestamp": "2025-09-11T15:10:08.078Z"
+        }
+      ],
+      "id": "gen_mffjot7e_qcquo6z58",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-02T16:25:42.912Z",
       "originalPrompt": "The Eagles Hotel California Solo ",
       "proDescription": {
@@ -12349,6 +12581,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-02T16:25:42.922Z"
+    "lastUpdated": "2025-09-11T15:10:08.090Z"
   }
 }

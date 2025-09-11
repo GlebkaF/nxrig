@@ -3290,5 +3290,110 @@
     },
     "slug": "for-whom-the-bell-tolls-guitar-intro",
     "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-for-whom-the-bell-tolls-tab-s572t2"
+  },
+  {
+    "id": "gen_mffjot7e_qcquo6z58",
+    "origin": {
+      "artistId": 1,
+      "song": "Highway To Hell",
+      "part": "Main Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Raw, punchy, mid-focused crunch with strong attack and moderate sustain. The tone is open and dynamic, with a touch of brightness and minimal saturation, allowing the chord work to sound full and articulate.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "RC Boost",
+        "enabled": true,
+        "params": {
+          "Volume": 55,
+          "Gain": 28,
+          "Bass": 45,
+          "Treble": 63
+        }
+      },
+      "amplifier": {
+        "type": "Plexi 100",
+        "enabled": true,
+        "params": {
+          "Gain": 60,
+          "Master": 66,
+          "Bass": 42,
+          "Middle": 68,
+          "Treble": 62,
+          "Presence": 58
+        }
+      },
+      "cabinet": {
+        "type": "M1960AX",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 58,
+          "HighCut": 55
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": true,
+        "params": {
+          "Level": 19,
+          "Decay": 34,
+          "Tone": 53
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "highway-to-hell-guitar-main-riff"
   }
 ]
