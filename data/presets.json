@@ -3396,5 +3396,215 @@
     },
     "slug": "highway-to-hell-guitar-main-riff",
     "tabsUrl": "https://www.songsterr.com/a/wsa/ac-dc-highway-to-hell-tab-s289"
+  },
+  {
+    "id": "gen_mfflvuon_27xetxrkj",
+    "origin": {
+      "artistId": 19,
+      "song": "The One I Love",
+      "part": "Overdriven guitar intro",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, jangly, lightly overdriven, with distinct attack and moderate sustain. The tone is clear but gritty, maintaining articulation on chords with a chiming quality typical of R.E.M.'s style.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 43,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 32,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 41,
+          "Master": 56,
+          "Bass": 38,
+          "Treble": 70,
+          "Cut": 62
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 60,
+          "HighCut": 67
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 38,
+          "220": 42,
+          "500": 44,
+          "1200": 53,
+          "2600": 67,
+          "6400": 72
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 34,
+          "Decay": 41
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "the-one-i-love-guitar-overdriven-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/rem-the-one-i-love-tab-s78784t2"
+  },
+  {
+    "id": "gen_mffm5klh_sheaj77h9",
+    "origin": {
+      "artistId": 19,
+      "song": "The One I Love",
+      "part": "Clean Guitar Verse",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, chiming, clean tone with strong note definition and a shimmering quality. Slightly compressed for even dynamics, with subtle sparkle and a hint of natural reverb for spaciousness. No distortion or heavy drive.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 60,
+          "Clipping": 35
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 30,
+          "Depth": 25
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 38,
+          "Master": 70,
+          "Bass": 40,
+          "Middle": 42,
+          "Treble": 58,
+          "Bright": 63
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 52,
+          "HighCut": 59
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 48,
+          "62": 48,
+          "125": 50,
+          "250": 48,
+          "500": 45,
+          "1000": 42,
+          "2000": 52,
+          "4000": 56,
+          "8000": 60,
+          "16000": 54,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 37,
+          "Decay": 49
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 8,
+      "position": "bridge"
+    },
+    "slug": "the-one-i-love-guitar-clean-guitar-verse",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/rem-the-one-i-love-tab-s78784"
   }
 ]

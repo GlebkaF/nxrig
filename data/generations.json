@@ -1,6 +1,589 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-11T16:19:09.296Z",
+      "originalPrompt": "REM The One I Love Clean Guitar Verse",
+      "proDescription": {
+        "tone_title": "The One I Love - Clean Verse",
+        "genre": "Alternative Rock / Jangle Pop",
+        "sound_description": "Bright, chiming, clean tone with strong note definition and a shimmering quality. Slightly compressed for even dynamics, with subtle sparkle and a hint of natural reverb for spaciousness. No distortion or heavy drive.",
+        "guitar_rig_description": "Signal chain: 1) Noise gate: not used (clean, open sound preferred); 2) Compressor: used for evening out dynamics and adding sustain without squashing the attack; 3) Overdrive/distortion/boost: not used; 4) Amplifier: clean channel of a classic American-style amp (e.g., Fender Twin Reverb) for glassy highs and full-bodied cleans; 5) Cabinet: 2x12 open-back cab for airy projection; 6) EQ: mild mid cut and slight treble boost to enhance jangle; 7) Modulation: chorus or subtle 12-string simulation may be used to add shimmer, but not essential; 8) Delay: not used; 9) Reverb: spring or plate reverb for spatial depth.",
+        "references": [
+          "R.E.M. - The One I Love",
+          "R.E.M. - Driver 8",
+          "The Byrds - Turn! Turn! Turn!"
+        ],
+        "song_part": "clean verse rhythm",
+        "preferred_pickup": "bridge single coil, tone = 8",
+        "additional_info": "Guitar: Rickenbacker 360 or similar with single coils. Use a light pick attack and let chords ring. String gauge: .010–.046 for balance of brightness and chime. Avoid heavy palm muting; let open strings sustain."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "MXR 10-Band EQ",
+          "Boss CE-2W Chorus (set to Standard mode, very low depth/mix)",
+          "Strymon Flint (Plate reverb mode, subtle setting)"
+        ],
+        "amplifier": "Fender '65 Twin Reverb Reissue",
+        "cabinet": "Fender 2x12 Open Back Cabinet with Jensen C12K speakers",
+        "settings": {
+          "amp": {
+            "Volume": 3.5,
+            "Treble": 7,
+            "Middle": 4.5,
+            "Bass": 5,
+            "Reverb": 2.5,
+            "Bright Switch": "On"
+          },
+          "compressor": {
+            "Sustain": 10.5,
+            "Level": 12,
+            "Blend": 11,
+            "Attack": "Fast"
+          },
+          "eq": {
+            "800Hz": "-2dB",
+            "3.2kHz": "+2dB",
+            "6.4kHz": "+2dB"
+          },
+          "chorus": {
+            "Rate": 9,
+            "Depth": 8,
+            "Level/Mix": 9
+          },
+          "reverb": {
+            "Decay": 11,
+            "Mix": 9
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 60,
+            "Clipping": 35
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 30,
+            "Depth": 25
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 38,
+            "Master": 70,
+            "Bass": 40,
+            "Middle": 42,
+            "Treble": 65,
+            "Bright": 70
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 52,
+            "HighCut": 62
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 48,
+            "62": 48,
+            "125": 50,
+            "250": 48,
+            "500": 45,
+            "1000": 42,
+            "2000": 54,
+            "4000": 60,
+            "8000": 65,
+            "16000": 58,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 42,
+            "Decay": 56
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 60,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 30,
+                "Depth": 25
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 38,
+                "Master": 70,
+                "Bass": 40,
+                "Middle": 42,
+                "Treble": 65,
+                "Bright": 70
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 52,
+                "HighCut": 62
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 48,
+                "62": 48,
+                "125": 50,
+                "250": 48,
+                "500": 45,
+                "1000": 42,
+                "2000": 54,
+                "4000": 60,
+                "8000": 65,
+                "16000": 58,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 42,
+                "Decay": 56
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "REM The One I Love Clean Guitar Verse",
+          "timestamp": "2025-09-11T16:19:09.296Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 60,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 30,
+                "Depth": 25
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 38,
+                "Master": 70,
+                "Bass": 40,
+                "Middle": 42,
+                "Treble": 58,
+                "Bright": 63
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 52,
+                "HighCut": 59
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 48,
+                "62": 48,
+                "125": 50,
+                "250": 48,
+                "500": 45,
+                "1000": 42,
+                "2000": 52,
+                "4000": 56,
+                "8000": 60,
+                "16000": 54,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 37,
+                "Decay": 49
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "чуть перебор звоности и ревера как будто, но у меня хамбакер, мб на сингле будет норм\n",
+          "timestamp": "2025-09-11T16:23:00.101Z"
+        }
+      ],
+      "id": "gen_mffm5klh_sheaj77h9",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-11T16:11:35.814Z",
+      "originalPrompt": "REM The One I Love Overdriven Guitar Intro",
+      "proDescription": {
+        "tone_title": "The One I Love - Intro Overdriven Guitar",
+        "genre": "Alternative Rock / Jangle Pop",
+        "sound_description": "Bright, jangly, lightly overdriven, with distinct attack and moderate sustain. The tone is clear but gritty, maintaining articulation on chords with a chiming quality typical of R.E.M.'s style.",
+        "guitar_rig_description": "Noise gate: not used (signal is clean enough and noise is not an issue); Compressor: used lightly to even out dynamics and enhance sustain; Overdrive: used, set for light to moderate drive to add grit without masking chord clarity; Amplifier: classic clean-to-breakup combo amp emulation (e.g., Vox AC30 or Fender Twin) set just into breakup; Cabinet: 2x12 open-back cab emulation to enhance brightness and chime; EQ: used, with emphasis on treble and upper mids for clarity and jangle, slight scoop in the low-mids to avoid muddiness; Modulation: not used; Delay: not used; Reverb: used, subtle spring reverb to add depth and space.",
+        "references": [
+          "R.E.M. - The One I Love",
+          "The Byrds - Turn! Turn! Turn!",
+          "U2 - I Will Follow"
+        ],
+        "song_part": "intro (main riff)",
+        "preferred_pickup": "bridge single-coil, tone = 7",
+        "additional_info": "Pick attack should be firm and precise; use lighter gauge strings for extra brightness; let chords ring out fully; avoid heavy palm muting."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "Ibanez TS9 Tube Screamer",
+          "Boss GE-7 Equalizer",
+          "Strymon Flint (set to Spring Reverb, reverb only)"
+        ],
+        "amplifier": "Vox AC30C2",
+        "cabinet": "Vox V212C 2x12 with Celestion Alnico Blue speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Gain": 5.5,
+            "Bass": 4,
+            "Middle": 5,
+            "Treble": 7,
+            "Presence": 6,
+            "Master": 4.5
+          },
+          "compressor": {
+            "Sustain": 3,
+            "Level": 5,
+            "Blend": 12,
+            "Attack": 2
+          },
+          "overdrive": {
+            "Drive": 2.5,
+            "Tone": 7,
+            "Level": 7
+          },
+          "eq": {
+            "100Hz": "-2dB",
+            "400Hz": "-1.5dB",
+            "800Hz": "0dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "+3dB",
+            "6.4kHz": "+2.5dB",
+            "Level": "unity"
+          },
+          "reverb": {
+            "Decay": 3,
+            "Mix": 10,
+            "Color": 5
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 43,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 32,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 41,
+            "Master": 56,
+            "Bass": 38,
+            "Treble": 70,
+            "Cut": 62
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 60,
+            "HighCut": 67
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 38,
+            "220": 42,
+            "500": 44,
+            "1200": 53,
+            "2600": 67,
+            "6400": 72
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 34,
+            "Decay": 41
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 43,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 32,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 41,
+                "Master": 56,
+                "Bass": 38,
+                "Treble": 70,
+                "Cut": 62
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 60,
+                "HighCut": 67
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 38,
+                "220": 42,
+                "500": 44,
+                "1200": 53,
+                "2600": 67,
+                "6400": 72
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 34,
+                "Decay": 41
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "REM The One I Love Overdriven Guitar Intro",
+          "timestamp": "2025-09-11T16:11:35.814Z"
+        }
+      ],
+      "id": "gen_mfflvuon_27xetxrkj",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-11T15:10:08.078Z",
       "originalPrompt": "Ac\\dc highway to hell Guitar Intro",
       "proDescription": {
@@ -12581,6 +13164,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-11T15:10:08.090Z"
+    "lastUpdated": "2025-09-11T16:23:00.109Z"
   }
 }
