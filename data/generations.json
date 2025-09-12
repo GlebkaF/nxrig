@@ -1,6 +1,894 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-12T10:26:43.307Z",
+      "originalPrompt": "Blur Song2 Intro",
+      "proDescription": {
+        "tone_title": "Blur - Song 2 Intro",
+        "genre": "Britpop / Alternative Rock",
+        "sound_description": "Raw, fuzzy, mid-heavy distortion with a lo-fi, almost garage-rock edge. The tone is aggressive but not overly saturated, with a crunchy, biting attack and moderate sustain. Slightly loose, unpolished, and energetic.",
+        "guitar_rig_description": "Noise gate: not used (desired sound is raw and open). Compressor: not used (natural dynamics are preferred). Overdrive/Distortion: Fuzz or heavy overdrive pedal engaged for gritty, saturated distortion. Amplifier: British-voiced tube amp (e.g., Marshall-style) set to crunch/overdrive. Cabinet: 4x12 cabinet with classic rock speakers. EQ: Amp EQ set for pronounced mids and slightly rolled-off highs to avoid harshness. Modulation: not used. Delay: not used. Reverb: subtle spring reverb from the amp for slight space.",
+        "references": [
+          "Blur - Song 2",
+          "The Hives - Hate To Say I Told You So",
+          "Oasis - Supersonic"
+        ],
+        "song_part": "intro riff",
+        "preferred_pickup": "bridge humbucker; tone wide open",
+        "additional_info": "Play with aggressive strumming and moderate palm muting. Medium gauge strings recommended for punch and clarity. The original uses a Fender Mustang with a fuzz pedal, but any guitar with a bridge humbucker or hot single-coil will work."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Electro-Harmonix Big Muff Pi (USA or Russian reissue)",
+          "MXR Micro Amp (optional, for boosting input to fuzz if needed)"
+        ],
+        "amplifier": "Marshall JCM900 Dual Reverb 4100",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 6.5,
+            "Bass": 5,
+            "Middle": 7.5,
+            "Treble": 4.5,
+            "Presence": 5,
+            "Reverb": 2,
+            "Master": 4
+          },
+          "big_muff": {
+            "Sustain": 11,
+            "Tone": 10,
+            "Volume": 12
+          },
+          "micro_amp": {
+            "Gain": 12
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Muff Fuzz",
+          "enabled": true,
+          "params": {
+            "Volume": 65,
+            "Sustain": 60,
+            "Tone": 45
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 60,
+            "Master": 60,
+            "Bass": 45,
+            "Middle": 65,
+            "Treble": 40,
+            "Presence": 50
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 50,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": true,
+          "params": {
+            "Level": 25,
+            "Decay": 30,
+            "Tone": 45
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 65,
+                "Sustain": 60,
+                "Tone": 45
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 60,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 65,
+                "Treble": 40,
+                "Presence": 50
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 50,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": true,
+              "params": {
+                "Level": 25,
+                "Decay": 30,
+                "Tone": 45
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Blur Song2 Intro",
+          "timestamp": "2025-09-12T10:26:43.307Z"
+        }
+      ],
+      "id": "gen_mfgp06wl_1uepdbv3s",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-12T10:21:58.931Z",
+      "originalPrompt": "Blur Song2 Main Riff\n",
+      "proDescription": {
+        "tone_title": "Blur - Song 2 Main Riff",
+        "genre": "Britpop / Alternative Rock",
+        "sound_description": "Fuzzy, raw, and aggressive with a lo-fi edge; prominent midrange and a trashy overdriven character. The tone is punchy, dynamic, and slightly compressed with a garage rock vibe. Not overly bright or scooped, with an intentionally unpolished, energetic feel.",
+        "guitar_rig_description": "Noise gate: not used (allowing natural amp noise for rawness). Compressor: not used (dynamic playing preserved). Overdrive/Distortion/Fuzz: Fuzz pedal or a high-gain distortion/fuzz, used as the main source of grit and sustain. Amplifier: Vintage-style tube amp (e.g., Fender or Marshall) set to moderate breakup for bark and punch. Cabinet: 4x12” guitar cab, miked for room presence and midrange focus. EQ: Minimal EQ, slight mid boost if needed, but mostly amp/cab voicing. Modulation: not used. Delay: not used. Reverb: Subtle spring reverb, either from the amp or pedal, just enough for space but not washy.",
+        "references": [
+          "Blur - Song 2",
+          "Nirvana - Smells Like Teen Spirit (for fuzz/drive vibe)",
+          "The Vines - Get Free"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Aggressive picking technique; light gauge strings can help with the snappy attack. Use of a fuzz or heavy distortion pedal is key. Playing is percussive and energetic, with controlled feedback sometimes present in the live setting."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Pro Co RAT 2 Distortion",
+          "Electro-Harmonix Big Muff Pi (NYC Reissue)",
+          "Fender Marine Layer Reverb (set to subtle spring mode)"
+        ],
+        "amplifier": "Marshall JCM900 Dual Reverb 4100",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Channel": "A (clean/crunch)",
+            "Gain": 5.5,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5.5,
+            "Presence": 5,
+            "Reverb": 2,
+            "Master": 5
+          },
+          "rat": {
+            "Distortion": 2.5,
+            "Filter": 4,
+            "Volume": 7
+          },
+          "big_muff": {
+            "Sustain": 4.5,
+            "Tone": 5,
+            "Volume": 7
+          },
+          "reverb": {
+            "Level": 2,
+            "Type": "Spring",
+            "Pre-Delay": "Low"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Muff Fuzz",
+          "enabled": true,
+          "params": {
+            "Volume": 60,
+            "Sustain": 75,
+            "Tone": 45
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 62,
+            "Master": 65,
+            "Bass": 48,
+            "Middle": 60,
+            "Treble": 50,
+            "Presence": 53
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 52,
+            "HighCut": 48
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 36,
+            "Decay": 38
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 60,
+                "Sustain": 75,
+                "Tone": 45
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 62,
+                "Master": 65,
+                "Bass": 48,
+                "Middle": 60,
+                "Treble": 50,
+                "Presence": 53
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 52,
+                "HighCut": 48
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 36,
+                "Decay": 38
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Blur Song2 Main Riff\n",
+          "timestamp": "2025-09-12T10:21:58.931Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 75,
+                "Decay": 60
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 45,
+                "Sustain": 55,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 42,
+                "Master": 58,
+                "Bass": 35,
+                "Middle": 50,
+                "Treble": 60,
+                "Presence": 58
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 65,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 40,
+                "220": 45,
+                "500": 50,
+                "1200": 52,
+                "2600": 58,
+                "6400": 60
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Decay": 28
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Супер каша из звуков",
+          "timestamp": "2025-09-12T10:23:06.926Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 75,
+                "Decay": 60
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 35,
+                "Sustain": 60,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 38,
+                "Master": 54,
+                "Bass": 42,
+                "Middle": 50,
+                "Treble": 45,
+                "Presence": 48
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 55,
+                "HighCut": 38
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 55,
+                "1200": 52,
+                "2600": 48,
+                "6400": 40
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Decay": 28
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Слишком высоко, в песне он \"пердит\" скорее\n",
+          "timestamp": "2025-09-12T10:24:59.389Z"
+        }
+      ],
+      "id": "gen_mfgou3hb_m4rzeu038",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-12T10:14:21.083Z",
+      "originalPrompt": "Toto Hold the Line Distortion Guitar\n",
+      "proDescription": {
+        "tone_title": "Hold the Line Distorted Guitar",
+        "genre": "Classic Rock / Arena Rock",
+        "sound_description": "Punchy, mid-heavy, and slightly saturated distortion with a tight low end, crisp attack, and clear note separation. The tone is powerful and cutting, yet not overly compressed, allowing for dynamic playing and chord clarity. Slight warmth and a hint of reverb give it space and depth.",
+        "guitar_rig_description": "Noise gate: not used (tone is clear and controlled). Compressor: mild compression before drive for even dynamics and sustain. Overdrive/distortion/boost: classic overdrive pedal (such as an overdriven Tube Screamer) before amp to push the front end and tighten the sound. Amplifier: British-style tube amp (like a Marshall) set for crunchy, mid-forward distortion with good attack. Cabinet: 4x12 closed-back cab with vintage-voiced speakers for fullness and punch. EQ: subtle post-amp EQ to accentuate mids and slightly roll off harsh highs. Modulation: not used. Delay: not used. Reverb: subtle spring or plate reverb after amp for spatial depth.",
+        "references": [
+          "Toto - Hold the Line",
+          "Journey - Any Way You Want It",
+          "Boston - More Than a Feeling"
+        ],
+        "song_part": "main rhythm riff",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Medium gauge strings (10-46) for punch and sustain. Medium pick attack. Palm muting and precise chord stabs enhance rhythmic drive. Steve Lukather often used a Les Paul or similar guitar for this era."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp",
+          "Ibanez TS9 Tube Screamer",
+          "Boss GE-7 Equalizer",
+          "Strymon Flint (Reverb only, Plate mode)"
+        ],
+        "amplifier": "Marshall JMP 2203 Master Volume Lead (1978-1981)",
+        "cabinet": "Marshall 1960B 4x12 with Celestion G12-65 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 5,
+            "Master": 4
+          },
+          "compressor": {
+            "Output": 2,
+            "Sensitivity": 1.5
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 6,
+            "Level": 7
+          },
+          "eq": {
+            "100Hz": "-1dB",
+            "400Hz": "+1dB",
+            "800Hz": "+2dB",
+            "1.6kHz": "+2dB",
+            "6.4kHz": "-2dB"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Mix": "9 o’clock",
+            "Decay": "10 o’clock"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 42,
+            "Clipping": 38
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Drive": 32,
+            "Tone": 56
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 66,
+            "Master": 54,
+            "Bass": 42,
+            "Middle": 64,
+            "Treble": 52,
+            "Presence": 57
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 53,
+            "HighCut": 47
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 47,
+            "220": 50,
+            "500": 56,
+            "1200": 61,
+            "2600": 55,
+            "6400": 47
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 35,
+            "Decay": 28
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 42,
+                "Clipping": 38
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Drive": 32,
+                "Tone": 56
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 66,
+                "Master": 54,
+                "Bass": 42,
+                "Middle": 64,
+                "Treble": 52,
+                "Presence": 57
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 53,
+                "HighCut": 47
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 47,
+                "220": 50,
+                "500": 56,
+                "1200": 61,
+                "2600": 55,
+                "6400": 47
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 35,
+                "Decay": 28
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Toto Hold the Line Distortion Guitar\n",
+          "timestamp": "2025-09-12T10:14:21.083Z"
+        }
+      ],
+      "id": "gen_mfgoka71_9c38l6oig",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-12T02:52:42.146Z",
       "originalPrompt": "Pink floyd Shine On You Crazy Diamond Clean Guitar\n",
       "proDescription": {
@@ -14012,6 +14900,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-12T02:55:17.951Z"
+    "lastUpdated": "2025-09-12T10:26:43.318Z"
   }
 }
