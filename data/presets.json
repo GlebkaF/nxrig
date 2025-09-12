@@ -3710,5 +3710,220 @@
     },
     "slug": "id-love-to-change-the-world-guitar-solo",
     "tabsUrl": "https://www.songsterr.com/a/wsa/ten-years-after-id-love-to-change-the-world-solo-tab-s80557t5"
+  },
+  {
+    "id": "gen_mfg8s5kt_p1xbov9au",
+    "origin": {
+      "artistId": 21,
+      "song": "Shine On You Crazy Diamond",
+      "part": "Overdriven Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, singing sustain with gentle overdrive; clear, glassy highs and warm mids; spacious and ambient with pronounced depth; moderate attack and excellent note clarity; dynamic but controlled, evocative of 1970s tube amp tones.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 65,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "Sustain": 60,
+          "Clipping": 44
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 33,
+          "Depth": 46
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 58,
+          "Drive": 32,
+          "Tone": 56
+        }
+      },
+      "amplifier": {
+        "type": "Hiwire",
+        "enabled": true,
+        "params": {
+          "Gain": 41,
+          "Master": 62,
+          "Bass": 47,
+          "Middle": 42,
+          "Treble": 58,
+          "Presence": 54
+        }
+      },
+      "cabinet": {
+        "type": "HIWIRE412",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 42,
+          "HighCut": 60
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 46,
+          "62": 48,
+          "125": 49,
+          "250": 47,
+          "500": 45,
+          "1000": 44,
+          "2000": 53,
+          "4000": 58,
+          "8000": 62,
+          "16000": 61,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 63,
+          "Decay": 58
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 41,
+          "Rate": 39,
+          "Echo": 53
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "shine-on-you-crazy-diamond-guitar-overdriven-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/pink-floyd-shine-on-you-crazy-diamond-parts-i-ix-tab-s15518"
+  },
+  {
+    "id": "gen_mfg8sbhj_sht5hkic2",
+    "origin": {
+      "artistId": 21,
+      "song": "Shine On You Crazy Diamond",
+      "part": "Clean Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Ethereal, glassy clean tone with a sense of spaciousness and depth; sparkling highs, smooth mids, soft attack, lush ambience, and moderate sustain. The sound is airy and immersive, with subtle modulation adding movement.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 62,
+          "Clipping": 35
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 30,
+          "Depth": 38
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Hiwire",
+        "enabled": true,
+        "params": {
+          "Gain": 26,
+          "Master": 61,
+          "Bass": 43,
+          "Middle": 47,
+          "Treble": 66,
+          "Presence": 62
+        }
+      },
+      "cabinet": {
+        "type": "HIWIRE412",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 42,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 38,
+          "62": 40,
+          "125": 44,
+          "250": 46,
+          "500": 44,
+          "1000": 48,
+          "2000": 57,
+          "4000": 63,
+          "8000": 67,
+          "16000": 70,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Decay": 70
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 34,
+          "Rate": 36,
+          "Echo": 44
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 10,
+      "position": "neck"
+    },
+    "slug": "shine-on-you-crazy-diamond-guitar-clean-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/pink-floyd-shine-on-you-crazy-diamond-parts-i-ix-tab-s15518t4"
   }
 ]

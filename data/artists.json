@@ -118,5 +118,11 @@
     "title": "Ten Years After",
     "slug": "ten-years-after",
     "description": "British blues rock band celebrated for their electrifying guitar work, energetic performances, and fusion of blues, rock, and psychedelia. Best known for their legendary Woodstock appearance and the guitar mastery of Alvin Lee."
+  },
+  {
+    "id": 21,
+    "title": "Pink Floyd",
+    "slug": "pink-floyd",
+    "description": "Iconic British rock band known for their progressive sound, philosophical lyrics, and groundbreaking concept albums. Masters of atmospheric guitar tones, psychedelic experimentation, and timeless classics that shaped modern rock music."
   }
 ]

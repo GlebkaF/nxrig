@@ -1,6 +1,625 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-12T02:52:42.146Z",
+      "originalPrompt": "Pink floyd Shine On You Crazy Diamond Clean Guitar\n",
+      "proDescription": {
+        "tone_title": "Shine On You Crazy Diamond Clean Guitar",
+        "genre": "Progressive Rock / Psychedelic Rock",
+        "sound_description": "Ethereal, glassy clean tone with a sense of spaciousness and depth; sparkling highs, smooth mids, soft attack, lush ambience, and moderate sustain. The sound is airy and immersive, with subtle modulation adding movement.",
+        "guitar_rig_description": "Noise gate: not used (clean passages, minimal noise). Compressor: used, for subtle leveling and sustain enhancement without squashing dynamics. Overdrive/distortion/boost: not used (pure clean tone). Amplifier: clean channel of a high-headroom tube amp (e.g., Hiwatt or Fender Twin), set for maximum clarity and headroom. Cabinet: 2x12 or 4x12 open-back cab, voiced for bright, detailed cleans. EQ: used, with a focus on shimmering highs and reduced low-mids to avoid muddiness. Modulation: used, with slow-rate chorus or subtle phaser for movement and width (sometimes combined). Delay: used, with analog-style delay for gentle repeats, adding dimension and space. Reverb: used, with a lush plate or hall reverb for atmospheric depth.",
+        "references": [
+          "Pink Floyd - Shine On You Crazy Diamond",
+          "Pink Floyd - Breathe",
+          "David Gilmour - On an Island"
+        ],
+        "song_part": "intro and clean melodic lines",
+        "preferred_pickup": "neck single-coil (Stratocaster), tone = 10",
+        "additional_info": "Play with fingers or very light pick attack for softness; use a Stratocaster with a whammy bar for gentle pitch modulation; light gauge strings preferred (e.g., .009–.042); subtle vibrato technique enhances expressiveness."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "MXR 10-Band EQ",
+          "Boss CE-2W Chorus (set to CE-2 mode, Rate low, Depth moderate)",
+          "Electro-Harmonix Small Stone Nano Phaser (Color switch off, Rate low)",
+          "Electro-Harmonix Deluxe Memory Man (Blend ~30%, Delay ~350ms, Feedback minimal)",
+          "Strymon BlueSky Reverb (Plate mode, Decay ~60%, Mix ~30%)"
+        ],
+        "amplifier": "Hiwatt Custom 100 DR103",
+        "cabinet": "Hiwatt SE4123 4x12 Cabinet with Fane Crescendo 12\" speakers (open-back configuration)",
+        "settings": {
+          "amp": {
+            "Input": "Normal",
+            "Volume (Normal)": 4,
+            "Bass": 5,
+            "Middle": 4,
+            "Treble": 7,
+            "Presence": 6,
+            "Master": 4
+          },
+          "compressor": {
+            "Sustain": 10,
+            "Level": 8,
+            "Blend": 50,
+            "Attack": 2
+          },
+          "eq": {
+            "31.25Hz": "-4dB",
+            "62.5Hz": "-2dB",
+            "125Hz": "-2dB",
+            "500Hz": "-3dB",
+            "1kHz": "+1dB",
+            "4kHz": "+3dB",
+            "8kHz": "+2dB"
+          },
+          "chorus": {
+            "Rate": 2,
+            "Depth": 5,
+            "Level": 5
+          },
+          "phaser": {
+            "Rate": 2,
+            "Color": "off"
+          },
+          "delay": {
+            "Blend": 3,
+            "Delay Time": 350,
+            "Feedback": 2
+          },
+          "reverb": {
+            "Decay": 6,
+            "Mix": 3,
+            "Pre-Delay": 2
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 62,
+            "Clipping": 35
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 30,
+            "Depth": 38
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Hiwire",
+          "enabled": true,
+          "params": {
+            "Gain": 26,
+            "Master": 61,
+            "Bass": 43,
+            "Middle": 47,
+            "Treble": 66,
+            "Presence": 62
+          }
+        },
+        "cabinet": {
+          "type": "HIWIRE412",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 42,
+            "HighCut": 65
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 38,
+            "62": 40,
+            "125": 44,
+            "250": 46,
+            "500": 44,
+            "1000": 48,
+            "2000": 57,
+            "4000": 63,
+            "8000": 67,
+            "16000": 70,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Decay": 70
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 34,
+            "Rate": 36,
+            "Echo": 44
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 62,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 30,
+                "Depth": 38
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Hiwire",
+              "enabled": true,
+              "params": {
+                "Gain": 26,
+                "Master": 61,
+                "Bass": 43,
+                "Middle": 47,
+                "Treble": 66,
+                "Presence": 62
+              }
+            },
+            "cabinet": {
+              "type": "HIWIRE412",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 42,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 38,
+                "62": 40,
+                "125": 44,
+                "250": 46,
+                "500": 44,
+                "1000": 48,
+                "2000": 57,
+                "4000": 63,
+                "8000": 67,
+                "16000": 70,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Decay": 70
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 34,
+                "Rate": 36,
+                "Echo": 44
+              }
+            }
+          },
+          "prompt": "Pink floyd Shine On You Crazy Diamond Clean Guitar\n",
+          "timestamp": "2025-09-12T02:52:42.146Z"
+        }
+      ],
+      "id": "gen_mfg8sbhj_sht5hkic2",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-12T02:52:34.485Z",
+      "originalPrompt": "Pink floyd Shine On You Crazy Diamond Overdriven Guitar\n",
+      "proDescription": {
+        "tone_title": "Shine On You Crazy Diamond - Overdriven Guitar",
+        "genre": "Progressive Rock / Classic Rock",
+        "sound_description": "Smooth, singing sustain with gentle overdrive; clear, glassy highs and warm mids; spacious and ambient with pronounced depth; moderate attack and excellent note clarity; dynamic but controlled, evocative of 1970s tube amp tones.",
+        "guitar_rig_description": "Noise gate: not used (clean signal, minimal noise); Compressor: used for subtle sustain and evening out dynamics, adding smoothness; Overdrive/Distortion/Boost: used, low-gain overdrive pedal (such as a Tube Screamer or similar) to push the amp into light saturation; Amplifier: used, vintage-style clean tube amp (e.g., Hiwatt, Fender Twin, or similar) set just at the edge of breakup for warmth and touch sensitivity; Cabinet: used, matching open-back 2x12 or 4x12 cabinet with classic speakers (Celestion-style) for airy response; EQ: used, gentle high-end boost and slight mid scoop for clarity and presence; Modulation: used, slow rate chorus or subtle rotary speaker effect for movement and width; Delay: used, analog-style delay with moderate repeats and mix for ambient depth; Reverb: used, plate or hall reverb for spaciousness and lushness.",
+        "references": [
+          "Pink Floyd - Shine On You Crazy Diamond",
+          "Pink Floyd - Comfortably Numb",
+          "David Gilmour - Live in Gdańsk"
+        ],
+        "song_part": "Lead theme and melodic lines",
+        "preferred_pickup": "neck single-coil (Stratocaster-style), tone = 7",
+        "additional_info": "Use a Stratocaster or similar guitar with single-coil pickups; play with fingers or light pick attack for expressiveness; lighter string gauge (e.g., .009–.042) can help achieve smooth bends; volume knob control on guitar is important for dynamic response."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss CS-2 Compression Sustainer",
+          "Ibanez TS808 Tube Screamer",
+          "MXR M108S Ten Band EQ",
+          "Boss CE-2W Chorus (set to CE-2 mode, Rate slow, Depth moderate)",
+          "Electro-Harmonix Deluxe Memory Man (analog delay, Delay Time ~380ms, Feedback 3-4 repeats, Blend moderate)",
+          "TC Electronic Hall of Fame Reverb (Plate mode, Decay ~4, Tone ~4, Level ~5)"
+        ],
+        "amplifier": "Hiwatt Custom 100 DR103",
+        "cabinet": "Hiwatt SE4123 4x12 with Fane Crescendo speakers",
+        "settings": {
+          "amp": {
+            "Gain": 3.5,
+            "Bass": 6,
+            "Middle": 4,
+            "Treble": 7,
+            "Presence": 6,
+            "Master": 5
+          },
+          "compressor": {
+            "Sustain": 3,
+            "Level": 6,
+            "Attack": 4
+          },
+          "overdrive": {
+            "Drive": 3,
+            "Tone": 5,
+            "Level": 8
+          },
+          "eq": {
+            "31Hz": "+1dB",
+            "125Hz": "-1dB",
+            "500Hz": "-1dB",
+            "2kHz": "+2dB",
+            "4kHz": "+3dB"
+          },
+          "chorus": {
+            "Rate": 2,
+            "Depth": 5
+          },
+          "delay": {
+            "Delay Time": 380,
+            "Feedback": 4,
+            "Blend": 5
+          },
+          "reverb": {
+            "Decay": 4,
+            "Tone": 4,
+            "Level": 5
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "Sustain": 60,
+            "Clipping": 44
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 33,
+            "Depth": 46
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 58,
+            "Drive": 32,
+            "Tone": 56
+          }
+        },
+        "amplifier": {
+          "type": "Hiwire",
+          "enabled": true,
+          "params": {
+            "Gain": 41,
+            "Master": 62,
+            "Bass": 47,
+            "Middle": 42,
+            "Treble": 58,
+            "Presence": 54
+          }
+        },
+        "cabinet": {
+          "type": "HIWIRE412",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 42,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 46,
+            "62": 48,
+            "125": 49,
+            "250": 47,
+            "500": 45,
+            "1000": 44,
+            "2000": 53,
+            "4000": 58,
+            "8000": 62,
+            "16000": 61,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 63,
+            "Decay": 58
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 41,
+            "Rate": 39,
+            "Echo": 53
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Sustain": 60,
+                "Clipping": 44
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 33,
+                "Depth": 46
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Drive": 32,
+                "Tone": 56
+              }
+            },
+            "amplifier": {
+              "type": "Hiwire",
+              "enabled": true,
+              "params": {
+                "Gain": 41,
+                "Master": 62,
+                "Bass": 47,
+                "Middle": 42,
+                "Treble": 58,
+                "Presence": 54
+              }
+            },
+            "cabinet": {
+              "type": "HIWIRE412",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 42,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 46,
+                "62": 48,
+                "125": 49,
+                "250": 47,
+                "500": 45,
+                "1000": 44,
+                "2000": 53,
+                "4000": 58,
+                "8000": 62,
+                "16000": 61,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 63,
+                "Decay": 58
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 41,
+                "Rate": 39,
+                "Echo": 53
+              }
+            }
+          },
+          "prompt": "Pink floyd Shine On You Crazy Diamond Overdriven Guitar\n",
+          "timestamp": "2025-09-12T02:52:34.485Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 65,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Sustain": 60,
+                "Clipping": 44
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 33,
+                "Depth": 46
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Drive": 32,
+                "Tone": 56
+              }
+            },
+            "amplifier": {
+              "type": "Hiwire",
+              "enabled": true,
+              "params": {
+                "Gain": 41,
+                "Master": 62,
+                "Bass": 47,
+                "Middle": 42,
+                "Treble": 58,
+                "Presence": 54
+              }
+            },
+            "cabinet": {
+              "type": "HIWIRE412",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 42,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 46,
+                "62": 48,
+                "125": 49,
+                "250": 47,
+                "500": 45,
+                "1000": 44,
+                "2000": 53,
+                "4000": 58,
+                "8000": 62,
+                "16000": 61,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 63,
+                "Decay": 58
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 41,
+                "Rate": 39,
+                "Echo": 53
+              }
+            }
+          },
+          "prompt": "Фонит немного\n",
+          "timestamp": "2025-09-12T02:55:17.947Z"
+        }
+      ],
+      "id": "gen_mfg8s5kt_p1xbov9au",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-12T02:36:19.368Z",
       "originalPrompt": "Ten Years After I'd Love To Change The World Guitar\n Solo",
       "proDescription": {
@@ -13393,6 +14012,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-12T02:36:19.379Z"
+    "lastUpdated": "2025-09-12T02:55:17.951Z"
   }
 }
