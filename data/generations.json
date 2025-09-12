@@ -1,6 +1,688 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-12T16:03:13.730Z",
+      "originalPrompt": "Gary Moore Still Got The Blues Clean\n Guitar",
+      "proDescription": {
+        "tone_title": "Still Got The Blues Clean Tone",
+        "genre": "Blues Rock / Clean Ballad",
+        "sound_description": "Smooth, warm, and rounded clean tone with bell-like clarity and gentle compression. Slightly scooped mids, sparkling highs, and rich lows. Sustains well without harshness; dynamic and touch-sensitive, with a subtle sweetness and air.",
+        "guitar_rig_description": "Noise gate: not used (clean setting, natural dynamics preferred). Compressor: used for gentle evening out of dynamics and to add sustain without squashing the tone. Overdrive/distortion/boost: not used (fully clean tone). Amplifier: classic clean channel of a British-style combo amp (e.g., Fender or Marshall) set just before breakup for warmth. Cabinet: open-back 1x12 or 2x12 loaded with vintage-voiced speakers for airy response. EQ: used to slightly cut mids and enhance high-end shimmer, while retaining body in the lows. Modulation: not used. Delay: used subtly for dimension, with short repeats and low mix. Reverb: used for a spacious, natural ambiance, emulating a spring reverb or small room.",
+        "references": [
+          "Gary Moore - Still Got The Blues (clean intro and verses)",
+          "Eric Clapton - Wonderful Tonight (clean sections)",
+          "John Mayer - Gravity (clean tone)"
+        ],
+        "song_part": "clean intro and verse sections",
+        "preferred_pickup": "neck humbucker, tone = 7-8",
+        "additional_info": "Use fingers or soft pick for warmth. Light string gauge (e.g., 10-46) for ease of vibrato and bends. Guitar volume slightly rolled back if additional headroom is needed. Avoid excessive attack for smoothness."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Origin Effects Cali76 Compact Deluxe Compressor",
+          "Boss GE-7 Equalizer",
+          "Strymon El Capistan dTape Echo",
+          "TC Electronic Hall of Fame 2 Reverb"
+        ],
+        "amplifier": "Fender '65 Twin Reverb",
+        "cabinet": "Fender 2x12 open-back with Jensen C12N 12\" speakers",
+        "settings": {
+          "amp": {
+            "Volume (Channel 1, Normal)": 4.5,
+            "Treble": 6.5,
+            "Middle": 4,
+            "Bass": 6.5,
+            "Reverb": 2,
+            "Bright Switch": "OFF"
+          },
+          "compressor": {
+            "Blend": 60,
+            "Attack": 9,
+            "Release": 12,
+            "Ratio": 3,
+            "Level": 11,
+            "Input": 10
+          },
+          "eq": {
+            "100Hz": "+1dB",
+            "200Hz": "0dB",
+            "400Hz": "-2dB",
+            "800Hz": "-3dB",
+            "1.6kHz": "-1dB",
+            "3.2kHz": "+1dB",
+            "6.4kHz": "+2dB",
+            "Level": "Unity"
+          },
+          "delay": {
+            "Time": "340 ms",
+            "Repeats": "1-2",
+            "Mix": "15%",
+            "Modulation": "OFF"
+          },
+          "reverb": {
+            "Mode": "Spring",
+            "Decay": "Short to Medium",
+            "Mix": "20%",
+            "Tone": "Neutral"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 53,
+            "Threshold": 45,
+            "Ratio": 40,
+            "Release": 55
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 60,
+            "Master": 53,
+            "Bass": 56,
+            "Middle": 39,
+            "Treble": 65,
+            "Bright": 60
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 45,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 52,
+            "62": 57,
+            "125": 55,
+            "250": 53,
+            "500": 48,
+            "1000": 44,
+            "2000": 47,
+            "4000": 55,
+            "8000": 61,
+            "16000": 58,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "Decay": 60
+          }
+        },
+        "delay": {
+          "type": "Tape Echo",
+          "enabled": true,
+          "params": {
+            "Level": 28,
+            "Time": 34,
+            "Repeat": 18
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 53,
+                "Threshold": 45,
+                "Ratio": 40,
+                "Release": 55
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 60,
+                "Master": 53,
+                "Bass": 56,
+                "Middle": 39,
+                "Treble": 65,
+                "Bright": 60
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 45,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 52,
+                "62": 57,
+                "125": 55,
+                "250": 53,
+                "500": 48,
+                "1000": 44,
+                "2000": 47,
+                "4000": 55,
+                "8000": 61,
+                "16000": 58,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Decay": 60
+              }
+            },
+            "delay": {
+              "type": "Tape Echo",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Time": 34,
+                "Repeat": 18
+              }
+            }
+          },
+          "prompt": "Gary Moore Still Got The Blues Clean\n Guitar",
+          "timestamp": "2025-09-12T16:03:13.730Z"
+        }
+      ],
+      "id": "gen_mfh10xxp_zz5k5lz3z",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-12T15:48:14.109Z",
+      "originalPrompt": "Gary Moore Still Got The Blues Distortion Guitar",
+      "proDescription": {
+        "tone_title": "Still Got The Blues - Lead Guitar",
+        "genre": "Blues Rock / Classic Rock Ballad",
+        "sound_description": "Smooth, singing lead tone with rich sustain, moderate gain, warm midrange, rounded top end, expressive dynamics, and touch-sensitive response. Slightly compressed but open, with a vocal-like quality and a subtle touch of ambience.",
+        "guitar_rig_description": "Noise gate: not used (open dynamics preferred for expressive playing). Compressor: mild compression before gain stage to add sustain and even out dynamics. Overdrive/distortion/boost: medium-gain overdrive pedal (such as a Tube Screamer or similar) to push the amp into smooth breakup and enhance midrange. Amplifier: British-style tube combo amp (Vox AC30 or Marshall Bluesbreaker) set to edge-of-breakup or slightly overdriven. Cabinet: matching open-back 1x12 or 2x12 cabinet with vintage-voiced speakers (Celestion types). EQ: gentle mid boost for prominence, attenuated highs to avoid harshness. Modulation: not used (signal kept direct for clarity). Delay: subtle analog-style slapback or short delay for depth without overpowering the lead. Reverb: moderate plate or spring reverb for spatial ambience and sustain.",
+        "references": [
+          "Gary Moore - Still Got The Blues",
+          "Eric Clapton - Old Love",
+          "Santana - Europa"
+        ],
+        "song_part": "Lead guitar / main solo",
+        "preferred_pickup": "neck humbucker, tone = 7 (rolled off slightly for warmth)",
+        "additional_info": "Use expressive vibrato and sustain techniques. Lighter string gauge (such as .009 or .010 sets) aids bending and vibrato. Volume knob control on guitar is essential for dynamics. Phrasing and touch are as important as gear for this tone."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Ibanez TS808 Tube Screamer",
+          "MXR Carbon Copy Analog Delay",
+          "Strymon Flint (for reverb only, plate mode)"
+        ],
+        "amplifier": "Marshall 1962 Bluesbreaker Combo",
+        "cabinet": "Marshall 1962 Bluesbreaker 2x12 combo with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Volume I": 5.5,
+            "Volume II": 0,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 4.5,
+            "Presence": 5
+          },
+          "compressor": {
+            "Blend": 11,
+            "Volume": 12,
+            "Compression": 9
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 4,
+            "Level": 7
+          },
+          "delay": {
+            "Mix": 13,
+            "Delay Time": 355,
+            "Repeats": 1.5
+          },
+          "reverb": {
+            "Decay": 4,
+            "Color": 4,
+            "Mix": 5
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 60,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 58,
+            "Drive": 46,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Brit Blues",
+          "enabled": true,
+          "params": {
+            "Gain": 54,
+            "Master": 68,
+            "Bass": 54,
+            "Middle": 65,
+            "Treble": 41,
+            "Presence": 45
+          }
+        },
+        "cabinet": {
+          "type": "M1936",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 42
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 58,
+            "Decay": 62
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 26,
+            "Rate": 30,
+            "Echo": 38
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 60,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Drive": 46,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Brit Blues",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Master": 68,
+                "Bass": 54,
+                "Middle": 65,
+                "Treble": 41,
+                "Presence": 45
+              }
+            },
+            "cabinet": {
+              "type": "M1936",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Decay": 62
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 26,
+                "Rate": 30,
+                "Echo": 38
+              }
+            }
+          },
+          "prompt": "Gary Moore Still Got The Blues Distortion Guitar",
+          "timestamp": "2025-09-12T15:48:14.109Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 60,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Drive": 46,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Brit Blues",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Master": 68,
+                "Bass": 54,
+                "Middle": 65,
+                "Treble": 41,
+                "Presence": 45
+              }
+            },
+            "cabinet": {
+              "type": "M1936",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Decay": 62
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 14,
+                "Rate": 18,
+                "Echo": 24
+              }
+            }
+          },
+          "prompt": "Много delay как будто",
+          "timestamp": "2025-09-12T15:58:11.437Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 60,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Drive": 46,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Brit Blues",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Master": 68,
+                "Bass": 54,
+                "Middle": 65,
+                "Treble": 41,
+                "Presence": 45
+              }
+            },
+            "cabinet": {
+              "type": "M1936",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 34,
+                "Decay": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 14,
+                "Rate": 18,
+                "Echo": 24
+              }
+            }
+          },
+          "prompt": "А нет, ревера много\n",
+          "timestamp": "2025-09-12T16:00:19.234Z"
+        }
+      ],
+      "id": "gen_mfh0hns9_j1o1dgha1",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-12T10:26:43.307Z",
       "originalPrompt": "Blur Song2 Intro",
       "proDescription": {
@@ -14900,6 +15582,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-12T10:26:43.318Z"
+    "lastUpdated": "2025-09-12T16:03:13.742Z"
   }
 }

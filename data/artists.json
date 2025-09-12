@@ -130,5 +130,11 @@
     "title": "Toto",
     "slug": "toto",
     "description": "American rock band admired for their polished musicianship, smooth blend of rock, pop, and jazz influences, and timeless hits. Known for virtuosic guitar work, powerful vocals, and classic songs like Africa and Rosanna that defined an era of melodic rock"
+  },
+  {
+    "id": 23,
+    "title": "Gary Moore",
+    "slug": "gary-moore",
+    "description": "legendary Irish guitarist celebrated for his fiery blues rock style, soulful solos, and unforgettable guitar tone that inspired generations of musicians worldwide"
   }
 ]

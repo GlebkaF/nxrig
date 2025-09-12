@@ -4029,5 +4029,218 @@
     },
     "slug": "hold-the-line-guitar-main-guitar",
     "tabsUrl": "https://www.songsterr.com/a/wsa/toto-hold-the-line-tab-s20390"
+  },
+  {
+    "id": "gen_mfh0hns9_j1o1dgha1",
+    "origin": {
+      "artistId": 23,
+      "song": "Still Got The Blues",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, singing lead tone with rich sustain, moderate gain, warm midrange, rounded top end, expressive dynamics, and touch-sensitive response. Slightly compressed but open, with a vocal-like quality and a subtle touch of ambience.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 60,
+          "Clipping": 45
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 58,
+          "Drive": 46,
+          "Tone": 40
+        }
+      },
+      "amplifier": {
+        "type": "Brit Blues",
+        "enabled": true,
+        "params": {
+          "Gain": 54,
+          "Master": 68,
+          "Bass": 54,
+          "Middle": 65,
+          "Treble": 41,
+          "Presence": 45
+        }
+      },
+      "cabinet": {
+        "type": "M1936",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 48,
+          "HighCut": 42
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 34,
+          "Decay": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 14,
+          "Rate": 18,
+          "Echo": 24
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "still-got-the-blues-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/gary-moore-still-got-the-blues-tab-s36265"
+  },
+  {
+    "id": "gen_mfh10xxp_zz5k5lz3z",
+    "origin": {
+      "artistId": 23,
+      "song": "Still Got The Blues",
+      "part": "Clean Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, warm, and rounded clean tone with bell-like clarity and gentle compression. Slightly scooped mids, sparkling highs, and rich lows. Sustains well without harshness; dynamic and touch-sensitive, with a subtle sweetness and air.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "Studio Comp",
+        "enabled": true,
+        "params": {
+          "Gain": 53,
+          "Threshold": 45,
+          "Ratio": 40,
+          "Release": 55
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 60,
+          "Master": 53,
+          "Bass": 56,
+          "Middle": 39,
+          "Treble": 65,
+          "Bright": 60
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 45,
+          "HighCut": 60
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 52,
+          "62": 57,
+          "125": 55,
+          "250": 53,
+          "500": 48,
+          "1000": 44,
+          "2000": 47,
+          "4000": 55,
+          "8000": 61,
+          "16000": 58,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "Decay": 60
+        }
+      },
+      "delay": {
+        "type": "Tape Echo",
+        "enabled": true,
+        "params": {
+          "Level": 28,
+          "Time": 34,
+          "Repeat": 18
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "still-got-the-blues-guitar-clean-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/gary-moore-still-got-the-blues-tab-s36265t1"
   }
 ]
