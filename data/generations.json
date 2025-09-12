@@ -1,6 +1,235 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-12T02:36:19.368Z",
+      "originalPrompt": "Ten Years After I'd Love To Change The World Guitar\n Solo",
+      "proDescription": {
+        "tone_title": "I'd Love To Change The World - Guitar Solo",
+        "genre": "Classic Rock / Blues Rock",
+        "sound_description": "Warm, singing lead tone with smooth sustain and slight breakup; expressive and dynamic, not overly compressed, with subtle vintage character and clarity. The solo has a touch of reverb and delay for ambience, but remains intimate and focused.",
+        "guitar_rig_description": "Noise gate: not used (solo is dynamic and vintage, noise is acceptable). Compressor: not used (allows for natural touch dynamics). Overdrive/Distortion/Boost: vintage low-gain overdrive pedal for extra sustain and mild breakup, emulating a cranked tube amp. Amplifier: British-style vintage tube amp, set just into overdrive, providing warmth, articulation, and a touch of natural compression. Cabinet: open-back 2x12 cab with classic British speakers for airy mids and smooth highs. EQ: basic amp EQ for warmth and clarity, no external EQ block used. Modulation: not used (solo is dry and direct). Delay: short slapback delay for slight depth, subtle in the mix. Reverb: spring reverb for classic ambience, not overpowering.",
+        "references": [
+          "Ten Years After - I'd Love To Change The World",
+          "Eric Clapton - Wonderful Tonight (solo tone)",
+          "Peter Green - Need Your Love So Bad (solo tone)"
+        ],
+        "song_part": "guitar solo",
+        "preferred_pickup": "neck humbucker, tone = 7 (rolled off slightly for warmth)",
+        "additional_info": "Use expressive vibrato and bends. Lighter string gauge (e.g., .010-.046) helps with bends and sustain. Pick attack should be dynamic; avoid heavy palm muting. Classic Les Paul or SG preferred, but any humbucker-equipped guitar can work."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Ibanez TS808 Tube Screamer",
+          "MXR Carbon Copy Analog Delay"
+        ],
+        "amplifier": "Marshall 1962 Bluesbreaker Combo",
+        "cabinet": "Marshall 1962 Bluesbreaker 2x12 Combo with Celestion G12M Greenback 25W speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Volume I": 5.5,
+            "Volume II": 0,
+            "Bass": 6,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 5,
+            "Reverb": 3
+          },
+          "overdrive": {
+            "Drive": 3.5,
+            "Tone": 4.5,
+            "Level": 7
+          },
+          "delay": {
+            "Delay Time": "90 ms",
+            "Mix": 10,
+            "Repeats": 1
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 38,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Brit Blues",
+          "enabled": true,
+          "params": {
+            "Gain": 57,
+            "Master": 62,
+            "Bass": 56,
+            "Middle": 62,
+            "Treble": 48,
+            "Presence": 44
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 47,
+            "HighCut": 52
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 34,
+            "Decay": 38
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 22,
+            "Rate": 27,
+            "Echo": 29
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 38,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Brit Blues",
+              "enabled": true,
+              "params": {
+                "Gain": 57,
+                "Master": 62,
+                "Bass": 56,
+                "Middle": 62,
+                "Treble": 48,
+                "Presence": 44
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 47,
+                "HighCut": 52
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 34,
+                "Decay": 38
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 22,
+                "Rate": 27,
+                "Echo": 29
+              }
+            }
+          },
+          "prompt": "Ten Years After I'd Love To Change The World Guitar\n Solo",
+          "timestamp": "2025-09-12T02:36:19.368Z"
+        }
+      ],
+      "id": "gen_mfg8796b_ym27zckpd",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-11T16:19:09.296Z",
       "originalPrompt": "REM The One I Love Clean Guitar Verse",
       "proDescription": {
@@ -13164,6 +13393,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-11T16:23:00.109Z"
+    "lastUpdated": "2025-09-12T02:36:19.379Z"
   }
 }
