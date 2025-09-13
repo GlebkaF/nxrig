@@ -4242,5 +4242,108 @@
     },
     "slug": "still-got-the-blues-guitar-clean-guitar",
     "tabsUrl": "https://www.songsterr.com/a/wsa/gary-moore-still-got-the-blues-tab-s36265t1"
+  },
+  {
+    "id": "gen_mfhp9tzq_pkny8689i",
+    "origin": {
+      "artistId": 24,
+      "song": "Song 2",
+      "part": "Overdriven Guitar Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Raw, aggressive, fuzzy overdrive with pronounced attack and midrange bite. The sound is thick but not overly saturated, with a gritty, garage-rock edge. There’s moderate sustain, decent clarity, and a slightly lo-fi character.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 65,
+          "Decay": 55
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 75,
+          "Tone": 60
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 62,
+          "Master": 60,
+          "Bass": 40,
+          "Treble": 55,
+          "Cut": 60
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 60,
+          "HighCut": 40
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 50,
+          "220": 48,
+          "500": 50,
+          "1200": 45,
+          "2600": 45,
+          "6400": 40
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 30,
+          "Decay": 35
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "song-2-guitar-overdriven-guitar-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/blur-song-2-tab-s3684"
   }
 ]

@@ -136,5 +136,11 @@
     "title": "Gary Moore",
     "slug": "gary-moore",
     "description": "legendary Irish guitarist celebrated for his fiery blues rock style, soulful solos, and unforgettable guitar tone that inspired generations of musicians worldwide"
+  },
+  {
+    "id": 24,
+    "title": "Blur",
+    "slug": "blur",
+    "description": "Iconic British band that defined the Britpop era with their catchy melodies, sharp lyrics, and inventive sound blending rock, pop, and alternative styles."
   }
 ]
