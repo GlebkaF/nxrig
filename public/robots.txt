@@ -3,5 +3,7 @@ Disallow: /
 Allow: /$
 Allow: /preset/
 Allow: /sitemap.xml
+Allow: /order
+Allow: /site.webmanifest
 
 Sitemap: https://nxrig.com/sitemap.xml

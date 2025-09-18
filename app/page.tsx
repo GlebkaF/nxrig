@@ -26,6 +26,9 @@ export const metadata: Metadata = {
       "Download free NUX Mighty Plug Pro and Mighty Space patches and guitar presets. Fully compatible with both devices. Explore authentic tones for rock, blues, and metal. Easy to use, tested by real musicians.",
     images: ["/images/og-image.svg"],
   },
+  alternates: {
+    canonical: "https://nxrig.com/",
+  },
 };
 
 export default function Home() {
