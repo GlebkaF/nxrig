@@ -30,6 +30,10 @@ export default function OrderPage() {
           <h1 className="text-4xl font-bold mb-6 text-center">
             Request Custom Patch
           </h1>
+          <p className="text-center text-gray-400 mb-6">
+            Can&apos;t find the tone you need? Request a custom patch and
+            we&apos;ll add it in a few days and email you when it&apos;s ready.
+          </p>
 
           <div className="bg-gray-800/50 backdrop-blur-sm border border-white/10 rounded-lg p-6">
             <div className="flex justify-center">
