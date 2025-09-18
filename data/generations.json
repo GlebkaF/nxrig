@@ -1,6 +1,1253 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-18T12:09:33.435Z",
+      "originalPrompt": "comfortably numb Pink Floyd Solo Guitar”",
+      "proDescription": {
+        "tone_title": "Comfortably Numb - Solo Tone",
+        "genre": "Classic Rock / Progressive Rock",
+        "sound_description": "Smooth, singing lead tone with sustained notes, moderate compression, creamy overdrive, and lush spatial effects. The sound is expressive, with clarity, warmth, and a touch of ambient depth. Not overly aggressive, but present and articulate, allowing for emotive bends and vibrato.",
+        "guitar_rig_description": "Noise gate: not used (signal is relatively clean and sustain is desired); Compressor: used to even out dynamics and enhance sustain for long, expressive notes; Overdrive/Distortion: used (mild overdrive or transparent distortion pedal to push the amp, creating a creamy, singing lead tone without excessive gain); Amplifier: used (classic tube amp model, preferably a Hiwatt or similar British clean amp, slightly pushed into breakup for natural warmth); Cabinet: used (4x12 or 2x12 open or closed back with classic British speakers to provide body and presence); EQ: used (midrange slightly boosted to cut through the mix, treble rolled off for smoothness, bass controlled for clarity); Modulation: used (chorus or mild rotary speaker effect for subtle movement and width, optional but often present); Delay: used (analog or tape-style delay with moderate repeats and mix, providing spacious echoes without overwhelming the lead); Reverb: used (large plate or hall reverb to add lush ambience and sustain).",
+        "references": [
+          "Pink Floyd - Comfortably Numb (Live at Pulse)",
+          "David Gilmour - Live in Gdansk",
+          "Pink Floyd - Delicate Sound of Thunder"
+        ],
+        "song_part": "guitar solo",
+        "preferred_pickup": "bridge pickup (humbucker preferred, but single coil can be used for extra bite), tone knob rolled down slightly for smoothness",
+        "additional_info": "Use expressive playing with wide bends, heavy vibrato, and controlled picking. Gilmour often uses heavier gauge strings (e.g., .010–.048) and a Big Muff-style fuzz for extra sustain in some live versions, but a classic overdrive works for the studio tone. Volume pedal can be optionally used for swells. Consider using a Strat-style guitar for authenticity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp",
+          "ProCo RAT 2",
+          "Electro-Harmonix Electric Mistress XO",
+          "Boss DD-2 Digital Delay",
+          "Electro-Harmonix Holy Grail Neo Reverb"
+        ],
+        "amplifier": "Hiwatt Custom 100 DR103",
+        "cabinet": "Hiwatt SE4123 4x12 with Fane Crescendo speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 5,
+            "Master": 5
+          },
+          "compressor": {
+            "Output": 2.5,
+            "Sensitivity": 7
+          },
+          "overdrive": {
+            "Distortion": 2.5,
+            "Filter": 5.5,
+            "Volume": 7
+          },
+          "modulation": {
+            "Rate": 10,
+            "Flanger/Filter Matrix": "Flanger",
+            "Color": 2
+          },
+          "delay": {
+            "Time": 420,
+            "Repeat": 4,
+            "Level": 6
+          },
+          "reverb": {
+            "Type": "Hall",
+            "Blend": 6
+          },
+          "notes": {
+            "pickup": "Bridge single coil (Strat) or humbucker, tone knob 6–7 for smoothness",
+            "string_gauge": ".010–.048",
+            "playing": "Use wide bends, heavy vibrato, and expressive picking. Volume pedal (e.g., Ernie Ball VP Jr.) optional for swells."
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 70,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "Flanger",
+          "enabled": true,
+          "params": {
+            "Rate": 28,
+            "Width": 42,
+            "Level": 34,
+            "Feedback": 24
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 37,
+            "Tone": 41
+          }
+        },
+        "amplifier": {
+          "type": "Hiwire",
+          "enabled": true,
+          "params": {
+            "Gain": 54,
+            "Master": 58,
+            "Bass": 43,
+            "Middle": 67,
+            "Treble": 42,
+            "Presence": 47
+          }
+        },
+        "cabinet": {
+          "type": "HIWIRE412",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 52,
+            "HighCut": 46
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Hall",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Decay": 62,
+            "PreDelay": 44,
+            "Liveliness": 54
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 45,
+            "Feedback": 53,
+            "Time": 60
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 70,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "Flanger",
+              "enabled": true,
+              "params": {
+                "Rate": 28,
+                "Width": 42,
+                "Level": 34,
+                "Feedback": 24
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 37,
+                "Tone": 41
+              }
+            },
+            "amplifier": {
+              "type": "Hiwire",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Master": 58,
+                "Bass": 43,
+                "Middle": 67,
+                "Treble": 42,
+                "Presence": 47
+              }
+            },
+            "cabinet": {
+              "type": "HIWIRE412",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 52,
+                "HighCut": 46
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Hall",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Decay": 62,
+                "PreDelay": 44,
+                "Liveliness": 54
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 45,
+                "Feedback": 53,
+                "Time": 60
+              }
+            }
+          },
+          "prompt": "comfortably numb Pink Floyd Solo Guitar”",
+          "timestamp": "2025-09-18T12:09:33.435Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 70,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "Flanger",
+              "enabled": true,
+              "params": {
+                "Rate": 28,
+                "Width": 42,
+                "Level": 34,
+                "Feedback": 24
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 37,
+                "Tone": 41
+              }
+            },
+            "amplifier": {
+              "type": "Hiwire",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Master": 58,
+                "Bass": 43,
+                "Middle": 67,
+                "Treble": 42,
+                "Presence": 47
+              }
+            },
+            "cabinet": {
+              "type": "HIWIRE412",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 52,
+                "HighCut": 46
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Hall",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Decay": 62,
+                "PreDelay": 44,
+                "Liveliness": 54
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 30,
+                "Feedback": 40,
+                "Time": 45
+              }
+            }
+          },
+          "prompt": "много дилея\n",
+          "timestamp": "2025-09-18T12:11:13.368Z"
+        }
+      ],
+      "id": "gen_mfpdbjt4_c0ql5lidf",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-18T12:07:15.390Z",
+      "originalPrompt": "comfortably numb\tPink Floyd\tSolo\tGuitar",
+      "proDescription": {
+        "tone_title": "Comfortably Numb - Solo",
+        "genre": "Classic Rock / Progressive Rock",
+        "sound_description": "Smooth, sustaining lead tone with rich midrange, singing quality, moderate compression, clear attack, and ambient depth. Slightly overdriven but not aggressive, with lush modulation and spacious delay/reverb.",
+        "guitar_rig_description": "Signal chain order: Noise gate (not used), Compressor (used for smooth sustain and even dynamics), Overdrive (mild overdrive or boost to push the amp, adding warmth and sustain), Amplifier (clean to edge-of-breakup tube amp, providing core tone and further sustain), Cabinet (classic 4x12-inch or similar, for full midrange and smooth highs), EQ (used to emphasize mids and roll off harsh highs), Modulation (chorus or slight modulation for width and depth), Delay (analog or tape-style delay, set for repeats that add spaciousness without clutter), Reverb (plate or hall reverb for atmospheric depth).",
+        "references": [
+          "Pink Floyd - Comfortably Numb (live and studio solos)",
+          "Pink Floyd - Time (solo tone)",
+          "David Gilmour solo performances"
+        ],
+        "song_part": "Guitar solo",
+        "preferred_pickup": "bridge pickup, tone rolled back slightly (around 6-7)",
+        "additional_info": "Use a Stratocaster with single-coil pickups (Gilmour often used the bridge pickup with the tone rolled off a bit); play with fingers or a pick for smooth attack; lighter string gauge (e.g., .010-.046) for easier bending; expressive vibrato and bends are crucial to the solo’s feel."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp",
+          "Pro Co RAT 2 (as mild overdrive, not fuzz)",
+          "Boss GE-7 Equalizer",
+          "Electro-Harmonix Electric Mistress (flanger/chorus)",
+          "Electro-Harmonix Deluxe Memory Man (analog delay)",
+          "TC Electronic Hall of Fame Reverb (plate or hall setting)"
+        ],
+        "amplifier": "Hiwatt Custom 100 DR103",
+        "cabinet": "Hiwatt SE4123 4x12 with Fane Crescendo 12\" speakers",
+        "settings": {
+          "amp": {
+            "Gain": 6,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 5,
+            "Master": 5
+          },
+          "compressor": {
+            "Output": 2,
+            "Sensitivity": 7
+          },
+          "overdrive": {
+            "Distortion": 3,
+            "Filter": 2,
+            "Volume": 7
+          },
+          "eq": {
+            "100Hz": "0",
+            "400Hz": "+2dB",
+            "800Hz": "+3dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "-2dB",
+            "6.4kHz": "-3dB"
+          },
+          "modulation": {
+            "Rate": 10,
+            "Color": 12,
+            "Flanger/Chorus switch": "Chorus"
+          },
+          "delay": {
+            "Delay Time": 420,
+            "Feedback": 3,
+            "Mix": 45
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": 6,
+            "Mix": 30
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 70,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "Flanger",
+          "enabled": true,
+          "params": {
+            "Rate": 30,
+            "Width": 35,
+            "Level": 35,
+            "Feedback": 25
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 35,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Hiwire",
+          "enabled": true,
+          "params": {
+            "Gain": 45,
+            "Master": 65,
+            "Bass": 55,
+            "Middle": 65,
+            "Treble": 45,
+            "Presence": 40
+          }
+        },
+        "cabinet": {
+          "type": "HIWIRE412",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "LowCut": 45,
+            "HighCut": 40
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 48,
+            "220": 52,
+            "500": 60,
+            "1200": 65,
+            "2600": 54,
+            "6400": 40
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 65,
+            "Decay": 60
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 55,
+            "Rate": 35,
+            "Echo": 60
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 70,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "Flanger",
+              "enabled": true,
+              "params": {
+                "Rate": 30,
+                "Width": 35,
+                "Level": 35,
+                "Feedback": 25
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 35,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Hiwire",
+              "enabled": true,
+              "params": {
+                "Gain": 45,
+                "Master": 65,
+                "Bass": 55,
+                "Middle": 65,
+                "Treble": 45,
+                "Presence": 40
+              }
+            },
+            "cabinet": {
+              "type": "HIWIRE412",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "LowCut": 45,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 48,
+                "220": 52,
+                "500": 60,
+                "1200": 65,
+                "2600": 54,
+                "6400": 40
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 65,
+                "Decay": 60
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 55,
+                "Rate": 35,
+                "Echo": 60
+              }
+            }
+          },
+          "prompt": "comfortably numb\tPink Floyd\tSolo\tGuitar",
+          "timestamp": "2025-09-18T12:07:15.390Z"
+        }
+      ],
+      "id": "gen_mfpd8laj_f9iw7zhwo",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-18T12:00:20.351Z",
+      "originalPrompt": "\nsince I've been loving you led zeppelin Solo Guitar",
+      "proDescription": {
+        "tone_title": "Since I've Been Loving You - Solo Guitar",
+        "genre": "Classic Rock / Blues Rock",
+        "sound_description": "Expressive, dynamic, and sustaining lead tone with a warm, slightly overdriven character. The sound is smooth with singing sustain, touch-sensitive response, and a hint of vintage tube amp breakup. There is clarity and articulation for expressive bends and vibrato, with a natural room-like ambience.",
+        "guitar_rig_description": "Noise gate: not used (to preserve dynamic response and subtle nuances). Compressor: not used (natural dynamics preferred for expressive blues phrasing). Overdrive/boost: light overdrive or boost pedal used to push the amp into smooth, singing sustain without heavy distortion. Amplifier: vintage-style tube amplifier set to edge-of-breakup for warmth and touch sensitivity. Cabinet: 4x12 or 2x12 vintage-style cabinet emulation for full, open sound. EQ: subtle midrange emphasis to help leads cut through the mix, slight roll-off of harsh highs. Modulation: not used. Delay: not used. Reverb: subtle spring or plate reverb to add depth and a touch of ambience.",
+        "references": [
+          "Led Zeppelin - Since I've Been Loving You",
+          "Gary Moore - Still Got the Blues",
+          "Eric Clapton - Have You Ever Loved a Woman (live)"
+        ],
+        "song_part": "lead solo",
+        "preferred_pickup": "neck single-coil or neck humbucker with tone rolled back slightly for warmth",
+        "additional_info": "Use expressive bends and wide vibrato; medium to light string gauge for easier bending; volume knob may be rolled back for cleaner dynamics. Jimmy Page used a Les Paul into a cranked Marshall with a minimal pedalboard—replicate by keeping the rig simple and responsive to playing dynamics."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Ibanez TS808 Tube Screamer",
+          "Strymon Flint (reverb only, set to '70s Plate')"
+        ],
+        "amplifier": "Marshall 1959SLP Plexi Super Lead 100",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Volume I)": 7,
+            "Gain (Volume II)": 0,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 5,
+            "Master": 3
+          },
+          "overdrive": {
+            "Drive": 3,
+            "Tone": 5,
+            "Level": 8
+          },
+          "reverb": {
+            "Decay": 3,
+            "Mix": 18,
+            "Color": "Plate"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 28,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 63,
+            "Master": 60,
+            "Bass": 48,
+            "Middle": 62,
+            "Treble": 44,
+            "Presence": 46
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 39,
+            "Decay": 42
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 28,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 63,
+                "Master": 60,
+                "Bass": 48,
+                "Middle": 62,
+                "Treble": 44,
+                "Presence": 46
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 39,
+                "Decay": 42
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "\nsince I've been loving you led zeppelin Solo Guitar",
+          "timestamp": "2025-09-18T12:00:20.351Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 38,
+                "Tone": 48
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 73,
+                "Master": 60,
+                "Bass": 48,
+                "Middle": 62,
+                "Treble": 51,
+                "Presence": 52
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 50
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 55,
+                "6400": 57
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 39,
+                "Decay": 42
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Глуховато и перегруза не хватает немного\n",
+          "timestamp": "2025-09-18T12:01:54.274Z"
+        }
+      ],
+      "id": "gen_mfpczp1o_ewpugwmp8",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-18T11:52:16.307Z",
+      "originalPrompt": "since I've been loving you\tled zeppelin\tIntro Guitar",
+      "proDescription": {
+        "tone_title": "Since I've Been Loving You - Intro",
+        "genre": "Blues Rock",
+        "sound_description": "Warm, expressive and dynamic clean-to-overdriven blues tone with rich sustain, mild breakup, and a vintage feel. The sound is touch-sensitive, allowing for expressive phrasing, with a slightly dark character, smooth highs, and prominent midrange. Subtle natural room ambiance enhances the depth.",
+        "guitar_rig_description": "Noise gate: not used (dynamic playing and vintage style do not require gating). Compressor: not used (natural dynamics desired). Overdrive: mild transparent overdrive or classic overdrive pedal to push the amp for touch-sensitive breakup. Amplifier: vintage-style tube amp set just at the edge of breakup for dynamic response. Cabinet: 4x12 or 2x12 vintage-style speaker cab for warmth and fullness. EQ: amplifier's built-in tone controls used to emphasize mids and roll off excessive highs; no external EQ block. Modulation: not used. Delay: not used. Reverb: subtle spring or plate reverb for a touch of space.",
+        "references": [
+          "Led Zeppelin - Since I've Been Loving You",
+          "Gary Moore - Still Got the Blues",
+          "Jimi Hendrix - Red House"
+        ],
+        "song_part": "intro (lead guitar)",
+        "preferred_pickup": "neck humbucker, tone = 6-7",
+        "additional_info": "Light to medium string gauge (.010–.046 preferred), light touch with expressive vibrato and bends. Avoid excessive gain; let amp and picking dynamics control the breakup. Roll back guitar volume for cleaner passages. Use of a Les Paul with neck pickup is ideal."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Klon Centaur (or Ceriatone Centura as a modern clone) — set for low gain, unity volume, tone slightly below noon",
+          "Strymon Flint (Reverb only, Plate mode) — mix low, decay moderate"
+        ],
+        "amplifier": "Marshall 1959SLP Plexi Super Lead 100",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M-25 Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Volume I)": 6,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 4,
+            "Master": 3
+          },
+          "overdrive": {
+            "Gain": 9,
+            "Tone": 11,
+            "Output": 12
+          },
+          "reverb": {
+            "Mix": 10,
+            "Decay": 11,
+            "Color": 10
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 55,
+            "Gain": 25,
+            "Bass": 53,
+            "Treble": 45
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 48,
+            "Master": 63,
+            "Bass": 48,
+            "Middle": 65,
+            "Treble": 43,
+            "Presence": 38
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 38,
+            "HighCut": 58
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 34,
+            "Decay": 40
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 55,
+                "Gain": 25,
+                "Bass": 53,
+                "Treble": 45
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 48,
+                "Master": 63,
+                "Bass": 48,
+                "Middle": 65,
+                "Treble": 43,
+                "Presence": 38
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 38,
+                "HighCut": 58
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 34,
+                "Decay": 40
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "since I've been loving you\tled zeppelin\tIntro Guitar",
+          "timestamp": "2025-09-18T11:52:16.307Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 55,
+                "Gain": 15,
+                "Bass": 53,
+                "Treble": 45
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 43,
+                "Master": 63,
+                "Bass": 48,
+                "Middle": 65,
+                "Treble": 43,
+                "Presence": 38
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 38,
+                "HighCut": 58
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 34,
+                "Decay": 40
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Овердрайва слегка перебор\n",
+          "timestamp": "2025-09-18T11:56:31.614Z"
+        }
+      ],
+      "id": "gen_mfpcpbjz_7f97nbncp",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-18T08:19:48.297Z",
       "originalPrompt": "Burnin' for you Blue oyster cult Solo\n Guitar",
       "proDescription": {
@@ -17179,6 +18426,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-18T08:32:40.677Z"
+    "lastUpdated": "2025-09-18T12:11:13.380Z"
   }
 }
