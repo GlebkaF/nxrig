@@ -142,5 +142,11 @@
     "title": "Blur",
     "slug": "blur",
     "description": "Iconic British band that defined the Britpop era with their catchy melodies, sharp lyrics, and inventive sound blending rock, pop, and alternative styles."
+  },
+  {
+    "id": 25,
+    "title": "Blue Öyster Cult",
+    "slug": "blue-yster-cult",
+    "description": "American rock band famed for their fusion of hard rock, psychedelia, and progressive elements. Known for powerful guitar riffs, dark lyrical themes, and timeless classics like \"(Don’t Fear) The Reaper\" that shaped the sound of modern rock and metal"
   }
 ]

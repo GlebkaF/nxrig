@@ -1,6 +1,511 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-18T08:19:48.297Z",
+      "originalPrompt": "Burnin' for you Blue oyster cult Solo\n Guitar",
+      "proDescription": {
+        "tone_title": "Burnin' for You - Solo",
+        "genre": "Classic Rock",
+        "sound_description": "Smooth, singing lead tone with moderate sustain, a touch of warmth, clear articulation, and subtle vintage character. Not overly aggressive but present enough to cut through the mix. Mild compression and delay/reverb add depth and polish.",
+        "guitar_rig_description": "1. Noise Gate: not used (solo part not overly noisy). 2. Compressor: used moderately to even out dynamics and enhance sustain without squashing attack. 3. Overdrive: a classic overdrive pedal is used to push the amp, adding warmth, smoothness, and mild saturation without heavy distortion. 4. Amplifier: vintage-voiced tube amp set for edge-of-breakup to moderate overdrive, delivering rich mids and smooth highs. 5. Cabinet: matched 2x12 or 4x12 cabinet emulation, providing rounded low end and clear top. 6. EQ: slight mid boost to enhance lead presence, gentle cut to any excessive harshness. 7. Modulation: not used (solo is dry). 8. Delay: subtle analog or tape-style delay with short repeats, adding depth and width without clutter. 9. Reverb: plate or spring reverb for natural ambience and sustain, set at a moderate level.",
+        "references": [
+          "Blue Öyster Cult - Burnin' for You (solo)",
+          "Boston - More Than a Feeling (solo)",
+          "Journey - Don't Stop Believin' (solo)"
+        ],
+        "song_part": "guitar solo",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use moderate picking dynamics for expressive phrasing. String gauge .010–.046 recommended for balanced bendability and tone. Subtle vibrato technique enhances vocal-like quality."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "Ibanez TS808 Tube Screamer",
+          "Boss GE-7 Equalizer",
+          "MXR Carbon Copy Analog Delay",
+          "Strymon Flint (plate reverb mode)"
+        ],
+        "amplifier": "Fender '65 Deluxe Reverb Reissue",
+        "cabinet": "Fender 2x12 Tone Master Cabinet with Celestion G12-65 speakers",
+        "settings": {
+          "amp": {
+            "Volume": 6,
+            "Treble": 5.5,
+            "Bass": 4.5,
+            "Reverb": 0
+          },
+          "compressor": {
+            "Sustain": 10.5,
+            "Level": 12,
+            "Blend": 11,
+            "Tone": 12
+          },
+          "overdrive": {
+            "Drive": 9,
+            "Tone": 11,
+            "Level": 13
+          },
+          "eq": {
+            "100Hz": "0dB",
+            "200Hz": "+1dB",
+            "400Hz": "+2dB",
+            "800Hz": "+2dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "-1dB",
+            "6.4kHz": "-1dB"
+          },
+          "delay": {
+            "Mix": 9,
+            "Repeats": 9,
+            "Delay Time": 375
+          },
+          "reverb": {
+            "Mix": 10,
+            "Decay": 10.5,
+            "Color": "plate"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 62,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "Drive": 38,
+            "Tone": 46
+          }
+        },
+        "amplifier": {
+          "type": "Deluxe Rvb",
+          "enabled": true,
+          "params": {
+            "Gain": 57,
+            "Master": 60,
+            "Bass": 48,
+            "Middle": 62,
+            "Treble": 53
+          }
+        },
+        "cabinet": {
+          "type": "DR112",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 47,
+            "HighCut": 54
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 48,
+            "220": 52,
+            "500": 56,
+            "1200": 60,
+            "2600": 54,
+            "6400": 46
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 44,
+            "Decay": 57
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 32,
+            "Rate": 38,
+            "Echo": 44
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 62,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Drive": 38,
+                "Tone": 46
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 57,
+                "Master": 60,
+                "Bass": 48,
+                "Middle": 62,
+                "Treble": 53
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 47,
+                "HighCut": 54
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 48,
+                "220": 52,
+                "500": 56,
+                "1200": 60,
+                "2600": 54,
+                "6400": 46
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 44,
+                "Decay": 57
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 32,
+                "Rate": 38,
+                "Echo": 44
+              }
+            }
+          },
+          "prompt": "Burnin' for you Blue oyster cult Solo\n Guitar",
+          "timestamp": "2025-09-18T08:19:48.297Z"
+        }
+      ],
+      "id": "gen_mfp5434j_xle5bqqy1",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-18T08:12:14.523Z",
+      "originalPrompt": "Burnin' for you\tBlue oyster cult\tMain riff\tGuitar",
+      "proDescription": {
+        "tone_title": "Burnin' for You - Main Riff",
+        "genre": "Classic Rock / Arena Rock",
+        "sound_description": "Bright, slightly compressed, clear yet warm overdriven tone with moderate sustain and a touch of sparkle. The sound is punchy but not overly aggressive, sitting well in a mix and retaining note definition.",
+        "guitar_rig_description": "Noise gate: not used. Compressor: used for light dynamic control and subtle sustain. Overdrive: used for mild, transparent breakup, emulating a classic tube overdrive. Amplifier: classic clean-to-crunch tube amp model, set just at the edge of breakup for warmth and touch sensitivity. Cabinet: 2x12 open-back cab with vintage-style speakers for brightness and body. EQ: used post-amp for gentle high-end boost and low-mid tightening. Modulation: chorus used subtly for stereo width and shimmer. Delay: not used. Reverb: used for moderate room ambience, providing space without washing out the tone.",
+        "references": [
+          "Blue Oyster Cult - Burnin' for You",
+          "Boston - More Than a Feeling",
+          "The Cars - Just What I Needed"
+        ],
+        "song_part": "main riff",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use a moderate pick attack for clarity; light gauge strings (9-42 or 10-46) recommended for brightness and ease of bends. Classic chorus pedal (such as CE-2) for subtle movement. Avoid high gain to preserve note articulation."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Ibanez TS808 Tube Screamer",
+          "Boss CE-2 Chorus",
+          "MXR 10-Band EQ",
+          "Strymon Flint (Reverb side: Plate mode)"
+        ],
+        "amplifier": "Fender Twin Reverb (’65 Reissue)",
+        "cabinet": "Fender Hot Rod Deluxe 212 Enclosure 2x12\" with Celestion G12V-70 speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Volume": 4.5,
+            "Treble": 6,
+            "Middle": 5,
+            "Bass": 4.5,
+            "Reverb": 2,
+            "Presence": 5
+          },
+          "compressor": {
+            "Blend": 11,
+            "Volume": 12,
+            "Compression": 9
+          },
+          "overdrive": {
+            "Drive": 4.5,
+            "Tone": 5,
+            "Level": 6
+          },
+          "chorus": {
+            "Rate": 9,
+            "Depth": 11
+          },
+          "eq": {
+            "63Hz": "-1dB",
+            "125Hz": "0dB",
+            "250Hz": "-2dB",
+            "500Hz": "-1dB",
+            "1kHz": "+1dB",
+            "2kHz": "+2dB",
+            "4kHz": "+3dB",
+            "8kHz": "+2dB",
+            "16kHz": "+1dB"
+          },
+          "reverb": {
+            "Mix": 15,
+            "Decay": 10
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 42,
+            "Clipping": 35
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 40,
+            "Depth": 30
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 28,
+            "Tone": 62
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 65,
+            "Master": 60,
+            "Bass": 46,
+            "Middle": 54,
+            "Treble": 64,
+            "Bright": 62
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 58,
+            "HighCut": 66
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 44,
+            "62": 46,
+            "125": 48,
+            "250": 47,
+            "500": 49,
+            "1000": 55,
+            "2000": 60,
+            "4000": 65,
+            "8000": 68,
+            "16000": 56,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 37,
+            "Decay": 44
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 42,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 40,
+                "Depth": 30
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 28,
+                "Tone": 62
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 65,
+                "Master": 60,
+                "Bass": 46,
+                "Middle": 54,
+                "Treble": 64,
+                "Bright": 62
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 58,
+                "HighCut": 66
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 44,
+                "62": 46,
+                "125": 48,
+                "250": 47,
+                "500": 49,
+                "1000": 55,
+                "2000": 60,
+                "4000": 65,
+                "8000": 68,
+                "16000": 56,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 37,
+                "Decay": 44
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Burnin' for you\tBlue oyster cult\tMain riff\tGuitar",
+          "timestamp": "2025-09-18T08:12:14.523Z"
+        }
+      ],
+      "id": "gen_mfp4uczq_71bwuv4rs",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-13T03:43:19.689Z",
       "originalPrompt": "Boston More Than A Feeling Chorus Distortion Guitar\n",
       "proDescription": {
@@ -16584,6 +17089,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-13T03:43:19.706Z"
+    "lastUpdated": "2025-09-18T08:19:48.308Z"
   }
 }

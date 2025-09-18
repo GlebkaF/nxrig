@@ -4345,5 +4345,113 @@
     },
     "slug": "song-2-guitar-overdriven-guitar-riff",
     "tabsUrl": "https://www.songsterr.com/a/wsa/blur-song-2-tab-s3684"
+  },
+  {
+    "id": "gen_mfp4uczq_71bwuv4rs",
+    "origin": {
+      "artistId": 25,
+      "song": "Burnin' For You",
+      "part": "main-riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, slightly compressed, clear yet warm overdriven tone with moderate sustain and a touch of sparkle. The sound is punchy but not overly aggressive, sitting well in a mix and retaining note definition.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 42,
+          "Clipping": 35
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 40,
+          "Depth": 30
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 28,
+          "Tone": 62
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 65,
+          "Master": 60,
+          "Bass": 46,
+          "Middle": 54,
+          "Treble": 64,
+          "Bright": 62
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 58,
+          "HighCut": 66
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 44,
+          "62": 46,
+          "125": 48,
+          "250": 47,
+          "500": 49,
+          "1000": 55,
+          "2000": 60,
+          "4000": 65,
+          "8000": 68,
+          "16000": 56,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 37,
+          "Decay": 44
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "burnin-for-you-guitar-main-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/blue-oyster-cult-burnin-for-you-tab-s3036"
   }
 ]
