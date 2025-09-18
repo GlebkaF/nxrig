@@ -242,10 +242,100 @@
           },
           "prompt": "Burnin' for you Blue oyster cult Solo\n Guitar",
           "timestamp": "2025-09-18T08:19:48.297Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 62,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Drive": 38,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 57,
+                "Master": 60,
+                "Bass": 48,
+                "Middle": 62,
+                "Treble": 50
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 47,
+                "HighCut": 52
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 48,
+                "220": 52,
+                "500": 56,
+                "1200": 60,
+                "2600": 52,
+                "6400": 44
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 54
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 32,
+                "Rate": 38,
+                "Echo": 44
+              }
+            }
+          },
+          "prompt": "чуть более звонко чем нужно и ревера можно немного убавить\n",
+          "timestamp": "2025-09-18T08:29:34.714Z"
         }
       ],
       "id": "gen_mfp5434j_xle5bqqy1",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "timestamp": "2025-09-18T08:12:14.523Z",
@@ -503,7 +593,7 @@
         }
       ],
       "id": "gen_mfp4uczq_71bwuv4rs",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "timestamp": "2025-09-13T03:43:19.689Z",
@@ -17089,6 +17179,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-18T08:19:48.308Z"
+    "lastUpdated": "2025-09-18T08:32:40.677Z"
   }
 }
