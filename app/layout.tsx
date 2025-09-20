@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { Metadata } from "next";
 import YandexMetrika from "../components/YandexMetrika";
 import { GoogleTagManager } from "../components/GoogleTagManager";
+import { isProduction } from "../lib/env";
 
 export const metadata: Metadata = {
   title: "NXRIG",
@@ -15,8 +16,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const isProduction = process.env.NODE_ENV === "production";
-
   return (
     <html lang="en">
       <head>
