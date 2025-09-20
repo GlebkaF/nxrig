@@ -183,6 +183,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Создаем объект пресета
+    const currentDate = new Date().toISOString();
     const preset = {
       id: presetId,
       origin: {
@@ -200,6 +201,8 @@ export async function POST(request: NextRequest) {
       },
       slug: slug,
       tabsUrl: body.tabsUrl?.trim() || undefined,
+      createdAt: currentDate,
+      updatedAt: currentDate,
     };
 
     // Создаем объект для валидации с полным артистом
@@ -217,6 +220,8 @@ export async function POST(request: NextRequest) {
       pickup: preset.pickup,
       slug: preset.slug,
       tabsUrl: preset.tabsUrl,
+      createdAt: preset.createdAt,
+      updatedAt: preset.updatedAt,
     };
 
     // Валидируем пресет

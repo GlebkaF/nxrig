@@ -20,6 +20,8 @@ export const presetSchema = z
     pickup: pickupSchema,
     slug: z.string(),
     tabsUrl: z.string().optional(),
+    createdAt: z.string(),
+    updatedAt: z.string(),
   })
   .strict();
 
@@ -48,6 +50,8 @@ export const presetWithArtistSchema = z
     pickup: pickupSchema,
     slug: z.string(),
     tabsUrl: z.string().optional(),
+    createdAt: z.string(),
+    updatedAt: z.string(),
   })
   .strict();
 
