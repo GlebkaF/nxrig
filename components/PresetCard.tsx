@@ -7,6 +7,7 @@ import { Preset } from "lib/public/interface";
 import { encodeChain } from "lib/core/encoder";
 import { createPresetLink } from "lib/utils/urls";
 import { CompatibleDevices } from "./DeviceBadge";
+import { FavoriteButton } from "./FavoriteButton";
 
 interface PresetCardProps {
   preset: Preset;
@@ -58,6 +59,11 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
             <div className="mt-4 flex items-center justify-center md:justify-start gap-2 text-xs">
               <CompatibleDevices />
             </div>
+          </div>
+
+          {/* Favorite Button */}
+          <div className="shrink-0">
+            <FavoriteButton presetId={preset.id} variant="compact" />
           </div>
         </div>
       </div>

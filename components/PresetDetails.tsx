@@ -8,6 +8,7 @@ import ChainEditor from "./chain/ChainEditor";
 import { CompatibleDevices } from "./DeviceBadge";
 import Link from "next/link";
 import { createArtistLink } from "lib/utils/urls";
+import { FavoriteButton } from "./FavoriteButton";
 
 interface PresetDetailsProps {
   preset: Preset;
@@ -97,7 +98,7 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
             </ol>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 flex items-center gap-4">
             <button
               onClick={() => {
                 const canvas = document.querySelector("canvas");
@@ -118,6 +119,8 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
             >
               Download «{preset.origin.song} {preset.origin.part}» patch file
             </button>
+
+            <FavoriteButton presetId={preset.id} />
           </div>
 
           <div className="mt-8">
