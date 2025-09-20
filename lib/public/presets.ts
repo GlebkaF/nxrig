@@ -25,6 +25,8 @@ export const presets = presetsRaw.map((preset) => {
     pickup: preset.pickup,
     slug: preset.slug,
     tabsUrl: preset.tabsUrl,
+    createdAt: preset.createdAt,
+    updatedAt: preset.updatedAt,
   };
 
   // Валидируем весь preset с помощью Zod схемы
