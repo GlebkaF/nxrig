@@ -16,13 +16,6 @@ export default function FavoritesPage(): ReactElement {
     favorites.includes(preset.id),
   );
 
-  // Отслеживаем просмотр страницы избранного
-  useEffect(() => {
-    if (isLoaded) {
-      trackViewFavorites(favoritePresets.length);
-    }
-  }, [isLoaded, favoritePresets.length]);
-
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Header />

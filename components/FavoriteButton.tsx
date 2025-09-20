@@ -2,6 +2,8 @@
 
 import { useFavorites } from "hooks/useFavorites";
 import { ReactElement } from "react";
+import { trackAddToFavorites, trackRemoveFromFavorites } from "lib/analytics";
+import { presets } from "lib/public/presets";
 
 interface FavoriteButtonProps {
   presetId: string;
@@ -18,6 +20,12 @@ export function FavoriteButton({
 
   const isInFavorites = isFavorite(presetId);
 
+  // Получаем информацию о пресете для аналитики
+  const preset = presets.find((p) => p.id === presetId);
+  const presetName = preset
+    ? `${preset.origin.artist.title} - ${preset.origin.song} ${preset.origin.part}`
+    : presetId;
+
   // Не показываем кнопку пока не загрузились данные из localStorage
   if (!isLoaded) {
     return (
@@ -30,6 +38,14 @@ export function FavoriteButton({
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault(); // Предотвращаем навигацию если кнопка внутри Link
     e.stopPropagation();
+
+    // Отправляем событие в аналитику перед изменением состояния
+    if (isInFavorites) {
+      trackRemoveFromFavorites(presetId, presetName);
+    } else {
+      trackAddToFavorites(presetId, presetName);
+    }
+
     toggleFavorite(presetId);
   };
 
