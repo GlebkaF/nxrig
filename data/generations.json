@@ -1,6 +1,237 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-28T05:29:22.185Z",
+      "originalPrompt": "Metallica Creeping Death Intro Distortion Guitar\n",
+      "proDescription": {
+        "tone_title": "Creeping Death Intro Distortion Guitar",
+        "genre": "Thrash Metal",
+        "sound_description": "Aggressive, tight, and powerful with pronounced attack, moderate saturation, and a clear, cutting presence. The tone is thick but not overly bass-heavy, with a strong midrange and crisp highs. Minimal ambience, highly focused and percussive.",
+        "guitar_rig_description": "1. Noise gate: Used to control excess noise and keep the palm-muted chugs tight and clean. 2. Compressor: Not used, as natural dynamics are preferred for attack. 3. Overdrive/Distortion: A classic high-gain distortion pedal (such as a Tube Screamer or Boss SD-1) used as a boost in front of the amp to tighten the low end and add bite. 4. Amplifier: High-gain tube amplifier head with a tight, aggressive voicing (e.g., modified Marshall JCM800 or Mesa/Boogie Mark series), dialed for heavy distortion with strong mids and controlled bass. 5. Cabinet: 4x12 closed-back cabinet with Celestion speakers, miked with a dynamic microphone for midrange punch. 6. EQ: Amp EQ set for a tight low end, pronounced mids, and presence in the highs; no separate graphic EQ block used. 7. Modulation: Not used. 8. Delay: Not used. 9. Reverb: Not used for live rhythm tone; if any, extremely subtle room reverb from the amp/cab interaction.",
+        "references": [
+          "Metallica - Creeping Death",
+          "Metallica - Master of Puppets",
+          "Slayer - Raining Blood"
+        ],
+        "song_part": "intro/main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a guitar with high-output bridge humbucker (e.g., EMG 81 or passive equivalent). Play with aggressive palm muting and downpicking. Medium or heavy gauge strings (.010-.046 or heavier) for tightness and clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer"
+        ],
+        "amplifier": "Mesa/Boogie Mark IIC+",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 6,
+            "Master": 3,
+            "Lead Drive": 7,
+            "Lead Master": 5
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 5,
+            "Level": 8
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor, as high as possible without cutting off sustain",
+            "Decay": "medium-fast"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 65,
+            "Drive": 15,
+            "Tone": 70
+          }
+        },
+        "amplifier": {
+          "type": "SLO 100",
+          "enabled": true,
+          "params": {
+            "Gain": 75,
+            "Master": 60,
+            "Bass": 38,
+            "Middle": 70,
+            "Treble": 68,
+            "Presence": 70
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 60,
+            "HighCut": 65
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 65,
+                "Drive": 15,
+                "Tone": 70
+              }
+            },
+            "amplifier": {
+              "type": "SLO 100",
+              "enabled": true,
+              "params": {
+                "Gain": 75,
+                "Master": 60,
+                "Bass": 38,
+                "Middle": 70,
+                "Treble": 68,
+                "Presence": 70
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Metallica Creeping Death Intro Distortion Guitar\n",
+          "timestamp": "2025-09-28T05:29:22.185Z"
+        }
+      ],
+      "id": "gen_mg39ffa1_l63vh4doi",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-28T05:23:38.957Z",
       "originalPrompt": "Bliss Muse Main riff Overdriven Guitar",
       "proDescription": {
@@ -18941,6 +19172,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-28T05:23:38.973Z"
+    "lastUpdated": "2025-09-28T05:29:22.202Z"
   }
 }
