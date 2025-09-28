@@ -1,6 +1,521 @@
 {
   "generations": [
     {
+      "timestamp": "2025-09-28T05:23:38.957Z",
+      "originalPrompt": "Bliss Muse Main riff Overdriven Guitar",
+      "proDescription": {
+        "tone_title": "Bliss - Main Riff",
+        "genre": "Alternative Rock / Britrock",
+        "sound_description": "Crunchy but smooth overdrive with pronounced midrange, clear articulation, moderate sustain, and a slightly compressed attack. The tone is thick and full, but not overly saturated, with enough brightness to cut through the mix while retaining warmth.",
+        "guitar_rig_description": "Noise gate: not used (the riff's dynamics do not require heavy gating). Compressor: light compression to even out picking dynamics and enhance sustain. Overdrive/distortion/boost: classic overdrive pedal for mid-gain crunch, adding warmth and slight grit, without masking articulation. Amplifier: British-voiced tube amp model set for edge-of-breakup to mild overdrive, enhancing harmonic richness. Cabinet: 2x12 open-back cab simulation for airy mids and a balanced frequency response. EQ: subtle mid boost and gentle high-end roll-off to avoid harshness. Modulation: not used (guitar is dry for this part). Delay: not used. Reverb: short, subtle room reverb to add space without washing out the riff.",
+        "references": [
+          "Muse - Bliss",
+          "Muse - Plug In Baby",
+          "Radiohead - Just"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Pick attack should be assertive but not aggressive. Standard tuning. Medium-gauge strings (e.g., .010–.046) for balanced tension and sustain. Palm muting and syncopated picking technique enhance the riff’s drive."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Fulltone OCD V2",
+          "MXR 6-Band EQ",
+          "TC Electronic Hall of Fame Mini Reverb"
+        ],
+        "amplifier": "Vox AC30 Custom",
+        "cabinet": "Vox V212C 2x12 with Celestion G12M Greenback",
+        "settings": {
+          "amp": {
+            "Gain": 6,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 5,
+            "Master": 4
+          },
+          "compressor": {
+            "Blend": 11,
+            "Volume": 11,
+            "Compression": "Low"
+          },
+          "overdrive": {
+            "Volume": 1.5,
+            "Drive": 10,
+            "Tone": 11
+          },
+          "eq": {
+            "800Hz": "+2dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "-1dB"
+          },
+          "reverb": {
+            "Level": 9,
+            "Decay": "Short"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 46,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Drive": 46,
+            "Tone": 58
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 58,
+            "Master": 52,
+            "Bass": 54,
+            "Treble": 46,
+            "Cut": 53
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 49,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 48,
+            "220": 54,
+            "500": 60,
+            "1200": 62,
+            "2600": 56,
+            "6400": 43
+          }
+        },
+        "reverb": {
+          "type": "Hall",
+          "enabled": true,
+          "params": {
+            "Level": 20,
+            "Decay": 30,
+            "PreDelay": 28,
+            "Liveliness": 35
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 46,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Drive": 46,
+                "Tone": 58
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 58,
+                "Master": 52,
+                "Bass": 54,
+                "Treble": 46,
+                "Cut": 53
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 49,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 48,
+                "220": 54,
+                "500": 60,
+                "1200": 62,
+                "2600": 56,
+                "6400": 43
+              }
+            },
+            "reverb": {
+              "type": "Hall",
+              "enabled": true,
+              "params": {
+                "Level": 20,
+                "Decay": 30,
+                "PreDelay": 28,
+                "Liveliness": 35
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Bliss Muse Main riff Overdriven Guitar",
+          "timestamp": "2025-09-28T05:23:38.957Z"
+        }
+      ],
+      "id": "gen_mg3982fx_wfacjvphp",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-09-28T05:21:19.391Z",
+      "originalPrompt": "Bliss\tMuse\tMain riff\tGuitar",
+      "proDescription": {
+        "tone_title": "Bliss - Main Riff",
+        "genre": "Alternative Rock / Space Rock",
+        "sound_description": "Bright, compressed, slightly fuzzy tone with a singing sustain and a hint of synth-like character. The sound is aggressive but smooth, with a tight low end and chimey highs, perfect for cutting through a dense mix.",
+        "guitar_rig_description": "1. Noise Gate: Used to control noise from high-gain settings, keeping the riff clean between notes. 2. Compressor: Adds sustain and evening out attack, creating a more consistent and polished tone. 3. Fuzz/Distortion: Main drive source; a fuzz or saturated distortion pedal creates a thick, synthy texture reminiscent of Muse's signature sound. 4. Amplifier: High-gain British-style amp (Vox or Marshall-inspired), set for a bright but not harsh voicing. 5. Cabinet: 2x12 or 4x12 cabinet simulation with modern speakers, mic'd for clarity and presence. 6. EQ: Post-amp shaping to emphasize midrange and treble, with some low end rolled off for clarity. 7. Modulation: Light phaser or flanger to add subtle movement and enhance the spacey feel. 8. Delay: Short, rhythmic digital or analog delay to give depth and slight repetition without muddying the riff. 9. Reverb: Plate or hall reverb for spatial enhancement, set fairly subtle to retain attack.",
+        "references": [
+          "Muse - Bliss",
+          "Muse - Plug In Baby",
+          "Muse - New Born"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "Bridge humbucker, tone = 10",
+        "additional_info": "Use a guitar with high-output humbuckers for sustain and clarity. Matt Bellamy often uses Manson guitars with built-in Fuzz Factory pedals. Medium to heavy gauge strings recommended to retain tuning stability and punch. Play with assertive picking and palm muting for percussive attack."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Origin Effects Cali76 Compact Compressor",
+          "ZVEX Fuzz Factory",
+          "MXR Phase 90",
+          "Boss DD-7 Digital Delay",
+          "Strymon blueSky Reverberator",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Vox AC30HW2X",
+        "cabinet": "Vox V212C 2x12 with Celestion Alnico Blue",
+        "settings": {
+          "amp": {
+            "Normal Volume": 0,
+            "Top Boost Volume": 7,
+            "Treble": 7,
+            "Bass": 5,
+            "Cut": 5,
+            "Master": 4
+          },
+          "fuzz_factory": {
+            "Stab": 7,
+            "Gate": 5,
+            "Comp": 6,
+            "Drive": 7,
+            "Volume": 6
+          },
+          "compressor": {
+            "Level": 6,
+            "Attack": 4,
+            "Release": 6,
+            "Ratio": "Medium-High",
+            "Blend": "70% Wet"
+          },
+          "eq": {
+            "31Hz": "-6dB",
+            "62Hz": "-4dB",
+            "125Hz": "-2dB",
+            "250Hz": "0dB",
+            "500Hz": "+2dB",
+            "1kHz": "+3dB",
+            "2kHz": "+3dB",
+            "4kHz": "+4dB",
+            "8kHz": "+2dB",
+            "16kHz": "0dB"
+          },
+          "phase_90": {
+            "Speed": 9,
+            "Depth": "N/A"
+          },
+          "delay": {
+            "Time": "380ms",
+            "Feedback": 2,
+            "Mix": 20,
+            "Mode": "Digital"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Mix": 15,
+            "Decay": 3
+          },
+          "noise_gate": {
+            "Threshold": "Just above noise floor",
+            "Decay": "Fast"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 40
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 60,
+            "Threshold": 40,
+            "Ratio": 65,
+            "Release": 55
+          }
+        },
+        "modulation": {
+          "type": "Phase 90",
+          "enabled": true,
+          "params": {
+            "Speed": 35
+          }
+        },
+        "effect": {
+          "type": "Muff Fuzz",
+          "enabled": true,
+          "params": {
+            "Volume": 65,
+            "Sustain": 75,
+            "Tone": 70
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 80,
+            "Master": 70,
+            "Bass": 40,
+            "Treble": 70,
+            "Cut": 60
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 65,
+            "HighCut": 55
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 40,
+            "62": 45,
+            "125": 45,
+            "250": 48,
+            "500": 55,
+            "1000": 65,
+            "2000": 70,
+            "4000": 68,
+            "8000": 72,
+            "16000": 65,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 32,
+            "Decay": 38
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 30,
+            "Feedback": 28,
+            "Time": 35
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 60,
+                "Threshold": 40,
+                "Ratio": 65,
+                "Release": 55
+              }
+            },
+            "modulation": {
+              "type": "Phase 90",
+              "enabled": true,
+              "params": {
+                "Speed": 35
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 65,
+                "Sustain": 75,
+                "Tone": 70
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 80,
+                "Master": 70,
+                "Bass": 40,
+                "Treble": 70,
+                "Cut": 60
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 65,
+                "HighCut": 55
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 40,
+                "62": 45,
+                "125": 45,
+                "250": 48,
+                "500": 55,
+                "1000": 65,
+                "2000": 70,
+                "4000": 68,
+                "8000": 72,
+                "16000": 65,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 32,
+                "Decay": 38
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 30,
+                "Feedback": 28,
+                "Time": 35
+              }
+            }
+          },
+          "prompt": "Bliss\tMuse\tMain riff\tGuitar",
+          "timestamp": "2025-09-28T05:21:19.391Z"
+        }
+      ],
+      "id": "gen_mg3952r0_85522zj8e",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-18T12:09:33.435Z",
       "originalPrompt": "comfortably numb Pink Floyd Solo Guitar”",
       "proDescription": {
@@ -18426,6 +18941,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-18T12:11:13.380Z"
+    "lastUpdated": "2025-09-28T05:23:38.973Z"
   }
 }
