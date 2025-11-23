@@ -5288,5 +5288,226 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/hatebreed-this-is-now-tab-s9253",
     "createdAt": "2025-11-23T05:28:35.318Z",
     "updatedAt": "2025-11-23T05:28:35.318Z"
+  },
+  {
+    "id": "gen_mibazm7j_8vzxm8fjk",
+    "origin": {
+      "artistId": 28,
+      "song": "Fear Of The Dark",
+      "part": "Intro Clean",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, articulate, chiming clean tone with a hint of warmth and spaciousness; high clarity for fingerpicking; no distortion or breakup; slight shimmer and depth",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 45,
+          "Decay": 60
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 40,
+          "Clipping": 45
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 38,
+          "Depth": 28
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Jazz Clean",
+        "enabled": true,
+        "params": {
+          "Gain": 28,
+          "Master": 56,
+          "Bass": 46,
+          "Middle": 43,
+          "Treble": 60,
+          "Bright": 62
+        }
+      },
+      "cabinet": {
+        "type": "JZ120",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 60,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 48,
+          "62": 48,
+          "125": 50,
+          "250": 48,
+          "500": 46,
+          "1000": 43,
+          "2000": 53,
+          "4000": 62,
+          "8000": 68,
+          "16000": 71,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 36,
+          "Decay": 40
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "fear-of-the-dark-guitar-intro-clean",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/iron-maiden-fear-of-the-dark-tab-s492398t1",
+    "createdAt": "2025-11-23T05:57:01.661Z",
+    "updatedAt": "2025-11-23T05:57:01.661Z"
+  },
+  {
+    "id": "gen_mibb4gyp_tto9oxtt2",
+    "origin": {
+      "artistId": 28,
+      "song": "Fear Of The Dark",
+      "part": "Intro Distorted",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, punchy, and articulate distorted tone with a tight low end, moderate saturation, and clear note separation. Mids are slightly scooped, with a bit of top-end sizzle. The sound is dynamic, with a pronounced attack and enough sustain for melodic lines.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 52,
+          "Decay": 40
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 58,
+          "Drive": 28,
+          "Tone": 67
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 70,
+          "Master": 62,
+          "Bass": 44,
+          "Middle": 38,
+          "Treble": 72,
+          "Presence": 64
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 58,
+          "HighCut": 61
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 42,
+          "62": 46,
+          "125": 45,
+          "250": 48,
+          "500": 41,
+          "1000": 35,
+          "2000": 54,
+          "4000": 62,
+          "8000": 66,
+          "16000": 61,
+          "Vol": 51
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "fear-of-the-dark-guitar-intro-distorted",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/iron-maiden-fear-of-the-dark-tab-s492398",
+    "createdAt": "2025-11-23T05:59:56.868Z",
+    "updatedAt": "2025-11-23T05:59:56.868Z"
   }
 ]

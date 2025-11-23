@@ -160,5 +160,11 @@
     "title": "Hatebreed",
     "slug": "hatebreed",
     "description": "Hatebreed is an American hardcore/metalcore band known for its aggressive sound, powerful riffs, and relentless energy. Their music blends hardcore intensity with metal precision, shaping the modern heavy scene."
+  },
+  {
+    "id": 28,
+    "title": "Iron Maiden",
+    "slug": "iron-maiden",
+    "description": "Iron Maiden is a legendary British heavy metal band known for its galloping riffs, powerful vocals, and epic storytelling. Their iconic sound shaped the evolution of metal worldwide."
   }
 ]

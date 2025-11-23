@@ -15,7 +15,7 @@ const latestPresets = [...presets]
     const dateB = new Date(b.createdAt).getTime();
     return dateB - dateA; // Сортировка по убыванию (новые первыми)
   })
-  .slice(0, 2);
+  .slice(0, 4);
 
 export const metadata: Metadata = {
   title:
