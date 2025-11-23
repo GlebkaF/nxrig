@@ -1,6 +1,7 @@
 import Header from "components/Header";
 import Footer from "components/Footer";
 import { Metadata } from "next";
+import Link from "next/link";
 import ClientSearch from "../components/ClientSearch";
 import { presets } from "lib/public/presets";
 import { PresetCard } from "components/PresetCard";
@@ -105,9 +106,15 @@ export default function Home() {
             <p className="text-gray-300 mb-6">
               At NX Rig you&apos;ll find song-based patches inspired by
               legendary artists. Each preset comes with carefully tuned
-              parameters and can be loaded into your device in seconds. All
-              presets are fully compatible with both NUX Mighty Plug Pro and NUX
-              Mighty Space.
+              parameters and can be loaded into your device in seconds.{" "}
+              <Link
+                href="/preset"
+                className="text-pink-400 hover:text-pink-300 underline"
+              >
+                All presets
+              </Link>{" "}
+              are fully compatible with both NUX Mighty Plug Pro and NUX Mighty
+              Space.
             </p>
 
             <p className="text-gray-300">
