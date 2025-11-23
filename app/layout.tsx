@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Schema.org разметка для Website */}
+        {/* Schema.org разметка для Website с SearchAction и основными разделами */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -27,9 +27,77 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "NXRIG",
+              alternateName: "NX Rig",
               description:
-                "Free guitar presets for NUX Mighty Plug Pro and NUX Mighty Space - fully compatible with both devices",
+                "Free guitar presets for NUX Mighty Plug Pro and NUX Mighty Space - fully compatible with both devices. Download professional guitar tones inspired by Metallica, Nirvana, Red Hot Chili Peppers, and more legendary artists.",
               url: "https://nxrig.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: "https://nxrig.com/?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
+              mainEntity: {
+                "@type": "ItemList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    item: {
+                      "@type": "WebPage",
+                      name: "All Presets",
+                      url: "https://nxrig.com/preset",
+                    },
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    item: {
+                      "@type": "WebPage",
+                      name: "Metallica Presets",
+                      url: "https://nxrig.com/preset/metallica",
+                    },
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    item: {
+                      "@type": "WebPage",
+                      name: "Nirvana Presets",
+                      url: "https://nxrig.com/preset/nirvana",
+                    },
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 4,
+                    item: {
+                      "@type": "WebPage",
+                      name: "Red Hot Chili Peppers Presets",
+                      url: "https://nxrig.com/preset/red-hot-chili-peppers",
+                    },
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 5,
+                    item: {
+                      "@type": "WebPage",
+                      name: "Led Zeppelin Presets",
+                      url: "https://nxrig.com/preset/led-zeppelin",
+                    },
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 6,
+                    item: {
+                      "@type": "WebPage",
+                      name: "Request Patch",
+                      url: "https://nxrig.com/order",
+                    },
+                  },
+                ],
+              },
             }),
           }}
         />
@@ -42,11 +110,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "NXRIG",
+              alternateName: "NX Rig",
               url: "https://nxrig.com",
               logo: "https://nxrig.com/images/og-image.svg",
-              sameAs: [
-                // Можно добавить ссылки на социальные сети, если они есть
-              ],
+              description:
+                "Free guitar presets library for NUX Mighty Plug Pro and NUX Mighty Space devices",
+              sameAs: [],
             }),
           }}
         />
