@@ -2,20 +2,11 @@
 
 import { presets } from "lib/public/presets";
 import { PresetCard } from "components/PresetCard";
-import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 import Link from "next/link";
 
 export default function ClientSearch(): React.ReactElement {
-  const searchParams = useSearchParams();
-  const initialQuery = searchParams.get("q") || "";
-  const [searchQuery, setSearchQuery] = useState(initialQuery);
-
-  // Синхронизируем состояние с URL при изменении параметра q извне
-  useEffect(() => {
-    const queryFromUrl = searchParams.get("q") || "";
-    setSearchQuery(queryFromUrl);
-  }, [searchParams]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filteredPresets = presets
     .filter(

@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Schema.org разметка для Website с SearchAction и основными разделами */}
+        {/* Schema.org разметка для Website с основными разделами */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -31,14 +31,6 @@ export default function RootLayout({
               description:
                 "Free guitar presets for NUX Mighty Plug Pro and NUX Mighty Space - fully compatible with both devices. Download professional guitar tones inspired by Metallica, Nirvana, Red Hot Chili Peppers, and more legendary artists.",
               url: "https://nxrig.com",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate: "https://nxrig.com/?q={search_term_string}",
-                },
-                "query-input": "required name=search_term_string",
-              },
               mainEntity: {
                 "@type": "ItemList",
                 itemListElement: [
