@@ -5176,5 +5176,117 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-creeping-death-tab-s5194",
     "createdAt": "2025-09-28T05:35:41.204Z",
     "updatedAt": "2025-09-28T05:35:41.204Z"
+  },
+  {
+    "id": "gen_mib9pe43_et1tl4ou5",
+    "origin": {
+      "artistId": 27,
+      "song": "This Is Now",
+      "part": "Main Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive, tight, and punchy with a strong midrange presence. The tone is thick and percussive, with pronounced attack and controlled low end, minimal ambience, and high clarity for palm-muted chugs. Slightly scooped highs, no muddiness.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 68,
+          "Drive": 22,
+          "Tone": 42
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 69,
+          "Master": 54,
+          "Bass": 41,
+          "Middle": 68,
+          "Treble": 38,
+          "Presence": 43
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 60,
+          "HighCut": 40
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 38,
+          "62": 42,
+          "125": 48,
+          "250": 45,
+          "500": 50,
+          "1000": 63,
+          "2000": 67,
+          "4000": 59,
+          "8000": 43,
+          "16000": 38,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "this-is-now-guitar-main-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/hatebreed-this-is-now-tab-s9253",
+    "createdAt": "2025-11-23T05:28:35.318Z",
+    "updatedAt": "2025-11-23T05:28:35.318Z"
   }
 ]

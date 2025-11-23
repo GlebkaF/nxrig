@@ -3,8 +3,18 @@ import Footer from "components/Footer";
 import { Metadata } from "next";
 import ClientSearch from "../components/ClientSearch";
 import { presets } from "lib/public/presets";
+import { PresetCard } from "components/PresetCard";
 
 const presetsCount = presets.length;
+
+// Получаем два последних добавленных пресета
+const latestPresets = [...presets]
+  .sort((a, b) => {
+    const dateA = new Date(a.createdAt).getTime();
+    const dateB = new Date(b.createdAt).getTime();
+    return dateB - dateA; // Сортировка по убыванию (новые первыми)
+  })
+  .slice(0, 2);
 
 export const metadata: Metadata = {
   title:
@@ -52,6 +62,17 @@ export default function Home() {
             by real musicians.
           </p>
         </div>
+
+        {latestPresets.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold mb-6">Fresh Presets</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {latestPresets.map((preset) => (
+                <PresetCard key={preset.id} preset={preset} />
+              ))}
+            </div>
+          </div>
+        )}
 
         <h2 className="text-2xl font-semibold mb-6">
           Guitar Presets for NUX Mighty Devices

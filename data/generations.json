@@ -1,6 +1,255 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-23T05:18:41.318Z",
+      "originalPrompt": "This Is Now\tHatebreed\tMain riff\tGuitar",
+      "proDescription": {
+        "tone_title": "This Is Now - Main Riff",
+        "genre": "Hardcore / Metalcore",
+        "sound_description": "Aggressive, tight, and punchy with a strong midrange presence. The tone is thick and percussive, with pronounced attack and controlled low end, minimal ambience, and high clarity for palm-muted chugs. Slightly scooped highs, no muddiness.",
+        "guitar_rig_description": "Noise Gate: Used to maintain tightness and suppress unwanted noise during stops and palm mutes. Compressor: Not used, as the natural dynamics are preferred for this riff. Overdrive/Boost: A mid-gain overdrive pedal (used as a boost) is placed before the amp to tighten the attack and add aggression, gain set low. Amplifier: High-gain solid-state or modern tube amp head, dialed for fast response and clarity. Cabinet: 4x12 cabinet with aggressive, tight speakers (e.g., Celestion V30s), mic’d close for punch. EQ: Graphic or parametric EQ after the amp/cab to cut out muddiness, boost upper mids, and slightly roll off highs. Modulation: Not used. Delay: Not used. Reverb: Not used.",
+        "references": [
+          "Hatebreed - Live For This",
+          "Terror - Keepers of the Faith",
+          "Madball - Heavenhell"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use heavy gauge strings for tightness (e.g., 11-52), play with strong right-hand attack and tight palm muting. Down-tuned (often Drop C) for extra weight. No effects in the loop; keep everything dry for maximum impact."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Maxon OD808 Overdrive",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Peavey 6505+ Head",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Pre-Gain": 5,
+            "Low": 4,
+            "Mid": 7,
+            "High": 4,
+            "Resonance": 5,
+            "Presence": 4,
+            "Post-Gain": 3
+          },
+          "overdrive": {
+            "Drive": 2,
+            "Tone": 6,
+            "Level": 8
+          },
+          "noise_gate": {
+            "Threshold": "Just above noise floor",
+            "Decay": "Fast"
+          },
+          "eq": {
+            "80Hz": "-3dB",
+            "250Hz": "-2dB",
+            "1kHz": "+2dB",
+            "2kHz": "+3dB",
+            "4kHz": "+2dB",
+            "8kHz": "-1dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 68,
+            "Drive": 22,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 69,
+            "Master": 54,
+            "Bass": 41,
+            "Middle": 68,
+            "Treble": 38,
+            "Presence": 43
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 60,
+            "HighCut": 40
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 38,
+            "62": 42,
+            "125": 48,
+            "250": 45,
+            "500": 50,
+            "1000": 63,
+            "2000": 67,
+            "4000": 59,
+            "8000": 43,
+            "16000": 38,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 68,
+                "Drive": 22,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 69,
+                "Master": 54,
+                "Bass": 41,
+                "Middle": 68,
+                "Treble": 38,
+                "Presence": 43
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 60,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 38,
+                "62": 42,
+                "125": 48,
+                "250": 45,
+                "500": 50,
+                "1000": 63,
+                "2000": 67,
+                "4000": 59,
+                "8000": 43,
+                "16000": 38,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "This Is Now\tHatebreed\tMain riff\tGuitar",
+          "timestamp": "2025-11-23T05:18:41.318Z"
+        }
+      ],
+      "id": "gen_mib9pe43_et1tl4ou5",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-09-28T05:29:22.185Z",
       "originalPrompt": "Metallica Creeping Death Intro Distortion Guitar\n",
       "proDescription": {
@@ -19172,6 +19421,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-09-28T05:29:22.202Z"
+    "lastUpdated": "2025-11-23T05:18:41.332Z"
   }
 }

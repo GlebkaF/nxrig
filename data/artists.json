@@ -154,5 +154,11 @@
     "title": "Muse",
     "slug": "muse",
     "description": "British rock band celebrated for their powerful fusion of alternative rock, progressive influences, and electronic elements. Known for soaring vocals, virtuosic guitar riffs, and epic anthems like Supermassive Black Hole and Knights of Cydonia that redefined modern rock."
+  },
+  {
+    "id": 27,
+    "title": "Hatebreed",
+    "slug": "hatebreed",
+    "description": "Hatebreed is an American hardcore/metalcore band known for its aggressive sound, powerful riffs, and relentless energy. Their music blends hardcore intensity with metal precision, shaping the modern heavy scene."
   }
 ]
