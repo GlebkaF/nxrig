@@ -5509,5 +5509,116 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/iron-maiden-fear-of-the-dark-tab-s492398",
     "createdAt": "2025-11-23T05:59:56.868Z",
     "updatedAt": "2025-11-23T05:59:56.868Z"
+  },
+  {
+    "id": "gen_mieuzm4n_51ketnjzc",
+    "origin": {
+      "artistId": 13,
+      "song": "Mouth For War",
+      "part": "Main Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Extremely aggressive, tight, and percussive rhythm tone with pronounced midrange, thick palm-mute chug, sharp attack, and a dry, focused character. Minimal ambience, high clarity, and heavy saturation without muddiness.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 55,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 70,
+          "Drive": 20,
+          "Tone": 70
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 80,
+          "Master": 65,
+          "Bass": 35,
+          "Middle": 70,
+          "Treble": 60,
+          "Presence": 65
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 60,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 35,
+          "62": 38,
+          "125": 44,
+          "250": 48,
+          "500": 58,
+          "1000": 65,
+          "2000": 70,
+          "4000": 62,
+          "8000": 52,
+          "16000": 48,
+          "Vol": 54
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "mouth-for-war-guitar-main-riff",
+    "createdAt": "2025-11-25T17:40:50.873Z",
+    "updatedAt": "2025-11-25T17:40:50.873Z"
   }
 ]

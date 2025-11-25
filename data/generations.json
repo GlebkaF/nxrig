@@ -1,6 +1,259 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-25T17:37:48.732Z",
+      "originalPrompt": "Mouth for war\tPantera Main riff\tGuitar",
+      "proDescription": {
+        "tone_title": "Mouth for War - Main Riff",
+        "genre": "Groove Metal / Heavy Metal",
+        "sound_description": "Extremely aggressive, tight, and percussive rhythm tone with pronounced midrange, thick palm-mute chug, sharp attack, and a dry, focused character. Minimal ambience, high clarity, and heavy saturation without muddiness.",
+        "guitar_rig_description": "Noise Gate: Used to tighten the signal and eliminate unwanted noise, especially during pauses in the riff. Compressor: Not used, to retain full picking dynamics and attack. Overdrive/Boost: Used as a clean boost (typically a Tubescreamer-style pedal) before the amp to tighten the low end and add midrange focus. Amplifier: High-gain tube amp head with aggressive voicing (e.g., Randall solid-state or Peavey 5150/6505), set for heavy saturation and pronounced mids. Cabinet: 4x12 cabinet with high-wattage speakers (e.g., Celestion Vintage 30), miked for tightness and clarity. EQ: Post-amp EQ for additional midrange emphasis and to cut unnecessary low and high frequencies, ensuring punch and clarity. Modulation: Not used. Delay: Not used. Reverb: Not used, keeping the tone bone-dry and immediate.",
+        "references": [
+          "Pantera - Mouth for War",
+          "Pantera - Walk",
+          "Machine Head - Davidian"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a high-output bridge humbucker for maximum attack and clarity. Heavy gauge strings recommended (e.g., .052-.011). Down-picking technique and strong palm-muting are crucial. Guitar volume and tone controls fully open. Consider tuning to D standard, as in the original recording."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Maxon OD808 Overdrive",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Peavey 6505+ Head",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 (4x12 configuration, 12\" speakers)",
+        "settings": {
+          "amp": {
+            "Pre-Gain": 6.5,
+            "Low": 5,
+            "Mid": 7,
+            "High": 5.5,
+            "Resonance": 5,
+            "Presence": 6,
+            "Post-Gain": 3.5
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 6,
+            "Level": 9
+          },
+          "eq": {
+            "31.25Hz": "-6dB",
+            "62.5Hz": "-3dB",
+            "125Hz": "0dB",
+            "250Hz": "+1dB",
+            "500Hz": "+2dB",
+            "1kHz": "+3dB",
+            "2kHz": "+4dB",
+            "4kHz": "+3dB",
+            "8kHz": "-2dB",
+            "16kHz": "-6dB"
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor",
+            "Decay": "minimum"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 55,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 70,
+            "Drive": 20,
+            "Tone": 70
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 80,
+            "Master": 65,
+            "Bass": 35,
+            "Middle": 70,
+            "Treble": 60,
+            "Presence": 65
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 60,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 35,
+            "62": 38,
+            "125": 44,
+            "250": 48,
+            "500": 58,
+            "1000": 65,
+            "2000": 70,
+            "4000": 62,
+            "8000": 52,
+            "16000": 48,
+            "Vol": 54
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 55,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 70,
+                "Drive": 20,
+                "Tone": 70
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 80,
+                "Master": 65,
+                "Bass": 35,
+                "Middle": 70,
+                "Treble": 60,
+                "Presence": 65
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 35,
+                "62": 38,
+                "125": 44,
+                "250": 48,
+                "500": 58,
+                "1000": 65,
+                "2000": 70,
+                "4000": 62,
+                "8000": 52,
+                "16000": 48,
+                "Vol": 54
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Mouth for war\tPantera Main riff\tGuitar",
+          "timestamp": "2025-11-25T17:37:48.732Z"
+        }
+      ],
+      "id": "gen_mieuzm4n_51ketnjzc",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-23T05:58:24.462Z",
       "originalPrompt": "Fear of the dark Iron Maiden Intro (distorted) Guitar",
       "proDescription": {
@@ -19928,6 +20181,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-23T05:58:24.481Z"
+    "lastUpdated": "2025-11-25T17:37:48.743Z"
   }
 }
