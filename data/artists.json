@@ -172,5 +172,11 @@
     "title": "Black Sabbath",
     "slug": "black-sabbath",
     "description": "Black Sabbath is a pioneering heavy metal band whose dark riffs, haunting atmosphere, and groundbreaking sound defined the genre and influenced generations of musicians"
+  },
+  {
+    "id": 30,
+    "title": "The Eagles",
+    "slug": "the-eagles",
+    "description": "The Eagles are a legendary American rock band known for their smooth harmonies, timeless songwriting, and iconic hits that shaped the sound of classic rock."
   }
 ]

@@ -1,6 +1,251 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-25T17:50:31.371Z",
+      "originalPrompt": "The Eagles        Hotel California    Solo Guitar",
+      "proDescription": {
+        "tone_title": "Hotel California Solo",
+        "genre": "Classic Rock",
+        "sound_description": "Smooth, singing lead tone with moderate sustain, slightly rounded attack, warm midrange, clear highs, and a touch of vintage character. The sound is expressive without being overly saturated or compressed, with enough presence to cut through the mix but retaining warmth and clarity.",
+        "guitar_rig_description": "Noise gate: not used. Compressor: gentle compression to even the dynamics and add sustain without squashing the tone. Overdrive/distortion/boost: low-gain overdrive pedal to push the amp slightly for creamy sustain and mild grit. Amplifier: clean to slightly overdriven vintage-style tube amp, such as a Fender or Vox, for warmth and dynamic response. Cabinet: open-back 2x12 cabinet emulation for airy, classic rock feel. EQ: slight mid boost to enhance lead presence and a gentle high roll-off to avoid harshness. Modulation: not used. Delay: subtle analog-style delay with short repeats to add depth and space. Reverb: moderate plate or spring reverb for ambience and vintage vibe.",
+        "references": [
+          "The Eagles - Hotel California (Live)",
+          "Eric Clapton - Wonderful Tonight (for clean lead tone reference)",
+          "Dire Straits - Sultans of Swing (for expressive lead work)"
+        ],
+        "song_part": "guitar solo",
+        "preferred_pickup": "neck pickup, tone = 7",
+        "additional_info": "Use a light to medium pick attack for smoothness. String gauge .010-.046 for balance between bendability and sustain. Slight vibrato and tasteful bends are key to matching the phrasing of the original solo."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Ibanez TS808 Tube Screamer",
+          "MXR M169 Carbon Copy Analog Delay",
+          "Boss FRV-1 '63 Fender Reverb"
+        ],
+        "amplifier": "Fender '65 Twin Reverb",
+        "cabinet": "Fender 212 Enclosure with 2x12 Jensen C12K speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Volume (Normal)": 4,
+            "Treble": 6,
+            "Middle": 7,
+            "Bass": 4,
+            "Reverb": 0,
+            "Vibrato": 0,
+            "Bright Switch": "On"
+          },
+          "compressor": {
+            "Blend": 50,
+            "Volume": 60,
+            "Compression": "Low"
+          },
+          "overdrive": {
+            "Drive": 3.5,
+            "Tone": 4.5,
+            "Level": 7
+          },
+          "delay": {
+            "Delay Time": "380ms",
+            "Mix": 18,
+            "Regen": 1
+          },
+          "reverb": {
+            "Dwell": 4,
+            "Mix": 4,
+            "Tone": 5
+          },
+          "guitar": {
+            "Pickup": "Neck",
+            "Tone": 7
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 58,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 32,
+            "Tone": 47
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 54,
+            "Master": 60,
+            "Bass": 48,
+            "Middle": 58,
+            "Treble": 44,
+            "Bright": 40
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 45,
+            "HighCut": 43
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 57,
+            "Decay": 52
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 30,
+            "Rate": 33,
+            "Echo": 34
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 58,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 32,
+                "Tone": 47
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Master": 60,
+                "Bass": 48,
+                "Middle": 58,
+                "Treble": 44,
+                "Bright": 40
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 45,
+                "HighCut": 43
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 57,
+                "Decay": 52
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 30,
+                "Rate": 33,
+                "Echo": 34
+              }
+            }
+          },
+          "prompt": "The Eagles        Hotel California    Solo Guitar",
+          "timestamp": "2025-11-25T17:50:31.371Z"
+        }
+      ],
+      "id": "gen_mievfyla_nwggcd8hu",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-25T17:43:56.807Z",
       "originalPrompt": "Black Sabbath        Paranoid        Overdriven Guitar    Intro",
       "proDescription": {
@@ -20406,6 +20651,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-25T17:43:56.822Z"
+    "lastUpdated": "2025-11-25T17:50:31.390Z"
   }
 }
