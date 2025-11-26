@@ -1,6 +1,231 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-25T17:43:56.807Z",
+      "originalPrompt": "Black Sabbath        Paranoid        Overdriven Guitar    Intro",
+      "proDescription": {
+        "tone_title": "Paranoid - Intro",
+        "genre": "Classic Heavy Metal / Hard Rock",
+        "sound_description": "Classic early heavy metal tone with aggressive midrange, moderate thickness, prominent attack, and a raw, punchy character. The sound is not overly saturated, retaining note clarity and a slightly fuzzy edge. There is minimal ambience and a dry, in-your-face feel.",
+        "guitar_rig_description": "Noise gate: not used (raw, open sound typical of the era). Compressor: not used (natural amp compression relied on). Overdrive/Distortion/Boost: vintage-style fuzz or treble booster placed before the amp to push it harder, providing a saturated yet dynamic attack. Amplifier: British-style tube amplifier (Laney Supergroup or similar) set to high gain for natural tube overdrive and sustain. Cabinet: 4x12 closed-back cabinet with Celestion speakers, providing punch and upper midrange presence. EQ: basic amp EQ with emphasis on mids and slightly rolled-off bass and highs to avoid muddiness and harshness. Modulation: not used. Delay: not used. Reverb: not used (dry studio/live sound).",
+        "references": [
+          "Black Sabbath - Paranoid",
+          "Black Sabbath - War Pigs",
+          "Led Zeppelin - Whole Lotta Love (for era reference)"
+        ],
+        "song_part": "Intro/main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a bridge humbucker pickup for maximum punch and clarity. Play with moderate picking attack and palm muting as needed. Lighter string gauge (e.g., .009 or .010) can help with bending and vibrato, but Iommi often used light strings due to finger injuries. Down-picking and precise riffing style recommended."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Dallas Rangemaster Treble Booster (clone: Analogman Beano Boost)"
+        ],
+        "amplifier": "Laney Supergroup LA100BL",
+        "cabinet": "Laney 4x12 with Celestion G12H (30W, 55Hz) Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain": 8,
+            "Bass": 3,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 7,
+            "Master": 5
+          },
+          "treble_booster": {
+            "Level": 7,
+            "Tone": "max (full treble)"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 55,
+            "Gain": 68,
+            "Bass": 45,
+            "Treble": 62
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 75,
+            "Master": 60,
+            "Bass": 38,
+            "Middle": 72,
+            "Treble": 58,
+            "Presence": 54
+          }
+        },
+        "cabinet": {
+          "type": "GB412",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 57,
+            "HighCut": 43
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 55,
+                "Gain": 68,
+                "Bass": 45,
+                "Treble": 62
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 75,
+                "Master": 60,
+                "Bass": 38,
+                "Middle": 72,
+                "Treble": 58,
+                "Presence": 54
+              }
+            },
+            "cabinet": {
+              "type": "GB412",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 57,
+                "HighCut": 43
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Black Sabbath        Paranoid        Overdriven Guitar    Intro",
+          "timestamp": "2025-11-25T17:43:56.807Z"
+        }
+      ],
+      "id": "gen_miev7i52_pf1lzoo61",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-25T17:37:48.732Z",
       "originalPrompt": "Mouth for war\tPantera Main riff\tGuitar",
       "proDescription": {
@@ -20181,6 +20406,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-25T17:37:48.743Z"
+    "lastUpdated": "2025-11-25T17:43:56.822Z"
   }
 }

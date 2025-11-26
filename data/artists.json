@@ -166,5 +166,11 @@
     "title": "Iron Maiden",
     "slug": "iron-maiden",
     "description": "Iron Maiden is a legendary British heavy metal band known for its galloping riffs, powerful vocals, and epic storytelling. Their iconic sound shaped the evolution of metal worldwide."
+  },
+  {
+    "id": 29,
+    "title": "Black Sabbath",
+    "slug": "black-sabbath",
+    "description": "Black Sabbath is a pioneering heavy metal band whose dark riffs, haunting atmosphere, and groundbreaking sound defined the genre and influenced generations of musicians"
   }
 ]

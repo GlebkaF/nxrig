@@ -5620,5 +5620,112 @@
     "slug": "mouth-for-war-guitar-main-riff",
     "createdAt": "2025-11-25T17:40:50.873Z",
     "updatedAt": "2025-11-25T17:40:50.873Z"
+  },
+  {
+    "id": "gen_miev7i52_pf1lzoo61",
+    "origin": {
+      "artistId": 29,
+      "song": "Paranoid",
+      "part": "Intro",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Classic early heavy metal tone with aggressive midrange, moderate thickness, prominent attack, and a raw, punchy character. The sound is not overly saturated, retaining note clarity and a slightly fuzzy edge. There is minimal ambience and a dry, in-your-face feel.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "RC Boost",
+        "enabled": true,
+        "params": {
+          "Volume": 55,
+          "Gain": 68,
+          "Bass": 45,
+          "Treble": 62
+        }
+      },
+      "amplifier": {
+        "type": "Plexi 100",
+        "enabled": true,
+        "params": {
+          "Gain": 75,
+          "Master": 60,
+          "Bass": 38,
+          "Middle": 72,
+          "Treble": 58,
+          "Presence": 54
+        }
+      },
+      "cabinet": {
+        "type": "GB412",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 57,
+          "HighCut": 43
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "paranoid-guitar-intro",
+    "createdAt": "2025-12-25T17:47:50.299Z",
+    "updatedAt": "2025-12-25T17:47:50.299Z"
   }
 ]
