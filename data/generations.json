@@ -1,6 +1,273 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-27T05:26:31.109Z",
+      "originalPrompt": "Metallica        Seek & Destroy      Distortion Guitar    Main Riff",
+      "proDescription": {
+        "tone_title": "Seek & Destroy - Distortion Guitar Main Riff",
+        "genre": "Classic Thrash Metal",
+        "sound_description": "Aggressive, punchy, tight, moderately scooped mids, bright attack, thick low end, high clarity, controlled sustain, minimal noise.",
+        "guitar_rig_description": "1. Noise Gate: Used before and after distortion to reduce unwanted noise and hum, keeping the palm-muted sections tight. 2. Compressor: Not used, as dynamic range is best preserved for riff clarity. 3. Overdrive/Distortion: High-gain distortion pedal or amp channel, set for saturated but articulate crunch; classic 80s metal character. 4. Amplifier: High-gain tube amp head emulating Mesa/Boogie Mark IIC+ or Marshall JCM800, with tight low end and crisp highs. 5. Cabinet: 4x12 closed-back cabinet with Celestion speakers, providing punch and fullness. 6. EQ: Post-distortion/amp, with scooped mids, boosted lows and highs to match the classic Metallica rhythm tone. 7. Modulation: Not used, as the tone is dry and direct. 8. Delay: Not used for rhythm parts. 9. Reverb: Minimal room reverb for slight space, but kept subtle to maintain tightness.",
+        "references": [
+          "Metallica - Seek & Destroy",
+          "Metallica - Master of Puppets",
+          "Slayer - South of Heaven"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "Bridge humbucker, tone = 10",
+        "additional_info": "Use EMG 81 (active) or similar high-output humbucker for tightness and clarity. Palm muting with downpicking technique is essential. Use 10-46 gauge strings for balanced tension. Guitar tone knob should stay wide open for maximum brightness."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor (in front, Threshold: 10 o'clock, Decay: 12 o'clock)",
+          "Ibanez TS9 Tube Screamer (Drive: 0-1, Tone: 12 o'clock, Level: 2-3 o'clock) — as a boost before amp",
+          "Boss NS-2 Noise Suppressor (in FX loop, Threshold: 11 o'clock, Decay: 12 o'clock)",
+          "MXR 10-Band EQ (in FX loop — 31.25Hz: +2dB, 62.5Hz: +3dB, 125Hz: 0, 250Hz: -2dB, 500Hz: -5dB, 1kHz: -3dB, 2kHz: +2dB, 4kHz: +3dB, 8kHz: +2dB, 16kHz: +1dB)",
+          "TC Electronic Hall of Fame Mini Reverb (Room mode, Reverb: 8 o'clock — very subtle)"
+        ],
+        "amplifier": "Mesa/Boogie Mark IIC+ (Lead Channel)",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 cabinet with Celestion Vintage 30 speakers, closed-back, 4x12 configuration",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Treble": 7,
+            "Bass": 4,
+            "Middle": 3,
+            "Presence": 6,
+            "Master": 4,
+            "Lead Drive": 7,
+            "Lead Master": 5,
+            "Graphic EQ": {
+              "80Hz": "+5",
+              "240Hz": "0",
+              "750Hz": "-8",
+              "2200Hz": "+4",
+              "6600Hz": "+6"
+            }
+          },
+          "overdrive": {
+            "Drive": 1,
+            "Tone": 5,
+            "Level": 8
+          },
+          "noise_gate_front": {
+            "Threshold": 10,
+            "Decay": 12
+          },
+          "noise_gate_loop": {
+            "Threshold": 11,
+            "Decay": 12
+          },
+          "eq": {
+            "31.25Hz": "+2dB",
+            "62.5Hz": "+3dB",
+            "250Hz": "-2dB",
+            "500Hz": "-5dB",
+            "1kHz": "-3dB",
+            "2kHz": "+2dB",
+            "4kHz": "+3dB"
+          },
+          "reverb": {
+            "Level": 1
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 20,
+            "Tone": 70
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 80,
+            "Master": 60,
+            "Bass": 65,
+            "Middle": 30,
+            "Treble": 75,
+            "Presence": 70
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 45,
+            "HighCut": 55
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 70,
+            "62": 70,
+            "125": 65,
+            "250": 60,
+            "500": 40,
+            "1000": 35,
+            "2000": 40,
+            "4000": 65,
+            "8000": 75,
+            "16000": 70,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": true,
+          "params": {
+            "Level": 20,
+            "Decay": 20,
+            "Tone": 55
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 20,
+                "Tone": 70
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 80,
+                "Master": 60,
+                "Bass": 65,
+                "Middle": 30,
+                "Treble": 75,
+                "Presence": 70
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 45,
+                "HighCut": 55
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 70,
+                "62": 70,
+                "125": 65,
+                "250": 60,
+                "500": 40,
+                "1000": 35,
+                "2000": 40,
+                "4000": 65,
+                "8000": 75,
+                "16000": 70,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": true,
+              "params": {
+                "Level": 20,
+                "Decay": 20,
+                "Tone": 55
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Metallica        Seek & Destroy      Distortion Guitar    Main Riff",
+          "timestamp": "2025-11-27T05:26:31.109Z"
+        }
+      ],
+      "id": "gen_migzqv9p_snqyqhmzv",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-25T17:50:31.371Z",
       "originalPrompt": "The Eagles        Hotel California    Solo Guitar",
       "proDescription": {
@@ -20651,6 +20918,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-25T17:50:31.390Z"
+    "lastUpdated": "2025-11-27T05:27:15.073Z"
   }
 }
