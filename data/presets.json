@@ -6057,5 +6057,110 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/cranberries-zombie-tab-s431",
     "createdAt": "2025-11-28T04:12:09.989Z",
     "updatedAt": "2025-11-28T04:12:09.989Z"
+  },
+  {
+    "id": "gen_miicxupv_jym9otlfk",
+    "origin": {
+      "artistId": 32,
+      "song": "Do I Wanna Know?",
+      "part": "Main Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Thick, fuzzy, and saturated with a raw, gritty edge; moderate sustain, pronounced midrange, not overly bright; retains clarity and punch without excessive effects.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 65,
+          "Decay": 55
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Muff Fuzz",
+        "enabled": true,
+        "params": {
+          "Volume": 55,
+          "Sustain": 30,
+          "Tone": 55
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 18,
+          "Master": 60,
+          "Bass": 50,
+          "Treble": 38,
+          "Cut": 60
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 50,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 28,
+          "Decay": 32
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 6,
+      "position": "bridge"
+    },
+    "slug": "do-i-wanna-know-guitar-main-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/arctic-monkeys-do-i-wanna-know-tab-s383929t8",
+    "createdAt": "2025-11-28T04:28:05.893Z",
+    "updatedAt": "2025-11-28T04:28:05.893Z"
   }
 ]

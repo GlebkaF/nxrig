@@ -1,6 +1,747 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-28T04:23:38.090Z",
+      "originalPrompt": "Arctic Monkeys Do I Wanna Know? Distortion Guitar Main Riff\n- dont make too much efx.",
+      "proDescription": {
+        "tone_title": "Do I Wanna Know? - Main Riff",
+        "genre": "Indie Rock / Garage Rock",
+        "sound_description": "Thick, fuzzy, and saturated with a raw, gritty edge; moderate sustain, pronounced midrange, not overly bright; retains clarity and punch without excessive effects.",
+        "guitar_rig_description": "Noise gate: not used (signal is not overly noisy). Compressor: not used (dynamic touch is preserved). Overdrive/Distortion: a classic fuzz or vintage-style distortion pedal used to achieve a saturated, grainy texture with a slightly loose feel. Amplifier: British-style tube amp set to a mildly overdriven clean, providing warmth. Cabinet: 4x12 cab sim or real cab, closed-back, for depth and punch. EQ: amp EQ settings prioritize mids and slightly roll off high end to avoid harshness. Modulation: not used. Delay: not used. Reverb: a touch of amp spring reverb for space, but kept subtle.",
+        "references": [
+          "Arctic Monkeys - Do I Wanna Know?",
+          "The Black Keys - Lonely Boy",
+          "The White Stripes - Icky Thump"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "bridge humbucker, tone = 6",
+        "additional_info": "Use a semi-hollow or solidbody guitar with medium-gauge strings. Play with fingers or pick, but emphasize palm muting and a heavy attack for groove."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Electro-Harmonix Big Muff Pi (USA or Russian Reissue)",
+          "TC Electronic Hall of Fame Mini Reverb (set to subtle spring reverb)"
+        ],
+        "amplifier": "Vox AC30 Custom",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Normal Volume)": 5,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 4,
+            "Cut": 3,
+            "Reverb (if onboard)": 2,
+            "Master": 4
+          },
+          "big_muff": {
+            "Sustain": 11,
+            "Tone": 10,
+            "Volume": 12
+          },
+          "reverb": {
+            "Level": 9
+          },
+          "guitar": {
+            "Pickup": "Bridge humbucker",
+            "Tone": 6,
+            "Volume": 10
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Muff Fuzz",
+          "enabled": true,
+          "params": {
+            "Volume": 70,
+            "Sustain": 65,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 45,
+            "Master": 60,
+            "Bass": 55,
+            "Treble": 35,
+            "Cut": 55
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 45,
+            "HighCut": 40
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 28,
+            "Decay": 32
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 70,
+                "Sustain": 65,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 45,
+                "Master": 60,
+                "Bass": 55,
+                "Treble": 35,
+                "Cut": 55
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 45,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Decay": 32
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Arctic Monkeys Do I Wanna Know? Distortion Guitar Main Riff\n- dont make too much efx.",
+          "timestamp": "2025-11-28T04:23:38.090Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 65,
+                "Decay": 55
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 65,
+                "Sustain": 45,
+                "Tone": 55
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 30,
+                "Master": 60,
+                "Bass": 50,
+                "Treble": 38,
+                "Cut": 60
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 50,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Decay": 32
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Слишком много грязи \n",
+          "timestamp": "2025-11-28T04:24:30.586Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 65,
+                "Decay": 55
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 55,
+                "Sustain": 30,
+                "Tone": 55
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 18,
+                "Master": 60,
+                "Bass": 50,
+                "Treble": 38,
+                "Cut": 60
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 50,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Decay": 32
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Теперь слишком много перергруза\n",
+          "timestamp": "2025-11-28T04:25:45.983Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 65,
+                "Decay": 55
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 55,
+                "Sustain": 30,
+                "Tone": 55
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 18,
+                "Master": 60,
+                "Bass": 50,
+                "Treble": 38,
+                "Cut": 60
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 50,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Decay": 32
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "нойз гейт можно и вырубить, хорошо стало\n",
+          "timestamp": "2025-11-28T04:27:09.318Z"
+        }
+      ],
+      "id": "gen_miicxupv_jym9otlfk",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-11-28T04:20:39.541Z",
+      "originalPrompt": "Arctic Monkeys        Do I Wanna Know?    Distortion Guitar Main Riff\n",
+      "proDescription": {
+        "tone_title": "Do I Wanna Know? - Distorted Main Riff",
+        "genre": "Indie Rock / Alternative Rock",
+        "sound_description": "Heavy, fuzzy, mid-gain distortion with a thick and gritty character; punchy attack, moderate sustain, rounded highs, and prominent low-mid presence. The tone is warm but cuts through the mix, with a slightly vintage, garage-rock edge.",
+        "guitar_rig_description": "Noise gate: not used. Compressor: not used. Overdrive/Distortion: Fuzz or mid-gain distortion pedal providing thick, saturated, and slightly fuzzy breakup. Amplifier: British-style tube amp model (e.g., Vox or Marshall) set for clean to edge-of-breakup, allowing the pedal to shape the distortion character. Cabinet: Matched 2x12 or 4x12 British-style cab for fullness and punch. EQ: Subtle post-amp EQ to tame excessive highs and enhance low-mids for body. Modulation: not used. Delay: not used. Reverb: Small amount of amp spring reverb for space and depth.",
+        "references": [
+          "Arctic Monkeys - Do I Wanna Know?",
+          "The Black Keys - Gold on the Ceiling",
+          "The White Stripes - Icky Thump"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Palm muting and dynamic picking enhance groove; medium to heavy string gauge preferred for body; guitar volume slightly rolled back can help clean up fuzz; Alex Turner is known to use Fender or Gretsch guitars with pedals like the Big Muff or Tone Bender style fuzz."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Electro-Harmonix Big Muff Pi (NYC Reissue)",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Vox AC30 Custom (C2)",
+        "cabinet": "Vox V212C 2x12 Cabinet with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Normal Volume)": 5,
+            "Bass": 6,
+            "Treble": 5,
+            "Cut": 4,
+            "Reverb": 2,
+            "Master": 4
+          },
+          "big_muff": {
+            "Sustain": 10,
+            "Tone": 10,
+            "Volume": 8
+          },
+          "eq": {
+            "63Hz": "+2dB",
+            "125Hz": "+2dB",
+            "250Hz": "+1dB",
+            "500Hz": "0dB",
+            "1kHz": "0dB",
+            "2kHz": "-1dB",
+            "4kHz": "-2dB",
+            "8kHz": "-3dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Muff Fuzz",
+          "enabled": true,
+          "params": {
+            "Volume": 65,
+            "Sustain": 62,
+            "Tone": 38
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 47,
+            "Master": 62,
+            "Bass": 62,
+            "Treble": 43,
+            "Cut": 40
+          }
+        },
+        "cabinet": {
+          "type": "MATCH212",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 45,
+            "HighCut": 41
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 52,
+            "62": 54,
+            "125": 55,
+            "250": 58,
+            "500": 58,
+            "1000": 54,
+            "2000": 52,
+            "4000": 46,
+            "8000": 41,
+            "16000": 40,
+            "Vol": 53
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 29,
+            "Decay": 33
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 65,
+                "Sustain": 62,
+                "Tone": 38
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 47,
+                "Master": 62,
+                "Bass": 62,
+                "Treble": 43,
+                "Cut": 40
+              }
+            },
+            "cabinet": {
+              "type": "MATCH212",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 45,
+                "HighCut": 41
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 52,
+                "62": 54,
+                "125": 55,
+                "250": 58,
+                "500": 58,
+                "1000": 54,
+                "2000": 52,
+                "4000": 46,
+                "8000": 41,
+                "16000": 40,
+                "Vol": 53
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 29,
+                "Decay": 33
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Arctic Monkeys        Do I Wanna Know?    Distortion Guitar Main Riff\n",
+          "timestamp": "2025-11-28T04:20:39.541Z"
+        }
+      ],
+      "id": "gen_miicu0w6_gb960ohop",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-28T04:08:09.632Z",
       "originalPrompt": "The Cranberries      Zombie     Overdriven Rhythm Guitar Chorus\n",
       "proDescription": {
@@ -21167,6 +21908,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-28T04:08:09.655Z"
+    "lastUpdated": "2025-11-28T04:27:09.339Z"
   }
 }

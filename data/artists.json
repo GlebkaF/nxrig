@@ -184,5 +184,11 @@
     "title": "The Cranberries",
     "slug": "the-cranberries",
     "description": "The Cranberries are an Irish rock band known for their distinctive vocals, emotive melodies, and atmospheric sound, creating timeless hits that shaped ’90s alternative rock."
+  },
+  {
+    "id": 32,
+    "title": "Arctic Monkeys",
+    "slug": "arctic-monkeys",
+    "description": "Arctic Monkeys are a British indie rock band known for sharp lyrics, dynamic guitar work, and evolving sound, influencing modern rock with their distinctive style."
   }
 ]
