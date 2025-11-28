@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
       "Top 10 Easy Electric Guitar Songs for Beginners (With Guitar Tone Presets)",
     excerpt:
       "Learning electric guitar becomes much easier when you start with simple, iconic riffs. Here are the best easy electric guitar songs for beginners, including rock, metal, grunge, and alternative classics.",
-    date: "2025-11-28",
+    date: "2025-11-28T12:00:00.000Z",
     tags: ["Beginner", "Electric Guitar", "Songs", "Presets"],
     content: `
 Learning electric guitar becomes much easier when you start with simple, iconic riffs that sound amazing and help you gain confidence fast. In this SEO-optimized guide, we’ve collected the **best easy electric guitar songs for beginners**, including rock, metal, grunge, and alternative classics.
