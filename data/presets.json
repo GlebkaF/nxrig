@@ -6162,5 +6162,116 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/arctic-monkeys-do-i-wanna-know-tab-s383929t8",
     "createdAt": "2025-11-28T04:28:05.893Z",
     "updatedAt": "2025-11-28T04:28:05.893Z"
+  },
+  {
+    "id": "gen_miimqplq_uxrrlucvs",
+    "origin": {
+      "artistId": 33,
+      "song": "Let It Be",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Warm, smooth, singing tone with moderate sustain and a touch of vintage grit. Not overly aggressive, with clear note articulation and melodic presence. Slightly rounded highs for a classic, non-harsh sound. Subtle ambience.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 60,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 28,
+          "Tone": 42
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 56,
+          "Master": 59,
+          "Bass": 48,
+          "Middle": 59,
+          "Treble": 44,
+          "Bright": 40
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 46,
+          "HighCut": 43
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 47,
+          "62": 50,
+          "125": 51,
+          "250": 53,
+          "500": 56,
+          "1000": 60,
+          "2000": 62,
+          "4000": 55,
+          "8000": 45,
+          "16000": 42,
+          "Vol": 51
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "Decay": 51
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 29,
+          "Rate": 28,
+          "Echo": 36
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "let-it-be-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/beatles-let-it-be-tab-s79",
+    "createdAt": "2025-11-28T10:32:27.475Z",
+    "updatedAt": "2025-11-28T10:32:27.475Z"
   }
 ]

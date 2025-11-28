@@ -1,6 +1,261 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-28T08:58:01.104Z",
+      "originalPrompt": "Let It be\tBeatles \tSolo Guitar",
+      "proDescription": {
+        "tone_title": "Let It Be - Guitar Solo",
+        "genre": "Classic Rock / Pop Rock",
+        "sound_description": "Warm, smooth, singing tone with moderate sustain and a touch of vintage grit. Not overly aggressive, with clear note articulation and melodic presence. Slightly rounded highs for a classic, non-harsh sound. Subtle ambience.",
+        "guitar_rig_description": "Noise gate: not used (signal is relatively clean and quiet). Compressor: used gently to even out dynamics and add sustain to the solo lines. Overdrive: light overdrive or transparent boost to add warmth and a mild breakup, emulating a cranked vintage tube amp. Amplifier: vintage-style tube amp (e.g., Fender Twin or Vox AC30), set for mild breakup and warmth. Cabinet: matching open-back 2x12 cabinet, providing airy low-end and clear mids. EQ: subtle mid boost to help the solo cut through, mild roll-off of harsh high end. Modulation: not used. Delay: short, subtle slapback delay for depth, mixed low to avoid clutter. Reverb: spring reverb for vintage ambience, set to a moderate level.",
+        "references": [
+          "The Beatles - Let It Be (album version, George Harrison's solo)",
+          "Eric Clapton - Wonderful Tonight (similar solo tone)",
+          "The Rolling Stones - Angie (clean lead tones)"
+        ],
+        "song_part": "guitar solo",
+        "preferred_pickup": "neck pickup, tone = 7 (rolled off slightly for smoothness)",
+        "additional_info": "Use a gentle picking attack and vibrato for expressive phrasing. Roundwound strings, standard gauge (10–46). Volume and tone knob adjustments on guitar for optimal warmth."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Analogman King of Tone (set to low gain/overdrive side, red channel)",
+          "Boss GE-7 Graphic Equalizer",
+          "MXR Carbon Copy Analog Delay"
+        ],
+        "amplifier": "Fender '65 Twin Reverb Reissue",
+        "cabinet": "Fender 212 Enclosure with 2x12\" Jensen C12K speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Volume": 4.5,
+            "Treble": 4,
+            "Middle": 6,
+            "Bass": 4.5,
+            "Reverb": 3.5,
+            "Bright Switch": "Off"
+          },
+          "compressor": {
+            "Blend": 11,
+            "Volume": 1,
+            "Compression": "Lo"
+          },
+          "overdrive": {
+            "Drive": 2.5,
+            "Tone": 4.5,
+            "Volume": 7
+          },
+          "eq": {
+            "100Hz": 0,
+            "200Hz": "+1dB",
+            "400Hz": "+1dB",
+            "800Hz": "+2dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "-1dB",
+            "6.4kHz": "-2dB",
+            "Level": 0
+          },
+          "delay": {
+            "Delay Time": "90ms",
+            "Regen": 1,
+            "Mix": 20
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 60,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 28,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 56,
+            "Master": 59,
+            "Bass": 48,
+            "Middle": 59,
+            "Treble": 44,
+            "Bright": 40
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 46,
+            "HighCut": 43
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 47,
+            "62": 50,
+            "125": 51,
+            "250": 53,
+            "500": 56,
+            "1000": 60,
+            "2000": 62,
+            "4000": 55,
+            "8000": 45,
+            "16000": 42,
+            "Vol": 51
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "Decay": 51
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 29,
+            "Rate": 28,
+            "Echo": 36
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 60,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 28,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 56,
+                "Master": 59,
+                "Bass": 48,
+                "Middle": 59,
+                "Treble": 44,
+                "Bright": 40
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 46,
+                "HighCut": 43
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 47,
+                "62": 50,
+                "125": 51,
+                "250": 53,
+                "500": 56,
+                "1000": 60,
+                "2000": 62,
+                "4000": 55,
+                "8000": 45,
+                "16000": 42,
+                "Vol": 51
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Decay": 51
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 29,
+                "Rate": 28,
+                "Echo": 36
+              }
+            }
+          },
+          "prompt": "Let It be\tBeatles \tSolo Guitar",
+          "timestamp": "2025-11-28T08:58:01.104Z"
+        }
+      ],
+      "id": "gen_miimqplq_uxrrlucvs",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-28T04:23:38.090Z",
       "originalPrompt": "Arctic Monkeys Do I Wanna Know? Distortion Guitar Main Riff\n- dont make too much efx.",
       "proDescription": {
@@ -21908,6 +22163,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-28T04:27:09.339Z"
+    "lastUpdated": "2025-11-28T08:58:01.118Z"
   }
 }

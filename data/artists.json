@@ -190,5 +190,11 @@
     "title": "Arctic Monkeys",
     "slug": "arctic-monkeys",
     "description": "Arctic Monkeys are a British indie rock band known for sharp lyrics, dynamic guitar work, and evolving sound, influencing modern rock with their distinctive style."
+  },
+  {
+    "id": 33,
+    "title": "The Beatles",
+    "slug": "the-beatles",
+    "description": "The Beatles are a legendary British band whose innovative songwriting, harmonies, and cultural impact transformed music history and defined the sound of modern pop and rock."
   }
 ]
