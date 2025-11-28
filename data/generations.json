@@ -1,6 +1,255 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-28T04:08:09.632Z",
+      "originalPrompt": "The Cranberries      Zombie     Overdriven Rhythm Guitar Chorus\n",
+      "proDescription": {
+        "tone_title": "Zombie - Overdriven Rhythm Guitar Chorus",
+        "genre": "90s Alternative Rock / Grunge",
+        "sound_description": "Thick, mid-heavy overdrive with pronounced attack, moderate brightness, and a raw, open feel. The tone is not overly compressed, retaining some dynamic response, with enough presence and clarity to cut through the mix but not harsh or fizzy. Slightly roomy and atmospheric.",
+        "guitar_rig_description": "Noise gate: not used (the original tone is somewhat raw, with natural amp noise). Compressor: not used (dynamics are preserved). Overdrive/Distortion: Used – medium-gain overdrive pedal to push the amp for a saturated, crunchy rhythm sound. Amplifier: Used – classic British-style tube amp set to breakup/overdrive, providing warmth and fullness. Cabinet: Used – 4x12 closed-back cabinet for punch and depth. EQ: Used – slight mid boost and gentle high-end roll-off to avoid fizz, with low end controlled for clarity. Modulation: not used (the rhythm guitars are dry). Delay: not used. Reverb: Used – subtle plate or room reverb to add space without washing out the attack.",
+        "references": [
+          "The Cranberries - Zombie",
+          "Nirvana - Come As You Are",
+          "Live - I Alone"
+        ],
+        "song_part": "Chorus rhythm guitar",
+        "preferred_pickup": "bridge humbucker, tone = full",
+        "additional_info": "Use a pick with a firm attack for definition. Medium gauge strings help with chunkiness. Double-track guitars to achieve the wide, immersive chorus sound typical of the record."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ProCo Rat 2 Distortion",
+          "MXR M108S Ten Band EQ",
+          "TC Electronic Hall of Fame Mini Reverb (set to Plate or Room algo, subtle mix)"
+        ],
+        "amplifier": "Marshall JCM900 4100 Dual Reverb",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain (Channel A)": 6,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 5,
+            "Master": 4
+          },
+          "rat": {
+            "Distortion": 2.5,
+            "Filter": 4,
+            "Volume": 7
+          },
+          "eq": {
+            "62Hz": "-2dB",
+            "125Hz": "0dB",
+            "250Hz": "+2dB",
+            "500Hz": "+3dB",
+            "1kHz": "+3dB",
+            "2kHz": "+2dB",
+            "4kHz": "+1dB",
+            "8kHz": "-2dB",
+            "16kHz": "-4dB"
+          },
+          "reverb": {
+            "Level": "9 o'clock (subtle)",
+            "Decay": "short"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 58,
+            "Tone": 46
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 62,
+            "Master": 57,
+            "Bass": 45,
+            "Middle": 66,
+            "Treble": 46,
+            "Presence": 52
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 48,
+            "HighCut": 44
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 47,
+            "62": 48,
+            "125": 49,
+            "250": 54,
+            "500": 60,
+            "1000": 62,
+            "2000": 58,
+            "4000": 50,
+            "8000": 44,
+            "16000": 40,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 27,
+            "Decay": 34
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 58,
+                "Tone": 46
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 62,
+                "Master": 57,
+                "Bass": 45,
+                "Middle": 66,
+                "Treble": 46,
+                "Presence": 52
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 48,
+                "HighCut": 44
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 47,
+                "62": 48,
+                "125": 49,
+                "250": 54,
+                "500": 60,
+                "1000": 62,
+                "2000": 58,
+                "4000": 50,
+                "8000": 44,
+                "16000": 40,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 27,
+                "Decay": 34
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "The Cranberries      Zombie     Overdriven Rhythm Guitar Chorus\n",
+          "timestamp": "2025-11-28T04:08:09.632Z"
+        }
+      ],
+      "id": "gen_miicdy9i_to5ejo52d",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-27T05:26:31.109Z",
       "originalPrompt": "Metallica        Seek & Destroy      Distortion Guitar    Main Riff",
       "proDescription": {
@@ -20918,6 +21167,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-27T05:27:15.073Z"
+    "lastUpdated": "2025-11-28T04:08:09.655Z"
   }
 }

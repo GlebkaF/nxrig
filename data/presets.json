@@ -5946,5 +5946,116 @@
     "slug": "seek-destroy-guitar-main-riff",
     "createdAt": "2025-11-27T05:51:02.386Z",
     "updatedAt": "2025-11-27T05:51:02.386Z"
+  },
+  {
+    "id": "gen_miicdy9i_to5ejo52d",
+    "origin": {
+      "artistId": 31,
+      "song": "Zombie",
+      "part": "Overdriven Chorus",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Thick, mid-heavy overdrive with pronounced attack, moderate brightness, and a raw, open feel. The tone is not overly compressed, retaining some dynamic response, with enough presence and clarity to cut through the mix but not harsh or fizzy. Slightly roomy and atmospheric.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 58,
+          "Tone": 46
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 62,
+          "Master": 57,
+          "Bass": 45,
+          "Middle": 66,
+          "Treble": 46,
+          "Presence": 52
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 48,
+          "HighCut": 44
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 47,
+          "62": 48,
+          "125": 49,
+          "250": 54,
+          "500": 60,
+          "1000": 62,
+          "2000": 58,
+          "4000": 50,
+          "8000": 44,
+          "16000": 40,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 27,
+          "Decay": 34
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "zombie-guitar-overdriven-chorus",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/cranberries-zombie-tab-s431",
+    "createdAt": "2025-11-28T04:12:09.989Z",
+    "updatedAt": "2025-11-28T04:12:09.989Z"
   }
 ]
