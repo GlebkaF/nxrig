@@ -1,6 +1,225 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-28T10:46:59.132Z",
+      "originalPrompt": "Chuck Berry – Johnny B. Goode – Overdriven – Main riff / solo – Classic 50s rock-and-roll bite, needs bright attack and light breakup.",
+      "proDescription": {
+        "tone_title": "Johnny B. Goode – Main Riff / Solo",
+        "genre": "50s Rock and Roll",
+        "sound_description": "Bright, biting, lightly overdriven tone with a crisp attack and modest sustain. The sound should have a touch of breakup, retaining clarity and dynamics, with enough edge to cut through the mix but not overly distorted.",
+        "guitar_rig_description": "Noise gate: not used (vintage setups do not require it). Compressor: not used (dynamics are kept natural). Overdrive/boost: light overdrive from amp or subtle boost pedal to add breakup, emulating cranked vintage tube amp. Amplifier: classic tweed-style tube amp set just into breakup for natural, open overdrive. Cabinet: matching open-back 1x12 or 2x12 with vintage-voiced speakers for airy, bright response. EQ: not used as a standalone block; tone shaping is done on amp (treble slightly emphasized, mids present, bass controlled). Modulation: not used. Delay: not used. Reverb: subtle spring reverb for vintage amp ambiance.",
+        "references": [
+          "Chuck Berry – Johnny B. Goode",
+          "Buddy Holly – Peggy Sue",
+          "Little Richard – Long Tall Sally"
+        ],
+        "song_part": "main riff / solo",
+        "preferred_pickup": "bridge single-coil, tone = 10",
+        "additional_info": "Use a guitar with single-coil pickups (ES-350T, ES-335, or Telecaster style for clarity). Play with fingers or a thin pick for snap. Light string gauge (10s or lighter) preferred. Volume knob control is essential for dialing in breakup level."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic EP Booster (set to very low gain, unity volume for a touch of breakup)",
+          "Strymon Flint (Spring Reverb mode, Mix low, Decay short, Color bright)"
+        ],
+        "amplifier": "Fender '57 Custom Deluxe (Tweed)",
+        "cabinet": "Fender 1x12 Tweed Cabinet with Jensen P12Q Alnico speaker (12\", open-back)",
+        "settings": {
+          "amp": {
+            "Volume": 7,
+            "Tone": 8
+          },
+          "ep_booster": {
+            "Gain": 9,
+            "Volume": 12
+          },
+          "flint_reverb": {
+            "Decay": 11,
+            "Color": 1,
+            "Mix": 10
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 53,
+            "Gain": 18,
+            "Bass": 45,
+            "Treble": 60
+          }
+        },
+        "amplifier": {
+          "type": "Tweedy",
+          "enabled": true,
+          "params": {
+            "Gain": 40,
+            "Master": 58,
+            "Tone": 65
+          }
+        },
+        "cabinet": {
+          "type": "A112",
+          "enabled": true,
+          "params": {
+            "Level": 51,
+            "LowCut": 56,
+            "HighCut": 62
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 36,
+            "Decay": 42
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 53,
+                "Gain": 18,
+                "Bass": 45,
+                "Treble": 60
+              }
+            },
+            "amplifier": {
+              "type": "Tweedy",
+              "enabled": true,
+              "params": {
+                "Gain": 40,
+                "Master": 58,
+                "Tone": 65
+              }
+            },
+            "cabinet": {
+              "type": "A112",
+              "enabled": true,
+              "params": {
+                "Level": 51,
+                "LowCut": 56,
+                "HighCut": 62
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 36,
+                "Decay": 42
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Chuck Berry – Johnny B. Goode – Overdriven – Main riff / solo – Classic 50s rock-and-roll bite, needs bright attack and light breakup.",
+          "timestamp": "2025-11-28T10:46:59.132Z"
+        }
+      ],
+      "id": "gen_miiqmude_179x8dvgj",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-28T08:58:01.104Z",
       "originalPrompt": "Let It be\tBeatles \tSolo Guitar",
       "proDescription": {
@@ -22163,6 +22382,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-28T08:58:01.118Z"
+    "lastUpdated": "2025-11-28T10:46:59.139Z"
   }
 }

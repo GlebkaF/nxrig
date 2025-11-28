@@ -196,5 +196,11 @@
     "title": "The Beatles",
     "slug": "the-beatles",
     "description": "The Beatles are a legendary British band whose innovative songwriting, harmonies, and cultural impact transformed music history and defined the sound of modern pop and rock."
+  },
+  {
+    "id": 34,
+    "title": "Chuck Berry",
+    "slug": "chuck-berry",
+    "description": "Chuck Berry was a pioneering rock and roll musician whose signature guitar riffs, energetic style, and timeless hits helped shape the foundation of modern rock music."
   }
 ]

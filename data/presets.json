@@ -6273,5 +6273,109 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/beatles-let-it-be-tab-s79",
     "createdAt": "2025-11-28T10:32:27.475Z",
     "updatedAt": "2025-11-28T10:32:27.475Z"
+  },
+  {
+    "id": "gen_miiqmude_179x8dvgj",
+    "origin": {
+      "artistId": 34,
+      "song": "Johnny B. Goode",
+      "part": "Lead Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, biting, lightly overdriven tone with a crisp attack and modest sustain. The sound should have a touch of breakup, retaining clarity and dynamics, with enough edge to cut through the mix but not overly distorted.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "RC Boost",
+        "enabled": true,
+        "params": {
+          "Volume": 53,
+          "Gain": 18,
+          "Bass": 45,
+          "Treble": 60
+        }
+      },
+      "amplifier": {
+        "type": "Tweedy",
+        "enabled": true,
+        "params": {
+          "Gain": 40,
+          "Master": 58,
+          "Tone": 65
+        }
+      },
+      "cabinet": {
+        "type": "A112",
+        "enabled": true,
+        "params": {
+          "Level": 51,
+          "LowCut": 56,
+          "HighCut": 62
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 36,
+          "Decay": 42
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "johnny-b-goode-guitar-lead-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/chuck-berry-johnny-b-goode-tab-s10",
+    "createdAt": "2025-11-28T10:53:27.854Z",
+    "updatedAt": "2025-11-28T10:53:27.854Z"
   }
 ]
