@@ -29,6 +29,16 @@ const Header: React.FC = () => {
           {!isAdminPage && (
             <nav className="flex items-center gap-6">
               <Link
+                href="/blog"
+                className={`hover:text-pink-400 transition-colors ${
+                  pathname.startsWith("/blog")
+                    ? "text-pink-400 font-medium"
+                    : "text-gray-300"
+                }`}
+              >
+                Blog
+              </Link>
+              <Link
                 href="/favorites"
                 className={`hover:text-pink-400 transition-colors flex items-center gap-2 ${
                   pathname === "/favorites"
@@ -77,6 +87,16 @@ const Header: React.FC = () => {
 
             {!isAdminPage && (
               <nav className="flex items-center gap-3">
+                <Link
+                  href="/blog"
+                  className={`hover:text-pink-400 transition-colors text-sm ${
+                    pathname.startsWith("/blog")
+                      ? "text-pink-400 font-medium"
+                      : "text-gray-300"
+                  }`}
+                >
+                  Blog
+                </Link>
                 <Link
                   href="/favorites"
                   className={`hover:text-pink-400 transition-colors flex items-center gap-1 ${
