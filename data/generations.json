@@ -1,6 +1,520 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-29T05:51:09.634Z",
+      "originalPrompt": "Guns N’ Roses – November Rain – Slash Guitar solos",
+      "proDescription": {
+        "tone_title": "Guns N’ Roses – November Rain – Slash Guitar Solos",
+        "genre": "Classic Rock / Hard Rock Ballad",
+        "sound_description": "Smooth, singing lead tone with rich sustain and clarity; slightly mid-focused for note articulation; warm but not overly dark; expressive dynamics with singing vibrato and controlled feedback; not overly aggressive but with enough drive for creamy saturation.",
+        "guitar_rig_description": "Noise gate: not used (signal is relatively clean, minimal noise expected). Compressor: light compression to even out dynamics and enhance sustain without squashing expression. Overdrive/Distortion/Boost: transparent overdrive (such as a classic overdrive pedal) used in front of an already overdriven amp to add sustain, smooth out pick attack, and give extra push for solos. Amplifier: British-style tube amp (such as a Marshall JCM800) set for moderate overdrive, providing the main body of the lead tone. Cabinet: 4x12 closed-back cabinet with Celestion speakers for full, rounded mids and tight lows. EQ: slight mid boost to emphasize the singing quality, gentle high cut to prevent harshness. Modulation: subtle stereo chorus used sparingly to add depth and width, most prominent in the outro solo. Delay: analog-voiced delay set for subtle repeats, creating space and depth without cluttering the notes. Reverb: plate or hall reverb for spaciousness and to enhance solo presence.",
+        "references": [
+          "Guns N' Roses – November Rain (original recording)",
+          "Guns N' Roses – Sweet Child O' Mine (solo tones)",
+          "Slash – Anastasia (live lead sounds)"
+        ],
+        "song_part": "guitar solos (main and outro)",
+        "preferred_pickup": "bridge humbucker, tone = 8 (slightly rolled back for smoothness)",
+        "additional_info": "Les Paul-style guitar recommended; expressive vibrato and bending technique; moderate to heavy string gauge for sustain; volume knob may be rolled back between solo sections to clean up; pick attack should be firm but controlled for best sustain."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp (set for low Sensitivity, Output at unity or slightly above, Sensitivity at 9:00)",
+          "Ibanez TS808 Tube Screamer (Drive at 9:00, Tone at 11:00, Level at 3:00)",
+          "Boss GE-7 Graphic Equalizer (slight boost at 800Hz and 1.6kHz, gentle cut at 6.4kHz, level at unity)",
+          "Boss CE-2W Chorus (rate at 10:00, depth at 9:00, set to standard mode; engage for outro solo)",
+          "Boss DM-2W Analog Delay (repeat at 10:00, delay time at 11:00 ~400ms, effect level at 9:00)",
+          "TC Electronic Hall of Fame Reverb (Plate mode, decay at 12:00, tone at 11:00, level at 10:00)"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960AV 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 6,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 5,
+            "Master": 4
+          },
+          "compressor": {
+            "Sensitivity": 2,
+            "Output": 7
+          },
+          "overdrive": {
+            "Drive": 3,
+            "Tone": 4,
+            "Level": 7
+          },
+          "eq": {
+            "800Hz": "+2dB",
+            "1.6kHz": "+2dB",
+            "6.4kHz": "-2dB"
+          },
+          "chorus": {
+            "Rate": 3,
+            "Depth": 2,
+            "Mode": "Standard"
+          },
+          "delay": {
+            "Repeat": 3,
+            "Delay Time": 4,
+            "Effect Level": 2
+          },
+          "reverb": {
+            "Decay": 5,
+            "Tone": 4,
+            "Level": 3
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 42,
+            "Clipping": 35
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 30,
+            "Depth": 24
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 38,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 60,
+            "Master": 54,
+            "Bass": 48,
+            "Middle": 62,
+            "Treble": 43,
+            "Presence": 46
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 44,
+            "HighCut": 57
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 48,
+            "220": 52,
+            "500": 60,
+            "1200": 65,
+            "2600": 54,
+            "6400": 42
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 44,
+            "Decay": 58
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 42,
+            "Rate": 36,
+            "Echo": 34
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 42,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 30,
+                "Depth": 24
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 38,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 60,
+                "Master": 54,
+                "Bass": 48,
+                "Middle": 62,
+                "Treble": 43,
+                "Presence": 46
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 44,
+                "HighCut": 57
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 48,
+                "220": 52,
+                "500": 60,
+                "1200": 65,
+                "2600": 54,
+                "6400": 42
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 44,
+                "Decay": 58
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 42,
+                "Rate": 36,
+                "Echo": 34
+              }
+            }
+          },
+          "prompt": "Guns N’ Roses – November Rain – Slash Guitar solos",
+          "timestamp": "2025-11-29T05:51:09.634Z"
+        }
+      ],
+      "id": "gen_mijvi9g8_ijoz52ufc",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-11-29T05:49:29.795Z",
+      "originalPrompt": "Guns N’ Roses – November Rain – Slash Guitar solos",
+      "proDescription": {
+        "tone_title": "Guns N’ Roses – November Rain – Slash Guitar Solos",
+        "genre": "Classic Rock / Hard Rock Ballad",
+        "sound_description": "Smooth, singing lead tone with pronounced sustain, warm mids, clear high end, and a slightly overdriven edge. The sound is expressive and dynamic, with a touch of ambience and spatial depth. The attack is articulate but not harsh, and the overall tone feels soaring and melodic.",
+        "guitar_rig_description": "Noise gate: not used (solos are dynamic and benefit from natural decay). Compressor: light compression to enhance sustain and even out picking dynamics. Overdrive/Distortion: medium-gain overdrive or classic distortion pedal to push the amp for creamy, singing sustain. Amplifier: British-style tube amp (e.g., Marshall) set to a crunchy, saturated lead channel. Cabinet: 4x12” closed-back cabinet with Celestion-style speakers for thick mids and smooth highs. EQ: subtle mid boost and gentle treble roll-off to avoid harshness. Modulation: not used (tone is kept pure and focused). Delay: analog or tape-style delay with short repeats and low mix, providing spaciousness without cluttering notes. Reverb: plate or hall reverb for a lush, expansive solo ambience.",
+        "references": [
+          "Guns N’ Roses – November Rain",
+          "Guns N’ Roses – Estranged",
+          "Slash – Anastasia"
+        ],
+        "song_part": "guitar solos",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Slash is known for using a Les Paul-style guitar with Alnico II humbuckers and heavier strings (typically 10–46 gauge). Use a pick and expressive vibrato/bending. Volume and tone knobs may be rolled back slightly for smoother highs. Wah pedal is not used in this particular solo."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp (Compressor)",
+          "Boss SD-1 Super OverDrive",
+          "Boss GE-7 Equalizer",
+          "MXR Carbon Copy Analog Delay",
+          "Strymon blueSky (Plate Reverb mode)"
+        ],
+        "amplifier": "Marshall JCM Slash Signature AFD100",
+        "cabinet": "Marshall 1960AV 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Bass": 6,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 5,
+            "Master": 4
+          },
+          "compressor": {
+            "Output": 11,
+            "Sensitivity": 9
+          },
+          "overdrive": {
+            "Drive": 5,
+            "Tone": 5,
+            "Level": 8
+          },
+          "eq": {
+            "100Hz": "0",
+            "200Hz": "+1dB",
+            "400Hz": "+2dB",
+            "800Hz": "+3dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "0",
+            "6.4kHz": "-2dB",
+            "Level": "+1"
+          },
+          "delay": {
+            "Delay Time": "380 ms",
+            "Regen": "2 repeats",
+            "Mix": "20%"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": "40%",
+            "Mix": "20%"
+          },
+          "guitar": {
+            "Pickup": "Bridge humbucker (Alnico II)",
+            "Tone knob": "7",
+            "Volume knob": "8–10"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 58,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 38,
+            "Tone": 45
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 65,
+            "Master": 58,
+            "Bass": 55,
+            "Middle": 68,
+            "Treble": 43,
+            "Presence": 48
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 45,
+            "HighCut": 40
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 50,
+            "62": 52,
+            "125": 54,
+            "250": 56,
+            "500": 60,
+            "1000": 65,
+            "2000": 62,
+            "4000": 48,
+            "8000": 42,
+            "16000": 40,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Decay": 60
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 36,
+            "Rate": 23,
+            "Echo": 41
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 58,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 38,
+                "Tone": 45
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 65,
+                "Master": 58,
+                "Bass": 55,
+                "Middle": 68,
+                "Treble": 43,
+                "Presence": 48
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 45,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 50,
+                "62": 52,
+                "125": 54,
+                "250": 56,
+                "500": 60,
+                "1000": 65,
+                "2000": 62,
+                "4000": 48,
+                "8000": 42,
+                "16000": 40,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Decay": 60
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 36,
+                "Rate": 23,
+                "Echo": 41
+              }
+            }
+          },
+          "prompt": "Guns N’ Roses – November Rain – Slash Guitar solos",
+          "timestamp": "2025-11-29T05:49:29.795Z"
+        }
+      ],
+      "id": "gen_mijvg4eo_g9anwy0r1",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-28T10:46:59.132Z",
       "originalPrompt": "Chuck Berry – Johnny B. Goode – Overdriven – Main riff / solo – Classic 50s rock-and-roll bite, needs bright attack and light breakup.",
       "proDescription": {
@@ -22382,6 +22896,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-28T10:46:59.139Z"
+    "lastUpdated": "2025-11-29T05:51:09.663Z"
   }
 }

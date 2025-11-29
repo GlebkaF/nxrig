@@ -6378,7 +6378,6 @@
     "createdAt": "2025-11-28T10:53:27.854Z",
     "updatedAt": "2025-11-28T10:53:27.854Z"
   },
-
   {
     "id": "gen_mijui9r2_0osccr4iw",
     "origin": {
@@ -6586,5 +6585,116 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/beatles-something-solo-tab-s2629t1",
     "createdAt": "2025-11-29T05:37:31.092Z",
     "updatedAt": "2025-11-29T05:37:31.092Z"
+  },
+  {
+    "id": "gen_mijvg4eo_g9anwy0r1",
+    "origin": {
+      "artistId": 5,
+      "song": "November Rain",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, singing lead tone with pronounced sustain, warm mids, clear high end, and a slightly overdriven edge. The sound is expressive and dynamic, with a touch of ambience and spatial depth. The attack is articulate but not harsh, and the overall tone feels soaring and melodic.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 58,
+          "Clipping": 45
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 38,
+          "Tone": 45
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 65,
+          "Master": 58,
+          "Bass": 55,
+          "Middle": 68,
+          "Treble": 43,
+          "Presence": 48
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 45,
+          "HighCut": 40
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 50,
+          "62": 52,
+          "125": 54,
+          "250": 56,
+          "500": 60,
+          "1000": 65,
+          "2000": 62,
+          "4000": 48,
+          "8000": 42,
+          "16000": 40,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Decay": 60
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 36,
+          "Rate": 23,
+          "Echo": 41
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "november-rain-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-november-rain-tab-s8452",
+    "createdAt": "2025-11-29T05:56:05.438Z",
+    "updatedAt": "2025-11-29T05:56:05.438Z"
   }
 ]
