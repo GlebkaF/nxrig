@@ -202,5 +202,11 @@
     "title": "Chuck Berry",
     "slug": "chuck-berry",
     "description": "Chuck Berry was a pioneering rock and roll musician whose signature guitar riffs, energetic style, and timeless hits helped shape the foundation of modern rock music."
+  },
+  {
+    "id": 35,
+    "title": "Queen",
+    "slug": "queen",
+    "description": "Queen is a legendary British rock band known for powerful vocals, innovative songwriting, and genre-blending anthems that shaped the sound of modern rock music."
   }
 ]

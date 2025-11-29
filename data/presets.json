@@ -6377,5 +6377,214 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/chuck-berry-johnny-b-goode-tab-s10",
     "createdAt": "2025-11-28T10:53:27.854Z",
     "updatedAt": "2025-11-28T10:53:27.854Z"
+  },
+
+  {
+    "id": "gen_mijui9r2_0osccr4iw",
+    "origin": {
+      "artistId": 35,
+      "song": "Crazy Little Thing Called Love",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, jangly, and open clean tone with vintage warmth; slight breakup when picking hard, clear note separation, percussive attack, subtle slapback echo for depth, moderate sustain.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 60,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 38,
+          "Master": 65,
+          "Bass": 42,
+          "Treble": 68,
+          "Cut": 55
+        }
+      },
+      "cabinet": {
+        "type": "MATCH212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 58,
+          "HighCut": 63
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "Decay": 46
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 38,
+          "Rate": 21,
+          "Echo": 36
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 9,
+      "position": "bridge"
+    },
+    "slug": "crazy-little-thing-called-love-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/queen-crazy-little-thing-called-love-tab-s23541",
+    "createdAt": "2025-11-29T05:26:51.600Z",
+    "updatedAt": "2025-11-29T05:26:51.600Z"
+  },
+  {
+    "id": "gen_mijuycfv_3ut56bu0w",
+    "origin": {
+      "artistId": 33,
+      "song": "Something",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Warm, smooth, singing lead sound with clear articulation and moderate sustain. The tone is clean but has a gentle breakup for expressiveness, delivering a vintage vibe with a touch of sweetness and rounded highs.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 40,
+          "Clipping": 35
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 38,
+          "Master": 60,
+          "Bass": 52,
+          "Treble": 42,
+          "Cut": 55
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 48,
+          "HighCut": 44
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 48,
+          "220": 52,
+          "500": 56,
+          "1200": 60,
+          "2600": 56,
+          "6400": 44
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "Decay": 52
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 22,
+          "Feedback": 18,
+          "Time": 30
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 8,
+      "position": "neck"
+    },
+    "slug": "something-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/beatles-something-solo-tab-s2629t1",
+    "createdAt": "2025-11-29T05:37:31.092Z",
+    "updatedAt": "2025-11-29T05:37:31.092Z"
   }
 ]
