@@ -6694,7 +6694,118 @@
     },
     "slug": "november-rain-guitar-solo",
     "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-november-rain-tab-s8452",
-    "createdAt": "2025-11-29T05:56:05.438Z",
-    "updatedAt": "2025-11-29T05:56:05.438Z"
+    "createdAt": "2025-11-30T04:12:36.763Z",
+    "updatedAt": "2025-11-30T04:12:36.763Z"
+  },
+  {
+    "id": "gen_mijvuph4_9etbuwa9u",
+    "origin": {
+      "artistId": 35,
+      "song": "Don’t Stop Me Now",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, singing lead tone with rich sustain, moderate overdrive, smooth midrange, clear articulation, and a touch of ambience. The solo cuts through the mix but remains musical and expressive, with a slightly scooped low end and prominent upper mids. Not overly aggressive, but lively and dynamic.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 58,
+          "Clipping": 35
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "RC Boost",
+        "enabled": true,
+        "params": {
+          "Volume": 54,
+          "Gain": 42,
+          "Bass": 44,
+          "Treble": 62
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 62,
+          "Master": 56,
+          "Bass": 41,
+          "Treble": 62,
+          "Cut": 60
+        }
+      },
+      "cabinet": {
+        "type": "MATCH212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 62,
+          "HighCut": 58
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 44,
+          "62": 45,
+          "125": 47,
+          "250": 49,
+          "500": 54,
+          "1000": 58,
+          "2000": 65,
+          "4000": 68,
+          "8000": 60,
+          "16000": 56,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Decay": 58
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 36,
+          "Rate": 28,
+          "Echo": 40
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "don-t-stop-me-now-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/queen-dont-stop-me-now-tab-s41082",
+    "createdAt": "2025-11-30T04:12:36.763Z",
+    "updatedAt": "2025-11-30T04:12:36.763Z"
   }
 ]

@@ -1,6 +1,269 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-29T06:00:50.281Z",
+      "originalPrompt": "Queen – Don’t Stop Me Now – Overdriven – Guitar solo ",
+      "proDescription": {
+        "tone_title": "Queen – Don’t Stop Me Now – Guitar Solo",
+        "genre": "Classic Rock / British Rock",
+        "sound_description": "Bright, singing lead tone with rich sustain, moderate overdrive, smooth midrange, clear articulation, and a touch of ambience. The solo cuts through the mix but remains musical and expressive, with a slightly scooped low end and prominent upper mids. Not overly aggressive, but lively and dynamic.",
+        "guitar_rig_description": "Noise gate: not used (signal is relatively clean and noise is minimal). Compressor: used, light compression to even out picking and enhance sustain. Overdrive: used, classic overdrive pedal to push the amp for smooth, singing sustain. Amplifier: used, classic British-voiced tube amp for midrange character and dynamic response. Cabinet: used, open-back 2x12 cabinet modeled after classic rock setups for airy high end. EQ: used, mild mid boost and slight treble accent for lead presence. Modulation: not used (no chorus, phaser, or flanger in the solo). Delay: used, subtle slapback delay to add space and depth without washing out the notes. Reverb: used, moderate plate reverb for ambience and sustain.",
+        "references": [
+          "Queen – Don't Stop Me Now (original studio recording)",
+          "Queen – Killer Queen (solo tones)",
+          "Queen – Somebody to Love (lead guitar sound)"
+        ],
+        "song_part": "Guitar solo",
+        "preferred_pickup": "bridge single coil (Brian May’s custom Red Special, but a bridge humbucker with split coil can be used for similar tonality), tone = full",
+        "additional_info": "Brian May used a sixpence coin as a pick for distinct attack. Lighter string gauge (e.g., .009 set) aids in smooth bends. Pickup switching and volume pot control are essential for dynamic expression. If using a modern rig, a treble booster pedal before the amp emulates Brian May’s signature sound."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "BMG Treble Booster (by Nigel Knight, Knight Audio Technologies)",
+          "Analogman King of Tone (set for mild overdrive)",
+          "MXR 10-Band EQ",
+          "MXR Carbon Copy Analog Delay",
+          "TC Electronic Hall of Fame 2 (Plate reverb mode)"
+        ],
+        "amplifier": "Vox AC30 Custom (Top Boost channel)",
+        "cabinet": "Vox V212C 2x12 Open Back with Celestion Alnico Blue speakers",
+        "settings": {
+          "amp": {
+            "Gain (Top Boost Volume)": 7,
+            "Bass": 4,
+            "Treble": 7,
+            "Cut": 5,
+            "Master Volume": 5
+          },
+          "compressor": {
+            "Sustain": 10,
+            "Level": 11,
+            "Blend": 12,
+            "Attack": 1
+          },
+          "treble_booster": {
+            "Level": 2.5,
+            "Treble": 3
+          },
+          "overdrive": {
+            "Drive": 2.5,
+            "Tone": 1.5,
+            "Volume": 2
+          },
+          "eq": {
+            "100Hz": "-2dB",
+            "400Hz": "+2dB",
+            "800Hz": "+3dB",
+            "3.2kHz": "+2dB",
+            "6.4kHz": "+2dB"
+          },
+          "delay": {
+            "Time": "110ms",
+            "Mix": "15%",
+            "Repeats": "1-2"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": "12 o'clock",
+            "Mix": "10-11 o'clock"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 58,
+            "Clipping": 35
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 54,
+            "Gain": 42,
+            "Bass": 44,
+            "Treble": 62
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 62,
+            "Master": 56,
+            "Bass": 41,
+            "Treble": 62,
+            "Cut": 60
+          }
+        },
+        "cabinet": {
+          "type": "MATCH212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 62,
+            "HighCut": 58
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 44,
+            "62": 45,
+            "125": 47,
+            "250": 49,
+            "500": 54,
+            "1000": 58,
+            "2000": 65,
+            "4000": 68,
+            "8000": 60,
+            "16000": 56,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Decay": 58
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 36,
+            "Rate": 28,
+            "Echo": 40
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 58,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 54,
+                "Gain": 42,
+                "Bass": 44,
+                "Treble": 62
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 62,
+                "Master": 56,
+                "Bass": 41,
+                "Treble": 62,
+                "Cut": 60
+              }
+            },
+            "cabinet": {
+              "type": "MATCH212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 62,
+                "HighCut": 58
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 44,
+                "62": 45,
+                "125": 47,
+                "250": 49,
+                "500": 54,
+                "1000": 58,
+                "2000": 65,
+                "4000": 68,
+                "8000": 60,
+                "16000": 56,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Decay": 58
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 36,
+                "Rate": 28,
+                "Echo": 40
+              }
+            }
+          },
+          "prompt": "Queen – Don’t Stop Me Now – Overdriven – Guitar solo ",
+          "timestamp": "2025-11-29T06:00:50.281Z"
+        }
+      ],
+      "id": "gen_mijvuph4_9etbuwa9u",
+      "status": "ready"
+    },
+    {
       "timestamp": "2025-11-29T05:51:09.634Z",
       "originalPrompt": "Guns N’ Roses – November Rain – Slash Guitar solos",
       "proDescription": {
@@ -22896,6 +23159,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-29T05:51:09.663Z"
+    "lastUpdated": "2025-11-29T06:03:16.621Z"
   }
 }
