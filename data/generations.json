@@ -1,6 +1,478 @@
 {
   "generations": [
     {
+      "timestamp": "2025-11-30T05:25:58.868Z",
+      "originalPrompt": "The Beatles – Octopus’s Garden – Guitar solo (and intro)",
+      "proDescription": {
+        "tone_title": "Octopus’s Garden – Guitar Solo and Intro",
+        "genre": "Classic Rock / 1960s Pop Rock",
+        "sound_description": "Bright, jangly, and slightly compressed lead tone with a smooth, rounded attack and moderate sustain. The sound is clear and lively, with a subtle warmth and a touch of vintage character. There is a touch of room ambience, but the tone remains crisp and articulate without excessive effects.",
+        "guitar_rig_description": "Noise gate: not used (vintage setups typically left the signal open). Compressor: used subtly to even out dynamics and add sustain, emulating 1960s studio compression. Overdrive/Distortion/Boost: not used (the tone is clean to mildly driven, achieved by pushing the amp slightly). Amplifier: vintage-style tube combo amp, set for clean to mildly overdriven response with a bright, open character. Cabinet: classic open-back 2x12 cabinet, providing chime and a spacious feel. EQ: applied for a slight mid and treble emphasis to enhance clarity and cut. Modulation: not used. Delay: not used. Reverb: used lightly to add room ambience, simulating a small studio room.",
+        "references": [
+          "The Beatles – Octopus’s Garden",
+          "The Beatles – Here Comes the Sun",
+          "The Beach Boys – God Only Knows"
+        ],
+        "song_part": "intro lead line and guitar solo",
+        "preferred_pickup": "bridge single-coil, tone = 8",
+        "additional_info": "Played on a Gretsch or similar bright, vintage-style guitar. Light picking technique with moderate vibrato. Strings are likely light gauge for easy bends. The solo and intro both feature melodic phrasing and clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "Analogman King of Tone (set to clean boost, optional)",
+          "Strymon Flint (Reverb side only, set to 'Room')"
+        ],
+        "amplifier": "Vox AC30 Custom (C2)",
+        "cabinet": "Vox AC30 2x12 Open Back with Celestion Alnico Blue speakers",
+        "settings": {
+          "amp": {
+            "Channel": "Normal",
+            "Gain/Volume": 6,
+            "Bass": 5,
+            "Treble": 7,
+            "Cut": 4,
+            "Reverb": "Off"
+          },
+          "compressor": {
+            "Sustain": 3,
+            "Level": 6,
+            "Blend": 5,
+            "Tone": 6
+          },
+          "reverb": {
+            "Type": "Room",
+            "Decay": 2.5,
+            "Mix": 3.5
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 58,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 53,
+            "Gain": 28,
+            "Bass": 46,
+            "Treble": 59
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 37,
+            "Master": 60,
+            "Bass": 44,
+            "Treble": 61,
+            "Cut": 40
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 58
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": true,
+          "params": {
+            "Level": 38,
+            "Decay": 32,
+            "Tone": 54
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 58,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 53,
+                "Gain": 28,
+                "Bass": 46,
+                "Treble": 59
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 37,
+                "Master": 60,
+                "Bass": 44,
+                "Treble": 61,
+                "Cut": 40
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 58
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 32,
+                "Tone": 54
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "The Beatles – Octopus’s Garden – Guitar solo (and intro)",
+          "timestamp": "2025-11-30T05:25:58.868Z"
+        }
+      ],
+      "id": "gen_mila1qe3_cpa0bjamd",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-11-30T05:18:56.214Z",
+      "originalPrompt": "Guns N’ Roses – Knocking on Heaven’s Door - Slash \nGuitar Solo",
+      "proDescription": {
+        "tone_title": "Knockin' on Heaven's Door – Slash Solo Tone",
+        "genre": "Classic Rock / Hard Rock Ballad",
+        "sound_description": "Smooth, singing lead tone with pronounced sustain, warm midrange, and a slightly edgy bite. The solo sound is expressive, with vocal-like phrasing, clear note articulation, moderate compression, and a lush sense of space. The tone cuts through the mix but remains musical and not overly aggressive.",
+        "guitar_rig_description": "1. Noise gate: not used (Slash typically does not use gates for solos to preserve natural sustain and dynamics). 2. Compressor: light compression for subtle sustain and to even out note dynamics, but not heavily squashed. 3. Overdrive/Distortion: classic overdrive or distortion pedal (e.g., Boss SD-1, Tube Screamer) placed before the amp to push the amp into singing sustain and enhance midrange; set for moderate gain. 4. Amplifier: Marshall-style tube amp head (e.g., JCM800 or Silver Jubilee) with the lead channel engaged, providing rich, harmonically complex overdrive and strong mids. 5. Cabinet: 4x12 closed-back cabinet with Celestion speakers for full low end and smooth highs. 6. EQ: emphasis on upper mids for vocal quality, slight roll-off of extreme highs to avoid harshness, and a touch of low mid warmth. 7. Modulation: not used (occasionally a touch of chorus in live settings, but not a core part of the song solo tone). 8. Delay: analog or tape-style delay with moderate mix and short repeats to add depth and enhance lead presence without muddying the notes. 9. Reverb: plate or spring reverb for a spacious, atmospheric feel, but kept subtle to preserve note definition.",
+        "references": [
+          "Guns N’ Roses – Knockin' on Heaven’s Door (Live at Paris 1992)",
+          "Guns N’ Roses – November Rain (solo tone reference)",
+          "Slash – Live in Tokyo 1992"
+        ],
+        "song_part": "guitar solo",
+        "preferred_pickup": "bridge humbucker, tone = full",
+        "additional_info": "Slash typically uses a Les Paul-style guitar with Alnico II Pro humbuckers, Ernie Ball 10–46 strings, and a Dunlop Tortex pick. He uses expressive vibrato and bends, often riding the volume knob for dynamic control. Palm muting is minimal during the solo."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp (Compressor)",
+          "Boss SD-1 Super OverDrive",
+          "MXR Carbon Copy Analog Delay",
+          "TC Electronic Hall of Fame Reverb (Plate mode, or Spring mode as alternative)"
+        ],
+        "amplifier": "Marshall Silver Jubilee 2555X",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Lead Master": 6,
+            "Output Master": 4,
+            "Input Gain": 7,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 6
+          },
+          "compressor": {
+            "Output": 2.5,
+            "Sensitivity": 5
+          },
+          "overdrive": {
+            "Drive": 4.5,
+            "Tone": 6,
+            "Level": 7
+          },
+          "delay": {
+            "Mix": 25,
+            "Delay Time": 380,
+            "Repeats": 2
+          },
+          "reverb": {
+            "Mix": 18,
+            "Decay": 3.5,
+            "Pre-Delay": 0
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 58,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 45,
+            "Tone": 60
+          }
+        },
+        "amplifier": {
+          "type": "Brit 2000",
+          "enabled": true,
+          "params": {
+            "Gain": 67,
+            "Master": 60,
+            "Bass": 48,
+            "Middle": 69,
+            "Treble": 56,
+            "Presence": 54
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 45,
+            "HighCut": 46
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 42,
+            "Decay": 38
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 39,
+            "Rate": 36,
+            "Echo": 42
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 58,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 45,
+                "Tone": 60
+              }
+            },
+            "amplifier": {
+              "type": "Brit 2000",
+              "enabled": true,
+              "params": {
+                "Gain": 67,
+                "Master": 60,
+                "Bass": 48,
+                "Middle": 69,
+                "Treble": 56,
+                "Presence": 54
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 45,
+                "HighCut": 46
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 42,
+                "Decay": 38
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 39,
+                "Rate": 36,
+                "Echo": 42
+              }
+            }
+          },
+          "prompt": "Guns N’ Roses – Knocking on Heaven’s Door - Slash \nGuitar Solo",
+          "timestamp": "2025-11-30T05:18:56.214Z"
+        }
+      ],
+      "id": "gen_mil9soa3_tsv8b2byc",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-29T06:00:50.281Z",
       "originalPrompt": "Queen – Don’t Stop Me Now – Overdriven – Guitar solo ",
       "proDescription": {
@@ -23159,6 +23631,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-29T06:03:16.621Z"
+    "lastUpdated": "2025-11-30T05:25:58.886Z"
   }
 }
