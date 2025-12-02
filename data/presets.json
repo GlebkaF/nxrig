@@ -6807,5 +6807,111 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/queen-dont-stop-me-now-tab-s41082",
     "createdAt": "2025-11-30T04:12:36.763Z",
     "updatedAt": "2025-11-30T04:12:36.763Z"
+  },
+  {
+    "id": "gen_mil9soa3_tsv8b2byc",
+    "origin": {
+      "artistId": 5,
+      "song": "Knockin' On Heaven's Door",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, singing lead tone with pronounced sustain, warm midrange, and a slightly edgy bite. The solo sound is expressive, with vocal-like phrasing, clear note articulation, moderate compression, and a lush sense of space. The tone cuts through the mix but remains musical and not overly aggressive.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 58,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 45,
+          "Tone": 60
+        }
+      },
+      "amplifier": {
+        "type": "Brit 2000",
+        "enabled": true,
+        "params": {
+          "Gain": 67,
+          "Master": 60,
+          "Bass": 48,
+          "Middle": 69,
+          "Treble": 56,
+          "Presence": 54
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 45,
+          "HighCut": 46
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 42,
+          "Decay": 38
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 39,
+          "Rate": 36,
+          "Echo": 42
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "knockin-on-heavens-door-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-knockin-on-heavens-door-tab-s481",
+    "createdAt": "2025-12-02T12:15:03.990Z",
+    "updatedAt": "2025-12-02T12:15:03.990Z"
   }
 ]
