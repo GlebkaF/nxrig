@@ -6913,5 +6913,112 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-knockin-on-heavens-door-tab-s481",
     "createdAt": "2025-12-02T12:15:03.990Z",
     "updatedAt": "2025-12-02T12:15:03.990Z"
+  },
+  {
+    "id": "gen_mila1qe3_cpa0bjamd",
+    "origin": {
+      "artistId": 33,
+      "song": "Octopus’s Garden",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, jangly, and slightly compressed lead tone with a smooth, rounded attack and moderate sustain. The sound is clear and lively, with a subtle warmth and a touch of vintage character. There is a touch of room ambience, but the tone remains crisp and articulate without excessive effects.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 58,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "RC Boost",
+        "enabled": true,
+        "params": {
+          "Volume": 53,
+          "Gain": 28,
+          "Bass": 46,
+          "Treble": 59
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 37,
+          "Master": 60,
+          "Bass": 44,
+          "Treble": 61,
+          "Cut": 40
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 48,
+          "HighCut": 58
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": true,
+        "params": {
+          "Level": 38,
+          "Decay": 32,
+          "Tone": 54
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 8,
+      "position": "bridge"
+    },
+    "slug": "octopus-s-garden-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/beatles-octopuss-garden-tab-s2900",
+    "createdAt": "2025-12-15T07:17:10.010Z",
+    "updatedAt": "2025-12-15T07:17:10.010Z"
   }
 ]
