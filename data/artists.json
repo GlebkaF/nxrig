@@ -208,5 +208,11 @@
     "title": "Queen",
     "slug": "queen",
     "description": "Queen is a legendary British rock band known for powerful vocals, innovative songwriting, and genre-blending anthems that shaped the sound of modern rock music."
+  },
+  {
+    "id": 36,
+    "title": "Slayer",
+    "slug": "slayer",
+    "description": "Slayer is an American thrash metal band known for its fast tempos, aggressive riffs, and dark lyrical themes, playing a key role in shaping extreme metal."
   }
 ]

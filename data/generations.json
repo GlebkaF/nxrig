@@ -1,6 +1,255 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-18T14:41:42.525Z",
+      "originalPrompt": "South Of Heaven\tSlayer \tIntro\tGuitar",
+      "proDescription": {
+        "tone_title": "South Of Heaven - Intro",
+        "genre": "Thrash Metal",
+        "sound_description": "Dark, brooding, mid-gain tone with prominent low end, tight attack, and clear note separation. The sound is less aggressive than typical Slayer tones, with a haunting, slightly roomy ambience and minimal high-end fizz.",
+        "guitar_rig_description": "Noise gate: Used to control unwanted amp hiss and hum, especially in quiet intro sections. Compressor: Not used, allowing natural dynamics. Overdrive: Mild overdrive or clean boost before the amp to tighten the low end and push the amp slightly. Distortion: Main source comes from the high-gain tube amplifier. Amplifier: British-voiced high-gain tube amp (e.g., Marshall JCM800) set for medium gain and focused mids. Cabinet: 4x12 closed-back cabinet with vintage-voiced speakers, mic'd to emphasize depth and clarity. EQ: Subtle mid scoop, high-pass to control boom, slight low-mid boost for weight. Modulation: Not used. Delay: Not used. Reverb: Subtle plate or room reverb to add ambience and depth without washing out the riff.",
+        "references": [
+          "Slayer - South Of Heaven",
+          "Slayer - Seasons In The Abyss (cleaner sections)",
+          "Metallica - Fade To Black (intro clean tone for ambience)"
+        ],
+        "song_part": "Intro riff",
+        "preferred_pickup": "Bridge humbucker, tone = 8",
+        "additional_info": "Use a guitar with passive high-output pickups (EMG 81/85 if active), pick lightly for haunting clean parts, heavier for palm-muted sections. Use medium gauge strings for tightness. Palm-muting and precise picking required for clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer (Drive: 0, Tone: 5, Level: 8)",
+          "MXR 10-Band EQ (31Hz: -1dB, 63Hz: 0, 125Hz: +1dB, 250Hz: +2dB, 500Hz: 0, 1kHz: -1dB, 2kHz: 0, 4kHz: 0, 8kHz: -2dB, 16kHz: -2dB)",
+          "TC Electronic Hall of Fame Reverb (Plate or Room, Mix: 15%, Decay: 2.5s, Tone: 12 o'clock)"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 5,
+            "Bass": 6,
+            "Middle": 4,
+            "Treble": 5,
+            "Presence": 4,
+            "Master": 3
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 5,
+            "Level": 8
+          },
+          "eq": {
+            "31Hz": "-1dB",
+            "125Hz": "+1dB",
+            "250Hz": "+2dB",
+            "1kHz": "-1dB",
+            "8kHz": "-2dB",
+            "16kHz": "-2dB"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Mix": 15,
+            "Decay": 2.5,
+            "Tone": 12
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 40
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 65,
+            "Drive": 20,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 55,
+            "Master": 60,
+            "Bass": 65,
+            "Middle": 45,
+            "Treble": 48,
+            "Presence": 52
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 45,
+            "HighCut": 42
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 52,
+            "62": 56,
+            "125": 60,
+            "250": 58,
+            "500": 54,
+            "1000": 48,
+            "2000": 46,
+            "4000": 47,
+            "8000": 45,
+            "16000": 40,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 28,
+            "Decay": 32
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 65,
+                "Drive": 20,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 55,
+                "Master": 60,
+                "Bass": 65,
+                "Middle": 45,
+                "Treble": 48,
+                "Presence": 52
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 45,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 52,
+                "62": 56,
+                "125": 60,
+                "250": 58,
+                "500": 54,
+                "1000": 48,
+                "2000": 46,
+                "4000": 47,
+                "8000": 45,
+                "16000": 40,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Decay": 32
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "South Of Heaven\tSlayer \tIntro\tGuitar",
+          "timestamp": "2025-12-18T14:41:42.525Z"
+        }
+      ],
+      "id": "gen_mjbjtqj1_pzhmlmacb",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-18T12:51:12.664Z",
       "originalPrompt": "Walk\tPantera \tMain riff",
       "proDescription": {
@@ -24719,6 +24968,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-18T14:38:17.557Z"
+    "lastUpdated": "2025-12-18T14:41:42.543Z"
   }
 }
