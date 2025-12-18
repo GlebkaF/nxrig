@@ -1,6 +1,681 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-18T12:29:12.467Z",
+      "originalPrompt": "ac\\dc Hell aint a bad place to be distortion guitar intro",
+      "proDescription": {
+        "tone_title": "AC/DC - Hell Ain't a Bad Place to Be (Distorted Guitar Intro)",
+        "genre": "Classic Rock / Hard Rock",
+        "sound_description": "Crunchy, dynamic, raw, open and mid-focused rock tone with a tight low end, present upper mids, and moderate sustain. The sound is punchy, not overly saturated, and retains clarity and articulation for chord work.",
+        "guitar_rig_description": "Noise gate: not used (open, responsive dynamics preferred). Compressor: not used (natural amp compression provides sustain and punch). Overdrive/distortion/boost: mild overdrive or clean boost in front of the amp to push the tubes, set for subtle grit. Amplifier: classic British-style tube amp (Marshall Plexi or JTM45 style) set to breakup, providing natural tube overdrive. Cabinet: 4x12 closed-back cabinet with vintage British speakers (Celestion Greenback-style) for punch and bite. EQ: amp’s tone stack used to emphasize mids and cut excessive bass/treble, but no additional EQ block. Modulation: not used. Delay: not used. Reverb: not used (dry, in-your-face sound as per original recording).",
+        "references": [
+          "AC/DC - Hell Ain't a Bad Place to Be",
+          "AC/DC - Let There Be Rock",
+          "AC/DC - Whole Lotta Rosie"
+        ],
+        "song_part": "intro/main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a Gibson-style guitar (SG or Les Paul) with medium gauge strings. Play with a firm pick attack for maximum dynamics. Roll back guitar volume slightly for cleaner response, full up for max crunch. Avoid excessive gain to maintain note definition and the classic AC/DC punch."
+      },
+      "realRig": {
+        "pedalboard": ["MXR Micro Amp"],
+        "amplifier": "Marshall 1959SLP Super Lead Plexi",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback (25W, 12\", 4x12 configuration)",
+        "settings": {
+          "amp": {
+            "Gain (Volume I)": 7,
+            "Volume II": 0,
+            "Bass": 3,
+            "Middle": 6,
+            "Treble": 7,
+            "Presence": 6,
+            "Master": 2.5
+          },
+          "boost": {
+            "Level": 11,
+            "Output": 1.5
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 55,
+            "Gain": 28,
+            "Bass": 47,
+            "Treble": 53
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 54,
+            "Master": 66,
+            "Bass": 45,
+            "Middle": 64,
+            "Treble": 56,
+            "Presence": 55
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 60,
+            "HighCut": 52
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 55,
+                "Gain": 28,
+                "Bass": 47,
+                "Treble": 53
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Master": 66,
+                "Bass": 45,
+                "Middle": 64,
+                "Treble": 56,
+                "Presence": 55
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 60,
+                "HighCut": 52
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "ac\\dc Hell aint a bad place to be distortion guitar intro",
+          "timestamp": "2025-12-18T12:29:12.467Z"
+        }
+      ],
+      "id": "gen_mjbf3c84_rho6f0pzm",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-12-18T12:29:03.277Z",
+      "originalPrompt": "ac\\dc Hell aint a bad place to be overdriven guitar intro",
+      "proDescription": {
+        "tone_title": "AC/DC - Hell Ain't a Bad Place to Be (Overdriven Guitar Intro)",
+        "genre": "Classic Rock / Hard Rock",
+        "sound_description": "Crunchy, dynamic, raw overdrive with pronounced midrange, tight low end, bright but not harsh top end, and strong pick attack. Very responsive to playing dynamics and volume knob changes.",
+        "guitar_rig_description": "Noise gate: not used (tone relies on amplifier dynamics and open feel). Compressor: not used (dynamic playing and amp breakup provide natural compression). Overdrive/distortion/boost: light overdrive pedal may be used as a boost into the amp for added bite, but main drive comes from the amplifier. Amplifier: classic British-style tube amp (Marshall Plexi or similar), set to edge-of-breakup/medium overdrive. Cabinet: 4x12 closed-back cabinet with vintage-style speakers (Celestion Greenback type) for punch and character. EQ: amp EQ adjusted for midrange presence and treble clarity, no external EQ block. Modulation: not used. Delay: not used. Reverb: not used (dry, immediate sound is preferred).",
+        "references": [
+          "AC/DC - Hell Ain't a Bad Place to Be",
+          "AC/DC - Let There Be Rock",
+          "AC/DC - Highway to Hell"
+        ],
+        "song_part": "intro (main riff)",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a Gibson SG or similar guitar with humbuckers. Use medium string gauge (e.g., .010–.046). Play with a firm pick attack and let chords ring out; avoid excess gain to retain articulation and dynamics."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Ibanez TS808 Tube Screamer (set as clean boost: Drive 0-1, Tone 5, Level 7-8)"
+        ],
+        "amplifier": "Marshall 1959SLP Plexi Super Lead 100",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Volume I": 7,
+            "Volume II": 0,
+            "Bass": 4,
+            "Middle": 6,
+            "Treble": 7,
+            "Presence": 6,
+            "Master": 3
+          },
+          "overdrive": {
+            "Drive": 1,
+            "Tone": 5,
+            "Level": 8
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 20,
+            "Tone": 60
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 65,
+            "Master": 70,
+            "Bass": 40,
+            "Middle": 70,
+            "Treble": 65,
+            "Presence": 60
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 55,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 20,
+                "Tone": 60
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 65,
+                "Master": 70,
+                "Bass": 40,
+                "Middle": 70,
+                "Treble": 65,
+                "Presence": 60
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 55,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "ac\\dc Hell aint a bad place to be overdriven guitar intro",
+          "timestamp": "2025-12-18T12:29:03.277Z"
+        }
+      ],
+      "id": "gen_mjbf354x_wknx47258",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-12-18T12:26:11.746Z",
+      "originalPrompt": "ac\\dc Hell aint a bad place to be intro",
+      "proDescription": {
+        "tone_title": "AC/DC - Hell Ain't a Bad Place to Be (Intro)",
+        "genre": "Classic Rock / Hard Rock",
+        "sound_description": "Raw, crunchy, open chord-driven sound with plenty of midrange bite, moderate gain, pronounced attack, and a dynamic, uncompressed feel. The tone is bright but not harsh, with excellent note clarity and a natural, unprocessed character.",
+        "guitar_rig_description": "Noise gate: not used (natural amp noise is part of the vintage sound). Compressor: not used (tone relies on natural dynamics). Overdrive/distortion/boost: light overdrive from amp or possibly a subtle boost pedal to push the amp; distortion pedal is not used. Amplifier: classic British-style tube amp, set to edge-of-breakup or mild overdrive (e.g., Marshall Plexi). Cabinet: 4x12 closed-back cabinet with vintage-voiced speakers to provide punch and presence. EQ: amp EQ settings emphasize mids and presence, with bass rolled back slightly; no external EQ pedal used. Modulation: not used. Delay: not used. Reverb: subtle natural spring reverb from the amp, if any; no external reverb pedal.",
+        "references": [
+          "AC/DC - Let There Be Rock",
+          "AC/DC - Whole Lotta Rosie",
+          "AC/DC - Highway to Hell"
+        ],
+        "song_part": "intro rhythm guitar",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a solid-body guitar such as a Gibson SG or Les Paul with medium gauge strings (10-46 or 11-48). Play with a strong, percussive picking hand to let the amp react dynamically. Avoid excessive gain or effects to retain clarity and classic crunch."
+      },
+      "realRig": {
+        "pedalboard": ["Xotic EP Booster"],
+        "amplifier": "Marshall 1959SLP Plexi Super Lead 100W",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback",
+        "settings": {
+          "amp": {
+            "Gain (High Treble Volume I)": 7,
+            "Gain (Normal Volume II)": 4,
+            "Bass": 3,
+            "Middle": 6,
+            "Treble": 7,
+            "Presence": 6,
+            "Master": 5,
+            "Reverb": 0
+          },
+          "booster": {
+            "Gain": 10,
+            "Volume": 12,
+            "Bright Switch": "off"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 52,
+            "Gain": 22,
+            "Bass": 48,
+            "Treble": 58
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 55,
+            "Master": 62,
+            "Bass": 40,
+            "Middle": 68,
+            "Treble": 60,
+            "Presence": 63
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 42,
+            "HighCut": 57
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 52,
+                "Gain": 22,
+                "Bass": 48,
+                "Treble": 58
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 55,
+                "Master": 62,
+                "Bass": 40,
+                "Middle": 68,
+                "Treble": 60,
+                "Presence": 63
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 42,
+                "HighCut": 57
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "ac\\dc Hell aint a bad place to be intro",
+          "timestamp": "2025-12-18T12:26:11.746Z"
+        }
+      ],
+      "id": "gen_mjbezgs4_6xeg340ki",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-11-30T05:25:58.868Z",
       "originalPrompt": "The Beatles – Octopus’s Garden – Guitar solo (and intro)",
       "proDescription": {
@@ -23631,6 +24306,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-11-30T05:25:58.886Z"
+    "lastUpdated": "2025-12-18T12:29:12.484Z"
   }
 }

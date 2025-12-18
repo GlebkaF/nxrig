@@ -7020,5 +7020,112 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/beatles-octopuss-garden-tab-s2900",
     "createdAt": "2025-12-15T07:17:10.010Z",
     "updatedAt": "2025-12-15T07:17:10.010Z"
+  },
+  {
+    "id": "gen_mjbf354x_wknx47258",
+    "origin": {
+      "artistId": 1,
+      "song": "Hell Ain't A Bad Place",
+      "part": "Intro",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Crunchy, dynamic, raw overdrive with pronounced midrange, tight low end, bright but not harsh top end, and strong pick attack. Very responsive to playing dynamics and volume knob changes.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 20,
+          "Tone": 60
+        }
+      },
+      "amplifier": {
+        "type": "Plexi 100",
+        "enabled": true,
+        "params": {
+          "Gain": 65,
+          "Master": 70,
+          "Bass": 40,
+          "Middle": 70,
+          "Treble": 65,
+          "Presence": 60
+        }
+      },
+      "cabinet": {
+        "type": "M1960AX",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 55,
+          "HighCut": 60
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "hell-aint-a-bad-place-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/ac-dc-hell-aint-a-bad-place-to-be-tab-s22274t1",
+    "createdAt": "2025-12-18T12:31:37.152Z",
+    "updatedAt": "2025-12-18T12:31:37.152Z"
   }
 ]
