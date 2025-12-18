@@ -1,6 +1,419 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-18T12:51:12.664Z",
+      "originalPrompt": "Walk\tPantera \tMain riff",
+      "proDescription": {
+        "tone_title": "Walk - Main Riff",
+        "genre": "Groove Metal",
+        "sound_description": "Heavy, mid-focused, aggressive, punchy, moderately tight low end, pronounced attack, slightly scooped highs, dry and percussive with minimal ambience.",
+        "guitar_rig_description": "Noise gate: Used to keep the signal tight and reduce amp hiss, especially during palm-muted sections. Compressor: Not used (the tone relies on natural dynamics and pick attack). Overdrive/boost: Used as a clean boost before the amp to tighten the low end and add aggression (set with low gain, high level, tone slightly above noon). Amplifier: High-gain solid-state amp known for tight, aggressive distortion (e.g., Randall or similar), set for a thick, saturated, but not overly compressed distortion. Cabinet: 4x12 cabinet with Celestion speakers, mic'd close for punch and focus. EQ: Amp EQ emphasizes mids and low-mids, tightens bass, slightly cuts high treble to avoid fizz. Modulation: Not used. Delay: Not used. Reverb: Not used (tone is kept dry for maximum punch and definition).",
+        "references": [
+          "Pantera - Walk",
+          "Pantera - Mouth for War",
+          "Machine Head - Davidian"
+        ],
+        "song_part": "main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a high-output humbucker pickup for maximum punch and gain. Down-picking enhances the groove and aggression. Use 10-46 or heavier gauge strings for tightness; tuning is standard D (whole step down). Palm muting technique and strong right hand attack are key to the tone."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer"
+        ],
+        "amplifier": "Randall RG100ES",
+        "cabinet": "Randall 412CB 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Bass": 4.5,
+            "Middle": 7.5,
+            "Treble": 4,
+            "Presence": 5,
+            "Master": 4
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 1.5,
+            "Level": 8
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor",
+            "Decay": "minimum"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 30
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 80,
+            "Drive": 10,
+            "Tone": 60
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 65,
+            "Master": 60,
+            "Bass": 40,
+            "Middle": 72,
+            "Treble": 38,
+            "Presence": 35
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 45,
+            "HighCut": 42
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 80,
+                "Drive": 10,
+                "Tone": 60
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 65,
+                "Master": 60,
+                "Bass": 40,
+                "Middle": 72,
+                "Treble": 38,
+                "Presence": 35
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 45,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Walk\tPantera \tMain riff",
+          "timestamp": "2025-12-18T12:51:12.664Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 80,
+                "Drive": 10,
+                "Tone": 50
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 65,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 75,
+                "Treble": 32,
+                "Presence": 28
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 45,
+                "HighCut": 35
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 45
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "чуть стеклянный, надо поправить\n",
+          "timestamp": "2025-12-18T14:35:42.398Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 80,
+                "Drive": 10,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 65,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 75,
+                "Treble": 45,
+                "Presence": 42
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 40,
+                "HighCut": 50
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 55
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "теперь глуховато\n",
+          "timestamp": "2025-12-18T14:38:17.549Z"
+        }
+      ],
+      "id": "gen_mjbfvmwf_byiyduipd",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-18T12:29:12.467Z",
       "originalPrompt": "ac\\dc Hell aint a bad place to be distortion guitar intro",
       "proDescription": {
@@ -24306,6 +24719,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-18T12:29:12.484Z"
+    "lastUpdated": "2025-12-18T14:38:17.557Z"
   }
 }
