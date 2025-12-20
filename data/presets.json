@@ -7457,5 +7457,112 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/slayer-angel-of-death-tab-s17586",
     "createdAt": "2025-12-20T05:00:05.224Z",
     "updatedAt": "2025-12-20T05:00:05.224Z"
+  },
+  {
+    "id": "gen_mjdu07rn_we0n8rfxq",
+    "origin": {
+      "artistId": 1,
+      "song": "TNT",
+      "part": "Intro",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Punchy, raw, mid-focused tone with clear attack and moderate breakup. The sound is open and uncompressed, with a natural tube amp feel, tight low end, and bright clarity without harshness. It has a slightly gritty crunch but remains articulate and dynamic.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 22,
+          "Tone": 62
+        }
+      },
+      "amplifier": {
+        "type": "Plexi 100",
+        "enabled": true,
+        "params": {
+          "Gain": 58,
+          "Master": 62,
+          "Bass": 40,
+          "Middle": 62,
+          "Treble": 70,
+          "Presence": 65
+        }
+      },
+      "cabinet": {
+        "type": "M1960AX",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 58,
+          "HighCut": 40
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 48,
+          "220": 50,
+          "500": 48,
+          "1200": 56,
+          "2600": 60,
+          "6400": 65
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "tnt-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/ac-dc-tnt-tab-s2862462",
+    "createdAt": "2025-12-20T05:04:45.912Z",
+    "updatedAt": "2025-12-20T05:04:45.912Z"
   }
 ]

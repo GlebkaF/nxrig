@@ -1,6 +1,321 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-20T05:02:13.320Z",
+      "originalPrompt": "Tnt\tAcdc\t\tGuitar Intro",
+      "proDescription": {
+        "tone_title": "TNT - AC/DC Guitar Intro",
+        "genre": "Classic Rock / Hard Rock",
+        "sound_description": "Punchy, raw, mid-focused tone with clear attack and moderate breakup. The sound is open and uncompressed, with a natural tube amp feel, tight low end, and bright clarity without harshness. It has a slightly gritty crunch but remains articulate and dynamic.",
+        "guitar_rig_description": "Noise gate: not used (tone is not high-gain or noisy). Compressor: not used (natural amp dynamics preferred). Overdrive/Distortion/Boost: mild overdrive pedal or amp-driven breakup to push the amp just into crunch. Amplifier: classic British-style tube amp with moderate gain, providing the core crunch and dynamic response. Cabinet: 4x12 closed-back cabinet with vintage-style speakers for punch and projection. EQ: subtle mid boost to enhance presence, with moderate bass and treble for balance. Modulation: not used. Delay: not used. Reverb: very subtle spring reverb or room ambience, if desired, but can be omitted for a drier, more direct sound.",
+        "references": [
+          "AC/DC - TNT",
+          "AC/DC - Highway to Hell",
+          "AC/DC - Back in Black"
+        ],
+        "song_part": "Intro riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a solid-body guitar (e.g., Gibson SG), medium gauge strings, and strong right-hand attack. Avoid excessive gain; let the amp provide most of the crunch. Keep the playing tight and percussive for maximum punch."
+      },
+      "realRig": {
+        "pedalboard": ["Ibanez TS808 Tube Screamer"],
+        "amplifier": "Marshall 1959SLP Super Lead Plexi 100W",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Volume I)": 7,
+            "Gain (Volume II)": 0,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 6,
+            "Master": 3
+          },
+          "overdrive": {
+            "Drive": 2,
+            "Tone": 6,
+            "Level": 8
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 22,
+            "Tone": 47
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 58,
+            "Master": 62,
+            "Bass": 45,
+            "Middle": 62,
+            "Treble": 56,
+            "Presence": 52
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 53,
+            "HighCut": 48
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 22,
+                "Tone": 47
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 58,
+                "Master": 62,
+                "Bass": 45,
+                "Middle": 62,
+                "Treble": 56,
+                "Presence": 52
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 53,
+                "HighCut": 48
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Tnt\tAcdc\t\tGuitar Intro",
+          "timestamp": "2025-12-20T05:02:13.320Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 22,
+                "Tone": 62
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 58,
+                "Master": 62,
+                "Bass": 40,
+                "Middle": 62,
+                "Treble": 70,
+                "Presence": 65
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 58,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 48,
+                "220": 50,
+                "500": 48,
+                "1200": 56,
+                "2600": 60,
+                "6400": 65
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "В записи от более звонкий, а тут глухой\n",
+          "timestamp": "2025-12-20T05:03:56.145Z"
+        }
+      ],
+      "id": "gen_mjdu07rn_we0n8rfxq",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-20T04:54:42.776Z",
       "originalPrompt": "Angel of death Slayer Guitar Main Riff\n",
       "proDescription": {
@@ -25643,6 +25958,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-20T04:57:49.925Z"
+    "lastUpdated": "2025-12-20T05:03:56.158Z"
   }
 }
