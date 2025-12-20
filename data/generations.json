@@ -1,6 +1,681 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-20T04:54:42.776Z",
+      "originalPrompt": "Angel of death Slayer Guitar Main Riff\n",
+      "proDescription": {
+        "tone_title": "Angel of Death - Main Riff",
+        "genre": "Thrash Metal",
+        "sound_description": "Highly aggressive, tight, and saturated distortion with pronounced attack and clarity. The tone is bright but not harsh, with a cutting midrange, fast response, and minimal low-end muddiness. Very little ambience—immediate, percussive, and raw.",
+        "guitar_rig_description": "Noise gate: Used to suppress high-gain noise and keep palm mutes tight and choppy. Compressor: Not used, as the natural attack and dynamics are preferred for this style. Overdrive/Distortion/Boost: A classic overdrive pedal (such as a Tube Screamer or SD-1) used as a boost into a high-gain amplifier, tightening the low end and sharpening the attack. Amplifier: High-gain tube amplifier (e.g., Marshall JCM800) set for aggressive, saturated distortion with a cutting presence. Cabinet: 4x12 closed-back cabinet with Celestion-style speakers for tight low end and biting highs. EQ: Emphasis on upper mids and presence; low mids slightly scooped; extreme lows and highs controlled for clarity. Modulation: Not used. Delay: Not used. Reverb: Not used.",
+        "references": [
+          "Slayer - Angel of Death",
+          "Slayer - Raining Blood",
+          "Exodus - Bonded by Blood"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a pick with a sharp tip for fast alternate picking. Heavy gauge strings (e.g., 10-46 or 11-48) for tightness. Play with aggressive palm muting and precise right-hand technique. Keep noise gate threshold high enough for staccato chugs."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 8,
+            "Bass": 4,
+            "Middle": 5,
+            "Treble": 7,
+            "Presence": 7,
+            "Master": 4
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 6,
+            "Level": 8
+          },
+          "noise_gate": {
+            "Threshold": "High (just below signal drop-out on fast palm mutes)",
+            "Decay": "Medium-Fast"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 68,
+            "Decay": 18
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 68,
+            "Drive": 18,
+            "Tone": 78
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 82,
+            "Master": 65,
+            "Bass": 37,
+            "Middle": 41,
+            "Treble": 75,
+            "Presence": 84
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "LowCut": 65,
+            "HighCut": 63
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 68,
+                "Decay": 18
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 68,
+                "Drive": 18,
+                "Tone": 78
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 82,
+                "Master": 65,
+                "Bass": 37,
+                "Middle": 41,
+                "Treble": 75,
+                "Presence": 84
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "LowCut": 65,
+                "HighCut": 63
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Angel of death Slayer Guitar Main Riff\n",
+          "timestamp": "2025-12-20T04:54:42.776Z"
+        }
+      ],
+      "id": "gen_mjdtqk4q_s4k5iizp6",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-12-20T04:52:14.936Z",
+      "originalPrompt": "Angel of death \tSlayer\tIntro\tGuitar",
+      "proDescription": {
+        "tone_title": "Angel of Death - Intro",
+        "genre": "Thrash Metal",
+        "sound_description": "Extremely aggressive, tight, and razor-sharp with pronounced attack and high-end sizzle. The tone is very dry with little ambience, focused on clarity and cutting through, with a slight mid-scoop for heaviness and palm-muted chug definition.",
+        "guitar_rig_description": "Noise Gate: Used to tighten up the signal and eliminate hiss from high-gain settings. Compressor: Not used. Overdrive/Distortion/Boost: Tube screamer-style overdrive used in front of the amp to tighten and boost the amp’s distortion, set for minimal gain and maximum level. Amplifier: High-gain Marshall JCM800 or equivalent, set for aggressive distortion and strong attack. Cabinet: 4x12” closed-back cabinet with Celestion speakers, mic’d close for punch and clarity. EQ: Graphic or parametric EQ in the loop or post-amp, applying a slight mid-scoop and boosting lows/highs for thrash character. Modulation: Not used. Delay: Not used. Reverb: Not used.",
+        "references": [
+          "Slayer - Angel of Death",
+          "Slayer - Raining Blood",
+          "Exodus - Bonded by Blood"
+        ],
+        "song_part": "Intro (main riff)",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a guitar equipped with high-output passive pickups (e.g., Seymour Duncan SH-4 JB or EMG 81 if active), heavy pick attack, and palm muting for precise chugging. Strings: 10-46 gauge or heavier preferred for tightness. Play with aggressive right-hand picking for maximum attack."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 8,
+            "Bass": 4,
+            "Middle": 3,
+            "Treble": 7,
+            "Presence": 7,
+            "Master": 4
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor",
+            "Decay": "medium-fast"
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 6,
+            "Level": 9
+          },
+          "eq": {
+            "31Hz": "+2dB",
+            "62Hz": "+2dB",
+            "125Hz": "+1dB",
+            "250Hz": "0dB",
+            "500Hz": "-3dB",
+            "1kHz": "-2dB",
+            "2kHz": "+1dB",
+            "4kHz": "+2dB",
+            "8kHz": "+3dB",
+            "16kHz": "+2dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 30
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 90,
+            "Drive": 10,
+            "Tone": 80
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 85,
+            "Master": 65,
+            "Bass": 60,
+            "Middle": 30,
+            "Treble": 80,
+            "Presence": 75
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 40,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 58,
+            "62": 60,
+            "125": 62,
+            "250": 56,
+            "500": 40,
+            "1000": 36,
+            "2000": 38,
+            "4000": 65,
+            "8000": 78,
+            "16000": 72,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 90,
+                "Drive": 10,
+                "Tone": 80
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 85,
+                "Master": 65,
+                "Bass": 60,
+                "Middle": 30,
+                "Treble": 80,
+                "Presence": 75
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 40,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 58,
+                "62": 60,
+                "125": 62,
+                "250": 56,
+                "500": 40,
+                "1000": 36,
+                "2000": 38,
+                "4000": 65,
+                "8000": 78,
+                "16000": 72,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Angel of death \tSlayer\tIntro\tGuitar",
+          "timestamp": "2025-12-20T04:52:14.936Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 90,
+                "Drive": 10,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 85,
+                "Master": 65,
+                "Bass": 60,
+                "Middle": 30,
+                "Treble": 65,
+                "Presence": 60
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 40,
+                "HighCut": 50
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 58,
+                "62": 60,
+                "125": 62,
+                "250": 56,
+                "500": 40,
+                "1000": 36,
+                "2000": 32,
+                "4000": 58,
+                "8000": 65,
+                "16000": 60,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Много \"стекла\" при palm mute\n",
+          "timestamp": "2025-12-20T04:55:50.902Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 90,
+                "Drive": 10,
+                "Tone": 75
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 85,
+                "Master": 65,
+                "Bass": 55,
+                "Middle": 30,
+                "Treble": 75,
+                "Presence": 70
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 45,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 58,
+                "62": 60,
+                "125": 62,
+                "250": 56,
+                "500": 40,
+                "1000": 36,
+                "2000": 38,
+                "4000": 65,
+                "8000": 75,
+                "16000": 70,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Почти хорошо, но теперь не хватает чуть \"остроты\", глухой звук\n",
+          "timestamp": "2025-12-20T04:57:49.908Z"
+        }
+      ],
+      "id": "gen_mjdtne21_fs78sh01a",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-18T14:41:42.525Z",
       "originalPrompt": "South Of Heaven\tSlayer \tIntro\tGuitar",
       "proDescription": {
@@ -24968,6 +25643,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-18T14:41:42.543Z"
+    "lastUpdated": "2025-12-20T04:57:49.925Z"
   }
 }

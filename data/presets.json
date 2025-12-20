@@ -7345,5 +7345,117 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/slayer-south-of-heaven-tab-s17962",
     "createdAt": "2025-12-18T14:47:00.225Z",
     "updatedAt": "2025-12-18T14:47:00.225Z"
+  },
+  {
+    "id": "gen_mjdtne21_fs78sh01a",
+    "origin": {
+      "artistId": 36,
+      "song": "Angel Of Death",
+      "part": "Main Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Extremely aggressive, tight, and razor-sharp with pronounced attack and high-end sizzle. The tone is very dry with little ambience, focused on clarity and cutting through, with a slight mid-scoop for heaviness and palm-muted chug definition.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 30
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 90,
+          "Drive": 10,
+          "Tone": 75
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 85,
+          "Master": 65,
+          "Bass": 55,
+          "Middle": 30,
+          "Treble": 75,
+          "Presence": 70
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 45,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 58,
+          "62": 60,
+          "125": 62,
+          "250": 56,
+          "500": 40,
+          "1000": 36,
+          "2000": 38,
+          "4000": 65,
+          "8000": 75,
+          "16000": 70,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "angel-of-death-guitar-main-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/slayer-angel-of-death-tab-s17586",
+    "createdAt": "2025-12-20T05:00:05.224Z",
+    "updatedAt": "2025-12-20T05:00:05.224Z"
   }
 ]
