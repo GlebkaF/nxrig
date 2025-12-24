@@ -7783,5 +7783,111 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/slayer-delusions-of-saviour-tab-s404465",
     "createdAt": "2025-12-21T04:30:09.226Z",
     "updatedAt": "2025-12-21T04:30:09.226Z"
+  },
+  {
+    "id": "gen_mjjgk8yj_136ren990",
+    "origin": {
+      "artistId": 37,
+      "song": "Before The Beginning",
+      "part": "Solo",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Warm, expressive, and dynamic lead tone with smooth sustain. Slightly overdriven but clear, with a rounded top end and singing mids. Touch-sensitive for expressive playing, with deep ambience and a spacious, vintage feel.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 60,
+          "Clipping": 25
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 35,
+          "Tone": 40
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 65,
+          "Master": 55,
+          "Bass": 55,
+          "Middle": 65,
+          "Treble": 40,
+          "Bright": 35
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 45,
+          "HighCut": 40
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 50,
+          "220": 55,
+          "500": 65,
+          "1200": 65,
+          "2600": 45,
+          "6400": 35
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 70,
+          "Decay": 65
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 30,
+          "Rate": 30,
+          "Echo": 35
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "before-the-beginning-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/john-frusciante-before-the-beginning-tab-s39688",
+    "createdAt": "2025-12-24T03:36:39.365Z",
+    "updatedAt": "2025-12-24T03:36:39.365Z"
   }
 ]

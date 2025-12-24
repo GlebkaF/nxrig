@@ -1,6 +1,599 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-24T03:32:30.410Z",
+      "originalPrompt": "Before The Beginning John Frusciante Solo",
+      "proDescription": {
+        "tone_title": "Before The Beginning - John Frusciante Solo",
+        "genre": "Psychedelic Blues/Rock",
+        "sound_description": "Warm, expressive, and dynamic lead tone with smooth sustain. Slightly overdriven but clear, with a rounded top end and singing mids. Touch-sensitive for expressive playing, with deep ambience and a spacious, vintage feel.",
+        "guitar_rig_description": "Signal chain: Noise gate (not used, to retain dynamics and natural decay); Compressor (lightly used for added sustain and evening out dynamics); Overdrive (mild, transparent boost to push the amp and add warmth); Amplifier (vintage-style tube amp, set for edge-of-breakup, dynamic response); Cabinet (open-back 2x12 or 4x12 with classic speakers, mic'd for warmth and presence); EQ (subtle mid-boost, slight treble roll-off to smooth highs); Modulation (not used); Delay (slapback or short analog delay for subtle depth, not prominent); Reverb (rich, plate-style or analog spring reverb for spacious ambience, prominent in the mix).",
+        "references": [
+          "John Frusciante - Before The Beginning",
+          "Pink Floyd - Shine On You Crazy Diamond",
+          "Jimi Hendrix - Little Wing (live versions)"
+        ],
+        "song_part": "solo",
+        "preferred_pickup": "neck single-coil, tone = 7",
+        "additional_info": "Use expressive vibrato and dynamic picking; light gauge strings for easier bends; volume knob control for dynamics; consider a Strat-style guitar for authentic response."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Analog Man King of Tone (set to OD, low gain, both sides in series if available)",
+          "Boss GE-7 Equalizer",
+          "Electro-Harmonix Memory Man (set for short delay, subtle mix)",
+          "Strymon Flint (for Plate Reverb, prominent mix)"
+        ],
+        "amplifier": "Fender '65 Twin Reverb Reissue",
+        "cabinet": "Fender 2x12 Cabinet with Celestion G12-65 speakers (open-back configuration)",
+        "settings": {
+          "amp": {
+            "Normal Channel": true,
+            "Volume": 4.5,
+            "Treble": 4.5,
+            "Middle": 7,
+            "Bass": 5.5,
+            "Reverb": 2,
+            "Bright Switch": "Off"
+          },
+          "compressor": {
+            "Blend": "Noon",
+            "Volume": "Unity",
+            "Compression": "9 o’clock (light)"
+          },
+          "overdrive": {
+            "Drive": "9 o’clock (low)",
+            "Volume": "Unity or slight boost",
+            "Tone": "Noon"
+          },
+          "eq": {
+            "100Hz": "0",
+            "200Hz": "+1dB",
+            "400Hz": "+2dB",
+            "800Hz": "+3dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "-1dB",
+            "6.4kHz": "-2dB",
+            "Level": "Unity"
+          },
+          "delay": {
+            "Delay Time": "110 ms",
+            "Repeats": "1–2 (very short/slapback)",
+            "Mix": "10 o’clock (subtle)"
+          },
+          "reverb": {
+            "Type": "Plate (on Strymon Flint, or Spring if unavailable)",
+            "Decay": "65–75%",
+            "Mix": "50–60%"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 60,
+            "Clipping": 25
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 35,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 65,
+            "Master": 55,
+            "Bass": 55,
+            "Middle": 65,
+            "Treble": 40,
+            "Bright": 35
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 45,
+            "HighCut": 40
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 50,
+            "220": 55,
+            "500": 65,
+            "1200": 65,
+            "2600": 45,
+            "6400": 35
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 70,
+            "Decay": 65
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 30,
+            "Rate": 30,
+            "Echo": 35
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 60,
+                "Clipping": 25
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 35,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 65,
+                "Master": 55,
+                "Bass": 55,
+                "Middle": 65,
+                "Treble": 40,
+                "Bright": 35
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 45,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 50,
+                "220": 55,
+                "500": 65,
+                "1200": 65,
+                "2600": 45,
+                "6400": 35
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 70,
+                "Decay": 65
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 30,
+                "Rate": 30,
+                "Echo": 35
+              }
+            }
+          },
+          "prompt": "Before The Beginning John Frusciante Solo",
+          "timestamp": "2025-12-24T03:32:30.410Z"
+        }
+      ],
+      "id": "gen_mjjgk8yj_136ren990",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-12-24T03:25:45.396Z",
+      "originalPrompt": "Before The Beginning\tJohn Frusciante\tSolo\tdistortion guitar",
+      "proDescription": {
+        "tone_title": "Before The Beginning - John Frusciante Solo Tone",
+        "genre": "Psychedelic Blues Rock",
+        "sound_description": "Warm, expressive, and saturated lead tone with a smooth, singing sustain. The tone is thick but not overly compressed, with pronounced midrange, rounded highs, and a touch of vintage fuzz character. There is an atmospheric spaciousness from reverb and delay, with dynamic response to picking and guitar volume changes.",
+        "guitar_rig_description": "Noise gate: not used (intentionally left open for natural dynamics and slight amp hiss). Compressor: light compression for subtle sustain and to even out dynamics. Overdrive/distortion/boost: vintage-style fuzz or overdrive for a saturated, singing lead sound—likely a Fuzz Face or Tube Screamer type. Amplifier: clean-to-breakup vintage-style tube amp (Marshall or Fender), set to edge of breakup with rich mids. Cabinet: open-back 2x12 or 4x12 cabinet with vintage-voiced speakers for warmth and fullness. EQ: slight mid boost, gentle roll-off of extreme highs for smoothness. Modulation: not used. Delay: analog-style delay with moderate time and subtle repeats for space and depth. Reverb: spring or plate reverb for lush, atmospheric tail.",
+        "references": [
+          "John Frusciante - Before The Beginning",
+          "Jimi Hendrix - Little Wing (for fuzz/clean blend)",
+          "Pink Floyd - Shine On You Crazy Diamond (for lead ambience)"
+        ],
+        "song_part": "solo",
+        "preferred_pickup": "neck single coil, tone = 7",
+        "additional_info": "Guitar likely a Fender Stratocaster; use expressive vibrato and volume knob swells. Medium-light string gauge (e.g., .010-.046) for bending comfort. Fuzz or overdrive is stacked into a slightly driven tube amp. Pick attack and volume knob manipulation are integral for tonal variation."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Dunlop Jimi Hendrix Fuzz Face Mini (Silicon)",
+          "Ibanez TS808 Tube Screamer",
+          "MXR M169 Carbon Copy Analog Delay",
+          "Strymon Flint (Reverb side set to Plate or Spring)"
+        ],
+        "amplifier": "Fender Twin Reverb (’65 Reissue)",
+        "cabinet": "Fender 2x12 Cabinet with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Volume": 5,
+            "Treble": 4.5,
+            "Middle": 7,
+            "Bass": 5.5,
+            "Reverb": 2,
+            "Bright Switch": "Off"
+          },
+          "compressor": {
+            "Blend": "11:00",
+            "Volume": "unity",
+            "Compression": "9:00 (low)"
+          },
+          "fuzz": {
+            "Fuzz": "1:00",
+            "Volume": "11:00",
+            "Guitar volume knob": "rolled back for cleans, full up for singing lead"
+          },
+          "overdrive": {
+            "Drive": "9:30",
+            "Tone": "11:00",
+            "Level": "1:00"
+          },
+          "delay": {
+            "Mix": "20%",
+            "Delay Time": "410 ms",
+            "Repeats": "2-3",
+            "Modulation": "Off"
+          },
+          "reverb": {
+            "Decay": "2:00",
+            "Mix": "10:30",
+            "Color": "Plate or Spring"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 53,
+            "Threshold": 47,
+            "Ratio": 40,
+            "Release": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "Drive": 68,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 70,
+            "Master": 60,
+            "Bass": 54,
+            "Middle": 62,
+            "Treble": 44,
+            "Bright": 40
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 44,
+            "HighCut": 40
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 62,
+            "Decay": 70
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 38,
+            "Rate": 54,
+            "Echo": 46
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 53,
+                "Threshold": 47,
+                "Ratio": 40,
+                "Release": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Drive": 68,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 70,
+                "Master": 60,
+                "Bass": 54,
+                "Middle": 62,
+                "Treble": 44,
+                "Bright": 40
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 44,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 62,
+                "Decay": 70
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 38,
+                "Rate": 54,
+                "Echo": 46
+              }
+            }
+          },
+          "prompt": "Before The Beginning\tJohn Frusciante\tSolo\tdistortion guitar",
+          "timestamp": "2025-12-24T03:25:45.396Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 65,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 53,
+                "Threshold": 47,
+                "Ratio": 40,
+                "Release": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Drive": 68,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 70,
+                "Master": 60,
+                "Bass": 54,
+                "Middle": 62,
+                "Treble": 44,
+                "Bright": 40
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 44,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 62,
+                "Decay": 70
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 38,
+                "Rate": 54,
+                "Echo": 46
+              }
+            }
+          },
+          "prompt": "Звук отличный, но фонит\n",
+          "timestamp": "2025-12-24T03:29:42.774Z"
+        }
+      ],
+      "id": "gen_mjjgbkgd_vfxs53mqf",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-21T04:32:23.508Z",
       "originalPrompt": "“Delusions Of Saviour Slayer Intro Distortion Lead Guitar (with wah peadal)\\\n",
       "proDescription": {
@@ -27414,6 +28007,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-21T04:35:41.264Z"
+    "lastUpdated": "2025-12-24T03:32:30.430Z"
   }
 }

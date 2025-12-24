@@ -214,5 +214,11 @@
     "title": "Slayer",
     "slug": "slayer",
     "description": "Slayer is an American thrash metal band known for its fast tempos, aggressive riffs, and dark lyrical themes, playing a key role in shaping extreme metal."
+  },
+  {
+    "id": 37,
+    "title": "John Frusciante",
+    "slug": "john-frusciante",
+    "description": "John Frusciante is an influential guitarist and songwriter best known for his work with Red Hot Chili Peppers, blending melodic expression, funk rhythms, and experimental sounds."
   }
 ]
