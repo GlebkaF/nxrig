@@ -3,57 +3,110 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
+type InputMode = "text" | "songsterr";
+
 export function GeneratorForm(): React.ReactElement {
   const router = useRouter();
+  const [mode, setMode] = useState<InputMode>("text");
   const [prompt, setPrompt] = useState<string>(
-    "Metallice Enter Sandman Rhythm Guitar Main Riff"
+    "Metallice Enter Sandman Rhythm Guitar Main Riff",
   );
+  const [songsterrUrl, setSongsterrUrl] = useState<string>(
+    "https://www.songsterr.com/a/wsa/amatory-tab-s25195",
+  );
+  const [trackType, setTrackType] = useState<string>("auto");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
 
   const handleGenerate = async (): Promise<void> => {
-    if (!prompt.trim()) {
-      setError("Пожалуйста, введите описание желаемого звука");
-      return;
-    }
-
-    setIsLoading(true);
-    setError("");
-
-    try {
-      const response = await fetch("/api/generate-chain", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ prompt }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Ошибка: ${response.statusText}`);
+    if (mode === "text") {
+      // Генерация из текстового промпта
+      if (!prompt.trim()) {
+        setError("Пожалуйста, введите описание желаемого звука");
+        return;
       }
 
-      const data = (await response.json()) as {
-        generationId: string;
-        message: string;
-      };
+      setIsLoading(true);
+      setError("");
 
-      // Перенаправляем на страницу с результатом генерации
-      router.push(`/admin/generation/${data.generationId}`);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Произошла ошибка");
-      setIsLoading(false);
+      try {
+        const response = await fetch("/api/generate-chain", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ prompt }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Ошибка: ${response.statusText}`);
+        }
+
+        const data = (await response.json()) as {
+          generationId: string;
+          message: string;
+        };
+
+        // Перенаправляем на страницу с результатом генерации
+        router.push(`/admin/generation/${data.generationId}`);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Произошла ошибка");
+        setIsLoading(false);
+      }
+    } else {
+      // Генерация из Songsterr URL
+      if (!songsterrUrl.trim()) {
+        setError("Пожалуйста, введите ссылку на Songsterr");
+        return;
+      }
+
+      setIsLoading(true);
+      setError("");
+
+      try {
+        const response = await fetch("/api/generate-from-songsterr", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            songsterrUrl,
+            trackType: trackType === "auto" ? undefined : trackType,
+          }),
+        });
+
+        if (!response.ok) {
+          const errorData = (await response.json()) as { error: string };
+          throw new Error(errorData.error || `Ошибка: ${response.statusText}`);
+        }
+
+        const data = (await response.json()) as {
+          generationId: string;
+          message: string;
+          prompt: string;
+        };
+
+        console.log(`Generated prompt from Songsterr: ${data.prompt}`);
+
+        // Перенаправляем на страницу с результатом генерации
+        router.push(`/admin/generation/${data.generationId}`);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Произошла ошибка");
+        setIsLoading(false);
+      }
     }
   };
 
   const handleKeyPress = (
-    e: React.KeyboardEvent<HTMLTextAreaElement>
+    e: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>,
   ): void => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       void handleGenerate();
     }
   };
+
+  const isDisabled = mode === "text" ? !prompt.trim() : !songsterrUrl.trim();
 
   return (
     <>
@@ -64,29 +117,112 @@ export function GeneratorForm(): React.ReactElement {
             ✨ Опишите желаемый звук
           </h2>
         </div>
+
+        {/* Tabs */}
+        <div className="border-b border-gray-200">
+          <div className="flex">
+            <button
+              onClick={() => {
+                setMode("text");
+              }}
+              className={`px-6 py-3 text-sm font-medium transition-colors ${
+                mode === "text"
+                  ? "border-b-2 border-purple-600 text-purple-600"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+              disabled={isLoading}
+            >
+              Текстовое описание
+            </button>
+            <button
+              onClick={() => {
+                setMode("songsterr");
+              }}
+              className={`px-6 py-3 text-sm font-medium transition-colors ${
+                mode === "songsterr"
+                  ? "border-b-2 border-purple-600 text-purple-600"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+              disabled={isLoading}
+            >
+              Ссылка Songsterr
+            </button>
+          </div>
+        </div>
+
         <div className="p-6">
-          <textarea
-            value={prompt}
-            onChange={(e) => {
-              setPrompt(e.target.value);
-            }}
-            onKeyUp={handleKeyPress}
-            placeholder="Например: Тяжелый металлический звук с дисторшном и ревербом для соло..."
-            className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
-            rows={4}
-            disabled={isLoading}
-          />
+          {mode === "text" ? (
+            <>
+              <textarea
+                value={prompt}
+                onChange={(e) => {
+                  setPrompt(e.target.value);
+                }}
+                onKeyUp={handleKeyPress}
+                placeholder="Например: Metallica Enter Sandman Rhythm Guitar Main Riff"
+                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                rows={4}
+                disabled={isLoading}
+              />
+            </>
+          ) : (
+            <>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Ссылка на Songsterr
+                  </label>
+                  <input
+                    type="text"
+                    value={songsterrUrl}
+                    onChange={(e) => {
+                      setSongsterrUrl(e.target.value);
+                    }}
+                    onKeyUp={handleKeyPress}
+                    placeholder="https://www.songsterr.com/a/wsa/..."
+                    className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    disabled={isLoading}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Тип трека
+                    <span className="ml-2 text-xs text-gray-500">
+                      (автоопределение по популярности)
+                    </span>
+                  </label>
+                  <select
+                    value={trackType}
+                    onChange={(e) => {
+                      setTrackType(e.target.value);
+                    }}
+                    className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    disabled={isLoading}
+                  >
+                    <option value="auto">
+                      🎯 Автоматически (рекомендуется)
+                    </option>
+                    <option value="Rhythm">Rhythm Guitar</option>
+                    <option value="Lead">Lead Guitar</option>
+                    <option value="Solo">Solo</option>
+                  </select>
+                </div>
+              </div>
+            </>
+          )}
           <div className="mt-4 flex items-center justify-between">
             <p className="text-sm text-gray-500">
-              Нажмите Enter для генерации или используйте кнопку
+              {mode === "text"
+                ? "Нажмите Enter для генерации или используйте кнопку"
+                : "Введите ссылку на табы с Songsterr"}
             </p>
             <button
               onClick={() => {
                 void handleGenerate();
               }}
-              disabled={isLoading || !prompt.trim()}
+              disabled={isLoading || isDisabled}
               className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                isLoading || !prompt.trim()
+                isLoading || isDisabled
                   ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                   : "bg-purple-600 text-white hover:bg-purple-700 shadow-lg hover:shadow-xl"
               }`}
