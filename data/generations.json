@@ -1,6 +1,238 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-25T05:51:52.065Z",
+      "originalPrompt": "jingle bell rock\tJoe Beal, Jim Boothe\tMain riff\tGuitar",
+      "proDescription": {
+        "tone_title": "Jingle Bell Rock - Main Riff",
+        "genre": "Rockabilly / Early Rock 'n' Roll Holiday",
+        "sound_description": "Bright, jangly, clean with a touch of warmth; chimey high end, dynamic response, slight slapback for vintage vibe, moderate sustain.",
+        "guitar_rig_description": "Noise gate: not used. Compressor: subtle compression to smooth playing dynamics and add sustain. Overdrive/distortion/boost: not used (clean tone). Amplifier: vintage-style clean tube amp (e.g., Fender Deluxe Reverb) for sparkling highs and full lows. Cabinet: matching open-back 1x12 cabinet with bright character. EQ: gentle treble boost for clarity, slight roll-off of low frequencies to prevent muddiness. Modulation: not used. Delay: short slapback delay for rockabilly feel and depth. Reverb: spring reverb to add space and vintage character.",
+        "references": [
+          "Bobby Helms - Jingle Bell Rock",
+          "Elvis Presley - Blue Christmas",
+          "Buddy Holly - Peggy Sue"
+        ],
+        "song_part": "main riff",
+        "preferred_pickup": "bridge single-coil, tone = 8",
+        "additional_info": "Use a clean picking technique with some palm muting for articulation. Light gauge strings (e.g., .010-.046) for snappy attack. Optionally, a semi-hollow or Tele-style guitar for extra twang."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "MXR M293 Carbon Copy Mini (for slapback delay set short)",
+          "Strymon Flint (for spring reverb, reverb only)"
+        ],
+        "amplifier": "Fender '65 Deluxe Reverb Reissue",
+        "cabinet": "Fender Deluxe Reverb 1x12 combo with Jensen C12K speaker (12\", ceramic, open-back)",
+        "settings": {
+          "amp": {
+            "Volume": 4.5,
+            "Treble": 7,
+            "Bass": 3.5,
+            "Reverb": 0
+          },
+          "compressor": {
+            "Blend": 50,
+            "Volume": 9,
+            "Compression": 9
+          },
+          "delay": {
+            "Delay Time": "80ms",
+            "Regen": "1 repeat",
+            "Mix": "20%"
+          },
+          "reverb": {
+            "Type": "Spring",
+            "Mix": "25%",
+            "Decay": "short to medium"
+          },
+          "guitar": {
+            "Pickup Selector": "Bridge single-coil",
+            "Tone Knob": 8
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 42,
+            "Clipping": 35
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Deluxe Rvb",
+          "enabled": true,
+          "params": {
+            "Gain": 36,
+            "Master": 62,
+            "Bass": 38,
+            "Middle": 47,
+            "Treble": 68
+          }
+        },
+        "cabinet": {
+          "type": "DR112",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 58,
+            "HighCut": 63
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 57,
+            "Decay": 43
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 37,
+            "Rate": 32,
+            "Echo": 41
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 42,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 36,
+                "Master": 62,
+                "Bass": 38,
+                "Middle": 47,
+                "Treble": 68
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 58,
+                "HighCut": 63
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 57,
+                "Decay": 43
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 37,
+                "Rate": 32,
+                "Echo": 41
+              }
+            }
+          },
+          "prompt": "jingle bell rock\tJoe Beal, Jim Boothe\tMain riff\tGuitar",
+          "timestamp": "2025-12-25T05:51:52.065Z"
+        }
+      ],
+      "id": "gen_mjl0zbj2_n1hkk8o3t",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-24T03:32:30.410Z",
       "originalPrompt": "Before The Beginning John Frusciante Solo",
       "proDescription": {
@@ -28007,6 +28239,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-24T03:32:30.430Z"
+    "lastUpdated": "2025-12-25T05:51:52.096Z"
   }
 }
