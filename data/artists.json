@@ -226,5 +226,11 @@
     "title": "Bobby Helms",
     "slug": "bobby-helms",
     "description": "Bobby Helms was an American country and rockabilly singer best known for the classic hit ‘Jingle Bell Rock,’ a timeless holiday favorite."
+  },
+  {
+    "id": 39,
+    "title": "Elvis Presley",
+    "slug": "elvis-presley",
+    "description": "Elvis Presley was a legendary American singer and cultural icon whose groundbreaking style and charisma helped popularize rock and roll worldwide."
   }
 ]

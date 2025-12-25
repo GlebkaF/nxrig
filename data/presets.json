@@ -7993,5 +7993,115 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/bobby-helms-jingle-bell-rock-tab-s66322t2",
     "createdAt": "2025-12-25T05:57:45.410Z",
     "updatedAt": "2025-12-25T05:57:45.410Z"
+  },
+  {
+    "id": "gen_mjl1cn0e_vzuu9neep",
+    "origin": {
+      "artistId": 39,
+      "song": "Crying in the Chapel",
+      "part": "Whole Song",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Clean, warm, rounded tone with smooth highs and gentle sustain. Subtle dynamics, no harshness, with a natural, slightly vintage character appropriate for a gentle gospel ballad.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 65,
+          "Decay": 55
+        }
+      },
+      "compressor": {
+        "type": "Studio Comp",
+        "enabled": true,
+        "params": {
+          "Gain": 55,
+          "Threshold": 60,
+          "Ratio": 35,
+          "Release": 55
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Deluxe Rvb",
+        "enabled": true,
+        "params": {
+          "Gain": 35,
+          "Master": 60,
+          "Bass": 55,
+          "Middle": 55,
+          "Treble": 45
+        }
+      },
+      "cabinet": {
+        "type": "DR112",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 60,
+          "HighCut": 40
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 46,
+          "62": 50,
+          "125": 52,
+          "250": 54,
+          "500": 53,
+          "1000": 54,
+          "2000": 50,
+          "4000": 47,
+          "8000": 44,
+          "16000": 38,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Decay": 56
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "crying-in-the-chapel-guitar-whole-song",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/elvis-presley-crying-in-the-chapel-tab-s2970348t1",
+    "createdAt": "2025-12-25T06:08:55.804Z",
+    "updatedAt": "2025-12-25T06:08:55.804Z"
   }
 ]

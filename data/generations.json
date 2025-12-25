@@ -1,6 +1,446 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-25T06:02:13.483Z",
+      "originalPrompt": "CRYING IN THE CHAPEL\telvis presley\tOutro\tGuitar",
+      "proDescription": {
+        "tone_title": "Crying in the Chapel - Outro",
+        "genre": "1950s Gospel/Pop Ballad",
+        "sound_description": "Clean, warm, rounded tone with smooth highs and gentle sustain. Subtle dynamics, no harshness, with a natural, slightly vintage character appropriate for a gentle gospel ballad.",
+        "guitar_rig_description": "Noise gate: not used (no need for high noise suppression in clean passages). Compressor: lightly used to smooth dynamics and enhance sustain without squashing the natural feel. Overdrive/distortion/boost: not used (tone remains clean). Amplifier: vintage-style clean tube amp (such as Fender Deluxe Reverb) for warmth and mild compression. Cabinet: open-back 1x12 with alnico speaker for classic, airy response. EQ: subtle cut to extreme highs, slight low-mid boost for fullness. Modulation: not used (no chorus or tremolo for this part). Delay: not used. Reverb: spring reverb or plate reverb for a soft, ambient tail to blend with vocals.",
+        "references": [
+          "Elvis Presley - Crying in the Chapel",
+          "Sam Cooke - A Change Is Gonna Come (clean guitar tones)",
+          "The Platters - Only You (And You Alone)"
+        ],
+        "song_part": "outro",
+        "preferred_pickup": "neck single-coil, tone = 7",
+        "additional_info": "Use gentle picking or fingerstyle. Flatwound or pure nickel strings enhance vintage warmth. Avoid heavy attack and let notes ring naturally. If using an archtop or semi-hollow guitar, it matches era-appropriate tones even better."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "Boss EQ-200 Graphic Equalizer",
+          "Strymon Flint (Plate Reverb mode)"
+        ],
+        "amplifier": "Fender '65 Deluxe Reverb Reissue",
+        "cabinet": "Fender 1x12 open-back with Jensen P12Q Alnico speaker",
+        "settings": {
+          "amp": {
+            "Gain": 4,
+            "Bass": 6,
+            "Middle": 5,
+            "Treble": 4,
+            "Reverb": 0,
+            "//": "Use external reverb pedal instead",
+            "Master": 4.5
+          },
+          "compressor": {
+            "Sustain": 10,
+            "Level": 11,
+            "Blend": 9,
+            "Attack": 11
+          },
+          "eq": {
+            "8kHz": "-3dB",
+            "4kHz": "-2dB",
+            "800Hz": "+1dB",
+            "100Hz": "+1dB"
+          },
+          "reverb": {
+            "Plate": true,
+            "Mix": 10,
+            "Decay": 11,
+            "Color": 10
+          },
+          "guitar": {
+            "Pickup": "Neck single-coil",
+            "Tone": 7
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 55,
+            "Threshold": 60,
+            "Ratio": 35,
+            "Release": 55
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Deluxe Rvb",
+          "enabled": true,
+          "params": {
+            "Gain": 35,
+            "Master": 60,
+            "Bass": 60,
+            "Middle": 55,
+            "Treble": 40
+          }
+        },
+        "cabinet": {
+          "type": "DR112",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 45,
+            "HighCut": 40
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 52,
+            "62": 54,
+            "125": 55,
+            "250": 58,
+            "500": 57,
+            "1000": 54,
+            "2000": 50,
+            "4000": 47,
+            "8000": 44,
+            "16000": 38,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Decay": 56
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 55,
+                "Threshold": 60,
+                "Ratio": 35,
+                "Release": 55
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 35,
+                "Master": 60,
+                "Bass": 60,
+                "Middle": 55,
+                "Treble": 40
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 45,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 52,
+                "62": 54,
+                "125": 55,
+                "250": 58,
+                "500": 57,
+                "1000": 54,
+                "2000": 50,
+                "4000": 47,
+                "8000": 44,
+                "16000": 38,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Decay": 56
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "CRYING IN THE CHAPEL\telvis presley\tOutro\tGuitar",
+          "timestamp": "2025-12-25T06:02:13.483Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 55,
+                "Threshold": 60,
+                "Ratio": 35,
+                "Release": 55
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 35,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 55,
+                "Treble": 45
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 60,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 40,
+                "62": 44,
+                "125": 46,
+                "250": 50,
+                "500": 53,
+                "1000": 54,
+                "2000": 50,
+                "4000": 47,
+                "8000": 44,
+                "16000": 38,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Decay": 56
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Сильно басит\n",
+          "timestamp": "2025-12-25T06:03:47.894Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 65,
+                "Decay": 55
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 55,
+                "Threshold": 60,
+                "Ratio": 35,
+                "Release": 55
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 35,
+                "Master": 60,
+                "Bass": 55,
+                "Middle": 55,
+                "Treble": 45
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 60,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 46,
+                "62": 50,
+                "125": 52,
+                "250": 54,
+                "500": 53,
+                "1000": 54,
+                "2000": 50,
+                "4000": 47,
+                "8000": 44,
+                "16000": 38,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Decay": 56
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "чуть баса надо вернуть и открутить шум на фоне\n",
+          "timestamp": "2025-12-25T06:05:30.198Z"
+        }
+      ],
+      "id": "gen_mjl1cn0e_vzuu9neep",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-25T05:51:52.065Z",
       "originalPrompt": "jingle bell rock\tJoe Beal, Jim Boothe\tMain riff\tGuitar",
       "proDescription": {
@@ -28239,6 +28679,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-25T05:51:52.096Z"
+    "lastUpdated": "2025-12-25T06:05:30.218Z"
   }
 }
