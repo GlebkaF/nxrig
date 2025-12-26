@@ -147,6 +147,16 @@ function detectGuitarType(instrument: string): string | null {
   return null;
 }
 
+export interface SongsterrPromptResult {
+  prompt: string;
+  metadata: {
+    artist: string;
+    title: string;
+    trackType: string;
+    trackName?: string;
+  };
+}
+
 /**
  * Формирует промпт для генератора из данных Songsterr
  * @param songData Данные о песне из Songsterr
@@ -234,6 +244,92 @@ export function buildPromptFromSongsterr(
   const prompt = `${artist} ${title} ${guitarType} Guitar Main Riff`;
 
   return prompt;
+}
+
+/**
+ * Формирует промпт и метаданные для генератора из данных Songsterr
+ * @param songData Данные о песне из Songsterr
+ * @param trackType Опциональный тип трека (Rhythm/Solo/Lead)
+ * @param specificTrackId Опциональный ID конкретного трека (partId из URL)
+ * @returns Объект с промптом и метаданными
+ */
+export function buildPromptWithMetadata(
+  songData: SongsterrSongData,
+  trackType?: string,
+  specificTrackId?: number | null,
+): SongsterrPromptResult {
+  const artist = songData.artist;
+  const title = songData.title;
+
+  // Если trackType не указан, определяем автоматически
+  let guitarType = trackType;
+  let selectedTrackName: string | undefined;
+
+  if (!guitarType && songData.tracks && songData.tracks.length > 0) {
+    // Фильтруем гитарные треки
+    const guitarTracks = songData.tracks.filter((t) => t.isGuitar);
+
+    if (guitarTracks.length > 0) {
+      let selectedTrack: SongsterrTrack | undefined;
+
+      // Если указан конкретный trackId из URL, используем его
+      if (specificTrackId !== undefined && specificTrackId !== null) {
+        selectedTrack = guitarTracks.find((t) => t.partId === specificTrackId);
+      }
+
+      // Если трек не найден или не указан, берем самый популярный
+      if (!selectedTrack) {
+        const popularPartId =
+          songData.popularTrackGuitar !== undefined
+            ? songData.popularTrackGuitar
+            : (guitarTracks[0]?.partId ?? 0);
+
+        selectedTrack = guitarTracks.find((t) => t.partId === popularPartId);
+
+        if (!selectedTrack) {
+          selectedTrack = guitarTracks.reduce((prev, current) =>
+            current.views > prev.views ? current : prev,
+          );
+        }
+      }
+
+      // Сохраняем название трека
+      selectedTrackName = selectedTrack.title;
+
+      // Определяем тип трека по его названию
+      const trackName = selectedTrack.title.toLowerCase();
+
+      if (trackName.includes("lead")) {
+        guitarType = "Lead";
+      } else if (trackName.includes("solo")) {
+        guitarType = "Solo";
+      } else if (trackName.includes("rhythm")) {
+        guitarType = "Rhythm";
+      } else if (trackName.includes("background")) {
+        guitarType = "Rhythm";
+      } else {
+        guitarType = selectedTrack.partId <= 1 ? "Rhythm" : "Lead";
+      }
+    }
+  }
+
+  // По умолчанию используем Rhythm
+  if (!guitarType) {
+    guitarType = "Rhythm";
+  }
+
+  // Формируем промпт
+  const prompt = `${artist} ${title} ${guitarType} Guitar Main Riff`;
+
+  return {
+    prompt,
+    metadata: {
+      artist,
+      title,
+      trackType: guitarType,
+      ...(selectedTrackName ? { trackName: selectedTrackName } : {}),
+    },
+  };
 }
 
 /**

@@ -3,7 +3,7 @@ import { createGenerator } from "../../../lib/ai-generator/create-generator";
 import {
   extractSongsterrId,
   fetchSongsterrData,
-  buildPromptFromSongsterr,
+  buildPromptWithMetadata,
 } from "../../../lib/utils/songsterr";
 
 // Исключаем этот API роут из статической генерации
@@ -84,13 +84,18 @@ export async function POST(
       );
     }
 
-    // Шаг 3: Формируем промпт с учетом конкретного trackId из URL
-    const prompt = buildPromptFromSongsterr(songData, trackType, trackId);
-    console.log(`💡 Generated prompt: "${prompt}"`);
+    // Шаг 3: Формируем промпт с метаданными с учетом конкретного trackId из URL
+    const promptResult = buildPromptWithMetadata(songData, trackType, trackId);
+    console.log(`💡 Generated prompt: "${promptResult.prompt}"`);
+    console.log("📊 Metadata:", promptResult.metadata);
 
     // Шаг 4: Запускаем генератор с сформированным промптом
     const generator = await createGenerator();
-    const generationId = await generator.generate(prompt);
+    const generationId: string = await generator.generate(
+      promptResult.prompt,
+      songsterrUrl,
+      promptResult.metadata,
+    );
 
     console.log(`✅ Generation created with ID: ${generationId}`);
 
@@ -98,7 +103,7 @@ export async function POST(
     const response: GenerateFromSongsterrResponse = {
       generationId,
       message: "Generation created successfully from Songsterr URL",
-      prompt,
+      prompt: promptResult.prompt,
       songData: {
         artist: songData.artist,
         title: songData.title,

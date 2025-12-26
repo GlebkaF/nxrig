@@ -30,6 +30,13 @@ export interface GenerationRecord {
     settings: unknown;
   };
   versions: GenerationVersion[];
+  songsterrData?: {
+    url: string;
+    artist: string;
+    title: string;
+    trackType: string;
+    trackName?: string;
+  };
 }
 
 export interface JsonDatabase {
