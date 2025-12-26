@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { GenerationRecord } from "../lib/jsondb/types";
 import { ValidatedArtist } from "../lib/public/schemas/artist";
+import { smartMapToPart } from "../lib/utils/track-mapping";
 
 interface PresetCreateFormProps {
   generation: GenerationRecord;
@@ -49,6 +50,53 @@ export function PresetCreateForm({
       position: "bridge",
     },
   });
+
+  // Автозаполнение формы из songsterrData
+  useEffect(() => {
+    if (!generation.songsterrData) return;
+
+    const { artist, title, trackType, trackName, url } =
+      generation.songsterrData;
+
+    // 1. Поиск существующего артиста (fuzzy match)
+    const foundArtist = artists.find(
+      (a) =>
+        a.title.toLowerCase() === artist.toLowerCase() ||
+        a.title.toLowerCase().includes(artist.toLowerCase()) ||
+        artist.toLowerCase().includes(a.title.toLowerCase()),
+    );
+
+    if (foundArtist) {
+      // Артист найден - выбираем его
+      setIsNewArtist(false);
+      setFormData((prev) => ({
+        ...prev,
+        artistId: foundArtist.id,
+        song: title,
+        part: smartMapToPart(trackType, trackName),
+        tabsUrl: url,
+      }));
+      console.log(
+        `✅ Артист найден: ${foundArtist.title} (ID: ${String(foundArtist.id)})`,
+      );
+    } else {
+      // Артист не найден - создаем нового
+      setIsNewArtist(true);
+      setFormData((prev) => ({
+        ...prev,
+        newArtistTitle: artist,
+        newArtistDescription: `Описание для ${artist}`,
+        song: title,
+        part: smartMapToPart(trackType, trackName),
+        tabsUrl: url,
+      }));
+      console.log(`📝 Создание нового артиста: ${artist}`);
+    }
+
+    console.log(
+      `🎵 Автозаполнение: ${artist} - ${title} (${smartMapToPart(trackType, trackName)})`,
+    );
+  }, [generation.songsterrData, artists]);
 
   // Получаем последнюю версию chain из генерации (не используется в UI, но может понадобиться)
   const latestChain = useMemo(() => {
@@ -163,6 +211,33 @@ export function PresetCreateForm({
         }}
         className="space-y-6"
       >
+        {/* Автозаполнение из Songsterr */}
+        {generation.songsterrData && (
+          <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+            <h3 className="text-lg font-semibold text-green-900 mb-2">
+              ✅ Форма автозаполнена из Songsterr
+            </h3>
+            <div className="text-sm text-green-700 space-y-1">
+              <p>
+                <span className="font-medium">Артист:</span>{" "}
+                {generation.songsterrData.artist}
+              </p>
+              <p>
+                <span className="font-medium">Песня:</span>{" "}
+                {generation.songsterrData.title}
+              </p>
+              <p>
+                <span className="font-medium">Тип трека:</span>{" "}
+                {generation.songsterrData.trackType}
+              </p>
+              <p className="text-xs text-green-600 mt-2">
+                💡 Проверьте автозаполненные поля ниже и внесите правки при
+                необходимости
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Информация о генерации */}
         <div className="bg-gray-50 rounded-lg p-4">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">

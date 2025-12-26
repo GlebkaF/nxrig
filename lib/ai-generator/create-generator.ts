@@ -35,7 +35,16 @@ interface RealRig {
 class ChainGenerator {
   constructor(private openai: OpenAI) {}
 
-  async generate(prompt: string): Promise<string> {
+  async generate(
+    prompt: string,
+    songsterrUrl?: string,
+    songsterrMetadata?: {
+      artist: string;
+      title: string;
+      trackType: string;
+      trackName?: string;
+    },
+  ): Promise<string> {
     const proDescription = await this.createProDescription(prompt);
     const realRig = await this.createRealRig(proDescription);
     const emptyChain = await this.createEmptyChain(realRig);
@@ -46,7 +55,22 @@ class ChainGenerator {
 
     // Сохраняем результаты в базу данных
     const now = new Date().toISOString();
-    const generationId = await this.saveToDatabase({
+
+    const dataToSave: {
+      timestamp: string;
+      originalPrompt: string;
+      proDescription: ProDescription;
+      realRig: RealRig;
+      finalChain: Chain;
+      versions: Array<{ chain: Chain; prompt: string; timestamp: string }>;
+      songsterrData?: {
+        url: string;
+        artist: string;
+        title: string;
+        trackType: string;
+        trackName?: string;
+      };
+    } = {
       timestamp: now,
       originalPrompt: prompt,
       proDescription,
@@ -59,7 +83,21 @@ class ChainGenerator {
           timestamp: now,
         },
       ],
-    });
+    };
+
+    if (songsterrUrl && songsterrMetadata) {
+      dataToSave.songsterrData = {
+        url: songsterrUrl,
+        artist: songsterrMetadata.artist,
+        title: songsterrMetadata.title,
+        trackType: songsterrMetadata.trackType,
+        ...(songsterrMetadata.trackName
+          ? { trackName: songsterrMetadata.trackName }
+          : {}),
+      };
+    }
+
+    const generationId = await this.saveToDatabase(dataToSave);
 
     return generationId;
   }
@@ -149,6 +187,13 @@ class ChainGenerator {
     realRig: RealRig;
     finalChain: Chain;
     versions: Array<{ chain: Chain; prompt: string; timestamp: string }>;
+    songsterrData?: {
+      url: string;
+      artist: string;
+      title: string;
+      trackType: string;
+      trackName?: string;
+    };
   }): Promise<string> {
     try {
       const generationId = await generationDb.addGeneration(result);
