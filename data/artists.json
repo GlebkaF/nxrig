@@ -250,5 +250,11 @@
     "title": "Carlos Santana",
     "slug": "carlos-santana",
     "description": "Carlos Santana is a legendary guitarist known for blending rock, blues, and Latin rhythms, creating a distinctive, soulful sound that influenced generations of musicians."
+  },
+  {
+    "id": 43,
+    "title": "Unknown Artist",
+    "slug": "unknown-artist",
+    "description": "Placeholder artist used for guitar tones and presets that are not based on a specific performer or recorded track.\nThese presets represent generic styles, eras, or use-cases rather than official artist sounds."
   }
 ]

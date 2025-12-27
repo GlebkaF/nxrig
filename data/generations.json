@@ -1,6 +1,488 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-27T10:32:29.846Z",
+      "originalPrompt": "gretsch 51's rock\tclint curtis\tGuitar",
+      "proDescription": {
+        "tone_title": "Gretsch 51's - Clint Curtis Guitar Tone",
+        "genre": "Rockabilly / Classic Rock 'n' Roll",
+        "sound_description": "Bright, twangy, and articulate with a touch of grit; emphasizes clarity and percussive attack with a lively, snappy feel. Slight warmth in the mids, open highs, and a controlled low end. Natural dynamics and a hint of slapback echo.",
+        "guitar_rig_description": "Noise gate: not used (tone is open and dynamic, with little need for gating). Compressor: used for subtle leveling and enhancing attack, providing consistent picking response and slight sustain. Overdrive/Distortion/Boost: mild overdrive or clean boost used for a touch of vintage grit and breakup, not heavy distortion. Amplifier: vintage-style tube combo amp emulation (e.g., Fender Bassman or Vox AC30) set for clean to edge-of-breakup tones, emphasizing chime and responsiveness. Cabinet: matching open-back 2x12 cab simulation for airy, resonant sound. EQ: used to enhance upper mids and slightly roll off very low frequencies for clarity. Modulation: not used (tone is kept straightforward). Delay: single short slapback delay for authentic rockabilly vibe, mixed subtly. Reverb: spring reverb used for spatial depth and liveliness.",
+        "references": [
+          "Stray Cats - Rock This Town",
+          "Brian Setzer Orchestra - Jump, Jive an' Wail",
+          "Eddie Cochran - Summertime Blues"
+        ],
+        "song_part": "main riff and rhythm parts",
+        "preferred_pickup": "bridge pickup (Gretsch Filter'Tron style), tone wide open",
+        "additional_info": "Use a Gretsch hollowbody guitar if possible; light to medium gauge strings (e.g., .010–.046); picking technique should emphasize percussive attack (hybrid or fingerpicking optional); moderate picking dynamics for twang and clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Greer Amps Lightspeed Organic Overdrive",
+          "Boss GE-7 Equalizer",
+          "MXR M169 Carbon Copy Analog Delay"
+        ],
+        "amplifier": "Fender '59 Bassman LTD Reissue",
+        "cabinet": "Fender Bassman 2x12 Open-Back with Jensen P12R Alnico Speakers",
+        "settings": {
+          "amp": {
+            "Gain": 4.5,
+            "Bass": 4,
+            "Middle": 5.5,
+            "Treble": 7,
+            "Presence": 6,
+            "Master": 5
+          },
+          "compressor": {
+            "Blend": 60,
+            "Volume": 50,
+            "Sustain": 20
+          },
+          "overdrive": {
+            "Gain": 9,
+            "Tone": 1,
+            "Volume": 2.5
+          },
+          "eq": {
+            "100Hz": "-3dB",
+            "400Hz": "0dB",
+            "800Hz": "+1dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "+1dB",
+            "6.4kHz": "0dB"
+          },
+          "delay": {
+            "Delay Time": "110ms",
+            "Regen": 1,
+            "Mix": 15
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 42,
+            "Clipping": 30
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Blues Drive",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Gain": 28,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Bass Mate",
+          "enabled": true,
+          "params": {
+            "Gain": 38,
+            "Master": 62,
+            "Bass": 42,
+            "Middle": 54,
+            "Treble": 66,
+            "Presence": 60
+          }
+        },
+        "cabinet": {
+          "type": "BASSGUY410",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 62,
+            "HighCut": 58
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 43,
+            "220": 48,
+            "500": 52,
+            "1200": 60,
+            "2600": 66,
+            "6400": 62
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 32,
+            "Rate": 19,
+            "Echo": 38
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 42,
+                "Clipping": 30
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Blues Drive",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Gain": 28,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Bass Mate",
+              "enabled": true,
+              "params": {
+                "Gain": 38,
+                "Master": 62,
+                "Bass": 42,
+                "Middle": 54,
+                "Treble": 66,
+                "Presence": 60
+              }
+            },
+            "cabinet": {
+              "type": "BASSGUY410",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 62,
+                "HighCut": 58
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 43,
+                "220": 48,
+                "500": 52,
+                "1200": 60,
+                "2600": 66,
+                "6400": 62
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 32,
+                "Rate": 19,
+                "Echo": 38
+              }
+            }
+          },
+          "prompt": "gretsch 51's rock\tclint curtis\tGuitar",
+          "timestamp": "2025-12-27T10:32:29.846Z"
+        }
+      ],
+      "id": "gen_mjo5vwyo_mdssn4b3c",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-12-27T10:26:47.657Z",
+      "originalPrompt": "Queen Dreamer's Ball Rhythm Guitar Distortion Riff",
+      "proDescription": {
+        "tone_title": "Dreamer's Ball Rhythm Guitar",
+        "genre": "Classic Rock / Vintage Rock 'n' Roll",
+        "sound_description": "Warm, slightly overdriven tone with a vintage character; moderate attack, rounded highs, smooth mids, and clear note separation. The sound is dynamic and touch-responsive, with a hint of breakup that never gets too aggressive.",
+        "guitar_rig_description": "Noise gate: not used (tone is not high-gain, so noise suppression is unnecessary). Compressor: not used (natural dynamics are preferred). Overdrive/distortion/boost: mild overdrive pedal or amp breakup used to add warmth and slight grit. Amplifier: vintage-style British amp (such as Vox AC30) driven into light overdrive for authentic Queen rhythm tone. Cabinet: matching 2x12 open-back cabinet with Celestion-style speakers for open, airy sound. EQ: basic amp EQ for gentle midrange presence, rolled-off extreme highs to avoid harshness. Modulation: not used. Delay: not used. Reverb: subtle spring or plate reverb to add natural space without washing out the articulation.",
+        "references": [
+          "Queen - Dreamer's Ball",
+          "Queen - Crazy Little Thing Called Love",
+          "The Beatles - Revolution (clean rhythm)",
+          "Elvis Presley - Jailhouse Rock"
+        ],
+        "song_part": "rhythm riff",
+        "preferred_pickup": "bridge single coil or out-of-phase pickup setting (for Brian May Red Special authenticity), tone = 6-7",
+        "additional_info": "Best results with a coin or sixpence pick for brighter attack, lighter string gauge (Brian May often used .009s), and palm muting for rhythmic control. Playing technique should emphasize dynamics and subtlety."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Brian May Guitars Treble Booster Classic",
+          "TC Electronic Hall of Fame Mini Reverb (set to subtle spring reverb algorithm)"
+        ],
+        "amplifier": "Vox AC30 Custom (AC30C2)",
+        "cabinet": "Vox V212C 2x12 Open-Back with Celestion Alnico Blue speakers",
+        "settings": {
+          "amp": {
+            "Normal Volume": 5.5,
+            "Top Boost Volume": 5,
+            "Treble": 5,
+            "Bass": 5,
+            "Cut": 4,
+            "Reverb": "off (use pedal instead)",
+            "Master": 4
+          },
+          "treble_booster": {
+            "Level": 6,
+            "Treble": 7
+          },
+          "reverb": {
+            "Mix": 10,
+            "Decay": 2,
+            "Tone": 4
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "RC Boost",
+          "enabled": true,
+          "params": {
+            "Volume": 55,
+            "Gain": 30,
+            "Bass": 52,
+            "Treble": 47
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 60,
+            "Master": 60,
+            "Bass": 55,
+            "Treble": 48,
+            "Cut": 55
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 48,
+            "HighCut": 42
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 38,
+            "Decay": 43
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "RC Boost",
+              "enabled": true,
+              "params": {
+                "Volume": 55,
+                "Gain": 30,
+                "Bass": 52,
+                "Treble": 47
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 60,
+                "Master": 60,
+                "Bass": 55,
+                "Treble": 48,
+                "Cut": 55
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 48,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 43
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Queen Dreamer's Ball Rhythm Guitar Distortion Riff",
+          "timestamp": "2025-12-27T10:26:47.657Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/queen-dreamers-ball-tab-s444213",
+        "artist": "Queen",
+        "title": "Dreamer's Ball",
+        "trackType": "Rhythm",
+        "suggestedPart": "Guitar Distortion Riff",
+        "trackName": "Guitar 1 - Distortion Guitar"
+      },
+      "id": "gen_mjo5okxi_68cyfyyvk",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-27T06:20:34.181Z",
       "originalPrompt": "Carlos Santana Europa Lead Guitar Distortion Sound",
       "proDescription": {
@@ -30077,6 +30559,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-27T06:20:34.199Z"
+    "lastUpdated": "2025-12-27T10:32:29.856Z"
   }
 }

@@ -8430,5 +8430,217 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/carlos-santana-europa-tab-s451",
     "createdAt": "2025-12-27T06:23:05.606Z",
     "updatedAt": "2025-12-27T06:23:05.606Z"
+  },
+  {
+    "id": "gen_mjo5okxi_68cyfyyvk",
+    "origin": {
+      "artistId": 35,
+      "song": "Dreamer's Ball",
+      "part": "Guitar Distortion Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Warm, slightly overdriven tone with a vintage character; moderate attack, rounded highs, smooth mids, and clear note separation. The sound is dynamic and touch-responsive, with a hint of breakup that never gets too aggressive.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "RC Boost",
+        "enabled": true,
+        "params": {
+          "Volume": 55,
+          "Gain": 30,
+          "Bass": 52,
+          "Treble": 47
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 60,
+          "Master": 60,
+          "Bass": 55,
+          "Treble": 48,
+          "Cut": 55
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 48,
+          "HighCut": 42
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 38,
+          "Decay": 43
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "dreamers-ball-guitar-guitar-distortion-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/queen-dreamers-ball-tab-s444213",
+    "createdAt": "2025-12-27T10:30:01.258Z",
+    "updatedAt": "2025-12-27T10:30:01.258Z"
+  },
+  {
+    "id": "gen_mjo5vwyo_mdssn4b3c",
+    "origin": {
+      "artistId": 43,
+      "song": "Gretsch 50s Rock",
+      "part": "Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, twangy, and articulate with a touch of grit; emphasizes clarity and percussive attack with a lively, snappy feel. Slight warmth in the mids, open highs, and a controlled low end. Natural dynamics and a hint of slapback echo.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 42,
+          "Clipping": 30
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Blues Drive",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Gain": 28,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Bass Mate",
+        "enabled": true,
+        "params": {
+          "Gain": 38,
+          "Master": 62,
+          "Bass": 42,
+          "Middle": 54,
+          "Treble": 66,
+          "Presence": 60
+        }
+      },
+      "cabinet": {
+        "type": "BASSGUY410",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 62,
+          "HighCut": 58
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 43,
+          "220": 48,
+          "500": 52,
+          "1200": 60,
+          "2600": 66,
+          "6400": 62
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 32,
+          "Rate": 19,
+          "Echo": 38
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "gretsch-50s-rock-guitar-guitar",
+    "createdAt": "2025-12-27T10:38:57.660Z",
+    "updatedAt": "2025-12-27T10:38:57.660Z"
   }
 ]
