@@ -36,6 +36,7 @@ export interface GenerationRecord {
     title: string;
     trackType: string;
     trackName?: string;
+    suggestedPart: string;
   };
 }
 

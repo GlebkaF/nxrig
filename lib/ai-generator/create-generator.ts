@@ -43,6 +43,7 @@ class ChainGenerator {
       title: string;
       trackType: string;
       trackName?: string;
+      suggestedPart: string;
     },
   ): Promise<string> {
     const proDescription = await this.createProDescription(prompt);
@@ -69,6 +70,7 @@ class ChainGenerator {
         title: string;
         trackType: string;
         trackName?: string;
+        suggestedPart: string;
       };
     } = {
       timestamp: now,
@@ -91,6 +93,7 @@ class ChainGenerator {
         artist: songsterrMetadata.artist,
         title: songsterrMetadata.title,
         trackType: songsterrMetadata.trackType,
+        suggestedPart: songsterrMetadata.suggestedPart,
         ...(songsterrMetadata.trackName
           ? { trackName: songsterrMetadata.trackName }
           : {}),
@@ -193,6 +196,7 @@ class ChainGenerator {
       title: string;
       trackType: string;
       trackName?: string;
+      suggestedPart: string;
     };
   }): Promise<string> {
     try {

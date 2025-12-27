@@ -1,6 +1,361 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-27T05:34:25.211Z",
+      "originalPrompt": "Amatory Черно-белые Дни Distortion Rhythm Guitar",
+      "proDescription": {
+        "tone_title": "Amatory - Черно-белые Дни Distortion Rhythm Guitar",
+        "genre": "Modern Russian Metalcore / Alternative Metal",
+        "sound_description": "Tight, aggressive, and punchy high-gain rhythm sound with clear note definition, moderate low-end, scooped mids, and crisp attack. The tone is focused and modern, with controlled noise and limited ambience for maximum clarity in dense mixes.",
+        "guitar_rig_description": "1. Noise Gate: Used to suppress unwanted noise and tighten palm-muted rhythms, especially before high-gain stages. 2. Compressor: Not used, as the high gain and tight playing provide sufficient sustain and attack control. 3. Overdrive/Boost: A clean overdrive or boost pedal is used before the amp to tighten the low end and enhance pick attack without adding significant distortion. 4. Amplifier: Modern high-gain amp head (e.g., Mesa/Boogie Dual Rectifier or Peavey 5150) set for a saturated, aggressive rhythm channel with quick response. 5. Cabinet: 4x12 closed-back cabinet with modern voiced speakers (e.g., Celestion V30), miked for focused mids and clarity. 6. EQ: Post-amp EQ used to slightly scoop mids, tighten lows, and add presence for articulation. 7. Modulation: Not used, as the rhythm part requires a dry, immediate sound. 8. Delay: Not used. 9. Reverb: Not used, or only a very minimal room reverb from the amp/cab environment for realism.",
+        "references": [
+          "Amatory - Черно-белые Дни",
+          "Slipknot - Before I Forget",
+          "Killswitch Engage - My Curse"
+        ],
+        "song_part": "Distorted rhythm guitar",
+        "preferred_pickup": "bridge humbucker, tone = 5",
+        "additional_info": "Use tight, palm-muted chugging and aggressive right-hand technique. Medium to heavy gauge strings (e.g., 11-52 or 10-52) recommended for tuning stability and punch. Down-tuned guitar (Drop C or Drop B) likely used for this style."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Maxon OD808 Overdrive",
+          "Boss GE-7 Equalizer"
+        ],
+        "amplifier": "Peavey 6505+ Head",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 Cabinet with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 6.5,
+            "Bass": 4,
+            "Middle": 3.5,
+            "Treble": 6.5,
+            "Presence": 6,
+            "Resonance": 5,
+            "Master": 3
+          },
+          "od808": {
+            "Drive": 0,
+            "Tone": 6,
+            "Level": 8
+          },
+          "ns2": {
+            "Threshold": 60,
+            "Decay": 0
+          },
+          "eq": {
+            "100Hz": "-2dB",
+            "200Hz": "-1dB",
+            "400Hz": "-2dB",
+            "800Hz": "-4dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "+3dB",
+            "6.4kHz": "+2dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 70,
+            "Drive": 20,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 75,
+            "Master": 60,
+            "Bass": 45,
+            "Middle": 30,
+            "Treble": 65,
+            "Presence": 70
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 60,
+            "HighCut": 65
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 45,
+            "62": 47,
+            "125": 48,
+            "250": 45,
+            "500": 40,
+            "1000": 35,
+            "2000": 50,
+            "4000": 60,
+            "8000": 65,
+            "16000": 62,
+            "Vol": 55
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 70,
+                "Drive": 20,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 75,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 30,
+                "Treble": 65,
+                "Presence": 70
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 45,
+                "62": 47,
+                "125": 48,
+                "250": 45,
+                "500": 40,
+                "1000": 35,
+                "2000": 50,
+                "4000": 60,
+                "8000": 65,
+                "16000": 62,
+                "Vol": 55
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Amatory Черно-белые Дни Distortion Rhythm Guitar",
+          "timestamp": "2025-12-27T05:34:25.211Z"
+        },
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 65,
+                "Drive": 15,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 60,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 35,
+                "Treble": 65,
+                "Presence": 65
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 45,
+                "62": 47,
+                "125": 48,
+                "250": 45,
+                "500": 40,
+                "1000": 38,
+                "2000": 50,
+                "4000": 60,
+                "8000": 65,
+                "16000": 62,
+                "Vol": 55
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "убери дждж немного\n",
+          "timestamp": "2025-12-27T05:39:30.882Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/amatory-tab-s25195",
+        "artist": "Amatory",
+        "title": "Черно-белые Дни",
+        "trackType": "Rhythm",
+        "suggestedPart": "Distortion Rhythm Guitar",
+        "trackName": "Гитара - Distortion Guitar 1"
+      },
+      "id": "gen_mjnv8l3k_p1oa6717l",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-25T06:02:13.483Z",
       "originalPrompt": "CRYING IN THE CHAPEL\telvis presley\tOutro\tGuitar",
       "proDescription": {
@@ -28679,6 +29034,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-25T06:05:30.218Z"
+    "lastUpdated": "2025-12-27T05:39:30.895Z"
   }
 }

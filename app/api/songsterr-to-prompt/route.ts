@@ -1,28 +1,30 @@
 import { NextResponse } from "next/server";
-import { createGenerator } from "../../../lib/ai-generator/create-generator";
 import {
   extractSongsterrId,
   fetchSongsterrData,
   buildPromptWithMetadata,
 } from "../../../lib/utils/songsterr";
+import { generateFullPrompt } from "../../../lib/utils/track-name-generator";
 
 // Исключаем этот API роут из статической генерации
 export function generateStaticParams() {
   return [{ id: "this-is-a-dummy-id-for-static-build" }];
 }
 
-interface GenerateFromSongsterrRequest {
+interface SongsterrToPromptRequest {
   songsterrUrl: string;
   trackType?: string; // "Rhythm" | "Solo" | "Lead"
 }
 
-interface GenerateFromSongsterrResponse {
-  generationId: string;
-  message: string;
+interface SongsterrToPromptResponse {
   prompt: string;
-  songData: {
+  metadata: {
+    url: string;
     artist: string;
     title: string;
+    trackType: string;
+    trackName?: string;
+    suggestedPart: string;
   };
 }
 
@@ -31,17 +33,17 @@ interface ErrorResponse {
 }
 
 /**
- * API endpoint для генерации Chain на основе ссылки Songsterr
- * POST /api/generate-from-songsterr
+ * API endpoint для генерации промпта из ссылки Songsterr
+ * POST /api/songsterr-to-prompt
  * Body: { songsterrUrl: string, trackType?: string }
  */
 export async function POST(
   request: Request,
-): Promise<NextResponse<GenerateFromSongsterrResponse | ErrorResponse>> {
+): Promise<NextResponse<SongsterrToPromptResponse | ErrorResponse>> {
   try {
     // Получаем данные из тела запроса
     const { songsterrUrl, trackType } =
-      (await request.json()) as GenerateFromSongsterrRequest;
+      (await request.json()) as SongsterrToPromptRequest;
 
     // Валидация входных данных
     if (!songsterrUrl || typeof songsterrUrl !== "string") {
@@ -51,7 +53,9 @@ export async function POST(
       );
     }
 
-    // Шаг 1: Извлекаем ID из URL
+    console.log(`🎸 Generating prompt from Songsterr URL: ${songsterrUrl}`);
+
+    // Шаг 1: Извлекаем songId и trackId из URL
     const extracted = extractSongsterrId(songsterrUrl);
     if (!extracted) {
       return NextResponse.json(
@@ -84,36 +88,50 @@ export async function POST(
       );
     }
 
-    // Шаг 3: Формируем промпт с метаданными с учетом конкретного trackId из URL
+    // Шаг 3: Получаем метаданные с учетом конкретного trackId из URL
     const promptResult = buildPromptWithMetadata(songData, trackType, trackId);
-    console.log(`💡 Generated prompt: "${promptResult.prompt}"`);
     console.log("📊 Metadata:", promptResult.metadata);
 
-    // Шаг 4: Запускаем генератор с сформированным промптом
-    const generator = await createGenerator();
-    const generationId: string = await generator.generate(
-      promptResult.prompt,
-      songsterrUrl,
-      promptResult.metadata,
-    );
+    // Шаг 4: Генерируем полный промпт через AI с полной свободой
+    const trackNameData: {
+      artist: string;
+      title: string;
+      trackType: string;
+      trackName?: string;
+    } = {
+      artist: promptResult.metadata.artist,
+      title: promptResult.metadata.title,
+      trackType: promptResult.metadata.trackType,
+      ...(promptResult.metadata.trackName
+        ? { trackName: promptResult.metadata.trackName }
+        : {}),
+    };
+    const finalPrompt = await generateFullPrompt(trackNameData);
+    console.log(`💡 AI generated full prompt: "${finalPrompt}"`);
 
-    console.log(`✅ Generation created with ID: ${generationId}`);
+    // Извлекаем suggestedPart из промпта (простая эвристика для обратной совместимости)
+    const words = finalPrompt.split(" ");
+    const suggestedPart = words.slice(-3).join(" "); // последние 3 слова
 
     // Формируем ответ
-    const response: GenerateFromSongsterrResponse = {
-      generationId,
-      message: "Generation created successfully from Songsterr URL",
-      prompt: promptResult.prompt,
-      songData: {
-        artist: songData.artist,
-        title: songData.title,
+    const response: SongsterrToPromptResponse = {
+      prompt: finalPrompt,
+      metadata: {
+        url: songsterrUrl,
+        artist: promptResult.metadata.artist,
+        title: promptResult.metadata.title,
+        trackType: promptResult.metadata.trackType,
+        suggestedPart,
+        ...(promptResult.metadata.trackName
+          ? { trackName: promptResult.metadata.trackName }
+          : {}),
       },
     };
 
-    // Отправляем ответ
+    console.log(`✅ Prompt generated successfully`);
     return NextResponse.json(response);
   } catch (error) {
-    console.error("Error in generate-from-songsterr API:", error);
+    console.error("Error generating prompt from Songsterr:", error);
     return NextResponse.json(
       {
         error: error instanceof Error ? error.message : "Internal server error",

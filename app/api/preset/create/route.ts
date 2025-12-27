@@ -20,9 +20,9 @@ interface CreatePresetRequest {
   imageUrl?: string | null;
   tabsUrl?: string;
   pickup: {
-    type: string;
-    tone: number;
-    position: string;
+    type: "humbucker" | "single";
+    tone: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+    position: "neck" | "bridge" | "middle";
   };
 }
 
