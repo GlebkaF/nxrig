@@ -1,6 +1,1049 @@
 {
   "generations": [
     {
+      "timestamp": "2025-12-27T06:20:34.181Z",
+      "originalPrompt": "Carlos Santana Europa Lead Guitar Distortion Sound",
+      "proDescription": {
+        "tone_title": "Carlos Santana – Europa Lead Sound",
+        "genre": "Latin Rock / Blues",
+        "sound_description": "Smooth, sustaining, singing lead tone with a warm midrange focus, gentle attack, fluid sustain, and a touch of expressive dynamics. The sound is thick but never harsh, with clear note separation and subtle harmonic richness.",
+        "guitar_rig_description": "Noise Gate: not used (Santana’s rig is dynamic and touch-sensitive, with minimal noise suppression to retain nuance). Compressor: lightly used to enhance sustain and even out dynamics without squashing expression. Overdrive/Distortion: used—a classic, smooth, mid-focused overdrive pedal before the amp to push the input and create creamy sustain, avoiding excessive crunch or fizz. Amplifier: used—a high-gain, warm-voiced tube amplifier (like a Mesa Boogie Mark I), set for natural tube saturation and rich sustain. Cabinet: used—closed-back 1x12 or 2x12 cabinet with vintage-voiced speakers for a rounded, focused projection. EQ: used—emphasis on mids, slightly rolled-off treble and bass to maintain warmth and clarity. Modulation: not used (Santana’s lead tone is generally unmodulated and pure). Delay: not used (if any, only a minimal short slapback for depth, but typically omitted in this context). Reverb: used—moderate plate or spring reverb to add space and depth, but kept subtle to avoid washing out the lead line.",
+        "references": [
+          "Santana – Europa",
+          "Santana – Samba Pa Ti",
+          "Santana – Black Magic Woman (lead parts)"
+        ],
+        "song_part": "Lead melody / solo",
+        "preferred_pickup": "neck humbucker, tone = 7",
+        "additional_info": "Santana is known for using a PRS or Yamaha SG guitar with medium gauge strings and playing with his fingers or soft picks for extra warmth. A gentle touch and expressive vibrato are crucial to achieving this tone."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "Ibanez TS808 Tube Screamer",
+          "MXR M108S Ten Band EQ",
+          "Strymon Flint (Reverb side: Plate or Spring mode)"
+        ],
+        "amplifier": "Mesa Boogie Mark I Combo",
+        "cabinet": "Mesa Boogie 1x12 Thiele Cabinet with Electro-Voice EVM12L speaker",
+        "settings": {
+          "amp": {
+            "Volume 1": 7,
+            "Volume 2": 4,
+            "Treble": 6,
+            "Bass": 4,
+            "Middle": 7,
+            "Presence": 3,
+            "Master": 5,
+            "Reverb": 0
+          },
+          "compressor": {
+            "Sustain": 10,
+            "Level": 9,
+            "Blend": 50,
+            "Tone": 7
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 5,
+            "Level": 7
+          },
+          "eq": {
+            "100Hz": "-2dB",
+            "200Hz": "0dB",
+            "400Hz": "+2dB",
+            "800Hz": "+4dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "0dB",
+            "6.4kHz": "-2dB"
+          },
+          "reverb": {
+            "Decay": 3,
+            "Mix": 20,
+            "Color": "neutral"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 43,
+            "Clipping": 36
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 62,
+            "Drive": 41,
+            "Tone": 37
+          }
+        },
+        "amplifier": {
+          "type": "Cali Crunch",
+          "enabled": true,
+          "params": {
+            "Gain": 64,
+            "Master": 58,
+            "Bass": 39,
+            "Middle": 68,
+            "Treble": 32,
+            "Presence": 44
+          }
+        },
+        "cabinet": {
+          "type": "CALI 112",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "LowCut": 46,
+            "HighCut": 41
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 41,
+            "62": 44,
+            "125": 46,
+            "250": 51,
+            "500": 57,
+            "1000": 68,
+            "2000": 67,
+            "4000": 57,
+            "8000": 42,
+            "16000": 39,
+            "Vol": 54
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 38,
+            "Decay": 43
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 43,
+                "Clipping": 36
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 62,
+                "Drive": 41,
+                "Tone": 37
+              }
+            },
+            "amplifier": {
+              "type": "Cali Crunch",
+              "enabled": true,
+              "params": {
+                "Gain": 64,
+                "Master": 58,
+                "Bass": 39,
+                "Middle": 68,
+                "Treble": 32,
+                "Presence": 44
+              }
+            },
+            "cabinet": {
+              "type": "CALI 112",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "LowCut": 46,
+                "HighCut": 41
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 41,
+                "62": 44,
+                "125": 46,
+                "250": 51,
+                "500": 57,
+                "1000": 68,
+                "2000": 67,
+                "4000": 57,
+                "8000": 42,
+                "16000": 39,
+                "Vol": 54
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 43
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Carlos Santana Europa Lead Guitar Distortion Sound",
+          "timestamp": "2025-12-27T06:20:34.181Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/carlos-santana-europa-tab-s451",
+        "artist": "Carlos Santana",
+        "title": "Europa",
+        "trackType": "Lead",
+        "suggestedPart": "Guitar Distortion Sound",
+        "trackName": "Carlos Santana (lead) - Distortion Guitar"
+      },
+      "id": "gen_mjnwvxn6_zwkgxaatj",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-12-27T06:15:41.792Z",
+      "originalPrompt": "Carlos Santana Europa Lead Guitar Distortion Sound",
+      "proDescription": {
+        "tone_title": "Europa Lead Guitar Distortion Sound",
+        "genre": "Latin Rock / Blues",
+        "sound_description": "Smooth, sustaining, and singing lead tone with a warm midrange emphasis, creamy overdrive, rounded attack, and expressive dynamics. Moderate brightness with controlled highs, deep harmonic content, and prominent sustain. The sound is fluid and vocal-like, allowing for expressive bends and vibrato.",
+        "guitar_rig_description": "Noise gate: not used (natural dynamics preferred). Compressor: placed early for subtle sustain and evenness without squashing dynamics. Overdrive/distortion/boost: classic low-to-medium gain overdrive pedal (such as a Tube Screamer) to push the amp and emphasize midrange. Amplifier: vintage-style tube amp in lead channel (Mesa Boogie Mark I or similar), set for moderate overdrive and rich harmonics. Cabinet: 1x12 or 2x12 open-back cab with neutral-voiced speakers for a balanced projection. EQ: slight mid boost and gentle treble roll-off to maintain warmth and reduce harshness. Modulation: not used. Delay: subtle analog or tape-style delay for spaciousness, set for short repeats. Reverb: moderate spring or plate reverb for depth and sustain.",
+        "references": [
+          "Santana – Europa",
+          "Santana – Samba Pa Ti",
+          "Santana – Black Magic Woman (lead parts)"
+        ],
+        "song_part": "lead melody / solo",
+        "preferred_pickup": "neck humbucker, tone = 7 (slightly rolled back for warmth)",
+        "additional_info": "Light to medium string gauge (e.g., 10-46 or 11-49) for bend control and sustain. Use expressive finger vibrato and controlled picking attack. Volume knob can be used to clean up the tone. Santana typically uses PRS guitars and Dumble/Mesa Boogie amps."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp Compressor",
+          "Ibanez TS808 Tube Screamer",
+          "Boss GE-7 Equalizer (slight mid boost, gentle high cut)",
+          "MXR Carbon Copy Analog Delay"
+        ],
+        "amplifier": "Mesa/Boogie Mark I (Combo or Head, Lead Channel)",
+        "cabinet": "Mesa/Boogie 1x12 Widebody Open Back with Celestion C90 Black Shadow",
+        "settings": {
+          "amp": {
+            "Gain": 6,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 3,
+            "Master": 5,
+            "Reverb": 4
+          },
+          "compressor": {
+            "Output": 2,
+            "Sensitivity": 6
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 4.5,
+            "Level": 7
+          },
+          "eq": {
+            "100Hz": 0,
+            "200Hz": "+1dB",
+            "400Hz": "+2dB",
+            "800Hz": "+3dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "-2dB",
+            "6.4kHz": "-4dB"
+          },
+          "delay": {
+            "Delay Time": "380ms",
+            "Regen": 2,
+            "Mix": 15
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 60,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 40,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Cali Crunch",
+          "enabled": true,
+          "params": {
+            "Gain": 55,
+            "Master": 65,
+            "Bass": 52,
+            "Middle": 65,
+            "Treble": 42,
+            "Presence": 45
+          }
+        },
+        "cabinet": {
+          "type": "CALI 112",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 42
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 52,
+            "220": 56,
+            "500": 65,
+            "1200": 63,
+            "2600": 46,
+            "6400": 40
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 37,
+            "Rate": 30,
+            "Echo": 42
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 60,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 40,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Cali Crunch",
+              "enabled": true,
+              "params": {
+                "Gain": 55,
+                "Master": 65,
+                "Bass": 52,
+                "Middle": 65,
+                "Treble": 42,
+                "Presence": 45
+              }
+            },
+            "cabinet": {
+              "type": "CALI 112",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 52,
+                "220": 56,
+                "500": 65,
+                "1200": 63,
+                "2600": 46,
+                "6400": 40
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 37,
+                "Rate": 30,
+                "Echo": 42
+              }
+            }
+          },
+          "prompt": "Carlos Santana Europa Lead Guitar Distortion Sound",
+          "timestamp": "2025-12-27T06:15:41.792Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/carlos-santana-europa-tab-s451",
+        "artist": "Carlos Santana",
+        "title": "Europa",
+        "trackType": "Lead",
+        "suggestedPart": "Guitar Distortion Sound",
+        "trackName": "Carlos Santana (lead) - Distortion Guitar"
+      },
+      "id": "gen_mjnwpo18_ofankp4v6",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-12-27T06:09:19.609Z",
+      "originalPrompt": "George Michael Careless Whisper Clean Electric Guitar",
+      "proDescription": {
+        "tone_title": "Careless Whisper Clean Electric Guitar",
+        "genre": "80s Pop / Soft Rock",
+        "sound_description": "Warm, smooth, and clean with a slight shimmer. The tone is clear and rounded, without harshness or excessive brightness. It has moderate sustain and gentle dynamics, designed to sit well in a polished pop production. There is subtle ambiance for depth, but the sound remains intimate and controlled.",
+        "guitar_rig_description": "Noise gate: used lightly to keep the signal clean and free from hum or hiss. Compressor: used to even out dynamics and enhance sustain, providing a smooth and polished clean tone. Overdrive/distortion/boost: not used, the signal remains clean throughout. Amplifier: clean channel of a classic tube amp (such as a Roland JC-120 or Fender Twin Reverb) for pristine cleans with slight warmth. Cabinet: matching open-back 2x12 cab for a spacious, airy character. EQ: subtle mid and treble boost to add clarity, with a gentle low cut to avoid muddiness. Modulation: light chorus to provide shimmer and width, typical of '80s clean tones. Delay: very subtle slapback or short delay for spatial enhancement, mixed low. Reverb: plate or hall reverb for gentle, lush ambiance without overwhelming the dry signal.",
+        "references": [
+          "George Michael - Careless Whisper (live performances)",
+          "Eric Clapton - Wonderful Tonight (clean tone)",
+          "Phil Collins - One More Night (clean guitar)"
+        ],
+        "song_part": "rhythm and melodic fills throughout the song",
+        "preferred_pickup": "neck single-coil or neck humbucker, tone = 8",
+        "additional_info": "Use a soft touch and fingerstyle or gentle pick attack for smooth articulation. Lighter gauge strings (9-42 or 10-46) for ease of playability and clarity in cleans. Avoid aggressive strumming; aim for chord arpeggiation and sensitive dynamics."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "MXR Dyna Comp Compressor",
+          "Boss GE-7 Equalizer",
+          "Boss CE-2W Chorus (set to Standard mode)",
+          "TC Electronic Flashback Delay Mini (subtle slapback)",
+          "Strymon BlueSky Reverberator (Plate mode, subtle mix)"
+        ],
+        "amplifier": "Roland JC-120 Jazz Chorus",
+        "cabinet": "Roland JC-120 built-in 2x12 combo (2x12” Roland Silver Cone speakers, open-back)",
+        "settings": {
+          "amp": {
+            "Volume (Channel 2)": 4,
+            "Treble": 6,
+            "Middle": 5,
+            "Bass": 4,
+            "Chorus": "On, Depth 4, Rate 3",
+            "Reverb": "Off (use external pedal for plate reverb)"
+          },
+          "noise_gate": {
+            "Threshold": "Just above noise floor, minimal reduction"
+          },
+          "compressor": {
+            "Sensitivity": 7,
+            "Output": 5
+          },
+          "eq": {
+            "100Hz": "-2dB",
+            "400Hz": "0dB",
+            "800Hz": "+1dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "+3dB",
+            "6.4kHz": "+2dB",
+            "Level": "Unity"
+          },
+          "chorus": {
+            "Depth": 4,
+            "Rate": 3
+          },
+          "delay": {
+            "Time": "90ms",
+            "Feedback": "1 repeat",
+            "Mix": "Low (9 o'clock)"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": "Short-medium",
+            "Mix": "Low (8 o'clock)"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 40,
+            "Decay": 40
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 65,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 42,
+            "Depth": 55
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Jazz Clean",
+          "enabled": true,
+          "params": {
+            "Gain": 42,
+            "Master": 60,
+            "Bass": 46,
+            "Middle": 56,
+            "Treble": 60,
+            "Bright": 54
+          }
+        },
+        "cabinet": {
+          "type": "JZ120",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 58,
+            "HighCut": 53
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 40,
+            "220": 45,
+            "500": 52,
+            "1200": 58,
+            "2600": 60,
+            "6400": 54
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 48,
+            "Decay": 42
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 28,
+            "Feedback": 18,
+            "Time": 30
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 40,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 65,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 42,
+                "Depth": 55
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Jazz Clean",
+              "enabled": true,
+              "params": {
+                "Gain": 42,
+                "Master": 60,
+                "Bass": 46,
+                "Middle": 56,
+                "Treble": 60,
+                "Bright": 54
+              }
+            },
+            "cabinet": {
+              "type": "JZ120",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 58,
+                "HighCut": 53
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 40,
+                "220": 45,
+                "500": 52,
+                "1200": 58,
+                "2600": 60,
+                "6400": 54
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 48,
+                "Decay": 42
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 28,
+                "Feedback": 18,
+                "Time": 30
+              }
+            }
+          },
+          "prompt": "George Michael Careless Whisper Clean Electric Guitar",
+          "timestamp": "2025-12-27T06:09:19.609Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/george-michael-careless-whisper-tab-s36399t2",
+        "artist": "George Michael",
+        "title": "Careless Whisper",
+        "trackType": "Lead",
+        "suggestedPart": "Clean Electric Guitar",
+        "trackName": "Clean Gt.            - Electric Guitar (clean)"
+      },
+      "id": "gen_mjnwhh51_o8ybqb8zv",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2025-12-27T06:07:21.662Z",
+      "originalPrompt": "Seether Careless Whisper Clean Lead Guitar Tone",
+      "proDescription": {
+        "tone_title": "Careless Whisper - Clean Lead",
+        "genre": "Post-Grunge / Alternative Rock Ballad",
+        "sound_description": "Smooth, clean, and expressive lead tone with glassy highs, gentle compression, soft attack, and ambient depth. Notes sing with clarity and sustain, but are not harsh or brittle. Slight warmth and presence for emotive solos.",
+        "guitar_rig_description": "Noise gate: used with light settings to keep the signal clean and reduce hiss in quiet passages. Compressor: used for subtle sustain and even dynamics, ensuring each note in the lead line is articulated and smooth. Overdrive/distortion/boost: not used; strictly a clean tone. Amplifier: clean channel of a high-headroom amp (such as Fender Twin Reverb or Roland JC-120), set for bright and open response. Cabinet: matching 2x12 or 4x12 clean cab, focused on full-range clarity. EQ: applied to emphasize upper mids and presence while rolling off harsh highs and excessive lows, ensuring the lead cuts through. Modulation: subtle chorus or stereo chorus for width and shimmer, without overwhelming the original signal. Delay: used with moderate mix and short to medium repeats, creating space and ambience around the lead notes. Reverb: lush plate or hall reverb, providing a sense of space and sustaining the notes naturally.",
+        "references": [
+          "Seether - Careless Whisper (cover)",
+          "George Michael - Careless Whisper (original solo for reference)",
+          "Staind - Outside (clean lead tones)"
+        ],
+        "song_part": "Lead guitar (saxophone melody line)",
+        "preferred_pickup": "neck single-coil or neck humbucker with tone rolled back slightly for warmth",
+        "additional_info": "Use expressive vibrato and slides to emulate the saxophone phrasing. Lighter gauge strings (9-42 or 10-46) for easy bending and smooth legato. Picking hand should be gentle for a softer attack. If using a humbucker-equipped guitar, consider coil-splitting or lowering tone knob for clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Origin Effects Cali76 Compact Compressor",
+          "MXR 10-Band EQ",
+          "Boss CE-2W Chorus (in CE-2 Stereo mode, depth at 10 o’clock, rate at 11 o’clock)",
+          "TC Electronic Flashback Delay (Analog setting, delay time ~380ms, feedback at 25%, mix at 30%)",
+          "Strymon BlueSky Reverberator (Plate mode, decay at 2 o’clock, mix at noon, shimmer off)"
+        ],
+        "amplifier": "Roland JC-120 Jazz Chorus",
+        "cabinet": "Roland JC-120 built-in 2x12 cabinet with 12\" Roland speakers (full-range, stereo)",
+        "settings": {
+          "amp": {
+            "Volume": 4,
+            "Treble": 6,
+            "Middle": 5,
+            "Bass": 4,
+            "Bright Switch": "ON",
+            "Chorus": "OFF (use external chorus pedal)",
+            "Reverb": "OFF (use external reverb pedal)"
+          },
+          "compressor": {
+            "Sustain": 11,
+            "Attack": 2,
+            "Level": 1
+          },
+          "eq": {
+            "80Hz": "-2dB",
+            "250Hz": "-1dB",
+            "1kHz": "+2dB",
+            "2kHz": "+3dB",
+            "4kHz": "+2dB",
+            "8kHz": "-2dB"
+          },
+          "chorus": {
+            "Rate": "11 o’clock",
+            "Depth": "10 o’clock",
+            "Mix": "50%"
+          },
+          "delay": {
+            "Type": "Analog",
+            "Time": "380ms",
+            "Feedback": "25%",
+            "Mix": "30%"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": "2 o’clock",
+            "Mix": "12 o’clock"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 40,
+            "Decay": 60
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 52,
+            "Threshold": 58,
+            "Ratio": 62,
+            "Release": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 32,
+            "Depth": 38
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Jazz Clean",
+          "enabled": true,
+          "params": {
+            "Gain": 42,
+            "Master": 60,
+            "Bass": 44,
+            "Middle": 60,
+            "Treble": 56,
+            "Bright": 65
+          }
+        },
+        "cabinet": {
+          "type": "JZ120",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 60,
+            "HighCut": 42
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 36,
+            "62": 40,
+            "125": 44,
+            "250": 48,
+            "500": 54,
+            "1000": 62,
+            "2000": 68,
+            "4000": 60,
+            "8000": 52,
+            "16000": 40,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 62,
+            "Decay": 66
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 44,
+            "Rate": 42,
+            "Echo": 48
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 40,
+                "Decay": 60
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 52,
+                "Threshold": 58,
+                "Ratio": 62,
+                "Release": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 32,
+                "Depth": 38
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Jazz Clean",
+              "enabled": true,
+              "params": {
+                "Gain": 42,
+                "Master": 60,
+                "Bass": 44,
+                "Middle": 60,
+                "Treble": 56,
+                "Bright": 65
+              }
+            },
+            "cabinet": {
+              "type": "JZ120",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 60,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 36,
+                "62": 40,
+                "125": 44,
+                "250": 48,
+                "500": 54,
+                "1000": 62,
+                "2000": 68,
+                "4000": 60,
+                "8000": 52,
+                "16000": 40,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 62,
+                "Decay": 66
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 44,
+                "Rate": 42,
+                "Echo": 48
+              }
+            }
+          },
+          "prompt": "Seether Careless Whisper Clean Lead Guitar Tone",
+          "timestamp": "2025-12-27T06:07:21.662Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/seether-careless-whisper-tab-s504684",
+        "artist": "Seether",
+        "title": "Careless Whisper",
+        "trackType": "Lead",
+        "suggestedPart": "Lead Guitar Tone",
+        "trackName": "Troy McLawhorn - Lead Clean Guitar - Electric Guitar (clean)"
+      },
+      "id": "gen_mjnwey64_uwvxkfkn1",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-27T05:34:25.211Z",
       "originalPrompt": "Amatory Черно-белые Дни Distortion Rhythm Guitar",
       "proDescription": {
@@ -29034,6 +30077,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-27T05:39:30.895Z"
+    "lastUpdated": "2025-12-27T06:20:34.199Z"
   }
 }

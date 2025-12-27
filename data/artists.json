@@ -238,5 +238,17 @@
     "title": "Amatory",
     "slug": "amatory",
     "description": "Amatory is a Russian metalcore band known for heavy riffs, emotional lyrics, and a blend of metalcore, alternative, and modern metal influences."
+  },
+  {
+    "id": 41,
+    "title": "George Michael",
+    "slug": "george-michael",
+    "description": "George Michael was a British singer and songwriter known for his soulful voice, pop anthems, and emotional depth, shaping pop music from the 1980s onward."
+  },
+  {
+    "id": 42,
+    "title": "Carlos Santana",
+    "slug": "carlos-santana",
+    "description": "Carlos Santana is a legendary guitarist known for blending rock, blues, and Latin rhythms, creating a distinctive, soulful sound that influenced generations of musicians."
   }
 ]
