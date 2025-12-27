@@ -232,5 +232,11 @@
     "title": "Elvis Presley",
     "slug": "elvis-presley",
     "description": "Elvis Presley was a legendary American singer and cultural icon whose groundbreaking style and charisma helped popularize rock and roll worldwide."
+  },
+  {
+    "id": 40,
+    "title": "Amatory",
+    "slug": "amatory",
+    "description": "Amatory is a Russian metalcore band known for heavy riffs, emotional lyrics, and a blend of metalcore, alternative, and modern metal influences."
   }
 ]

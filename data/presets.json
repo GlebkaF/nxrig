@@ -8103,5 +8103,117 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/elvis-presley-crying-in-the-chapel-tab-s2970348t1",
     "createdAt": "2025-12-25T06:08:55.804Z",
     "updatedAt": "2025-12-25T06:08:55.804Z"
+  },
+  {
+    "id": "gen_mjnv8l3k_p1oa6717l",
+    "origin": {
+      "artistId": 40,
+      "song": "Черно-белые Дни",
+      "part": "Distortion Rhythm Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Tight, aggressive, and punchy high-gain rhythm sound with clear note definition, moderate low-end, scooped mids, and crisp attack. The tone is focused and modern, with controlled noise and limited ambience for maximum clarity in dense mixes.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 65,
+          "Drive": 15,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 60,
+          "Master": 60,
+          "Bass": 45,
+          "Middle": 35,
+          "Treble": 65,
+          "Presence": 65
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 60,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 45,
+          "62": 47,
+          "125": 48,
+          "250": 45,
+          "500": 40,
+          "1000": 38,
+          "2000": 50,
+          "4000": 60,
+          "8000": 65,
+          "16000": 62,
+          "Vol": 55
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 5,
+      "position": "bridge"
+    },
+    "slug": "cherno-belye-dni-guitar-distortion-rhythm-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/amatory-tab-s25195",
+    "createdAt": "2025-12-27T06:04:47.486Z",
+    "updatedAt": "2025-12-27T06:04:47.486Z"
   }
 ]

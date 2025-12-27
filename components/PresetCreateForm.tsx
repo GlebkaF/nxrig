@@ -301,13 +301,11 @@ export function PresetCreateForm({
                 required={!isNewArtist}
               >
                 <option value="">Выберите артиста</option>
-                {artists
-                  .sort((a, b) => a.title.localeCompare(b.title))
-                  .map((artist) => (
-                    <option key={artist.id} value={artist.id}>
-                      {artist.title}
-                    </option>
-                  ))}
+                {artists.map((artist) => (
+                  <option key={artist.id} value={artist.id}>
+                    {artist.title}
+                  </option>
+                ))}
               </select>
             )}
 
