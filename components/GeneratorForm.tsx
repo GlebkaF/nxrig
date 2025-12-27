@@ -54,7 +54,7 @@ export function GeneratorForm(): React.ReactElement {
         setIsLoading(false);
       }
     } else {
-      // Генерация из Songsterr URL
+      // Генерация из Songsterr URL (два последовательных вызова)
       if (!songsterrUrl.trim()) {
         setError("Пожалуйста, введите ссылку на Songsterr");
         return;
@@ -64,7 +64,9 @@ export function GeneratorForm(): React.ReactElement {
       setError("");
 
       try {
-        const response = await fetch("/api/generate-from-songsterr", {
+        // Шаг 1: Генерация промпта из Songsterr URL
+        console.log("Step 1: Generating prompt from Songsterr...");
+        const promptResponse = await fetch("/api/songsterr-to-prompt", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -75,21 +77,56 @@ export function GeneratorForm(): React.ReactElement {
           }),
         });
 
-        if (!response.ok) {
-          const errorData = (await response.json()) as { error: string };
-          throw new Error(errorData.error || `Ошибка: ${response.statusText}`);
+        if (!promptResponse.ok) {
+          const errorData = (await promptResponse.json()) as { error: string };
+          throw new Error(
+            errorData.error || `Ошибка: ${promptResponse.statusText}`,
+          );
         }
 
-        const data = (await response.json()) as {
-          generationId: string;
-          message: string;
+        const promptData = (await promptResponse.json()) as {
           prompt: string;
+          metadata: {
+            url: string;
+            artist: string;
+            title: string;
+            trackType: string;
+            trackName?: string;
+            suggestedPart: string;
+          };
         };
 
-        console.log(`Generated prompt from Songsterr: ${data.prompt}`);
+        console.log(`Step 1 complete: "${promptData.prompt}"`);
+
+        // Шаг 2: Генерация цепи из промпта
+        console.log("Step 2: Generating chain...");
+        const chainResponse = await fetch("/api/generate-chain", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            prompt: promptData.prompt,
+            songsterrData: promptData.metadata,
+          }),
+        });
+
+        if (!chainResponse.ok) {
+          const errorData = (await chainResponse.json()) as { error: string };
+          throw new Error(
+            errorData.error || `Ошибка: ${chainResponse.statusText}`,
+          );
+        }
+
+        const chainData = (await chainResponse.json()) as {
+          generationId: string;
+          message: string;
+        };
+
+        console.log("Step 2 complete: Chain generated");
 
         // Перенаправляем на страницу с результатом генерации
-        router.push(`/admin/generation/${data.generationId}`);
+        router.push(`/admin/generation/${chainData.generationId}`);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Произошла ошибка");
         setIsLoading(false);

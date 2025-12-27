@@ -158,6 +158,23 @@ export interface SongsterrPromptResult {
 }
 
 /**
+ * Формирует финальный промпт с AI-сгенерированной частью трека
+ * @param metadata Метаданные трека
+ * @param suggestedPart AI-сгенерированное название части
+ * @returns Промпт в формате "Artist Song TrackType Guitar SuggestedPart"
+ */
+export function buildFinalPrompt(
+  metadata: {
+    artist: string;
+    title: string;
+    trackType: string;
+  },
+  suggestedPart: string,
+): string {
+  return `${metadata.artist} ${metadata.title} ${metadata.trackType} Guitar ${suggestedPart}`;
+}
+
+/**
  * Формирует промпт для генератора из данных Songsterr
  * @param songData Данные о песне из Songsterr
  * @param trackType Опциональный тип трека (Rhythm/Solo/Lead). Если не указан, выбирается автоматически

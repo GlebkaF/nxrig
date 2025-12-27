@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { GenerationRecord } from "../lib/jsondb/types";
 import { ValidatedArtist } from "../lib/public/schemas/artist";
-import { smartMapToPart } from "../lib/utils/track-mapping";
 
 interface PresetCreateFormProps {
   generation: GenerationRecord;
@@ -21,9 +20,9 @@ interface PresetFormData {
   imageUrl: string;
   tabsUrl: string;
   pickup: {
-    type: string;
-    tone: number;
-    position: string;
+    type: "humbucker" | "single";
+    tone: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+    position: "neck" | "bridge" | "middle";
   };
 }
 
@@ -45,7 +44,9 @@ export function PresetCreateForm({
     imageUrl: "/images/cover/default-cover.webp",
     tabsUrl: "",
     pickup: {
-      type: generation.proDescription.preferred_pickup || "",
+      type: generation.proDescription.preferred_pickup.includes("single")
+        ? "single"
+        : "humbucker",
       tone: 5,
       position: "bridge",
     },
@@ -55,8 +56,7 @@ export function PresetCreateForm({
   useEffect(() => {
     if (!generation.songsterrData) return;
 
-    const { artist, title, trackType, trackName, url } =
-      generation.songsterrData;
+    const { artist, title, suggestedPart, url } = generation.songsterrData;
 
     // 1. Поиск существующего артиста (fuzzy match)
     const foundArtist = artists.find(
@@ -73,7 +73,7 @@ export function PresetCreateForm({
         ...prev,
         artistId: foundArtist.id,
         song: title,
-        part: smartMapToPart(trackType, trackName),
+        part: suggestedPart,
         tabsUrl: url,
       }));
       console.log(
@@ -87,15 +87,13 @@ export function PresetCreateForm({
         newArtistTitle: artist,
         newArtistDescription: `Описание для ${artist}`,
         song: title,
-        part: smartMapToPart(trackType, trackName),
+        part: suggestedPart,
         tabsUrl: url,
       }));
       console.log(`📝 Создание нового артиста: ${artist}`);
     }
 
-    console.log(
-      `🎵 Автозаполнение: ${artist} - ${title} (${smartMapToPart(trackType, trackName)})`,
-    );
+    console.log(`🎵 Автозаполнение: ${artist} - ${title} (${suggestedPart})`);
   }, [generation.songsterrData, artists]);
 
   // Получаем последнюю версию chain из генерации (не используется в UI, но может понадобиться)
@@ -146,11 +144,7 @@ export function PresetCreateForm({
       if (!formData.pickup.type.trim()) {
         throw new Error("Тип звукоснимателя обязателен");
       }
-      if (
-        !formData.pickup.tone ||
-        formData.pickup.tone < 1 ||
-        formData.pickup.tone > 10
-      ) {
+      if (formData.pickup.tone < 1 || formData.pickup.tone > 10) {
         throw new Error("Тон звукоснимателя должен быть от 1 до 10");
       }
 
@@ -227,8 +221,8 @@ export function PresetCreateForm({
                 {generation.songsterrData.title}
               </p>
               <p>
-                <span className="font-medium">Тип трека:</span>{" "}
-                {generation.songsterrData.trackType}
+                <span className="font-medium">Часть песни (AI):</span>{" "}
+                {generation.songsterrData.suggestedPart}
               </p>
               <p className="text-xs text-green-600 mt-2">
                 💡 Проверьте автозаполненные поля ниже и внесите правки при
@@ -307,13 +301,11 @@ export function PresetCreateForm({
                 required={!isNewArtist}
               >
                 <option value="">Выберите артиста</option>
-                {artists
-                  .sort((a, b) => a.title.localeCompare(b.title))
-                  .map((artist) => (
-                    <option key={artist.id} value={artist.id}>
-                      {artist.title}
-                    </option>
-                  ))}
+                {artists.map((artist) => (
+                  <option key={artist.id} value={artist.id}>
+                    {artist.title}
+                  </option>
+                ))}
               </select>
             )}
 
@@ -424,9 +416,10 @@ export function PresetCreateForm({
               <select
                 value={formData.pickup.type}
                 onChange={(e) => {
+                  const value = e.target.value as "humbucker" | "single";
                   setFormData((prev) => ({
                     ...prev,
-                    pickup: { ...prev.pickup, type: e.target.value },
+                    pickup: { ...prev.pickup, type: value },
                   }));
                 }}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -442,9 +435,20 @@ export function PresetCreateForm({
               <select
                 value={formData.pickup.tone}
                 onChange={(e) => {
+                  const value = Number(e.target.value) as
+                    | 1
+                    | 2
+                    | 3
+                    | 4
+                    | 5
+                    | 6
+                    | 7
+                    | 8
+                    | 9
+                    | 10;
                   setFormData((prev) => ({
                     ...prev,
-                    pickup: { ...prev.pickup, tone: Number(e.target.value) },
+                    pickup: { ...prev.pickup, tone: value },
                   }));
                 }}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -464,9 +468,10 @@ export function PresetCreateForm({
               <select
                 value={formData.pickup.position}
                 onChange={(e) => {
+                  const value = e.target.value as "neck" | "bridge" | "middle";
                   setFormData((prev) => ({
                     ...prev,
-                    pickup: { ...prev.pickup, position: e.target.value },
+                    pickup: { ...prev.pickup, position: value },
                   }));
                 }}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"

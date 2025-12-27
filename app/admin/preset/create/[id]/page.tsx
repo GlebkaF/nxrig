@@ -62,6 +62,12 @@ export default async function PresetCreatePage({
     );
   }
 
+  // Сортируем артистов на сервере, чтобы избежать hydration mismatch
+  const sortedArtists = [...artistsRaw].sort((a, b) => {
+    // Используем простую сортировку с явной локалью для детерминированности
+    return a.title.localeCompare(b.title, "en", { sensitivity: "base" });
+  });
+
   return (
     <div className="min-h-screen bg-gray-100">
       <header className="bg-white shadow-sm border-b">
@@ -90,7 +96,7 @@ export default async function PresetCreatePage({
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        <PresetCreateForm generation={generation} artists={artistsRaw} />
+        <PresetCreateForm generation={generation} artists={sortedArtists} />
       </main>
     </div>
   );

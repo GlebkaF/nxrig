@@ -8103,5 +8103,332 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/elvis-presley-crying-in-the-chapel-tab-s2970348t1",
     "createdAt": "2025-12-25T06:08:55.804Z",
     "updatedAt": "2025-12-25T06:08:55.804Z"
+  },
+  {
+    "id": "gen_mjnv8l3k_p1oa6717l",
+    "origin": {
+      "artistId": 40,
+      "song": "Черно-белые Дни",
+      "part": "Distortion Rhythm Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Tight, aggressive, and punchy high-gain rhythm sound with clear note definition, moderate low-end, scooped mids, and crisp attack. The tone is focused and modern, with controlled noise and limited ambience for maximum clarity in dense mixes.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 65,
+          "Drive": 15,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 60,
+          "Master": 60,
+          "Bass": 45,
+          "Middle": 35,
+          "Treble": 65,
+          "Presence": 65
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 60,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 45,
+          "62": 47,
+          "125": 48,
+          "250": 45,
+          "500": 40,
+          "1000": 38,
+          "2000": 50,
+          "4000": 60,
+          "8000": 65,
+          "16000": 62,
+          "Vol": 55
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 5,
+      "position": "bridge"
+    },
+    "slug": "cherno-belye-dni-guitar-distortion-rhythm-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/amatory-tab-s25195",
+    "createdAt": "2025-12-27T06:04:47.486Z",
+    "updatedAt": "2025-12-27T06:04:47.486Z"
+  },
+  {
+    "id": "gen_mjnwhh51_o8ybqb8zv",
+    "origin": {
+      "artistId": 41,
+      "song": "Careless Whisper",
+      "part": "Clean Electric Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Warm, smooth, and clean with a slight shimmer. The tone is clear and rounded, without harshness or excessive brightness. It has moderate sustain and gentle dynamics, designed to sit well in a polished pop production. There is subtle ambiance for depth, but the sound remains intimate and controlled.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 40,
+          "Decay": 40
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 65,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 42,
+          "Depth": 55
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Jazz Clean",
+        "enabled": true,
+        "params": {
+          "Gain": 42,
+          "Master": 60,
+          "Bass": 46,
+          "Middle": 56,
+          "Treble": 60,
+          "Bright": 54
+        }
+      },
+      "cabinet": {
+        "type": "JZ120",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 58,
+          "HighCut": 53
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 40,
+          "220": 45,
+          "500": 52,
+          "1200": 58,
+          "2600": 60,
+          "6400": 54
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 48,
+          "Decay": 42
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 28,
+          "Feedback": 18,
+          "Time": 30
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 8,
+      "position": "neck"
+    },
+    "slug": "careless-whisper-guitar-clean-electric-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/george-michael-careless-whisper-tab-s36399t2",
+    "createdAt": "2025-12-27T06:13:16.818Z",
+    "updatedAt": "2025-12-27T06:13:16.818Z"
+  },
+  {
+    "id": "gen_mjnwvxn6_zwkgxaatj",
+    "origin": {
+      "artistId": 42,
+      "song": "Europa",
+      "part": "Guitar Distortion Sound",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, sustaining, singing lead tone with a warm midrange focus, gentle attack, fluid sustain, and a touch of expressive dynamics. The sound is thick but never harsh, with clear note separation and subtle harmonic richness.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 43,
+          "Clipping": 36
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 62,
+          "Drive": 41,
+          "Tone": 37
+        }
+      },
+      "amplifier": {
+        "type": "Cali Crunch",
+        "enabled": true,
+        "params": {
+          "Gain": 64,
+          "Master": 58,
+          "Bass": 39,
+          "Middle": 68,
+          "Treble": 32,
+          "Presence": 44
+        }
+      },
+      "cabinet": {
+        "type": "CALI 112",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "LowCut": 46,
+          "HighCut": 41
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 41,
+          "62": 44,
+          "125": 46,
+          "250": 51,
+          "500": 57,
+          "1000": 68,
+          "2000": 67,
+          "4000": 57,
+          "8000": 42,
+          "16000": 39,
+          "Vol": 54
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 38,
+          "Decay": 43
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "europa-guitar-guitar-distortion-sound",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/carlos-santana-europa-tab-s451",
+    "createdAt": "2025-12-27T06:23:05.606Z",
+    "updatedAt": "2025-12-27T06:23:05.606Z"
   }
 ]

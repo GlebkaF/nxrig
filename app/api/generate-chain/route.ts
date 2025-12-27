@@ -7,6 +7,14 @@ export function generateStaticParams() {
 
 interface GenerateChainRequest {
   prompt: string;
+  songsterrData?: {
+    url: string;
+    artist: string;
+    title: string;
+    trackType: string;
+    trackName?: string;
+    suggestedPart: string;
+  };
 }
 
 interface GenerateChainResponse {
@@ -19,26 +27,48 @@ interface ErrorResponse {
 }
 
 /**
- * API endpoint для генерации Chain на основе текстового описания
+ * API endpoint для генерации Chain на основе текстового описания или промпта из Songsterr
  * POST /api/generate-chain
- * Body: { prompt: string }
+ * Body: { prompt: string, songsterrData?: {...} }
  */
 export async function POST(
-  request: Request
+  request: Request,
 ): Promise<NextResponse<GenerateChainResponse | ErrorResponse>> {
   try {
-    // Получаем prompt из тела запроса
-    const { prompt } = (await request.json()) as GenerateChainRequest;
+    // Получаем prompt и опциональные метаданные из тела запроса
+    const { prompt, songsterrData } =
+      (await request.json()) as GenerateChainRequest;
 
     if (!prompt || typeof prompt !== "string") {
       return NextResponse.json(
         { error: "Prompt is required" },
-        { status: 400 }
+        { status: 400 },
+      );
+    }
+
+    console.log(`🎸 Generating chain from prompt: "${prompt}"`);
+    if (songsterrData) {
+      console.log(
+        `📊 With Songsterr metadata: ${songsterrData.artist} - ${songsterrData.title} (${songsterrData.suggestedPart})`,
       );
     }
 
     const generator = await createGenerator();
-    const generationId = await generator.generate(prompt);
+    const generationId = await generator.generate(
+      prompt,
+      songsterrData?.url,
+      songsterrData
+        ? {
+            artist: songsterrData.artist,
+            title: songsterrData.title,
+            trackType: songsterrData.trackType,
+            suggestedPart: songsterrData.suggestedPart,
+            ...(songsterrData.trackName
+              ? { trackName: songsterrData.trackName }
+              : {}),
+          }
+        : undefined,
+    );
 
     // Формируем ответ
     const response: GenerateChainResponse = {
@@ -54,7 +84,7 @@ export async function POST(
       {
         error: error instanceof Error ? error.message : "Internal server error",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
