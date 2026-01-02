@@ -262,5 +262,11 @@
     "title": "Pixies",
     "slug": "pixies",
     "description": "Pixies are an influential alternative rock band known for loud-quiet dynamics, raw energy, and a sound that shaped modern indie and grunge music."
+  },
+  {
+    "id": 45,
+    "title": "Dire Straits",
+    "slug": "dire-straits",
+    "description": "Dire Straits are a British rock band known for Mark Knopfler’s clean guitar tone, storytelling lyrics, and a refined sound blending rock, blues, and roots music."
   }
 ]

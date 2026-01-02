@@ -1,6 +1,247 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-02T15:31:31.132Z",
+      "originalPrompt": "Dire Straits Sultans Of Swing Lead Guitar Clean Tone",
+      "proDescription": {
+        "tone_title": "Sultans Of Swing Lead Guitar Clean Tone",
+        "genre": "Classic Rock / Roots Rock",
+        "sound_description": "Bright and clear with a glassy top end, moderate warmth, and articulate dynamics. The tone is clean with just a hint of grit when picking hard, allowing note definition and expressive phrasing. Responsive and touch-sensitive, delivering a slightly compressed but open sound with some natural sustain.",
+        "guitar_rig_description": "Noise gate: not used (signal is clean and noise is minimal). Compressor: light compression used to even out dynamics and add a touch of sustain without squashing the attack. Overdrive/distortion/boost: not used, amp is set clean with only natural breakup when picking hard. Amplifier: clean Fender-style tube amp emulation, providing chime and warmth, set just at the edge of breakup. Cabinet: 2x12 or 4x10 open-back cabinet sim, typical of Fender amps, for airy and present mids. EQ: slight mid boost and high-end presence to enhance articulation and brightness, low end slightly rolled off for clarity. Modulation: not used. Delay: subtle slapback delay, very low mix for depth without being obvious. Reverb: moderate spring reverb for classic space and liveliness.",
+        "references": [
+          "Dire Straits - Sultans Of Swing",
+          "Mark Knopfler live performances",
+          "Eric Clapton - Wonderful Tonight (for clean Fender amp context)"
+        ],
+        "song_part": "lead guitar lines and solos",
+        "preferred_pickup": "middle or bridge single-coil, tone control wide open",
+        "additional_info": "Use a Fender Stratocaster (or similar single-coil guitar) with lighter gauge strings for snappy attack. Play with fingers or a very thin pick for maximum touch sensitivity and dynamics. Pickups should be set close to the strings for extra spank. Playing technique is crucial—use fingerstyle or hybrid picking for authentic tone."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "MXR Carbon Copy Analog Delay",
+          "Strymon Flint (Spring Reverb only, or use amp reverb if available)"
+        ],
+        "amplifier": "Fender '65 Twin Reverb Reissue",
+        "cabinet": "Fender 212 DeVille 2x12 open-back cabinet with Celestion G12P-80 speakers",
+        "settings": {
+          "amp": {
+            "Volume (Channel 2)": 4.5,
+            "Treble": 6.5,
+            "Middle": 7,
+            "Bass": 4.5,
+            "Reverb": 3.5,
+            "Bright Switch": "ON",
+            "Presence": "N/A"
+          },
+          "compressor": {
+            "Blend": "10-11 o’clock (light parallel compression)",
+            "Volume": "unity gain",
+            "Comp": "9 o’clock (gentle)",
+            "Switch": "Lo"
+          },
+          "delay": {
+            "Delay Time": "80–110 ms (slapback)",
+            "Mix": "9 o’clock (subtle, just audible)",
+            "Regen": "Minimum (1 repeat)"
+          },
+          "reverb": {
+            "Spring (Strymon Flint or amp)": "Mix at 10–11 o’clock, Decay moderate"
+          },
+          "eq_notes": "If extra brightness or presence is needed, slightly raise amp Treble or use guitar tone controls full open."
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 42,
+            "Clipping": 38
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 38,
+            "Master": 62,
+            "Bass": 42,
+            "Middle": 56,
+            "Treble": 63,
+            "Bright": 67
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 58,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 62,
+            "Decay": 54
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 23,
+            "Rate": 28,
+            "Echo": 20
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 42,
+                "Clipping": 38
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 38,
+                "Master": 62,
+                "Bass": 42,
+                "Middle": 56,
+                "Treble": 63,
+                "Bright": 67
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 58,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 62,
+                "Decay": 54
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 23,
+                "Rate": 28,
+                "Echo": 20
+              }
+            }
+          },
+          "prompt": "Dire Straits Sultans Of Swing Lead Guitar Clean Tone",
+          "timestamp": "2026-01-02T15:31:31.132Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/dire-straits-sultans-of-swing-tab-s30084",
+        "artist": "Dire Straits",
+        "title": "Sultans Of Swing",
+        "trackType": "Lead",
+        "suggestedPart": "Guitar Clean Tone",
+        "trackName": "Mark Knopfler | Fender Stratocaster | Lead Guitar - Electric Guitar (clean)"
+      },
+      "id": "gen_mjx17kk4_wdzcyzh8l",
+      "status": "draft"
+    },
+    {
       "timestamp": "2026-01-02T15:25:11.006Z",
       "originalPrompt": "Pixies Where Is My Mind Lead Guitar Distortion",
       "proDescription": {
@@ -30804,6 +31045,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-02T15:25:11.036Z"
+    "lastUpdated": "2026-01-02T15:31:31.159Z"
   }
 }
