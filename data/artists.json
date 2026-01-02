@@ -256,5 +256,11 @@
     "title": "Unknown Artist",
     "slug": "unknown-artist",
     "description": "Placeholder artist used for guitar tones and presets that are not based on a specific performer or recorded track.\nThese presets represent generic styles, eras, or use-cases rather than official artist sounds."
+  },
+  {
+    "id": 44,
+    "title": "Pixies",
+    "slug": "pixies",
+    "description": "Pixies are an influential alternative rock band known for loud-quiet dynamics, raw energy, and a sound that shaped modern indie and grunge music."
   }
 ]

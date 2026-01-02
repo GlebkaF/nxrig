@@ -8642,5 +8642,111 @@
     "slug": "gretsch-50s-rock-guitar-guitar",
     "createdAt": "2025-12-27T10:38:57.660Z",
     "updatedAt": "2025-12-27T10:38:57.660Z"
+  },
+  {
+    "id": "gen_mjx0zf93_xb2tgtg4h",
+    "origin": {
+      "artistId": 44,
+      "song": "Where Is My Mind?",
+      "part": "Lead Guitar Distortion",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Dreamy, slightly gritty lead tone with moderate sustain, clear articulation, and some brightness. The distortion is not overly saturated, retaining note definition and dynamic response. The overall sound is open and slightly jangly, fitting the band's lo-fi aesthetic.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 48,
+          "Tone": 62
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 54,
+          "Master": 58,
+          "Bass": 47,
+          "Middle": 60,
+          "Treble": 54,
+          "Bright": 55
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 52,
+          "HighCut": 44
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 47,
+          "220": 51,
+          "500": 55,
+          "1200": 60,
+          "2600": 58,
+          "6400": 44
+        }
+      },
+      "reverb": {
+        "type": "Damp",
+        "enabled": true,
+        "params": {
+          "Mix": 38,
+          "Depth": 46
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "where-is-my-mind-guitar-lead-guitar-distortion",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/pixies-where-is-my-mind-tab-s14912",
+    "createdAt": "2026-01-02T15:29:31.333Z",
+    "updatedAt": "2026-01-02T15:29:31.333Z"
   }
 ]

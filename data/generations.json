@@ -1,6 +1,251 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-02T15:25:11.006Z",
+      "originalPrompt": "Pixies Where Is My Mind Lead Guitar Distortion",
+      "proDescription": {
+        "tone_title": "Where Is My Mind - Lead Guitar Distortion",
+        "genre": "Alternative Rock / Indie Rock",
+        "sound_description": "Dreamy, slightly gritty lead tone with moderate sustain, clear articulation, and some brightness. The distortion is not overly saturated, retaining note definition and dynamic response. The overall sound is open and slightly jangly, fitting the band's lo-fi aesthetic.",
+        "guitar_rig_description": "Noise gate: not used (the signal is not overly noisy and a gate would cut off desired sustain). Compressor: not used (natural dynamics are preserved for expressive playing). Overdrive/Distortion: moderate overdrive pedal used to add grit and sustain without heavy saturation; distortion is warm and slightly fuzzy but not aggressive. Amplifier: clean to mildly broken-up tube amp emulation, providing additional warmth and slight breakup. Cabinet: 2x12 open-back speaker cabinet emulation for a lively, airy response. EQ: subtle mid boost to help the lead cut through the mix, slight high-end roll-off to tame harshness. Modulation: not used (lead is dry, no chorus or phaser). Delay: not used (the lead line is played dry). Reverb: spring reverb for a spacious, slightly surfy ambiance.",
+        "references": [
+          "Pixies - Where Is My Mind?",
+          "The Breeders - Cannonball (for similar lo-fi lead tones)",
+          "Sonic Youth - Teen Age Riot"
+        ],
+        "song_part": "lead melody (intro and verses)",
+        "preferred_pickup": "bridge single coil or P-90 (for brightness and cut), tone = 7",
+        "additional_info": "Play with a light to medium pick attack for clarity; lighter string gauge (e.g., .010-.046) helps with the jangly quality. Use a Fender-style guitar for authenticity if available."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ProCo Rat 2 Distortion",
+          "MXR 6-Band EQ",
+          "Fender Marine Layer Reverb"
+        ],
+        "amplifier": "Fender Twin Reverb (’65 Reissue)",
+        "cabinet": "Fender 2x12 Open-Back Cabinet with Celestion G12-65 speakers",
+        "settings": {
+          "amp": {
+            "Volume (Normal)": 4,
+            "Treble": 6,
+            "Middle": 7,
+            "Bass": 4,
+            "Reverb": 3,
+            "Bright Switch": "ON"
+          },
+          "rat2": {
+            "Distortion": 2.5,
+            "Filter": 2,
+            "Volume": 6
+          },
+          "eq": {
+            "100Hz": "0dB",
+            "200Hz": "+1dB",
+            "400Hz": "+2dB",
+            "800Hz": "+2dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "-1dB"
+          },
+          "reverb": {
+            "Level": 11,
+            "Damping": 4,
+            "Pre-Delay": 0
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 48,
+            "Tone": 62
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 54,
+            "Master": 58,
+            "Bass": 47,
+            "Middle": 60,
+            "Treble": 54,
+            "Bright": 55
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 52,
+            "HighCut": 44
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 47,
+            "220": 51,
+            "500": 55,
+            "1200": 60,
+            "2600": 58,
+            "6400": 44
+          }
+        },
+        "reverb": {
+          "type": "Damp",
+          "enabled": true,
+          "params": {
+            "Mix": 38,
+            "Depth": 46
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 48,
+                "Tone": 62
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Master": 58,
+                "Bass": 47,
+                "Middle": 60,
+                "Treble": 54,
+                "Bright": 55
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 52,
+                "HighCut": 44
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 47,
+                "220": 51,
+                "500": 55,
+                "1200": 60,
+                "2600": 58,
+                "6400": 44
+              }
+            },
+            "reverb": {
+              "type": "Damp",
+              "enabled": true,
+              "params": {
+                "Mix": 38,
+                "Depth": 46
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Pixies Where Is My Mind Lead Guitar Distortion",
+          "timestamp": "2026-01-02T15:25:11.006Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/pixies-where-is-my-mind-tab-s14912",
+        "artist": "Pixies",
+        "title": "Where Is My Mind?",
+        "trackType": "Lead",
+        "suggestedPart": "Lead Guitar Distortion",
+        "trackName": "Joey Santiago | Lead Guitar (Left) - Distortion Guitar"
+      },
+      "id": "gen_mjx0zf93_xb2tgtg4h",
+      "status": "draft"
+    },
+    {
       "timestamp": "2025-12-27T10:32:29.846Z",
       "originalPrompt": "gretsch 51's rock\tclint curtis\tGuitar",
       "proDescription": {
@@ -30559,6 +30804,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2025-12-27T10:32:29.856Z"
+    "lastUpdated": "2026-01-02T15:25:11.036Z"
   }
 }
