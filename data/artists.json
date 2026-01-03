@@ -274,5 +274,11 @@
     "title": "Ennio Morricone",
     "slug": "ennio-morricone",
     "description": "Ennio Morricone was a legendary composer known for iconic film scores, unforgettable melodies, and a profound influence on cinematic and modern music."
+  },
+  {
+    "id": 47,
+    "title": "Megadeth",
+    "slug": "megadeth",
+    "description": "Megadeth is a pioneering thrash metal band known for fast tempos, technical riffs, and politically charged lyrics, shaping the sound of modern metal."
   }
 ]

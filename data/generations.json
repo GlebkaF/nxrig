@@ -1,6 +1,531 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-03T05:07:58.360Z",
+      "originalPrompt": "Megadeth Symphony Of Destruction Rhythm Guitar Distortion",
+      "proDescription": {
+        "tone_title": "Symphony of Destruction Rhythm Guitar",
+        "genre": "Thrash Metal",
+        "sound_description": "Aggressive, tight, and mid-heavy distortion with a pronounced attack, moderate brightness, and a focused, dry character. The tone is chunky with lots of palm-muted clarity, minimal resonance, and a controlled low end to maintain tightness at high gain.",
+        "guitar_rig_description": "Noise gate: used to tame excess noise and keep palm-mutes tight and silent between notes. Compressor: not used, as dynamics are controlled by picking and amp response. Overdrive/Distortion: a classic overdrive pedal (like a Tube Screamer) is used as a boost in front of a high-gain amp to tighten the low end and add saturation. Amplifier: high-gain tube amplifier (e.g., Marshall or Mesa/Boogie) set for a saturated but clear distortion, with a focus on midrange. Cabinet: 4x12 closed-back cabinet with Celestion speakers, mic'd close for punch and clarity. EQ: used in the amp and possibly post-amp to scoop some lows, emphasize upper mids, and slightly cut harsh highs. Modulation: not used. Delay: not used. Reverb: not used, or kept extremely minimal for a dry, immediate sound.",
+        "references": [
+          "Megadeth - Symphony of Destruction",
+          "Metallica - Enter Sandman",
+          "Slayer - Seasons in the Abyss"
+        ],
+        "song_part": "main rhythm riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a tight palm-mute technique, pick hard for articulation, and consider using heavier gauge strings for increased tension and clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Mesa/Boogie Dual Rectifier Solo Head (2-Channel Revision G)",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 Cabinet with Celestion Vintage 30 speakers (4x12 configuration)",
+        "settings": {
+          "amp": {
+            "Channel": "Red (Modern High Gain)",
+            "Gain": 6.5,
+            "Bass": 4,
+            "Middle": 6.5,
+            "Treble": 5.5,
+            "Presence": 4.5,
+            "Master": 3,
+            "Output": "as needed for venue/room"
+          },
+          "tube_screamer": {
+            "Drive": 0,
+            "Tone": 5.5,
+            "Level": 8.5
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor, set to clamp hard after palm-mutes"
+          },
+          "eq": {
+            "31Hz": "-4dB",
+            "62Hz": "-3dB",
+            "125Hz": "-2dB",
+            "250Hz": "0dB",
+            "500Hz": "+1dB",
+            "1kHz": "+2dB",
+            "2kHz": "+2.5dB",
+            "4kHz": "+3dB",
+            "8kHz": "+1dB",
+            "16kHz": "-2dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 30
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 70,
+            "Drive": 20,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 80,
+            "Master": 60,
+            "Bass": 35,
+            "Middle": 65,
+            "Treble": 60,
+            "Presence": 55
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 60,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 35,
+            "62": 40,
+            "125": 45,
+            "250": 50,
+            "500": 60,
+            "1000": 65,
+            "2000": 70,
+            "4000": 62,
+            "8000": 47,
+            "16000": 40,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 70,
+                "Drive": 20,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 80,
+                "Master": 60,
+                "Bass": 35,
+                "Middle": 65,
+                "Treble": 60,
+                "Presence": 55
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 35,
+                "62": 40,
+                "125": 45,
+                "250": 50,
+                "500": 60,
+                "1000": 65,
+                "2000": 70,
+                "4000": 62,
+                "8000": 47,
+                "16000": 40,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Megadeth Symphony Of Destruction Rhythm Guitar Distortion",
+          "timestamp": "2026-01-03T05:07:58.360Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/megadeth-symphony-of-destruction-tab-s487t2",
+        "artist": "Megadeth",
+        "title": "Symphony Of Destruction",
+        "trackType": "Rhythm",
+        "suggestedPart": "Rhythm Guitar Distortion",
+        "trackName": "Dave Mustaine | Jackson King V | Rhythm Guitar - Distortion Guitar"
+      },
+      "id": "gen_mjxudjcb_8ltczodet",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-03T05:06:28.221Z",
+      "originalPrompt": "Megadeth Symphony Of Destruction Lead Guitar Distortion",
+      "proDescription": {
+        "tone_title": "Symphony of Destruction Lead Guitar Distortion",
+        "genre": "Thrash Metal / Heavy Metal",
+        "sound_description": "Sharp, aggressive, and articulate lead tone with pronounced midrange, tight low end, smooth but present high end, moderate sustain, and fast attack. The tone cuts through the mix and retains clarity even at high gain levels.",
+        "guitar_rig_description": "Signal chain: Noise gate (to reduce high-gain hiss and keep the signal tight), compressor (light, for smoothing picking dynamics and adding sustain), overdrive (used as a boost before the amp to tighten the distortion and add definition), amplifier (high-gain tube amp with crunchy, saturated distortion; classic Marshall or Mesa/Boogie style), cabinet (4x12 closed-back cab with vintage or modern high-wattage speakers, mic'd for brightness and punch), EQ (graphic or parametric EQ to accentuate mids and slightly cut bass/treble for mix clarity), modulation (not used), delay (used sparingly for solo sustain and width, set to a short to medium single repeat), reverb (small amount of hall or plate reverb for spatial depth without washing out the attack).",
+        "references": [
+          "Megadeth - Symphony of Destruction",
+          "Megadeth - Tornado of Souls",
+          "Metallica - Master of Puppets (lead tones)"
+        ],
+        "song_part": "Lead guitar/solo sections",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a high-output bridge humbucker for maximum aggression and clarity. Palm muting and alternate picking for articulation; medium-gauge strings (10-46 or 10-52) for tighter response. Dave Mustaine typically uses a sharp pick for added attack."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "MXR Dyna Comp",
+          "Ibanez TS9 Tube Screamer",
+          "Boss GE-7 Equalizer",
+          "Boss DD-3 Digital Delay",
+          "TC Electronic Hall of Fame Mini Reverb"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 8,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 6,
+            "Master": 4
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 6,
+            "Level": 8
+          },
+          "noise_gate": {
+            "Threshold": "just below hum level",
+            "Decay": "medium-fast"
+          },
+          "compressor": {
+            "Sensitivity": 4,
+            "Output": 5
+          },
+          "eq": {
+            "100Hz": "-3dB",
+            "200Hz": "-2dB",
+            "800Hz": "+4dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "+2dB",
+            "6.4kHz": "-2dB"
+          },
+          "delay": {
+            "Level": 15,
+            "Feedback": 1,
+            "Time": 370
+          },
+          "reverb": {
+            "Level": 10,
+            "Type": "Hall"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 30
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 38,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 72,
+            "Drive": 28,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 82,
+            "Master": 65,
+            "Bass": 38,
+            "Middle": 67,
+            "Treble": 55,
+            "Presence": 58
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 62,
+            "HighCut": 41
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 37,
+            "220": 44,
+            "500": 61,
+            "1200": 68,
+            "2600": 57,
+            "6400": 43
+          }
+        },
+        "reverb": {
+          "type": "Hall",
+          "enabled": true,
+          "params": {
+            "Level": 22,
+            "Decay": 28,
+            "PreDelay": 37,
+            "Liveliness": 46
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 27,
+            "Feedback": 19,
+            "Time": 38
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 38,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 72,
+                "Drive": 28,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 82,
+                "Master": 65,
+                "Bass": 38,
+                "Middle": 67,
+                "Treble": 55,
+                "Presence": 58
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 62,
+                "HighCut": 41
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 37,
+                "220": 44,
+                "500": 61,
+                "1200": 68,
+                "2600": 57,
+                "6400": 43
+              }
+            },
+            "reverb": {
+              "type": "Hall",
+              "enabled": true,
+              "params": {
+                "Level": 22,
+                "Decay": 28,
+                "PreDelay": 37,
+                "Liveliness": 46
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 27,
+                "Feedback": 19,
+                "Time": 38
+              }
+            }
+          },
+          "prompt": "Megadeth Symphony Of Destruction Lead Guitar Distortion",
+          "timestamp": "2026-01-03T05:06:28.221Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/megadeth-symphony-of-destruction-tab-s487",
+        "artist": "Megadeth",
+        "title": "Symphony Of Destruction",
+        "trackType": "Lead",
+        "suggestedPart": "Lead Guitar Distortion",
+        "trackName": "Marty Friedman | Jackson Kelly KE1 | Lead Guitar - Distortion Guitar"
+      },
+      "id": "gen_mjxublsf_l7newaabe",
+      "status": "draft"
+    },
+    {
       "timestamp": "2026-01-03T04:41:33.939Z",
       "originalPrompt": "Ennio Morricone Le Clan Des Siciliens Clavinet Sound",
       "proDescription": {
@@ -31550,6 +32075,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-03T04:41:33.956Z"
+    "lastUpdated": "2026-01-03T05:07:58.383Z"
   }
 }
