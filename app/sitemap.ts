@@ -71,14 +71,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }, new Date(0));
 
   sitemapEntries.push({
-    url: baseUrl + "/blog",
+    url: baseUrl + "/blog/",
     lastModified: latestBlogUpdate,
   });
 
   // Страницы блог-постов
   blogPosts.forEach((post) => {
     sitemapEntries.push({
-      url: baseUrl + `/blog/${post.slug}`,
+      url: baseUrl + `/blog/${post.slug}/`,
       lastModified: new Date(post.date),
     });
   });
