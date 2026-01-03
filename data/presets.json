@@ -9076,5 +9076,109 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/megadeth-symphony-of-destruction-tab-s487t2",
     "createdAt": "2026-01-03T05:14:52.408Z",
     "updatedAt": "2026-01-03T05:14:52.408Z"
+  },
+  {
+    "id": "gen_mjxunilq_81tnbex78",
+    "origin": {
+      "artistId": 14,
+      "song": "Under The Bridge",
+      "part": "Clean Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, bell-like clean tone with a shimmering quality, moderate dynamics, and slight warmth. The sound is articulate, with clear note separation and a touch of ambience for spaciousness. Very little gain, focused on clarity and expressiveness.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 32,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 28,
+          "Depth": 22
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 34,
+          "Master": 68,
+          "Bass": 38,
+          "Middle": 40,
+          "Treble": 67,
+          "Bright": 70
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 58,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 58,
+          "Decay": 60
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "under-the-bridge-guitar-clean-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/red-hot-chili-peppers-under-the-bridge-tab-s99",
+    "createdAt": "2026-01-03T05:21:43.049Z",
+    "updatedAt": "2026-01-03T05:21:43.049Z"
   }
 ]

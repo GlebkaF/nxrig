@@ -1,6 +1,243 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-03T05:15:43.962Z",
+      "originalPrompt": "Red Hot Chili Peppers Under The Bridge Clean Lead Guitar",
+      "proDescription": {
+        "tone_title": "Under The Bridge Clean Lead",
+        "genre": "Alternative Rock / Funk Rock",
+        "sound_description": "Bright, bell-like clean tone with a shimmering quality, moderate dynamics, and slight warmth. The sound is articulate, with clear note separation and a touch of ambience for spaciousness. Very little gain, focused on clarity and expressiveness.",
+        "guitar_rig_description": "Noise gate: not used (clean sound, low noise floor expected). Compressor: subtle compression to even out picking dynamics and add sustain. Overdrive/distortion/boost: not used (pure clean tone). Amplifier: clean channel of a Fender-style tube amp for sparkling highs and warm lows. Cabinet: 2x12 open-back cab with clean, bright speakers. EQ: slight mid scoop, bright treble, controlled lows to prevent muddiness. Modulation: light stereo chorus for subtle shimmer (optional, as sometimes present in the mix). Delay: not used. Reverb: plate or spring reverb for spaciousness, set to moderate for ambience.",
+        "references": [
+          "Red Hot Chili Peppers - Under The Bridge",
+          "John Frusciante live performances",
+          "Fender clean tones in alternative rock"
+        ],
+        "song_part": "clean lead lines in verses and intro",
+        "preferred_pickup": "neck single-coil, tone = 7",
+        "additional_info": "Single-coil pickups preferred for clarity (Strat-style guitar). Use a light touch and fingerstyle or gentle pick attack. Typical string gauge is 0.010–0.046. Avoid heavy palm muting for maximum sustain and resonance."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp (Output: 2 o'clock, Sensitivity: 10 o'clock)",
+          "Boss CE-2W Chorus (Rate: 10 o'clock, Depth: 9 o'clock, Mode: Standard)",
+          "Strymon Flint (Reverb only, Plate mode, Mix: 11 o'clock, Decay: 12 o'clock, Color: 1 o'clock)"
+        ],
+        "amplifier": "Fender '65 Twin Reverb Reissue",
+        "cabinet": "Fender 212 Enclosure 2x12 open-back with Celestion G12-65",
+        "settings": {
+          "amp": {
+            "Volume": 3,
+            "Treble": 7,
+            "Middle": 4,
+            "Bass": 4.5,
+            "Reverb": 2,
+            "Bright Switch": "ON"
+          },
+          "compressor": {
+            "Output": "2 o'clock",
+            "Sensitivity": "10 o'clock"
+          },
+          "chorus": {
+            "Rate": "10 o'clock",
+            "Depth": "9 o'clock"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Mix": "11 o'clock",
+            "Decay": "12 o'clock",
+            "Color": "1 o'clock"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 32,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 28,
+            "Depth": 22
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 34,
+            "Master": 68,
+            "Bass": 38,
+            "Middle": 40,
+            "Treble": 67,
+            "Bright": 70
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 58,
+            "HighCut": 65
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 58,
+            "Decay": 60
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 32,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 28,
+                "Depth": 22
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 34,
+                "Master": 68,
+                "Bass": 38,
+                "Middle": 40,
+                "Treble": 67,
+                "Bright": 70
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 58,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Decay": 60
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Red Hot Chili Peppers Under The Bridge Clean Lead Guitar",
+          "timestamp": "2026-01-03T05:15:43.962Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/red-hot-chili-peppers-under-the-bridge-tab-s99",
+        "artist": "Red Hot Chili Peppers",
+        "title": "Under The Bridge",
+        "trackType": "Lead",
+        "suggestedPart": "Clean Lead Guitar",
+        "trackName": "John Frusciante | Lead Guitar - Electric Guitar (clean)"
+      },
+      "id": "gen_mjxunilq_81tnbex78",
+      "status": "draft"
+    },
+    {
       "timestamp": "2026-01-03T05:07:58.360Z",
       "originalPrompt": "Megadeth Symphony Of Destruction Rhythm Guitar Distortion",
       "proDescription": {
@@ -32075,6 +32312,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-03T05:07:58.383Z"
+    "lastUpdated": "2026-01-03T05:15:43.983Z"
   }
 }
