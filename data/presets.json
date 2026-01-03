@@ -8853,5 +8853,116 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/dire-straits-sultans-of-swing-tab-s30084",
     "createdAt": "2026-01-02T15:34:53.372Z",
     "updatedAt": "2026-01-02T15:34:53.372Z"
+  },
+  {
+    "id": "gen_mjxte599_y3jkd6ofr",
+    "origin": {
+      "artistId": 46,
+      "song": "Le Clan Des Siciliens",
+      "part": "Acoustic Guitar Rhythm",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Warm, natural, woody, mellow, and intimate acoustic rhythm sound with smooth dynamics; very clean and unprocessed, focusing on the organic resonance of the guitar.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "Studio Comp",
+        "enabled": true,
+        "params": {
+          "Gain": 52,
+          "Threshold": 63,
+          "Ratio": 32,
+          "Release": 44
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Optima Air",
+        "enabled": true,
+        "params": {
+          "Gain": 30,
+          "Master": 53,
+          "Bass": 43,
+          "Middle": 51,
+          "Treble": 56
+        }
+      },
+      "cabinet": {
+        "type": "JZ120",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "LowCut": 50,
+          "HighCut": 50
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 42,
+          "62": 44,
+          "125": 46,
+          "250": 49,
+          "500": 50,
+          "1000": 51,
+          "2000": 54,
+          "4000": 56,
+          "8000": 57,
+          "16000": 52,
+          "Vol": 51
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": true,
+        "params": {
+          "Level": 26,
+          "Decay": 32,
+          "Tone": 48
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 10,
+      "position": "neck"
+    },
+    "slug": "le-clan-des-siciliens-guitar-acoustic-guitar-rhythm",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/ennio-morricone-le-clan-des-siciliens-tab-s34125",
+    "createdAt": "2026-01-03T04:58:48.721Z",
+    "updatedAt": "2026-01-03T04:58:48.721Z"
   }
 ]

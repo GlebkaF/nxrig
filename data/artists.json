@@ -268,5 +268,11 @@
     "title": "Dire Straits",
     "slug": "dire-straits",
     "description": "Dire Straits are a British rock band known for Mark Knopfler’s clean guitar tone, storytelling lyrics, and a refined sound blending rock, blues, and roots music."
+  },
+  {
+    "id": 46,
+    "title": "Ennio Morricone",
+    "slug": "ennio-morricone",
+    "description": "Ennio Morricone was a legendary composer known for iconic film scores, unforgettable melodies, and a profound influence on cinematic and modern music."
   }
 ]

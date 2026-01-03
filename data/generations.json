@@ -1,6 +1,511 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-03T04:41:33.939Z",
+      "originalPrompt": "Ennio Morricone Le Clan Des Siciliens Clavinet Sound",
+      "proDescription": {
+        "tone_title": "Le Clan Des Siciliens Clavinet Guitar Emulation",
+        "genre": "Cinematic / Spaghetti Western / Vintage Funk",
+        "sound_description": "Snappy, percussive, dry, tight attack with minimal sustain. Mimics a clavinet keyboard: plucky, bright with a pronounced midrange and little to no ambience. The sound cuts through the mix with a distinctly funky, staccato character.",
+        "guitar_rig_description": "Noise gate: used to tighten the attack and eliminate extraneous noise for a keyboard-like response. Compressor: applied for even dynamics and to enhance the percussive attack, simulating the consistent response of a clavinet. Overdrive/distortion/boost: not used; keep the signal clean. Amplifier: clean solid-state or clean channel of a tube amp, set for maximum headroom and minimal coloration. Cabinet: single 10\" or 12\" speaker emulation, closed-back preferred for punch and focus. EQ: midrange slightly boosted, bass rolled off, treble present but not harsh, to mimic the frequency response of a clavinet. Modulation: not used. Delay: not used. Reverb: not used (keep the sound dry and immediate).",
+        "references": [
+          "Ennio Morricone - Le Clan Des Siciliens",
+          "Stevie Wonder - Superstition (for clavinet reference)",
+          "Herbie Hancock - Chameleon (for clavinet reference)"
+        ],
+        "song_part": "Signature melodic motif / main theme",
+        "preferred_pickup": "bridge single-coil, tone = 10",
+        "additional_info": "Palm-muting technique recommended for a shorter, more percussive feel. Use lighter gauge strings for extra snap. Picking close to the bridge enhances brightness and attack. Optionally, experiment with a wah pedal in a fixed position to further mimic the honky midrange filter of a clavinet."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Keeley Compressor Plus",
+          "MXR 6-Band EQ",
+          "Dunlop Cry Baby GCB95 (optional, set to a cocked-wah position for honky midrange filtering)"
+        ],
+        "amplifier": "Roland JC-120 Jazz Chorus",
+        "cabinet": "Roland JC-120 built-in 2x12\" speakers (Closed-back, 12\" Roland speakers)",
+        "settings": {
+          "amp": {
+            "Channel": "Clean",
+            "Volume": 6,
+            "Treble": 6.5,
+            "Middle": 7.5,
+            "Bass": 4,
+            "Chorus": "Off",
+            "Reverb": "Off"
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor",
+            "Decay": "fast"
+          },
+          "compressor": {
+            "Sustain": 3,
+            "Level": 5,
+            "Blend": 60,
+            "Attack": 2
+          },
+          "eq": {
+            "100Hz": "-6dB",
+            "200Hz": "-3dB",
+            "400Hz": "+2dB",
+            "800Hz": "+3dB",
+            "1.6kHz": "+3dB",
+            "3.2kHz": "+1dB"
+          },
+          "wah": {
+            "Position": "Fixed (toe slightly down for mid-honk)",
+            "On/Off": "Optional"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 55,
+            "Decay": 30
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 32,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Touch Wah",
+          "enabled": true,
+          "params": {
+            "Type": 70,
+            "Wow": 65,
+            "Sense": 60,
+            "Level": 50,
+            "Up/Down Switch": 35
+          }
+        },
+        "amplifier": {
+          "type": "Jazz Clean",
+          "enabled": true,
+          "params": {
+            "Gain": 38,
+            "Master": 60,
+            "Bass": 32,
+            "Middle": 68,
+            "Treble": 58,
+            "Bright": 62
+          }
+        },
+        "cabinet": {
+          "type": "JZ120",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 58,
+            "HighCut": 54
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 32,
+            "220": 38,
+            "500": 55,
+            "1200": 68,
+            "2600": 62,
+            "6400": 46
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 55,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 32,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Touch Wah",
+              "enabled": true,
+              "params": {
+                "Type": 70,
+                "Wow": 65,
+                "Sense": 60,
+                "Level": 50,
+                "Up/Down Switch": 35
+              }
+            },
+            "amplifier": {
+              "type": "Jazz Clean",
+              "enabled": true,
+              "params": {
+                "Gain": 38,
+                "Master": 60,
+                "Bass": 32,
+                "Middle": 68,
+                "Treble": 58,
+                "Bright": 62
+              }
+            },
+            "cabinet": {
+              "type": "JZ120",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 58,
+                "HighCut": 54
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 32,
+                "220": 38,
+                "500": 55,
+                "1200": 68,
+                "2600": 62,
+                "6400": 46
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Ennio Morricone Le Clan Des Siciliens Clavinet Sound",
+          "timestamp": "2026-01-03T04:41:33.939Z"
+        }
+      ],
+      "id": "gen_mjxtfksj_bviifo3io",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-03T04:40:27.150Z",
+      "originalPrompt": "Ennio Morricone Le Clan Des Siciliens Acoustic Guitar Rhythm",
+      "proDescription": {
+        "tone_title": "Le Clan Des Siciliens – Acoustic Guitar Rhythm",
+        "genre": "Classic Film Score / Italian Cinematic",
+        "sound_description": "Warm, natural, woody, mellow, and intimate acoustic rhythm sound with smooth dynamics; very clean and unprocessed, focusing on the organic resonance of the guitar.",
+        "guitar_rig_description": "Noise gate: not used (acoustic playing does not require it). Compressor: light compression to gently even out dynamics and maintain natural feel. Overdrive/distortion/boost: not used (clean acoustic tone). Amplifier: not used (direct acoustic or through clean DI/preamp). Cabinet: not used (acoustic guitar cabinet simulation not needed). EQ: subtle EQ to roll off excessive low end and add slight sparkle on top, keeping the sound natural. Modulation: not used. Delay: not used. Reverb: light, short plate or room reverb to add space and realism without washing out the rhythm.",
+        "references": [
+          "Ennio Morricone – Le Clan Des Siciliens",
+          "Ennio Morricone – Once Upon a Time in the West (acoustic sections)",
+          "Nino Rota – The Godfather Theme (for similar Italian cinematic acoustic tone)"
+        ],
+        "song_part": "rhythm accompaniment",
+        "preferred_pickup": "piezo undersaddle pickup or high-quality microphone, tone control fully open",
+        "additional_info": "Use nylon-string (classical) or warm-sounding steel-string acoustic guitar. Fingerstyle or gentle pick playing. Use light to medium gauge strings for warmth and clarity. Focus on dynamics and soft attack. If possible, mic the guitar for most natural tone."
+      },
+      "realRig": {
+        "pedalboard": [
+          "LR Baggs Para Acoustic DI (for preamp/EQ, DI and gentle shaping)",
+          "Empress Compressor (set for very light, transparent compression)",
+          "BOSS EQ-200 Graphic Equalizer (subtle low cut, gentle high shelf)",
+          "TC Electronic Hall of Fame 2 Reverb (set to short Room or subtle Plate)"
+        ],
+        "amplifier": "Нет (сигнал прямо в микшер или аудиоинтерфейс через DI/педалборд)",
+        "cabinet": "Нет (акустические кабинеты или симуляция не используются для такого звука)",
+        "settings": {
+          "preamp_eq": {
+            "Low Cut": "80-100Hz (чтобы убрать избыточный низ)",
+            "Low": "-1dB (деликатная коррекция)",
+            "Mid": "+1dB (для теплоты и читаемости)",
+            "High": "+2dB (лёгкий подъём для открытости, не ярко!)"
+          },
+          "compressor": {
+            "Ratio": "2:1",
+            "Threshold": "-20dB (едва трогает пики)",
+            "Attack": "medium-fast (20-30ms)",
+            "Release": "medium (100ms)",
+            "Mix": "80-90% (близко к чистому тону)"
+          },
+          "eq": {
+            "80Hz": "-3dB",
+            "220Hz": "0",
+            "800Hz": "+1dB",
+            "3.2kHz": "+1dB",
+            "8kHz": "+2dB"
+          },
+          "reverb": {
+            "Type": "Room или Short Plate",
+            "Decay": "1.2-1.5s (коротко, только для пространства)",
+            "Mix": "10-15%",
+            "Tone": "нейтрально или чуть темнее"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 52,
+            "Threshold": 63,
+            "Ratio": 32,
+            "Release": 44
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Optima Air",
+          "enabled": true,
+          "params": {
+            "Gain": 30,
+            "Master": 53,
+            "Bass": 43,
+            "Middle": 51,
+            "Treble": 56
+          }
+        },
+        "cabinet": {
+          "type": "JZ120",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "LowCut": 50,
+            "HighCut": 50
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 42,
+            "62": 44,
+            "125": 46,
+            "250": 49,
+            "500": 50,
+            "1000": 51,
+            "2000": 54,
+            "4000": 56,
+            "8000": 57,
+            "16000": 52,
+            "Vol": 51
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": true,
+          "params": {
+            "Level": 26,
+            "Decay": 32,
+            "Tone": 48
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 52,
+                "Threshold": 63,
+                "Ratio": 32,
+                "Release": 44
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Optima Air",
+              "enabled": true,
+              "params": {
+                "Gain": 30,
+                "Master": 53,
+                "Bass": 43,
+                "Middle": 51,
+                "Treble": 56
+              }
+            },
+            "cabinet": {
+              "type": "JZ120",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "LowCut": 50,
+                "HighCut": 50
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 42,
+                "62": 44,
+                "125": 46,
+                "250": 49,
+                "500": 50,
+                "1000": 51,
+                "2000": 54,
+                "4000": 56,
+                "8000": 57,
+                "16000": 52,
+                "Vol": 51
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": true,
+              "params": {
+                "Level": 26,
+                "Decay": 32,
+                "Tone": 48
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Ennio Morricone Le Clan Des Siciliens Acoustic Guitar Rhythm",
+          "timestamp": "2026-01-03T04:40:27.150Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/ennio-morricone-le-clan-des-siciliens-tab-s34125t1",
+        "artist": "Ennio Morricone",
+        "title": "Le Clan Des Siciliens",
+        "trackType": "Rhythm",
+        "suggestedPart": "Acoustic Guitar Rhythm",
+        "trackName": "Guit  - Acoustic Guitar (steel)"
+      },
+      "id": "gen_mjxte599_y3jkd6ofr",
+      "status": "draft"
+    },
+    {
       "timestamp": "2026-01-02T15:31:31.132Z",
       "originalPrompt": "Dire Straits Sultans Of Swing Lead Guitar Clean Tone",
       "proDescription": {
@@ -31045,6 +31550,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-02T15:31:31.159Z"
+    "lastUpdated": "2026-01-03T04:41:33.956Z"
   }
 }
