@@ -9180,5 +9180,112 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/red-hot-chili-peppers-under-the-bridge-tab-s99",
     "createdAt": "2026-01-03T05:21:43.049Z",
     "updatedAt": "2026-01-03T05:21:43.049Z"
+  },
+  {
+    "id": "gen_mk0nt63i_i2d9mi1gk",
+    "origin": {
+      "artistId": 42,
+      "song": "Flor D'luna",
+      "part": "Guitar Jazz Sound",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Warm, smooth, and rounded tone with pronounced mids, gentle attack, and minimal harshness. The sound is clean to mildly overdriven, with a singing sustain and subtle dynamics—ideal for lush, expressive rhythm playing without overpowering the mix.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "Studio Comp",
+        "enabled": true,
+        "params": {
+          "Gain": 55,
+          "Threshold": 60,
+          "Ratio": 35,
+          "Release": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 28,
+          "Tone": 38
+        }
+      },
+      "amplifier": {
+        "type": "Cali Crunch",
+        "enabled": true,
+        "params": {
+          "Gain": 32,
+          "Master": 65,
+          "Bass": 54,
+          "Middle": 65,
+          "Treble": 41,
+          "Presence": 38
+        }
+      },
+      "cabinet": {
+        "type": "CALI 112",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 41,
+          "HighCut": 57
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 48,
+          "220": 53,
+          "500": 58,
+          "1200": 65,
+          "2600": 57,
+          "6400": 40
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 43,
+          "Decay": 37
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "flor-dluna-guitar-guitar-jazz-sound",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/carlos-santana-flor-dluna-tab-s18380",
+    "createdAt": "2026-01-05T04:39:31.675Z",
+    "updatedAt": "2026-01-05T04:39:31.675Z"
   }
 ]
