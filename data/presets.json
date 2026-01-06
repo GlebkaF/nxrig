@@ -9287,5 +9287,117 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/carlos-santana-flor-dluna-tab-s18380",
     "createdAt": "2026-01-05T04:39:31.675Z",
     "updatedAt": "2026-01-05T04:39:31.675Z"
+  },
+  {
+    "id": "gen_mjycxddl_m28n2hk7o",
+    "origin": {
+      "artistId": 2,
+      "song": "Suffocating Under Words Of Sorrow",
+      "part": "Rhythm Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Highly aggressive, tight, and saturated high-gain tone with pronounced low end and percussive palm-mute attack. The sound is bright enough to cut through the mix, but with controlled midrange and tight bass to avoid muddiness. Minimal ambience and no modulation for maximum precision.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 20
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 80,
+          "Drive": 8,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 65,
+          "Master": 60,
+          "Bass": 40,
+          "Middle": 35,
+          "Treble": 65,
+          "Presence": 60
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 65,
+          "HighCut": 60
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 40,
+          "62": 40,
+          "125": 45,
+          "250": 38,
+          "500": 35,
+          "1000": 45,
+          "2000": 55,
+          "4000": 60,
+          "8000": 55,
+          "16000": 50,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "suffocating-under-words-of-sorrow-guitar-rhythm-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/bullet-for-my-valentine-suffocating-under-words-of-sorrow-tab-s23763",
+    "createdAt": "2026-01-06T11:30:11.600Z",
+    "updatedAt": "2026-01-06T11:30:11.600Z"
   }
 ]
