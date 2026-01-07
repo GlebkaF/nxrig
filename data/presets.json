@@ -9727,5 +9727,117 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/styles-of-beyond-nine-thou-grant-mohrman-superstars-remix-tab-s473751",
     "createdAt": "2026-01-07T06:25:12.349Z",
     "updatedAt": "2026-01-07T06:25:12.349Z"
+  },
+  {
+    "id": "gen_mk3myck7_oik121g5l",
+    "origin": {
+      "artistId": 16,
+      "song": "Radio",
+      "part": "Distorted Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive, tight, percussive, heavily saturated distortion with a focused midrange, controlled low end, minimal ambience, and high clarity for staccato power chords. Very modern, mechanical feel.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 55,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 65,
+          "Drive": 20,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Die VH4",
+        "enabled": true,
+        "params": {
+          "Gain": 80,
+          "Master": 55,
+          "Bass": 38,
+          "Middle": 45,
+          "Treble": 60,
+          "Presence": 62
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 60,
+          "HighCut": 48
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 38,
+          "62": 44,
+          "125": 46,
+          "250": 48,
+          "500": 45,
+          "1000": 52,
+          "2000": 56,
+          "4000": 60,
+          "8000": 54,
+          "16000": 45,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "radio-guitar-distorted-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/rammstein-radio-tab-s451741",
+    "createdAt": "2026-01-07T06:31:50.056Z",
+    "updatedAt": "2026-01-07T06:31:50.056Z"
   }
 ]

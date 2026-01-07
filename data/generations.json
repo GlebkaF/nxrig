@@ -1,6 +1,267 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-07T06:26:49.479Z",
+      "originalPrompt": "Rammstein Radio Rhythm Guitar Distorted Power Chords",
+      "proDescription": {
+        "tone_title": "Rammstein - Radio Rhythm Guitar",
+        "genre": "Industrial Metal",
+        "sound_description": "Aggressive, tight, percussive, heavily saturated distortion with a focused midrange, controlled low end, minimal ambience, and high clarity for staccato power chords. Very modern, mechanical feel.",
+        "guitar_rig_description": "1. Noise Gate: Used to eliminate amp hiss and tighten palm-muted chugs for a razor-sharp attack. 2. Compressor: Not used, as the strong pick attack and amp compression suffice. 3. Overdrive/Distortion: High-gain distortion pedal or amp channel to achieve saturated, tight distortion; often a boost/overdrive in front of a high-gain amp to tighten the low end. 4. Amplifier: Modern high-gain tube amp (e.g., Mesa/Boogie Dual Rectifier, ENGL, or Diezel) for a precise, biting distortion. 5. Cabinet: 4x12” cabinet with V30 speakers for punch and clarity, mic’d close for tightness. 6. EQ: Graphic or parametric EQ to scoop some mids, tighten the bass, and tame harsh highs; focus on a present but not nasal midrange. 7. Modulation: Not used, tone stays dry and direct. 8. Delay: Not used. 9. Reverb: Not used or kept extremely minimal/room for a dry, in-your-face sound.",
+        "references": [
+          "Rammstein - Radio",
+          "Rammstein - Du Hast",
+          "Rammstein - Mein Teil"
+        ],
+        "song_part": "rhythm guitar, distorted power chords",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use tight palm muting and precise right-hand technique. Heavy gauge strings (e.g., 11-52 or 12-54) for tuning stability and tighter sound. Drop tuning (commonly Drop D or lower). Minimize string noise and let chords ring only as long as needed for percussive effect."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ISP Decimator II Noise Reduction",
+          "Maxon OD808 Overdrive",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Diezel VH4",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Channel": "Channel 3 (high gain)",
+            "Gain": 7,
+            "Bass": 4,
+            "Middle": 5,
+            "Treble": 6,
+            "Presence": 6,
+            "Deep": 4,
+            "Master": 4
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 6,
+            "Level": 9
+          },
+          "eq": {
+            "31Hz": "-6dB",
+            "62Hz": "-3dB",
+            "125Hz": "0dB",
+            "250Hz": "+1dB",
+            "500Hz": "+2dB",
+            "1kHz": "0dB",
+            "2kHz": "+2dB",
+            "4kHz": "+3dB",
+            "8kHz": "+2dB",
+            "16kHz": "0dB"
+          },
+          "noise_gate": {
+            "Threshold": "-40dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 55,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 65,
+            "Drive": 20,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Die VH4",
+          "enabled": true,
+          "params": {
+            "Gain": 80,
+            "Master": 55,
+            "Bass": 38,
+            "Middle": 45,
+            "Treble": 60,
+            "Presence": 62
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 60,
+            "HighCut": 48
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 38,
+            "62": 44,
+            "125": 46,
+            "250": 48,
+            "500": 45,
+            "1000": 52,
+            "2000": 56,
+            "4000": 60,
+            "8000": 54,
+            "16000": 45,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 55,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 65,
+                "Drive": 20,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Die VH4",
+              "enabled": true,
+              "params": {
+                "Gain": 80,
+                "Master": 55,
+                "Bass": 38,
+                "Middle": 45,
+                "Treble": 60,
+                "Presence": 62
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 60,
+                "HighCut": 48
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 38,
+                "62": 44,
+                "125": 46,
+                "250": 48,
+                "500": 45,
+                "1000": 52,
+                "2000": 56,
+                "4000": 60,
+                "8000": 54,
+                "16000": 45,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Rammstein Radio Rhythm Guitar Distorted Power Chords",
+          "timestamp": "2026-01-07T06:26:49.479Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/rammstein-radio-tab-s451741",
+        "artist": "Rammstein",
+        "title": "Radio",
+        "trackType": "Rhythm",
+        "suggestedPart": "Distorted Power Chords",
+        "trackName": "Paul Landers - Distortion Guitar"
+      },
+      "id": "gen_mk3myck7_oik121g5l",
+      "status": "draft"
+    },
+    {
       "timestamp": "2026-01-06T11:48:21.137Z",
       "originalPrompt": "Styles Of Beyond Nine Thou Distortion Rhythm Guitar",
       "proDescription": {
@@ -263,7 +524,7 @@
         "trackName": "Distortion Guitar 1"
       },
       "id": "gen_mk2izzfr_1r85ddeb5",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "timestamp": "2026-01-06T11:40:04.867Z",
@@ -528,7 +789,7 @@
         "trackName": "Daron Malakian | Ibanez Iceman | Guitar - Distortion Guitar"
       },
       "id": "gen_mk2ipcij_1ipba3lul",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "timestamp": "2026-01-06T11:33:14.073Z",
@@ -33765,6 +34026,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-06T11:48:21.161Z"
+    "lastUpdated": "2026-01-07T06:26:49.495Z"
   }
 }
