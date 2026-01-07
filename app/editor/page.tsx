@@ -1,38 +1,13 @@
-import { Metadata } from "next";
 import { presets } from "lib/public/presets";
 import Header from "components/Header";
 import Footer from "components/Footer";
-import { PresetEditor } from "components/PresetEditor";
+import { EditorPageClient } from "./EditorPageClient";
 
-export const metadata: Metadata = {
-  title: "Online Patch Editor for NUX Mighty Devices | nxrig.com",
-  description:
-    "Free online patch editor for NUX Mighty Plug Pro and Mighty Space. Create custom guitar tones in your browser - an alternative to the mobile app. Adjust effects, tweak parameters, and download QR codes instantly.",
-  keywords: [
-    "NUX patch editor",
-    "NUX online editor",
-    "NUX Mighty Plug Pro editor",
-    "NUX Mighty Space editor",
-    "guitar patch editor online",
-    "NUX tone editor",
-    "MightyApp alternative",
-  ],
-};
+export default function EditorPage() {
+  // Серверный рендеринг с дефолтным пресетом для SEO
+  const defaultPreset = presets[0];
 
-interface EditorPageProps {
-  searchParams: {
-    preset?: string;
-  };
-}
-
-export default async function EditorPage({ searchParams }: EditorPageProps) {
-  // Получаем ID пресета из query параметров или используем первый пресет
-  const presetId = searchParams.preset || presets[0]?.id;
-
-  // Находим пресет по ID
-  const preset = presets.find((p) => p.id === presetId) || presets[0];
-
-  if (!preset) {
+  if (!defaultPreset) {
     return (
       <div className="min-h-screen flex flex-col bg-gray-900 text-white">
         <Header />
@@ -58,7 +33,7 @@ export default async function EditorPage({ searchParams }: EditorPageProps) {
       <Header />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-8">
-          <PresetEditor preset={preset} />
+          <EditorPageClient defaultPreset={defaultPreset} />
         </div>
       </main>
       <Footer>
