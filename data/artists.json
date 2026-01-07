@@ -280,5 +280,23 @@
     "title": "Megadeth",
     "slug": "megadeth",
     "description": "Megadeth is a pioneering thrash metal band known for fast tempos, technical riffs, and politically charged lyrics, shaping the sound of modern metal."
+  },
+  {
+    "id": 48,
+    "title": "The Animals",
+    "slug": "the-animals",
+    "description": "The Animals are a British rock band known for gritty vocals, blues-rock sound, and classic hits that shaped the British Invasion era."
+  },
+  {
+    "id": 49,
+    "title": "System of a Down",
+    "slug": "system-of-a-down",
+    "description": "System of a Down is an American metal band known for aggressive riffs, political lyrics, and a unique blend of metal, punk, and Armenian influences."
+  },
+  {
+    "id": 50,
+    "title": "Styles Of Beyond",
+    "slug": "styles-of-beyond",
+    "description": "Styles Of Beyond is an American hip hop group known for rapid-fire lyrics, dark beats, and a raw underground sound, gaining wider recognition through film and game soundtracks."
   }
 ]

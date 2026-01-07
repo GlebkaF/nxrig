@@ -9399,5 +9399,333 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/bullet-for-my-valentine-suffocating-under-words-of-sorrow-tab-s23763",
     "createdAt": "2026-01-06T11:30:11.600Z",
     "updatedAt": "2026-01-06T11:30:11.600Z"
+  },
+  {
+    "id": "gen_mk2igjjh_k663nmfgg",
+    "origin": {
+      "artistId": 48,
+      "song": "The House Of The Rising Sun",
+      "part": "Clean Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Warm, clean, jangly, and slightly hollow tone with clear note separation and a gentle dynamic response. Moderate brightness with a subtle vintage warmth, no distortion or overdrive. The guitar sits well in the mix, providing a full, strummed chordal foundation.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 38,
+          "Master": 61,
+          "Bass": 46,
+          "Treble": 67,
+          "Cut": 60
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 51,
+          "LowCut": 52,
+          "HighCut": 57
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 34,
+          "Decay": 42
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "the-house-of-the-rising-sun-guitar-clean-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/animals-the-house-of-the-rising-sun-tab-s63",
+    "createdAt": "2026-01-06T11:36:42.105Z",
+    "updatedAt": "2026-01-06T11:36:42.105Z"
+  },
+  {
+    "id": "gen_mk2ipcij_1ipba3lul",
+    "origin": {
+      "artistId": 49,
+      "song": "Toxicity",
+      "part": "Distorted Lead Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive, mid-heavy, tight and punchy distortion with strong presence and clarity. The tone cuts through the mix with a percussive attack and slight bite, while remaining articulate for fast riffing and melodic lines. Sustain and definition are emphasized, with minimal ambient effects.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 52,
+          "Decay": 38
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 43,
+          "Clipping": 35
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "Drive": 22,
+          "Tone": 68
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 82,
+          "Master": 55,
+          "Bass": 41,
+          "Middle": 66,
+          "Treble": 60,
+          "Presence": 64
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 62,
+          "HighCut": 57
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 44,
+          "62": 46,
+          "125": 48,
+          "250": 52,
+          "500": 55,
+          "1000": 60,
+          "2000": 69,
+          "4000": 67,
+          "8000": 61,
+          "16000": 54,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "toxicity-guitar-distorted-lead-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/system-of-a-down-toxicity-tab-s21961",
+    "createdAt": "2026-01-07T06:24:31.770Z",
+    "updatedAt": "2026-01-07T06:24:31.770Z"
+  },
+  {
+    "id": "gen_mk2izzfr_1r85ddeb5",
+    "origin": {
+      "artistId": 50,
+      "song": "Nine Thou",
+      "part": "Distortion Rhythm Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive, tight, mid-heavy distortion with pronounced attack and percussiveness. The tone is thick but clear, focused in the mids for punch, with controlled low end and crisp, but not harsh, top end. Fast palm-muting and riff clarity are essential.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 54,
+          "Decay": 30
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "Sustain": 35,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 80,
+          "Drive": 10,
+          "Tone": 68
+        }
+      },
+      "amplifier": {
+        "type": "Uber HiGain",
+        "enabled": true,
+        "params": {
+          "Gain": 70,
+          "Master": 60,
+          "Bass": 42,
+          "Middle": 67,
+          "Treble": 56,
+          "Presence": 61
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 58,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 44,
+          "62": 45,
+          "125": 48,
+          "250": 40,
+          "500": 36,
+          "1000": 52,
+          "2000": 60,
+          "4000": 65,
+          "8000": 59,
+          "16000": 53,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "nine-thou-guitar-distortion-rhythm-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/styles-of-beyond-nine-thou-grant-mohrman-superstars-remix-tab-s473751",
+    "createdAt": "2026-01-07T06:25:12.349Z",
+    "updatedAt": "2026-01-07T06:25:12.349Z"
   }
 ]
