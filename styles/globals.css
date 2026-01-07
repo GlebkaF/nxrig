@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Smooth horizontal scroll */
+.overflow-x-auto {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  height: 6px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}

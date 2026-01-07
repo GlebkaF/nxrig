@@ -4,11 +4,22 @@ import { Metadata } from "next";
 import Link from "next/link";
 import ClientSearch from "../components/ClientSearch";
 import { presets } from "lib/public/presets";
-import { PresetCard } from "components/PresetCard";
+import { createPresetLink } from "lib/utils/urls";
+
+// Функция для форматирования абсолютной даты на английском
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  const options: Intl.DateTimeFormatOptions = {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  };
+  return date.toLocaleDateString("en-US", options);
+}
 
 const presetsCount = presets.length;
 
-// Получаем два последних добавленных пресета
+// Получаем последние добавленные пресеты (4 шт - влезают без скролла на популярных экранах)
 const latestPresets = [...presets]
   .filter((preset) => preset.createdAt !== null)
   .sort((a, b) => {
@@ -66,11 +77,25 @@ export default function Home() {
         </div>
 
         {latestPresets.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-6">Fresh Presets</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="mb-8">
+            <h2 className="text-xl font-semibold mb-4">Fresh Presets</h2>
+            <div className="flex gap-4">
               {latestPresets.map((preset) => (
-                <PresetCard key={preset.id} preset={preset} />
+                <Link
+                  key={preset.id}
+                  href={createPresetLink(preset)}
+                  className="flex-1 min-w-[180px] max-w-[250px] bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-pink-500/50 hover:bg-gray-800/70 transition-all group"
+                >
+                  <div className="text-sm font-semibold text-gray-300 group-hover:text-pink-400 transition-colors mb-1">
+                    {preset.origin.artist.title}
+                  </div>
+                  <div className="text-sm text-gray-200 mb-2 truncate">
+                    {preset.origin.song}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {preset.createdAt && formatDate(preset.createdAt)}
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
