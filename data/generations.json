@@ -1,6 +1,954 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-07T07:09:32.965Z",
+      "originalPrompt": "Red Hot Chili Peppers Snow Rhythm Guitar John Frusciante",
+      "proDescription": {
+        "tone_title": "Snow (Hey Oh) Rhythm Guitar",
+        "genre": "Alternative Rock / Funk Rock",
+        "sound_description": "Clean, chimey, articulate sound with a glassy high end and tight low mids; dynamic, responsive to picking, slightly compressed for evenness, with a hint of warmth. Not harsh or overly bright, maintains a smooth and musical clarity.",
+        "guitar_rig_description": "Noise gate: not used (Frusciante prefers dynamics and avoids gating). Compressor: light compression to smooth out fast picking and maintain note clarity. Overdrive/distortion/boost: not used (clean amp tone). Amplifier: vintage-style clean amp (Marshall Silver Jubilee or Fender clean channel) set just before breakup, providing warmth and slight natural compression. Cabinet: 4x12 cabinet with bright, open voicing. EQ: subtle mid cut and slight treble boost to emphasize clarity and articulate highs, low end kept tight. Modulation: not used (the clean tone is unmodulated). Delay: not used. Reverb: subtle, amp spring reverb or light studio reverb for depth without washing out the rhythm.",
+        "references": [
+          "Red Hot Chili Peppers - Snow (Hey Oh)",
+          "Red Hot Chili Peppers - Dani California (clean parts)",
+          "John Frusciante - The Past Recedes"
+        ],
+        "song_part": "main rhythm riff",
+        "preferred_pickup": "neck single coil, tone = 8",
+        "additional_info": "Stratocaster-style guitar with single coil pickups, light gauge strings (typically .009–.042), light right-hand touch, rapid alternate picking. Tone knob rolled back slightly to tame harshness; keep signal path clean and transparent."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp (script logo reissue) — Compressor: Sensitivity 10:00, Output 1:00"
+        ],
+        "amplifier": "Fender Twin Reverb (’65 Reissue)",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Volume": 4.5,
+            "Treble": 6.5,
+            "Middle": 4,
+            "Bass": 4.5,
+            "Reverb": 2.5,
+            "Bright Switch": "On"
+          },
+          "compressor": {
+            "Sensitivity": 10,
+            "Output": 1
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 38,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 44,
+            "Master": 60,
+            "Bass": 42,
+            "Middle": 45,
+            "Treble": 62,
+            "Bright": 65
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 58,
+            "HighCut": 62
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 38,
+            "Decay": 44
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 38,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 44,
+                "Master": 60,
+                "Bass": 42,
+                "Middle": 45,
+                "Treble": 62,
+                "Bright": 65
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 58,
+                "HighCut": 62
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 44
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Red Hot Chili Peppers Snow Rhythm Guitar John Frusciante",
+          "timestamp": "2026-01-07T07:09:32.965Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/red-hot-chili-peppers-snow-hey-oh-tab-s249",
+        "artist": "Red Hot Chili Peppers",
+        "title": "Snow (Hey Oh)",
+        "trackType": "Rhythm",
+        "suggestedPart": "Guitar John Frusciante",
+        "trackName": "John Frusciante | 1962 Fender Stratocaster | Rhythm Guitar - Electric Guitar (jazz)"
+      },
+      "id": "gen_mk3ohajw_5kgm08ipq",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-07T07:00:24.475Z",
+      "originalPrompt": "Deftones My Own Summer Lead Guitar Heavy Distortion",
+      "proDescription": {
+        "tone_title": "My Own Summer (Shove It) Lead Guitar",
+        "genre": "Alternative Metal / Nu Metal",
+        "sound_description": "Aggressive, saturated distortion with a thick, chunky low end. The tone is dark but cutting, with pronounced mids and a slightly scooped high end. Sustain and attack are emphasized for clear note definition, while maintaining a raw, heavy feel.",
+        "guitar_rig_description": "Noise gate: used to control high-gain hiss and unwanted noise. Compressor: not used, as the natural amp compression is sufficient. Overdrive/Distortion: high-gain distortion pedal or amp distortion provides saturated, tight, and aggressive drive. Amplifier: high-gain tube amp head, set for a saturated modern metal tone with tight low end and present mids. Cabinet: 4x12 closed-back cabinet with modern high-wattage speakers for punch and clarity. EQ: used in the amp or post-distortion to slightly scoop the highs, boost the lows, and emphasize the mids for cut. Modulation: not used for the lead tone. Delay: not used, dry signal preferred for tightness. Reverb: subtle room or plate reverb from the amp or a pedal to add slight ambience without washing out the tone.",
+        "references": [
+          "Deftones - My Own Summer (Shove It)",
+          "Korn - Blind",
+          "Chevelle - The Red"
+        ],
+        "song_part": "lead guitar riff",
+        "preferred_pickup": "bridge humbucker, tone = 6",
+        "additional_info": "Use a 7-string guitar with the low string tuned down (A tuning). Heavy gauge strings recommended for tightness. Aggressive picking technique. Palm muting for rhythmic clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ISP Decimator II Noise Reduction",
+          "Maxon OD808 Overdrive",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Mesa/Boogie Dual Rectifier Solo Head (3-Channel)",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 Slant Cabinet with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Channel": "Red (Modern)",
+            "Gain": 7.5,
+            "Bass": 7,
+            "Middle": 6,
+            "Treble": 4.5,
+            "Presence": 5,
+            "Master": 4,
+            "Reverb": 2
+          },
+          "overdrive": {
+            "Drive": 2,
+            "Tone": 5,
+            "Level": 8
+          },
+          "eq": {
+            "31.25Hz": "+2dB",
+            "62.5Hz": "+3dB",
+            "125Hz": "+2dB",
+            "250Hz": "0dB",
+            "500Hz": "+1dB",
+            "1kHz": "+2dB",
+            "2kHz": "+1dB",
+            "4kHz": "-1dB",
+            "8kHz": "-2dB",
+            "16kHz": "-3dB"
+          },
+          "noise_gate": {
+            "Threshold": "just above hiss (about -50dB)"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 48,
+            "Drive": 18,
+            "Tone": 38
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 83,
+            "Master": 58,
+            "Bass": 72,
+            "Middle": 66,
+            "Treble": 40,
+            "Presence": 44
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 40,
+            "HighCut": 38
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 70,
+            "62": 65,
+            "125": 62,
+            "250": 56,
+            "500": 54,
+            "1000": 62,
+            "2000": 62,
+            "4000": 51,
+            "8000": 44,
+            "16000": 38,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 48,
+                "Drive": 18,
+                "Tone": 38
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 83,
+                "Master": 58,
+                "Bass": 72,
+                "Middle": 66,
+                "Treble": 40,
+                "Presence": 44
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 40,
+                "HighCut": 38
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 70,
+                "62": 65,
+                "125": 62,
+                "250": 56,
+                "500": 54,
+                "1000": 62,
+                "2000": 62,
+                "4000": 51,
+                "8000": 44,
+                "16000": 38,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Deftones My Own Summer Lead Guitar Heavy Distortion",
+          "timestamp": "2026-01-07T07:00:24.475Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/deftones-my-own-summer-shove-it-tab-s595",
+        "artist": "Deftones",
+        "title": "My Own Summer (Shove It)",
+        "trackType": "Lead",
+        "suggestedPart": "Guitar Heavy Distortion",
+        "trackName": "Stephen Carpenter | ESP 400 Series | Lead Guitar - Distortion Guitar"
+      },
+      "id": "gen_mk3o5jc9_m9bx3gqo3",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-07T06:57:57.879Z",
+      "originalPrompt": "The White Stripes Seven Nation Army Muted Rhythm Guitar",
+      "proDescription": {
+        "tone_title": "Seven Nation Army - Muted Rhythm Guitar",
+        "genre": "Garage Rock / Alternative Rock",
+        "sound_description": "Raw, punchy, slightly gritty tone with strong midrange presence and moderate sustain. The sound is dry, with minimal ambience, emphasizing percussive attack and clarity in the muted strumming. The overall tone is thick but not overly distorted, with a vintage character.",
+        "guitar_rig_description": "Noise gate: not used. Compressor: not used. Overdrive/distortion/boost: mild overdrive or fuzz pedal to add grit and thickness, simulating a bass-like drive. Amplifier: vintage-style tube amp set to slight breakup for rawness and warmth. Cabinet: single 1x12 or 4x10 guitar cab, open-back preferred for lo-fi texture. EQ: amp EQ focused on boosting mids and slightly cutting highs for garage rock character. Modulation: not used. Delay: not used. Reverb: minimal to none; dry signal preferred to keep the attack tight.",
+        "references": [
+          "The White Stripes - Seven Nation Army",
+          "The Black Keys - Lonely Boy",
+          "The Strokes - Last Nite"
+        ],
+        "song_part": "muted rhythm groove sections (verses and breaks)",
+        "preferred_pickup": "neck pickup, tone rolled off slightly for warmth",
+        "additional_info": "Use heavy palm muting technique for percussive effect. Thicker strings recommended for punch (Jack White used a pitch-shift pedal to emulate bass, but for guitar rhythm, a standard tuned guitar with heavy muting and a raw drive tone works best)."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Electro-Harmonix Big Muff Pi (NYC Reissue)",
+          "MXR Micro Amp"
+        ],
+        "amplifier": "Fender Blues Junior IV",
+        "cabinet": "Fender Hot Rod Deluxe 1x12 with Celestion A-Type speaker (open-back)",
+        "settings": {
+          "amp": {
+            "Gain": 5.5,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 3.5,
+            "Master": 5.5
+          },
+          "big_muff": {
+            "Sustain": 10,
+            "Tone": 3.5,
+            "Volume": 10
+          },
+          "micro_amp": {
+            "Gain": 12
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Muff Fuzz",
+          "enabled": true,
+          "params": {
+            "Volume": 60,
+            "Sustain": 35,
+            "Tone": 45
+          }
+        },
+        "amplifier": {
+          "type": "Deluxe Rvb",
+          "enabled": true,
+          "params": {
+            "Gain": 45,
+            "Master": 60,
+            "Bass": 40,
+            "Middle": 65,
+            "Treble": 35
+          }
+        },
+        "cabinet": {
+          "type": "DR112",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 55,
+            "HighCut": 40
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 8,
+            "Decay": 18
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 60,
+                "Sustain": 35,
+                "Tone": 45
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 45,
+                "Master": 60,
+                "Bass": 40,
+                "Middle": 65,
+                "Treble": 35
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 55,
+                "HighCut": 40
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 8,
+                "Decay": 18
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "The White Stripes Seven Nation Army Muted Rhythm Guitar",
+          "timestamp": "2026-01-07T06:57:57.879Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/white-stripes-seven-nation-army-tab-s265",
+        "artist": "The White Stripes",
+        "title": "Seven Nation Army",
+        "trackType": "Rhythm",
+        "suggestedPart": "Muted Rhythm Guitar",
+        "trackName": "Jack White (bass imitation) - Electric Guitar (muted)"
+      },
+      "id": "gen_mk3o2e85_bi4nsn1gr",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-07T06:40:59.604Z",
+      "originalPrompt": "Nirvana Heart-Shaped Box Clean Lead Guitar Tone",
+      "proDescription": {
+        "tone_title": "Heart-Shaped Box - Clean Lead",
+        "genre": "90s Alternative Rock / Grunge",
+        "sound_description": "Bright, slightly jangly, clean tone with moderate warmth and presence. Moderate sustain, clear note articulation, with subtle ambient depth. Not overly compressed or processed.",
+        "guitar_rig_description": "Noise gate: not used (signal is clean enough for live use without gating). Compressor: not used (natural dynamics preserved). Overdrive/distortion/boost: not used (pure clean tone). Amplifier: clean channel of a Fender Twin Reverb or similar bright, clean amp with moderate presence and bass. Cabinet: matching Fender-style 2x12 cab for full, open sound. EQ: amp EQ set for bright highs and tight lows; no external EQ block used. Modulation: chorus pedal used subtly to add width and slight shimmer (optional, but common for the era and live settings). Delay: not used (dry signal). Reverb: spring reverb from amp or subtle digital reverb for depth.",
+        "references": [
+          "Nirvana - Heart-Shaped Box",
+          "Smashing Pumpkins - Disarm (clean parts)",
+          "Radiohead - High and Dry (clean tone)"
+        ],
+        "song_part": "lead melody and arpeggiated intro/verse parts",
+        "preferred_pickup": "neck single-coil, tone = 7-8",
+        "additional_info": "Use a Fender Jaguar or Mustang (as Kurt Cobain did) or similar offset guitar with single-coil pickups; pick lightly for clarity; use 10-46 string gauge for a balanced feel."
+      },
+      "realRig": {
+        "pedalboard": ["Boss CE-2 Chorus"],
+        "amplifier": "Fender '65 Twin Reverb Reissue",
+        "cabinet": "Fender 2x12 Cabinet with Jensen C12K 12\" speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Volume": 3.5,
+            "Treble": 7,
+            "Middle": 5,
+            "Bass": 4,
+            "Reverb": 3.5,
+            "Bright Switch": "On"
+          },
+          "chorus": {
+            "Rate": 10.3,
+            "Depth": 9,
+            "Level": "unity (no volume boost)"
+          },
+          "guitar": {
+            "Pickup": "Neck single-coil",
+            "Tone": 7.5,
+            "Volume": "full"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 38,
+            "Depth": 32
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 56,
+            "Master": 60,
+            "Bass": 42,
+            "Middle": 48,
+            "Treble": 65,
+            "Bright": 60
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 45,
+            "HighCut": 62
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 42,
+            "Decay": 53
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 38,
+                "Depth": 32
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 56,
+                "Master": 60,
+                "Bass": 42,
+                "Middle": 48,
+                "Treble": 65,
+                "Bright": 60
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 45,
+                "HighCut": 62
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 42,
+                "Decay": 53
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Nirvana Heart-Shaped Box Clean Lead Guitar Tone",
+          "timestamp": "2026-01-07T06:40:59.604Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/nirvana-heart-shaped-box-tab-s31",
+        "artist": "Nirvana",
+        "title": "Heart-Shaped Box",
+        "trackType": "Lead",
+        "suggestedPart": "Lead Guitar Tone",
+        "trackName": "Kurt Cobain | Univox Hi-Flier Phase 4 | Clean Guitar - Electric Guitar (clean)"
+      },
+      "id": "gen_mk3ngkiz_sl1ddqgl0",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-01-07T06:26:49.479Z",
       "originalPrompt": "Rammstein Radio Rhythm Guitar Distorted Power Chords",
       "proDescription": {
@@ -34026,6 +34974,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-07T06:26:49.495Z"
+    "lastUpdated": "2026-01-07T07:09:32.972Z"
   }
 }

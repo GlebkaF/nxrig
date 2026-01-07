@@ -183,13 +183,8 @@ export function PresetCreateForm({
         throw new Error(errorText || "Ошибка при создании пресета");
       }
 
-      const result = (await response.json()) as {
-        artistSlug: string;
-        presetSlug: string;
-      };
-
-      // Перенаправляем на созданный пресет
-      router.push(`/preset/${result.artistSlug}/${result.presetSlug}`);
+      // Перенаправляем на страницу драфтов
+      router.push("/admin/drafts");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Неизвестная ошибка");
     } finally {
