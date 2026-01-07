@@ -2,7 +2,8 @@ import presetsRaw from "data/presets.json";
 import artistsRaw from "data/artists.json";
 import { validatePresetWithArtist } from "./schemas";
 
-export const presets = presetsRaw.map((preset) => {
+// Все пресеты (для админки)
+export const allPresets = presetsRaw.map((preset) => {
   const artist = artistsRaw.find(
     (artist) => artist.id === preset.origin.artistId,
   );
@@ -25,6 +26,7 @@ export const presets = presetsRaw.map((preset) => {
     pickup: preset.pickup,
     slug: preset.slug,
     tabsUrl: preset.tabsUrl,
+    isDraft: preset.isDraft ?? false,
     createdAt: preset.createdAt,
     updatedAt: preset.updatedAt,
   };
@@ -34,3 +36,9 @@ export const presets = presetsRaw.map((preset) => {
 
   return validatedPreset;
 });
+
+// Только опубликованные пресеты (для публичного сайта)
+export const presets = allPresets.filter((preset) => !preset.isDraft);
+
+// Только драфты (для админки)
+export const draftPresets = allPresets.filter((preset) => preset.isDraft);

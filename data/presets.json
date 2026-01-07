@@ -9727,5 +9727,442 @@
     "tabsUrl": "https://www.songsterr.com/a/wsa/styles-of-beyond-nine-thou-grant-mohrman-superstars-remix-tab-s473751",
     "createdAt": "2026-01-07T06:25:12.349Z",
     "updatedAt": "2026-01-07T06:25:12.349Z"
+  },
+  {
+    "id": "gen_mk3myck7_oik121g5l",
+    "origin": {
+      "artistId": 16,
+      "song": "Radio",
+      "part": "Distorted Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive, tight, percussive, heavily saturated distortion with a focused midrange, controlled low end, minimal ambience, and high clarity for staccato power chords. Very modern, mechanical feel.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 55,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 65,
+          "Drive": 20,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Die VH4",
+        "enabled": true,
+        "params": {
+          "Gain": 80,
+          "Master": 55,
+          "Bass": 38,
+          "Middle": 45,
+          "Treble": 60,
+          "Presence": 62
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 60,
+          "HighCut": 48
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 38,
+          "62": 44,
+          "125": 46,
+          "250": 48,
+          "500": 45,
+          "1000": 52,
+          "2000": 56,
+          "4000": 60,
+          "8000": 54,
+          "16000": 45,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "radio-guitar-distorted-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/rammstein-radio-tab-s451741",
+    "createdAt": null,
+    "updatedAt": "2026-01-07T06:55:33.269Z",
+    "isDraft": true
+  },
+  {
+    "id": "gen_mk3ngkiz_sl1ddqgl0",
+    "origin": {
+      "artistId": 11,
+      "song": "Heart-Shaped Box",
+      "part": "Lead Guitar Tone",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, slightly jangly, clean tone with moderate warmth and presence. Moderate sustain, clear note articulation, with subtle ambient depth. Not overly compressed or processed.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 38,
+          "Depth": 32
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 56,
+          "Master": 60,
+          "Bass": 42,
+          "Middle": 48,
+          "Treble": 65,
+          "Bright": 60
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 45,
+          "HighCut": 62
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 42,
+          "Decay": 53
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 5,
+      "position": "bridge"
+    },
+    "slug": "heart-shaped-box-guitar-lead-guitar-tone",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/nirvana-heart-shaped-box-tab-s31",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-07T06:55:33.272Z"
+  },
+  {
+    "id": "gen_mk3o5jc9_m9bx3gqo3",
+    "origin": {
+      "artistId": 51,
+      "song": "My Own Summer (Shove It)",
+      "part": "Guitar Heavy Distortion",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive, saturated distortion with a thick, chunky low end. The tone is dark but cutting, with pronounced mids and a slightly scooped high end. Sustain and attack are emphasized for clear note definition, while maintaining a raw, heavy feel.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 48,
+          "Drive": 18,
+          "Tone": 38
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 83,
+          "Master": 58,
+          "Bass": 72,
+          "Middle": 66,
+          "Treble": 40,
+          "Presence": 44
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 40,
+          "HighCut": 38
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 70,
+          "62": 65,
+          "125": 62,
+          "250": 56,
+          "500": 54,
+          "1000": 62,
+          "2000": 62,
+          "4000": 51,
+          "8000": 44,
+          "16000": 38,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 6,
+      "position": "bridge"
+    },
+    "slug": "my-own-summer-shove-it-guitar-guitar-heavy-distortion",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/deftones-my-own-summer-shove-it-tab-s595",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-07T07:06:06.145Z"
+  },
+  {
+    "id": "gen_mk3ohajw_5kgm08ipq",
+    "origin": {
+      "artistId": 14,
+      "song": "Snow (Hey Oh)",
+      "part": "Guitar John Frusciante",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Clean, chimey, articulate sound with a glassy high end and tight low mids; dynamic, responsive to picking, slightly compressed for evenness, with a hint of warmth. Not harsh or overly bright, maintains a smooth and musical clarity.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 38,
+          "Clipping": 45
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 44,
+          "Master": 60,
+          "Bass": 42,
+          "Middle": 45,
+          "Treble": 62,
+          "Bright": 65
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 58,
+          "HighCut": 62
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 38,
+          "Decay": 44
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 8,
+      "position": "neck"
+    },
+    "slug": "snow-hey-oh-guitar-guitar-john-frusciante",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/red-hot-chili-peppers-snow-hey-oh-tab-s249",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-07T07:14:09.911Z"
   }
 ]

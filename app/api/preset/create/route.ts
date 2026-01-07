@@ -182,7 +182,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Создаем объект пресета
+    // Создаем объект пресета как драфт
     const currentDate = new Date().toISOString();
     const preset = {
       id: presetId,
@@ -201,7 +201,8 @@ export async function POST(request: NextRequest) {
       },
       slug: slug,
       tabsUrl: body.tabsUrl?.trim() || undefined,
-      createdAt: currentDate,
+      isDraft: true, // Создаем как драфт
+      createdAt: null, // Не устанавливаем дату создания до публикации
       updatedAt: currentDate,
     };
 
@@ -220,6 +221,7 @@ export async function POST(request: NextRequest) {
       pickup: preset.pickup,
       slug: preset.slug,
       tabsUrl: preset.tabsUrl,
+      isDraft: preset.isDraft,
       createdAt: preset.createdAt,
       updatedAt: preset.updatedAt,
     };
@@ -236,14 +238,17 @@ export async function POST(request: NextRequest) {
       fs.writeFile(artistsPath, JSON.stringify(artistsData, null, 2), "utf-8"),
     ]);
 
-    console.log(`✅ Пресет создан: ${presetId} для артиста ${artist.title}`);
+    console.log(
+      `✅ Драфт пресета создан: ${presetId} для артиста ${artist.title}`,
+    );
 
     return NextResponse.json({
       success: true,
       presetId: presetId,
       presetSlug: slug,
       artistSlug: artist.slug,
-      message: "Preset created successfully",
+      isDraft: true,
+      message: "Draft preset created successfully",
     });
   } catch (error) {
     console.error("Error creating preset:", error);

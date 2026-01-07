@@ -10,9 +10,10 @@ const presetsCount = presets.length;
 
 // Получаем два последних добавленных пресета
 const latestPresets = [...presets]
+  .filter((preset) => preset.createdAt !== null)
   .sort((a, b) => {
-    const dateA = new Date(a.createdAt).getTime();
-    const dateB = new Date(b.createdAt).getTime();
+    const dateA = new Date(a.createdAt as string).getTime();
+    const dateB = new Date(b.createdAt as string).getTime();
     return dateB - dateA; // Сортировка по убыванию (новые первыми)
   })
   .slice(0, 4);
