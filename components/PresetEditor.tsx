@@ -21,6 +21,11 @@ export const PresetEditor: FC<PresetEditorProps> = ({ preset }) => {
   const [importError, setImportError] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Обновляем chain при изменении preset
+  useEffect(() => {
+    setChain(preset.chain);
+  }, [preset.id, preset.chain]);
+
   // Обновляем QR-код при изменении chain
   useEffect(() => {
     const encoded = encodeChain(chain);

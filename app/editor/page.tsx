@@ -27,9 +27,7 @@ interface EditorPageProps {
 
 export default async function EditorPage({ searchParams }: EditorPageProps) {
   // Получаем ID пресета из query параметров или используем первый пресет
-  const presetId = searchParams.preset
-    ? parseInt(searchParams.preset, 10)
-    : presets[0]?.id;
+  const presetId = searchParams.preset || presets[0]?.id;
 
   // Находим пресет по ID
   const preset = presets.find((p) => p.id === presetId) || presets[0];
