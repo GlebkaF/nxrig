@@ -59,26 +59,26 @@ export default function Home() {
     <div className="min-h-screen bg-gray-900 text-white">
       <Header />
 
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8">
+      <main className="container mx-auto px-4 py-12 pb-8">
+        <h1 className="text-4xl font-bold mb-4">
           NUX Mighty Plug Pro & Mighty Space Patches – Guitar Presets Library
         </h1>
 
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6">
-            Free NUX Mighty Presets
-          </h2>{" "}
-          <p className="text-gray-300 max-w-3xl">
+        <div className="text-lg text-gray-300 mb-8 leading-relaxed">
+          <p className="mb-2">
             Explore our collection of {presetsCount} free, high-quality presets
-            for your NUX Mighty Plug Pro and NUX Mighty Space. All presets are
-            fully compatible with both devices and carefully crafted and tested
-            by real musicians.
+            for your NUX Mighty Plug Pro and NUX Mighty Space.
+            <br />
+            All presets are fully compatible with both devices and carefully
+            crafted and tested by real musicians.
           </p>
         </div>
 
         {latestPresets.length > 0 && (
           <div className="mb-8">
-            <h2 className="text-xl font-semibold mb-4">Fresh Presets</h2>
+            <div className="text-sm font-medium text-pink-400 mb-2 uppercase tracking-wide">
+              Fresh Presets
+            </div>
             <div className="flex gap-4">
               {latestPresets.map((preset) => (
                 <Link
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
         )}
 
-        <h2 className="text-2xl font-semibold mb-6">
+        <h2 className="text-2xl font-semibold mb-4">
           Guitar Presets for NUX Mighty Devices
         </h2>
 

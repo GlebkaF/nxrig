@@ -32,7 +32,7 @@ export default function ClientSearch(): React.ReactElement {
   return (
     <>
       {/* Search input */}
-      <div className="mb-8">
+      <div className="mb-4">
         <input
           type="text"
           placeholder="Search presets..."
@@ -47,7 +47,7 @@ export default function ClientSearch(): React.ReactElement {
       {filteredPresets.length > 0 ? (
         <div
           id="presets"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8"
         >
           {filteredPresets.map((preset) => (
             <PresetCard key={preset.id} preset={preset} />
