@@ -79,12 +79,12 @@ export default function Home() {
             <div className="text-sm font-medium text-pink-400 mb-2 uppercase tracking-wide">
               Fresh Presets
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 overflow-x-auto scrollbar-hide -mx-4 px-4">
               {latestPresets.map((preset) => (
                 <Link
                   key={preset.id}
                   href={createPresetLink(preset)}
-                  className="flex-1 min-w-[180px] max-w-[250px] bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-pink-500/50 hover:bg-gray-800/70 transition-all group"
+                  className="flex-shrink-0 w-[180px] sm:flex-1 sm:min-w-[180px] sm:max-w-[250px] bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-pink-500/50 hover:bg-gray-800/70 transition-all group"
                 >
                   <div className="text-sm font-semibold text-gray-300 group-hover:text-pink-400 transition-colors mb-1">
                     {preset.origin.artist.title}
