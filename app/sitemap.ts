@@ -36,6 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: latestPresetUpdate,
   });
 
+  // Страница редактора пресетов
+  sitemapEntries.push({
+    url: baseUrl + "/editor/",
+    lastModified: new Date("2026-01-07"),
+  });
+
   // Страница каталога пресетов - последний updatedAt среди всех пресетов
   sitemapEntries.push({
     url: baseUrl + "/preset/",
@@ -51,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (lastModified) {
       sitemapEntries.push({
         url: artistUrl,
-        lastModified: lastModified,
+        lastModified,
       });
     }
   });

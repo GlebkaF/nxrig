@@ -39,6 +39,16 @@ const Header: React.FC = () => {
                 Blog
               </Link>
               <Link
+                href="/editor"
+                className={`hover:text-pink-400 transition-colors ${
+                  pathname.startsWith("/editor")
+                    ? "text-pink-400 font-medium"
+                    : "text-gray-300"
+                }`}
+              >
+                Editor
+              </Link>
+              <Link
                 href="/favorites"
                 className={`hover:text-pink-400 transition-colors flex items-center gap-2 ${
                   pathname === "/favorites"
@@ -96,6 +106,16 @@ const Header: React.FC = () => {
                   }`}
                 >
                   Blog
+                </Link>
+                <Link
+                  href="/editor"
+                  className={`hover:text-pink-400 transition-colors text-sm ${
+                    pathname.startsWith("/editor")
+                      ? "text-pink-400 font-medium"
+                      : "text-gray-300"
+                  }`}
+                >
+                  Editor
                 </Link>
                 <Link
                   href="/favorites"

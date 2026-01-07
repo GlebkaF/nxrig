@@ -98,7 +98,7 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
             </ol>
           </div>
 
-          <div className="mt-8 flex items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             <button
               onClick={() => {
                 const canvas = document.querySelector("canvas");
@@ -119,6 +119,12 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
             >
               Download «{preset.origin.song} {preset.origin.part}» patch file
             </button>
+
+            <Link href={`/editor?preset=${preset.id}`}>
+              <button className="bg-violet-600 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded transition-colors">
+                Edit in Editor
+              </button>
+            </Link>
 
             <FavoriteButton presetId={preset.id} />
           </div>
