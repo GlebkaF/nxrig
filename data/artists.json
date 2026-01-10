@@ -304,5 +304,11 @@
     "title": "Deftones",
     "slug": "deftones",
     "description": "Deftones are an American alternative metal band known for atmospheric textures, heavy riffs, and emotional depth, blending metal with shoegaze and experimental elements."
+  },
+  {
+    "id": 52,
+    "title": "Marilyn Manson",
+    "slug": "marilyn-manson",
+    "description": "Marilyn Manson is an American artist known for provocative imagery, dark themes, and a blend of industrial rock and alternative metal that shaped 1990s rock culture."
   }
 ]

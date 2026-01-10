@@ -10164,5 +10164,231 @@
     "isDraft": false,
     "createdAt": "2026-01-09T04:20:18.777Z",
     "updatedAt": "2026-01-09T04:20:18.777Z"
+  },
+  {
+    "id": "gen_mk6uyxcr_t5k8z6fjl",
+    "origin": {
+      "artistId": 52,
+      "song": "Sweet Dreams",
+      "part": "Guitar Overdriven Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Dark, gritty, heavily overdriven with a saturated, slightly compressed attack. The tone is thick and aggressive with pronounced low-mids, some high-end fizz, and a raw, industrial edge. Sustain is moderate, with tight low-end and a snarling, menacing character. Dynamics are somewhat limited due to compression and distortion.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 52,
+          "Decay": 40
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 62,
+          "Clipping": 42
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 47,
+          "Drive": 88,
+          "Tone": 42
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 84,
+          "Master": 60,
+          "Bass": 67,
+          "Middle": 44,
+          "Treble": 56,
+          "Presence": 62
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 38,
+          "HighCut": 54
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 56,
+          "62": 60,
+          "125": 68,
+          "250": 72,
+          "500": 62,
+          "1000": 44,
+          "2000": 48,
+          "4000": 52,
+          "8000": 46,
+          "16000": 37,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 6,
+      "position": "bridge"
+    },
+    "slug": "sweet-dreams-guitar-guitar-overdriven-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/marilyn-manson-sweet-dreams-tab-s443781",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-09T12:41:26.264Z"
+  },
+  {
+    "id": "gen_mk6wfl9z_tfmjbl0oj",
+    "origin": {
+      "artistId": 10,
+      "song": "Sad But True",
+      "part": "Guitar Distortion Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Massive, thick, and crushingly heavy distortion with pronounced midrange punch, tight low end, and a controlled but aggressive attack. The tone is relatively dry with minimal ambience, delivering clarity and note separation while retaining a fat, saturated character.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 65,
+          "Decay": 30
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 20,
+          "Tone": 35
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 62,
+          "Master": 65,
+          "Bass": 60,
+          "Middle": 72,
+          "Treble": 35,
+          "Presence": 40
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 65,
+          "HighCut": 35
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 38,
+          "62": 42,
+          "125": 45,
+          "250": 53,
+          "500": 60,
+          "1000": 70,
+          "2000": 63,
+          "4000": 54,
+          "8000": 35,
+          "16000": 30,
+          "Vol": 55
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 6,
+      "position": "bridge"
+    },
+    "slug": "sad-but-true-guitar-guitar-distortion-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-sad-but-true-tab-s317",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-09T13:21:06.344Z"
   }
 ]
