@@ -10274,16 +10274,16 @@
     },
     "slug": "sweet-dreams-guitar-guitar-overdriven-riff",
     "tabsUrl": "https://www.songsterr.com/a/wsa/marilyn-manson-sweet-dreams-tab-s443781",
-    "isDraft": true,
-    "createdAt": null,
-    "updatedAt": "2026-01-09T12:41:26.264Z"
+    "isDraft": false,
+    "createdAt": "2026-01-11T06:12:55.475Z",
+    "updatedAt": "2026-01-11T06:12:55.475Z"
   },
   {
     "id": "gen_mk6wfl9z_tfmjbl0oj",
     "origin": {
       "artistId": 10,
       "song": "Sad But True",
-      "part": "Guitar Distortion Riff",
+      "part": "Distortion Riff",
       "imageUrl": "/images/cover/default-cover.webp"
     },
     "description": "Massive, thick, and crushingly heavy distortion with pronounced midrange punch, tight low end, and a controlled but aggressive attack. The tone is relatively dry with minimal ambience, delivering clarity and note separation while retaining a fat, saturated character.",
@@ -10292,8 +10292,8 @@
         "type": "Noise Gate",
         "enabled": true,
         "params": {
-          "Sensitivity": 65,
-          "Decay": 30
+          "Sensitivity": 50,
+          "Decay": 35
         }
       },
       "compressor": {
@@ -10319,20 +10319,20 @@
         "enabled": true,
         "params": {
           "Level": 60,
-          "Drive": 20,
-          "Tone": 35
+          "Drive": 30,
+          "Tone": 40
         }
       },
       "amplifier": {
         "type": "Dual Rect",
         "enabled": true,
         "params": {
-          "Gain": 62,
+          "Gain": 80,
           "Master": 65,
-          "Bass": 60,
-          "Middle": 72,
-          "Treble": 35,
-          "Presence": 40
+          "Bass": 55,
+          "Middle": 70,
+          "Treble": 40,
+          "Presence": 45
         }
       },
       "cabinet": {
@@ -10340,24 +10340,24 @@
         "enabled": true,
         "params": {
           "Level": 55,
-          "LowCut": 65,
-          "HighCut": 35
+          "LowCut": 60,
+          "HighCut": 40
         }
       },
       "eq": {
         "type": "10-Band",
         "enabled": true,
         "params": {
-          "31": 38,
-          "62": 42,
-          "125": 45,
-          "250": 53,
-          "500": 60,
-          "1000": 70,
-          "2000": 63,
-          "4000": 54,
-          "8000": 35,
-          "16000": 30,
+          "31": 40,
+          "62": 45,
+          "125": 48,
+          "250": 55,
+          "500": 65,
+          "1000": 75,
+          "2000": 65,
+          "4000": 60,
+          "8000": 45,
+          "16000": 40,
           "Vol": 55
         }
       },
@@ -10385,10 +10385,341 @@
       "tone": 6,
       "position": "bridge"
     },
-    "slug": "sad-but-true-guitar-guitar-distortion-riff",
+    "slug": "sad-but-true-guitar-distortion-riff",
     "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-sad-but-true-tab-s317",
     "isDraft": true,
     "createdAt": null,
-    "updatedAt": "2026-01-09T13:21:06.344Z"
+    "updatedAt": "2026-01-11T06:20:32.407Z"
+  },
+  {
+    "id": "gen_mk9cjvcd_6r2vpmuo0",
+    "origin": {
+      "artistId": 10,
+      "song": "Wherever I May Roam",
+      "part": "Distortion Sound",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Powerful, mid-scooped, aggressive distortion with tight low end, clear attack, and a slightly metallic edge. The tone is thick but not muddy, with pronounced palm-muted chunk and clarity for chugging riffs.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 65,
+          "Drive": 15,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 80,
+          "Master": 60,
+          "Bass": 65,
+          "Middle": 25,
+          "Treble": 75,
+          "Presence": 70
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "LowCut": 45,
+          "HighCut": 55
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 65,
+          "62": 68,
+          "125": 62,
+          "250": 60,
+          "500": 45,
+          "1000": 30,
+          "2000": 40,
+          "4000": 65,
+          "8000": 75,
+          "16000": 60,
+          "Vol": 55
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "wherever-i-may-roam-guitar-distortion-sound",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/metallica-wherever-i-may-roam-tab-s3707t4",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-11T06:31:16.606Z"
+  },
+  {
+    "id": "gen_mk9cyhj0_0xfdm6b26",
+    "origin": {
+      "artistId": 15,
+      "song": "Psychosocial",
+      "part": "Main Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Extremely aggressive, thick, and percussive tone with tight low end, strong midrange punch, and clear attack. The sound is very saturated but controlled, with minimal noise and no muddiness. Slightly scooped mids, but not excessively; presence is high to cut through a dense mix.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 25
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 30,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 80,
+          "Drive": 15,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 80,
+          "Master": 60,
+          "Bass": 60,
+          "Middle": 35,
+          "Treble": 68,
+          "Presence": 72
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 60,
+          "HighCut": 55
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 48,
+          "62": 44,
+          "125": 55,
+          "250": 46,
+          "500": 39,
+          "1000": 41,
+          "2000": 52,
+          "4000": 62,
+          "8000": 68,
+          "16000": 58,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "psychosocial-guitar-main-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/slipknot-psychosocial-tab-s19615t3",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-11T06:40:55.845Z"
+  },
+  {
+    "id": "gen_mk9dg0jw_pc0a7iumi",
+    "origin": {
+      "artistId": 53,
+      "song": "Every Breath You Take",
+      "part": "Clean Tone",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, chimey, and glassy clean sound with a very clear attack and lots of shimmer. Highly dynamic, with a spacious and polished feel. The tone is articulate and slightly compressed, with a sense of depth and airiness.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 60,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 35,
+          "Depth": 45
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Jazz Clean",
+        "enabled": true,
+        "params": {
+          "Gain": 35,
+          "Master": 65,
+          "Bass": 45,
+          "Middle": 40,
+          "Treble": 70,
+          "Bright": 70
+        }
+      },
+      "cabinet": {
+        "type": "JZ120",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 55,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Decay": 45
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 35,
+          "Feedback": 20,
+          "Time": 30
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 8,
+      "position": "neck"
+    },
+    "slug": "every-breath-you-take-guitar-clean-tone",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/police-every-breath-you-take-tab-s438",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-11T07:02:39.084Z"
   }
 ]

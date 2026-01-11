@@ -310,5 +310,11 @@
     "title": "Marilyn Manson",
     "slug": "marilyn-manson",
     "description": "Marilyn Manson is an American artist known for provocative imagery, dark themes, and a blend of industrial rock and alternative metal that shaped 1990s rock culture."
+  },
+  {
+    "id": 53,
+    "title": "The Police",
+    "slug": "the-police",
+    "description": "The Police are a British rock band known for blending rock, reggae, and new wave, featuring distinctive rhythms, sharp songwriting, and iconic hits of the late 1970s and 1980s."
   }
 ]
