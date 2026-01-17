@@ -1,6 +1,498 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-17T04:43:03.127Z",
+      "originalPrompt": "Foo Fighters Everlong Overdriven Lead Guitar Tone",
+      "proDescription": {
+        "tone_title": "Everlong Overdriven Lead Guitar",
+        "genre": "Alternative Rock / Post-Grunge",
+        "sound_description": "Punchy and aggressive mid-gain overdrive with tight low end, present mids, clear highs, and a slightly raw, energetic texture. Maintains note clarity under heavy strumming with a touch of sustain and ambience.",
+        "guitar_rig_description": "1. Noise gate: Used to control excess noise from overdrive and high-output pickups, but set lightly to preserve sustain. 2. Compressor: Not used; the tone relies on natural amp compression and player dynamics. 3. Overdrive/Distortion: Medium-gain overdrive pedal (e.g., Boss DS-1 or ProCo Rat) for crunchy, dynamic rhythm drive, set to avoid excessive fuzziness. 4. Amplifier: British-voiced tube amp (e.g., Mesa/Boogie Dual Rectifier or Marshall JCM900), with moderate gain and a balanced EQ, leaning towards pronounced mids and tight low end. 5. Cabinet: 4x12” closed-back cabinet with Celestion-style speakers for punchy projection and focused tone. 6. EQ: Subtle post-amp EQ shaping to cut harsh highs and control low-end boom, emphasizing upper mids for clarity. 7. Modulation: Not used; the tone is kept dry and direct. 8. Delay: Not used; the lead is dry and immediate in the mix. 9. Reverb: Subtle amp spring reverb or short plate reverb for just a hint of space, not dominant.",
+        "references": [
+          "Foo Fighters – Everlong",
+          "Foo Fighters – Monkey Wrench",
+          "Nirvana – Smells Like Teen Spirit (for similar amp tone)"
+        ],
+        "song_part": "lead guitar, main riff and chorus overdubs",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Aggressive downstrokes and palm muting enhance attack; use medium to heavy gauge strings (10–46 or 11–49) for tightness and sustain. Strum hard for characteristic energy. Avoid excessive gain to keep the tone articulate in a dense mix."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "ProCo Rat 2",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Mesa/Boogie Dual Rectifier Solo Head (Channel 2, Vintage Mode)",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Channel": "Orange (Channel 2, Vintage Mode)",
+            "Gain": 5,
+            "Bass": 4.5,
+            "Middle": 6.5,
+            "Treble": 6,
+            "Presence": 5.5,
+            "Master": 4,
+            "Reverb": 2
+          },
+          "rat": {
+            "Distortion": 11.5,
+            "Filter": 2.5,
+            "Volume": 12.5
+          },
+          "eq": {
+            "31Hz": "-2dB",
+            "62Hz": "-1dB",
+            "125Hz": "0dB",
+            "250Hz": "+1dB",
+            "500Hz": "+2dB",
+            "1kHz": "+3dB",
+            "2kHz": "+3dB",
+            "4kHz": "+1dB",
+            "8kHz": "-1dB",
+            "16kHz": "-2dB"
+          },
+          "ns2": {
+            "Threshold": "9 o'clock",
+            "Decay": "10 o'clock",
+            "Mode": "Reduction"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 40,
+            "Decay": 65
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 60,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 55,
+            "Master": 60,
+            "Bass": 45,
+            "Middle": 65,
+            "Treble": 60,
+            "Presence": 58
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 58,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 45,
+            "62": 47,
+            "125": 48,
+            "250": 50,
+            "500": 56,
+            "1000": 60,
+            "2000": 62,
+            "4000": 60,
+            "8000": 48,
+            "16000": 45,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 40,
+                "Decay": 65
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 60,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 55,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 65,
+                "Treble": 60,
+                "Presence": 58
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 58,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 45,
+                "62": 47,
+                "125": 48,
+                "250": 50,
+                "500": 56,
+                "1000": 60,
+                "2000": 62,
+                "4000": 60,
+                "8000": 48,
+                "16000": 45,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Foo Fighters Everlong Overdriven Lead Guitar Tone",
+          "timestamp": "2026-01-17T04:43:03.127Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/foo-fighters-everlong-tab-s86505",
+        "artist": "Foo Fighters",
+        "title": "Everlong",
+        "trackType": "Lead",
+        "suggestedPart": "Lead Guitar Tone",
+        "trackName": "Dave Grohl | Gibson RD Standard | Lead Guitar - Overdriven Guitar"
+      },
+      "id": "gen_mkhtnexr_y1ka1hc7f",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-17T04:39:55.627Z",
+      "originalPrompt": "Nirvana Smells Like Teen Spirit Distorted Rhythm Guitar",
+      "proDescription": {
+        "tone_title": "Smells Like Teen Spirit - Distorted Rhythm Guitar",
+        "genre": "Grunge / 90s Alternative Rock",
+        "sound_description": "Aggressive, raw, fuzzy distortion with a thick midrange and moderate brightness. The tone is punchy with a slight looseness, delivering a powerful, gritty sound that cuts through the mix. Dynamics are somewhat compressed but retain enough response for heavy riffing.",
+        "guitar_rig_description": "1. Noise gate: not used (Nirvana's tone is intentionally noisy and open). 2. Compressor: not used (natural dynamics are preserved). 3. Overdrive/distortion/boost: Distortion pedal (Boss DS-1 or DS-2) providing gritty, saturated distortion with a raw character. 4. Amplifier: Clean or slightly driven solid-state or tube amp, set relatively neutral to let pedal distortion dominate. 5. Cabinet: 4x12 closed-back cabinet, emphasizing midrange punch and tight low end. 6. EQ: Subtle mid boost, slight treble roll-off to tame fizz, but no external EQ pedal. 7. Modulation: not used. 8. Delay: not used. 9. Reverb: not used (dry, direct sound).",
+        "references": [
+          "Nirvana - Smells Like Teen Spirit",
+          "Nirvana - In Bloom",
+          "Foo Fighters - I'll Stick Around"
+        ],
+        "song_part": "Main rhythm riff (verses and chorus)",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a Fender Jaguar or Mustang with a humbucker in the bridge position. Play with aggressive, percussive strumming and use heavy gauge strings for thickness. Left-hand muting and palm muting are key to control noise and articulation."
+      },
+      "realRig": {
+        "pedalboard": ["Boss DS-1 Distortion"],
+        "amplifier": "Fender Twin Reverb (’65 Reissue)",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75",
+        "settings": {
+          "amp": {
+            "Volume": 4,
+            "Treble": 4,
+            "Middle": 7,
+            "Bass": 5,
+            "Reverb": 0
+          },
+          "distortion": {
+            "Level": 6,
+            "Tone": 4,
+            "Dist": 8
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 65,
+            "Drive": 83,
+            "Tone": 58
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 34,
+            "Master": 60,
+            "Bass": 46,
+            "Middle": 63,
+            "Treble": 40,
+            "Bright": 40
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 58,
+            "LowCut": 50,
+            "HighCut": 41
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 65,
+                "Drive": 83,
+                "Tone": 58
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 34,
+                "Master": 60,
+                "Bass": 46,
+                "Middle": 63,
+                "Treble": 40,
+                "Bright": 40
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "LowCut": 50,
+                "HighCut": 41
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Nirvana Smells Like Teen Spirit Distorted Rhythm Guitar",
+          "timestamp": "2026-01-17T04:39:55.627Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/nirvana-smells-like-teen-spirit-tab-s269",
+        "artist": "Nirvana",
+        "title": "Smells Like Teen Spirit",
+        "trackType": "Lead",
+        "suggestedPart": "Distorted Rhythm Guitar",
+        "trackName": "Kurt Cobain | Distortion | 1969 Fender Mustang - Distortion Guitar"
+      },
+      "id": "gen_mkhtje9g_sllx8xbl2",
+      "status": "draft"
+    },
+    {
       "timestamp": "2026-01-17T04:21:30.254Z",
       "originalPrompt": "Papa Roach Last Resort Distortion Lead Guitar",
       "proDescription": {
@@ -38815,6 +39307,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-17T04:21:30.271Z"
+    "lastUpdated": "2026-01-17T04:43:03.135Z"
   }
 }

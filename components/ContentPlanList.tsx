@@ -173,6 +173,9 @@ export function ContentPlanList({
     setLoadingUrl(track.songsterrUrl);
     setError(null);
 
+    // Open new tab immediately (synchronously) to avoid popup blocker
+    const newTab = window.open("about:blank", "_blank");
+
     try {
       // Step 1: Generate prompt from Songsterr URL
       const promptResponse = await fetch("/api/songsterr-to-prompt", {
@@ -234,10 +237,16 @@ export function ContentPlanList({
         prev.filter((t) => t.songsterrUrl !== track.songsterrUrl),
       );
 
-      // Open generation page in new tab
-      window.open(`/admin/generation/${chainData.generationId}`, "_blank");
+      // Navigate the new tab to the generation page
+      if (newTab) {
+        newTab.location.href = `/admin/generation/${chainData.generationId}`;
+      }
       setLoadingUrl(null);
     } catch (err) {
+      // Close the blank tab on error
+      if (newTab) {
+        newTab.close();
+      }
       setError(err instanceof Error ? err.message : "Generation failed");
       setLoadingUrl(null);
     }

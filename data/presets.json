@@ -11049,5 +11049,113 @@
     "isDraft": true,
     "createdAt": null,
     "updatedAt": "2026-01-17T04:29:32.270Z"
+  },
+  {
+    "id": "gen_mkhtje9g_sllx8xbl2",
+    "origin": {
+      "artistId": 11,
+      "song": "Smells Like Teen Spirit",
+      "part": "Distorted Rhythm Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive, raw, fuzzy distortion with a thick midrange and moderate brightness. The tone is punchy with a slight looseness, delivering a powerful, gritty sound that cuts through the mix. Dynamics are somewhat compressed but retain enough response for heavy riffing.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 65,
+          "Drive": 83,
+          "Tone": 58
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 34,
+          "Master": 60,
+          "Bass": 46,
+          "Middle": 63,
+          "Treble": 40,
+          "Bright": 40
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 58,
+          "LowCut": 50,
+          "HighCut": 41
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "smells-like-teen-spirit-guitar-distorted-rhythm-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/nirvana-smells-like-teen-spirit-tab-s269",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T04:41:55.183Z"
   }
 ]

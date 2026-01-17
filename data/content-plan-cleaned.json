@@ -3,14 +3,6 @@
     {
       "artist": "Guns N' Roses",
       "song": "Sweet Child O' Mine",
-      "instrument": "Acoustic Guitar (steel)",
-      "part": "Acoustic Guitar",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-sweet-child-o-mine-tab-s23",
-      "trackIndex": 0
-    },
-    {
-      "artist": "Guns N' Roses",
-      "song": "Sweet Child O' Mine",
       "instrument": "Distortion Guitar",
       "part": "Lead Guitar",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-sweet-child-o-mine-tab-s23t1",
@@ -39,14 +31,6 @@
       "part": "Rhythm Guitar",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-sweet-child-o-mine-tab-s23t4",
       "trackIndex": 4
-    },
-    {
-      "artist": "Nirvana",
-      "song": "Smells Like Teen Spirit",
-      "instrument": "Electric Guitar (clean)",
-      "part": "1969 Fender Mustang",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/nirvana-smells-like-teen-spirit-tab-s269",
-      "trackIndex": 0
     },
     {
       "artist": "Nirvana",
