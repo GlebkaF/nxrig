@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createGenerator } from "../../../lib/ai-generator/create-generator";
+
 // Исключаем этот API роут из статической генерации
 export function generateStaticParams() {
   return [{ id: "this-is-a-dummy-id-for-static-build" }];
