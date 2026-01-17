@@ -10721,5 +10721,333 @@
     "isDraft": false,
     "createdAt": "2026-01-12T03:04:15.076Z",
     "updatedAt": "2026-01-12T03:04:15.076Z"
+  },
+  {
+    "id": "gen_mkhsjhmp_di0tbtsit",
+    "origin": {
+      "artistId": 54,
+      "song": "Seven Nation Army",
+      "part": "Muted Rhythm Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Raw, punchy, mid-focused, slightly overdriven tone with a lo-fi character. Moderate attack, tight low end, minimal sustain, and pronounced midrange. The tone is dry and direct, lacking lush effects or ambience.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Muff Fuzz",
+        "enabled": true,
+        "params": {
+          "Volume": 55,
+          "Sustain": 30,
+          "Tone": 45
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 60,
+          "Master": 55,
+          "Bass": 35,
+          "Middle": 65,
+          "Treble": 40,
+          "Bright": 45
+        }
+      },
+      "cabinet": {
+        "type": "A112",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 55,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 40,
+          "220": 45,
+          "500": 62,
+          "1200": 68,
+          "2600": 57,
+          "6400": 42
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "seven-nation-army-guitar-muted-rhythm-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/the-white-stripes-seven-nation-army-tab-s265",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T04:14:53.724Z"
+  },
+  {
+    "id": "gen_mkhsue56_lyknn1qle",
+    "origin": {
+      "artistId": 55,
+      "song": "Still Loving You",
+      "part": "Distortion Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Warm, saturated distortion with pronounced mids, smooth sustain, and a thick but clear character. The tone is full and rich, with enough definition for chords to ring out clearly, but not overly bright. Moderate compression and some ambience create a polished, emotive feel suitable for a power ballad.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 60
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "Sustain": 45,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "Drive": 38,
+          "Tone": 45
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 63,
+          "Master": 60,
+          "Bass": 54,
+          "Middle": 67,
+          "Treble": 43,
+          "Presence": 48
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 55,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 45,
+          "220": 50,
+          "500": 60,
+          "1200": 62,
+          "2600": 54,
+          "6400": 40
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 36,
+          "Decay": 42
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "still-loving-you-guitar-distortion-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/scorpions-still-loving-you-tab-s86",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T04:23:09.679Z"
+  },
+  {
+    "id": "gen_mkhsvpct_22f83vz5t",
+    "origin": {
+      "artistId": 56,
+      "song": "Last Resort",
+      "part": "Distortion Lead Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive, tight, and saturated high-gain distortion with pronounced attack, solid low-end punch, crisp highs, and moderate sustain. The tone is direct with little ambience, focused for heavy riffing and melodic lead parts. Minimal modulation or effects to keep the sound raw and in-your-face.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 55,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 45,
+          "Drive": 20,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 85,
+          "Master": 60,
+          "Bass": 60,
+          "Middle": 65,
+          "Treble": 60,
+          "Presence": 65
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 55,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 45,
+          "62": 47,
+          "125": 50,
+          "250": 52,
+          "500": 58,
+          "1000": 65,
+          "2000": 62,
+          "4000": 58,
+          "8000": 53,
+          "16000": 45,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "last-resort-guitar-distortion-lead-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/papa-roach-last-resort-tab-s264",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T04:29:32.270Z"
   }
 ]

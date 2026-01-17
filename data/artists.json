@@ -316,5 +316,23 @@
     "title": "The Police",
     "slug": "the-police",
     "description": "The Police are a British rock band known for blending rock, reggae, and new wave, featuring distinctive rhythms, sharp songwriting, and iconic hits of the late 1970s and 1980s."
+  },
+  {
+    "id": 54,
+    "title": "The White Stripes",
+    "slug": "the-white-stripes",
+    "description": "The White Stripes are an American garage rock duo known for raw guitar riffs, minimalist sound, and blues-inspired energy that helped revive rock in the early 2000s."
+  },
+  {
+    "id": 55,
+    "title": "Scorpions",
+    "slug": "scorpions",
+    "description": "Scorpions are a legendary hard rock band known for powerful riffs, melodic solos, and iconic anthems that shaped classic and arena rock worldwide."
+  },
+  {
+    "id": 56,
+    "title": "Papa Roach",
+    "slug": "papa-roach",
+    "description": "Papa Roach are an American rock band known for emotional lyrics, heavy riffs, and a blend of alternative metal, nu metal, and modern rock that defined the 2000s era."
   }
 ]
