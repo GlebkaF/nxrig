@@ -334,5 +334,29 @@
     "title": "Papa Roach",
     "slug": "papa-roach",
     "description": "Papa Roach are an American rock band known for emotional lyrics, heavy riffs, and a blend of alternative metal, nu metal, and modern rock that defined the 2000s era."
+  },
+  {
+    "id": 57,
+    "title": "Michael Jackson",
+    "slug": "michael-jackson",
+    "description": "Michael Jackson was the King of Pop, known for groundbreaking music, iconic dance moves, and global influence that reshaped pop culture and modern music."
+  },
+  {
+    "id": 58,
+    "title": "Three Days Grace",
+    "slug": "three-days-grace",
+    "description": "Three Days Grace are a Canadian rock band known for dark, emotional lyrics, heavy guitar riffs, and a powerful alternative metal sound."
+  },
+  {
+    "id": 59,
+    "title": "Gorillaz",
+    "slug": "gorillaz",
+    "description": "Gorillaz are a virtual band blending alternative rock, hip hop, and electronic music, known for genre-crossing sound, collaborations, and animated personas."
+  },
+  {
+    "id": 60,
+    "title": "Cream",
+    "slug": "cream",
+    "description": "Cream are a legendary rock supergroup known for virtuosic musicianship, blues-rock foundations, and pioneering the power trio format."
   }
 ]

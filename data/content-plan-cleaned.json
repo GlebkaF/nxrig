@@ -59,14 +59,6 @@
     {
       "artist": "Foo Fighters",
       "song": "Everlong",
-      "instrument": "Distortion Guitar",
-      "part": "Lead Guitar",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/foo-fighters-everlong-tab-s86505",
-      "trackIndex": 0
-    },
-    {
-      "artist": "Foo Fighters",
-      "song": "Everlong",
       "instrument": "Electric Guitar (clean)",
       "part": "Extra Clean Guitars",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/foo-fighters-everlong-tab-s86505t1",
@@ -92,14 +84,6 @@
       "artist": "Pink Floyd",
       "song": "Wish You Were Here",
       "instrument": "Acoustic Guitar (steel)",
-      "part": "Lead Guitar",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/pink-floyd-wish-you-were-here-tab-s153",
-      "trackIndex": 0
-    },
-    {
-      "artist": "Pink Floyd",
-      "song": "Wish You Were Here",
-      "instrument": "Acoustic Guitar (steel)",
       "part": "12-String Rhythm Guitar",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/pink-floyd-wish-you-were-here-tab-s153t1",
       "trackIndex": 1
@@ -119,14 +103,6 @@
       "part": "Pedal Steel Guitar",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/pink-floyd-wish-you-were-here-tab-s153t3",
       "trackIndex": 3
-    },
-    {
-      "artist": "Michael Jackson",
-      "song": "Beat It",
-      "instrument": "Distortion Guitar",
-      "part": "Guitar Solo",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/michael-jackson-beat-it-tab-s10259",
-      "trackIndex": 0
     },
     {
       "artist": "Michael Jackson",
@@ -363,14 +339,6 @@
     {
       "artist": "The Eagles",
       "song": "Hotel California Solo",
-      "instrument": "Distortion Guitar",
-      "part": "Guitar Solo",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/the-eagles-hotel-california-solo-tab-s438376",
-      "trackIndex": 0
-    },
-    {
-      "artist": "The Eagles",
-      "song": "Hotel California Solo",
       "instrument": "Overdriven Guitar",
       "part": "Overdub Rhythm",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/the-eagles-hotel-california-solo-tab-s438376t1",
@@ -399,14 +367,6 @@
       "part": "12 St. Electric Guitar",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/the-eagles-hotel-california-solo-tab-s438376t4",
       "trackIndex": 4
-    },
-    {
-      "artist": "Gorillaz",
-      "song": "Feel Good Inc.",
-      "instrument": "Acoustic Guitar (steel)",
-      "part": "Acoustic Guitar #1",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/gorillaz-feel-good-inc-tab-s549",
-      "trackIndex": 0
     },
     {
       "artist": "Gorillaz",
@@ -652,14 +612,6 @@
       "artist": "Eric Clapton",
       "song": "Tears In Heaven",
       "instrument": "Acoustic Guitar (nylon)",
-      "part": "Extra Lead Nylon Guitar-Eric Clapton",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/eric-clapton-tears-in-heaven-tab-s4",
-      "trackIndex": 0
-    },
-    {
-      "artist": "Eric Clapton",
-      "song": "Tears In Heaven",
-      "instrument": "Acoustic Guitar (nylon)",
       "part": "lead Nylon Guitar-Eric Clapton",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/eric-clapton-tears-in-heaven-tab-s4t1",
       "trackIndex": 1
@@ -764,14 +716,6 @@
       "artist": "Three Days Grace",
       "song": "Animal I Have Become",
       "instrument": "Distortion Guitar",
-      "part": "Lead Guitar",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/three-days-grace-animal-i-have-become-tab-s466",
-      "trackIndex": 0
-    },
-    {
-      "artist": "Three Days Grace",
-      "song": "Animal I Have Become",
-      "instrument": "Distortion Guitar",
       "part": "Rhythm Guitar",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/three-days-grace-animal-i-have-become-tab-s466t1",
       "trackIndex": 1
@@ -815,14 +759,6 @@
       "part": "Jamie Cook",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/arctic-monkeys-r-u-mine-tab-s90203t3",
       "trackIndex": 3
-    },
-    {
-      "artist": "Cream",
-      "song": "Sunshine Of Your Love",
-      "instrument": "Overdriven Guitar",
-      "part": "Eric Clapton",
-      "songsterrUrl": "https://www.songsterr.com/a/wsa/cream-sunshine-of-your-love-tab-s256",
-      "trackIndex": 0
     },
     {
       "artist": "Cream",
@@ -903,6 +839,14 @@
       "part": "Daron - Solo Guitar (Main)",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/system-of-a-down-lonely-day-tab-s443t3",
       "trackIndex": 3
+    },
+    {
+      "artist": "Pink Floyd",
+      "song": "Wish You Were Here",
+      "instrument": "Acoustic Guitar (steel)",
+      "part": "Lead Guitar",
+      "songsterrUrl": "https://www.songsterr.com/a/wsa/pink-floyd-wish-you-were-here-tab-s153",
+      "trackIndex": 0
     },
     {
       "artist": "System of a Down",
@@ -2470,6 +2414,14 @@
       "instrument": "Electric Guitar (clean)",
       "part": "Dave Keuning - Guitar (Left)",
       "songsterrUrl": "https://www.songsterr.com/a/wsa/the-killers-mr-brightside-tab-s601",
+      "trackIndex": 0
+    },
+    {
+      "artist": "Foo Fighters",
+      "song": "Everlong",
+      "instrument": "Distortion Guitar",
+      "part": "Lead Guitar",
+      "songsterrUrl": "https://www.songsterr.com/a/wsa/foo-fighters-everlong-tab-s86505",
       "trackIndex": 0
     },
     {

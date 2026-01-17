@@ -55,6 +55,9 @@ export function ContentPlanList({
   const [draftsLoading, setDraftsLoading] = useState(true);
   const [publishingId, setPublishingId] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [lastGenerationUrl, setLastGenerationUrl] = useState<string | null>(
+    null,
+  );
 
   // Load drafts on mount
   useEffect(() => {
@@ -238,9 +241,14 @@ export function ContentPlanList({
       );
 
       // Navigate the new tab to the generation page
+      const generationUrl = `/admin/generation/${chainData.generationId}`;
       if (newTab) {
-        newTab.location.href = `/admin/generation/${chainData.generationId}`;
+        newTab.location.href = generationUrl;
       }
+
+      // Show success message with link
+      setSuccessMessage("Generated!");
+      setLastGenerationUrl(generationUrl);
       setLoadingUrl(null);
     } catch (err) {
       // Close the blank tab on error
@@ -329,8 +337,27 @@ export function ContentPlanList({
     <div>
       {/* Success message */}
       {successMessage && (
-        <div className="mb-4 p-4 bg-green-900/50 border border-green-700 rounded-lg text-green-300">
-          {successMessage}
+        <div className="mb-4 p-4 bg-green-900/50 border border-green-700 rounded-lg text-green-300 flex items-center gap-4">
+          <span>{successMessage}</span>
+          {lastGenerationUrl && (
+            <a
+              href={lastGenerationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1 bg-green-600 hover:bg-green-500 text-white rounded transition-colors"
+            >
+              Open Generation →
+            </a>
+          )}
+          <button
+            onClick={() => {
+              setSuccessMessage(null);
+              setLastGenerationUrl(null);
+            }}
+            className="ml-auto text-green-400 hover:text-green-200"
+          >
+            ✕
+          </button>
         </div>
       )}
 

@@ -1,6 +1,1791 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-17T05:06:21.178Z",
+      "originalPrompt": "Guns N' Roses Civil War Slash Lead Guitar Distortion",
+      "proDescription": {
+        "tone_title": "Civil War - Slash Lead Guitar Distortion",
+        "genre": "Classic Rock / Hard Rock",
+        "sound_description": "Expressive, sustaining, and biting lead tone with a vocal midrange, smooth overdrive, moderate compression, and enough clarity to cut through the mix. The sound is thick but not muddy, with a touch of warmth and a singing quality ideal for melodic solos.",
+        "guitar_rig_description": "Noise gate: not used (Slash typically prefers natural dynamics). Compressor: lightly used for smoother sustain and controlled dynamics. Overdrive/Distortion: classic overdrive pedal (like a Boss SD-1 or Tube Screamer) used to push the amp for added sustain and tightness, but not overly saturated. Amplifier: British-style tube amp head (such as Marshall JCM800 or Silver Jubilee), set for crunchy, articulate distortion with a prominent midrange. Cabinet: 4x12 closed-back speaker cabinet with Celestion speakers, providing punch and body. EQ: amp EQ focused on boosting mids, slightly rolled-off highs to avoid harshness, and tight lows. Modulation: not used (Slash's solos in this track are dry). Delay: short, subtle analog-style delay for thickness and space, mixed low to avoid muddying the lead lines. Reverb: light plate or spring reverb for ambient depth without washing out the attack.",
+        "references": [
+          "Guns N' Roses - Civil War",
+          "Guns N' Roses - November Rain (solo tone)",
+          "Slash - Anastasia (for modern reference)"
+        ],
+        "song_part": "lead guitar solos and melodic lines",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Slash uses a Les Paul-style guitar with Alnico II humbuckers and medium gauge strings (typically .011 set). Play with a medium pick and aggressive, expressive vibrato. Use volume control on the guitar to clean up between phrases if needed."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Dyna Comp",
+          "Boss SD-1 Super OverDrive",
+          "Boss DD-3 Digital Delay"
+        ],
+        "amplifier": "Marshall Silver Jubilee 2555X",
+        "cabinet": "Marshall 1960AV 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Lead Master": 6,
+            "Output Master": 4,
+            "Input Gain": 7,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 5
+          },
+          "compressor": {
+            "Output": 2,
+            "Sensitivity": 2
+          },
+          "overdrive": {
+            "Drive": 5,
+            "Tone": 5,
+            "Level": 8
+          },
+          "delay": {
+            "Effect Level": 10,
+            "Feedback": 2,
+            "Delay Time": 340
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 40,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 32,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 63,
+            "Master": 65,
+            "Bass": 47,
+            "Middle": 68,
+            "Treble": 42,
+            "Presence": 54
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 55,
+            "HighCut": 43
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 28,
+            "Feedback": 26,
+            "Time": 32
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 40,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 32,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 63,
+                "Master": 65,
+                "Bass": 47,
+                "Middle": 68,
+                "Treble": 42,
+                "Presence": 54
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 55,
+                "HighCut": 43
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 28,
+                "Feedback": 26,
+                "Time": 32
+              }
+            }
+          },
+          "prompt": "Guns N' Roses Civil War Slash Lead Guitar Distortion",
+          "timestamp": "2026-01-17T05:06:21.178Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/guns-n-roses-civil-war-tab-s8153",
+        "artist": "Guns N' Roses",
+        "title": "Civil War",
+        "trackType": "Lead",
+        "suggestedPart": "Lead Guitar Distortion",
+        "trackName": "Slash | Lead Guitar - Distortion Guitar"
+      },
+      "id": "gen_mkhuhdok_89w4suqsz",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-17T04:59:30.239Z",
+      "originalPrompt": "Cream Sunshine Of Your Love Rhythm Guitar Overdrive",
+      "proDescription": {
+        "tone_title": "Sunshine Of Your Love - Rhythm Guitar Overdrive",
+        "genre": "Classic Rock / Blues Rock",
+        "sound_description": "Thick, mid-heavy overdrive with a creamy texture; pronounced attack and sustain; warmth and slight fuzziness; not overly bright, with a vintage, woolly character. Moderate dynamics, slight compression from amp gain.",
+        "guitar_rig_description": "Noise gate: not used (song dynamics and low noise floor typical for vintage rigs). Compressor: not used (natural amp compression preferred for authenticity). Overdrive/Distortion/Boost: Used—a classic mid-gain overdrive pedal or cranked amp input for smooth breakup and sustain. Amplifier: Used—a British-style tube amp (Marshall Plexi) set to natural overdrive for creamy, harmonically rich distortion. Cabinet: Used—a 4x12 closed-back cabinet with vintage-style speakers to provide fullness and punch. EQ: Used—midrange emphasized, treble rolled off slightly for warmth, bass tight but present. Modulation: not used. Delay: not used. Reverb: Used—subtle spring reverb for space, but kept minimal to preserve punch.",
+        "references": [
+          "Cream - Sunshine Of Your Love",
+          "Jimi Hendrix - Fire",
+          "Led Zeppelin - Whole Lotta Love"
+        ],
+        "song_part": "main riff and rhythm parts",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use a Les Paul-style guitar with humbuckers for thick, punchy tone. Play with fingers or a thick pick for round attack. Strings: medium gauge (10-46 or 11-48). Roll guitar volume down slightly for dynamics; amp volume high for power tube saturation."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Analogman King of Tone (set to OD mode, right side only)",
+          "MXR 10-Band EQ",
+          "TC Electronic Hall of Fame Mini Reverb (set to Spring mode, Mix low)"
+        ],
+        "amplifier": "Marshall 1959SLP Plexi Super Lead 100",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Volume I)": 7,
+            "Gain (Volume II)": 3,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 4,
+            "Presence": 5,
+            "Master": 7
+          },
+          "overdrive": {
+            "Drive": 3,
+            "Tone": 11,
+            "Volume": 12
+          },
+          "eq": {
+            "800Hz": "+3dB",
+            "1.6kHz": "+2dB",
+            "6.4kHz": "-3dB",
+            "63Hz": "+1dB",
+            "125Hz": "0dB"
+          },
+          "reverb": {
+            "Mix": "9 o'clock",
+            "Decay": "short"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Blues Drive",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Gain": 58,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 65,
+            "Master": 63,
+            "Bass": 56,
+            "Middle": 68,
+            "Treble": 41,
+            "Presence": 45
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 42
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 48,
+            "62": 53,
+            "125": 56,
+            "250": 59,
+            "500": 63,
+            "1000": 68,
+            "2000": 66,
+            "4000": 47,
+            "8000": 38,
+            "16000": 32,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 23,
+            "Decay": 38
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Blues Drive",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Gain": 58,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 65,
+                "Master": 63,
+                "Bass": 56,
+                "Middle": 68,
+                "Treble": 41,
+                "Presence": 45
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 48,
+                "62": 53,
+                "125": 56,
+                "250": 59,
+                "500": 63,
+                "1000": 68,
+                "2000": 66,
+                "4000": 47,
+                "8000": 38,
+                "16000": 32,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 23,
+                "Decay": 38
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Cream Sunshine Of Your Love Rhythm Guitar Overdrive",
+          "timestamp": "2026-01-17T04:59:30.239Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/cream-sunshine-of-your-love-tab-s256t2",
+        "artist": "Cream",
+        "title": "Sunshine Of Your Love",
+        "trackType": "Rhythm",
+        "suggestedPart": "Rhythm Guitar Overdrive",
+        "trackName": "Eric Clapton | Gibson “The Fool” SG Standard | Rhythm Guitar - Overdriven Guitar"
+      },
+      "id": "gen_mkhu8klp_uoyqt0ozz",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-17T04:59:12.194Z",
+      "originalPrompt": "Cream Sunshine Of Your Love Lead Guitar Overdrive",
+      "proDescription": {
+        "tone_title": "Sunshine Of Your Love Lead Guitar Overdrive",
+        "genre": "Classic Rock / Blues Rock",
+        "sound_description": "Thick, creamy overdrive with a pronounced midrange, smooth sustain, and a touch of vintage grit. The tone is warm with rounded highs, strong mids, and enough clarity to cut through the mix without harshness. Dynamic and expressive, allowing for touch-sensitive playing.",
+        "guitar_rig_description": "1. Noise gate: not used (vintage setups typically leave noise unfiltered for natural dynamics). 2. Compressor: not used (dynamics are managed by playing technique). 3. Overdrive: Used; vintage-style overdrive pedal or natural amp overdrive for warm, saturated breakup and smooth sustain. 4. Amplifier: Vintage British-style tube amp (Marshall Plexi or similar), driven into natural overdrive for fullness and classic rock bark. 5. Cabinet: 4x12 closed-back cabinet emulation for punchy lows and midrange focus. 6. EQ: Subtle post-amp EQ to emphasize mids and roll off excessive highs, enhancing warmth. 7. Modulation: not used. 8. Delay: not used. 9. Reverb: Used; light plate or spring reverb for space and depth without washing out the lead tone.",
+        "references": [
+          "Cream - Sunshine Of Your Love",
+          "Eric Clapton (Cream era) live performances",
+          "Jimi Hendrix - Killing Floor (for similar amp-driven lead tones)"
+        ],
+        "song_part": "lead guitar (solo and melodic lines)",
+        "preferred_pickup": "bridge humbucker, tone = 7 (rolled off slightly for warmth)",
+        "additional_info": "Use a Les Paul or SG style guitar with humbuckers. Medium gauge strings preferred for sustain and tone. Pick attack and hand dynamics are crucial for expressive phrasing. Consider vintage-spec OD pedals (e.g., Bluesbreaker, Tube Screamer set low) or just crank the amp."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Marshall Bluesbreaker Overdrive (BB-2, set for low gain, volume boosted to push amp)",
+          "MXR 10-Band EQ (post-amp in FX loop or after OD; 800Hz +2dB, 3.2kHz -2dB, 16kHz -4dB)",
+          "TC Electronic Hall of Fame 2 Reverb (Plate algorithm, Mix 15%, Decay 2.5s)"
+        ],
+        "amplifier": "Marshall 1959SLP Plexi Super Lead 100W",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Volume I)": 7,
+            "Volume II": 0,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 4,
+            "Master": 3
+          },
+          "overdrive": {
+            "Drive": 3,
+            "Tone": 5,
+            "Level": 9
+          },
+          "eq": {
+            "800Hz": "+2dB",
+            "3.2kHz": "-2dB",
+            "16kHz": "-4dB",
+            "100Hz": "0dB"
+          },
+          "reverb": {
+            "Mix": "15%",
+            "Decay": "2.5s",
+            "Tone": "50%"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Blues Drive",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Gain": 65,
+            "Tone": 45
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 70,
+            "Master": 60,
+            "Bass": 55,
+            "Middle": 70,
+            "Treble": 40,
+            "Presence": 45
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 48,
+            "62": 50,
+            "125": 52,
+            "250": 55,
+            "500": 58,
+            "1000": 62,
+            "2000": 60,
+            "4000": 48,
+            "8000": 44,
+            "16000": 40,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 35,
+            "Decay": 40
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Blues Drive",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Gain": 65,
+                "Tone": 45
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 70,
+                "Master": 60,
+                "Bass": 55,
+                "Middle": 70,
+                "Treble": 40,
+                "Presence": 45
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 48,
+                "62": 50,
+                "125": 52,
+                "250": 55,
+                "500": 58,
+                "1000": 62,
+                "2000": 60,
+                "4000": 48,
+                "8000": 44,
+                "16000": 40,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 35,
+                "Decay": 40
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Cream Sunshine Of Your Love Lead Guitar Overdrive",
+          "timestamp": "2026-01-17T04:59:12.194Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/cream-sunshine-of-your-love-tab-s256",
+        "artist": "Cream",
+        "title": "Sunshine Of Your Love",
+        "trackType": "Lead",
+        "suggestedPart": "Lead Guitar Overdrive",
+        "trackName": "Eric Clapton | Gibson “The Fool” SG Standard | Lead Guitar - Overdriven Guitar"
+      },
+      "id": "gen_mkhu86od_jjj6rhu10",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-17T04:56:41.142Z",
+      "originalPrompt": "Gorillaz Feel Good Inc. Clean Overdubbed Electric Guitar",
+      "proDescription": {
+        "tone_title": "Feel Good Inc. Clean Overdubbed Electric Guitar",
+        "genre": "Alternative Rock / Trip Hop",
+        "sound_description": "Smooth, glassy clean tone with a touch of warmth and subtle chorus for width. The sound is clear and dynamic, with a slightly rounded high end and moderate sustain. The guitar sits in the mix without being harsh or overly bright, providing a rhythmic, funky underpinning to the track.",
+        "guitar_rig_description": "Noise gate: not used (the clean tone is quiet and controlled). Compressor: used lightly to even out dynamics and add a touch of sustain. Overdrive/distortion/boost: not used (tone is fully clean). Amplifier: clean solid-state or clean channel of a tube amp, set for transparency and a bit of warmth. Cabinet: 2x12 or 4x12 closed-back cab IR/model, voiced for a balanced response. EQ: slight mid cut and high roll-off to avoid harshness, subtle low-end roll-off to fit the mix. Modulation: chorus used subtly for width and shimmer. Delay: not used. Reverb: plate or studio-style reverb for gentle ambience and space.",
+        "references": [
+          "Gorillaz - Feel Good Inc.",
+          "Red Hot Chili Peppers - Under The Bridge",
+          "The Police - Every Breath You Take"
+        ],
+        "song_part": "clean overdubbed rhythm guitar part",
+        "preferred_pickup": "neck single-coil or neck humbucker split, tone = 7",
+        "additional_info": "Use light attack and palm muting for percussive feel. String gauge: .010–.046. Play with fingers or a thin pick for a softer touch. Guitar volume and tone rolled back slightly for warmth."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Boss CE-2W Chorus",
+          "Boss EQ-200 Graphic Equalizer",
+          "Strymon blueSky Reverberator"
+        ],
+        "amplifier": "Roland JC-120 Jazz Chorus",
+        "cabinet": "Roland JC-120 built-in 2x12 with Roland 12\" Silver Cone Speakers (closed-back design)",
+        "settings": {
+          "amp": {
+            "Volume": 4,
+            "Treble": 4.5,
+            "Middle": 5,
+            "Bass": 5,
+            "Chorus": "off (use CE-2W for more control)",
+            "Bright switch": "off"
+          },
+          "compressor": {
+            "Blend": 10,
+            "Volume": 11,
+            "Compression": 10.5
+          },
+          "chorus": {
+            "Rate": 9,
+            "Depth": 10,
+            "Mode": "Standard"
+          },
+          "eq": {
+            "80Hz": "-2dB",
+            "250Hz": "0dB",
+            "800Hz": "-1.5dB",
+            "1.6kHz": "-1dB",
+            "3.2kHz": "-1.5dB",
+            "6.4kHz": "-3dB"
+          },
+          "reverb": {
+            "Plate mode": true,
+            "Mix": 9.5,
+            "Decay": 10.5,
+            "Pre-delay": 9
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 48,
+            "Sustain": 38,
+            "Clipping": 30
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 36,
+            "Depth": 28
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Jazz Clean",
+          "enabled": true,
+          "params": {
+            "Gain": 33,
+            "Master": 57,
+            "Bass": 46,
+            "Middle": 41,
+            "Treble": 43,
+            "Bright": 38
+          }
+        },
+        "cabinet": {
+          "type": "JZ120",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 55,
+            "HighCut": 44
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 44,
+            "220": 47,
+            "500": 46,
+            "1200": 48,
+            "2600": 41,
+            "6400": 38
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 36,
+            "Decay": 46
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 48,
+                "Sustain": 38,
+                "Clipping": 30
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 36,
+                "Depth": 28
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Jazz Clean",
+              "enabled": true,
+              "params": {
+                "Gain": 33,
+                "Master": 57,
+                "Bass": 46,
+                "Middle": 41,
+                "Treble": 43,
+                "Bright": 38
+              }
+            },
+            "cabinet": {
+              "type": "JZ120",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 55,
+                "HighCut": 44
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 44,
+                "220": 47,
+                "500": 46,
+                "1200": 48,
+                "2600": 41,
+                "6400": 38
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 36,
+                "Decay": 46
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Gorillaz Feel Good Inc. Clean Overdubbed Electric Guitar",
+          "timestamp": "2026-01-17T04:56:41.142Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/gorillaz-feel-good-inc-tab-s549",
+        "artist": "Gorillaz",
+        "title": "Feel Good Inc.",
+        "trackType": "Lead",
+        "suggestedPart": "Overdubbed Electric Guitar",
+        "trackName": "Murdoc Faust Niccals | Over-dubbed Bass - Electric Guitar (clean)"
+      },
+      "id": "gen_mkhu4y4j_nuxf9lf3b",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-17T04:54:31.887Z",
+      "originalPrompt": "Three Days Grace Animal I Have Become Distortion Rhythm Guitar",
+      "proDescription": {
+        "tone_title": "Three Days Grace - Animal I Have Become Distortion Rhythm Guitar",
+        "genre": "Alternative Metal / Post-Grunge",
+        "sound_description": "Aggressive, tight, punchy, mid-focused, moderately high-gain with a clear attack and strong low-end; minimal ambience, designed to cut through a dense mix.",
+        "guitar_rig_description": "1. Noise Gate: Used at the beginning of the chain to eliminate unwanted hiss and keep palm-muted passages tight. 2. Compressor: Not used; the amp and distortion provide enough sustain and compression. 3. Overdrive/Distortion: High-gain distortion pedal or amp channel, providing the main source of saturated, crunchy rhythm tone with tight low end and pronounced mids. 4. Amplifier: Modern high-gain amp head set for aggressive rhythm, dialed for clarity and punch without excess fizz. 5. Cabinet: 4x12 cab with Celestion-style speakers, miked for a focused, present sound. 6. EQ: Post-amp EQ (graphic or parametric) to scoop some low-mids, control high-end fizz, and tighten the low end. 7. Modulation: Not used; the rhythm tone is kept dry and direct. 8. Delay: Not used. 9. Reverb: Not used; the tone is very dry to maintain punch and immediacy.",
+        "references": [
+          "Three Days Grace - Animal I Have Become",
+          "Breaking Benjamin - The Diary of Jane",
+          "Shinedown - Sound of Madness"
+        ],
+        "song_part": "rhythm guitar (verses and choruses)",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use palm muting for percussive tightness. Medium to heavy gauge strings (e.g., 11-52) recommended for tuning stability and chunk. Down-tuned half step (Eb standard) as used by the band. Pick attack should be firm for clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Maxon OD808 Overdrive",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Mesa/Boogie Dual Rectifier Solo Head (Modern Channel)",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Channel": "Modern (Red)",
+            "Gain": 6.5,
+            "Bass": 6,
+            "Middle": 5.5,
+            "Treble": 6,
+            "Presence": 5,
+            "Master": 3.5
+          },
+          "overdrive": {
+            "Drive": 2.5,
+            "Tone": 6,
+            "Level": 8
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor",
+            "Decay": "medium-fast"
+          },
+          "eq": {
+            "31Hz": "-2dB",
+            "62Hz": "0dB",
+            "125Hz": "+1dB",
+            "250Hz": "-3dB",
+            "500Hz": "-2dB",
+            "1kHz": "+1dB",
+            "2kHz": "+2dB",
+            "4kHz": "+2dB",
+            "8kHz": "0dB",
+            "16kHz": "-2dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 55,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 20,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 73,
+            "Master": 60,
+            "Bass": 56,
+            "Middle": 62,
+            "Treble": 51,
+            "Presence": 57
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 58,
+            "HighCut": 44
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 45,
+            "62": 47,
+            "125": 49,
+            "250": 43,
+            "500": 46,
+            "1000": 60,
+            "2000": 67,
+            "4000": 62,
+            "8000": 45,
+            "16000": 39,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 55,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 20,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 73,
+                "Master": 60,
+                "Bass": 56,
+                "Middle": 62,
+                "Treble": 51,
+                "Presence": 57
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 58,
+                "HighCut": 44
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 45,
+                "62": 47,
+                "125": 49,
+                "250": 43,
+                "500": 46,
+                "1000": 60,
+                "2000": 67,
+                "4000": 62,
+                "8000": 45,
+                "16000": 39,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Three Days Grace Animal I Have Become Distortion Rhythm Guitar",
+          "timestamp": "2026-01-17T04:54:31.887Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/three-days-grace-animal-i-have-become-tab-s466t3",
+        "artist": "Three Days Grace",
+        "title": "Animal I Have Become",
+        "trackType": "Rhythm",
+        "suggestedPart": "Distortion Rhythm Guitar",
+        "trackName": "Adam Gontier | Gibson Firebird V | Rhythm Guitar - Distortion Guitar"
+      },
+      "id": "gen_mkhu26e1_mo949pql3",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-17T04:51:50.716Z",
+      "originalPrompt": "Three Days Grace Animal I Have Become Lead Guitar Distortion",
+      "proDescription": {
+        "tone_title": "Animal I Have Become Lead Guitar Distortion",
+        "genre": "Alternative Metal / Post-Grunge",
+        "sound_description": "Aggressive and saturated distortion with tight low end, strong midrange presence, and a crisp, cutting top end for leads. Good sustain and clarity, but still thick and powerful. Not overly bright or fizzy.",
+        "guitar_rig_description": "Noise gate: used to tame high-gain hiss and keep the sound tight between notes. Compressor: not used. Overdrive: used as a boost before the amp to tighten the attack and add harmonic richness. Distortion: not used as a separate block, distortion comes mainly from the amp. Amplifier: high-gain modern rock amp model with tight, punchy mids and articulate highs, set for saturated lead tones. Cabinet: 4x12 closed-back cabinet with modern rock-voiced speakers, providing thickness and bite. EQ: used post-amp to slightly cut low-mids for clarity and boost upper mids for lead presence; high-end roll-off to avoid harshness. Modulation: not used. Delay: used for subtle depth and sustain; single repeat, not overly prominent. Reverb: used for slight ambience, kept short and subtle to maintain punch.",
+        "references": [
+          "Three Days Grace - Animal I Have Become",
+          "Breaking Benjamin - The Diary of Jane",
+          "Seether - Remedy"
+        ],
+        "song_part": "Lead guitar (intro and solo sections)",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Medium output passive humbucker recommended. Play with moderate pick attack for clarity. Use 10-46 or 11-49 gauge strings for balance between tightness and sustain. Palm-muting and controlled vibrato enhance articulation."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer",
+          "MXR 10-Band EQ",
+          "TC Electronic Flashback Mini Delay",
+          "TC Electronic Hall of Fame Mini Reverb"
+        ],
+        "amplifier": "Mesa/Boogie Dual Rectifier Solo Head (Modern mode)",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 6.5,
+            "Bass": 4,
+            "Middle": 6.5,
+            "Treble": 6,
+            "Presence": 5.5,
+            "Master": 3.5
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 6.5,
+            "Level": 8
+          },
+          "noise_gate": {
+            "Threshold": "-60dB",
+            "Decay": "Min"
+          },
+          "eq": {
+            "31Hz": "-2dB",
+            "62Hz": "-1dB",
+            "125Hz": "0dB",
+            "250Hz": "-1dB",
+            "500Hz": "0dB",
+            "1kHz": "+1dB",
+            "2kHz": "+2dB",
+            "4kHz": "+2dB",
+            "8kHz": "+1dB",
+            "16kHz": "-2dB"
+          },
+          "delay": {
+            "Time": "420ms",
+            "Feedback": "1 repeat",
+            "Mix": "15%"
+          },
+          "reverb": {
+            "Type": "Room",
+            "Decay": "Short",
+            "Mix": "10%"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 20,
+            "Tone": 55
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 80,
+            "Master": 60,
+            "Bass": 45,
+            "Middle": 60,
+            "Treble": 65,
+            "Presence": 55
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 55,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 45,
+            "62": 48,
+            "125": 48,
+            "250": 47,
+            "500": 46,
+            "1000": 52,
+            "2000": 60,
+            "4000": 63,
+            "8000": 43,
+            "16000": 38,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Hall",
+          "enabled": true,
+          "params": {
+            "Level": 25,
+            "Decay": 22,
+            "PreDelay": 18,
+            "Liveliness": 38
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 23,
+            "Feedback": 17,
+            "Time": 31
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 20,
+                "Tone": 55
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 80,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 60,
+                "Treble": 65,
+                "Presence": 55
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 55,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 45,
+                "62": 48,
+                "125": 48,
+                "250": 47,
+                "500": 46,
+                "1000": 52,
+                "2000": 60,
+                "4000": 63,
+                "8000": 43,
+                "16000": 38,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Hall",
+              "enabled": true,
+              "params": {
+                "Level": 25,
+                "Decay": 22,
+                "PreDelay": 18,
+                "Liveliness": 38
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 23,
+                "Feedback": 17,
+                "Time": 31
+              }
+            }
+          },
+          "prompt": "Three Days Grace Animal I Have Become Lead Guitar Distortion",
+          "timestamp": "2026-01-17T04:51:50.716Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/three-days-grace-animal-i-have-become-tab-s466",
+        "artist": "Three Days Grace",
+        "title": "Animal I Have Become",
+        "trackType": "Lead",
+        "suggestedPart": "Lead Guitar Distortion",
+        "trackName": "Barry Stock | Ibanez Iceman | Lead Guitar - Distortion Guitar"
+      },
+      "id": "gen_mkhtyq0z_zf4bz5pst",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-17T04:47:00.855Z",
+      "originalPrompt": "Eddie Van Halen Beat It Solo Distorted Guitar",
+      "proDescription": {
+        "tone_title": "Beat It Solo (Eddie Van Halen)",
+        "genre": "80s Hard Rock / Pop Rock",
+        "sound_description": "Bright, aggressive and cutting lead tone with lots of sustain, moderate compression, pronounced mids, smooth high end, and controlled feedback. The attack is sharp but not harsh, and there is a distinct sense of clarity even under high gain.",
+        "guitar_rig_description": "1. Noise gate: not used (Eddie preferred the natural dynamics and often did not use a gate). 2. Compressor: not used (sustain achieved via amp gain and volume control). 3. Overdrive/Distortion/Boost: Classic overdrive or boost pedal (such as an MXR Distortion+ or similar) placed in front of the amp to push the gain for more sustain and bite. 4. Amplifier: High-gain British-style amp (such as a Marshall Super Lead, heavily modded for extra gain), delivering the primary distortion and sustain. 5. Cabinet: 4x12 cabinet with Celestion speakers, mic’d up – provides the full, punchy sound and midrange focus. 6. EQ: Graphic EQ in the loop or post-distortion (optional, used to further boost mids and cut any unwanted harshness in highs). 7. Modulation: Phaser pedal (such as MXR Phase 90) set subtly, mainly used on rhythm but can be lightly present for a signature swirl. 8. Delay: Analog-style delay pedal with a single repeat and short delay time, used sparingly to add depth to the solo. 9. Reverb: Plate or hall reverb, typically from the studio or rack unit, for spaciousness and tail.",
+        "references": [
+          "Michael Jackson - Beat It (Eddie Van Halen solo)",
+          "Van Halen - Eruption",
+          "Van Halen - Panama"
+        ],
+        "song_part": "guitar solo",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a superstrat-style guitar with a Floyd Rose tremolo for divebombs and wide vibrato. 9-42 or 9-46 gauge strings recommended. Palm muting and aggressive picking technique for articulation; consider volume knob swells for dynamic control."
+      },
+      "realRig": {
+        "pedalboard": [
+          "MXR Phase 90 (script logo, block logo also acceptable)",
+          "MXR Distortion+",
+          "Boss GE-7 Equalizer",
+          "MXR Carbon Copy Analog Delay"
+        ],
+        "amplifier": "Marshall 1959 Super Lead (modded, a.k.a. 'Jose' mod or similar high-gain mod)",
+        "cabinet": "Marshall 1960B 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain": 8,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 5,
+            "Master": 6
+          },
+          "distortion+": {
+            "Output": 7,
+            "Distortion": 6
+          },
+          "phase90": {
+            "Speed": 9,
+            "Mix": "stock (no mix control)"
+          },
+          "eq": {
+            "100Hz": "-2dB",
+            "400Hz": "+3dB",
+            "800Hz": "+4dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "-1dB",
+            "6.4kHz": "-3dB"
+          },
+          "delay": {
+            "Delay Time": "340ms",
+            "Repeats": 1,
+            "Mix": 12
+          },
+          "guitar": {
+            "pickup": "bridge humbucker",
+            "tone": 10,
+            "volume": "adjust for dynamics and cleanup"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "Phase 90",
+          "enabled": true,
+          "params": {
+            "Speed": 30
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": true,
+          "params": {
+            "Output": 60,
+            "Sensitivity": 70
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 80,
+            "Master": 65,
+            "Bass": 45,
+            "Middle": 65,
+            "Treble": 60,
+            "Presence": 55
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 54
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 45,
+            "220": 48,
+            "500": 60,
+            "1200": 68,
+            "2600": 58,
+            "6400": 46
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 30,
+            "Rate": 20,
+            "Echo": 30
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "Phase 90",
+              "enabled": true,
+              "params": {
+                "Speed": 30
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": true,
+              "params": {
+                "Output": 60,
+                "Sensitivity": 70
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 80,
+                "Master": 65,
+                "Bass": 45,
+                "Middle": 65,
+                "Treble": 60,
+                "Presence": 55
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 54
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 45,
+                "220": 48,
+                "500": 60,
+                "1200": 68,
+                "2600": 58,
+                "6400": 46
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 30,
+                "Rate": 20,
+                "Echo": 30
+              }
+            }
+          },
+          "prompt": "Eddie Van Halen Beat It Solo Distorted Guitar",
+          "timestamp": "2026-01-17T04:47:00.855Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/michael-jackson-beat-it-tab-s10259",
+        "artist": "Michael Jackson",
+        "title": "Beat It",
+        "trackType": "Solo",
+        "suggestedPart": "Solo Distorted Guitar",
+        "trackName": "Eddie Van Halen | Kramer 5150 | Guitar Solo - Distortion Guitar"
+      },
+      "id": "gen_mkhtsidj_yb1yg49mg",
+      "status": "draft"
+    },
+    {
       "timestamp": "2026-01-17T04:43:03.127Z",
       "originalPrompt": "Foo Fighters Everlong Overdriven Lead Guitar Tone",
       "proDescription": {
@@ -39307,6 +41092,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-17T04:43:03.135Z"
+    "lastUpdated": "2026-01-17T05:06:21.189Z"
   }
 }

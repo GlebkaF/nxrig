@@ -11157,5 +11157,662 @@
     "isDraft": true,
     "createdAt": null,
     "updatedAt": "2026-01-17T04:41:55.183Z"
+  },
+  {
+    "id": "gen_mkhtsidj_yb1yg49mg",
+    "origin": {
+      "artistId": 57,
+      "song": "Beat It",
+      "part": "Solo Distorted Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, aggressive and cutting lead tone with lots of sustain, moderate compression, pronounced mids, smooth high end, and controlled feedback. The attack is sharp but not harsh, and there is a distinct sense of clarity even under high gain.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "Phase 90",
+        "enabled": true,
+        "params": {
+          "Speed": 30
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": true,
+        "params": {
+          "Output": 60,
+          "Sensitivity": 70
+        }
+      },
+      "amplifier": {
+        "type": "Plexi 100",
+        "enabled": true,
+        "params": {
+          "Gain": 80,
+          "Master": 65,
+          "Bass": 45,
+          "Middle": 65,
+          "Treble": 60,
+          "Presence": 55
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 48,
+          "HighCut": 54
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 45,
+          "220": 48,
+          "500": 60,
+          "1200": 68,
+          "2600": 58,
+          "6400": 46
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 30,
+          "Rate": 20,
+          "Echo": 30
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "beat-it-guitar-solo-distorted-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/michael-jackson-beat-it-tab-s10259",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T04:50:33.116Z"
+  },
+  {
+    "id": "gen_mkhtyq0z_zf4bz5pst",
+    "origin": {
+      "artistId": 58,
+      "song": "Animal I Have Become",
+      "part": "Lead Guitar Distortion",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive and saturated distortion with tight low end, strong midrange presence, and a crisp, cutting top end for leads. Good sustain and clarity, but still thick and powerful. Not overly bright or fizzy.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 20,
+          "Tone": 55
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 80,
+          "Master": 60,
+          "Bass": 45,
+          "Middle": 60,
+          "Treble": 65,
+          "Presence": 55
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 55,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 45,
+          "62": 48,
+          "125": 48,
+          "250": 47,
+          "500": 46,
+          "1000": 52,
+          "2000": 60,
+          "4000": 63,
+          "8000": 43,
+          "16000": 38,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Hall",
+        "enabled": true,
+        "params": {
+          "Level": 25,
+          "Decay": 22,
+          "PreDelay": 18,
+          "Liveliness": 38
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 23,
+          "Feedback": 17,
+          "Time": 31
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "animal-i-have-become-guitar-lead-guitar-distortion",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/three-days-grace-animal-i-have-become-tab-s466",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T04:54:28.651Z"
+  },
+  {
+    "id": "gen_mkhu26e1_mo949pql3",
+    "origin": {
+      "artistId": 58,
+      "song": "Animal I Have Become",
+      "part": "Distortion Rhythm Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Aggressive, tight, punchy, mid-focused, moderately high-gain with a clear attack and strong low-end; minimal ambience, designed to cut through a dense mix.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 55,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 20,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 73,
+          "Master": 60,
+          "Bass": 56,
+          "Middle": 62,
+          "Treble": 51,
+          "Presence": 57
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 58,
+          "HighCut": 44
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 45,
+          "62": 47,
+          "125": 49,
+          "250": 43,
+          "500": 46,
+          "1000": 60,
+          "2000": 67,
+          "4000": 62,
+          "8000": 45,
+          "16000": 39,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "animal-i-have-become-guitar-distortion-rhythm-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/three-days-grace-animal-i-have-become-tab-s466t3",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T04:54:58.166Z"
+  },
+  {
+    "id": "gen_mkhu4y4j_nuxf9lf3b",
+    "origin": {
+      "artistId": 59,
+      "song": "Feel Good Inc.",
+      "part": "Electric Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, glassy clean tone with a touch of warmth and subtle chorus for width. The sound is clear and dynamic, with a slightly rounded high end and moderate sustain. The guitar sits in the mix without being harsh or overly bright, providing a rhythmic, funky underpinning to the track.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 48,
+          "Sustain": 38,
+          "Clipping": 30
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 36,
+          "Depth": 28
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Jazz Clean",
+        "enabled": true,
+        "params": {
+          "Gain": 33,
+          "Master": 57,
+          "Bass": 46,
+          "Middle": 41,
+          "Treble": 43,
+          "Bright": 38
+        }
+      },
+      "cabinet": {
+        "type": "JZ120",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 55,
+          "HighCut": 44
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 44,
+          "220": 47,
+          "500": 46,
+          "1200": 48,
+          "2600": 41,
+          "6400": 38
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 36,
+          "Decay": 46
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "feel-good-inc-guitar-electric-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/gorillaz-feel-good-inc-tab-s549",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T04:58:30.474Z"
+  },
+  {
+    "id": "gen_mkhu86od_jjj6rhu10",
+    "origin": {
+      "artistId": 60,
+      "song": "Sunshine Of Your Love",
+      "part": "Lead Guitar Overdrive",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Thick, creamy overdrive with a pronounced midrange, smooth sustain, and a touch of vintage grit. The tone is warm with rounded highs, strong mids, and enough clarity to cut through the mix without harshness. Dynamic and expressive, allowing for touch-sensitive playing.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Blues Drive",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Gain": 65,
+          "Tone": 45
+        }
+      },
+      "amplifier": {
+        "type": "Plexi 100",
+        "enabled": true,
+        "params": {
+          "Gain": 70,
+          "Master": 60,
+          "Bass": 55,
+          "Middle": 70,
+          "Treble": 40,
+          "Presence": 45
+        }
+      },
+      "cabinet": {
+        "type": "M1960AX",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 48,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 48,
+          "62": 50,
+          "125": 52,
+          "250": 55,
+          "500": 58,
+          "1000": 62,
+          "2000": 60,
+          "4000": 48,
+          "8000": 44,
+          "16000": 40,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 35,
+          "Decay": 40
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "sunshine-of-your-love-guitar-lead-guitar-overdrive",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/cream-sunshine-of-your-love-tab-s256",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T05:03:18.475Z"
+  },
+  {
+    "id": "gen_mkhuhdok_89w4suqsz",
+    "origin": {
+      "artistId": 5,
+      "song": "Civil War",
+      "part": "Lead Guitar Distortion",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Expressive, sustaining, and biting lead tone with a vocal midrange, smooth overdrive, moderate compression, and enough clarity to cut through the mix. The sound is thick but not muddy, with a touch of warmth and a singing quality ideal for melodic solos.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 40,
+          "Clipping": 45
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 32,
+          "Tone": 42
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 63,
+          "Master": 65,
+          "Bass": 47,
+          "Middle": 68,
+          "Treble": 42,
+          "Presence": 54
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 55,
+          "HighCut": 43
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 28,
+          "Feedback": 26,
+          "Time": 32
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "civil-war-guitar-lead-guitar-distortion",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/guns-n-roses-civil-war-tab-s8153",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-17T05:07:11.598Z"
   }
 ]
