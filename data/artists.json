@@ -358,5 +358,11 @@
     "title": "Cream",
     "slug": "cream",
     "description": "Cream are a legendary rock supergroup known for virtuosic musicianship, blues-rock foundations, and pioneering the power trio format."
+  },
+  {
+    "id": 61,
+    "title": "Van Halen",
+    "slug": "van-halen",
+    "description": "Van Halen are a legendary rock band known for Eddie Van Halen’s innovative guitar techniques, high-energy sound, and influential role in shaping hard rock and arena rock."
   }
 ]

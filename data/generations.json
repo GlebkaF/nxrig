@@ -1,6 +1,248 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-19T18:44:19.046Z",
+      "originalPrompt": "Van Halen Panama Rhythm Guitar Distorted Riff",
+      "proDescription": {
+        "tone_title": "Van Halen - Panama Rhythm Guitar",
+        "genre": "80s Hard Rock",
+        "sound_description": "Aggressive, punchy, bright, and dynamic distortion with a distinct midrange presence. Features tight low end, crunchy palm-muted chords, and a lively, slightly saturated high end. The tone has moderate sustain and a slight sense of space, but remains articulate and raw.",
+        "guitar_rig_description": "1. Noise Gate: Used to tame amp hiss and excess noise from high-gain settings. 2. Compressor: Not used, as the tone relies on natural amp dynamics. 3. Overdrive/Boost: Classic overdrive pedal (e.g., MXR Phase 90 or a clean boost) in front of the amp to tighten the attack and add harmonic saturation. 4. Amplifier: High-gain British-style tube amp head (e.g., Marshall Super Lead or similar) with preamp gain pushed for saturated crunch. 5. Cabinet: 4x12 closed-back cabinet loaded with British-voiced speakers (e.g., Celestion Greenbacks) for punch and clarity. 6. EQ: Amp EQ set for strong mids, tight lows, and bright, cutting highs; no additional outboard EQ used. 7. Modulation: Subtle phaser (MXR Phase 90) used lightly to add movement and texture, especially on certain sections. 8. Delay: Not used for the main rhythm riff. 9. Reverb: Subtle amp spring reverb or plate-style reverb to add slight depth without washing out the attack.",
+        "references": [
+          "Van Halen - Panama",
+          "Van Halen - Hot For Teacher",
+          "Van Halen - Ain't Talkin' 'Bout Love"
+        ],
+        "song_part": "Main rhythm riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Guitar tuned to standard E; Floyd Rose bridge with light gauge strings (.009–.042); aggressive picking with palm muting; classic 'brown sound' achieved by running amp very loud and using variac (optional); volume knob on guitar often rolled to adjust gain."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "MXR Phase 90 (Script Logo Reissue)",
+          "MXR EVH 5150 Overdrive"
+        ],
+        "amplifier": "Marshall 1959 Super Lead 100 (plexi, ideally run through a variac at ~90V)",
+        "cabinet": "Marshall 1960B 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Presence": 6,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 8,
+            "Volume I": 8,
+            "Volume II": 0,
+            "Master": "N/A (no master volume on original 1959SLP)"
+          },
+          "mxr_phase_90": {
+            "Speed": 9,
+            "o'clock": "subtle movement (approx 11 o'clock)"
+          },
+          "mxr_evh_5150_overdrive": {
+            "Gain": 9,
+            "o'clock": "for boost/saturation (approx 9 o'clock)",
+            "Bass": 6,
+            "Mid": 7,
+            "Treble": 7,
+            "Output": 8
+          },
+          "noise_gate": {
+            "Threshold": "as low as possible while eliminating hiss",
+            "Decay": "medium"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 55,
+            "Decay": 40
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "Phase 90",
+          "enabled": true,
+          "params": {
+            "Speed": 35
+          }
+        },
+        "effect": {
+          "type": "Eat Dist",
+          "enabled": true,
+          "params": {
+            "Volume": 60,
+            "Distortion": 70,
+            "Filter": 55
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 80,
+            "Master": 60,
+            "Bass": 40,
+            "Middle": 70,
+            "Treble": 65,
+            "Presence": 60
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 55,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 55,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "Phase 90",
+              "enabled": true,
+              "params": {
+                "Speed": 35
+              }
+            },
+            "effect": {
+              "type": "Eat Dist",
+              "enabled": true,
+              "params": {
+                "Volume": 60,
+                "Distortion": 70,
+                "Filter": 55
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 80,
+                "Master": 60,
+                "Bass": 40,
+                "Middle": 70,
+                "Treble": 65,
+                "Presence": 60
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 55,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Van Halen Panama Rhythm Guitar Distorted Riff",
+          "timestamp": "2026-01-19T18:44:19.046Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/van-halen-panama-tab-s18645",
+        "artist": "Van Halen",
+        "title": "Panama",
+        "trackType": "Rhythm",
+        "suggestedPart": "Guitar Distorted Riff",
+        "trackName": "Eddie Van Halen | '58 Frankenstrat Custom | Guitar - Distortion Guitar"
+      },
+      "id": "gen_mklikzr3_6odoj6fso",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-01-17T05:06:21.178Z",
       "originalPrompt": "Guns N' Roses Civil War Slash Lead Guitar Distortion",
       "proDescription": {
@@ -2789,7 +3031,7 @@
         "trackName": "Rhythm Guitar | Rudolf Schenker | Gibson Flying V - Distortion Guitar"
       },
       "id": "gen_mkhsue56_lyknn1qle",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "timestamp": "2026-01-17T04:16:57.286Z",
@@ -41092,6 +41334,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-17T05:07:56.178Z"
+    "lastUpdated": "2026-01-19T18:47:41.530Z"
   }
 }
