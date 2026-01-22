@@ -2517,7 +2517,7 @@
         "trackName": "Kurt Cobain | Distortion | 1969 Fender Mustang - Distortion Guitar"
       },
       "id": "gen_mkhtje9g_sllx8xbl2",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "timestamp": "2026-01-17T04:21:30.254Z",
@@ -41334,6 +41334,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-21T11:48:36.163Z"
+    "lastUpdated": "2026-01-22T15:07:09.399Z"
   }
 }
