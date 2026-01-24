@@ -1775,7 +1775,7 @@
         "trackName": "Barry Stock | Ibanez Iceman | Lead Guitar - Distortion Guitar"
       },
       "id": "gen_mkhtyq0z_zf4bz5pst",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "timestamp": "2026-01-17T04:47:00.855Z",
@@ -41334,6 +41334,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-23T15:06:31.275Z"
+    "lastUpdated": "2026-01-24T11:29:05.954Z"
   }
 }
