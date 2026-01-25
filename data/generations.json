@@ -1,6 +1,534 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-25T05:45:03.436Z",
+      "originalPrompt": "Mor Ve Otesi Melekler Ölmez Distorted  Guitar",
+      "proDescription": {
+        "tone_title": "Melekler Ölmez Distorted Guitar",
+        "genre": "Turkish Alternative Rock",
+        "sound_description": "Mid-gained, crunchy distortion with pronounced mids and clarity. Balanced thickness, moderate attack, slight brightness, and open dynamics. Suitable for rhythm guitar parts that need presence without overpowering the mix.",
+        "guitar_rig_description": "Noise gate: used to control hiss and unwanted noise, especially between chord changes. Compressor: lightly used to even out picking dynamics and add sustain. Overdrive/Distortion: medium-gain overdrive/distortion pedal to provide a crunchy and defined rock tone, stacking before the amp for character. Amplifier: classic British-style tube amp emulation, set for edge-of-breakup to medium distortion, accentuating midrange. Cabinet: 4x12 closed-back cabinet simulation, mic'd to emphasize clarity without excessive bass. EQ: post-amp EQ to slightly boost mids, cut excess lows, and tame harsh highs. Modulation: not used. Delay: not used. Reverb: subtle plate or room reverb to add space without washing out the attack.",
+        "references": [
+          "Mor Ve Otesi - Cambaz",
+          "Mor Ve Otesi - Bir Derdim Var",
+          "Duman - Belki Alışman Lazım"
+        ],
+        "song_part": "main rhythm guitar",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use moderately thick picks for defined attack. Standard tuning, medium gauge strings (10-46). Palm-muting and dynamic strumming technique recommended for authentic feel."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Xotic SP Compressor",
+          "Fulltone OCD V2",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Marshall JCM900 Dual Reverb 4100",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 5.5,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5.5,
+            "Presence": 5,
+            "Master": 4
+          },
+          "overdrive": {
+            "Drive": 4.5,
+            "Tone": 5.5,
+            "Volume": 7
+          },
+          "compressor": {
+            "Blend": 10,
+            "Volume": 6,
+            "Comp": 3
+          },
+          "ns-2": {
+            "Threshold": 2,
+            "Decay": 5
+          },
+          "eq": {
+            "80Hz": "-2dB",
+            "250Hz": "0dB",
+            "1kHz": "+2dB",
+            "2kHz": "+2dB",
+            "4kHz": "0dB",
+            "8kHz": "-1dB"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Level": 3,
+            "Decay": 3
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 40
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 38,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Drive": 56,
+            "Tone": 60
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 53,
+            "Master": 54,
+            "Bass": 44,
+            "Middle": 62,
+            "Treble": 58,
+            "Presence": 54
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 62,
+            "HighCut": 54
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 40,
+            "62": 44,
+            "125": 47,
+            "250": 50,
+            "500": 57,
+            "1000": 62,
+            "2000": 64,
+            "4000": 58,
+            "8000": 47,
+            "16000": 38,
+            "Vol": 51
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 28,
+            "Decay": 32
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 38,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Drive": 56,
+                "Tone": 60
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 53,
+                "Master": 54,
+                "Bass": 44,
+                "Middle": 62,
+                "Treble": 58,
+                "Presence": 54
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 62,
+                "HighCut": 54
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 40,
+                "62": 44,
+                "125": 47,
+                "250": 50,
+                "500": 57,
+                "1000": 62,
+                "2000": 64,
+                "4000": 58,
+                "8000": 47,
+                "16000": 38,
+                "Vol": 51
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 28,
+                "Decay": 32
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Mor Ve Otesi Melekler Ölmez Distorted  Guitar",
+          "timestamp": "2026-01-25T05:45:03.436Z"
+        }
+      ],
+      "id": "gen_mktbdyw4_f59sr0slu",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-01-25T05:43:59.590Z",
+      "originalPrompt": "Mor Ve Otesi Melekler Ölmez Distorted Lead Guitar",
+      "proDescription": {
+        "tone_title": "Melekler Ölmez Distorted Lead",
+        "genre": "Turkish Alternative Rock",
+        "sound_description": "Smooth, sustaining lead guitar with moderate thickness, singing midrange, controlled brightness, and expressive dynamics. The tone is melodic rather than aggressive, with enough clarity to cut through the mix but not overly harsh.",
+        "guitar_rig_description": "Noise gate: used to reduce unwanted hiss and hum, especially during sustained notes. Compressor: used to even out picking dynamics and enhance sustain without squashing natural expression. Overdrive/distortion: a medium-gain overdrive or distortion pedal for singing lead tones, providing smooth saturation and sustain without excessive fizz. Amplifier: a British-voiced tube amplifier model, set clean to edge-of-breakup for responsive feel. Cabinet: 2x12 or 4x12 cabinet with classic rock voicing, capturing warmth and midrange focus. EQ: used post-distortion to enhance mids, slightly roll off harsh highs, and tighten lows. Modulation: subtle chorus or delay-based modulation (e.g., slapback delay) can be used for width, but not essential; chorus not used by default. Delay: a prominent analog-voiced delay with moderate repeats and mix to add depth and space to leads. Reverb: ambient plate or hall reverb for additional space and sustain, but kept subtle to avoid washing out the lead. ",
+        "references": [
+          "Mor ve Ötesi - Melekler Ölmez",
+          "Mor ve Ötesi - Cambaz (for similar lead tones)",
+          "Duman - Senden Daha Güzel (for comparable Turkish rock lead sounds)"
+        ],
+        "song_part": "lead guitar (solo and melodic fills)",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use expressive vibrato and controlled bends for melodic phrasing. Nickel-wound .010–.046 strings recommended for balance of bendability and sustain. Picking technique should emphasize clarity and dynamics—avoid excessive palm muting. If using a single-coil guitar, consider a bridge pickup with moderate output or add a clean boost before overdrive."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Xotic SP Compressor",
+          "Fulltone OCD (ver. 1.4)",
+          "MXR 10-Band EQ",
+          "Boss DD-7 Digital Delay (Analog mode)",
+          "Strymon blueSky (Plate Reverb mode)"
+        ],
+        "amplifier": "Vox AC30C2",
+        "cabinet": "Marshall 1936 2x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Normal Volume": 4.5,
+            "Top Boost Volume": 4,
+            "Bass": 5,
+            "Treble": 6,
+            "Cut": 5,
+            "Master": 3.5
+          },
+          "noise_suppressor": {
+            "Threshold": 11,
+            "Decay": 10
+          },
+          "compressor": {
+            "Blend": 11,
+            "Volume": 12,
+            "Compression": 11
+          },
+          "overdrive": {
+            "Drive": 11,
+            "Tone": 10,
+            "Volume": 12
+          },
+          "eq": {
+            "80Hz": "-2dB",
+            "250Hz": "+1dB",
+            "1kHz": "+3dB",
+            "4kHz": "-2dB",
+            "8kHz": "-3dB"
+          },
+          "delay": {
+            "Time": "420ms",
+            "Repeats": 4,
+            "Mix": 40,
+            "Mode": "Analog"
+          },
+          "reverb": {
+            "Decay": 11,
+            "Mix": 9,
+            "Pre-Delay": 9,
+            "Plate": true
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 65
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 64,
+            "Clipping": 42
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "Drive": 57,
+            "Tone": 46
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 58,
+            "Master": 61,
+            "Bass": 44,
+            "Treble": 46,
+            "Cut": 40
+          }
+        },
+        "cabinet": {
+          "type": "M1936",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 56,
+            "HighCut": 43
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 47,
+            "62": 48,
+            "125": 50,
+            "250": 54,
+            "500": 58,
+            "1000": 64,
+            "2000": 62,
+            "4000": 57,
+            "8000": 48,
+            "16000": 44,
+            "Vol": 51
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 43,
+            "Decay": 40
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 56,
+            "Rate": 44,
+            "Echo": 61
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 65
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 64,
+                "Clipping": 42
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "Drive": 57,
+                "Tone": 46
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 58,
+                "Master": 61,
+                "Bass": 44,
+                "Treble": 46,
+                "Cut": 40
+              }
+            },
+            "cabinet": {
+              "type": "M1936",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 56,
+                "HighCut": 43
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 47,
+                "62": 48,
+                "125": 50,
+                "250": 54,
+                "500": 58,
+                "1000": 64,
+                "2000": 62,
+                "4000": 57,
+                "8000": 48,
+                "16000": 44,
+                "Vol": 51
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 43,
+                "Decay": 40
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 56,
+                "Rate": 44,
+                "Echo": 61
+              }
+            }
+          },
+          "prompt": "Mor Ve Otesi Melekler Ölmez Distorted Lead Guitar",
+          "timestamp": "2026-01-25T05:43:59.590Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/mor-ve-otesi-melekler-olmez-tab-s439708",
+        "artist": "Mor Ve Otesi",
+        "title": "Melekler Ölmez",
+        "trackType": "Lead",
+        "suggestedPart": "Distorted Lead Guitar",
+        "trackName": "Kerem Özyeğen (dist.) - Distortion Guitar"
+      },
+      "id": "gen_mktbclmb_wu9uh5jwk",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-01-19T18:44:19.046Z",
       "originalPrompt": "Van Halen Panama Rhythm Guitar Distorted Riff",
       "proDescription": {
@@ -41334,6 +41862,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-24T11:29:05.954Z"
+    "lastUpdated": "2026-01-25T05:50:26.398Z"
   }
 }

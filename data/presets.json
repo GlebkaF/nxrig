@@ -11920,5 +11920,228 @@
     "isDraft": false,
     "createdAt": "2026-01-19T18:47:41.519Z",
     "updatedAt": "2026-01-19T18:47:41.519Z"
+  },
+  {
+    "id": "gen_mktbclmb_wu9uh5jwk",
+    "origin": {
+      "artistId": 62,
+      "song": "Melekler Ölmez",
+      "part": "Distorted Lead Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, sustaining lead guitar with moderate thickness, singing midrange, controlled brightness, and expressive dynamics. The tone is melodic rather than aggressive, with enough clarity to cut through the mix but not overly harsh.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 65
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 64,
+          "Clipping": 42
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "Drive": 57,
+          "Tone": 46
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 58,
+          "Master": 61,
+          "Bass": 44,
+          "Treble": 46,
+          "Cut": 40
+        }
+      },
+      "cabinet": {
+        "type": "M1936",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 56,
+          "HighCut": 43
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 47,
+          "62": 48,
+          "125": 50,
+          "250": 54,
+          "500": 58,
+          "1000": 64,
+          "2000": 62,
+          "4000": 57,
+          "8000": 48,
+          "16000": 44,
+          "Vol": 51
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 43,
+          "Decay": 40
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 56,
+          "Rate": 44,
+          "Echo": 61
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "melekler-lmez-guitar-distorted-lead-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/mor-ve-otesi-melekler-olmez-tab-s439708",
+    "isDraft": false,
+    "createdAt": "2026-01-25T05:50:26.366Z",
+    "updatedAt": "2026-01-25T05:50:26.366Z"
+  },
+  {
+    "id": "gen_mktbdyw4_f59sr0slu",
+    "origin": {
+      "artistId": 62,
+      "song": "Mor Ve Otesi",
+      "part": "Distorted Rythm Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Mid-gained, crunchy distortion with pronounced mids and clarity. Balanced thickness, moderate attack, slight brightness, and open dynamics. Suitable for rhythm guitar parts that need presence without overpowering the mix.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 40
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 38,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Drive": 56,
+          "Tone": 60
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 53,
+          "Master": 54,
+          "Bass": 44,
+          "Middle": 62,
+          "Treble": 58,
+          "Presence": 54
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 62,
+          "HighCut": 54
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 40,
+          "62": 44,
+          "125": 47,
+          "250": 50,
+          "500": 57,
+          "1000": 62,
+          "2000": 64,
+          "4000": 58,
+          "8000": 47,
+          "16000": 38,
+          "Vol": 51
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 28,
+          "Decay": 32
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "mor-ve-otesi-guitar-distorted-rythm-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/mor-ve-otesi-melekler-olmez-tab-s439708t0",
+    "isDraft": false,
+    "createdAt": "2026-01-25T05:50:26.366Z",
+    "updatedAt": "2026-01-25T05:50:26.366Z"
   }
 ]

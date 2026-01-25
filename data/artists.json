@@ -364,5 +364,11 @@
     "title": "Van Halen",
     "slug": "van-halen",
     "description": "Van Halen are a legendary rock band known for Eddie Van Halen’s innovative guitar techniques, high-energy sound, and influential role in shaping hard rock and arena rock."
+  },
+  {
+    "id": 62,
+    "title": "Mor Ve Otesi",
+    "slug": "mor-ve-otesi",
+    "description": "Mor ve Ötesi are a Turkish alternative rock band known for melodic guitar work, introspective lyrics, and a modern rock sound with strong emotional depth."
   }
 ]
