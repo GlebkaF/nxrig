@@ -1,6 +1,501 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-25T06:00:46.318Z",
+      "originalPrompt": "Steve Lukather While My Guitar Gently Weeps Rhythm Distortion",
+      "proDescription": {
+        "tone_title": "Steve Lukather - 'While My Guitar Gently Weeps' Rhythm Distortion",
+        "genre": "Melodic Rock / Pop Rock",
+        "sound_description": "Smooth, mid-gain distortion with clarity and punch, moderate sustain, tight low end, controlled brightness, and enough presence to cut through a band mix without harshness. The tone is dynamic and full but avoids excessive aggression or fizz, emphasizing note separation and chord definition.",
+        "guitar_rig_description": "1. Noise gate: Subtle setting to tame hum and hiss without choking sustain. 2. Compressor: Light compression for smooth dynamics and increased sustain, with fast attack to keep picking articulation. 3. Overdrive/Distortion: Medium-gain overdrive or distortion pedal (such as a Tube Screamer or boutique variant) to push the amp, delivering smooth saturation and thick mids. 4. Amplifier: High-quality tube amp set for a slightly broken-up sound, providing warmth and punch; likely a boutique or classic American/British voiced model. 5. Cabinet: 2x12 or 4x12 closed-back cab with well-rounded speakers, mic’d for balanced high-end and solid lows. 6. EQ: Subtle post-amp EQ to scoop out excessive low-mids and tame harsh highs, ensuring clarity and fullness. 7. Modulation: Not used for rhythm part. 8. Delay: Not used for rhythm part. 9. Reverb: Plate or room reverb for spatial depth without washing out the attack.",
+        "references": [
+          "Toto - 'Rosanna' (rhythm)",
+          "Eric Clapton - 'While My Guitar Gently Weeps' (live)",
+          "Steve Lukather - 'Africa' (rhythm)"
+        ],
+        "song_part": "rhythm guitar",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use moderate picking attack for clarity; Lukather typically uses Elixir strings, .010–.046 gauge, and prefers a slightly rolled-back tone knob for smoothness. Play with tight palm muting to retain punch and definition."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ISP Decimator II Noise Reduction",
+          "Origin Effects Cali76 Compact Compressor",
+          "Maxon OD808 Overdrive",
+          "MXR 10-Band EQ",
+          "Strymon blueSky Reverberator (set to Plate)"
+        ],
+        "amplifier": "Mesa/Boogie Mark IIC+ (Rhythm Channel)",
+        "cabinet": "Mesa/Boogie Rectifier 2x12 Closed Back with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 5,
+            "Bass": 4,
+            "Middle": 5,
+            "Treble": 6,
+            "Presence": 3,
+            "Master": 4.5
+          },
+          "noise_gate": {
+            "Threshold": "-40 dB (just enough to tame hiss, not clamp sustain)"
+          },
+          "compressor": {
+            "Sustain": 12,
+            "Attack": 9,
+            "Level": 12,
+            "Blend": 11
+          },
+          "overdrive": {
+            "Drive": 3.5,
+            "Tone": 4.5,
+            "Level": 8.5
+          },
+          "eq": {
+            "80Hz": "0",
+            "125Hz": "-1dB",
+            "250Hz": "-1.5dB",
+            "500Hz": "-1dB",
+            "1kHz": "0",
+            "2kHz": "+1dB",
+            "4kHz": "+2dB",
+            "8kHz": "0"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Mix": "15%",
+            "Decay": "short-medium",
+            "Pre-Delay": "minimal"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 43,
+            "Decay": 60
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "Sustain": 42,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 58,
+            "Drive": 41,
+            "Tone": 45
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 43,
+            "Master": 54,
+            "Bass": 46,
+            "Middle": 59,
+            "Treble": 47,
+            "Presence": 51
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 53,
+            "HighCut": 47
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 45,
+            "62": 46,
+            "125": 47,
+            "250": 49,
+            "500": 46,
+            "1000": 53,
+            "2000": 57,
+            "4000": 54,
+            "8000": 44,
+            "16000": 41,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 38,
+            "Decay": 41
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 43,
+                "Decay": 60
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "Sustain": 42,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Drive": 41,
+                "Tone": 45
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 43,
+                "Master": 54,
+                "Bass": 46,
+                "Middle": 59,
+                "Treble": 47,
+                "Presence": 51
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 53,
+                "HighCut": 47
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 45,
+                "62": 46,
+                "125": 47,
+                "250": 49,
+                "500": 46,
+                "1000": 53,
+                "2000": 57,
+                "4000": 54,
+                "8000": 44,
+                "16000": 41,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 41
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Steve Lukather While My Guitar Gently Weeps Rhythm Distortion",
+          "timestamp": "2026-01-25T06:00:46.318Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/steve-lukather-while-my-guitar-gently-weeps-tab-s379478",
+        "artist": "Steve Lukather",
+        "title": "While My Guitar Gently Weeps",
+        "trackType": "Rhythm",
+        "suggestedPart": "Weeps Rhythm Distortion",
+        "trackName": "Gitara 2 - Distortion Guitar"
+      },
+      "id": "gen_mktby6f5_vpbtna94g",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-01-25T05:56:37.970Z",
+      "originalPrompt": "Living End E Boogie Rhythm Guitar Distortion Riff",
+      "proDescription": {
+        "tone_title": "Living End - E Boogie Rhythm Guitar Distortion Riff",
+        "genre": "Rockabilly Punk Rock",
+        "sound_description": "Punchy, crunchy, and mid-focused drive with tight bass, bright attack, and clear note definition. The tone should have enough grit to cut through but remain articulate for fast, palm-muted boogie patterns. Not overly saturated—more classic rock distortion than modern high-gain.",
+        "guitar_rig_description": "Noise gate: not used (dynamic playing style and moderate gain level don't require it). Compressor: not used (natural dynamics preferred for rhythm work). Overdrive/Distortion: classic medium-gain overdrive pedal used to push the amp, providing crunchy breakup and enhanced attack. Amplifier: bright, mid-focused British-style tube amp set to edge-of-breakup, responding well to picking dynamics. Cabinet: 2x12 open-back cab with vintage-voiced speakers for clear mids and chime. EQ: light mid boost and slight treble emphasis to ensure presence in the mix, bass slightly rolled off for tightness. Modulation: not used. Delay: not used. Reverb: small amount of spring reverb for liveliness and slight room feel.",
+        "references": [
+          "The Living End - Prisoner of Society",
+          "Stray Cats - Rock This Town",
+          "Green Day - Basket Case (for comparable drive clarity)"
+        ],
+        "song_part": "main rhythm riff",
+        "preferred_pickup": "bridge humbucker (Gretsch-style Filter'Tron or PAF-type), tone = 7",
+        "additional_info": "Use hybrid or aggressive downstroke picking for drive and swing. Medium-gauge strings (10-46 or 11-49) for snap and stability. Palm-muting and percussive right hand technique enhance groove."
+      },
+      "realRig": {
+        "pedalboard": ["Greer Amps Lightspeed Organic Overdrive"],
+        "amplifier": "Vox AC30 Custom",
+        "cabinet": "Vox V212C 2x12 with Celestion G12M Greenback speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Gain (Top Boost Volume)": 6,
+            "Bass": 4,
+            "Treble": 7,
+            "Cut": 4,
+            "Master": 5,
+            "Reverb": 2
+          },
+          "overdrive": {
+            "Drive": 2,
+            "Tone": 6,
+            "Volume": 7
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Morning Drive",
+          "enabled": true,
+          "params": {
+            "Volume": 56,
+            "Drive": 62,
+            "Tone": 68
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 53,
+            "Master": 62,
+            "Bass": 40,
+            "Treble": 63,
+            "Cut": 58
+          }
+        },
+        "cabinet": {
+          "type": "MATCH212",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 58,
+            "HighCut": 62
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 36,
+            "Decay": 32
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Morning Drive",
+              "enabled": true,
+              "params": {
+                "Volume": 56,
+                "Drive": 62,
+                "Tone": 68
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 53,
+                "Master": 62,
+                "Bass": 40,
+                "Treble": 63,
+                "Cut": 58
+              }
+            },
+            "cabinet": {
+              "type": "MATCH212",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 58,
+                "HighCut": 62
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 36,
+                "Decay": 32
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Living End E Boogie Rhythm Guitar Distortion Riff",
+          "timestamp": "2026-01-25T05:56:37.970Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/living-end-e-boogie-tab-s56068",
+        "artist": "Living End",
+        "title": "E Boogie",
+        "trackType": "Rhythm",
+        "suggestedPart": "Guitar Distortion Riff",
+        "trackName": "Pista 1 - Distortion Guitar"
+      },
+      "id": "gen_mktbsuso_xrel2grmt",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-01-25T05:45:03.436Z",
       "originalPrompt": "Mor Ve Otesi Melekler Ölmez Distorted  Guitar",
       "proDescription": {
@@ -41862,6 +42357,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-25T05:50:26.398Z"
+    "lastUpdated": "2026-01-25T06:00:46.337Z"
   }
 }

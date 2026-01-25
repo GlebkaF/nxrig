@@ -90,7 +90,7 @@ export default function Home() {
                     {preset.origin.artist.title}
                   </div>
                   <div className="text-sm text-gray-200 mb-2 truncate">
-                    {preset.origin.song}
+                    {preset.origin.song} – {preset.origin.part}
                   </div>
                   <div className="text-xs text-gray-500">
                     {preset.createdAt && formatDate(preset.createdAt)}

@@ -12036,7 +12036,7 @@
     "id": "gen_mktbdyw4_f59sr0slu",
     "origin": {
       "artistId": 62,
-      "song": "Mor Ve Otesi",
+      "song": "Melekler Ölmez",
       "part": "Distorted Rythm Guitar",
       "imageUrl": "/images/cover/default-cover.webp"
     },
@@ -12138,10 +12138,228 @@
       "tone": 7,
       "position": "bridge"
     },
-    "slug": "mor-ve-otesi-guitar-distorted-rythm-guitar",
+    "slug": "melekler-lmez-guitar-distorted-rythm-guitar",
     "tabsUrl": "https://www.songsterr.com/a/wsa/mor-ve-otesi-melekler-olmez-tab-s439708t0",
     "isDraft": false,
     "createdAt": "2026-01-25T05:50:26.366Z",
     "updatedAt": "2026-01-25T05:50:26.366Z"
+  },
+  {
+    "id": "gen_mktbsuso_xrel2grmt",
+    "origin": {
+      "artistId": 63,
+      "song": "E Boogie",
+      "part": "Guitar Distortion Riff",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Punchy, crunchy, and mid-focused drive with tight bass, bright attack, and clear note definition. The tone should have enough grit to cut through but remain articulate for fast, palm-muted boogie patterns. Not overly saturated—more classic rock distortion than modern high-gain.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Morning Drive",
+        "enabled": true,
+        "params": {
+          "Volume": 56,
+          "Drive": 62,
+          "Tone": 68
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 53,
+          "Master": 62,
+          "Bass": 40,
+          "Treble": 63,
+          "Cut": 58
+        }
+      },
+      "cabinet": {
+        "type": "MATCH212",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 58,
+          "HighCut": 62
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 36,
+          "Decay": 32
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "e-boogie-guitar-guitar-distortion-riff",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/living-end-e-boogie-tab-s56068",
+    "isDraft": false,
+    "createdAt": "2026-01-25T05:59:00.421Z",
+    "updatedAt": "2026-01-25T05:59:00.421Z"
+  },
+  {
+    "id": "gen_mktby6f5_vpbtna94g",
+    "origin": {
+      "artistId": 64,
+      "song": "While My Guitar Gently Weeps",
+      "part": "Weeps Rhythm Distortion",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, mid-gain distortion with clarity and punch, moderate sustain, tight low end, controlled brightness, and enough presence to cut through a band mix without harshness. The tone is dynamic and full but avoids excessive aggression or fizz, emphasizing note separation and chord definition.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 43,
+          "Decay": 60
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "Sustain": 42,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 58,
+          "Drive": 41,
+          "Tone": 45
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 43,
+          "Master": 54,
+          "Bass": 46,
+          "Middle": 59,
+          "Treble": 47,
+          "Presence": 51
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 53,
+          "HighCut": 47
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 45,
+          "62": 46,
+          "125": 47,
+          "250": 49,
+          "500": 46,
+          "1000": 53,
+          "2000": 57,
+          "4000": 54,
+          "8000": 44,
+          "16000": 41,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 38,
+          "Decay": 41
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "while-my-guitar-gently-weeps-guitar-weeps-rhythm-distortion",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/steve-lukather-while-my-guitar-gently-weeps-tab-s379478",
+    "isDraft": true,
+    "createdAt": null,
+    "updatedAt": "2026-01-25T06:01:50.032Z"
   }
 ]

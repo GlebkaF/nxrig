@@ -370,5 +370,17 @@
     "title": "Mor Ve Otesi",
     "slug": "mor-ve-otesi",
     "description": "Mor ve Ötesi are a Turkish alternative rock band known for melodic guitar work, introspective lyrics, and a modern rock sound with strong emotional depth."
+  },
+  {
+    "id": 63,
+    "title": "Living End",
+    "slug": "living-end",
+    "description": "The Living End are an Australian punk rock band known for high-energy songs, driving bass lines, and a blend of punk, rockabilly, and alternative rock influences."
+  },
+  {
+    "id": 64,
+    "title": "Steve Lukather",
+    "slug": "steve-lukather",
+    "description": "Steve Lukather is a renowned guitarist and songwriter, best known for his work with Toto, combining technical precision, melodic solos, and versatile session work."
   }
 ]
