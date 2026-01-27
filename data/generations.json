@@ -267,7 +267,7 @@
         "trackName": "Gitara 2 - Distortion Guitar"
       },
       "id": "gen_mktby6f5_vpbtna94g",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "timestamp": "2026-01-25T05:56:37.970Z",
@@ -42357,6 +42357,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-25T06:00:46.337Z"
+    "lastUpdated": "2026-01-27T02:47:28.300Z"
   }
 }
