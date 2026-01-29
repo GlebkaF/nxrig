@@ -12361,5 +12361,116 @@
     "isDraft": false,
     "createdAt": "2026-01-27T02:47:28.289Z",
     "updatedAt": "2026-01-27T02:47:28.289Z"
+  },
+  {
+    "id": "gen_mkzotj89_ou744rrv9",
+    "origin": {
+      "artistId": 32,
+      "song": "R U Mine?",
+      "part": "Lead Guitar Distortion",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Gritty and aggressive distortion with moderate sustain, pronounced midrange, tight low end, and a slightly fuzzy texture. The tone is direct and raw, with enough clarity to cut through the mix but not overly bright. There’s a touch of looseness and vintage character, maintaining good note definition for riffing and melodic lines.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Drive": 70,
+          "Tone": 60
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 45,
+          "Master": 65,
+          "Bass": 45,
+          "Treble": 55,
+          "Cut": 60
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 55,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 45,
+          "62": 48,
+          "125": 48,
+          "250": 52,
+          "500": 60,
+          "1000": 65,
+          "2000": 60,
+          "4000": 56,
+          "8000": 47,
+          "16000": 45,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 26,
+          "Decay": 35
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "r-u-mine-guitar-lead-guitar-distortion",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/arctic-monkeys-r-u-mine-tab-s90203",
+    "isDraft": false,
+    "createdAt": "2026-01-29T16:49:49.408Z",
+    "updatedAt": "2026-01-29T16:49:49.408Z"
   }
 ]

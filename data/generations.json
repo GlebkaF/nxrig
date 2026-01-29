@@ -1,6 +1,258 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-29T16:47:41.687Z",
+      "originalPrompt": "Arctic Monkeys R U Mine? Lead Guitar Distortion",
+      "proDescription": {
+        "tone_title": "R U Mine? Lead Guitar Distortion",
+        "genre": "Indie Rock / Garage Rock",
+        "sound_description": "Gritty and aggressive distortion with moderate sustain, pronounced midrange, tight low end, and a slightly fuzzy texture. The tone is direct and raw, with enough clarity to cut through the mix but not overly bright. There’s a touch of looseness and vintage character, maintaining good note definition for riffing and melodic lines.",
+        "guitar_rig_description": "Noise gate: not used. Compressor: not used. Overdrive/Distortion: Medium-gain distortion pedal (such as a RAT or Big Muff style fuzz/distortion) providing the main grit and sustain; set for strong saturation but not fully maxed out. Amplifier: British-voiced tube amp (Vox AC30 or similar) set clean to slightly breaking up, adding body and warmth. Cabinet: 2x12 open-back cab with vintage-style speakers for chime and midrange focus. EQ: Subtle post-distortion EQ shaping to emphasize mids and slightly roll off excessive highs. Modulation: not used. Delay: not used. Reverb: Subtle plate or spring reverb from the amp or a pedal, just enough for space without washing out the sound.",
+        "references": [
+          "Arctic Monkeys - R U Mine?",
+          "The White Stripes - Icky Thump",
+          "The Black Keys - Lonely Boy"
+        ],
+        "song_part": "Lead guitar riff and melodic lines",
+        "preferred_pickup": "bridge humbucker (coil-split optional), tone = full open",
+        "additional_info": "Use a hard pick attack for extra aggression. Medium gauge strings (10–46) recommended. Keep the guitar’s volume wide open for maximum drive."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ProCo RAT 2 Distortion",
+          "MXR 10-Band EQ",
+          "TC Electronic Hall of Fame Mini Reverb"
+        ],
+        "amplifier": "Vox AC30C2",
+        "cabinet": "Vox V212C 2x12 with Celestion G12M Greenback speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Normal Volume": 4,
+            "Top Boost Volume": 3.5,
+            "Bass": 5,
+            "Treble": 6,
+            "Cut": 4,
+            "Reverb": 2
+          },
+          "rat": {
+            "Distortion": 2.5,
+            "Filter": 2.5,
+            "Volume": 7
+          },
+          "eq": {
+            "62Hz": "-2dB",
+            "250Hz": "+2dB",
+            "1kHz": "+3dB",
+            "4kHz": "-1dB",
+            "8kHz": "-2dB"
+          },
+          "reverb": {
+            "Level": 9,
+            "Decay": 11,
+            "Type": "Plate"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Drive": 70,
+            "Tone": 60
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 45,
+            "Master": 65,
+            "Bass": 45,
+            "Treble": 55,
+            "Cut": 60
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 55,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 45,
+            "62": 48,
+            "125": 48,
+            "250": 52,
+            "500": 60,
+            "1000": 65,
+            "2000": 60,
+            "4000": 56,
+            "8000": 47,
+            "16000": 45,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 26,
+            "Decay": 35
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Drive": 70,
+                "Tone": 60
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 45,
+                "Master": 65,
+                "Bass": 45,
+                "Treble": 55,
+                "Cut": 60
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 55,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 45,
+                "62": 48,
+                "125": 48,
+                "250": 52,
+                "500": 60,
+                "1000": 65,
+                "2000": 60,
+                "4000": 56,
+                "8000": 47,
+                "16000": 45,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 26,
+                "Decay": 35
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Arctic Monkeys R U Mine? Lead Guitar Distortion",
+          "timestamp": "2026-01-29T16:47:41.687Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/arctic-monkeys-r-u-mine-tab-s90203",
+        "artist": "Arctic Monkeys",
+        "title": "R U Mine?",
+        "trackType": "Lead",
+        "suggestedPart": "Lead Guitar Distortion",
+        "trackName": "Lead Guitar | Fender Bronco | Alex Turner - Distortion Guitar"
+      },
+      "id": "gen_mkzotj89_ou744rrv9",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-01-25T06:00:46.318Z",
       "originalPrompt": "Steve Lukather While My Guitar Gently Weeps Rhythm Distortion",
       "proDescription": {
@@ -42357,6 +42609,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-28T13:20:32.035Z"
+    "lastUpdated": "2026-01-29T16:49:49.419Z"
   }
 }
