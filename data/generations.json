@@ -1,6 +1,223 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-29T16:50:59.047Z",
+      "originalPrompt": "Creedence Clearwater Revival Fortunate Son Lead Guitar Clean Tone",
+      "proDescription": {
+        "tone_title": "Fortunate Son Lead Guitar Clean Tone",
+        "genre": "Classic Rock / Roots Rock",
+        "sound_description": "Bright, jangly, slightly gritty clean tone with plenty of clarity and bite. The sound is dynamic with a touch of warmth and natural tube breakup when digging in, but overall remains clean and uncompressed. There is a subtle presence of room ambience, but no obvious effects.",
+        "guitar_rig_description": "Noise gate: not used (natural dynamics maintained). Compressor: not used (natural picking dynamics preserved). Overdrive/distortion/boost: not used (amp provides all breakup). Amplifier: vintage-style tube combo amp set just at the edge of breakup for a lively clean sound with touch sensitivity. Cabinet: open-back 2x12 cabinet with vintage-voiced speakers for airy highs and articulate mids. EQ: basic amp tone stack, slightly boosted treble for clarity, mids present, bass controlled to avoid muddiness. Modulation: not used. Delay: not used. Reverb: subtle spring reverb from the amp to add natural room ambience.",
+        "references": [
+          "Creedence Clearwater Revival - Fortunate Son",
+          "Creedence Clearwater Revival - Bad Moon Rising",
+          "The Rolling Stones - Brown Sugar"
+        ],
+        "song_part": "lead guitar throughout the song",
+        "preferred_pickup": "bridge single-coil, tone wide open",
+        "additional_info": "Single-coil pickups (Fender Stratocaster style), medium gauge strings for snap, pick attack emphasized, play with strong, articulate picking and slight palm muting for percussive chime. Avoid excessive gain or effects for maximum authenticity."
+      },
+      "realRig": {
+        "pedalboard": [],
+        "amplifier": "Fender '65 Deluxe Reverb Reissue",
+        "cabinet": "Fender Deluxe Reverb 1x12 open-back with Jensen C12K 12\" speaker",
+        "settings": {
+          "amp": {
+            "Volume": 5.5,
+            "Treble": 7,
+            "Bass": 4,
+            "Reverb": 2.5
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Deluxe Rvb",
+          "enabled": true,
+          "params": {
+            "Gain": 58,
+            "Master": 70,
+            "Bass": 40,
+            "Middle": 55,
+            "Treble": 65
+          }
+        },
+        "cabinet": {
+          "type": "DR112",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 52,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 42,
+            "Decay": 38
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 58,
+                "Master": 70,
+                "Bass": 40,
+                "Middle": 55,
+                "Treble": 65
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 52,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 42,
+                "Decay": 38
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Creedence Clearwater Revival Fortunate Son Lead Guitar Clean Tone",
+          "timestamp": "2026-01-29T16:50:59.047Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/creedence-clearwater-revival-fortunate-son-tab-s4407",
+        "artist": "Creedence Clearwater Revival",
+        "title": "Fortunate Son",
+        "trackType": "Lead",
+        "suggestedPart": "Guitar Clean Tone",
+        "trackName": "John Fogerty - Lead Guitar - Electric Guitar (clean)"
+      },
+      "id": "gen_mkzoxrid_cultlxi6o",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-01-29T16:47:41.687Z",
       "originalPrompt": "Arctic Monkeys R U Mine? Lead Guitar Distortion",
       "proDescription": {
@@ -42609,6 +42826,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-29T16:49:49.419Z"
+    "lastUpdated": "2026-01-29T16:54:12.851Z"
   }
 }

@@ -12472,5 +12472,110 @@
     "isDraft": false,
     "createdAt": "2026-01-29T16:49:49.408Z",
     "updatedAt": "2026-01-29T16:49:49.408Z"
+  },
+  {
+    "id": "gen_mkzoxrid_cultlxi6o",
+    "origin": {
+      "artistId": 65,
+      "song": "Fortunate Son",
+      "part": "Guitar Clean Tone",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, jangly, slightly gritty clean tone with plenty of clarity and bite. The sound is dynamic with a touch of warmth and natural tube breakup when digging in, but overall remains clean and uncompressed. There is a subtle presence of room ambience, but no obvious effects.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Deluxe Rvb",
+        "enabled": true,
+        "params": {
+          "Gain": 58,
+          "Master": 70,
+          "Bass": 40,
+          "Middle": 55,
+          "Treble": 65
+        }
+      },
+      "cabinet": {
+        "type": "DR112",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 52,
+          "HighCut": 60
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 42,
+          "Decay": 38
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "fortunate-son-guitar-guitar-clean-tone",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/creedence-clearwater-revival-fortunate-son-tab-s4407",
+    "isDraft": false,
+    "createdAt": "2026-01-29T16:54:12.840Z",
+    "updatedAt": "2026-01-29T16:54:12.840Z"
   }
 ]
