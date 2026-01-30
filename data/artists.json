@@ -388,5 +388,11 @@
     "title": "Creedence Clearwater Revival",
     "slug": "creedence-clearwater-revival",
     "description": "Creedence Clearwater Revival were an American rock band known for roots-driven sound, catchy riffs, and timeless songs blending rock, blues, and Americana."
+  },
+  {
+    "id": 66,
+    "title": "Boston",
+    "slug": "boston",
+    "description": "Boston are an American rock band known for polished production, soaring vocals, and melodic guitar-driven anthems that defined classic arena rock."
   }
 ]

@@ -12577,5 +12577,110 @@
     "isDraft": false,
     "createdAt": "2026-01-29T16:54:12.840Z",
     "updatedAt": "2026-01-29T16:54:12.840Z"
+  },
+  {
+    "id": "gen_ml0vx3do_s5k97aev9",
+    "origin": {
+      "artistId": 66,
+      "song": "More Than A Feeling",
+      "part": "Clean Electric Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Chiming, bright, and clear clean tone with a slight shimmer and natural sustain. The sound is articulate and has a light jangly quality with a hint of warmth, but remains transparent and dynamic. There is a subtle sense of spatial depth without sounding overly wet.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 35,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 35,
+          "Depth": 30
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 42,
+          "Master": 60,
+          "Bass": 45,
+          "Middle": 55,
+          "Treble": 62,
+          "Bright": 65
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 55,
+          "HighCut": 57
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 42,
+          "Decay": 40
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 28,
+          "Rate": 24,
+          "Echo": 33
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 10,
+      "position": "neck"
+    },
+    "slug": "more-than-a-feeling-guitar-clean-electric-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/boston-more-than-a-feeling-tab-s311t6",
+    "isDraft": false,
+    "createdAt": "2026-01-30T12:57:16.221Z",
+    "updatedAt": "2026-01-30T12:57:16.221Z"
   }
 ]

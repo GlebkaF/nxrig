@@ -1,6 +1,251 @@
 {
   "generations": [
     {
+      "timestamp": "2026-01-30T12:54:11.263Z",
+      "originalPrompt": "Boston More Than A Feeling Clean Electric Guitar",
+      "proDescription": {
+        "tone_title": "More Than A Feeling Clean Electric Guitar",
+        "genre": "Classic Rock",
+        "sound_description": "Chiming, bright, and clear clean tone with a slight shimmer and natural sustain. The sound is articulate and has a light jangly quality with a hint of warmth, but remains transparent and dynamic. There is a subtle sense of spatial depth without sounding overly wet.",
+        "guitar_rig_description": "Noise gate: not used (signal is clean and quiet). Compressor: light compression to even out picking dynamics and add sustain without squashing transients. Overdrive/distortion/boost: not used (pure clean tone). Amplifier: clean channel of a vintage-style tube amp, set for maximum headroom and a bit of sparkle. Cabinet: 2x12 open-back cabinet with bright, detailed speakers to enhance chime. EQ: slight high-mid boost for clarity, low-end kept tight, no excessive highs. Modulation: light chorus to provide subtle shimmer and width. Delay: short, low-mix analog delay for added depth, not prominent. Reverb: moderate plate or spring reverb for airy spaciousness, not overpowering.",
+        "references": [
+          "Boston – More Than A Feeling",
+          "Tom Scholz (Boston) live performances",
+          "Journey – Lights"
+        ],
+        "song_part": "intro and verse clean rhythm",
+        "preferred_pickup": "neck single-coil or neck/middle position (if using a Strat-style guitar), tone fully open",
+        "additional_info": "Use a guitar with single-coil pickups for maximum chime (e.g., Fender Stratocaster). Play with a light to medium pick attack. Use fresh nickel strings for brightness. Let chords ring out cleanly without excessive muting. Avoid heavy palm muting."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Boss CE-2W Chorus (set to standard CE-2 mode, Rate: 10 o’clock, Depth: 9 o’clock, Level: 12 o’clock)",
+          "MXR Carbon Copy Analog Delay (Delay: 9 o’clock, Mix: 8 o’clock, Regen: minimum)",
+          "Strymon Flint (Reverb side, Plate mode, Mix: 11 o’clock, Decay: 10 o’clock, Color: 12 o’clock)"
+        ],
+        "amplifier": "Fender Twin Reverb (’65 Reissue)",
+        "cabinet": "Fender 212 DeVille 2x12 open-back with Jensen C12K speakers",
+        "settings": {
+          "amp": {
+            "Volume": 3.5,
+            "Treble": 6.5,
+            "Middle": 5,
+            "Bass": 4,
+            "Reverb": 2.5,
+            "Bright Switch": "On"
+          },
+          "compressor": {
+            "Blend": "11 o’clock",
+            "Volume": "unity gain",
+            "Compression": "Low (9 o’clock)"
+          },
+          "chorus": {
+            "Rate": "10 o’clock",
+            "Depth": "9 o’clock",
+            "Level": "12 o’clock"
+          },
+          "delay": {
+            "Delay": "9 o’clock (~120ms)",
+            "Mix": "8 o’clock (very subtle)",
+            "Regen": "minimum (single repeat)"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Mix": "11 o’clock",
+            "Decay": "10 o’clock",
+            "Color": "12 o’clock"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 35,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 35,
+            "Depth": 30
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 42,
+            "Master": 60,
+            "Bass": 45,
+            "Middle": 55,
+            "Treble": 62,
+            "Bright": 65
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 55,
+            "HighCut": 57
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 42,
+            "Decay": 40
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 28,
+            "Rate": 24,
+            "Echo": 33
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 35,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 35,
+                "Depth": 30
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 42,
+                "Master": 60,
+                "Bass": 45,
+                "Middle": 55,
+                "Treble": 62,
+                "Bright": 65
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 55,
+                "HighCut": 57
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 42,
+                "Decay": 40
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 28,
+                "Rate": 24,
+                "Echo": 33
+              }
+            }
+          },
+          "prompt": "Boston More Than A Feeling Clean Electric Guitar",
+          "timestamp": "2026-01-30T12:54:11.263Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/boston-more-than-a-feeling-tab-s311t6",
+        "artist": "Boston",
+        "title": "More Than A Feeling",
+        "trackType": "Lead",
+        "suggestedPart": "Clean Electric Guitar",
+        "trackName": "Barry Godreau/Tom Scholz (Clean Guitar) - Electric Guitar (clean)"
+      },
+      "id": "gen_ml0vx3do_s5k97aev9",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-01-29T16:50:59.047Z",
       "originalPrompt": "Creedence Clearwater Revival Fortunate Son Lead Guitar Clean Tone",
       "proDescription": {
@@ -42826,6 +43071,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-01-29T16:54:12.851Z"
+    "lastUpdated": "2026-01-30T12:57:16.232Z"
   }
 }
