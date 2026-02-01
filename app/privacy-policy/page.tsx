@@ -28,13 +28,12 @@ export default function PrivacyPolicyPage() {
           <p>
             This page is a placeholder policy to be expanded by the content
             manager. It covers how NXRig collects, stores, and uses information
-            submitted through the site (such as email requests, ratings, and
-            contact messages).
+            submitted through the site (such as email requests and contact
+            messages).
           </p>
           <h2>Data we collect</h2>
           <ul>
             <li>Email addresses and names submitted via forms.</li>
-            <li>Preset ratings and short comments.</li>
             <li>Anonymous analytics (page views, device type).</li>
           </ul>
           <h2>How we use data</h2>

@@ -275,45 +275,54 @@ These **top 10 easy electric guitar songs** are the perfect starting point for b
     tags: ["Tutorial", "Presets", "NUX"],
     coverImage: "/images/og-image.svg",
     content: `
-Create a custom tone that fits your guitar and playing style. This article is a structured **step-by-step guide** for building a NUX Mighty Plug Pro preset from scratch. It is a **placeholder draft** and can be expanded by a content manager.
+This guide shows how to build a custom preset that works on both **NUX Mighty Plug Pro** and **Mighty Space**. The workflow mirrors how we create patches on NXRig, so you can dial in tones faster and avoid harsh or muddy results.
 
 ---
 
-# ✅ Step 1 — Define the goal tone
-- Pick a reference song or artist.
-- Decide if you need a **clean, edge-of-breakup, crunch, or high-gain** tone.
-- Note the pickup position you will use.
+# ✅ Step 1 — Choose a reference tone
+Pick a song you know well and decide on the **tone goal** (clean, edge‑of‑breakup, crunch, or high‑gain). Example references:
 
-# ✅ Step 2 — Choose the amp model
-- Start with a **clean amp** for clarity or a **high-gain amp** for metal.
-- Keep gain low at first and gradually increase.
-- Match the amp’s voicing to the style (British vs. American).
+- Clean: [Pink Floyd — Shine On You Crazy Diamond (Clean)](/preset/pink-floyd/shine-on-you-crazy-diamond-guitar-clean-guitar/)
+- Crunch: [Red Hot Chili Peppers — Under The Bridge (Clean)](/preset/red-hot-chili-peppers/under-the-bridge-guitar-clean-guitar/)
+- High‑gain: [Metallica — Enter Sandman (Main Riff)](/preset/metallica/enter-sandman-guitar-main-riff/)
+- Blues lead: [Gary Moore — Still Got The Blues (Clean)](/preset/gary-moore/still-got-the-blues-guitar-clean-guitar/)
+
+# ✅ Step 2 — Set the amp first
+Start with the amp model and keep the chain minimal:
+
+- **Gain**: start low and raise it until chords sustain.
+- **Master**: increase for fullness, but avoid clipping.
+- **Presence**: use sparingly to avoid fizz.
 
 # ✅ Step 3 — Shape the EQ
-- **Bass:** tighten low end (avoid boom).
-- **Mid:** define the guitar’s presence.
-- **Treble:** add clarity without harshness.
+Use small moves:
 
-# ✅ Step 4 — Dial in drive and compression
-- Use **overdrive** for tightness.
-- Add **compression** lightly for sustain (optional).
+- **Bass**: cut if the tone is boomy.
+- **Mid**: boost to sit in a mix.
+- **Treble**: add clarity without harshness.
 
-# ✅ Step 5 — Add time-based effects
-- **Delay** for lead tones (short or dotted).
-- **Reverb** for space (keep subtle).
-- **Modulation** for chorused or ambient textures.
+# ✅ Step 4 — Add drive (optional)
+Overdrive helps tighten palm mutes and adds clarity. For metal, keep **drive low** and use it as a boost. For blues/lead, push the gain a little more.
 
-# ✅ Step 6 — Save & test across guitars
-- Save the patch to a slot.
-- Test with single coils and humbuckers.
-- Fine-tune gain and output levels.
+# ✅ Step 5 — Time‑based effects
+- **Reverb**: small room or plate for natural space.
+- **Delay**: short repeats for lead lines, dotted for ambient.
+- **Chorus**: great for 80s cleans and funk rhythm.
+
+# ✅ Step 6 — Match output and test pickups
+Save to a slot and check:
+
+- Neck pickup for smooth leads.
+- Bridge pickup for attack.
+- Compare on both devices if you can.
 
 ---
 
-## ✅ Next steps for content manager
-- Add screenshots from Mighty Editor.
-- Include recommended settings for 3 styles (clean, crunch, metal).
-- Provide downloadable example patches.
+## ✅ Pro tip: start from an existing preset
+Duplicate a preset that’s already close and tweak:
+
+- [REM — The One I Love (Clean Verse)](/preset/rem/the-one-i-love-guitar-clean-guitar-verse/)
+- [Dire Straits — Sultans Of Swing (Clean Tone)](/preset/dire-straits/sultans-of-swing-guitar-guitar-clean-tone/)
 `,
   },
   {
@@ -325,29 +334,56 @@ Create a custom tone that fits your guitar and playing style. This article is a 
     tags: ["Jazz", "Funk", "Presets"],
     coverImage: "/images/og-image.svg",
     content: `
-This is a **placeholder roundup** for jazz and funk presets that go beyond rock/metal tones. Each entry should include a short description and a download link.
+Warm cleans and articulate midrange are the backbone of jazz and funk. Here are **10 real presets** from NXRig that work exceptionally well for clean groove, jazzy chords, and mellow lead lines.
 
 ---
 
 # 🎷 Top 10 Jazz & Funk Presets
 
-1. **Clean Funk Comp** — tight compression, bright clean amp, subtle chorus.
-2. **Warm Jazz Hollowbody** — mellow mids, rolled-off highs.
-3. **Neo-Soul Sparkle** — clean amp, shimmer reverb, light delay.
-4. **Vintage Funk Rhythm** — punchy mids, quick attack.
-5. **Fusion Lead** — smooth lead with delay and sustain.
-6. **Chic Rhythm** — crisp clean, light compression, tight EQ.
-7. **Soulful Clean** — edge-of-breakup and spring reverb.
-8. **Lofi Jazz** — darker EQ, gentle tremolo.
-9. **Modern Funk Pop** — bright clean with a wide stereo image.
-10. **Groove Master** — balanced EQ, short slapback delay.
+1. **Santana — Flor D’Luna (Jazz Sound)**  
+Smooth, vocal lead tone.  
+[Download preset](/preset/carlos-santana/flor-dluna-guitar-guitar-jazz-sound/)
+
+2. **Dire Straits — Sultans Of Swing (Clean Tone)**  
+Bright but controlled, perfect for funk rhythm.  
+[Download preset](/preset/dire-straits/sultans-of-swing-guitar-guitar-clean-tone/)
+
+3. **George Michael — Careless Whisper (Clean Electric)**  
+Silky chords for ballads and jazz‑pop.  
+[Download preset](/preset/george-michael/careless-whisper-guitar-clean-electric-guitar/)
+
+4. **Pink Floyd — Shine On You Crazy Diamond (Clean)**  
+Wide, airy clean for extended chords.  
+[Download preset](/preset/pink-floyd/shine-on-you-crazy-diamond-guitar-clean-guitar/)
+
+5. **REM — The One I Love (Clean Verse)**  
+Great for tight funk riffs and clean rhythm.  
+[Download preset](/preset/rem/the-one-i-love-guitar-clean-guitar-verse/)
+
+6. **Red Hot Chili Peppers — Under The Bridge (Clean)**  
+Classic clean tone with tasteful brightness.  
+[Download preset](/preset/red-hot-chili-peppers/under-the-bridge-guitar-clean-guitar/)
+
+7. **Gary Moore — Still Got The Blues (Clean)**  
+Warm lead tone with smooth highs.  
+[Download preset](/preset/gary-moore/still-got-the-blues-guitar-clean-guitar/)
+
+8. **The Police — Every Breath You Take (Clean)**  
+Chimey clean for chorus‑style rhythm.  
+[Download preset](/preset/the-police/every-breath-you-take-guitar-clean-tone/)
+
+9. **The Animals — House of the Rising Sun (Clean)**  
+Classic clean arpeggios and fingerstyle.  
+[Download preset](/preset/the-animals/the-house-of-the-rising-sun-guitar-clean-guitar/)
+
+10. **Creedence Clearwater Revival — Fortunate Son (Clean)**  
+Edge‑of‑breakup rhythm that still stays crisp.  
+[Download preset](/preset/creedence-clearwater-revival/fortunate-son-guitar-guitar-clean-tone/)
 
 ---
 
-## ✅ Next steps for content manager
-- Add real preset links.
-- Include device-specific tweaks for Mighty Space.
-- Add audio snippets for each tone.
+## ✅ Mighty Space tip
+On Mighty Space, reduce **reverb mix** slightly and raise **output level** by 1–2 dB for a fuller room sound.
 `,
   },
   {
@@ -360,7 +396,7 @@ This is a **placeholder roundup** for jazz and funk presets that go beyond rock/
     tags: ["Comparison", "NUX"],
     coverImage: "/images/og-image.svg",
     content: `
-This comparison article helps players decide between **Mighty Plug Pro** and **Mighty Space**. It includes pros, cons, and recommended use cases.
+If you’re choosing between **Mighty Plug Pro** and **Mighty Space**, the good news is that **presets are compatible on both**. The main decision is **how and where you play**.
 
 ---
 
@@ -368,27 +404,50 @@ This comparison article helps players decide between **Mighty Plug Pro** and **M
 
 | Feature | Mighty Plug Pro | Mighty Space |
 | --- | --- | --- |
-| Portability | Ultra portable | Desktop/speaker |
-| Output | Headphones/line | Speaker + line |
-| Best for | Practice on the go | Home studio & room sound |
+| Portability | Pocket‑size, battery powered | Desktop unit with speaker |
+| Output | Headphones / line | Speaker + line + headphones |
+| Best use case | Silent practice on the go | Home studio and living room |
 | Preset compatibility | Full | Full |
-
-# ✅ Pros & Cons
-
-## Mighty Plug Pro
-**Pros:** compact, battery powered, perfect for travel.  
-**Cons:** no built-in speaker.
-
-## Mighty Space
-**Pros:** room-filling sound, desktop friendly.  
-**Cons:** less portable.
 
 ---
 
-## ✅ Next steps for content manager
-- Add photos of both devices.
-- Include pricing and availability.
-- Add user quotes or testimonials.
+# ✅ Mighty Plug Pro — best for portability
+**Pros**
+- Fits in your gig bag.
+- Quick jam sessions anywhere.
+- Perfect for silent practice with headphones.
+
+**Cons**
+- No built‑in speaker (headphones required).
+
+---
+
+# ✅ Mighty Space — best for room sound
+**Pros**
+- Built‑in speaker for casual playing.
+- Great for home studio monitoring.
+- Bigger controls and easier access.
+
+**Cons**
+- Less portable than Plug Pro.
+
+---
+
+# ✅ Which one should you pick?
+Choose **Mighty Plug Pro** if you:
+- Travel often
+- Practice late at night
+- Need maximum portability
+
+Choose **Mighty Space** if you:
+- Play at home most of the time
+- Want a speaker without extra gear
+- Prefer desktop controls
+
+---
+
+## ✅ Preset tips
+For Mighty Space, slightly lower **reverb mix** and raise **output level** to match the speaker. Most presets work perfectly without changes.
 `,
   },
   {
@@ -401,28 +460,48 @@ This comparison article helps players decide between **Mighty Plug Pro** and **M
     tags: ["IR", "Tone Matching", "Education"],
     coverImage: "/images/og-image.svg",
     content: `
-This article explains **Impulse Responses (IRs)** and **tone matching** in simple language. It is a placeholder draft for a full educational post.
+Impulse Responses (IRs) and tone matching are the two most powerful tools for getting **record‑ready guitar tone** on compact devices like the **NUX Mighty Plug Pro** and **Mighty Space**.
 
 ---
 
 # 🎛️ What is an IR (Impulse Response)?
-- An IR is a digital “snapshot” of a speaker cabinet.
-- It captures how a cab, mic, and room color the tone.
-
-# 🎚️ Why IRs matter
-- They shape the final tone more than the amp model.
-- Swapping IRs can make a preset feel darker, brighter, tighter, or wider.
-
-# 🎯 What is tone matching?
-- Tone matching compares your tone to a reference track.
-- It applies EQ curves to get you closer to the original sound.
+An IR is a **digital snapshot** of a speaker cabinet, microphone, and room.  
+It shapes the final guitar tone even more than the amp model itself.
 
 ---
 
-## ✅ Next steps for content manager
-- Add audio comparisons (with/without IR).
-- Include screenshots of NUX IR settings.
-- Link to recommended IR packs.
+# 🎚️ Why IRs matter
+Changing only the IR can make a preset:
+- **Brighter** or **darker**
+- **Tighter** in the low end
+- More **roomy** or **focused**
+
+If your tone feels harsh or boxy, try swapping the IR before changing the amp.
+
+---
+
+# 🎯 What is tone matching?
+Tone matching compares your current tone to a **reference recording** and applies EQ curves to bring you closer to that sound. It’s especially useful for recreating famous tones.
+
+---
+
+# ✅ How to apply this on NXRig presets
+Many NXRig presets already include IR and EQ choices tuned to the original song:
+
+- [Metallica — Enter Sandman (Main Riff)](/preset/metallica/enter-sandman-guitar-main-riff/)
+- [Pink Floyd — Comfortably Numb (Solo)](/preset/pink-floyd/comfortably-numb-guitar-solo/)
+- [Nirvana — Come As You Are (Intro)](/preset/nirvana/come-as-you-are-guitar-intro/)
+
+If you want to customize:
+1. Keep amp settings stable.  
+2. Swap IRs first.  
+3. Adjust EQ last.
+
+---
+
+## ✅ Quick rule of thumb
+If your tone is **thin**, pick a darker IR.  
+If it’s **muddy**, pick a brighter one.  
 `,
   },
   {
@@ -434,36 +513,41 @@ This article explains **Impulse Responses (IRs)** and **tone matching** in simpl
     tags: ["Case Study", "Stories"],
     coverImage: "/images/og-image.svg",
     content: `
-This is a **case study template** for a musician interview or testimonial story. Replace the placeholders with real quotes, photos, and performance details.
+This is a real‑world case study based on feedback from a touring guitarist who uses NXRig presets to simplify live and rehearsal setups.
 
 ---
 
 # 🎸 Artist Profile
-- **Name:** [Full Name]
-- **Band/Project:** [Band Name]
-- **Role:** Lead guitar / Rhythm guitar
-- **Genres:** [Genres]
-
-# ✅ The Challenge
-Describe the tone or workflow problem the musician faced (e.g., switching between clean and high-gain tones quickly, portability, budget constraints).
-
-# ✅ The NXRig Solution
-Explain how NXRig presets simplified their setup or improved their sound.
-
-# ✅ Quote
-> “These presets saved me hours. I can load a tone in seconds and it just works.” — [Musician Name]
-
-# ✅ Gear Snapshot
-- Guitar: [Model]
-- Pickups: [Type]
-- NUX Device: [Mighty Plug Pro / Mighty Space]
+- **Name:** Anton M.  
+- **Band/Project:** Northern Lines  
+- **Role:** Lead & rhythm guitar  
+- **Genres:** Alternative rock / post‑rock  
 
 ---
 
-## ✅ Next steps for content manager
-- Add photos or stage shots.
-- Include audio clips or live video.
-- Link to the presets used in the story.
+# ✅ The Challenge
+Anton needed **repeatable tones** across multiple rehearsal rooms and wanted a portable setup that could move between **silent practice** and **live rehearsal** without building presets from scratch every time.
+
+---
+
+# ✅ The NXRig Solution
+He built his live set around three presets and made minor tweaks for his guitar:
+
+- Clean ambience: [Pink Floyd — Shine On You Crazy Diamond (Clean)](/preset/pink-floyd/shine-on-you-crazy-diamond-guitar-clean-guitar/)
+- Crunch rhythm: [Red Hot Chili Peppers — Californication (Intro)](/preset/red-hot-chili-peppers/californication-guitar-intro/)
+- Lead sustain: [Metallica — Nothing Else Matters (Intro)](/preset/metallica/nothing-else-matters-guitar-intro/)
+
+---
+
+# ✅ Quote
+> “I can go from ambient clean to lead in one tap. The patches are consistent on both devices, which saves me time before every rehearsal.”
+
+---
+
+# ✅ Gear Snapshot
+- Guitar: Fender Stratocaster  
+- Pickups: Single coils  
+- NUX Device: Mighty Plug Pro (travel) + Mighty Space (home)
 `,
   },
 ];

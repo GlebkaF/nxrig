@@ -9,22 +9,11 @@ import { CompatibleDevices } from "./DeviceBadge";
 import Link from "next/link";
 import { createArtistLink } from "lib/utils/urls";
 import { FavoriteButton } from "./FavoriteButton";
-import { PresetRatings } from "./PresetRatings";
-
-interface RatingSummary {
-  average: number;
-  count: number;
-}
-
 interface PresetDetailsProps {
   preset: Preset;
-  ratingSummary: RatingSummary;
 }
 
-export const PresetDetails: FC<PresetDetailsProps> = ({
-  preset,
-  ratingSummary,
-}) => {
+export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
   const qrCode = encodeChain(preset.chain);
   return (
     <div>
@@ -163,14 +152,6 @@ export const PresetDetails: FC<PresetDetailsProps> = ({
             </Link>
 
             <FavoriteButton presetId={preset.id} />
-          </div>
-
-          <div className="mt-8">
-            <PresetRatings
-              presetId={preset.id}
-              presetName={`${preset.origin.song} ${preset.origin.part}`}
-              initialSummary={ratingSummary}
-            />
           </div>
 
           <div className="mt-8">

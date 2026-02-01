@@ -7,7 +7,6 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import { createPresetLink } from "lib/utils/urls";
 import { createArtistLink } from "lib/utils/urls";
-import { getPresetRatingSummary } from "lib/server/ratings";
 import Head from "next/head";
 
 interface PresetPageProps {
@@ -105,7 +104,6 @@ export default async function PresetPage({ params }: PresetPageProps) {
     );
   }
 
-  const ratingSummary = await getPresetRatingSummary(preset.id);
   const presetUrl = "https://nxrig.com" + createPresetLink(preset);
   const imageUrl = preset.origin.imageUrl ?? "/images/cover/default-cover.webp";
   const imageUrlWithProtocol = imageUrl.startsWith("http")
@@ -129,15 +127,6 @@ export default async function PresetPage({ params }: PresetPageProps) {
       priceCurrency: "EUR",
       availability: "https://schema.org/InStock",
     },
-    ...(ratingSummary.count > 0
-      ? {
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: ratingSummary.average,
-            reviewCount: ratingSummary.count,
-          },
-        }
-      : {}),
   };
 
   const breadcrumbSchema = {
@@ -181,7 +170,7 @@ export default async function PresetPage({ params }: PresetPageProps) {
         <Header />
         <main className="flex-grow">
           <div className="container mx-auto pb-12 px-4 py-8">
-            <PresetDetails preset={preset} ratingSummary={ratingSummary} />
+            <PresetDetails preset={preset} />
             <RelatedPresets
               title={`More presets by ${preset.origin.artist.title}`}
               presets={presets.filter(
