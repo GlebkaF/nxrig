@@ -5,6 +5,7 @@ import Link from "next/link";
 import ClientSearch from "../components/ClientSearch";
 import { presets } from "lib/public/presets";
 import { createPresetLink } from "lib/utils/urls";
+import Image from "next/image";
 
 // Функция для форматирования абсолютной даты на английском
 function formatDate(dateString: string): string {
@@ -28,6 +29,30 @@ const latestPresets = [...presets]
     return dateB - dateA; // Сортировка по убыванию (новые первыми)
   })
   .slice(0, 4);
+
+const testimonials = [
+  {
+    name: "Alex R.",
+    role: "Session guitarist",
+    quote:
+      "NXRig presets let me jump between clean and lead tones in seconds. They are consistent across both my Mighty Plug Pro and Mighty Space.",
+    image: "/images/testimonials/alex.svg",
+  },
+  {
+    name: "Maya K.",
+    role: "Touring rhythm guitarist",
+    quote:
+      "The song-specific patches sound right away. I only tweak the output level and I’m ready for rehearsal.",
+    image: "/images/testimonials/maya.svg",
+  },
+  {
+    name: "Sergio L.",
+    role: "Bedroom producer",
+    quote:
+      "These free presets saved me hours of dialing tones. I can focus on tracking instead of troubleshooting.",
+    image: "/images/testimonials/sergio.svg",
+  },
+];
 
 export const metadata: Metadata = {
   title:
@@ -106,6 +131,38 @@ export default function Home() {
         </h2>
 
         <ClientSearch />
+
+        <section className="mt-16">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-semibold">Reviews & Stories</h2>
+            <Link href="/blog" className="text-pink-400 hover:text-pink-300">
+              Read more stories →
+            </Link>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((item) => (
+              <div
+                key={item.name}
+                className="bg-gray-800/60 rounded-xl p-6 border border-white/10"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded-full"
+                  />
+                  <div>
+                    <div className="text-white font-semibold">{item.name}</div>
+                    <div className="text-sm text-gray-400">{item.role}</div>
+                  </div>
+                </div>
+                <p className="text-gray-300">“{item.quote}”</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <Footer>

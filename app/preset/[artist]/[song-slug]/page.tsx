@@ -6,6 +6,9 @@ import { presets } from "lib/public/presets";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import { createPresetLink } from "lib/utils/urls";
+import { createArtistLink } from "lib/utils/urls";
+import { getPresetRatingSummary } from "lib/server/ratings";
+import Head from "next/head";
 
 interface PresetPageProps {
   params: {
@@ -36,6 +39,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: "https://nxrig.com" + createPresetLink(preset),
+    },
     openGraph: {
       type: "article",
       title,
@@ -99,33 +105,105 @@ export default async function PresetPage({ params }: PresetPageProps) {
     );
   }
 
+  const ratingSummary = await getPresetRatingSummary(preset.id);
+  const presetUrl = "https://nxrig.com" + createPresetLink(preset);
+  const imageUrl = preset.origin.imageUrl ?? "/images/cover/default-cover.webp";
+  const imageUrlWithProtocol = imageUrl.startsWith("http")
+    ? imageUrl
+    : `https://nxrig.com${imageUrl}`;
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `${preset.origin.song} ${preset.origin.part} – NUX Mighty Plug Pro Preset`,
+    description: preset.description,
+    url: presetUrl,
+    image: imageUrlWithProtocol,
+    brand: {
+      "@type": "Brand",
+      name: "NUX",
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0.00",
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
+    },
+    ...(ratingSummary.count > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: ratingSummary.average,
+            reviewCount: ratingSummary.count,
+          },
+        }
+      : {}),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://nxrig.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: preset.origin.artist.title,
+        item: "https://nxrig.com" + createArtistLink(preset),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${preset.origin.song} ${preset.origin.part}`,
+        item: presetUrl,
+      },
+    ],
+  };
+
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto pb-12 px-4 py-8">
-          <PresetDetails preset={preset} />
-          <RelatedPresets
-            title={`More presets by ${preset.origin.artist.title}`}
-            presets={presets.filter(
-              (p) => p.origin.artist.slug === preset.origin.artist.slug,
-            )}
-            currentPresetId={preset.id}
-          />
-        </div>
-      </main>
-      <Footer>
-        <div className="container mx-auto">
-          <p className="text-gray-300">
-            This patch for {preset.origin.song} {preset.origin.part} by{" "}
-            {preset.origin.artist.title} is designed for the NUX Mighty Plug
-            Pro. It recreates the original tone with authentic dynamics, perfect
-            for practicing the song or performing live. Download the patch, load
-            it into your device, and play with the legendary{" "}
-            {preset.origin.artist.title} sound.
-          </p>
-        </div>
-      </Footer>
-    </div>
+    <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      </Head>
+      <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+        <Header />
+        <main className="flex-grow">
+          <div className="container mx-auto pb-12 px-4 py-8">
+            <PresetDetails preset={preset} ratingSummary={ratingSummary} />
+            <RelatedPresets
+              title={`More presets by ${preset.origin.artist.title}`}
+              presets={presets.filter(
+                (p) => p.origin.artist.slug === preset.origin.artist.slug,
+              )}
+              currentPresetId={preset.id}
+            />
+          </div>
+        </main>
+        <Footer>
+          <div className="container mx-auto">
+            <p className="text-gray-300">
+              This patch for {preset.origin.song} {preset.origin.part} by{" "}
+              {preset.origin.artist.title} is designed for the NUX Mighty Plug
+              Pro. It recreates the original tone with authentic dynamics,
+              perfect for practicing the song or performing live. Download the
+              patch, load it into your device, and play with the legendary{" "}
+              {preset.origin.artist.title} sound.
+            </p>
+          </div>
+        </Footer>
+      </div>
+    </>
   );
 }

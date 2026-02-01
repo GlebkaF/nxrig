@@ -266,4 +266,204 @@ Yes — lower string tension and thinner strings make it more comfortable.
 These **top 10 easy electric guitar songs** are the perfect starting point for beginners. With simple riffs, clear techniques, and **ready-to-use presets**, you can start sounding like a real guitarist from day one.
 `,
   },
+  {
+    slug: "how-to-create-your-own-nux-mighty-plug-pro-preset",
+    title: "How to Create Your Own NUX Mighty Plug Pro Preset (Step-by-Step)",
+    excerpt:
+      "A practical, beginner-friendly walkthrough for building a custom NUX Mighty Plug Pro preset: amp choice, EQ shaping, gain staging, and effects.",
+    date: "2026-01-05T09:00:00.000Z",
+    tags: ["Tutorial", "Presets", "NUX"],
+    coverImage: "/images/og-image.svg",
+    content: `
+Create a custom tone that fits your guitar and playing style. This article is a structured **step-by-step guide** for building a NUX Mighty Plug Pro preset from scratch. It is a **placeholder draft** and can be expanded by a content manager.
+
+---
+
+# ✅ Step 1 — Define the goal tone
+- Pick a reference song or artist.
+- Decide if you need a **clean, edge-of-breakup, crunch, or high-gain** tone.
+- Note the pickup position you will use.
+
+# ✅ Step 2 — Choose the amp model
+- Start with a **clean amp** for clarity or a **high-gain amp** for metal.
+- Keep gain low at first and gradually increase.
+- Match the amp’s voicing to the style (British vs. American).
+
+# ✅ Step 3 — Shape the EQ
+- **Bass:** tighten low end (avoid boom).
+- **Mid:** define the guitar’s presence.
+- **Treble:** add clarity without harshness.
+
+# ✅ Step 4 — Dial in drive and compression
+- Use **overdrive** for tightness.
+- Add **compression** lightly for sustain (optional).
+
+# ✅ Step 5 — Add time-based effects
+- **Delay** for lead tones (short or dotted).
+- **Reverb** for space (keep subtle).
+- **Modulation** for chorused or ambient textures.
+
+# ✅ Step 6 — Save & test across guitars
+- Save the patch to a slot.
+- Test with single coils and humbuckers.
+- Fine-tune gain and output levels.
+
+---
+
+## ✅ Next steps for content manager
+- Add screenshots from Mighty Editor.
+- Include recommended settings for 3 styles (clean, crunch, metal).
+- Provide downloadable example patches.
+`,
+  },
+  {
+    slug: "top-10-jazz-and-funk-presets",
+    title: "Top 10 Presets for Jazz and Funk (NUX Mighty Plug Pro & Space)",
+    excerpt:
+      "A curated selection of warm, dynamic, and articulate jazz/funk tones with quick download links and short descriptions.",
+    date: "2026-01-10T09:00:00.000Z",
+    tags: ["Jazz", "Funk", "Presets"],
+    coverImage: "/images/og-image.svg",
+    content: `
+This is a **placeholder roundup** for jazz and funk presets that go beyond rock/metal tones. Each entry should include a short description and a download link.
+
+---
+
+# 🎷 Top 10 Jazz & Funk Presets
+
+1. **Clean Funk Comp** — tight compression, bright clean amp, subtle chorus.
+2. **Warm Jazz Hollowbody** — mellow mids, rolled-off highs.
+3. **Neo-Soul Sparkle** — clean amp, shimmer reverb, light delay.
+4. **Vintage Funk Rhythm** — punchy mids, quick attack.
+5. **Fusion Lead** — smooth lead with delay and sustain.
+6. **Chic Rhythm** — crisp clean, light compression, tight EQ.
+7. **Soulful Clean** — edge-of-breakup and spring reverb.
+8. **Lofi Jazz** — darker EQ, gentle tremolo.
+9. **Modern Funk Pop** — bright clean with a wide stereo image.
+10. **Groove Master** — balanced EQ, short slapback delay.
+
+---
+
+## ✅ Next steps for content manager
+- Add real preset links.
+- Include device-specific tweaks for Mighty Space.
+- Add audio snippets for each tone.
+`,
+  },
+  {
+    slug: "mighty-plug-pro-vs-mighty-space",
+    title:
+      "Mighty Plug Pro vs. Mighty Space — Which NUX Device Should You Pick?",
+    excerpt:
+      "A clear comparison of NUX Mighty Plug Pro and Mighty Space: portability, speaker output, tone differences, and best-use cases.",
+    date: "2026-01-14T09:00:00.000Z",
+    tags: ["Comparison", "NUX"],
+    coverImage: "/images/og-image.svg",
+    content: `
+This comparison article helps players decide between **Mighty Plug Pro** and **Mighty Space**. It includes pros, cons, and recommended use cases.
+
+---
+
+# ✅ Quick comparison
+
+| Feature | Mighty Plug Pro | Mighty Space |
+| --- | --- | --- |
+| Portability | Ultra portable | Desktop/speaker |
+| Output | Headphones/line | Speaker + line |
+| Best for | Practice on the go | Home studio & room sound |
+| Preset compatibility | Full | Full |
+
+# ✅ Pros & Cons
+
+## Mighty Plug Pro
+**Pros:** compact, battery powered, perfect for travel.  
+**Cons:** no built-in speaker.
+
+## Mighty Space
+**Pros:** room-filling sound, desktop friendly.  
+**Cons:** less portable.
+
+---
+
+## ✅ Next steps for content manager
+- Add photos of both devices.
+- Include pricing and availability.
+- Add user quotes or testimonials.
+`,
+  },
+  {
+    slug: "what-are-ir-and-tone-matching",
+    title:
+      "What Are Impulse Responses (IR) and Tone Matching in Guitar Presets?",
+    excerpt:
+      "An easy-to-understand explanation of impulse responses, cabinet simulation, and tone matching for NUX Mighty devices.",
+    date: "2026-01-18T09:00:00.000Z",
+    tags: ["IR", "Tone Matching", "Education"],
+    coverImage: "/images/og-image.svg",
+    content: `
+This article explains **Impulse Responses (IRs)** and **tone matching** in simple language. It is a placeholder draft for a full educational post.
+
+---
+
+# 🎛️ What is an IR (Impulse Response)?
+- An IR is a digital “snapshot” of a speaker cabinet.
+- It captures how a cab, mic, and room color the tone.
+
+# 🎚️ Why IRs matter
+- They shape the final tone more than the amp model.
+- Swapping IRs can make a preset feel darker, brighter, tighter, or wider.
+
+# 🎯 What is tone matching?
+- Tone matching compares your tone to a reference track.
+- It applies EQ curves to get you closer to the original sound.
+
+---
+
+## ✅ Next steps for content manager
+- Add audio comparisons (with/without IR).
+- Include screenshots of NUX IR settings.
+- Link to recommended IR packs.
+`,
+  },
+  {
+    slug: "musician-case-study-nxrig-presets",
+    title: "Musician Case Study: How NXRig Presets Helped a Touring Guitarist",
+    excerpt:
+      "A real-world story template featuring quotes, setup photos, and tone tips from a working musician.",
+    date: "2026-01-22T09:00:00.000Z",
+    tags: ["Case Study", "Stories"],
+    coverImage: "/images/og-image.svg",
+    content: `
+This is a **case study template** for a musician interview or testimonial story. Replace the placeholders with real quotes, photos, and performance details.
+
+---
+
+# 🎸 Artist Profile
+- **Name:** [Full Name]
+- **Band/Project:** [Band Name]
+- **Role:** Lead guitar / Rhythm guitar
+- **Genres:** [Genres]
+
+# ✅ The Challenge
+Describe the tone or workflow problem the musician faced (e.g., switching between clean and high-gain tones quickly, portability, budget constraints).
+
+# ✅ The NXRig Solution
+Explain how NXRig presets simplified their setup or improved their sound.
+
+# ✅ Quote
+> “These presets saved me hours. I can load a tone in seconds and it just works.” — [Musician Name]
+
+# ✅ Gear Snapshot
+- Guitar: [Model]
+- Pickups: [Type]
+- NUX Device: [Mighty Plug Pro / Mighty Space]
+
+---
+
+## ✅ Next steps for content manager
+- Add photos or stage shots.
+- Include audio clips or live video.
+- Link to the presets used in the story.
+`,
+  },
 ];

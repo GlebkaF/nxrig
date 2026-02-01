@@ -6,6 +6,7 @@ import Footer from "components/Footer";
 import Link from "next/link";
 import Script from "next/script";
 import { ReactElement } from "react";
+import { ArtistFilterGrid } from "components/ArtistFilterGrid";
 
 export const metadata: Metadata = {
   title:
@@ -34,6 +35,9 @@ interface ArtistWithPresetCount {
   slug: string;
   description: string;
   presetCount: number;
+  genre: string;
+  instrument: string;
+  difficulty: string;
 }
 
 // Genre mapping for artists
@@ -82,6 +86,22 @@ const artistGenres: Record<string, string> = {
   "carlos-santana": "Latin Rock",
 };
 
+const instrumentByArtist: Record<string, string> = {};
+const fallbackInstrument = "Guitar";
+
+function getDifficultyForGenre(genre: string): string {
+  if (genre.toLowerCase().includes("metal")) {
+    return "Advanced";
+  }
+  if (genre.toLowerCase().includes("blues")) {
+    return "Beginner";
+  }
+  if (genre.toLowerCase().includes("rock")) {
+    return "Intermediate";
+  }
+  return "Intermediate";
+}
+
 export default function ArtistsPage(): ReactElement {
   // Calculate preset count for each artist
   const artistsWithPresetCount: ArtistWithPresetCount[] = artists
@@ -93,6 +113,9 @@ export default function ArtistsPage(): ReactElement {
       return {
         ...artist,
         presetCount,
+        genre: artistGenres[artist.slug] || "Rock",
+        instrument: instrumentByArtist[artist.slug] ?? fallbackInstrument,
+        difficulty: getDifficultyForGenre(artistGenres[artist.slug] || "Rock"),
       };
     })
     .filter((artist) => artist.presetCount > 0) // Show only artists with presets
@@ -281,28 +304,7 @@ export default function ArtistsPage(): ReactElement {
               app.
             </p>
 
-            <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
-              {artistsWithPresetCount.map((artist) => {
-                const genre = artistGenres[artist.slug] || "Rock";
-                return (
-                  <li key={artist.id} className="bg-gray-800 rounded-lg p-4">
-                    <Link
-                      href={`/preset/${artist.slug}`}
-                      className="block group"
-                    >
-                      <h3 className="text-lg font-semibold text-blue-400 group-hover:text-blue-300 mb-1">
-                        {artist.title}
-                      </h3>
-                      <p className="text-sm text-gray-400 mb-2">{genre}</p>
-                      <p className="text-sm text-gray-300">
-                        {artist.presetCount}{" "}
-                        {artist.presetCount === 1 ? "preset" : "presets"}
-                      </p>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+            <ArtistFilterGrid artists={artistsWithPresetCount} />
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-white">

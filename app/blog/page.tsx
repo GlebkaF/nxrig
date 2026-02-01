@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   title: "Guitar Blog - Tips, Tricks & Tutorials | NXRIG",
   description:
     "Learn electric guitar with our easy-to-follow guides, tutorials, and song recommendations. Perfect for beginners and intermediate players.",
+  alternates: {
+    canonical: "https://nxrig.com/blog",
+  },
+  openGraph: {
+    title: "Guitar Blog - Tips, Tricks & Tutorials | NXRIG",
+    description:
+      "Learn electric guitar with our easy-to-follow guides, tutorials, and song recommendations. Perfect for beginners and intermediate players.",
+    url: "https://nxrig.com/blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function BlogPage() {

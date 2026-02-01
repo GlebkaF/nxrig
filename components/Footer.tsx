@@ -11,12 +11,30 @@ export default function Footer({
         <div className="max-w-6xl mx-auto text-center">
           {children}
           <div className="mt-12 space-y-3">
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <a
                 href={`mailto:${publicConfig.contacts.email}`}
                 className="text-pink-400 hover:text-pink-300 transition-colors"
               >
                 {publicConfig.contacts.email}
+              </a>
+              <a
+                href={publicConfig.contacts.telegram}
+                className="text-pink-400 hover:text-pink-300 transition-colors"
+              >
+                Telegram
+              </a>
+              <a
+                href="/privacy-policy"
+                className="text-gray-400 hover:text-pink-300 transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="/contacts"
+                className="text-gray-400 hover:text-pink-300 transition-colors"
+              >
+                Contacts
               </a>
             </div>
             <div className="text-sm text-gray-500">

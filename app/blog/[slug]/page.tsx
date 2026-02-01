@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import Header from "../../../components/Header";
 import { formatBlogDate } from "../../../lib/utils/formatDate";
+import Script from "next/script";
 
 interface Props {
   params: {
@@ -21,9 +22,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const imageUrl = post.coverImage ?? "/images/og-image.svg";
+  const imageUrlWithProtocol = imageUrl.startsWith("http")
+    ? imageUrl
+    : `https://nxrig.com${imageUrl}`;
+
   return {
     title: `${post.title} - NXRIG Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://nxrig.com/blog/${post.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: `${post.title} - NXRIG Blog`,
+      description: post.excerpt,
+      url: `https://nxrig.com/blog/${post.slug}`,
+      images: [imageUrlWithProtocol],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} - NXRIG Blog`,
+      description: post.excerpt,
+      images: [imageUrlWithProtocol],
+    },
   };
 }
 
@@ -40,8 +62,31 @@ export default function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const imageUrl = post.coverImage ?? "/images/og-image.svg";
+  const imageUrlWithProtocol = imageUrl.startsWith("http")
+    ? imageUrl
+    : `https://nxrig.com${imageUrl}`;
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: imageUrlWithProtocol,
+    author: {
+      "@type": "Organization",
+      name: "NXRig",
+    },
+    datePublished: post.date,
+    mainEntityOfPage: `https://nxrig.com/blog/${post.slug}`,
+  };
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+      <Script
+        id="ld-article"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Header />
       <main className="container mx-auto px-4 py-8">
         <article className="max-w-4xl mx-auto">

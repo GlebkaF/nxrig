@@ -9,15 +9,51 @@ import { CompatibleDevices } from "./DeviceBadge";
 import Link from "next/link";
 import { createArtistLink } from "lib/utils/urls";
 import { FavoriteButton } from "./FavoriteButton";
+import { PresetRatings } from "./PresetRatings";
+
+interface RatingSummary {
+  average: number;
+  count: number;
+}
 
 interface PresetDetailsProps {
   preset: Preset;
+  ratingSummary: RatingSummary;
 }
 
-export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
+export const PresetDetails: FC<PresetDetailsProps> = ({
+  preset,
+  ratingSummary,
+}) => {
   const qrCode = encodeChain(preset.chain);
   return (
     <div>
+      <nav className="text-sm text-gray-400 mb-4" aria-label="Breadcrumb">
+        <ol className="flex flex-wrap gap-2">
+          <li>
+            <Link href="/" className="hover:text-pink-400">
+              Home
+            </Link>
+            <span className="px-1">/</span>
+          </li>
+          <li>
+            <Link href="/preset" className="hover:text-pink-400">
+              Presets
+            </Link>
+            <span className="px-1">/</span>
+          </li>
+          <li>
+            <Link
+              href={createArtistLink(preset)}
+              className="hover:text-pink-400"
+            >
+              {preset.origin.artist.title}
+            </Link>
+            <span className="px-1">/</span>
+          </li>
+          <li className="text-gray-200">{preset.origin.song}</li>
+        </ol>
+      </nav>
       <h1 className="text-4xl font-bold mb-8 text-left">
         <Link
           href={createArtistLink(preset)}
@@ -127,6 +163,14 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
             </Link>
 
             <FavoriteButton presetId={preset.id} />
+          </div>
+
+          <div className="mt-8">
+            <PresetRatings
+              presetId={preset.id}
+              presetName={`${preset.origin.song} ${preset.origin.part}`}
+              initialSummary={ratingSummary}
+            />
           </div>
 
           <div className="mt-8">

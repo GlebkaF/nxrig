@@ -33,6 +33,15 @@ export async function generateMetadata({
   return {
     title: `${artistName} - Guitar Presets for NUX Mighty Plug Pro & Mighty Space`,
     description: artistDescription,
+    alternates: {
+      canonical: `https://nxrig.com/preset/${artistSlug}`,
+    },
+    openGraph: {
+      title: `${artistName} - Guitar Presets for NUX Mighty Plug Pro & Mighty Space`,
+      description: artistDescription,
+      url: `https://nxrig.com/preset/${artistSlug}`,
+      type: "website",
+    },
   };
 }
 
