@@ -7,19 +7,22 @@ import Link from "next/link";
 import Script from "next/script";
 import { ReactElement } from "react";
 
+// Compute stats at module level so metadata can reference them
+const totalPresets = String(presets.length);
+const artistsWithPresets = artists.filter((artist) =>
+  presets.some((preset) => preset.origin.artist.slug === artist.slug),
+);
+const totalArtists = String(artistsWithPresets.length);
+
 export const metadata: Metadata = {
-  title:
-    "Free NUX Mighty Plug Pro Presets - 40+ Artists | Metallica, Nirvana, RHCP | nxrig",
-  description:
-    "Download 75+ free guitar presets for NUX Mighty Plug Pro & Mighty Space. 40+ artists including Metallica, Nirvana, Led Zeppelin, RHCP, Pink Floyd, and more. Easy .mspatch import.",
+  title: `Free NUX Mighty Plug Pro Presets - ${totalArtists}+ Artists | Metallica, Nirvana, RHCP | nxrig`,
+  description: `Download ${totalPresets}+ free guitar presets for NUX Mighty Plug Pro & Mighty Space. ${totalArtists}+ artists including Metallica, Nirvana, Led Zeppelin, RHCP, Pink Floyd, and more. Easy .mspatch import.`,
   alternates: {
     canonical: "https://nxrig.com/preset",
   },
   openGraph: {
-    title:
-      "Free NUX Mighty Plug Pro Presets - 40+ Artists | Metallica, Nirvana, RHCP | nxrig",
-    description:
-      "Download 75+ free guitar presets for NUX Mighty Plug Pro & Mighty Space. 40+ artists including Metallica, Nirvana, Led Zeppelin, RHCP, Pink Floyd, and more. Easy .mspatch import.",
+    title: `Free NUX Mighty Plug Pro Presets - ${totalArtists}+ Artists | Metallica, Nirvana, RHCP | nxrig`,
+    description: `Download ${totalPresets}+ free guitar presets for NUX Mighty Plug Pro & Mighty Space. ${totalArtists}+ artists including Metallica, Nirvana, Led Zeppelin, RHCP, Pink Floyd, and more. Easy .mspatch import.`,
     url: "https://nxrig.com/preset",
     type: "website",
   },
@@ -122,8 +125,7 @@ export default function ArtistsPage(): ReactElement {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "NUX Artist Presets",
-    description:
-      "Free guitar presets for NUX Mighty Plug Pro and Mighty Space covering 40+ artists across metal, grunge, classic rock, and alternative genres",
+    description: `Free guitar presets for NUX Mighty Plug Pro and Mighty Space covering ${totalArtists}+ artists across metal, grunge, classic rock, and alternative genres`,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     numberOfItems: artistsWithPresetCount.length,
     itemListElement: artistsWithPresetCount.map((artist, index) => ({
@@ -265,10 +267,10 @@ export default function ArtistsPage(): ReactElement {
               file or a QR code. All downloads are free.
             </p>
             <p className="mb-4 text-gray-300 leading-relaxed">
-              Our collection features <strong>75+ presets</strong> covering{" "}
-              <strong>40+ legendary artists</strong> across metal, grunge,
-              classic rock, and alternative genres. Each preset is compatible
-              with both <strong>NUX Mighty Plug Pro</strong> and{" "}
+              Our collection features <strong>{totalPresets}+ presets</strong>{" "}
+              covering <strong>{totalArtists}+ legendary artists</strong> across
+              metal, grunge, classic rock, and alternative genres. Each preset
+              is compatible with both <strong>NUX Mighty Plug Pro</strong> and{" "}
               <strong>Mighty Space</strong>—amp and drive settings transfer
               perfectly, though you may want to adjust output level and
               reverb/delay mix to suit your device.
