@@ -12682,5 +12682,117 @@
     "isDraft": false,
     "createdAt": "2026-01-30T12:57:16.221Z",
     "updatedAt": "2026-01-30T12:57:16.221Z"
+  },
+  {
+    "id": "gen_mlfaw1q2_9jdp8unhd",
+    "origin": {
+      "artistId": 23,
+      "song": "Parisienne Walkways",
+      "part": "Overdriven Lead Guitar",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Smooth, singing sustain with warm mids, creamy overdrive, expressive dynamics, moderate attack, slightly rolled-off highs for sweetness, and a touch of ambient depth. The tone is very touch-sensitive, allowing for nuanced vibrato and bends.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 40,
+          "Clipping": 30
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 42,
+          "Tone": 38
+        }
+      },
+      "amplifier": {
+        "type": "Brit Blues",
+        "enabled": true,
+        "params": {
+          "Gain": 65,
+          "Master": 58,
+          "Bass": 56,
+          "Middle": 68,
+          "Treble": 44,
+          "Presence": 38
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 48,
+          "HighCut": 38
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 46,
+          "62": 48,
+          "125": 50,
+          "250": 54,
+          "500": 60,
+          "1000": 62,
+          "2000": 60,
+          "4000": 48,
+          "8000": 38,
+          "16000": 34,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 42,
+          "Decay": 54
+        }
+      },
+      "delay": {
+        "type": "Tape Echo",
+        "enabled": true,
+        "params": {
+          "Level": 30,
+          "Time": 40,
+          "Repeat": 34
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "parisienne-walkways-guitar-overdriven-lead-guitar",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/gary-moore-parisienne-walkways-tab-s23063",
+    "isDraft": false,
+    "createdAt": "2026-02-09T15:07:42.387Z",
+    "updatedAt": "2026-02-09T15:07:42.387Z"
   }
 ]

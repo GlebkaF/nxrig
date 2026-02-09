@@ -1,6 +1,533 @@
 {
   "generations": [
     {
+      "timestamp": "2026-02-09T15:04:19.234Z",
+      "originalPrompt": "Gary Moore Parisienne Walkways Overdriven Lead Guitar",
+      "proDescription": {
+        "tone_title": "Parisienne Walkways Lead Tone",
+        "genre": "Classic Rock / Blues Rock",
+        "sound_description": "Singing, smooth, and sustain-rich overdrive with expressive dynamics and a vocal-like quality. Warm mids, sweet highs, and a touch of bite, with long, singing sustain for melodic phrasing.",
+        "guitar_rig_description": "Noise gate: not used (to preserve dynamics and sustain). Compressor: light compression for added sustain and smoothness without squashing dynamics. Overdrive: medium-gain overdrive pedal (e.g., Tube Screamer) to push the amp and add midrange focus, set for a creamy breakup. Amplifier: classic British-style tube amp (e.g., Marshall or vintage-style combo) set to slightly overdriven, contributing warmth and harmonic richness. Cabinet: paired with a 1x12 or 2x12 open-back cabinet for airy character. EQ: subtle mid boost, gentle high roll-off to avoid harshness. Modulation: not used. Delay: subtle analog-style delay with short repeats for added depth and space. Reverb: plate or spring reverb for spaciousness and to enhance lead lines.",
+        "references": [
+          "Gary Moore - Parisienne Walkways",
+          "Gary Moore - Still Got the Blues",
+          "Thin Lizzy - Still in Love with You"
+        ],
+        "song_part": "lead guitar (melodic lines and solo)",
+        "preferred_pickup": "neck humbucker, tone = 7",
+        "additional_info": "Use neck pickup for warmth and vocal quality. Medium to heavy gauge strings for sustain. Employ expressive vibrato and controlled bends. Volume and tone pot adjustments are crucial for dynamic control. Gary Moore often used a Les Paul with the neck pickup and rolled-down tone for extra smoothness."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Ibanez TS808 Tube Screamer",
+          "MXR M173 Classic 108 Fuzz (optional, for added sustain on peaks)",
+          "Boss GE-7 Equalizer",
+          "MXR Carbon Copy Analog Delay",
+          "Boss FRV-1 '63 Fender Reverb"
+        ],
+        "amplifier": "Marshall JTM45 (reissue) Head",
+        "cabinet": "Marshall 1962 Bluesbreaker 2x12 Combo Cabinet with Celestion G12M Greenback speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Gain": 5,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 4,
+            "Master": 5
+          },
+          "compressor": {
+            "Blend": 12,
+            "Volume": 12,
+            "Sustain": 10
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 4.5,
+            "Level": 7
+          },
+          "eq": {
+            "Level": 0,
+            "100Hz": "-2dB",
+            "200Hz": "0dB",
+            "400Hz": "+1dB",
+            "800Hz": "+2dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "0dB",
+            "6.4kHz": "-2dB"
+          },
+          "delay": {
+            "Mix": 15,
+            "Delay Time": 380,
+            "Repeats": 1.5
+          },
+          "reverb": {
+            "Level": 3.5,
+            "Dwell": 4,
+            "Tone": 5
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 60,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 55,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 45",
+          "enabled": true,
+          "params": {
+            "Gain": 60,
+            "Master": 65,
+            "Bass": 48,
+            "Middle": 65,
+            "Treble": 45,
+            "Presence": 40
+          }
+        },
+        "cabinet": {
+          "type": "M1960TV",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 48,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 50,
+            "220": 53,
+            "500": 58,
+            "1200": 62,
+            "2600": 52,
+            "6400": 40
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 45,
+            "Decay": 60
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": true,
+          "params": {
+            "Intensity": 32,
+            "Rate": 28,
+            "Echo": 40
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 60,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 55,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 45",
+              "enabled": true,
+              "params": {
+                "Gain": 60,
+                "Master": 65,
+                "Bass": 48,
+                "Middle": 65,
+                "Treble": 45,
+                "Presence": 40
+              }
+            },
+            "cabinet": {
+              "type": "M1960TV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 48,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 50,
+                "220": 53,
+                "500": 58,
+                "1200": 62,
+                "2600": 52,
+                "6400": 40
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 45,
+                "Decay": 60
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": true,
+              "params": {
+                "Intensity": 32,
+                "Rate": 28,
+                "Echo": 40
+              }
+            }
+          },
+          "prompt": "Gary Moore Parisienne Walkways Overdriven Lead Guitar",
+          "timestamp": "2026-02-09T15:04:19.234Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/gary-moore-parisienne-walkways-tab-s23063",
+        "artist": "Gary Moore",
+        "title": "Parisienne Walkways",
+        "trackType": "Lead",
+        "suggestedPart": "Overdriven Lead Guitar",
+        "trackName": "Main Guitar - Overdriven Guitar"
+      },
+      "id": "gen_mlfayypa_hmpdts0fh",
+      "status": "draft"
+    },
+    {
+      "timestamp": "2026-02-09T15:02:03.183Z",
+      "originalPrompt": "Gary Moore Parisienne Walkways Overdriven Lead Guitar",
+      "proDescription": {
+        "tone_title": "Parisienne Walkways Overdriven Lead Guitar",
+        "genre": "Blues Rock Ballad",
+        "sound_description": "Smooth, singing sustain with warm mids, creamy overdrive, expressive dynamics, moderate attack, slightly rolled-off highs for sweetness, and a touch of ambient depth. The tone is very touch-sensitive, allowing for nuanced vibrato and bends.",
+        "guitar_rig_description": "Noise gate: not used (to preserve natural dynamics and sustain). Compressor: light compression early in the chain to smooth out picking and enhance sustain. Overdrive: classic low-to-mid gain overdrive pedal pushing the amp for creamy saturation and soft clipping. Amplifier: vintage-style British tube combo amp set just into overdrive for rich harmonics and bloom. Cabinet: open-back 1x12 or 2x12 loaded with Alnico speakers for warmth and smooth high end. EQ: slight mid-boost and gentle high cut post-amp to enhance vocal-like quality and reduce harshness. Modulation: not used. Delay: analog-style delay with subtle repeats and low mix for ambience, set after the amp section. Reverb: plate or spring reverb after delay for spatial depth without overwhelming the lead tone.",
+        "references": [
+          "Gary Moore - Parisienne Walkways (Live)",
+          "Gary Moore - Still Got the Blues",
+          "Santana - Europa"
+        ],
+        "song_part": "lead guitar/solo",
+        "preferred_pickup": "neck humbucker, tone rolled back slightly for warmth",
+        "additional_info": "Use expressive vibrato and sustain techniques; heavy gauge strings (e.g., .010–.046 or higher); volume and tone controls used dynamically during performance; pick attack and finger vibrato have a significant impact on tone."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Keeley Compressor Plus",
+          "Ibanez TS808 Tube Screamer",
+          "MXR Ten Band EQ",
+          "Strymon El Capistan dTape Echo",
+          "Boss RV-6 Reverb (Plate mode)"
+        ],
+        "amplifier": "Marshall Bluesbreaker 1962 Combo",
+        "cabinet": "Marshall 1962 Bluesbreaker 2x12 Combo with Celestion Alnico Blue",
+        "settings": {
+          "amp": {
+            "Gain": 6.5,
+            "Bass": 5,
+            "Middle": 7,
+            "Treble": 4.5,
+            "Presence": 5,
+            "Master": 4.5
+          },
+          "compressor": {
+            "Sustain": 9.5,
+            "Level": 12,
+            "Blend": 11,
+            "Attack": 1
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 4,
+            "Level": 7
+          },
+          "eq": {
+            "100Hz": "+1dB",
+            "400Hz": "+2dB",
+            "800Hz": "+2dB",
+            "3.2kHz": "-2dB",
+            "6.4kHz": "-3dB"
+          },
+          "delay": {
+            "Time": "380ms",
+            "Repeats": "2–3",
+            "Mix": "15%",
+            "Tone": "Dark"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Level": "Low to Medium (~9 o'clock)"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 40,
+            "Clipping": 30
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 42,
+            "Tone": 38
+          }
+        },
+        "amplifier": {
+          "type": "Brit Blues",
+          "enabled": true,
+          "params": {
+            "Gain": 65,
+            "Master": 58,
+            "Bass": 56,
+            "Middle": 68,
+            "Treble": 44,
+            "Presence": 38
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 48,
+            "HighCut": 38
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 46,
+            "62": 48,
+            "125": 50,
+            "250": 54,
+            "500": 60,
+            "1000": 62,
+            "2000": 60,
+            "4000": 48,
+            "8000": 38,
+            "16000": 34,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 42,
+            "Decay": 54
+          }
+        },
+        "delay": {
+          "type": "Tape Echo",
+          "enabled": true,
+          "params": {
+            "Level": 30,
+            "Time": 40,
+            "Repeat": 34
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 40,
+                "Clipping": 30
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 42,
+                "Tone": 38
+              }
+            },
+            "amplifier": {
+              "type": "Brit Blues",
+              "enabled": true,
+              "params": {
+                "Gain": 65,
+                "Master": 58,
+                "Bass": 56,
+                "Middle": 68,
+                "Treble": 44,
+                "Presence": 38
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 48,
+                "HighCut": 38
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 46,
+                "62": 48,
+                "125": 50,
+                "250": 54,
+                "500": 60,
+                "1000": 62,
+                "2000": 60,
+                "4000": 48,
+                "8000": 38,
+                "16000": 34,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 42,
+                "Decay": 54
+              }
+            },
+            "delay": {
+              "type": "Tape Echo",
+              "enabled": true,
+              "params": {
+                "Level": 30,
+                "Time": 40,
+                "Repeat": 34
+              }
+            }
+          },
+          "prompt": "Gary Moore Parisienne Walkways Overdriven Lead Guitar",
+          "timestamp": "2026-02-09T15:02:03.183Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/gary-moore-parisienne-walkways-tab-s23063",
+        "artist": "Gary Moore",
+        "title": "Parisienne Walkways",
+        "trackType": "Lead",
+        "suggestedPart": "Overdriven Lead Guitar",
+        "trackName": "Main Guitar - Overdriven Guitar"
+      },
+      "id": "gen_mlfaw1q2_9jdp8unhd",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-01-30T12:54:11.263Z",
       "originalPrompt": "Boston More Than A Feeling Clean Electric Guitar",
       "proDescription": {
@@ -43071,6 +43598,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-02-07T03:32:43.701Z"
+    "lastUpdated": "2026-02-09T15:07:42.417Z"
   }
 }
