@@ -12907,5 +12907,214 @@
     "isDraft": false,
     "createdAt": "2026-03-19T17:12:08.540Z",
     "updatedAt": "2026-03-19T17:12:08.540Z"
+  },
+  {
+    "id": "gen_mmxqdscn_tnsrfhyx8",
+    "origin": {
+      "artistId": 68,
+      "song": "Purple Rain",
+      "part": "Rickenbacker Guitar Melody",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Shimmering, glassy, clean tone with lush depth and mild warmth. The sound is articulate and dynamic, with a subtly compressed feel, slight chorus movement, and a sense of space from reverb and delay. The tone is bright but smooth, without harshness.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 60,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 35,
+          "Depth": 30
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Jazz Clean",
+        "enabled": true,
+        "params": {
+          "Gain": 35,
+          "Master": 60,
+          "Bass": 45,
+          "Middle": 40,
+          "Treble": 65,
+          "Bright": 60
+        }
+      },
+      "cabinet": {
+        "type": "JZ120",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 52,
+          "HighCut": 60
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Decay": 65
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 30,
+          "Rate": 40,
+          "Echo": 25
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 8,
+      "position": "neck"
+    },
+    "slug": "purple-rain-guitar-rickenbacker-guitar-melody",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/prince-purple-rain-tab-s14754t3",
+    "isDraft": false,
+    "createdAt": "2026-03-19T17:16:44.044Z",
+    "updatedAt": "2026-03-19T17:16:44.044Z"
+  },
+  {
+    "id": "gen_mmxqhhhp_9pd1pexch",
+    "origin": {
+      "artistId": 39,
+      "song": "Jailhouse Rock",
+      "part": "Scotty Moore Style",
+      "imageUrl": "/images/cover/default-cover.webp"
+    },
+    "description": "Bright, twangy, biting with clear articulation and moderate sustain. Slightly overdriven but still clean and dynamic, allowing percussive picking and fingerstyle to come through. Vintage warmth with a bit of slapback echo to add depth.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Tweedy",
+        "enabled": true,
+        "params": {
+          "Gain": 60,
+          "Master": 65,
+          "Tone": 70
+        }
+      },
+      "cabinet": {
+        "type": "A112",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 60,
+          "HighCut": 70
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": true,
+        "params": {
+          "Intensity": 30,
+          "Rate": 25,
+          "Echo": 35
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "jailhouse-rock-guitar-scotty-moore-style",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/elvis-presley-jailhouse-rock-tab-s15879",
+    "isDraft": false,
+    "createdAt": "2026-03-19T17:19:10.052Z",
+    "updatedAt": "2026-03-19T17:19:10.052Z"
   }
 ]
