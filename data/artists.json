@@ -394,5 +394,11 @@
     "title": "Boston",
     "slug": "boston",
     "description": "Boston are an American rock band known for polished production, soaring vocals, and melodic guitar-driven anthems that defined classic arena rock."
+  },
+  {
+    "id": 67,
+    "title": "Slaughter to Prevail",
+    "slug": "slaughter-to-prevail",
+    "description": "Slaughter to Prevail are a deathcore band known for brutal breakdowns, aggressive vocals, and a heavy, modern sound that gained global recognition in extreme metal."
   }
 ]

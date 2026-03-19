@@ -1,6 +1,267 @@
 {
   "generations": [
     {
+      "timestamp": "2026-03-19T17:07:51.106Z",
+      "originalPrompt": "Slaughter to Prevail Russian Grizzly Distortion Rhythm Guitar",
+      "proDescription": {
+        "tone_title": "Russian Grizzly Distortion Rhythm Guitar",
+        "genre": "Modern Deathcore / Extreme Metal",
+        "sound_description": "Extremely aggressive, heavily saturated distortion with tight low end, pronounced midrange, sharp attack, and controlled noise. The sound is thick, percussive, and highly articulate, designed to cut through dense mixes while maintaining brutality and clarity.",
+        "guitar_rig_description": "Noise Gate: Used at the start of the chain to eliminate unwanted string and amp noise, ensuring precise stops and starts. Compressor: Not used, as the tone relies on natural dynamic picking and the amplifier's response. Overdrive/Boost: A modern overdrive pedal (set as a clean boost) is placed before the amp to tighten the low end and increase attack. Distortion: Not used as a separate block, as the amplifier provides all primary distortion. Amplifier: High-gain modern tube amp simulation or real amp head, set for aggressive saturation with focused mids and tight bass response. Cabinet: 4x12 oversized cab simulation loaded with modern high-power speakers (e.g., Celestion V30s), for enhanced punch and clarity. EQ: Post-amp graphic EQ to further sculpt the mids, scoop unwanted frequencies, and tame any excessive harshness. Modulation: Not used. Delay: Not used. Reverb: Not used.",
+        "references": [
+          "Slaughter to Prevail – 'Demolisher'",
+          "Thy Art Is Murder – 'Holy War'",
+          "Lorna Shore – 'To the Hellfire'"
+        ],
+        "song_part": "rhythm guitar (main riffs and breakdowns)",
+        "preferred_pickup": "bridge active humbucker, tone = 10",
+        "additional_info": "Active pickups (such as EMG 81 or Fishman Fluence Modern) are strongly recommended for maximum output and tightness. Downtuned guitars (drop B or lower) with heavy gauge strings improve clarity and percussiveness. Palm muting and aggressive picking technique are essential."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Maxon OD808 Overdrive",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "EVH 5150III 50W Head",
+        "cabinet": "Mesa Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7.5,
+            "Bass": 5,
+            "Middle": 6,
+            "Treble": 6.5,
+            "Presence": 6.5,
+            "Resonance": 6,
+            "Master": 2.5
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 6.5,
+            "Level": 9
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor (generally 12:00-1:00)",
+            "Decay": "9:00-10:00"
+          },
+          "eq": {
+            "31.25Hz": "-6dB",
+            "62.5Hz": "-3dB",
+            "125Hz": "0dB",
+            "250Hz": "+1dB",
+            "500Hz": "+2dB",
+            "1kHz": "+2dB",
+            "2kHz": "+3dB",
+            "4kHz": "+1dB",
+            "8kHz": "0dB",
+            "16kHz": "-2dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 25
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 80,
+            "Drive": 10,
+            "Tone": 70
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 90,
+            "Master": 65,
+            "Bass": 40,
+            "Middle": 60,
+            "Treble": 65,
+            "Presence": 70
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 60,
+            "HighCut": 55
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 40,
+            "62": 38,
+            "125": 45,
+            "250": 44,
+            "500": 48,
+            "1000": 60,
+            "2000": 65,
+            "4000": 70,
+            "8000": 58,
+            "16000": 50,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 25
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 80,
+                "Drive": 10,
+                "Tone": 70
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 90,
+                "Master": 65,
+                "Bass": 40,
+                "Middle": 60,
+                "Treble": 65,
+                "Presence": 70
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 55
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 40,
+                "62": 38,
+                "125": 45,
+                "250": 44,
+                "500": 48,
+                "1000": 60,
+                "2000": 65,
+                "4000": 70,
+                "8000": 58,
+                "16000": 50,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Slaughter to Prevail Russian Grizzly Distortion Rhythm Guitar",
+          "timestamp": "2026-03-19T17:07:51.106Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/slaughter-to-prevail-russian-grizzly-in-america-tab-s1370431",
+        "artist": "Slaughter to Prevail",
+        "title": "RUSSIAN GRIZZLY IN AMERICA",
+        "trackType": "Rhythm",
+        "suggestedPart": "Distortion Rhythm Guitar",
+        "trackName": "Dmitry \"Dima\" Mamedov (Guitar II) - Distortion Guitar"
+      },
+      "id": "gen_mmxq4734_ah0ico5b5",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-02-09T15:04:19.234Z",
       "originalPrompt": "Gary Moore Parisienne Walkways Overdriven Lead Guitar",
       "proDescription": {
@@ -43598,6 +43859,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-02-09T15:07:42.417Z"
+    "lastUpdated": "2026-03-19T17:12:08.552Z"
   }
 }
