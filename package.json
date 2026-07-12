@@ -9,6 +9,7 @@
     "test:watch": "vitest watch",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "type-check": "tsc --noEmit",
+    "seo:check": "node scripts/check-seo.mjs",
     "prepare": "husky"
   },
   "dependencies": {

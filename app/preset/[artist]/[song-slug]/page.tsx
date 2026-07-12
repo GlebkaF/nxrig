@@ -6,7 +6,11 @@ import { presets } from "lib/public/presets";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import { createPresetLink } from "lib/utils/urls";
-import { createSeoMetadata } from "lib/seo";
+import { createSeoMetadata, SITE_NAME, SITE_URL } from "lib/seo";
+import { findPresetByRoute } from "lib/public/find-preset";
+import { notFound } from "next/navigation";
+import JsonLd from "components/JsonLd";
+import Link from "next/link";
 
 interface PresetPageProps {
   params: {
@@ -15,15 +19,18 @@ interface PresetPageProps {
   };
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: PresetPageProps): Promise<Metadata> {
-  const preset = presets.find((p) => p.slug === params["song-slug"]);
+  const preset = findPresetByRoute(presets, params.artist, params["song-slug"]);
 
   if (!preset) {
     return {
       title: "Preset Not Found",
       description: "The requested preset could not be found.",
+      robots: { index: false, follow: false },
     };
   }
 
@@ -34,14 +41,16 @@ export async function generateMetadata({
     ? imageUrl
     : `https://nxrig.com${imageUrl}`;
 
+  const baseMetadata = createSeoMetadata({
+    title,
+    description,
+    path: createPresetLink(preset),
+    type: "article",
+    image: imageUrlWithProtocol,
+  });
+
   return {
-    ...createSeoMetadata({
-      title,
-      description,
-      path: createPresetLink(preset),
-      type: "article",
-      image: imageUrlWithProtocol,
-    }),
+    ...baseMetadata,
     authors: [{ name: "NUX Must Have" }],
     category: "Guitar Presets",
     keywords: [
@@ -53,6 +62,13 @@ export async function generateMetadata({
       "Guitar Preset",
       "NUX Mighty Devices",
     ],
+    openGraph: {
+      ...baseMetadata.openGraph,
+      type: "article",
+      publishedTime: preset.createdAt ?? preset.updatedAt,
+      modifiedTime: preset.updatedAt,
+      authors: [SITE_NAME],
+    },
   };
 }
 
@@ -63,39 +79,127 @@ export async function generateStaticParams() {
   }));
 }
 
-async function getPreset(slug: string): Promise<Preset | null> {
-  const preset = presets.find((p) => p.slug === slug);
+async function getPreset(
+  artistSlug: string,
+  slug: string,
+): Promise<Preset | null> {
+  const preset = findPresetByRoute(presets, artistSlug, slug);
   return preset || null;
 }
 
 export default async function PresetPage({ params }: PresetPageProps) {
-  const preset = await getPreset(params["song-slug"]);
+  const preset = await getPreset(params.artist, params["song-slug"]);
 
   if (!preset) {
-    return (
-      <div className="min-h-screen flex flex-col bg-gray-900 text-white">
-        <Header />
-        <main className="flex-grow">
-          <div className="container mx-auto">
-            <h1>Preset Not Found</h1>
-          </div>
-        </main>
-        <Footer>
-          <div className="container mx-auto">
-            <p className="text-gray-300">
-              The requested preset could not be found.
-            </p>
-          </div>
-        </Footer>
-      </div>
-    );
+    notFound();
   }
+
+  const presetPath = createPresetLink(preset);
+  const presetUrl = new URL(presetPath, SITE_URL).toString();
+  const artistPath = `/preset/${preset.origin.artist.slug}/`;
+  const artistUrl = new URL(artistPath, SITE_URL).toString();
+  const imageUrl = new URL(
+    preset.origin.imageUrl ?? "/images/cover/default-cover.webp",
+    SITE_URL,
+  ).toString();
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${SITE_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Guitar presets",
+          item: `${SITE_URL}/preset/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: preset.origin.artist.title,
+          item: artistUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: `${preset.origin.song} – ${preset.origin.part}`,
+          item: presetUrl,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      additionalType: "https://schema.org/DigitalDocument",
+      name: `${preset.origin.song} ${preset.origin.part} guitar preset`,
+      description: preset.description,
+      url: presetUrl,
+      image: imageUrl,
+      isAccessibleForFree: true,
+      inLanguage: "en",
+      dateCreated: preset.createdAt ?? preset.updatedAt,
+      dateModified: preset.updatedAt,
+      author: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+      about: {
+        "@type": "MusicRecording",
+        name: preset.origin.song,
+        byArtist: {
+          "@type": "MusicGroup",
+          name: preset.origin.artist.title,
+        },
+      },
+      keywords: [
+        preset.origin.artist.title,
+        preset.origin.song,
+        preset.origin.part,
+        "NUX Mighty Plug Pro",
+        "NUX Mighty Space",
+        "guitar preset",
+      ],
+    },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+      <JsonLd data={structuredData} />
       <Header />
       <main className="flex-grow">
         <div className="container mx-auto pb-12 px-4 py-8">
+          <nav aria-label="Breadcrumb" className="mb-6 text-sm text-gray-400">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li>
+                <Link href="/" className="hover:text-pink-400">
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li>
+                <Link href="/preset/" className="hover:text-pink-400">
+                  Presets
+                </Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li>
+                <Link href={artistPath} className="hover:text-pink-400">
+                  {preset.origin.artist.title}
+                </Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page" className="text-gray-200">
+                {preset.origin.song} – {preset.origin.part}
+              </li>
+            </ol>
+          </nav>
           <PresetDetails preset={preset} />
           <RelatedPresets
             title={`More presets by ${preset.origin.artist.title}`}

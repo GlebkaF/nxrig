@@ -1,76 +1,50 @@
-"use client";
-
-import { QRCodeCanvas } from "qrcode.react";
 import Image from "next/image";
 import Link from "next/link";
-import { Preset } from "lib/public/interface";
-import { encodeChain } from "lib/core/encoder";
-import { createPresetLink } from "lib/utils/urls";
+import { PresetCardData } from "lib/public/preset-card";
 import { CompatibleDevices } from "./DeviceBadge";
 import { FavoriteButton } from "./FavoriteButton";
 
 interface PresetCardProps {
-  preset: Preset;
+  preset: PresetCardData;
 }
 
 export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
-  const qrCode = encodeChain(preset.chain);
+  const presetName = `${preset.artist} - ${preset.song} ${preset.part}`;
 
-  // Определяем фоновое изображение
-  const bgImage = preset.origin.imageUrl ?? "/images/cover/default-cover.webp";
   return (
-    <Link
-      href={createPresetLink(preset)}
-      className="block bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-[1.02] relative border border-white/10"
-    >
+    <article className="relative overflow-hidden rounded-xl border border-white/10 bg-gray-800/50 backdrop-blur-sm transition-all duration-300 hover:border-pink-500/40 hover:bg-gray-800/70">
       <div className="absolute inset-0">
         <Image
-          src={bgImage}
-          alt={`${preset.origin.artist.title} - ${preset.origin.song} cover`}
+          src={preset.imageUrl}
+          alt=""
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover opacity-30"
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover opacity-20"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/50" />
       </div>
 
-      <div className="relative p-6">
-        <div className="flex flex-col md:flex-row items-center gap-6">
-          {/* QR Code */}
-          <div className="shrink-0">
-            <div className="bg-white p-2 rounded">
-              <QRCodeCanvas
-                value={qrCode.qrCode}
-                size={180}
-                level="M"
-                title={`QR code for ${preset.origin.artist.title} – ${preset.origin.song}`}
-              />
-            </div>
-          </div>
+      <Link
+        href={preset.href}
+        className="relative block min-h-40 p-6 pr-16 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-pink-500"
+      >
+        <h3 className="text-xl font-semibold text-gray-100">
+          {preset.song} – {preset.part}
+        </h3>
+        <p className="mt-1 text-sm text-gray-300">{preset.artist}</p>
+        <CompatibleDevices className="mt-5" />
+        <span className="mt-5 inline-block text-sm font-medium text-pink-400">
+          View patch settings →
+        </span>
+      </Link>
 
-          <div className="text-center md:text-left flex-grow">
-            <div className="text-gray-300">
-              <div className="text-lg font-medium">
-                {preset.origin.song}&nbsp;—&nbsp;{preset.origin.part}
-              </div>
-              <div className="text-sm text-gray-400">
-                {preset.origin.artist.title}
-              </div>
-            </div>
-
-            {/* Device and Instrument Type */}
-            <div className="mt-4 flex items-center justify-center md:justify-start gap-2 text-xs">
-              <CompatibleDevices />
-            </div>
-          </div>
-
-          {/* Favorite Button */}
-          <div className="shrink-0">
-            <FavoriteButton presetId={preset.id} variant="compact" />
-          </div>
-        </div>
-      </div>
-    </Link>
+      <FavoriteButton
+        presetId={preset.id}
+        presetName={presetName}
+        variant="compact"
+        className="absolute right-4 top-4 z-10 bg-black/40"
+      />
+    </article>
   );
 }

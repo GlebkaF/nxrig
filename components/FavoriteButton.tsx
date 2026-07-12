@@ -3,28 +3,23 @@
 import { useFavorites } from "hooks/useFavorites";
 import { ReactElement } from "react";
 import { trackAddToFavorites, trackRemoveFromFavorites } from "lib/analytics";
-import { presets } from "lib/public/presets";
 
 interface FavoriteButtonProps {
   presetId: string;
+  presetName: string;
   variant?: "default" | "compact";
   className?: string;
 }
 
 export function FavoriteButton({
   presetId,
+  presetName,
   variant = "default",
   className = "",
 }: FavoriteButtonProps): ReactElement {
   const { isFavorite, toggleFavorite, isLoaded } = useFavorites();
 
   const isInFavorites = isFavorite(presetId);
-
-  // Получаем информацию о пресете для аналитики
-  const preset = presets.find((p) => p.id === presetId);
-  const presetName = preset
-    ? `${preset.origin.artist.title} - ${preset.origin.song} ${preset.origin.part}`
-    : presetId;
 
   // Не показываем кнопку пока не загрузились данные из localStorage
   if (!isLoaded) {

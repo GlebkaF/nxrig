@@ -1,42 +1,50 @@
 "use client";
 
-import { presets } from "lib/public/presets";
 import { PresetCard } from "components/PresetCard";
 import { useState } from "react";
 import Link from "next/link";
+import { PresetCardData } from "lib/public/preset-card";
 
 const INITIAL_VISIBLE_PRESETS = 24;
 
-export default function ClientSearch(): React.ReactElement {
+interface ClientSearchProps {
+  presets: PresetCardData[];
+}
+
+export default function ClientSearch({
+  presets,
+}: ClientSearchProps): React.ReactElement {
   const [searchQuery, setSearchQuery] = useState("");
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_PRESETS);
 
   const filteredPresets = presets
     .filter(
       (preset) =>
-        preset.origin.song.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        preset.origin.artist.title
-          .toLowerCase()
-          .includes(searchQuery.toLowerCase()) ||
-        preset.origin.part.toLowerCase().includes(searchQuery.toLowerCase()),
+        preset.song.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        preset.artist.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        preset.part.toLowerCase().includes(searchQuery.toLowerCase()),
     )
     .sort((a, b) => {
-      const isCyrillicA = /^[а-яёА-ЯЁ]/.test(a.origin.song);
-      const isCyrillicB = /^[а-яёА-ЯЁ]/.test(b.origin.song);
+      const isCyrillicA = /^[а-яёА-ЯЁ]/.test(a.song);
+      const isCyrillicB = /^[а-яёА-ЯЁ]/.test(b.song);
 
       // Если одна песня на кириллице, а другая нет
       if (isCyrillicA && !isCyrillicB) return 1; // Кириллица идет после
       if (!isCyrillicA && isCyrillicB) return -1; // Латиница идет первой
 
       // Если обе на одном алфавите, сортируем по алфавиту
-      return a.origin.song.localeCompare(b.origin.song);
+      return a.song.localeCompare(b.song);
     });
 
   return (
     <>
       {/* Search input */}
       <div className="mb-4">
+        <label htmlFor="preset-search" className="sr-only">
+          Search guitar presets
+        </label>
         <input
+          id="preset-search"
           type="text"
           placeholder="Search presets..."
           value={searchQuery}
@@ -71,10 +79,11 @@ export default function ClientSearch(): React.ReactElement {
       ) : (
         <div className="text-center py-12">
           <p className="text-gray-400 mb-4">No presets found</p>
-          <Link href="/order">
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors">
-              Request Patch
-            </button>
+          <Link
+            href="/order/"
+            className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+          >
+            Request Patch
           </Link>
         </div>
       )}

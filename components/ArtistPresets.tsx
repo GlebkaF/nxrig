@@ -1,5 +1,3 @@
-"use client";
-
 import { Preset } from "lib/public/interface";
 import Link from "next/link";
 import { createPresetLink } from "lib/utils/urls";
@@ -17,6 +15,26 @@ export function ArtistPresets({
 }: ArtistPresetsProps): React.ReactElement {
   return (
     <div className="container mx-auto px-4 py-8">
+      <nav aria-label="Breadcrumb" className="mb-6 text-sm text-gray-400">
+        <ol className="flex flex-wrap items-center gap-2">
+          <li>
+            <Link href="/" className="hover:text-pink-400">
+              Home
+            </Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <Link href="/preset/" className="hover:text-pink-400">
+              Presets
+            </Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" className="text-gray-200">
+            {artist}
+          </li>
+        </ol>
+      </nav>
+
       <h1 className="text-4xl font-bold mb-6 text-white">{artist}</h1>
       {description && (
         <p className="text-lg text-gray-300 mb-8 leading-relaxed">

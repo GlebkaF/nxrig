@@ -6,7 +6,7 @@ import ClientSearch from "../components/ClientSearch";
 import { presets } from "lib/public/presets";
 import { createPresetLink } from "lib/utils/urls";
 import { createSeoMetadata } from "lib/seo";
-import { blogPosts } from "data/blog-posts";
+import { toPresetCardData } from "lib/public/preset-card";
 
 // Функция для форматирования абсолютной даты на английском
 function formatDate(dateString: string): string {
@@ -20,6 +20,7 @@ function formatDate(dateString: string): string {
 }
 
 const presetsCount = presets.length;
+const presetCards = presets.map(toPresetCardData);
 
 // Получаем последние добавленные пресеты (4 шт - влезают без скролла на популярных экранах)
 const latestPresets = [...presets]
@@ -30,10 +31,6 @@ const latestPresets = [...presets]
     return dateB - dateA; // Сортировка по убыванию (новые первыми)
   })
   .slice(0, 4);
-
-const latestBlogPosts = [...blogPosts]
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  .slice(0, 3);
 
 export const metadata: Metadata = createSeoMetadata({
   title: "Free NUX Guitar Presets & Patches | NXRIG",
@@ -89,31 +86,11 @@ export default function Home() {
           </div>
         )}
 
-        {latestBlogPosts.length > 0 && (
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">
-              Latest guitar guides
-            </h2>
-            <ul className="grid gap-4 md:grid-cols-3">
-              {latestBlogPosts.map((post) => (
-                <li key={post.slug}>
-                  <Link
-                    href={`/blog/${post.slug}/`}
-                    className="block h-full rounded-lg border border-white/10 bg-gray-800/50 p-4 text-blue-400 transition-colors hover:text-blue-300"
-                  >
-                    {post.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
         <h2 className="text-2xl font-semibold mb-4">
           Guitar Presets for NUX Mighty Devices
         </h2>
 
-        <ClientSearch />
+        <ClientSearch presets={presetCards} />
       </main>
 
       <Footer>

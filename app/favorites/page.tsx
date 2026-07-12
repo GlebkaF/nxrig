@@ -7,6 +7,7 @@ import Footer from "components/Footer";
 import { PresetCard } from "components/PresetCard";
 import { ReactElement } from "react";
 import Link from "next/link";
+import { toPresetCardData } from "lib/public/preset-card";
 
 export default function FavoritesPage(): ReactElement {
   const { favorites, isLoaded } = useFavorites();
@@ -84,7 +85,10 @@ export default function FavoritesPage(): ReactElement {
 
               <div className="grid gap-6">
                 {favoritePresets.map((preset) => (
-                  <PresetCard key={preset.id} preset={preset} />
+                  <PresetCard
+                    key={preset.id}
+                    preset={toPresetCardData(preset)}
+                  />
                 ))}
               </div>
             </>
