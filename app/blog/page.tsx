@@ -3,12 +3,14 @@ import Link from "next/link";
 import { Metadata } from "next";
 import Header from "../../components/Header";
 import { formatBlogDate } from "../../lib/utils/formatDate";
+import { createSeoMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Guitar Blog - Tips, Tricks & Tutorials | NXRIG",
+export const metadata: Metadata = createSeoMetadata({
+  title: "Electric Guitar Guides, Tips & Tutorials | NXRIG",
   description:
-    "Learn electric guitar with our easy-to-follow guides, tutorials, and song recommendations. Perfect for beginners and intermediate players.",
-};
+    "Learn electric guitar with practical guides, tutorials, tone tips, and song recommendations for beginner and intermediate players.",
+  path: "/blog/",
+});
 
 export default function BlogPage() {
   return (

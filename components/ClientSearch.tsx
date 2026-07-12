@@ -5,8 +5,11 @@ import { PresetCard } from "components/PresetCard";
 import { useState } from "react";
 import Link from "next/link";
 
+const INITIAL_VISIBLE_PRESETS = 24;
+
 export default function ClientSearch(): React.ReactElement {
   const [searchQuery, setSearchQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_PRESETS);
 
   const filteredPresets = presets
     .filter(
@@ -39,6 +42,7 @@ export default function ClientSearch(): React.ReactElement {
           value={searchQuery}
           onChange={(e) => {
             setSearchQuery(e.target.value);
+            setVisibleCount(INITIAL_VISIBLE_PRESETS);
           }}
           className="w-full max-w-md px-4 py-2 rounded-lg bg-gray-800/50 backdrop-blur-sm border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
         />
@@ -49,9 +53,20 @@ export default function ClientSearch(): React.ReactElement {
           id="presets"
           className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8"
         >
-          {filteredPresets.map((preset) => (
+          {filteredPresets.slice(0, visibleCount).map((preset) => (
             <PresetCard key={preset.id} preset={preset} />
           ))}
+          {visibleCount < filteredPresets.length && (
+            <button
+              type="button"
+              onClick={() => {
+                setVisibleCount((count) => count + 24);
+              }}
+              className="lg:col-span-2 mx-auto px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-white/10 rounded-lg transition-colors"
+            >
+              Show more presets
+            </button>
+          )}
         </div>
       ) : (
         <div className="text-center py-12">

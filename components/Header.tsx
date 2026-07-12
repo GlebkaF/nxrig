@@ -29,7 +29,17 @@ const Header: React.FC = () => {
           {!isAdminPage && (
             <nav className="flex items-center gap-6">
               <Link
-                href="/blog"
+                href="/preset/"
+                className={`hover:text-pink-400 transition-colors ${
+                  pathname.startsWith("/preset")
+                    ? "text-pink-400 font-medium"
+                    : "text-gray-300"
+                }`}
+              >
+                Presets
+              </Link>
+              <Link
+                href="/blog/"
                 className={`hover:text-pink-400 transition-colors ${
                   pathname.startsWith("/blog")
                     ? "text-pink-400 font-medium"
@@ -39,7 +49,7 @@ const Header: React.FC = () => {
                 Blog
               </Link>
               <Link
-                href="/editor"
+                href="/editor/"
                 className={`hover:text-pink-400 transition-colors ${
                   pathname.startsWith("/editor")
                     ? "text-pink-400 font-medium"
@@ -49,7 +59,7 @@ const Header: React.FC = () => {
                 Editor
               </Link>
               <Link
-                href="/favorites"
+                href="/favorites/"
                 className={`hover:text-pink-400 transition-colors flex items-center gap-2 ${
                   pathname === "/favorites"
                     ? "text-pink-400 font-medium"
@@ -72,7 +82,7 @@ const Header: React.FC = () => {
                 <span>Favorites</span>
               </Link>
               <Link
-                href="/order"
+                href="/order/"
                 className={`hover:text-pink-400 transition-colors px-4 py-2 rounded-lg border border-pink-500/30 bg-pink-500/10 ${
                   pathname === "/order"
                     ? "text-pink-400 font-medium border-pink-400"
@@ -98,7 +108,17 @@ const Header: React.FC = () => {
             {!isAdminPage && (
               <nav className="flex items-center gap-3">
                 <Link
-                  href="/blog"
+                  href="/preset/"
+                  className={`hover:text-pink-400 transition-colors text-sm ${
+                    pathname.startsWith("/preset")
+                      ? "text-pink-400 font-medium"
+                      : "text-gray-300"
+                  }`}
+                >
+                  Presets
+                </Link>
+                <Link
+                  href="/blog/"
                   className={`hover:text-pink-400 transition-colors text-sm ${
                     pathname.startsWith("/blog")
                       ? "text-pink-400 font-medium"
@@ -108,7 +128,7 @@ const Header: React.FC = () => {
                   Blog
                 </Link>
                 <Link
-                  href="/editor"
+                  href="/editor/"
                   className={`hover:text-pink-400 transition-colors text-sm ${
                     pathname.startsWith("/editor")
                       ? "text-pink-400 font-medium"
@@ -118,7 +138,7 @@ const Header: React.FC = () => {
                   Editor
                 </Link>
                 <Link
-                  href="/favorites"
+                  href="/favorites/"
                   className={`hover:text-pink-400 transition-colors flex items-center gap-1 ${
                     pathname === "/favorites"
                       ? "text-pink-400 font-medium"
@@ -140,7 +160,7 @@ const Header: React.FC = () => {
                   </svg>
                 </Link>
                 <Link
-                  href="/order"
+                  href="/order/"
                   className={`hover:text-pink-400 transition-colors px-3 py-1.5 text-sm rounded-lg border border-pink-500/30 bg-pink-500/10 ${
                     pathname === "/order"
                       ? "text-pink-400 font-medium border-pink-400"

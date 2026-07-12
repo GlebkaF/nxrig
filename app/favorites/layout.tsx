@@ -1,23 +1,13 @@
 import { Metadata } from "next";
+import { createSeoMetadata } from "lib/seo";
 
-export const metadata: Metadata = {
-  title: "Favorite Presets | NUX Mighty Plug Pro & Mighty Space | nxrig",
+export const metadata: Metadata = createSeoMetadata({
+  title: "Your Favorite NUX Guitar Presets | NXRIG",
   description:
     "Your favorite presets for NUX Mighty Plug Pro and Mighty Space. Save and manage your favorite guitar tones.",
-  alternates: {
-    canonical: "https://nxrig.com/favorites",
-  },
-  openGraph: {
-    title: "Favorite Presets | NUX Mighty Plug Pro & Mighty Space | nxrig",
-    description:
-      "Your favorite presets for NUX Mighty Plug Pro and Mighty Space. Save and manage your favorite guitar tones.",
-    url: "https://nxrig.com/favorites",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-};
+  path: "/favorites/",
+  noIndex: true,
+});
 
 export default function FavoritesLayout({
   children,

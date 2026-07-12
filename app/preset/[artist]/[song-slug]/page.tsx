@@ -6,6 +6,7 @@ import { presets } from "lib/public/presets";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import { createPresetLink } from "lib/utils/urls";
+import { createSeoMetadata } from "lib/seo";
 
 interface PresetPageProps {
   params: {
@@ -26,30 +27,21 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${preset.origin.song} ${preset.origin.part} – NUX Mighty Plug Pro & Mighty Space Patch | Free Guitar Preset`;
-  const description = `Play ${preset.origin.song} ${preset.origin.part} with authentic tone using this free NUX Mighty Plug Pro and Mighty Space patch. Download the guitar preset, inspired by ${preset.origin.artist.title}, and load it on your NUX Mighty device.`;
+  const title = `${preset.origin.song} ${preset.origin.part} – ${preset.origin.artist.title} | NXRIG`;
+  const description = `Download a free ${preset.origin.song} ${preset.origin.part} guitar preset inspired by ${preset.origin.artist.title} for NUX Mighty Plug Pro and Mighty Space.`;
   const imageUrl = preset.origin.imageUrl ?? "/images/cover/default-cover.webp";
   const imageUrlWithProtocol = imageUrl.startsWith("http")
     ? imageUrl
     : `https://nxrig.com${imageUrl}`;
 
   return {
-    title,
-    description,
-    openGraph: {
+    ...createSeoMetadata({
+      title,
+      description,
+      path: createPresetLink(preset),
       type: "article",
-      title,
-      description,
-      images: [imageUrlWithProtocol],
-      url: "https://nxrig.com" + createPresetLink(preset),
-      siteName: "NUX Must Have",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [imageUrlWithProtocol],
-    },
+      image: imageUrlWithProtocol,
+    }),
     authors: [{ name: "NUX Must Have" }],
     category: "Guitar Presets",
     keywords: [

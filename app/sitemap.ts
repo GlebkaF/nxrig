@@ -42,6 +42,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date("2026-01-07"),
   });
 
+  sitemapEntries.push({
+    url: baseUrl + "/order/",
+    lastModified: new Date("2026-07-12"),
+  });
+
   // Страница каталога пресетов - последний updatedAt среди всех пресетов
   sitemapEntries.push({
     url: baseUrl + "/preset/",

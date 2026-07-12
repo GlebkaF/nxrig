@@ -73,7 +73,12 @@ export const PresetDetails: FC<PresetDetailsProps> = ({ preset }) => {
             </div>
             <div className="w-[300px] shrink-0">
               <div className="bg-white p-4 rounded-lg shadow-lg mb-4">
-                <QRCodeCanvas value={qrCode.qrCode} size={268} level="M" />
+                <QRCodeCanvas
+                  value={qrCode.qrCode}
+                  size={268}
+                  level="M"
+                  title={`QR code for ${preset.origin.artist.title} – ${preset.origin.song}`}
+                />
               </div>
               <p className="text-sm text-gray-400 text-center">
                 Scan QR code with MightyApp

@@ -35,9 +35,9 @@ const MarkdownContent: React.FC<Props> = ({ content }) => {
             a: MarkdownTagA,
             ul: { component: MarkdownTagUl },
             h1: {
+              component: "h2",
               props: {
-                className: "text-4xl font-bold mb-8 mt-12 text-white",
-                "data-test": "article-title",
+                className: "text-3xl font-bold mb-6 mt-12 text-white",
               },
             },
             h2: {

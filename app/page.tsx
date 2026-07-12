@@ -5,6 +5,8 @@ import Link from "next/link";
 import ClientSearch from "../components/ClientSearch";
 import { presets } from "lib/public/presets";
 import { createPresetLink } from "lib/utils/urls";
+import { createSeoMetadata } from "lib/seo";
+import { blogPosts } from "data/blog-posts";
 
 // Функция для форматирования абсолютной даты на английском
 function formatDate(dateString: string): string {
@@ -29,30 +31,16 @@ const latestPresets = [...presets]
   })
   .slice(0, 4);
 
-export const metadata: Metadata = {
-  title:
-    "NUX Mighty Plug Pro & Mighty Space Patches – Free Guitar Presets Library | NX Rig",
+const latestBlogPosts = [...blogPosts]
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 3);
+
+export const metadata: Metadata = createSeoMetadata({
+  title: "Free NUX Guitar Presets & Patches | NXRIG",
   description:
-    "Download free NUX Mighty Plug Pro and Mighty Space patches and guitar presets. Fully compatible with both devices. Explore authentic tones for rock, blues, and metal. Easy to use, tested by real musicians.",
-  openGraph: {
-    title:
-      "NUX Mighty Plug Pro & Mighty Space Patches – Free Guitar Presets Library | NX Rig",
-    description:
-      "Download free NUX Mighty Plug Pro and Mighty Space patches and guitar presets. Fully compatible with both devices. Explore authentic tones for rock, blues, and metal. Easy to use, tested by real musicians.",
-    images: ["/images/og-image.svg"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "NUX Mighty Plug Pro & Mighty Space Patches – Free Guitar Presets Library | NX Rig",
-    description:
-      "Download free NUX Mighty Plug Pro and Mighty Space patches and guitar presets. Fully compatible with both devices. Explore authentic tones for rock, blues, and metal. Easy to use, tested by real musicians.",
-    images: ["/images/og-image.svg"],
-  },
-  alternates: {
-    canonical: "https://nxrig.com/",
-  },
-};
+    "Download free guitar presets and patches for NUX Mighty Plug Pro and Mighty Space. Explore tested rock, blues, grunge, and metal tones.",
+  path: "/",
+});
 
 export default function Home() {
   return (
@@ -99,6 +87,26 @@ export default function Home() {
               ))}
             </div>
           </div>
+        )}
+
+        {latestBlogPosts.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">
+              Latest guitar guides
+            </h2>
+            <ul className="grid gap-4 md:grid-cols-3">
+              {latestBlogPosts.map((post) => (
+                <li key={post.slug}>
+                  <Link
+                    href={`/blog/${post.slug}/`}
+                    className="block h-full rounded-lg border border-white/10 bg-gray-800/50 p-4 text-blue-400 transition-colors hover:text-blue-300"
+                  >
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
 
         <h2 className="text-2xl font-semibold mb-4">

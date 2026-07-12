@@ -145,7 +145,7 @@ export const PresetEditor: FC<PresetEditorProps> = ({ preset }) => {
     <div>
       {/* Заголовок */}
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Online Patch Editor</h1>
+        <h2 className="text-3xl font-bold mb-4">Patch Settings</h2>
         <p className="text-gray-400 text-lg">
           Create custom guitar tones for NUX Mighty Plug Pro and Mighty Space
           right in your browser. Adjust effects, tweak parameters, and download

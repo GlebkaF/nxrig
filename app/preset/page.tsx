@@ -6,6 +6,8 @@ import Footer from "components/Footer";
 import Link from "next/link";
 import Script from "next/script";
 import { ReactElement } from "react";
+import { createSeoMetadata } from "lib/seo";
+import { createPresetLink } from "lib/utils/urls";
 
 // Compute stats at module level so metadata can reference them
 const totalPresets = String(presets.length);
@@ -14,22 +16,11 @@ const artistsWithPresets = artists.filter((artist) =>
 );
 const totalArtists = String(artistsWithPresets.length);
 
-export const metadata: Metadata = {
-  title: `Free NUX Mighty Plug Pro Presets - ${totalArtists}+ Artists | Metallica, Nirvana, RHCP | nxrig`,
-  description: `Download ${totalPresets}+ free guitar presets for NUX Mighty Plug Pro & Mighty Space. ${totalArtists}+ artists including Metallica, Nirvana, Led Zeppelin, RHCP, Pink Floyd, and more. Easy .mspatch import.`,
-  alternates: {
-    canonical: "https://nxrig.com/preset",
-  },
-  openGraph: {
-    title: `Free NUX Mighty Plug Pro Presets - ${totalArtists}+ Artists | Metallica, Nirvana, RHCP | nxrig`,
-    description: `Download ${totalPresets}+ free guitar presets for NUX Mighty Plug Pro & Mighty Space. ${totalArtists}+ artists including Metallica, Nirvana, Led Zeppelin, RHCP, Pink Floyd, and more. Easy .mspatch import.`,
-    url: "https://nxrig.com/preset",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-};
+export const metadata: Metadata = createSeoMetadata({
+  title: `Free NUX Presets for ${totalArtists}+ Artists | NXRIG`,
+  description: `Download ${totalPresets}+ free guitar presets for NUX Mighty Plug Pro and Mighty Space. Browse Metallica, Nirvana, RHCP, Pink Floyd, and more.`,
+  path: "/preset/",
+});
 
 interface ArtistWithPresetCount {
   id: number;
@@ -305,6 +296,32 @@ export default function ArtistsPage(): ReactElement {
                 );
               })}
             </ul>
+
+            <details className="mb-10 rounded-lg bg-gray-800 p-5">
+              <summary className="cursor-pointer text-xl font-semibold text-white">
+                Browse all {totalPresets} song presets
+              </summary>
+              <ul className="mt-5 grid gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
+                {presets
+                  .slice()
+                  .sort((a, b) =>
+                    `${a.origin.artist.title} ${a.origin.song}`.localeCompare(
+                      `${b.origin.artist.title} ${b.origin.song}`,
+                    ),
+                  )
+                  .map((preset) => (
+                    <li key={preset.id}>
+                      <Link
+                        href={createPresetLink(preset)}
+                        className="text-sm text-blue-400 hover:text-blue-300"
+                      >
+                        {preset.origin.artist.title} — {preset.origin.song} (
+                        {preset.origin.part})
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </details>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-white">

@@ -1,24 +1,13 @@
 import Header from "../../components/Header";
 import { Metadata } from "next";
+import { createSeoMetadata } from "lib/seo";
 
-export const metadata: Metadata = {
-  title: "Order Custom Patch | NX Rig - Professional NUX Mighty Presets",
+export const metadata: Metadata = createSeoMetadata({
+  title: "Request a Custom NUX Mighty Patch | NXRIG",
   description:
-    "Order a custom patch for your NUX Mighty Plug Pro or Mighty Space. Professional sound design tailored to your musical needs.",
-  openGraph: {
-    title: "Order Custom Patch | NX Rig - Professional NUX Mighty Presets",
-    description:
-      "Order a custom patch for your NUX Mighty Plug Pro or Mighty Space. Professional sound design tailored to your musical needs.",
-    images: ["/images/og-image.svg"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Order Custom Patch | NX Rig - Professional NUX Mighty Presets",
-    description:
-      "Order a custom patch for your NUX Mighty Plug Pro or Mighty Space. Professional sound design tailored to your musical needs.",
-    images: ["/images/og-image.svg"],
-  },
-};
+    "Request a custom guitar patch for NUX Mighty Plug Pro or Mighty Space. Tell us the artist, song, and tone you want.",
+  path: "/order/",
+});
 
 export default function OrderPage() {
   return (

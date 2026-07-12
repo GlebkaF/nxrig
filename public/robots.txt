@@ -1,9 +1,7 @@
 User-agent: *
-Disallow: /
-Allow: /$
-Allow: /preset/
-Allow: /sitemap.xml
-Allow: /order
-Allow: /site.webmanifest
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /favorites/
 
 Sitemap: https://nxrig.com/sitemap.xml

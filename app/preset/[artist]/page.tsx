@@ -5,6 +5,7 @@ import { ArtistPresets } from "components/ArtistPresets";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import { ReactElement } from "react";
+import { createSeoMetadata } from "lib/seo";
 
 // TODO: add seo description for artist page
 
@@ -26,14 +27,14 @@ export async function generateMetadata({
   );
 
   const firstPreset = artistPresets[0];
-  const artistDescription =
-    firstPreset?.origin.artist.description ??
-    `Download free NUX Mighty Plug Pro and Mighty Space presets for ${artistName}. Each preset is carefully crafted to match the original guitar tones and fully compatible with both devices.`;
+  const displayName = firstPreset?.origin.artist.title ?? artistName;
+  const artistDescription = `Download free ${displayName} guitar presets for NUX Mighty Plug Pro and Mighty Space. Browse song tones, patch settings, QR codes, and downloads.`;
 
-  return {
-    title: `${artistName} - Guitar Presets for NUX Mighty Plug Pro & Mighty Space`,
+  return createSeoMetadata({
+    title: `${displayName} Guitar Presets for NUX Mighty | NXRIG`,
     description: artistDescription,
-  };
+    path: `/preset/${artistSlug}/`,
+  });
 }
 
 export async function generateStaticParams(): Promise<{ artist: string }[]> {

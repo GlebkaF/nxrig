@@ -33,6 +33,9 @@ export default function EditorPage() {
       <Header />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">
+            Online NUX Mighty Patch Editor
+          </h1>
           <EditorPageClient defaultPreset={defaultPreset} />
         </div>
       </main>

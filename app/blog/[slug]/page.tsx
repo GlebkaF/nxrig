@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import Header from "../../../components/Header";
 import { formatBlogDate } from "../../../lib/utils/formatDate";
+import { createSeoMetadata } from "../../../lib/seo";
 
 interface Props {
   params: {
@@ -21,10 +22,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  return {
-    title: `${post.title} - NXRIG Blog`,
+  return createSeoMetadata({
+    title: `${post.title} | NXRIG`,
     description: post.excerpt,
-  };
+    path: `/blog/${post.slug}/`,
+    type: "article",
+    ...(post.coverImage ? { image: post.coverImage } : {}),
+  });
 }
 
 export async function generateStaticParams() {

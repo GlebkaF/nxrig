@@ -1,9 +1,13 @@
 import { Metadata } from "next";
+import { createSeoMetadata } from "lib/seo";
 
 export const metadata: Metadata = {
-  title: "Online Patch Editor for NUX Mighty Devices | nxrig.com",
-  description:
-    "Free online patch editor for NUX Mighty Plug Pro and Mighty Space. Create custom guitar tones in your browser - an alternative to the mobile app. Adjust effects, tweak parameters, and download QR codes instantly.",
+  ...createSeoMetadata({
+    title: "Online NUX Mighty Patch Editor | NXRIG",
+    description:
+      "Create and edit NUX Mighty Plug Pro and Mighty Space guitar patches online. Adjust effects and export a QR code for the MightyAmp app.",
+    path: "/editor/",
+  }),
   keywords: [
     "NUX patch editor",
     "NUX online editor",

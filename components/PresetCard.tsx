@@ -29,9 +29,8 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
           alt={`${preset.origin.artist.title} - ${preset.origin.song} cover`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          priority={true}
           className="object-cover opacity-30"
-          loading="eager"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
       </div>
@@ -41,7 +40,12 @@ export function PresetCard({ preset }: PresetCardProps): React.ReactElement {
           {/* QR Code */}
           <div className="shrink-0">
             <div className="bg-white p-2 rounded">
-              <QRCodeCanvas value={qrCode.qrCode} size={180} level="M" />
+              <QRCodeCanvas
+                value={qrCode.qrCode}
+                size={180}
+                level="M"
+                title={`QR code for ${preset.origin.artist.title} – ${preset.origin.song}`}
+              />
             </div>
           </div>
 

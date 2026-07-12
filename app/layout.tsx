@@ -3,12 +3,28 @@ import { Metadata } from "next";
 import YandexMetrika from "../components/YandexMetrika";
 import { GoogleTagManager } from "../components/GoogleTagManager";
 import { isProduction } from "../lib/env";
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "../lib/seo";
 
 export const metadata: Metadata = {
-  title: "NXRIG",
+  title: SITE_NAME,
   description:
     "Free guitar presets for NUX Mighty Plug Pro and NUX Mighty Space - fully compatible with both devices",
-  metadataBase: new URL("https://nxrig.com"),
+  metadataBase: new URL(SITE_URL),
+  openGraph: {
+    type: "website",
+    title: SITE_NAME,
+    description:
+      "Free guitar presets for NUX Mighty Plug Pro and Mighty Space.",
+    siteName: SITE_NAME,
+    images: [{ url: DEFAULT_OG_IMAGE, alt: "NXRIG guitar presets" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description:
+      "Free guitar presets for NUX Mighty Plug Pro and Mighty Space.",
+    images: [DEFAULT_OG_IMAGE],
+  },
 };
 
 export default function RootLayout({

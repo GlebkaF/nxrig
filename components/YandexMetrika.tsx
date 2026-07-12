@@ -29,7 +29,8 @@ const YandexMetrika = (): React.ReactElement => {
           <img
             src="https://mc.yandex.ru/watch/103809700"
             style={{ position: "absolute", left: "-9999px" }}
-            alt=""
+            alt="Yandex Metrica tracking pixel"
+            aria-hidden="true"
           />
         </div>
       </noscript>
