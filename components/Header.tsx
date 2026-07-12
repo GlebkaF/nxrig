@@ -97,51 +97,22 @@ const Header: React.FC = () => {
 
         {/* Mobile Layout */}
         <div className="md:hidden">
-          <div className="flex items-center justify-between mb-2">
+          <div className="flex min-h-11 items-center justify-between gap-4">
             <Link
               href="/"
-              className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+              className="inline-flex min-h-11 items-center rounded-sm bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-xl font-bold text-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 focus-visible:ring-offset-4 focus-visible:ring-offset-gray-900"
             >
               nxrig.com
             </Link>
 
             {!isAdminPage && (
-              <nav className="flex items-center gap-3">
-                <Link
-                  href="/preset/"
-                  className={`hover:text-pink-400 transition-colors text-sm ${
-                    pathname.startsWith("/preset")
-                      ? "text-pink-400 font-medium"
-                      : "text-gray-300"
-                  }`}
-                >
-                  Presets
-                </Link>
-                <Link
-                  href="/blog/"
-                  className={`hover:text-pink-400 transition-colors text-sm ${
-                    pathname.startsWith("/blog")
-                      ? "text-pink-400 font-medium"
-                      : "text-gray-300"
-                  }`}
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="/editor/"
-                  className={`hover:text-pink-400 transition-colors text-sm ${
-                    pathname.startsWith("/editor")
-                      ? "text-pink-400 font-medium"
-                      : "text-gray-300"
-                  }`}
-                >
-                  Editor
-                </Link>
+              <div className="flex items-center gap-2">
                 <Link
                   href="/favorites/"
-                  className={`hover:text-pink-400 transition-colors flex items-center gap-1 ${
+                  aria-label="Favorite presets"
+                  className={`flex size-11 items-center justify-center rounded-lg border border-white/10 transition-colors hover:border-pink-400/50 hover:text-pink-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 ${
                     pathname === "/favorites"
-                      ? "text-pink-400 font-medium"
+                      ? "border-pink-400/60 bg-pink-500/10 text-pink-400"
                       : "text-gray-300"
                   }`}
                   title="Favorite Presets"
@@ -161,7 +132,7 @@ const Header: React.FC = () => {
                 </Link>
                 <Link
                   href="/order/"
-                  className={`hover:text-pink-400 transition-colors px-3 py-1.5 text-sm rounded-lg border border-pink-500/30 bg-pink-500/10 ${
+                  className={`flex min-h-11 items-center whitespace-nowrap rounded-lg border border-pink-500/30 bg-pink-500/10 px-3.5 text-sm font-medium transition-colors hover:border-pink-400/60 hover:text-pink-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 ${
                     pathname === "/order"
                       ? "text-pink-400 font-medium border-pink-400"
                       : "text-pink-300"
@@ -169,13 +140,54 @@ const Header: React.FC = () => {
                 >
                   Request
                 </Link>
-              </nav>
+              </div>
             )}
           </div>
 
-          <p className="text-gray-400 text-sm leading-tight">
-            Professional presets for NUX Mighty Plug Pro & Mighty Space
-          </p>
+          {!isAdminPage && (
+            <nav
+              aria-label="Primary navigation"
+              className="mt-2 grid grid-cols-3 gap-1 border-t border-white/10 pt-2"
+            >
+              <Link
+                href="/preset/"
+                aria-current={
+                  pathname.startsWith("/preset") ? "page" : undefined
+                }
+                className={`flex min-h-11 items-center justify-center rounded-lg px-3 text-sm font-medium transition-colors hover:bg-white/5 hover:text-pink-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 focus-visible:ring-inset ${
+                  pathname.startsWith("/preset")
+                    ? "bg-pink-500/10 text-pink-400"
+                    : "text-gray-300"
+                }`}
+              >
+                Presets
+              </Link>
+              <Link
+                href="/blog/"
+                aria-current={pathname.startsWith("/blog") ? "page" : undefined}
+                className={`flex min-h-11 items-center justify-center rounded-lg px-3 text-sm font-medium transition-colors hover:bg-white/5 hover:text-pink-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 focus-visible:ring-inset ${
+                  pathname.startsWith("/blog")
+                    ? "bg-pink-500/10 text-pink-400"
+                    : "text-gray-300"
+                }`}
+              >
+                Blog
+              </Link>
+              <Link
+                href="/editor/"
+                aria-current={
+                  pathname.startsWith("/editor") ? "page" : undefined
+                }
+                className={`flex min-h-11 items-center justify-center rounded-lg px-3 text-sm font-medium transition-colors hover:bg-white/5 hover:text-pink-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 focus-visible:ring-inset ${
+                  pathname.startsWith("/editor")
+                    ? "bg-pink-500/10 text-pink-400"
+                    : "text-gray-300"
+                }`}
+              >
+                Editor
+              </Link>
+            </nav>
+          )}
         </div>
       </div>
 
@@ -190,12 +202,12 @@ const Header: React.FC = () => {
             Generations
           </Link>
           <Link
-            href="/admin/presets"
+            href="/admin/drafts/"
             className={`hover:text-pink-400 transition-colors ${
-              pathname === "/admin/presets" ? "text-pink-400 font-medium" : ""
+              pathname === "/admin/drafts" ? "text-pink-400 font-medium" : ""
             }`}
           >
-            Presets
+            Draft presets
           </Link>
         </nav>
       )}

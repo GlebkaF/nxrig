@@ -239,63 +239,125 @@ export default function ArtistsPage(): ReactElement {
       <div className="min-h-screen flex flex-col bg-gray-900 text-white">
         <Header />
         <main className="flex-grow">
-          <div className="container mx-auto px-4 py-8">
-            <h1 className="text-4xl font-bold mb-6 text-white">
-              NUX Mighty Plug Pro Artist Presets — All Artists
-            </h1>
+          <div className="container mx-auto px-4 py-6 sm:py-8">
+            <section className="mb-7 overflow-hidden rounded-2xl border border-gray-700/80 bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 p-5 shadow-xl shadow-black/10 sm:p-7">
+              <div className="lg:grid lg:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.8fr)] lg:items-center lg:gap-12">
+                <div>
+                  <h1 className="text-[2rem] font-bold leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl">
+                    Free NUX artist presets
+                  </h1>
+                  <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-300 sm:text-lg">
+                    Find free, artist-inspired guitar tones for{" "}
+                    <strong className="font-semibold text-white">
+                      NUX Mighty Plug Pro
+                    </strong>{" "}
+                    and{" "}
+                    <strong className="font-semibold text-white">
+                      Mighty Space
+                    </strong>
+                    , with song-by-song patches, pickup tips, sensible gain, and
+                    ready-to-play IR, cab, and effect chains.
+                  </p>
+                </div>
 
-            <p className="mb-4 text-gray-300 leading-relaxed">
-              Find artist-inspired guitar tones for{" "}
-              <strong>NUX Mighty Plug Pro</strong> and{" "}
-              <strong>Mighty Space</strong>. Each preset is crafted to get you
-              close to the signature sound—rhythm and lead variants, sensible
-              gain levels, IR/cab choices, and effect chains that just work.
-            </p>
-            <p className="mb-4 text-gray-300 leading-relaxed">
-              Open an artist page to see song-by-song patches, quick setup
-              notes, and pickup tips. Import via <strong>Mighty Editor</strong>{" "}
-              (desktop) or <strong>MightyAmp</strong> (mobile) using a .mspatch
-              file or a QR code. All downloads are free.
-            </p>
-            <p className="mb-4 text-gray-300 leading-relaxed">
-              Our collection features <strong>{totalPresets}+ presets</strong>{" "}
-              covering <strong>{totalArtists}+ legendary artists</strong> across
-              metal, grunge, classic rock, and alternative genres. Each preset
-              is compatible with both <strong>NUX Mighty Plug Pro</strong> and{" "}
-              <strong>Mighty Space</strong>—amp and drive settings transfer
-              perfectly, though you may want to adjust output level and
-              reverb/delay mix to suit your device.
-            </p>
-            <p className="mb-8 text-gray-300 leading-relaxed">
-              Import is simple: download the <strong>.mspatch file</strong> and
-              load it in Mighty Editor (desktop) or MightyAmp (mobile app), or
-              scan the <strong>QR code</strong> directly from your phone. No
-              additional software required—just your NUX device and the official
-              app.
-            </p>
+                <div className="lg:border-l lg:border-blue-400/20 lg:pl-8">
+                  <dl className="mt-5 grid grid-cols-2 gap-3 sm:max-w-md lg:mt-0 lg:max-w-none">
+                    <div className="rounded-xl border border-gray-700 bg-gray-900/60 px-4 py-3 shadow-sm shadow-black/20">
+                      <dt className="text-xs font-medium uppercase tracking-wider text-gray-400">
+                        Free presets
+                      </dt>
+                      <dd className="mt-1 text-2xl font-bold text-white">
+                        {totalPresets}+
+                      </dd>
+                    </div>
+                    <div className="rounded-xl border border-gray-700 bg-gray-900/60 px-4 py-3 shadow-sm shadow-black/20">
+                      <dt className="text-xs font-medium uppercase tracking-wider text-gray-400">
+                        Artists
+                      </dt>
+                      <dd className="mt-1 text-2xl font-bold text-white">
+                        {totalArtists}+
+                      </dd>
+                    </div>
+                  </dl>
 
-            <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
-              {artistsWithPresetCount.map((artist) => {
-                const genre = artistGenres[artist.slug] || "Rock";
-                return (
-                  <li key={artist.id} className="bg-gray-800 rounded-lg p-4">
-                    <Link
-                      href={`/preset/${artist.slug}`}
-                      className="block group"
-                    >
-                      <h3 className="text-lg font-semibold text-blue-400 group-hover:text-blue-300 mb-1">
-                        {artist.title}
-                      </h3>
-                      <p className="text-sm text-gray-400 mb-2">{genre}</p>
-                      <p className="text-sm text-gray-300">
-                        {artist.presetCount}{" "}
-                        {artist.presetCount === 1 ? "preset" : "presets"}
+                  <details className="group mt-4 rounded-xl border border-gray-700/80 bg-gray-900/40 px-4 py-3">
+                    <summary className="cursor-pointer font-medium text-gray-200 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+                      Compatibility and import details
+                    </summary>
+                    <div className="mt-3 space-y-3 border-t border-gray-700 pt-3 text-sm leading-relaxed text-gray-300 sm:text-base">
+                      <p>
+                        Open an artist page for rhythm and lead variants, quick
+                        setup notes, and pickup guidance. The collection spans
+                        metal, grunge, classic rock, and alternative genres.
                       </p>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+                      <p>
+                        Presets work with both NUX Mighty Plug Pro and Mighty
+                        Space. Amp and drive settings transfer directly; adjust
+                        output level and reverb or delay mix to suit your
+                        device.
+                      </p>
+                      <p>
+                        Import the downloaded <strong>.mspatch file</strong> in{" "}
+                        <strong>Mighty Editor</strong> on desktop or{" "}
+                        <strong>MightyAmp</strong> on mobile, or scan the
+                        provided <strong>QR code</strong>. No additional
+                        software is required beyond the official NUX app.
+                      </p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </section>
+
+            <section aria-labelledby="artist-directory-heading">
+              <div className="mb-4 flex items-end justify-between gap-4">
+                <h2
+                  id="artist-directory-heading"
+                  className="text-2xl font-semibold tracking-tight text-white sm:text-3xl"
+                >
+                  Browse by artist
+                </h2>
+                <p className="hidden text-sm text-gray-400 sm:block">
+                  {totalArtists} artists, sorted A–Z
+                </p>
+              </div>
+
+              <ul className="mb-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+                {artistsWithPresetCount.map((artist) => {
+                  const genre = artistGenres[artist.slug] || "Rock";
+                  return (
+                    <li
+                      key={artist.id}
+                      className="group overflow-hidden rounded-xl border border-gray-700/80 bg-gray-800/70 transition duration-200 hover:-translate-y-0.5 hover:border-blue-500/60 hover:bg-gray-800 hover:shadow-lg hover:shadow-blue-950/30 focus-within:border-blue-400 focus-within:ring-2 focus-within:ring-blue-400/70"
+                    >
+                      <Link
+                        href={`/preset/${artist.slug}`}
+                        className="flex h-full min-h-28 flex-col p-4 focus-visible:outline-none sm:p-5"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <h3 className="text-lg font-semibold leading-snug text-blue-300 transition-colors group-hover:text-blue-200">
+                            {artist.title}
+                          </h3>
+                          <span
+                            aria-hidden="true"
+                            className="mt-0.5 text-lg text-gray-500 transition duration-200 group-hover:translate-x-0.5 group-hover:text-blue-300"
+                          >
+                            →
+                          </span>
+                        </div>
+                        <p className="mt-1 text-xs font-medium uppercase tracking-wider text-gray-400">
+                          {genre}
+                        </p>
+                        <p className="mt-auto pt-4 text-sm font-medium text-gray-200">
+                          {artist.presetCount}{" "}
+                          {artist.presetCount === 1 ? "preset" : "presets"}
+                        </p>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
 
             <details className="mb-10 rounded-lg bg-gray-800 p-5">
               <summary className="cursor-pointer text-xl font-semibold text-white">
