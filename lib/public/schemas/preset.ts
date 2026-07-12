@@ -21,6 +21,7 @@ export const presetSchema = z
     slug: z.string(),
     tabsUrl: z.string().optional(),
     isDraft: z.boolean().default(false),
+    humanVerified: z.boolean().default(true),
     createdAt: z.string().nullable(),
     updatedAt: z.string(),
   })
@@ -52,6 +53,7 @@ export const presetWithArtistSchema = z
     slug: z.string(),
     tabsUrl: z.string().optional(),
     isDraft: z.boolean().default(false),
+    humanVerified: z.boolean().default(true),
     createdAt: z.string().nullable(),
     updatedAt: z.string(),
   })

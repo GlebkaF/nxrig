@@ -27,6 +27,7 @@ export const allPresets = presetsRaw.map((preset) => {
     slug: preset.slug,
     tabsUrl: preset.tabsUrl,
     isDraft: preset.isDraft ?? false,
+    humanVerified: "humanVerified" in preset ? preset.humanVerified : true,
     createdAt: preset.createdAt,
     updatedAt: preset.updatedAt,
   };

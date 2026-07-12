@@ -202,6 +202,7 @@ export async function POST(request: NextRequest) {
       slug: slug,
       tabsUrl: body.tabsUrl?.trim() || undefined,
       isDraft: true, // Создаем как драфт
+      humanVerified: false,
       createdAt: null, // Не устанавливаем дату создания до публикации
       updatedAt: currentDate,
     };
@@ -222,6 +223,7 @@ export async function POST(request: NextRequest) {
       slug: preset.slug,
       tabsUrl: preset.tabsUrl,
       isDraft: preset.isDraft,
+      humanVerified: preset.humanVerified,
       createdAt: preset.createdAt,
       updatedAt: preset.updatedAt,
     };

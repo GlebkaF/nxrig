@@ -13116,5 +13116,2336 @@
     "isDraft": false,
     "createdAt": "2026-03-19T17:19:10.052Z",
     "updatedAt": "2026-03-19T17:19:10.052Z"
+  },
+  {
+    "id": "gen_mrhum1lm_kil4lksfs",
+    "origin": {
+      "artistId": 69,
+      "song": "Sanctified with Dynamite",
+      "part": "Main Riff",
+      "imageUrl": null
+    },
+    "description": "Highly aggressive, tight, and saturated distortion with clear note definition; thick low end, pronounced mids for cut, crisp attack, and a controlled high end. Punchy and dynamic, with minimal muddiness, designed to cut through a dense mix while retaining clarity during fast palm-muted riffs.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 70,
+          "Drive": 20,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 78,
+          "Master": 60,
+          "Bass": 55,
+          "Middle": 70,
+          "Treble": 58,
+          "Presence": 60
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 58,
+          "HighCut": 44
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 42,
+          "62": 45,
+          "125": 48,
+          "250": 54,
+          "500": 58,
+          "1000": 65,
+          "2000": 67,
+          "4000": 58,
+          "8000": 44,
+          "16000": 38,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 23,
+          "Decay": 36
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "sanctified-with-dynamite-guitar-main-riff",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:49:15.908Z",
+    "updatedAt": "2026-07-12T13:49:15.908Z"
+  },
+  {
+    "id": "gen_mrhuo3b6_y4jf95nnb",
+    "origin": {
+      "artistId": 70,
+      "song": "Unholy Confessions",
+      "part": "Lead Riffs",
+      "imageUrl": null
+    },
+    "description": "Highly saturated, aggressive, and tight distortion with clear note separation. Bright high-end for lead clarity, chunky mids for punch, and tight lows. Fast attack, moderate sustain, minimal noise, and sufficient depth for articulation in solos and melodic riffs.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 70,
+          "Drive": 10,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 80,
+          "Master": 60,
+          "Bass": 55,
+          "Middle": 45,
+          "Treble": 70,
+          "Presence": 65
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 60,
+          "HighCut": 55
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 45,
+          "62": 45,
+          "125": 48,
+          "250": 47,
+          "500": 46,
+          "1000": 52,
+          "2000": 60,
+          "4000": 68,
+          "8000": 65,
+          "16000": 60,
+          "Vol": 53
+        }
+      },
+      "reverb": {
+        "type": "Hall",
+        "enabled": true,
+        "params": {
+          "Level": 18,
+          "Decay": 24,
+          "PreDelay": 18,
+          "Liveliness": 35
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "unholy-confessions-guitar-lead-riffs",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/avenged-sevenfold-unholy-confessions-tab-s580",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:49:30.765Z",
+    "updatedAt": "2026-07-12T13:49:30.765Z"
+  },
+  {
+    "id": "gen_mrhuocl7_9ksvy6htb",
+    "origin": {
+      "artistId": 45,
+      "song": "Money for Nothing",
+      "part": "Main Riff",
+      "imageUrl": null
+    },
+    "description": "Very aggressive, saturated, and biting tone with a signature honky midrange. The sound is thick and sustaining, with a sharp attack and a slight 'nasal' quality. Somewhat compressed, but with enough dynamics to respond to pick attack. Bright top end but not harsh.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 52,
+          "Decay": 45
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 42,
+          "Clipping": 38
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 65,
+          "Drive": 68,
+          "Tone": 76
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 79,
+          "Master": 61,
+          "Bass": 33,
+          "Middle": 81,
+          "Treble": 69,
+          "Presence": 59
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 65,
+          "HighCut": 58
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 38,
+          "62": 42,
+          "125": 45,
+          "250": 51,
+          "500": 64,
+          "1000": 79,
+          "2000": 81,
+          "4000": 76,
+          "8000": 59,
+          "16000": 52,
+          "Vol": 54
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "money-for-nothing-guitar-main-riff",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:49:42.773Z",
+    "updatedAt": "2026-07-12T13:49:42.773Z"
+  },
+  {
+    "id": "gen_mrhuol6y_kzjzr2w9p",
+    "origin": {
+      "artistId": 71,
+      "song": "Live Forever",
+      "part": "Main Riff",
+      "imageUrl": null
+    },
+    "description": "Clean to lightly overdriven, chimey high end, warm mids, moderate sustain, open and airy with subtle grit. The tone is dynamic and responsive, retaining clarity and articulation, with a hint of British amp breakup. Slightly compressed for consistency but not squashed.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "Studio Comp",
+        "enabled": true,
+        "params": {
+          "Gain": 56,
+          "Threshold": 58,
+          "Ratio": 42,
+          "Release": 48
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Drive": 28,
+          "Tone": 62
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 37,
+          "Master": 58,
+          "Bass": 44,
+          "Treble": 61,
+          "Cut": 58
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 63,
+          "HighCut": 57
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 38,
+          "62": 42,
+          "125": 44,
+          "250": 48,
+          "500": 53,
+          "1000": 58,
+          "2000": 62,
+          "4000": 66,
+          "8000": 59,
+          "16000": 55,
+          "Vol": 51
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 38,
+          "Decay": 44
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "live-forever-guitar-main-riff",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:49:53.928Z",
+    "updatedAt": "2026-07-12T13:49:53.928Z"
+  },
+  {
+    "id": "gen_mrhuou21_sot2jjdqj",
+    "origin": {
+      "artistId": 72,
+      "song": "Lazaretto",
+      "part": "Main Riff and Solo",
+      "imageUrl": null
+    },
+    "description": "Raw, aggressive, fuzzy, mid-forward with pronounced attack, gritty edge, slightly lo-fi, and dynamic response. The tone has a saturated, vintage fuzz character with good note separation and some natural compression. It should cut through the mix but not be overly bright.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 40,
+          "Decay": 65
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "Mono Octave",
+        "enabled": true,
+        "params": {
+          "Sub": 25,
+          "Dry": 60,
+          "Up": 65
+        }
+      },
+      "effect": {
+        "type": "Muff Fuzz",
+        "enabled": true,
+        "params": {
+          "Volume": 65,
+          "Sustain": 80,
+          "Tone": 40
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 70,
+          "Master": 62,
+          "Bass": 48,
+          "Middle": 68,
+          "Treble": 38,
+          "Bright": 40
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 48,
+          "HighCut": 38
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 32,
+          "Decay": 40
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "lazaretto-guitar-main-riff-and-solo",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:50:05.407Z",
+    "updatedAt": "2026-07-12T13:50:05.407Z"
+  },
+  {
+    "id": "gen_mrhup2fl_io0th80ex",
+    "origin": {
+      "artistId": 73,
+      "song": "Gone Away",
+      "part": "Main Riff",
+      "imageUrl": null
+    },
+    "description": "Thick, punchy distortion with strong midrange presence, tight low end, moderate brightness, and a raw, aggressive attack. The tone is cutting but not overly harsh, with enough clarity for power chords to ring out clearly. Sustain is present but not excessive, and the overall sound is direct and energetic.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 40
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 72,
+          "Tone": 57
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 68,
+          "Master": 63,
+          "Bass": 46,
+          "Middle": 68,
+          "Treble": 54,
+          "Presence": 48
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "LowCut": 54,
+          "HighCut": 42
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 42,
+          "62": 44,
+          "125": 47,
+          "250": 52,
+          "500": 60,
+          "1000": 64,
+          "2000": 62,
+          "4000": 54,
+          "8000": 44,
+          "16000": 40,
+          "Vol": 55
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": true,
+        "params": {
+          "Level": 19,
+          "Decay": 28,
+          "Tone": 53
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "gone-away-guitar-main-riff",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:50:16.245Z",
+    "updatedAt": "2026-07-12T13:50:16.245Z"
+  },
+  {
+    "id": "gen_mrhupaf3_grl5uk0g5",
+    "origin": {
+      "artistId": 42,
+      "song": "Black Magic Woman",
+      "part": "Intro",
+      "imageUrl": null
+    },
+    "description": "Warm, smooth, and sustaining lead tone with a touch of overdrive; expressive dynamics, prominent midrange, rounded highs, and singing sustain. Not harsh or aggressive, but rich and vocal-like.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 38,
+          "Clipping": 45
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 59,
+          "Drive": 26,
+          "Tone": 41
+        }
+      },
+      "amplifier": {
+        "type": "SLO 100",
+        "enabled": true,
+        "params": {
+          "Gain": 34,
+          "Master": 60,
+          "Bass": 48,
+          "Middle": 65,
+          "Treble": 41,
+          "Presence": 38
+        }
+      },
+      "cabinet": {
+        "type": "CALI 112",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 46,
+          "HighCut": 41
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 50,
+          "62": 49,
+          "125": 51,
+          "250": 54,
+          "500": 62,
+          "1000": 63,
+          "2000": 58,
+          "4000": 47,
+          "8000": 39,
+          "16000": 36,
+          "Vol": 52
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 48,
+          "Decay": 57
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 19,
+          "Feedback": 24,
+          "Time": 28
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "black-magic-woman-guitar-intro",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:50:26.615Z",
+    "updatedAt": "2026-07-12T13:50:26.615Z"
+  },
+  {
+    "id": "gen_mrhupipk_f1fs2x3vx",
+    "origin": {
+      "artistId": 74,
+      "song": "The Thrill Is Gone",
+      "part": "Solo",
+      "imageUrl": null
+    },
+    "description": "Smooth, clean, and expressive lead tone with clear highs and warm lows. Slight breakup when picking hard, rich sustain, and natural dynamic response. Touch-sensitive with a singing quality, moderate brightness, and subtle airiness. Not overly compressed, allowing for nuanced phrasing.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 58,
+          "Clipping": 35
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Blues Drive",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Gain": 28,
+          "Tone": 46
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 54,
+          "Master": 55,
+          "Bass": 44,
+          "Middle": 58,
+          "Treble": 61,
+          "Bright": 60
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 54,
+          "HighCut": 58
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 44,
+          "220": 47,
+          "500": 51,
+          "1200": 57,
+          "2600": 59,
+          "6400": 53
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 39,
+          "Decay": 54
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "the-thrill-is-gone-guitar-solo",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/bb-king-the-thrill-is-gone-tab-s2316",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:50:37.365Z",
+    "updatedAt": "2026-07-12T13:50:37.365Z"
+  },
+  {
+    "id": "gen_mrhuprux_c979hhvtn",
+    "origin": {
+      "artistId": 62,
+      "song": "Bir Derdim Var",
+      "part": "Intro",
+      "imageUrl": null
+    },
+    "description": "Clean yet slightly overdriven tone with mild warmth and shimmer, moderate attack, and subtle ambience. The sound is open, slightly jangly, and sits well in a modern rock mix without being harsh. There is a hint of modulation and room reverb for spaciousness.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 40,
+          "Decay": 60
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Sustain": 40,
+          "Clipping": 35
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 38,
+          "Depth": 32
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Drive": 25,
+          "Tone": 42
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 36,
+          "Master": 58,
+          "Bass": 48,
+          "Treble": 43,
+          "Cut": 46
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 50,
+          "HighCut": 46
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 48,
+          "220": 51,
+          "500": 55,
+          "1200": 57,
+          "2600": 50,
+          "6400": 44
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": true,
+        "params": {
+          "Level": 43,
+          "Decay": 35,
+          "Tone": 53
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "neck"
+    },
+    "slug": "bir-derdim-var-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/mor-ve-otesi-bir-derdim-var-tab-s388668",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:50:49.216Z",
+    "updatedAt": "2026-07-12T13:50:49.216Z"
+  },
+  {
+    "id": "gen_mrhuq0tn_6hkr3z1yg",
+    "origin": {
+      "artistId": 75,
+      "song": "Runaway",
+      "part": "Outro",
+      "imageUrl": null
+    },
+    "description": "Bright and jangly with pronounced attack and clarity, moderate twang, spring reverb depth, clean but lively dynamics, slight warmth and compression for sustain. Characteristic of early '60s surf and pop instrumental tones.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "Sustain": 58,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Distortion+",
+        "enabled": false,
+        "params": {
+          "Output": 50,
+          "Sensitivity": 50
+        }
+      },
+      "amplifier": {
+        "type": "Deluxe Rvb",
+        "enabled": true,
+        "params": {
+          "Gain": 33,
+          "Master": 62,
+          "Bass": 40,
+          "Middle": 48,
+          "Treble": 68
+        }
+      },
+      "cabinet": {
+        "type": "DR112",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 58,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 43,
+          "62": 45,
+          "125": 47,
+          "250": 48,
+          "500": 52,
+          "1000": 57,
+          "2000": 61,
+          "4000": 66,
+          "8000": 72,
+          "16000": 68,
+          "Vol": 54
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 67,
+          "Decay": 62
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 8,
+      "position": "bridge"
+    },
+    "slug": "runaway-guitar-outro",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:51:00.821Z",
+    "updatedAt": "2026-07-12T13:51:00.821Z"
+  },
+  {
+    "id": "gen_mrhuq9e0_l2voyhqok",
+    "origin": {
+      "artistId": 76,
+      "song": "Laid to Rest",
+      "part": "Main Riff",
+      "imageUrl": null
+    },
+    "description": "Aggressive, tight, percussive high-gain rhythm tone with pronounced midrange, sharp attack, thick low end, and minimal ambience. The tone is dry, focused, and articulated for fast palm-muted chugging while remaining clear for complex riffing.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 60,
+          "Decay": 30
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 70,
+          "Drive": 15,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 78,
+          "Master": 55,
+          "Bass": 46,
+          "Middle": 64,
+          "Treble": 73,
+          "Presence": 60
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 60,
+          "HighCut": 57
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 44,
+          "62": 42,
+          "125": 46,
+          "250": 38,
+          "500": 42,
+          "1000": 55,
+          "2000": 62,
+          "4000": 68,
+          "8000": 58,
+          "16000": 55,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 10,
+      "position": "bridge"
+    },
+    "slug": "laid-to-rest-guitar-main-riff",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:51:11.932Z",
+    "updatedAt": "2026-07-12T13:51:11.932Z"
+  },
+  {
+    "id": "gen_mrhuqkh5_2bvj8o52s",
+    "origin": {
+      "artistId": 77,
+      "song": "Soothsayer",
+      "part": "Lead Parts",
+      "imageUrl": null
+    },
+    "description": "Searing, sustaining lead tone with smooth, singing character. High gain yet articulate, with a pronounced midrange for cutting through the mix. Fluid legato-friendly response, clear pick attack, and a touch of ambience for spaciousness. Not overly bright or harsh; retains warmth and depth.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 60
+        }
+      },
+      "compressor": {
+        "type": "Studio Comp",
+        "enabled": true,
+        "params": {
+          "Gain": 55,
+          "Threshold": 60,
+          "Ratio": 40,
+          "Release": 45
+        }
+      },
+      "modulation": {
+        "type": "Detune",
+        "enabled": true,
+        "params": {
+          "Shift-L": 47,
+          "Shift-R": 53,
+          "Mix": 28
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 65,
+          "Drive": 28,
+          "Tone": 42
+        }
+      },
+      "amplifier": {
+        "type": "Brit 2000",
+        "enabled": true,
+        "params": {
+          "Gain": 82,
+          "Master": 67,
+          "Bass": 44,
+          "Middle": 74,
+          "Treble": 54,
+          "Presence": 46
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "LowCut": 56,
+          "HighCut": 45
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 40,
+          "62": 41,
+          "125": 44,
+          "250": 46,
+          "500": 57,
+          "1000": 60,
+          "2000": 65,
+          "4000": 63,
+          "8000": 46,
+          "16000": 37,
+          "Vol": 51
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 30,
+          "Decay": 54
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 38,
+          "Feedback": 41,
+          "Time": 61
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "soothsayer-guitar-lead-parts",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:51:26.305Z",
+    "updatedAt": "2026-07-12T13:51:26.305Z"
+  },
+  {
+    "id": "gen_mrhuqt9q_o7g2fjlpv",
+    "origin": {
+      "artistId": 70,
+      "song": "Almost Easy",
+      "part": "Main Riff and Solo",
+      "imageUrl": null
+    },
+    "description": "Tight, aggressive, and saturated high-gain tone with pronounced attack, clear note separation, and a slightly scooped midrange for the main riff. The solo adds sustain and clarity, with slightly more presence and smoothness for lead articulation.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": true,
+        "params": {
+          "Rate": 25,
+          "Depth": 18,
+          "Intensity": 22
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 78,
+          "Drive": 18,
+          "Tone": 62
+        }
+      },
+      "amplifier": {
+        "type": "Dual Rect",
+        "enabled": true,
+        "params": {
+          "Gain": 85,
+          "Master": 67,
+          "Bass": 62,
+          "Middle": 32,
+          "Treble": 68,
+          "Presence": 62
+        }
+      },
+      "cabinet": {
+        "type": "RECT 412",
+        "enabled": true,
+        "params": {
+          "Level": 56,
+          "LowCut": 42,
+          "HighCut": 60
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 58,
+          "62": 62,
+          "125": 60,
+          "250": 50,
+          "500": 41,
+          "1000": 36,
+          "2000": 48,
+          "4000": 60,
+          "8000": 67,
+          "16000": 58,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 36,
+          "Decay": 40
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 33,
+          "Feedback": 22,
+          "Time": 41
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "almost-easy-guitar-main-riff-and-solo",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:51:37.703Z",
+    "updatedAt": "2026-07-12T13:51:37.703Z"
+  },
+  {
+    "id": "gen_mrhur24r_9hu3by6in",
+    "origin": {
+      "artistId": 78,
+      "song": "Reelin' in the Years",
+      "part": "Intro Solo",
+      "imageUrl": null
+    },
+    "description": "Bright, cutting, and articulate lead tone with moderate distortion; pronounced attack, glassy highs, tight low end, and singing sustain; slightly compressed with a touch of vintage warmth and clarity.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 57,
+          "Clipping": 44
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 45,
+          "Tone": 70
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 58,
+          "Master": 55,
+          "Bass": 39,
+          "Middle": 50,
+          "Treble": 67,
+          "Bright": 70
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 60,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 44,
+          "220": 47,
+          "500": 52,
+          "1200": 61,
+          "2600": 66,
+          "6400": 62
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 37,
+          "Decay": 45
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "reelin-in-the-years-guitar-intro-solo",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:51:49.182Z",
+    "updatedAt": "2026-07-12T13:51:49.182Z"
+  },
+  {
+    "id": "gen_mrhur9z7_j1jm39w7j",
+    "origin": {
+      "artistId": 73,
+      "song": "Original Prankster",
+      "part": "Full Song",
+      "imageUrl": null
+    },
+    "description": "Crunchy and tight with moderate gain, strong midrange presence, clear attack, slight brightness, and enough body to cut through a mix without excessive low end. The tone is energetic and punchy, facilitating palm-muted riffs and open chords with clarity.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 40
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 60,
+          "Drive": 62,
+          "Tone": 65
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 64,
+          "Master": 60,
+          "Bass": 38,
+          "Middle": 67,
+          "Treble": 62,
+          "Presence": 58
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 58,
+          "HighCut": 52
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": false,
+        "params": {
+          "100": 50,
+          "220": 50,
+          "500": 50,
+          "1200": 50,
+          "2600": 50,
+          "6400": 50
+        }
+      },
+      "reverb": {
+        "type": "Room",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Decay": 50,
+          "Tone": 50
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "original-prankster-guitar-full-song",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/offspring-original-prankster-tab-s22828",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:51:59.341Z",
+    "updatedAt": "2026-07-12T13:51:59.341Z"
+  },
+  {
+    "id": "gen_mrhurl4u_4y79apdbs",
+    "origin": {
+      "artistId": 79,
+      "song": "I Believe in a Thing Called Love",
+      "part": "Full Song",
+      "imageUrl": null
+    },
+    "description": "Bright, punchy, and energetic tone with a crisp top end and tight low end. The sound is dynamic with a slightly scooped midrange, singing sustain, and an overall vintage rock character reminiscent of late ‘70s and early ‘80s British amps. The tone is aggressive enough for rhythm power chords but articulate and smooth for lead lines, with a touch of roominess.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 40,
+          "Clipping": 30
+        }
+      },
+      "modulation": {
+        "type": "Phase 90",
+        "enabled": true,
+        "params": {
+          "Speed": 35
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 48,
+          "Drive": 58,
+          "Tone": 68
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 62,
+          "Master": 54,
+          "Bass": 42,
+          "Middle": 38,
+          "Treble": 66,
+          "Presence": 70
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 58,
+          "HighCut": 65
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 44,
+          "62": 47,
+          "125": 49,
+          "250": 45,
+          "500": 40,
+          "1000": 38,
+          "2000": 52,
+          "4000": 62,
+          "8000": 67,
+          "16000": 70,
+          "Vol": 53
+        }
+      },
+      "reverb": {
+        "type": "Hall",
+        "enabled": true,
+        "params": {
+          "Level": 40,
+          "Decay": 37,
+          "PreDelay": 30,
+          "Liveliness": 54
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 32,
+          "Feedback": 25,
+          "Time": 27
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "i-believe-in-a-thing-called-love-guitar-full-song",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/darkness-i-believe-in-a-thing-called-love-100-correct-tab-s2450237",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:52:13.797Z",
+    "updatedAt": "2026-07-12T13:52:13.797Z"
+  },
+  {
+    "id": "gen_mrhurv2y_7uzx4an74",
+    "origin": {
+      "artistId": 71,
+      "song": "Supersonic",
+      "part": "Solo",
+      "imageUrl": null
+    },
+    "description": "Warm, slightly overdriven lead tone with clear articulation, moderate sustain, mild grit, and a touch of vintage character. The sound is punchy but not overly compressed, with a hint of ambient space for depth. The highs are present but not harsh, and mids are pronounced for lead prominence.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 40,
+          "Decay": 65
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 58,
+          "Clipping": 38
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 48,
+          "Drive": 54,
+          "Tone": 42
+        }
+      },
+      "amplifier": {
+        "type": "Class A30",
+        "enabled": true,
+        "params": {
+          "Gain": 56,
+          "Master": 63,
+          "Bass": 48,
+          "Treble": 45,
+          "Cut": 60
+        }
+      },
+      "cabinet": {
+        "type": "A212",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 53,
+          "HighCut": 44
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 48,
+          "62": 49,
+          "125": 52,
+          "250": 55,
+          "500": 62,
+          "1000": 67,
+          "2000": 63,
+          "4000": 57,
+          "8000": 45,
+          "16000": 42,
+          "Vol": 53
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 43,
+          "Decay": 57
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 28,
+          "Feedback": 19,
+          "Time": 30
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "supersonic-guitar-solo",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:52:26.689Z",
+    "updatedAt": "2026-07-12T13:52:26.689Z"
+  },
+  {
+    "id": "gen_mrhus3om_2wwo2ozqq",
+    "origin": {
+      "artistId": 6,
+      "song": "Who Knows (Live at Fillmore East)",
+      "part": "Intro",
+      "imageUrl": null
+    },
+    "description": "Raw, dynamic, and expressive tone with a woody attack, slightly fuzzy overdrive, pronounced midrange, and rounded highs; rich sustain, organic feel, and a touch of ambience for live spaciousness.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": false,
+        "params": {
+          "Level": 50,
+          "Sustain": 50,
+          "Clipping": 50
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Muff Fuzz",
+        "enabled": true,
+        "params": {
+          "Volume": 65,
+          "Sustain": 72,
+          "Tone": 42
+        }
+      },
+      "amplifier": {
+        "type": "Plexi 100",
+        "enabled": true,
+        "params": {
+          "Gain": 68,
+          "Master": 62,
+          "Bass": 54,
+          "Middle": 65,
+          "Treble": 48,
+          "Presence": 44
+        }
+      },
+      "cabinet": {
+        "type": "M1960AX",
+        "enabled": true,
+        "params": {
+          "Level": 50,
+          "LowCut": 42,
+          "HighCut": 53
+        }
+      },
+      "eq": {
+        "type": "6-Band",
+        "enabled": true,
+        "params": {
+          "100": 48,
+          "220": 54,
+          "500": 60,
+          "1200": 65,
+          "2600": 54,
+          "6400": 44
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 31,
+          "Decay": 36
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "single",
+      "tone": 10,
+      "position": "neck"
+    },
+    "slug": "who-knows-live-at-fillmore-east-guitar-intro",
+    "tabsUrl": "https://www.songsterr.com/a/wsa/jimi-hendrix-who-knows-tab-s8817t0",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:52:37.841Z",
+    "updatedAt": "2026-07-12T13:52:37.841Z"
+  },
+  {
+    "id": "gen_mrhusdej_zi74xnt3j",
+    "origin": {
+      "artistId": 80,
+      "song": "Pour Some Sugar on Me",
+      "part": "Intro and Solo",
+      "imageUrl": null
+    },
+    "description": "Bright, polished, and harmonically rich high-gain tone with pronounced midrange and a smooth top end. The sound is tight, sustaining, and slightly compressed, with notable clarity for chords and singing sustain for leads. There is a touch of reverb and delay for width, but not excessive. The tone cuts through the mix with a processed, radio-ready sheen typical of 80s production.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 35
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "Sustain": 55,
+          "Clipping": 40
+        }
+      },
+      "modulation": {
+        "type": "CE-2",
+        "enabled": true,
+        "params": {
+          "Rate": 38,
+          "Depth": 28
+        }
+      },
+      "effect": {
+        "type": "Dist One",
+        "enabled": true,
+        "params": {
+          "Level": 58,
+          "Drive": 70,
+          "Tone": 63
+        }
+      },
+      "amplifier": {
+        "type": "Brit 800",
+        "enabled": true,
+        "params": {
+          "Gain": 72,
+          "Master": 60,
+          "Bass": 38,
+          "Middle": 72,
+          "Treble": 62,
+          "Presence": 60
+        }
+      },
+      "cabinet": {
+        "type": "M1960AV",
+        "enabled": true,
+        "params": {
+          "Level": 54,
+          "LowCut": 62,
+          "HighCut": 55
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 40,
+          "62": 40,
+          "125": 45,
+          "250": 48,
+          "500": 55,
+          "1000": 63,
+          "2000": 67,
+          "4000": 65,
+          "8000": 60,
+          "16000": 56,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 43,
+          "Decay": 42
+        }
+      },
+      "delay": {
+        "type": "Digital Delay",
+        "enabled": true,
+        "params": {
+          "E.Level": 36,
+          "Feedback": 30,
+          "Time": 36
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "pour-some-sugar-on-me-guitar-intro-and-solo",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:52:50.439Z",
+    "updatedAt": "2026-07-12T13:52:50.439Z"
+  },
+  {
+    "id": "gen_mrhusmj4_um0cpiaul",
+    "origin": {
+      "artistId": 42,
+      "song": "Black Magic Woman",
+      "part": "Solo",
+      "imageUrl": null
+    },
+    "description": "Smooth, sustaining lead tone with a vocal-like singing quality. Warm mids, rounded highs, controlled low end, and expressive dynamics. Slightly saturated with creamy overdrive, subtle touch of ambience, and excellent note definition.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": true,
+        "params": {
+          "Sensitivity": 35,
+          "Decay": 65
+        }
+      },
+      "compressor": {
+        "type": "K Comp",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "Sustain": 60,
+          "Clipping": 45
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "T Screamer",
+        "enabled": true,
+        "params": {
+          "Level": 58,
+          "Drive": 37,
+          "Tone": 41
+        }
+      },
+      "amplifier": {
+        "type": "SLO 100",
+        "enabled": true,
+        "params": {
+          "Gain": 47,
+          "Master": 56,
+          "Bass": 44,
+          "Middle": 67,
+          "Treble": 38,
+          "Presence": 45
+        }
+      },
+      "cabinet": {
+        "type": "CALI 112",
+        "enabled": true,
+        "params": {
+          "Level": 52,
+          "LowCut": 44,
+          "HighCut": 42
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 40,
+          "62": 45,
+          "125": 48,
+          "250": 50,
+          "500": 60,
+          "1000": 67,
+          "2000": 64,
+          "4000": 46,
+          "8000": 35,
+          "16000": 35,
+          "Vol": 50
+        }
+      },
+      "reverb": {
+        "type": "Plate",
+        "enabled": true,
+        "params": {
+          "Level": 41,
+          "Decay": 54
+        }
+      },
+      "delay": {
+        "type": "Tape Echo",
+        "enabled": true,
+        "params": {
+          "Level": 27,
+          "Time": 38,
+          "Repeat": 32
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 6,
+      "position": "neck"
+    },
+    "slug": "black-magic-woman-guitar-solo",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:53:02.265Z",
+    "updatedAt": "2026-07-12T13:53:02.265Z"
+  },
+  {
+    "id": "gen_mrhuswpa_uq8r8vgac",
+    "origin": {
+      "artistId": 39,
+      "song": "Polk Salad Annie",
+      "part": "Outro",
+      "imageUrl": null
+    },
+    "description": "Raw, punchy, slightly overdriven tone with a touch of grit; warm mids, clear but not overly bright highs, solid low-end presence; dynamic and responsive to picking attack, with a touch of ambience for 'live' feel.",
+    "chain": {
+      "noisegate": {
+        "type": "Noise Gate",
+        "enabled": false,
+        "params": {
+          "Sensitivity": 50,
+          "Decay": 50
+        }
+      },
+      "compressor": {
+        "type": "Studio Comp",
+        "enabled": true,
+        "params": {
+          "Gain": 54,
+          "Threshold": 43,
+          "Ratio": 37,
+          "Release": 55
+        }
+      },
+      "modulation": {
+        "type": "CE-1",
+        "enabled": false,
+        "params": {
+          "Rate": 50,
+          "Depth": 50,
+          "Intensity": 50
+        }
+      },
+      "effect": {
+        "type": "Blues Drive",
+        "enabled": true,
+        "params": {
+          "Level": 55,
+          "Gain": 34,
+          "Tone": 45
+        }
+      },
+      "amplifier": {
+        "type": "Twin Reverb",
+        "enabled": true,
+        "params": {
+          "Gain": 60,
+          "Master": 63,
+          "Bass": 58,
+          "Middle": 62,
+          "Treble": 47,
+          "Bright": 40
+        }
+      },
+      "cabinet": {
+        "type": "TR212",
+        "enabled": true,
+        "params": {
+          "Level": 53,
+          "LowCut": 42,
+          "HighCut": 43
+        }
+      },
+      "eq": {
+        "type": "10-Band",
+        "enabled": true,
+        "params": {
+          "31": 48,
+          "62": 50,
+          "125": 53,
+          "250": 56,
+          "500": 62,
+          "1000": 65,
+          "2000": 62,
+          "4000": 54,
+          "8000": 44,
+          "16000": 40,
+          "Vol": 51
+        }
+      },
+      "reverb": {
+        "type": "Spring",
+        "enabled": true,
+        "params": {
+          "Level": 58,
+          "Decay": 63
+        }
+      },
+      "delay": {
+        "type": "Analog Delay",
+        "enabled": false,
+        "params": {
+          "Intensity": 50,
+          "Rate": 50,
+          "Echo": 50
+        }
+      }
+    },
+    "pickup": {
+      "type": "humbucker",
+      "tone": 7,
+      "position": "bridge"
+    },
+    "slug": "polk-salad-annie-guitar-outro",
+    "isDraft": false,
+    "humanVerified": false,
+    "createdAt": "2026-07-12T13:53:15.447Z",
+    "updatedAt": "2026-07-12T13:53:15.447Z"
   }
 ]

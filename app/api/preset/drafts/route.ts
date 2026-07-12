@@ -31,6 +31,7 @@ export async function GET() {
         slug: string;
         tabsUrl?: string;
         isDraft?: boolean;
+        humanVerified?: boolean;
         createdAt: string | null;
         updatedAt: string;
       }>
@@ -69,6 +70,7 @@ export async function GET() {
           slug: preset.slug,
           tabsUrl: preset.tabsUrl,
           isDraft: preset.isDraft ?? false,
+          humanVerified: preset.humanVerified ?? true,
           createdAt: preset.createdAt,
           updatedAt: preset.updatedAt,
         };

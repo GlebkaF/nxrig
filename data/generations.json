@@ -1,6 +1,5385 @@
 {
   "generations": [
     {
+      "timestamp": "2026-07-12T13:53:15.385Z",
+      "originalPrompt": "Elvis Presley — Polk Salad Annie — Outro guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Polk Salad Annie — Outro Guitar Tone",
+        "genre": "Classic Rock / Blues Rock",
+        "sound_description": "Raw, punchy, slightly overdriven tone with a touch of grit; warm mids, clear but not overly bright highs, solid low-end presence; dynamic and responsive to picking attack, with a touch of ambience for 'live' feel.",
+        "guitar_rig_description": "Noise gate: not used (vintage tones benefit from natural noise). Compressor: light compression to smooth dynamics and add sustain. Overdrive: low-gain overdrive for edge-of-breakup crunch, retaining pick dynamics. Amplifier: classic American-style tube amp (Fender or similar) set near breakup for warmth and touch sensitivity. Cabinet: matching 2x12 open-back cab for airy, vintage character. EQ: subtle post-amp EQ to emphasize mids and roll off excessive highs. Modulation: not used. Delay: not used. Reverb: spring reverb for classic spaciousness and liveliness.",
+        "references": [
+          "Elvis Presley live performances",
+          "Tony Joe White — Polk Salad Annie",
+          "Creedence Clearwater Revival — Born on the Bayou"
+        ],
+        "song_part": "outro lead/solo",
+        "preferred_pickup": "bridge single-coil or low-output humbucker, tone knob rolled back slightly for warmth",
+        "additional_info": "Use moderate string gauge (e.g., .010–.046), play with strong, dynamic picking; palm muting and fingerpicking add character; let notes ring out for natural sustain."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Analogman King of Tone (set to low gain, overdrive mode)",
+          "MXR 10-Band EQ",
+          "Strymon Flint (Spring Reverb mode, '60s setting, mix ~20%)"
+        ],
+        "amplifier": "Fender '65 Twin Reverb",
+        "cabinet": "Fender 212 Cabinet with Jensen C12K 2x12\" speakers, open-back",
+        "settings": {
+          "amp": {
+            "Gain (Volume)": 5.5,
+            "Bass": 5,
+            "Middle": 6.5,
+            "Treble": 4.5,
+            "Presence": 6,
+            "Reverb": 2.5,
+            "Master": 5
+          },
+          "compressor": {
+            "Blend": 50,
+            "Volume": 11,
+            "Comp": 9
+          },
+          "overdrive": {
+            "Drive": 3,
+            "Volume": 2,
+            "Tone": 11,
+            "OD Mode": "Overdrive"
+          },
+          "eq": {
+            "800Hz": "+2dB",
+            "3.2kHz": "+1dB",
+            "12.5kHz": "-2dB",
+            "31.25Hz": "-1dB"
+          },
+          "reverb": {
+            "Mix": 20,
+            "Decay": 40,
+            "Color": "Bright"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 54,
+            "Threshold": 43,
+            "Ratio": 37,
+            "Release": 55
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Blues Drive",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Gain": 34,
+            "Tone": 45
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 60,
+            "Master": 63,
+            "Bass": 58,
+            "Middle": 62,
+            "Treble": 47,
+            "Bright": 40
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 42,
+            "HighCut": 43
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 48,
+            "62": 50,
+            "125": 53,
+            "250": 56,
+            "500": 62,
+            "1000": 65,
+            "2000": 62,
+            "4000": 54,
+            "8000": 44,
+            "16000": 40,
+            "Vol": 51
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 58,
+            "Decay": 63
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Threshold": 43,
+                "Ratio": 37,
+                "Release": 55
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Blues Drive",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Gain": 34,
+                "Tone": 45
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 60,
+                "Master": 63,
+                "Bass": 58,
+                "Middle": 62,
+                "Treble": 47,
+                "Bright": 40
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 42,
+                "HighCut": 43
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 48,
+                "62": 50,
+                "125": 53,
+                "250": 56,
+                "500": 62,
+                "1000": 65,
+                "2000": 62,
+                "4000": 54,
+                "8000": 44,
+                "16000": 40,
+                "Vol": 51
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Decay": 63
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Elvis Presley — Polk Salad Annie — Outro guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:53:15.385Z"
+        }
+      ],
+      "id": "gen_mrhuswpa_uq8r8vgac",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:53:02.202Z",
+      "originalPrompt": "Carlos Santana — Black Magic Woman — Solo guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Black Magic Woman — Solo Guitar Tone",
+        "genre": "Classic Rock / Latin Rock",
+        "sound_description": "Smooth, sustaining lead tone with a vocal-like singing quality. Warm mids, rounded highs, controlled low end, and expressive dynamics. Slightly saturated with creamy overdrive, subtle touch of ambience, and excellent note definition.",
+        "guitar_rig_description": "1. Noise Gate: used lightly to reduce minor hum without choking sustain. 2. Compressor: applied subtly for even dynamics and increased sustain. 3. Overdrive: smooth, low-to-mid gain overdrive to achieve creamy saturation and mild breakup, without harshness. 4. Amplifier: classic British-style tube amp model (e.g., Marshall or Dumble-style), set for warm, mid-forward clean-to-crunch base. 5. Cabinet: 1x12 or 2x12 open-back cab sim with vintage-voiced speakers for a natural, rounded response. 6. EQ: post-amp, used to roll off harsh highs and tighten low end if needed, with emphasis on upper mids for vocal quality. 7. Modulation: not used. 8. Delay: subtle, short analog/tape-style delay for thickness and slight rhythmic echo, mixed low. 9. Reverb: moderate room or plate reverb to add smooth ambience and depth.",
+        "references": [
+          "Santana — Black Magic Woman",
+          "Santana — Europa",
+          "Santana — Samba Pa Ti"
+        ],
+        "song_part": "solo",
+        "preferred_pickup": "neck humbucker, tone = 6-8 (rolled back slightly for warmth)",
+        "additional_info": "Use the neck pickup for a woody, vocal sound. Play with expressive vibrato and sustain. Use .010–.046 string gauge for balanced feel. Pick attack should be smooth, with occasional finger vibrato for signature Santana expressiveness."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ISP Technologies Decimator II Noise Reduction",
+          "Keeley Compressor Plus",
+          "Ibanez TS808 Tube Screamer",
+          "MXR M108S Ten Band EQ",
+          "Strymon El Capistan dTape Echo",
+          "Boss RV-6 Reverb (Plate mode)"
+        ],
+        "amplifier": "Mesa/Boogie Mark I Reissue Combo",
+        "cabinet": "Mesa/Boogie 1x12 Open Back Cabinet with Celestion Black Shadow C90",
+        "settings": {
+          "amp": {
+            "Gain": 6,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 4,
+            "Master": 5
+          },
+          "noise_gate": {
+            "Threshold": "-30 dB"
+          },
+          "compressor": {
+            "Sustain": 2,
+            "Level": 6,
+            "Blend": 50,
+            "Attack": 2
+          },
+          "overdrive": {
+            "Drive": 4.5,
+            "Tone": 4,
+            "Level": 7
+          },
+          "eq": {
+            "62Hz": "-2dB",
+            "250Hz": "0dB",
+            "1kHz": "+2dB",
+            "2kHz": "+3dB",
+            "8kHz": "-2dB"
+          },
+          "delay": {
+            "Time": "380ms",
+            "Repeats": 2,
+            "Mix": 15
+          },
+          "reverb": {
+            "Level": 30,
+            "Tone": 5,
+            "Time": 3
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 35,
+            "Decay": 65
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "Sustain": 60,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 58,
+            "Drive": 37,
+            "Tone": 41
+          }
+        },
+        "amplifier": {
+          "type": "SLO 100",
+          "enabled": true,
+          "params": {
+            "Gain": 47,
+            "Master": 56,
+            "Bass": 44,
+            "Middle": 67,
+            "Treble": 38,
+            "Presence": 45
+          }
+        },
+        "cabinet": {
+          "type": "CALI 112",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 44,
+            "HighCut": 42
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 40,
+            "62": 45,
+            "125": 48,
+            "250": 50,
+            "500": 60,
+            "1000": 67,
+            "2000": 64,
+            "4000": 46,
+            "8000": 35,
+            "16000": 35,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 41,
+            "Decay": 54
+          }
+        },
+        "delay": {
+          "type": "Tape Echo",
+          "enabled": true,
+          "params": {
+            "Level": 27,
+            "Time": 38,
+            "Repeat": 32
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 35,
+                "Decay": 65
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "Sustain": 60,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Drive": 37,
+                "Tone": 41
+              }
+            },
+            "amplifier": {
+              "type": "SLO 100",
+              "enabled": true,
+              "params": {
+                "Gain": 47,
+                "Master": 56,
+                "Bass": 44,
+                "Middle": 67,
+                "Treble": 38,
+                "Presence": 45
+              }
+            },
+            "cabinet": {
+              "type": "CALI 112",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 44,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 40,
+                "62": 45,
+                "125": 48,
+                "250": 50,
+                "500": 60,
+                "1000": 67,
+                "2000": 64,
+                "4000": 46,
+                "8000": 35,
+                "16000": 35,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 41,
+                "Decay": 54
+              }
+            },
+            "delay": {
+              "type": "Tape Echo",
+              "enabled": true,
+              "params": {
+                "Level": 27,
+                "Time": 38,
+                "Repeat": 32
+              }
+            }
+          },
+          "prompt": "Carlos Santana — Black Magic Woman — Solo guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:53:02.202Z"
+        }
+      ],
+      "id": "gen_mrhusmj4_um0cpiaul",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:52:50.373Z",
+      "originalPrompt": "Def Leppard — Pour Some Sugar on Me — Intro and Solo guitar tone for NUX Mighty Plug Pro.",
+      "proDescription": {
+        "tone_title": "Pour Some Sugar on Me — Intro and Solo",
+        "genre": "1980s Glam Rock / Arena Rock",
+        "sound_description": "Bright, polished, and harmonically rich high-gain tone with pronounced midrange and a smooth top end. The sound is tight, sustaining, and slightly compressed, with notable clarity for chords and singing sustain for leads. There is a touch of reverb and delay for width, but not excessive. The tone cuts through the mix with a processed, radio-ready sheen typical of 80s production.",
+        "guitar_rig_description": "1. Noise Gate: Used at the front of the chain to control hiss and feedback from high-gain settings, keeping the rig tight and clean. 2. Compressor: Light compression applied before the amp to even out picking dynamics, add sustain, and help chords ring evenly. 3. Overdrive/Distortion: A classic 80s-style distortion pedal (such as a Boss DS-1 or similar) used to push the amp for extra saturation and harmonics. 4. Amplifier: British high-gain amp model (e.g., JCM800 or similar), dialed in for crunch and sustain with prominent mids and a slightly scooped low end. 5. Cabinet: 4x12 closed-back cabinet model with bright, detailed speakers (like Celestion Vintage 30). 6. EQ: Post-amp EQ to enhance upper mids and cut any unwanted low-end boom, giving the tone its signature bite and clarity. 7. Modulation: Subtle stereo chorus used sparingly during the intro/solo to add width and shimmer, but not dominate the sound. 8. Delay: Short, synced digital delay with low feedback for depth and to thicken solos, set for rhythmic repeat but not swampy. 9. Reverb: Plate reverb for a glossy, studio-like ambience, adding space without washing out the core tone.",
+        "references": [
+          "Def Leppard – Pour Some Sugar on Me",
+          "Def Leppard – Hysteria",
+          "Bon Jovi – Livin' on a Prayer"
+        ],
+        "song_part": "Intro and Solo",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use a Superstrat or Les Paul-style guitar with medium-output humbuckers for authentic bite. Pick attack should be assertive but controlled. 9–42 or 10–46 string gauge recommended. Palm muting and precise alternate picking help achieve the tight, defined sound heard in the studio recording."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "MXR Dyna Comp Compressor",
+          "Boss DS-1 Distortion",
+          "MXR 10-Band EQ",
+          "Boss CE-3 Chorus",
+          "Boss DD-3 Digital Delay",
+          "TC Electronic Hall of Fame Reverb (Plate mode)"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960A 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 6,
+            "Master": 4
+          },
+          "noise_gate": {
+            "Threshold": "-40dB",
+            "Decay": "12 o'clock"
+          },
+          "compressor": {
+            "Output": "2 o'clock",
+            "Sensitivity": "9–10 o'clock"
+          },
+          "distortion": {
+            "Tone": "1 o'clock",
+            "Distortion": "2 o'clock",
+            "Level": "Max to taste"
+          },
+          "eq": {
+            "80Hz": "-2dB",
+            "250Hz": "0dB",
+            "1kHz": "+2dB",
+            "2kHz": "+3dB",
+            "4kHz": "+2dB",
+            "8kHz": "+1dB"
+          },
+          "chorus": {
+            "Rate": "10 o'clock",
+            "Depth": "11 o'clock",
+            "Mix": "10 o'clock"
+          },
+          "delay": {
+            "Time": "380ms (dotted 8th)",
+            "Feedback": "10 o'clock",
+            "Level": "9 o'clock"
+          },
+          "reverb": {
+            "Decay": "1 o'clock",
+            "Level": "10 o'clock",
+            "Tone": "12 o'clock"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 55,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 38,
+            "Depth": 28
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 58,
+            "Drive": 70,
+            "Tone": 63
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 72,
+            "Master": 60,
+            "Bass": 38,
+            "Middle": 72,
+            "Treble": 62,
+            "Presence": 60
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 62,
+            "HighCut": 55
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 40,
+            "62": 40,
+            "125": 45,
+            "250": 48,
+            "500": 55,
+            "1000": 63,
+            "2000": 67,
+            "4000": 65,
+            "8000": 60,
+            "16000": 56,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 43,
+            "Decay": 42
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 36,
+            "Feedback": 30,
+            "Time": 36
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 55,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 38,
+                "Depth": 28
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 58,
+                "Drive": 70,
+                "Tone": 63
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 72,
+                "Master": 60,
+                "Bass": 38,
+                "Middle": 72,
+                "Treble": 62,
+                "Presence": 60
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 62,
+                "HighCut": 55
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 40,
+                "62": 40,
+                "125": 45,
+                "250": 48,
+                "500": 55,
+                "1000": 63,
+                "2000": 67,
+                "4000": 65,
+                "8000": 60,
+                "16000": 56,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 43,
+                "Decay": 42
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 36,
+                "Feedback": 30,
+                "Time": 36
+              }
+            }
+          },
+          "prompt": "Def Leppard — Pour Some Sugar on Me — Intro and Solo guitar tone for NUX Mighty Plug Pro.",
+          "timestamp": "2026-07-12T13:52:50.373Z"
+        }
+      ],
+      "id": "gen_mrhusdej_zi74xnt3j",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:52:37.789Z",
+      "originalPrompt": "Jimi Hendrix — Who Knows (Live at Fillmore East) — Intro guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Who Knows (Live at Fillmore East) — Intro Guitar Tone",
+        "genre": "Classic Rock / Psychedelic Blues",
+        "sound_description": "Raw, dynamic, and expressive tone with a woody attack, slightly fuzzy overdrive, pronounced midrange, and rounded highs; rich sustain, organic feel, and a touch of ambience for live spaciousness.",
+        "guitar_rig_description": "Noise gate: not used (to preserve natural dynamics and Hendrix's touch sensitivity). Compressor: not used (the tone relies on natural amp compression and Hendrix's playing dynamics). Overdrive/Distortion/Boost: Used — a vintage-style fuzz pedal emulation (such as Fuzz Face) providing a thick, saturated fuzz with responsive clean-up via guitar volume knob. Amplifier: Used — a vintage-style British amp emulation (such as Marshall Plexi or Super Lead), set to overdrive with rich mids and open highs. Cabinet: Used — 4x12 British cabinet emulation with classic rock voicing, mic positioned for balanced mids and airy top end. EQ: Used — subtle post-amp EQ to tame excessive fizz and enhance midrange presence. Modulation: not used (no chorus, phaser, or vibe on intro). Delay: not used (dry signal). Reverb: Used — subtle plate or room reverb to add live ambience and depth, simulating the Fillmore East environment.",
+        "references": [
+          "Jimi Hendrix — Who Knows (Live at Fillmore East)",
+          "Jimi Hendrix — Machine Gun (Live at Fillmore East)",
+          "Band of Gypsys — Power of Soul (Live)"
+        ],
+        "song_part": "intro riff",
+        "preferred_pickup": "neck single-coil, tone = 10",
+        "additional_info": "Use a Strat-style guitar with vintage-voiced single-coil pickups. Play with fingers or a thin pick for extra articulation. Set guitar volume lower for cleaner passages, roll up for more fuzz. Light to medium string gauge (.010-.046 typical). If available, use the guitar's tone knob to roll off highs as needed. Classic Hendrix touch: dynamic picking and use of volume control is essential."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Dunlop JDF2 Fuzz Face (Germanium)",
+          "Boss GE-7 Graphic Equalizer",
+          "TC Electronic Hall of Fame Mini Reverb (set to Plate)"
+        ],
+        "amplifier": "Marshall 1959SLP Super Lead Plexi 100W",
+        "cabinet": "Marshall 1960AX 4x12 with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Volume I)": 7,
+            "Gain (Volume II)": 3,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 5,
+            "Master": 3
+          },
+          "fuzz": {
+            "Fuzz": 6,
+            "Volume": 7
+          },
+          "eq": {
+            "100Hz": "0dB",
+            "200Hz": "+1dB",
+            "400Hz": "+2dB",
+            "800Hz": "+2dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "-2dB",
+            "6.4kHz": "-3dB"
+          },
+          "reverb": {
+            "Level": 10,
+            "//note": "Set for subtle ambience, just enough to simulate a live room."
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Muff Fuzz",
+          "enabled": true,
+          "params": {
+            "Volume": 65,
+            "Sustain": 72,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Plexi 100",
+          "enabled": true,
+          "params": {
+            "Gain": 68,
+            "Master": 62,
+            "Bass": 54,
+            "Middle": 65,
+            "Treble": 48,
+            "Presence": 44
+          }
+        },
+        "cabinet": {
+          "type": "M1960AX",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 42,
+            "HighCut": 53
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 48,
+            "220": 54,
+            "500": 60,
+            "1200": 65,
+            "2600": 54,
+            "6400": 44
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 31,
+            "Decay": 36
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 65,
+                "Sustain": 72,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Plexi 100",
+              "enabled": true,
+              "params": {
+                "Gain": 68,
+                "Master": 62,
+                "Bass": 54,
+                "Middle": 65,
+                "Treble": 48,
+                "Presence": 44
+              }
+            },
+            "cabinet": {
+              "type": "M1960AX",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 42,
+                "HighCut": 53
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 48,
+                "220": 54,
+                "500": 60,
+                "1200": 65,
+                "2600": 54,
+                "6400": 44
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 31,
+                "Decay": 36
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Jimi Hendrix — Who Knows (Live at Fillmore East) — Intro guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:52:37.789Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/jimi-hendrix-who-knows-tab-s8817t0",
+        "artist": "Jimi Hendrix",
+        "title": "Who Knows (Live at Fillmore East)",
+        "trackType": "Guitar",
+        "suggestedPart": "Intro"
+      },
+      "id": "gen_mrhus3om_2wwo2ozqq",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:52:26.643Z",
+      "originalPrompt": "Oasis — Supersonic — Solo guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Supersonic — Solo Guitar Tone",
+        "genre": "Britpop / Rock",
+        "sound_description": "Warm, slightly overdriven lead tone with clear articulation, moderate sustain, mild grit, and a touch of vintage character. The sound is punchy but not overly compressed, with a hint of ambient space for depth. The highs are present but not harsh, and mids are pronounced for lead prominence.",
+        "guitar_rig_description": "Noise gate: mild setting to reduce hum without cutting sustain. Compressor: light compression to even out picking dynamics and add sustain. Overdrive: mid-gain classic British-style overdrive for slight breakup and warmth. Amplifier: classic British tube amp emulation (e.g., Vox AC30 or Marshall-style), set for edge-of-breakup to light overdrive. Cabinet: matching British 2x12 cabinet IR for vintage vibe and balanced frequency response. EQ: post-amp subtle mid boost for solo presence, slight high roll-off to tame harshness. Modulation: not used. Delay: subtle slapback or short analog-style delay for depth without washing out notes. Reverb: moderate plate or room reverb for natural ambience.",
+        "references": [
+          "Oasis - Supersonic",
+          "Oasis - Live Forever (solo tone)",
+          "The Verve - Bitter Sweet Symphony (lead)"
+        ],
+        "song_part": "solo",
+        "preferred_pickup": "bridge humbucker or bridge single-coil with tone rolled back slightly for warmth",
+        "additional_info": "Bend and vibrato technique important for phrasing; light to medium string gauge recommended for sustain and control. Pick attack should be assertive but not aggressive. Back off guitar volume slightly for cleaner articulation if needed."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ISP Technologies Decimator II (Noise Gate)",
+          "Keeley Compressor Plus (Compressor)",
+          "Fulltone OCD v2 (Overdrive)",
+          "MXR 10-Band EQ",
+          "Boss DD-3T Digital Delay",
+          "Strymon blueSky (Plate Reverb)"
+        ],
+        "amplifier": "Vox AC30C2",
+        "cabinet": "Vox V212C 2x12 Cabinet with Celestion G12M Greenbacks",
+        "settings": {
+          "amp": {
+            "Normal Volume": 5,
+            "Top Boost Volume": 4.5,
+            "Treble": 5,
+            "Bass": 6,
+            "Cut": 4,
+            "Reverb": 0,
+            "Master": 5
+          },
+          "noise_gate": {
+            "Threshold": "-35 dB"
+          },
+          "compressor": {
+            "Sustain": 10,
+            "Level": 12,
+            "Blend": 12,
+            "Attack": 1,
+            "Release": 11
+          },
+          "overdrive": {
+            "Drive": 9,
+            "Tone": 10,
+            "Volume": 13
+          },
+          "eq": {
+            "63Hz": "0dB",
+            "125Hz": "+1dB",
+            "250Hz": "+2dB",
+            "500Hz": "+2dB",
+            "1kHz": "+3dB",
+            "2kHz": "+2dB",
+            "4kHz": "-1dB",
+            "8kHz": "-2dB",
+            "16kHz": "-3dB"
+          },
+          "delay": {
+            "Time": "110ms",
+            "Feedback": "1-2 repeats",
+            "Level": "15%"
+          },
+          "reverb": {
+            "Plate": "Mix: 20%, Decay: 2.5s, Pre-Delay: 20ms"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 40,
+            "Decay": 65
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 58,
+            "Clipping": 38
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 48,
+            "Drive": 54,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 56,
+            "Master": 63,
+            "Bass": 48,
+            "Treble": 45,
+            "Cut": 60
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 53,
+            "HighCut": 44
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 48,
+            "62": 49,
+            "125": 52,
+            "250": 55,
+            "500": 62,
+            "1000": 67,
+            "2000": 63,
+            "4000": 57,
+            "8000": 45,
+            "16000": 42,
+            "Vol": 53
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 43,
+            "Decay": 57
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 28,
+            "Feedback": 19,
+            "Time": 30
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 40,
+                "Decay": 65
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 58,
+                "Clipping": 38
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 48,
+                "Drive": 54,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 56,
+                "Master": 63,
+                "Bass": 48,
+                "Treble": 45,
+                "Cut": 60
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 53,
+                "HighCut": 44
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 48,
+                "62": 49,
+                "125": 52,
+                "250": 55,
+                "500": 62,
+                "1000": 67,
+                "2000": 63,
+                "4000": 57,
+                "8000": 45,
+                "16000": 42,
+                "Vol": 53
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 43,
+                "Decay": 57
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 28,
+                "Feedback": 19,
+                "Time": 30
+              }
+            }
+          },
+          "prompt": "Oasis — Supersonic — Solo guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:52:26.643Z"
+        }
+      ],
+      "id": "gen_mrhurv2y_7uzx4an74",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:52:13.740Z",
+      "originalPrompt": "The Darkness — I Believe in a Thing Called Love — Full Song guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "I Believe in a Thing Called Love — Full Song",
+        "genre": "Glam Rock / Classic Hard Rock",
+        "sound_description": "Bright, punchy, and energetic tone with a crisp top end and tight low end. The sound is dynamic with a slightly scooped midrange, singing sustain, and an overall vintage rock character reminiscent of late ‘70s and early ‘80s British amps. The tone is aggressive enough for rhythm power chords but articulate and smooth for lead lines, with a touch of roominess.",
+        "guitar_rig_description": "1. Noise Gate: Used to tame single-coil hum and reduce unwanted noise during pauses. 2. Compressor: Mild compression to even out attack and sustain, especially for clean intro and lead passages. 3. Overdrive/Distortion: Classic British-style overdrive/distortion pedal in front of the amp to push the amp for extra bite and sustain, especially on leads and solos. 4. Amplifier: British EL34-based amp model (e.g., Plexi or JCM800) set to crunchy overdrive, providing the core of the tone with dynamic response. 5. Cabinet: 4x12 closed-back cab IR with vintage British speakers (like Celestion Greenback or Vintage 30), mic'd with a mix of close and room mics for air. 6. EQ: Post-amp EQ to slightly scoop mids, boost presence, and tighten lows for clarity in band mix. 7. Modulation: Subtle phaser or chorus for select passages (optional, not always on), mainly for clean or bridge sections. 8. Delay: Short analog-style slapback delay for solos to add space without muddying the rhythm. 9. Reverb: Plate or room reverb for a spacious, lively feel without washing out the sound.",
+        "references": [
+          "The Darkness – I Believe in a Thing Called Love",
+          "Queen – Tie Your Mother Down",
+          "Def Leppard – Photograph"
+        ],
+        "song_part": "Full song (intro, verses, chorus, solos)",
+        "preferred_pickup": "bridge humbucker, tone = 7–10",
+        "additional_info": "For the NUX Mighty Space, use a Les Paul-style guitar or similar with humbuckers. Palm muting and aggressive picking enhance the punch. Use lighter strings (e.g., 9–42 or 10–46) for easy bends. The sound is mostly bridge pickup except for some clean passages where a neck or middle position might be used. Watch amp gain—don't over-saturate; keep clarity for the glam rock vibe."
+      },
+      "realRig": {
+        "pedalboard": [
+          "TC Electronic Sentry Noise Gate",
+          "Keeley Compressor Plus",
+          "Fulltone OCD v2",
+          "MXR 10-Band EQ",
+          "MXR Phase 90",
+          "Boss DD-3T Digital Delay",
+          "TC Electronic Hall of Fame 2 Reverb"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960AV 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 6,
+            "Bass": 4.5,
+            "Middle": 4,
+            "Treble": 7,
+            "Presence": 7,
+            "Master": 5
+          },
+          "overdrive": {
+            "Drive": 5.5,
+            "Tone": 6.5,
+            "Level": 7
+          },
+          "compressor": {
+            "Sustain": 3,
+            "Level": 5,
+            "Blend": 10,
+            "Attack": 2
+          },
+          "noise_gate": {
+            "Threshold": "-50dB",
+            "Decay": 20
+          },
+          "eq": {
+            "31Hz": "-2dB",
+            "125Hz": "0dB",
+            "250Hz": "-1dB",
+            "1kHz": "-3dB",
+            "2kHz": "+2dB",
+            "4kHz": "+3dB",
+            "8kHz": "+2dB"
+          },
+          "phaser": {
+            "Rate": 1.5,
+            "Depth": 4,
+            "Level": 5
+          },
+          "delay": {
+            "Time": 110,
+            "Feedback": 2,
+            "Level": 14
+          },
+          "reverb": {
+            "Type": "Room",
+            "Decay": 2.5,
+            "Mix": 18
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 40,
+            "Clipping": 30
+          }
+        },
+        "modulation": {
+          "type": "Phase 90",
+          "enabled": true,
+          "params": {
+            "Speed": 35
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 48,
+            "Drive": 58,
+            "Tone": 68
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 62,
+            "Master": 54,
+            "Bass": 42,
+            "Middle": 38,
+            "Treble": 66,
+            "Presence": 70
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 58,
+            "HighCut": 65
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 44,
+            "62": 47,
+            "125": 49,
+            "250": 45,
+            "500": 40,
+            "1000": 38,
+            "2000": 52,
+            "4000": 62,
+            "8000": 67,
+            "16000": 70,
+            "Vol": 53
+          }
+        },
+        "reverb": {
+          "type": "Hall",
+          "enabled": true,
+          "params": {
+            "Level": 40,
+            "Decay": 37,
+            "PreDelay": 30,
+            "Liveliness": 54
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 32,
+            "Feedback": 25,
+            "Time": 27
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 40,
+                "Clipping": 30
+              }
+            },
+            "modulation": {
+              "type": "Phase 90",
+              "enabled": true,
+              "params": {
+                "Speed": 35
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 48,
+                "Drive": 58,
+                "Tone": 68
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 62,
+                "Master": 54,
+                "Bass": 42,
+                "Middle": 38,
+                "Treble": 66,
+                "Presence": 70
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 58,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 44,
+                "62": 47,
+                "125": 49,
+                "250": 45,
+                "500": 40,
+                "1000": 38,
+                "2000": 52,
+                "4000": 62,
+                "8000": 67,
+                "16000": 70,
+                "Vol": 53
+              }
+            },
+            "reverb": {
+              "type": "Hall",
+              "enabled": true,
+              "params": {
+                "Level": 40,
+                "Decay": 37,
+                "PreDelay": 30,
+                "Liveliness": 54
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 32,
+                "Feedback": 25,
+                "Time": 27
+              }
+            }
+          },
+          "prompt": "The Darkness — I Believe in a Thing Called Love — Full Song guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:52:13.740Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/darkness-i-believe-in-a-thing-called-love-100-correct-tab-s2450237",
+        "artist": "The Darkness",
+        "title": "I Believe in a Thing Called Love",
+        "trackType": "Guitar",
+        "suggestedPart": "Full Song"
+      },
+      "id": "gen_mrhurl4u_4y79apdbs",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:51:59.278Z",
+      "originalPrompt": "The Offspring — Original Prankster — Full Song guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Original Prankster - The Offspring",
+        "genre": "Pop Punk / Punk Rock",
+        "sound_description": "Crunchy and tight with moderate gain, strong midrange presence, clear attack, slight brightness, and enough body to cut through a mix without excessive low end. The tone is energetic and punchy, facilitating palm-muted riffs and open chords with clarity.",
+        "guitar_rig_description": "Noise Gate: used to control hum and unwanted noise during stops. Compressor: not used. Overdrive/Distortion: a classic punk-style distortion or overdrive pedal is used to push the amp, providing crunchy, saturated rhythm tones without excessive fuzz. Amplifier: modeled after a British-style high-gain amp (e.g., Marshall JCM800), set for a crunchy drive with good midrange. Cabinet: 4x12 closed-back cab sim, for punch and tight low end. EQ: slight mid boost, moderate treble, reduced bass to avoid muddiness. Modulation: not used. Delay: not used. Reverb: light plate or room reverb for space, but kept subtle.",
+        "references": [
+          "The Offspring - Original Prankster",
+          "Green Day - Basket Case",
+          "Sum 41 - Fat Lip"
+        ],
+        "song_part": "Full song (rhythm and basic lead parts)",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use aggressive right-hand attack with palm muting for verses and more open strumming for choruses. Medium gauge strings (10-46) recommended for taut rhythm. Keep guitar volume at maximum for consistent gain."
+      },
+      "realRig": {
+        "pedalboard": ["Boss NS-2 Noise Suppressor", "Pro Co RAT 2 Distortion"],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 6,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 6,
+            "Master": 4
+          },
+          "rat2": {
+            "Distortion": 1.5,
+            "Filter": 2.5,
+            "Volume": 7
+          },
+          "ns2": {
+            "Threshold": 10,
+            "Decay": 7
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 40
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 62,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 64,
+            "Master": 60,
+            "Bass": 38,
+            "Middle": 67,
+            "Treble": 62,
+            "Presence": 58
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "LowCut": 58,
+            "HighCut": 52
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 62,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 64,
+                "Master": 60,
+                "Bass": 38,
+                "Middle": 67,
+                "Treble": 62,
+                "Presence": 58
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "LowCut": 58,
+                "HighCut": 52
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "The Offspring — Original Prankster — Full Song guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:51:59.278Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/offspring-original-prankster-tab-s22828",
+        "artist": "The Offspring",
+        "title": "Original Prankster",
+        "trackType": "Guitar",
+        "suggestedPart": "Full Song"
+      },
+      "id": "gen_mrhur9z7_j1jm39w7j",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:51:49.109Z",
+      "originalPrompt": "Steely Dan — Reelin' in the Years — Intro Solo guitar tone for NUX Mighty Plug Pro. Distorted intro solo tone.",
+      "proDescription": {
+        "tone_title": "Reelin' in the Years — Intro Solo",
+        "genre": "Classic Rock / 70s Rock",
+        "sound_description": "Bright, cutting, and articulate lead tone with moderate distortion; pronounced attack, glassy highs, tight low end, and singing sustain; slightly compressed with a touch of vintage warmth and clarity.",
+        "guitar_rig_description": "Noise gate: not used. Compressor: placed early in the chain for smoother dynamics and sustain, subtle compression to even out pick attack. Overdrive/Distortion: classic overdrive pedal emulation set for moderate gain, adding grit and sustain without losing note definition. Amplifier: vintage-style British or American tube amp model (such as a Marshall Plexi or Fender Twin pushed into breakup) to provide warmth and edge. Cabinet: matching 2x12 or 4x12 cab sim with bright, detailed speakers (Celestion-style). EQ: post-cab EQ to enhance upper mids and presence, slightly roll off lows for clarity. Modulation: not used. Delay: not used. Reverb: plate or spring reverb for space and depth, subtle mix.",
+        "references": [
+          "Steely Dan — Reelin' in the Years",
+          "Larry Carlton — Room 335",
+          "Eagles — Hotel California (solo)"
+        ],
+        "song_part": "intro solo",
+        "preferred_pickup": "bridge single coil (or bridge humbucker with coil split), tone control wide open",
+        "additional_info": "Use a Fender-style guitar if possible (Stratocaster preferred); maple fretboard helps brightness. Play with a firm, articulate picking technique. Lighter gauge strings (e.g., .009s or .010s) for easier bends and clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Ibanez TS808 Tube Screamer",
+          "MXR 6-Band EQ",
+          "Strymon Flint (Spring Reverb mode, Plate also possible)"
+        ],
+        "amplifier": "Fender Twin Reverb (’65 Reissue)",
+        "cabinet": "Fender 2x12 Cabinet with Celestion G12-65 speakers",
+        "settings": {
+          "amp": {
+            "Volume": 5.5,
+            "Treble": 7,
+            "Middle": 6,
+            "Bass": 4,
+            "Reverb": 0,
+            "Bright Switch": "On"
+          },
+          "compressor": {
+            "Blend": "noon",
+            "Volume": "unity",
+            "Compression": "low (9 o’clock)"
+          },
+          "overdrive": {
+            "Drive": 9.5,
+            "Tone": 7,
+            "Level": 8
+          },
+          "eq": {
+            "800Hz": "+2dB",
+            "1.6kHz": "+3dB",
+            "3.2kHz": "+1dB",
+            "100Hz": "-3dB",
+            "400Hz": "-1dB"
+          },
+          "reverb": {
+            "Spring": "Mix 15%",
+            "Decay": "short to medium"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Sustain": 57,
+            "Clipping": 44
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 45,
+            "Tone": 70
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 58,
+            "Master": 55,
+            "Bass": 39,
+            "Middle": 50,
+            "Treble": 67,
+            "Bright": 70
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 60,
+            "HighCut": 65
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 44,
+            "220": 47,
+            "500": 52,
+            "1200": 61,
+            "2600": 66,
+            "6400": 62
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 37,
+            "Decay": 45
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Sustain": 57,
+                "Clipping": 44
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 45,
+                "Tone": 70
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 58,
+                "Master": 55,
+                "Bass": 39,
+                "Middle": 50,
+                "Treble": 67,
+                "Bright": 70
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 60,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 44,
+                "220": 47,
+                "500": 52,
+                "1200": 61,
+                "2600": 66,
+                "6400": 62
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 37,
+                "Decay": 45
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Steely Dan — Reelin' in the Years — Intro Solo guitar tone for NUX Mighty Plug Pro. Distorted intro solo tone.",
+          "timestamp": "2026-07-12T13:51:49.109Z"
+        }
+      ],
+      "id": "gen_mrhur24r_9hu3by6in",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:51:37.626Z",
+      "originalPrompt": "Avenged Sevenfold — Almost Easy — Main Riff and Solo guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Almost Easy — Main Riff and Solo",
+        "genre": "Modern Metal / Metalcore",
+        "sound_description": "Tight, aggressive, and saturated high-gain tone with pronounced attack, clear note separation, and a slightly scooped midrange for the main riff. The solo adds sustain and clarity, with slightly more presence and smoothness for lead articulation.",
+        "guitar_rig_description": "Noise gate (placed at the beginning to eliminate unwanted string/fret noise and tighten the response); compressor (not used, as natural dynamics and pick attack are desired); overdrive (used as a boost in front of the amp to tighten the low end and enhance pick attack, with gain low and level high); amplifier (modern high-gain amp model, such as a Peavey 5150 or Mesa/Boogie Dual Rectifier, for saturated distortion and tight bass response); cabinet (4x12 closed-back cabinet with V30-style speakers for aggressive midrange and focused lows); EQ (post-amp, with a slight mid scoop for rhythm and a boost in upper mids for the solo, adjusting low and high frequencies for clarity); modulation (not used for riff; for solo, subtle chorus can be added for width if desired); delay (not used for riff; for solo, a single-repeat delay with moderate mix for depth); reverb (subtle plate or room reverb to add space, more prominent on solo for sustain).",
+        "references": [
+          "Avenged Sevenfold – Almost Easy",
+          "Bullet For My Valentine – Tears Don't Fall",
+          "Trivium – Pull Harder on the Strings of Your Martyr"
+        ],
+        "song_part": "main riff and solo",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use high-output humbuckers for tightness and output, play with aggressive palm muting for the riff, use alternate picking for articulation. String gauge: 10–52 or 11–49 for better tension. For the solo, consider switching to neck pickup for smoother leads if desired, but bridge pickup is standard for Synyster Gates' tone. Set the guitar volume and tone to maximum."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Maxon OD808 Overdrive",
+          "MXR Ten Band EQ (post-amp FX loop)",
+          "Boss CE-5 Chorus Ensemble (for solo only)",
+          "TC Electronic Flashback Delay Mini (for solo only)",
+          "Strymon BlueSky Reverb (subtle plate/room, more for solo)"
+        ],
+        "amplifier": "Peavey 6505+ Head",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Lead Channel Gain": 6.5,
+            "Bass": 5,
+            "Middle": 3.5,
+            "Treble": 6.5,
+            "Presence": 6,
+            "Resonance": 6,
+            "Master": 4.5
+          },
+          "overdrive": {
+            "Drive": 1.5,
+            "Tone": 7,
+            "Level": 9
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor",
+            "Decay": "medium-fast"
+          },
+          "eq": {
+            "31Hz": "-3dB",
+            "62Hz": "0",
+            "125Hz": "+1dB",
+            "250Hz": "0",
+            "500Hz": "-2dB",
+            "1kHz": "-1dB",
+            "2kHz": "+2dB (solo: +3dB)",
+            "4kHz": "+3dB (solo: +4dB)",
+            "8kHz": "+2dB",
+            "16kHz": "0"
+          },
+          "chorus": {
+            "Rate": "slow (9 o'clock)",
+            "Depth": "low (9 o'clock)",
+            "Mix": "low"
+          },
+          "delay": {
+            "Time": "370ms (dotted 8th)",
+            "Feedback": "1 repeat",
+            "Mix": "15%"
+          },
+          "reverb": {
+            "Type": "plate/room",
+            "Decay": "short for riff (10 o'clock), medium for solo (12 o'clock)",
+            "Mix": "low for riff (9 o'clock), moderate for solo (11 o'clock)"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": true,
+          "params": {
+            "Rate": 25,
+            "Depth": 18,
+            "Intensity": 22
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 78,
+            "Drive": 18,
+            "Tone": 62
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 85,
+            "Master": 67,
+            "Bass": 62,
+            "Middle": 32,
+            "Treble": 68,
+            "Presence": 62
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "LowCut": 42,
+            "HighCut": 60
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 58,
+            "62": 62,
+            "125": 60,
+            "250": 50,
+            "500": 41,
+            "1000": 36,
+            "2000": 48,
+            "4000": 60,
+            "8000": 67,
+            "16000": 58,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 36,
+            "Decay": 40
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 33,
+            "Feedback": 22,
+            "Time": 41
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": true,
+              "params": {
+                "Rate": 25,
+                "Depth": 18,
+                "Intensity": 22
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 78,
+                "Drive": 18,
+                "Tone": 62
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 85,
+                "Master": 67,
+                "Bass": 62,
+                "Middle": 32,
+                "Treble": 68,
+                "Presence": 62
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "LowCut": 42,
+                "HighCut": 60
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 58,
+                "62": 62,
+                "125": 60,
+                "250": 50,
+                "500": 41,
+                "1000": 36,
+                "2000": 48,
+                "4000": 60,
+                "8000": 67,
+                "16000": 58,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 36,
+                "Decay": 40
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 33,
+                "Feedback": 22,
+                "Time": 41
+              }
+            }
+          },
+          "prompt": "Avenged Sevenfold — Almost Easy — Main Riff and Solo guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:51:37.626Z"
+        }
+      ],
+      "id": "gen_mrhuqt9q_o7g2fjlpv",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:51:26.235Z",
+      "originalPrompt": "Buckethead — Soothsayer — Lead Parts guitar tone for NUX Mighty Space. Tone for the intro, chorus, bridge, and solo.",
+      "proDescription": {
+        "tone_title": "Soothsayer — Lead Parts",
+        "genre": "Instrumental Rock / Modern Shred Guitar",
+        "sound_description": "Searing, sustaining lead tone with smooth, singing character. High gain yet articulate, with a pronounced midrange for cutting through the mix. Fluid legato-friendly response, clear pick attack, and a touch of ambience for spaciousness. Not overly bright or harsh; retains warmth and depth.",
+        "guitar_rig_description": "Noise Gate: Used at the start of the chain to control hiss and feedback from high-gain settings. Compressor: Used subtly to tame dynamics and enhance sustain, especially for legato and singing lead lines. Overdrive: Used as a boost in front of the amp for added saturation and harmonics, set for a midrange push without excessive distortion. Amplifier: High-gain British-style amp model (e.g., JCM800/900 or modern equivalent) for saturated lead tones with tight low end and focused mids. Cabinet: 4x12 closed-back cabinet model, mic'd with a dynamic microphone simulator, for a balanced, punchy projection. EQ: Post-cabinet EQ to further emphasize upper mids, gently roll off harsh highs, and tighten bass. Modulation: Chorus or very slight detune used sparingly for width, especially in solo/chorus sections; subtle, not pronounced. Delay: Stereo digital delay with moderate feedback and mix, providing spacious repeats for lead lines without overwhelming the dry signal. Reverb: Plate or hall reverb, set for medium decay and low mix, adding depth and sustain to the leads without washing out articulation.",
+        "references": [
+          "Buckethead — Soothsayer",
+          "Joe Satriani — Always With Me, Always With You",
+          "Steve Vai — For the Love of God"
+        ],
+        "song_part": "Intro, chorus, bridge, and solo lead parts",
+        "preferred_pickup": "bridge humbucker, tone = 7 (slightly rolled off for warmth)",
+        "additional_info": "Use medium to heavy gauge strings for sustain and tone thickness. Play with moderate to high output pickups for maximum amp saturation. Employ expressive vibrato and legato techniques. Volume knob can be slightly rolled back for cleaner passages. Consider a Floyd Rose or similar tremolo system if available for expressive pitch effects as used by Buckethead."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Origin Effects Cali76 Compact Compressor",
+          "Ibanez TS808 Tube Screamer",
+          "MXR 10-Band EQ",
+          "Eventide H9 (for subtle chorus/detune)",
+          "Boss DD-500 Digital Delay",
+          "Strymon BlueSky Reverb"
+        ],
+        "amplifier": "Marshall JCM900 4100 Dual Reverb Head",
+        "cabinet": "Marshall 1960B 4x12 Cabinet with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Channel": "Lead",
+            "Gain": 7.5,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 5,
+            "Master": 4
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 6,
+            "Level": 8
+          },
+          "compressor": {
+            "Sustain": 4,
+            "Attack": 6,
+            "Level": 5
+          },
+          "eq": {
+            "80Hz": "-2dB",
+            "250Hz": "0dB",
+            "1kHz": "+3dB",
+            "2kHz": "+2dB",
+            "4kHz": "+1dB",
+            "8kHz": "-2dB"
+          },
+          "chorus/detune": {
+            "Mix": 20,
+            "Detune Amount": 8,
+            "Rate": 0.5
+          },
+          "delay": {
+            "Time": 420,
+            "Feedback": 30,
+            "Mix": 23,
+            "Type": "Digital (stereo)"
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": 3.1,
+            "Mix": 16
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 60
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 55,
+            "Threshold": 60,
+            "Ratio": 40,
+            "Release": 45
+          }
+        },
+        "modulation": {
+          "type": "Detune",
+          "enabled": true,
+          "params": {
+            "Shift-L": 47,
+            "Shift-R": 53,
+            "Mix": 28
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 65,
+            "Drive": 28,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Brit 2000",
+          "enabled": true,
+          "params": {
+            "Gain": 82,
+            "Master": 67,
+            "Bass": 44,
+            "Middle": 74,
+            "Treble": 54,
+            "Presence": 46
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 56,
+            "HighCut": 45
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 40,
+            "62": 41,
+            "125": 44,
+            "250": 46,
+            "500": 57,
+            "1000": 60,
+            "2000": 65,
+            "4000": 63,
+            "8000": 46,
+            "16000": 37,
+            "Vol": 51
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 30,
+            "Decay": 54
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 38,
+            "Feedback": 41,
+            "Time": 61
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 60
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 55,
+                "Threshold": 60,
+                "Ratio": 40,
+                "Release": 45
+              }
+            },
+            "modulation": {
+              "type": "Detune",
+              "enabled": true,
+              "params": {
+                "Shift-L": 47,
+                "Shift-R": 53,
+                "Mix": 28
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 65,
+                "Drive": 28,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Brit 2000",
+              "enabled": true,
+              "params": {
+                "Gain": 82,
+                "Master": 67,
+                "Bass": 44,
+                "Middle": 74,
+                "Treble": 54,
+                "Presence": 46
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 56,
+                "HighCut": 45
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 40,
+                "62": 41,
+                "125": 44,
+                "250": 46,
+                "500": 57,
+                "1000": 60,
+                "2000": 65,
+                "4000": 63,
+                "8000": 46,
+                "16000": 37,
+                "Vol": 51
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 30,
+                "Decay": 54
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 38,
+                "Feedback": 41,
+                "Time": 61
+              }
+            }
+          },
+          "prompt": "Buckethead — Soothsayer — Lead Parts guitar tone for NUX Mighty Space. Tone for the intro, chorus, bridge, and solo.",
+          "timestamp": "2026-07-12T13:51:26.235Z"
+        }
+      ],
+      "id": "gen_mrhuqkh5_2bvj8o52s",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:51:11.867Z",
+      "originalPrompt": "Lamb of God — Laid to Rest — Main Riff guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Laid to Rest - Main Riff",
+        "genre": "Modern Groove Metal",
+        "sound_description": "Aggressive, tight, percussive high-gain rhythm tone with pronounced midrange, sharp attack, thick low end, and minimal ambience. The tone is dry, focused, and articulated for fast palm-muted chugging while remaining clear for complex riffing.",
+        "guitar_rig_description": "Noise gate (used to keep the high-gain signal tight and eliminate unwanted noise); compressor (not used, as natural dynamics and attack are preferred); overdrive (used as a clean boost in front of the amp to tighten the low end and push the amp for more attack); amplifier (modern high-gain amp model with tight bass, pronounced mids, and aggressive treble); cabinet (4x12 closed-back, loaded with modern speakers for punch and clarity); EQ (used post-amp to slightly scoop low mids, cut some low-end rumble, and accentuate presence for articulation); modulation (not used); delay (not used); reverb (not used for riff parts to keep the tone dry and direct).",
+        "references": [
+          "Lamb of God - Laid to Rest",
+          "Lamb of God - Omerta",
+          "Pantera - Walk"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a tight, high-output bridge humbucker. Employ strong palm-muting for percussive chugs. Use heavier gauge strings (e.g., 11-52 or 11-56) for tuning stability and tight low end. Pick attack should be firm for maximum articulation. For NUX Mighty Space, select a Rectifier or modern high-gain amp model, pair with a 'TS-style' overdrive as a boost, and use a 4x12 cab IR. Set noise gate threshold so it clamps quickly but doesn’t choke sustained notes."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Ibanez TS9 Tube Screamer",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Mesa/Boogie Dual Rectifier (Modern Channel)",
+        "cabinet": "Mesa/Boogie Rectifier 4x12 Slant Cabinet with Celestion Vintage 30 speakers (4x12, closed-back)",
+        "settings": {
+          "amp": {
+            "Channel": "Modern",
+            "Gain": 6.5,
+            "Bass": 4.5,
+            "Middle": 5,
+            "Treble": 6.5,
+            "Presence": 6,
+            "Master": 3
+          },
+          "overdrive": {
+            "Drive": 0,
+            "Tone": 6,
+            "Level": 8
+          },
+          "noise_gate": {
+            "Threshold": "-70dB",
+            "Decay": 0,
+            "Mode": "Reduction"
+          },
+          "eq": {
+            "31Hz": "-2dB",
+            "62Hz": "-1dB",
+            "125Hz": "0dB",
+            "250Hz": "-1dB",
+            "500Hz": "-2dB",
+            "1kHz": "0dB",
+            "2kHz": "+1dB",
+            "4kHz": "+2dB",
+            "8kHz": "+2dB",
+            "16kHz": "+1dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 60,
+            "Decay": 30
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 70,
+            "Drive": 15,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 78,
+            "Master": 55,
+            "Bass": 46,
+            "Middle": 64,
+            "Treble": 73,
+            "Presence": 60
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 60,
+            "HighCut": 57
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 44,
+            "62": 42,
+            "125": 46,
+            "250": 38,
+            "500": 42,
+            "1000": 55,
+            "2000": 62,
+            "4000": 68,
+            "8000": 58,
+            "16000": 55,
+            "Vol": 50
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 60,
+                "Decay": 30
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 70,
+                "Drive": 15,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 78,
+                "Master": 55,
+                "Bass": 46,
+                "Middle": 64,
+                "Treble": 73,
+                "Presence": 60
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 60,
+                "HighCut": 57
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 44,
+                "62": 42,
+                "125": 46,
+                "250": 38,
+                "500": 42,
+                "1000": 55,
+                "2000": 62,
+                "4000": 68,
+                "8000": 58,
+                "16000": 55,
+                "Vol": 50
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Lamb of God — Laid to Rest — Main Riff guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:51:11.867Z"
+        }
+      ],
+      "id": "gen_mrhuq9e0_l2voyhqok",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:51:00.770Z",
+      "originalPrompt": "Del Shannon — Runaway — Outro guitar tone for NUX Mighty Space. Guitar arrangement in the style of The Ventures.",
+      "proDescription": {
+        "tone_title": "Runaway Outro Guitar (Ventures Style)",
+        "genre": "Early Rock 'n' Roll / Instrumental Surf Rock",
+        "sound_description": "Bright and jangly with pronounced attack and clarity, moderate twang, spring reverb depth, clean but lively dynamics, slight warmth and compression for sustain. Characteristic of early '60s surf and pop instrumental tones.",
+        "guitar_rig_description": "Noise gate: not used (signal is clean and noise is minimal). Compressor: used, subtle, to smooth out picking dynamics and enhance sustain without squashing transients. Overdrive/Distortion/Boost: not used (clean tone required). Amplifier: vintage-style clean combo amp (Fender Blackface or similar emulation) set for chime and headroom. Cabinet: matching 1x12 or 2x12 open-back cab for airy brightness. EQ: used, with focus on boosting treble and upper mids, slightly rolled-off lows to avoid muddiness. Modulation: not used (authentic arrangement does not require chorus or vibrato). Delay: not used (no slapback or echo in original outro). Reverb: spring reverb used prominently for classic surf ambiance and depth.",
+        "references": [
+          "Del Shannon – Runaway (Outro)",
+          "The Ventures – Walk, Don't Run",
+          "The Shadows – Apache"
+        ],
+        "song_part": "outro lead and rhythm guitar",
+        "preferred_pickup": "bridge single-coil, tone = 8",
+        "additional_info": "Pick attack should be precise and slightly percussive. Use lighter gauge strings for snap and clarity. Palm muting and staccato picking help achieve the vintage surf feel. Set guitar volume and tone controls for maximum brightness without harshness."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Boss GE-7 Equalizer",
+          "Fender Marine Layer Reverb"
+        ],
+        "amplifier": "Fender '65 Princeton Reverb Reissue",
+        "cabinet": "Fender 1x12 Open-Back Cabinet with Jensen C12Q speaker",
+        "settings": {
+          "amp": {
+            "Volume": 5,
+            "Treble": 7,
+            "Bass": 4,
+            "Reverb": 0,
+            "Speed": 2,
+            "Intensity": 0
+          },
+          "compressor": {
+            "Blend": 11,
+            "Volume": 12,
+            "Comp": 9
+          },
+          "eq": {
+            "100Hz": "-2dB",
+            "200Hz": "-2dB",
+            "400Hz": "0dB",
+            "800Hz": "+1dB",
+            "1.6kHz": "+2dB",
+            "3.2kHz": "+2dB",
+            "6.4kHz": "+2dB",
+            "Level": "unity"
+          },
+          "reverb": {
+            "Type": "Spring",
+            "Level": "60%",
+            "Time": "short-to-medium (1.5–2.5s)",
+            "Pre-Delay": "minimal"
+          },
+          "guitar": {
+            "pickup": "bridge single-coil",
+            "tone": 8,
+            "volume": 10
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 58,
+            "Clipping": 40
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Distortion+",
+          "enabled": false,
+          "params": {
+            "Output": 50,
+            "Sensitivity": 50
+          }
+        },
+        "amplifier": {
+          "type": "Deluxe Rvb",
+          "enabled": true,
+          "params": {
+            "Gain": 33,
+            "Master": 62,
+            "Bass": 40,
+            "Middle": 48,
+            "Treble": 68
+          }
+        },
+        "cabinet": {
+          "type": "DR112",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 58,
+            "HighCut": 65
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 43,
+            "62": 45,
+            "125": 47,
+            "250": 48,
+            "500": 52,
+            "1000": 57,
+            "2000": 61,
+            "4000": 66,
+            "8000": 72,
+            "16000": 68,
+            "Vol": 54
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 67,
+            "Decay": 62
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 58,
+                "Clipping": 40
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Distortion+",
+              "enabled": false,
+              "params": {
+                "Output": 50,
+                "Sensitivity": 50
+              }
+            },
+            "amplifier": {
+              "type": "Deluxe Rvb",
+              "enabled": true,
+              "params": {
+                "Gain": 33,
+                "Master": 62,
+                "Bass": 40,
+                "Middle": 48,
+                "Treble": 68
+              }
+            },
+            "cabinet": {
+              "type": "DR112",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 58,
+                "HighCut": 65
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 43,
+                "62": 45,
+                "125": 47,
+                "250": 48,
+                "500": 52,
+                "1000": 57,
+                "2000": 61,
+                "4000": 66,
+                "8000": 72,
+                "16000": 68,
+                "Vol": 54
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 67,
+                "Decay": 62
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Del Shannon — Runaway — Outro guitar tone for NUX Mighty Space. Guitar arrangement in the style of The Ventures.",
+          "timestamp": "2026-07-12T13:51:00.770Z"
+        }
+      ],
+      "id": "gen_mrhuq0tn_6hkr3z1yg",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:50:49.144Z",
+      "originalPrompt": "Mor Ve Otesi — Bir Derdim Var — Intro guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Bir Derdim Var — Intro",
+        "genre": "Turkish Alternative Rock",
+        "sound_description": "Clean yet slightly overdriven tone with mild warmth and shimmer, moderate attack, and subtle ambience. The sound is open, slightly jangly, and sits well in a modern rock mix without being harsh. There is a hint of modulation and room reverb for spaciousness.",
+        "guitar_rig_description": "Noise gate: used, set lightly to keep background noise minimal during clean passages. Compressor: used, set for mild sustain and level consistency. Overdrive/distortion/boost: used, with a low-gain overdrive to add warmth and light breakup to the clean tone. Amplifier: classic clean or slightly driven British-style amp model, providing a natural, dynamic response. Cabinet: 1x12 or 2x12 open-back cab sim, ensuring chime and clarity. EQ: used, with a slight mid boost and gentle treble roll-off to tame harshness. Modulation: used, light chorus for subtle width and shimmer. Delay: not used. Reverb: used, room or plate reverb for ambient depth without washing out the clarity.",
+        "references": [
+          "Mor Ve Otesi — Bir Derdim Var",
+          "Duman — Senden Daha Güzel",
+          "Athena — Her Şey Güzel Olacak"
+        ],
+        "song_part": "Intro (arpeggiated clean guitar)",
+        "preferred_pickup": "neck single coil or split humbucker, tone = 7",
+        "additional_info": "Pick gently with fingers or a soft pick for articulation; use 10-46 gauge strings; keep guitar volume and tone controls slightly rolled back for a smoother attack and less brightness."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Xotic SP Compressor",
+          "Ibanez TS9 Tube Screamer",
+          "MXR 6-Band EQ",
+          "Boss CE-2W Chorus",
+          "Strymon BlueSky (Room mode, low mix) Reverb"
+        ],
+        "amplifier": "Vox AC30C2",
+        "cabinet": "Vox V212C 2x12 Cabinet with Celestion G12M Greenback speakers (open-back)",
+        "settings": {
+          "amp": {
+            "Normal Volume": 3,
+            "Top Boost Volume": 4,
+            "Bass": 5,
+            "Treble": 4.5,
+            "Reverb": 0,
+            "Master": 4,
+            "Cut": 5
+          },
+          "noise_gate": {
+            "Threshold": 10,
+            "Decay": 10
+          },
+          "compressor": {
+            "Blend": 10,
+            "Volume": 10,
+            "Sustain": 9
+          },
+          "overdrive": {
+            "Drive": 2.5,
+            "Tone": 4,
+            "Level": 7
+          },
+          "eq": {
+            "100Hz": "0dB",
+            "200Hz": "+1dB",
+            "400Hz": "+2dB",
+            "800Hz": "+2dB",
+            "1.6kHz": "+1dB",
+            "3.2kHz": "-1dB"
+          },
+          "chorus": {
+            "Rate": 10,
+            "Depth": 9,
+            "Level": 10
+          },
+          "reverb": {
+            "Mix": 9,
+            "Decay": 10,
+            "Pre-delay": 9
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 40,
+            "Decay": 60
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 40,
+            "Clipping": 35
+          }
+        },
+        "modulation": {
+          "type": "CE-2",
+          "enabled": true,
+          "params": {
+            "Rate": 38,
+            "Depth": 32
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Drive": 25,
+            "Tone": 42
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 36,
+            "Master": 58,
+            "Bass": 48,
+            "Treble": 43,
+            "Cut": 46
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "LowCut": 50,
+            "HighCut": 46
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 48,
+            "220": 51,
+            "500": 55,
+            "1200": 57,
+            "2600": 50,
+            "6400": 44
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": true,
+          "params": {
+            "Level": 43,
+            "Decay": 35,
+            "Tone": 53
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 40,
+                "Decay": 60
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 40,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-2",
+              "enabled": true,
+              "params": {
+                "Rate": 38,
+                "Depth": 32
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Drive": 25,
+                "Tone": 42
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 36,
+                "Master": 58,
+                "Bass": 48,
+                "Treble": 43,
+                "Cut": 46
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "LowCut": 50,
+                "HighCut": 46
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 48,
+                "220": 51,
+                "500": 55,
+                "1200": 57,
+                "2600": 50,
+                "6400": 44
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": true,
+              "params": {
+                "Level": 43,
+                "Decay": 35,
+                "Tone": 53
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Mor Ve Otesi — Bir Derdim Var — Intro guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:50:49.144Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/mor-ve-otesi-bir-derdim-var-tab-s388668",
+        "artist": "Mor Ve Otesi",
+        "title": "Bir Derdim Var",
+        "trackType": "Guitar",
+        "suggestedPart": "Intro"
+      },
+      "id": "gen_mrhuprux_c979hhvtn",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:50:37.283Z",
+      "originalPrompt": "B.B. King — The Thrill Is Gone — Solo guitar tone for NUX Mighty Plug Pro. Clean solo tone for a P-90-style guitar.",
+      "proDescription": {
+        "tone_title": "The Thrill Is Gone — Solo Guitar Tone",
+        "genre": "Electric Blues",
+        "sound_description": "Smooth, clean, and expressive lead tone with clear highs and warm lows. Slight breakup when picking hard, rich sustain, and natural dynamic response. Touch-sensitive with a singing quality, moderate brightness, and subtle airiness. Not overly compressed, allowing for nuanced phrasing.",
+        "guitar_rig_description": "Noise gate: not used (to preserve natural dynamics and sustain). Compressor: used gently to even out picking and enhance sustain without squashing dynamics. Overdrive/distortion/boost: mild transparent boost or light overdrive for touch-sensitive breakup and sustain, set at low gain. Amplifier: classic clean tube combo emulation (e.g., Fender Twin Reverb or similar) for glassy highs and full lows. Cabinet: matching open-back 1x12 or 2x12 cab sim for airy response. EQ: used subtly to cut excessive lows and slightly enhance upper mids for clarity. Modulation: not used. Delay: not used. Reverb: plate or spring reverb for spaciousness and depth, blended tastefully in the mix.",
+        "references": [
+          "B.B. King — The Thrill Is Gone",
+          "B.B. King — Live at the Regal",
+          "Buddy Guy — Damn Right, I’ve Got the Blues"
+        ],
+        "song_part": "solo",
+        "preferred_pickup": "neck P-90, tone rolled back slightly for warmth",
+        "additional_info": "Use expressive vibrato and dynamic picking. Medium gauge strings (.010–.046) recommended for sustain and control. Pick attack should be gentle to medium, letting the amp and compressor do most of the work. Back off the guitar tone knob slightly for a rounder, singing lead sound."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Analogman King of Tone (set to OD, low gain, red side only)",
+          "Empress ParaEQ MKII (subtle high-pass at 80Hz, +2dB at 1.5kHz)",
+          "Strymon Flint (Spring Reverb mode, Mix ~25%)"
+        ],
+        "amplifier": "Fender '65 Twin Reverb Reissue",
+        "cabinet": "Fender 2x12 Cabinet with Jensen C12K (12\", ceramic, open-back)",
+        "settings": {
+          "amp": {
+            "Volume": 4,
+            "Treble": 5,
+            "Middle": 6,
+            "Bass": 4.5,
+            "Reverb": 2,
+            "Bright Switch": "On",
+            "Vibrato": "Off"
+          },
+          "compressor": {
+            "Blend": 50,
+            "Volume": 12,
+            "Compression": 9
+          },
+          "overdrive": {
+            "Drive": 2,
+            "Tone": 10,
+            "Volume": 12
+          },
+          "eq": {
+            "Low Cut": "80Hz",
+            "1.5kHz": "+2dB"
+          },
+          "reverb": {
+            "Spring Decay": 11,
+            "Mix": 9,
+            "Color": "Classic"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "Sustain": 58,
+            "Clipping": 35
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Blues Drive",
+          "enabled": true,
+          "params": {
+            "Level": 52,
+            "Gain": 28,
+            "Tone": 46
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 54,
+            "Master": 55,
+            "Bass": 44,
+            "Middle": 58,
+            "Treble": 61,
+            "Bright": 60
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 50,
+            "LowCut": 54,
+            "HighCut": 58
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": true,
+          "params": {
+            "100": 44,
+            "220": 47,
+            "500": 51,
+            "1200": 57,
+            "2600": 59,
+            "6400": 53
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 39,
+            "Decay": 54
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "Sustain": 58,
+                "Clipping": 35
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Blues Drive",
+              "enabled": true,
+              "params": {
+                "Level": 52,
+                "Gain": 28,
+                "Tone": 46
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 54,
+                "Master": 55,
+                "Bass": 44,
+                "Middle": 58,
+                "Treble": 61,
+                "Bright": 60
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 50,
+                "LowCut": 54,
+                "HighCut": 58
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": true,
+              "params": {
+                "100": 44,
+                "220": 47,
+                "500": 51,
+                "1200": 57,
+                "2600": 59,
+                "6400": 53
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 39,
+                "Decay": 54
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "B.B. King — The Thrill Is Gone — Solo guitar tone for NUX Mighty Plug Pro. Clean solo tone for a P-90-style guitar.",
+          "timestamp": "2026-07-12T13:50:37.283Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/bb-king-the-thrill-is-gone-tab-s2316",
+        "artist": "B.B. King",
+        "title": "The Thrill Is Gone",
+        "trackType": "Guitar",
+        "suggestedPart": "Solo"
+      },
+      "id": "gen_mrhupipk_f1fs2x3vx",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:50:26.542Z",
+      "originalPrompt": "Carlos Santana — Black Magic Woman — Intro guitar tone for NUX Mighty Plug Pro. Intro riff tone.",
+      "proDescription": {
+        "tone_title": "Black Magic Woman - Intro",
+        "genre": "Classic Rock / Latin Rock",
+        "sound_description": "Warm, smooth, and sustaining lead tone with a touch of overdrive; expressive dynamics, prominent midrange, rounded highs, and singing sustain. Not harsh or aggressive, but rich and vocal-like.",
+        "guitar_rig_description": "Noise gate: not used (tone relies on natural dynamics); Compressor: light compression to enhance sustain and even out picking; Overdrive: low-gain, transparent overdrive to add warmth and midrange focus, simulating a cranked tube amp; Amplifier: vintage-style British or American tube amp model, set for mild breakup and smoothness; Cabinet: open-back 1x12 or 2x12 speaker simulation for airy, organic response; EQ: subtle mid boost, gentle high roll-off to tame brightness; Modulation: not used; Delay: short, subtle slapback delay for depth (optional, very low mix); Reverb: medium plate or spring reverb for spaciousness and tail.",
+        "references": [
+          "Santana - Black Magic Woman",
+          "Santana - Samba Pa Ti",
+          "Peter Green (Fleetwood Mac) - Black Magic Woman (original)"
+        ],
+        "song_part": "intro riff",
+        "preferred_pickup": "neck humbucker, tone = 7 (rolled back for warmth)",
+        "additional_info": "Use expressive finger vibrato and controlled picking; light gauge strings help for smoother bends; volume knob can be slightly rolled back to clean up tone if needed. Santana is known for using PRS guitars with humbuckers and playing into Mesa Boogie amps with moderate gain."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Xotic SP Compressor",
+          "Ibanez TS808 Tube Screamer",
+          "MXR M108S Ten Band EQ",
+          "TC Electronic Flashback Mini Delay",
+          "Strymon Flint (Reverb side, Plate setting)"
+        ],
+        "amplifier": "Mesa/Boogie Mark I (original or Reissue)",
+        "cabinet": "Mesa/Boogie 1x12 Open Back Cabinet with Celestion C90 Black Shadow speaker",
+        "settings": {
+          "amp": {
+            "Gain": 5,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 3,
+            "Master": 4
+          },
+          "compressor": {
+            "Blend": 50,
+            "Volume": 12,
+            "Compression": "Lo"
+          },
+          "overdrive": {
+            "Drive": 3,
+            "Tone": 4.5,
+            "Level": 6
+          },
+          "eq": {
+            "800Hz": "+2dB",
+            "3.2kHz": "-1dB",
+            "6.4kHz": "-2dB"
+          },
+          "delay": {
+            "Time": "90ms",
+            "Mix": "8%",
+            "Repeats": 1
+          },
+          "reverb": {
+            "Type": "Plate",
+            "Decay": 4,
+            "Mix": 20
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 38,
+            "Clipping": 45
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 59,
+            "Drive": 26,
+            "Tone": 41
+          }
+        },
+        "amplifier": {
+          "type": "SLO 100",
+          "enabled": true,
+          "params": {
+            "Gain": 34,
+            "Master": 60,
+            "Bass": 48,
+            "Middle": 65,
+            "Treble": 41,
+            "Presence": 38
+          }
+        },
+        "cabinet": {
+          "type": "CALI 112",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 46,
+            "HighCut": 41
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 50,
+            "62": 49,
+            "125": 51,
+            "250": 54,
+            "500": 62,
+            "1000": 63,
+            "2000": 58,
+            "4000": 47,
+            "8000": 39,
+            "16000": 36,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 48,
+            "Decay": 57
+          }
+        },
+        "delay": {
+          "type": "Digital Delay",
+          "enabled": true,
+          "params": {
+            "E.Level": 19,
+            "Feedback": 24,
+            "Time": 28
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 38,
+                "Clipping": 45
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 59,
+                "Drive": 26,
+                "Tone": 41
+              }
+            },
+            "amplifier": {
+              "type": "SLO 100",
+              "enabled": true,
+              "params": {
+                "Gain": 34,
+                "Master": 60,
+                "Bass": 48,
+                "Middle": 65,
+                "Treble": 41,
+                "Presence": 38
+              }
+            },
+            "cabinet": {
+              "type": "CALI 112",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 46,
+                "HighCut": 41
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 50,
+                "62": 49,
+                "125": 51,
+                "250": 54,
+                "500": 62,
+                "1000": 63,
+                "2000": 58,
+                "4000": 47,
+                "8000": 39,
+                "16000": 36,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 48,
+                "Decay": 57
+              }
+            },
+            "delay": {
+              "type": "Digital Delay",
+              "enabled": true,
+              "params": {
+                "E.Level": 19,
+                "Feedback": 24,
+                "Time": 28
+              }
+            }
+          },
+          "prompt": "Carlos Santana — Black Magic Woman — Intro guitar tone for NUX Mighty Plug Pro. Intro riff tone.",
+          "timestamp": "2026-07-12T13:50:26.542Z"
+        }
+      ],
+      "id": "gen_mrhupaf3_grl5uk0g5",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:50:16.202Z",
+      "originalPrompt": "The Offspring — Gone Away — Main Riff guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Gone Away — Main Riff",
+        "genre": "1990s Alternative Rock / Punk Rock",
+        "sound_description": "Thick, punchy distortion with strong midrange presence, tight low end, moderate brightness, and a raw, aggressive attack. The tone is cutting but not overly harsh, with enough clarity for power chords to ring out clearly. Sustain is present but not excessive, and the overall sound is direct and energetic.",
+        "guitar_rig_description": "Noise gate: used at the start to tame unwanted noise from high-gain settings. Compressor: not used, as the tone relies on natural dynamics. Overdrive/Distortion: classic high-gain distortion pedal (like a Boss DS-1 or RAT) used to boost into the amp, providing saturated, gritty crunch. Amplifier: British-style high-gain amp (Marshall JCM800 or similar) set for aggressive distortion and prominent midrange. Cabinet: 4x12 closed-back cabinet simulation for tight lows and focused projection. EQ: applied post-amp to emphasize mids and slightly roll off excessive highs and lows for a focused, mix-ready sound. Modulation: not used. Delay: not used. Reverb: small room reverb for subtle space, kept minimal to retain punch.",
+        "references": [
+          "The Offspring — Gone Away",
+          "Green Day — Basket Case",
+          "Bad Religion — 21st Century (Digital Boy)"
+        ],
+        "song_part": "main riff",
+        "preferred_pickup": "bridge humbucker, tone control wide open",
+        "additional_info": "Use downstrokes for a tighter, more aggressive attack. Medium gauge strings (.010–.046) help with punch and stability. Palm muting should be tight, with moderate gain to keep the sound precise and not overly fizzy."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "ProCo RAT 2 Distortion",
+          "MXR 10-Band EQ",
+          "TC Electronic Hall of Fame Mini Reverb (set to Room algorithm)"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 6,
+            "Presence": 5,
+            "Master": 4
+          },
+          "rat": {
+            "Distortion": 2.5,
+            "Filter": 4,
+            "Volume": 7
+          },
+          "eq": {
+            "31Hz": "-3dB",
+            "62Hz": "-2dB",
+            "125Hz": "0dB",
+            "250Hz": "+1dB",
+            "500Hz": "+2dB",
+            "1kHz": "+2dB",
+            "2kHz": "+3dB",
+            "4kHz": "+2dB",
+            "8kHz": "0dB",
+            "16kHz": "-2dB"
+          },
+          "reverb": {
+            "Level": 9,
+            "Decay": 9
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 40
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "Dist One",
+          "enabled": true,
+          "params": {
+            "Level": 60,
+            "Drive": 72,
+            "Tone": 57
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 68,
+            "Master": 63,
+            "Bass": 46,
+            "Middle": 68,
+            "Treble": 54,
+            "Presence": 48
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 56,
+            "LowCut": 54,
+            "HighCut": 42
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 42,
+            "62": 44,
+            "125": 47,
+            "250": 52,
+            "500": 60,
+            "1000": 64,
+            "2000": 62,
+            "4000": 54,
+            "8000": 44,
+            "16000": 40,
+            "Vol": 55
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": true,
+          "params": {
+            "Level": 19,
+            "Decay": 28,
+            "Tone": 53
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 40
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "Dist One",
+              "enabled": true,
+              "params": {
+                "Level": 60,
+                "Drive": 72,
+                "Tone": 57
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 68,
+                "Master": 63,
+                "Bass": 46,
+                "Middle": 68,
+                "Treble": 54,
+                "Presence": 48
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 56,
+                "LowCut": 54,
+                "HighCut": 42
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 42,
+                "62": 44,
+                "125": 47,
+                "250": 52,
+                "500": 60,
+                "1000": 64,
+                "2000": 62,
+                "4000": 54,
+                "8000": 44,
+                "16000": 40,
+                "Vol": 55
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": true,
+              "params": {
+                "Level": 19,
+                "Decay": 28,
+                "Tone": 53
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "The Offspring — Gone Away — Main Riff guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:50:16.202Z"
+        }
+      ],
+      "id": "gen_mrhup2fl_io0th80ex",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:50:05.335Z",
+      "originalPrompt": "Jack White — Lazaretto — Main Riff and Solo guitar tone for NUX Mighty Space. Jack White-style fuzz tone for the main riff and solo.",
+      "proDescription": {
+        "tone_title": "Jack White — Lazaretto — Main Riff and Solo",
+        "genre": "Garage Rock / Blues Rock",
+        "sound_description": "Raw, aggressive, fuzzy, mid-forward with pronounced attack, gritty edge, slightly lo-fi, and dynamic response. The tone has a saturated, vintage fuzz character with good note separation and some natural compression. It should cut through the mix but not be overly bright.",
+        "guitar_rig_description": "Signal chain: Noise gate (used sparingly, just to tame excessive hiss from high-gain fuzz), compressor (not used, as natural touch dynamics and fuzz compression are preferred), overdrive/distortion/boost (classic fuzz pedal emulation, set for thick, saturated, and biting fuzz; key to Jack White's sound), amplifier (vintage-style tube amp emulation, pushed to mild breakup, adding warmth and some dynamic sag), cabinet (4x12 or 2x12 vintage-style cab sim, slightly rolled-off highs for a retro feel), EQ (optional—minor mid boost or high cut if needed to tame harshness), modulation (not used), delay (not used for main riff and solo, as the tone is dry and direct), reverb (subtle spring reverb for a touch of room ambience, but not dominant).",
+        "references": [
+          "Jack White — Lazaretto",
+          "The White Stripes — Icky Thump",
+          "The Raconteurs — Steady, As She Goes"
+        ],
+        "song_part": "Main riff and solo",
+        "preferred_pickup": "bridge humbucker (if available), tone knob rolled back slightly for thickness",
+        "additional_info": "Use a high-output pickup or slightly hotter single-coil if humbucker is unavailable. Heavy picking attack enhances the fuzz texture. Thick strings (.011 or higher) preferred. If available, use octave fuzz for the solo to mimic the synth-like upper harmonics Jack White sometimes employs. Jack often plays with fingers or a thick pick for extra attack."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Electro-Harmonix Big Muff Pi (NYC Reissue)",
+          "Digitech Whammy V (for octave-up fuzz on solo, set to octave up, momentary or latched as needed)",
+          "ISP Decimator Noise Reduction (placed after Big Muff, threshold just above unity gain)",
+          "Fender Marine Layer Reverb (set to subtle spring mode, low mix)"
+        ],
+        "amplifier": "Fender ’65 Twin Reverb Reissue",
+        "cabinet": "Fender 2x12 Cabinet with Celestion G12H-75 Creamback speakers",
+        "settings": {
+          "amp": {
+            "Gain": 6,
+            "Bass": 4,
+            "Middle": 7,
+            "Treble": 5,
+            "Presence": 6,
+            "Reverb": 2.5,
+            "Master": 5
+          },
+          "big_muff": {
+            "Sustain": 2.5,
+            "Tone": 10,
+            "Volume": 6
+          },
+          "whammy": {
+            "Mode": "Octave Up",
+            "Mix": 100
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor, minimal reduction"
+          },
+          "reverb": {
+            "Type": "Spring",
+            "Mix": "low (9 o’clock)",
+            "Decay": "short/medium"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 40,
+            "Decay": 65
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "Mono Octave",
+          "enabled": true,
+          "params": {
+            "Sub": 25,
+            "Dry": 60,
+            "Up": 65
+          }
+        },
+        "effect": {
+          "type": "Muff Fuzz",
+          "enabled": true,
+          "params": {
+            "Volume": 65,
+            "Sustain": 80,
+            "Tone": 40
+          }
+        },
+        "amplifier": {
+          "type": "Twin Reverb",
+          "enabled": true,
+          "params": {
+            "Gain": 70,
+            "Master": 62,
+            "Bass": 48,
+            "Middle": 68,
+            "Treble": 38,
+            "Bright": 40
+          }
+        },
+        "cabinet": {
+          "type": "TR212",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 48,
+            "HighCut": 38
+          }
+        },
+        "eq": {
+          "type": "6-Band",
+          "enabled": false,
+          "params": {
+            "100": 50,
+            "220": 50,
+            "500": 50,
+            "1200": 50,
+            "2600": 50,
+            "6400": 50
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 32,
+            "Decay": 40
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 40,
+                "Decay": 65
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "Mono Octave",
+              "enabled": true,
+              "params": {
+                "Sub": 25,
+                "Dry": 60,
+                "Up": 65
+              }
+            },
+            "effect": {
+              "type": "Muff Fuzz",
+              "enabled": true,
+              "params": {
+                "Volume": 65,
+                "Sustain": 80,
+                "Tone": 40
+              }
+            },
+            "amplifier": {
+              "type": "Twin Reverb",
+              "enabled": true,
+              "params": {
+                "Gain": 70,
+                "Master": 62,
+                "Bass": 48,
+                "Middle": 68,
+                "Treble": 38,
+                "Bright": 40
+              }
+            },
+            "cabinet": {
+              "type": "TR212",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 48,
+                "HighCut": 38
+              }
+            },
+            "eq": {
+              "type": "6-Band",
+              "enabled": false,
+              "params": {
+                "100": 50,
+                "220": 50,
+                "500": 50,
+                "1200": 50,
+                "2600": 50,
+                "6400": 50
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 32,
+                "Decay": 40
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Jack White — Lazaretto — Main Riff and Solo guitar tone for NUX Mighty Space. Jack White-style fuzz tone for the main riff and solo.",
+          "timestamp": "2026-07-12T13:50:05.335Z"
+        }
+      ],
+      "id": "gen_mrhuou21_sot2jjdqj",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:49:53.851Z",
+      "originalPrompt": "Oasis — Live Forever — Main Riff guitar tone for NUX Mighty Space.",
+      "proDescription": {
+        "tone_title": "Live Forever — Main Riff",
+        "genre": "Britpop / Classic Rock",
+        "sound_description": "Clean to lightly overdriven, chimey high end, warm mids, moderate sustain, open and airy with subtle grit. The tone is dynamic and responsive, retaining clarity and articulation, with a hint of British amp breakup. Slightly compressed for consistency but not squashed.",
+        "guitar_rig_description": "Noise gate: not used (noise is minimal in this style). Compressor: used gently at the start to smooth out dynamics and add sustain without squashing the attack. Overdrive/Distortion/Boost: mild overdrive or 'edge of breakup' setting to add light grit while maintaining chord clarity; a transparent drive or low-gain tube screamer-style pedal works well. Amplifier: classic British combo amp emulation (e.g., Vox AC30 model) for bright, jangly cleans and natural breakup. Cabinet: matching 2x12 open-back cab sim for airy, full response. EQ: applied post-amp to roll off excess lows and slightly enhance upper mids and chime. Modulation: not used for the main riff. Delay: not used. Reverb: used, plate or spring type, set for a subtle sense of space without washing out the sound.",
+        "references": [
+          "Oasis — Live Forever",
+          "Oasis — Don't Look Back In Anger",
+          "The Verve — Bitter Sweet Symphony"
+        ],
+        "song_part": "main riff",
+        "preferred_pickup": "bridge humbucker or single coil, tone knob open (full treble)",
+        "additional_info": "Use light to moderate picking attack for best response. Light gauge strings (e.g., .010–.046) as per typical Britpop setups. If using the NUX Mighty Space, select a Vox-style amp model with low gain, mild compression, and plate or spring reverb. Avoid excessive drive to keep the characteristic chime."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Origin Effects Cali76 Compact Compressor",
+          "Ibanez TS808 Tube Screamer",
+          "Empress ParaEQ MKII"
+        ],
+        "amplifier": "Vox AC30 Custom (C2)",
+        "cabinet": "Vox V212C 2x12 Open-Back Cabinet with Celestion G12M Greenback speakers",
+        "settings": {
+          "amp": {
+            "Gain (Normal Channel Volume)": 5.5,
+            "Bass": 5,
+            "Treble": 6.5,
+            "Cut": 5,
+            "Master": 4
+          },
+          "compressor": {
+            "Sustain": 10,
+            "Attack": 11,
+            "Level": 12
+          },
+          "overdrive": {
+            "Drive": 9,
+            "Tone": 12,
+            "Level": 13
+          },
+          "eq": {
+            "Low Cut": "-3dB at 80Hz",
+            "Mid Boost": "+2dB at 1.5kHz",
+            "High Shelf": "+1dB at 4kHz"
+          },
+          "reverb": {
+            "Type": "Spring",
+            "Mix": 12,
+            "Decay": 11
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": false,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 50
+          }
+        },
+        "compressor": {
+          "type": "Studio Comp",
+          "enabled": true,
+          "params": {
+            "Gain": 56,
+            "Threshold": 58,
+            "Ratio": 42,
+            "Release": 48
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Drive": 28,
+            "Tone": 62
+          }
+        },
+        "amplifier": {
+          "type": "Class A30",
+          "enabled": true,
+          "params": {
+            "Gain": 37,
+            "Master": 58,
+            "Bass": 44,
+            "Treble": 61,
+            "Cut": 58
+          }
+        },
+        "cabinet": {
+          "type": "A212",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 63,
+            "HighCut": 57
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 38,
+            "62": 42,
+            "125": 44,
+            "250": 48,
+            "500": 53,
+            "1000": 58,
+            "2000": 62,
+            "4000": 66,
+            "8000": 59,
+            "16000": 55,
+            "Vol": 51
+          }
+        },
+        "reverb": {
+          "type": "Spring",
+          "enabled": true,
+          "params": {
+            "Level": 38,
+            "Decay": 44
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": false,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 50
+              }
+            },
+            "compressor": {
+              "type": "Studio Comp",
+              "enabled": true,
+              "params": {
+                "Gain": 56,
+                "Threshold": 58,
+                "Ratio": 42,
+                "Release": 48
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Drive": 28,
+                "Tone": 62
+              }
+            },
+            "amplifier": {
+              "type": "Class A30",
+              "enabled": true,
+              "params": {
+                "Gain": 37,
+                "Master": 58,
+                "Bass": 44,
+                "Treble": 61,
+                "Cut": 58
+              }
+            },
+            "cabinet": {
+              "type": "A212",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 63,
+                "HighCut": 57
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 38,
+                "62": 42,
+                "125": 44,
+                "250": 48,
+                "500": 53,
+                "1000": 58,
+                "2000": 62,
+                "4000": 66,
+                "8000": 59,
+                "16000": 55,
+                "Vol": 51
+              }
+            },
+            "reverb": {
+              "type": "Spring",
+              "enabled": true,
+              "params": {
+                "Level": 38,
+                "Decay": 44
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Oasis — Live Forever — Main Riff guitar tone for NUX Mighty Space.",
+          "timestamp": "2026-07-12T13:49:53.851Z"
+        }
+      ],
+      "id": "gen_mrhuol6y_kzjzr2w9p",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:49:42.696Z",
+      "originalPrompt": "Dire Straits — Money for Nothing — Main Riff guitar tone for NUX Mighty Plug Pro.",
+      "proDescription": {
+        "tone_title": "Money for Nothing — Main Riff",
+        "genre": "80s Rock / Classic Rock",
+        "sound_description": "Very aggressive, saturated, and biting tone with a signature honky midrange. The sound is thick and sustaining, with a sharp attack and a slight 'nasal' quality. Somewhat compressed, but with enough dynamics to respond to pick attack. Bright top end but not harsh.",
+        "guitar_rig_description": "Noise gate: used at the beginning to control amp hiss and hum; Compressor: lightly used to even out attack and sustain notes; Overdrive/Distortion: heavy use of a mid-boosted overdrive or distortion pedal to push the amp, creating the signature saturated and nasal tone; Amplifier: high-gain British-style amp model (simulating a Soldano, JCM800, or similar), set for strong distortion and aggressive mids; Cabinet: 4x12 closed-back cabinet simulation for punch and body; EQ: post-distortion EQ to further emphasize mids and cut some low end for clarity; Modulation: not used; Delay: not used; Reverb: subtle plate or room reverb to add space but not wash out the attack.",
+        "references": [
+          "Dire Straits — Money for Nothing",
+          "Billy Idol — Rebel Yell",
+          "ZZ Top — Sharp Dressed Man (for amp reference)"
+        ],
+        "song_part": "Main riff",
+        "preferred_pickup": "bridge humbucker, tone = 10 (wide open)",
+        "additional_info": "The original recording used a Les Paul with a wah pedal left in a fixed position for the nasal mid boost (you can simulate this with a parametric EQ or auto-wah set to a static frequency). Pick attack is crucial—use a heavy pick and dig in hard. String gauge: regular 10s. Palm muting technique is essential for the percussive attack."
+      },
+      "realRig": {
+        "pedalboard": [
+          "Boss NS-2 Noise Suppressor",
+          "Keeley Compressor Plus",
+          "Dunlop Cry Baby GCB95 (set to fixed 'cocked' position for nasal mids)",
+          "Ibanez TS9 Tube Screamer",
+          "MXR 10-Band EQ"
+        ],
+        "amplifier": "Marshall JCM800 2203",
+        "cabinet": "Marshall 1960A 4x12 with Celestion G12T-75 speakers",
+        "settings": {
+          "amp": {
+            "Gain": 7.5,
+            "Bass": 4,
+            "Middle": 8,
+            "Treble": 6.5,
+            "Presence": 6,
+            "Master": 4
+          },
+          "noise_suppressor": {
+            "Threshold": "just above noise floor",
+            "Decay": "minimum"
+          },
+          "compressor": {
+            "Sustain": 4,
+            "Level": 6,
+            "Blend": 50,
+            "Attack": "fast"
+          },
+          "wah": {
+            "Pedal Position": "about 60% forward (mid sweep, cocked)"
+          },
+          "overdrive": {
+            "Drive": 4,
+            "Tone": 7.5,
+            "Level": 8
+          },
+          "eq": {
+            "100Hz": "-3dB",
+            "250Hz": "0dB",
+            "800Hz": "+3dB",
+            "1.6kHz": "+4dB",
+            "3.2kHz": "+2dB",
+            "6.4kHz": "-2dB"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 52,
+            "Decay": 45
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": true,
+          "params": {
+            "Level": 54,
+            "Sustain": 42,
+            "Clipping": 38
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 65,
+            "Drive": 68,
+            "Tone": 76
+          }
+        },
+        "amplifier": {
+          "type": "Brit 800",
+          "enabled": true,
+          "params": {
+            "Gain": 79,
+            "Master": 61,
+            "Bass": 33,
+            "Middle": 81,
+            "Treble": 69,
+            "Presence": 59
+          }
+        },
+        "cabinet": {
+          "type": "M1960AV",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 65,
+            "HighCut": 58
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 38,
+            "62": 42,
+            "125": 45,
+            "250": 51,
+            "500": 64,
+            "1000": 79,
+            "2000": 81,
+            "4000": 76,
+            "8000": 59,
+            "16000": 52,
+            "Vol": 54
+          }
+        },
+        "reverb": {
+          "type": "Room",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Decay": 50,
+            "Tone": 50
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 52,
+                "Decay": 45
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": true,
+              "params": {
+                "Level": 54,
+                "Sustain": 42,
+                "Clipping": 38
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 65,
+                "Drive": 68,
+                "Tone": 76
+              }
+            },
+            "amplifier": {
+              "type": "Brit 800",
+              "enabled": true,
+              "params": {
+                "Gain": 79,
+                "Master": 61,
+                "Bass": 33,
+                "Middle": 81,
+                "Treble": 69,
+                "Presence": 59
+              }
+            },
+            "cabinet": {
+              "type": "M1960AV",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 65,
+                "HighCut": 58
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 38,
+                "62": 42,
+                "125": 45,
+                "250": 51,
+                "500": 64,
+                "1000": 79,
+                "2000": 81,
+                "4000": 76,
+                "8000": 59,
+                "16000": 52,
+                "Vol": 54
+              }
+            },
+            "reverb": {
+              "type": "Room",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Decay": 50,
+                "Tone": 50
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Dire Straits — Money for Nothing — Main Riff guitar tone for NUX Mighty Plug Pro.",
+          "timestamp": "2026-07-12T13:49:42.696Z"
+        }
+      ],
+      "id": "gen_mrhuocl7_9ksvy6htb",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:49:30.668Z",
+      "originalPrompt": "Avenged Sevenfold — Unholy Confessions — Lead Riffs guitar tone for NUX Mighty Plug. Synyster Gates lead parts and riffs; saturated distortion.",
+      "proDescription": {
+        "tone_title": "Unholy Confessions — Lead Riffs",
+        "genre": "Modern Metalcore / Heavy Metal",
+        "sound_description": "Highly saturated, aggressive, and tight distortion with clear note separation. Bright high-end for lead clarity, chunky mids for punch, and tight lows. Fast attack, moderate sustain, minimal noise, and sufficient depth for articulation in solos and melodic riffs.",
+        "guitar_rig_description": "Noise gate: used to eliminate hiss and unwanted noise from high-gain settings. Compressor: not used, as dynamics are preserved for expressive lead playing. Overdrive/boost: used before the amp as a clean boost to tighten the low end and add bite. Distortion: provided mainly by a high-gain modern amp model. Amplifier: modern high-gain amp model emulating something like a Peavey 5150 or Mesa/Boogie Dual Rectifier, set for saturated lead gain. Cabinet: 4x12 closed-back cab sim with V30-style speakers for aggressive mids and tight lows. EQ: post-amp EQ to boost upper mids and highs for clarity and to slightly scoop low mids for tightness. Modulation: not used. Delay: not used for main lead riffs (add subtle short delay for solos if desired). Reverb: used subtly post-cab for space, but kept minimal to maintain attack and articulation.",
+        "references": [
+          "Avenged Sevenfold — Unholy Confessions",
+          "Bullet For My Valentine — Tears Don’t Fall",
+          "Trivium — Pull Harder on the Strings of Your Martyr"
+        ],
+        "song_part": "Lead riffs and melodic lines (not solo)",
+        "preferred_pickup": "bridge humbucker, tone = 10",
+        "additional_info": "Use a guitar with a high-output bridge humbucker (like Seymour Duncan SH-8 Invader or Synyster Gates signature). Play with alternate picking and palm muting for articulation. Medium to heavy gauge strings (10–52 or 10–56) for tightness. Ensure proper muting technique to avoid noise. Adjust the NUX Mighty Plug amp and cab settings to taste, favoring modern metal amp and 4x12 cab models."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ISP Decimator II Noise Reduction",
+          "Maxon OD808 Overdrive",
+          "MXR 10-Band EQ",
+          "TC Electronic Hall of Fame Mini Reverb"
+        ],
+        "amplifier": "Peavey 6505+ Head",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Lead Channel": true,
+            "Pre Gain": 6.5,
+            "Low": 5,
+            "Mid": 4.5,
+            "High": 7,
+            "Post Gain": 4.5,
+            "Presence": 6,
+            "Resonance": 5
+          },
+          "overdrive": {
+            "Drive": 0.5,
+            "Tone": 7,
+            "Level": 9
+          },
+          "eq": {
+            "31Hz": "-2dB",
+            "62Hz": "-1dB",
+            "125Hz": "-2dB",
+            "250Hz": "-3dB",
+            "500Hz": "-1dB",
+            "1kHz": "0dB",
+            "2kHz": "+2dB",
+            "4kHz": "+2dB",
+            "8kHz": "+1dB",
+            "16kHz": "+1dB"
+          },
+          "noise_gate": {
+            "Threshold": "just above noise floor, dialed for hard stops"
+          },
+          "reverb": {
+            "Decay": "short",
+            "Level": "very low (just enough for depth, not wash)"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 70,
+            "Drive": 10,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 80,
+            "Master": 60,
+            "Bass": 55,
+            "Middle": 45,
+            "Treble": 70,
+            "Presence": 65
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 55,
+            "LowCut": 60,
+            "HighCut": 55
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 45,
+            "62": 45,
+            "125": 48,
+            "250": 47,
+            "500": 46,
+            "1000": 52,
+            "2000": 60,
+            "4000": 68,
+            "8000": 65,
+            "16000": 60,
+            "Vol": 53
+          }
+        },
+        "reverb": {
+          "type": "Hall",
+          "enabled": true,
+          "params": {
+            "Level": 18,
+            "Decay": 24,
+            "PreDelay": 18,
+            "Liveliness": 35
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 70,
+                "Drive": 10,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 80,
+                "Master": 60,
+                "Bass": 55,
+                "Middle": 45,
+                "Treble": 70,
+                "Presence": 65
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 55,
+                "LowCut": 60,
+                "HighCut": 55
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 45,
+                "62": 45,
+                "125": 48,
+                "250": 47,
+                "500": 46,
+                "1000": 52,
+                "2000": 60,
+                "4000": 68,
+                "8000": 65,
+                "16000": 60,
+                "Vol": 53
+              }
+            },
+            "reverb": {
+              "type": "Hall",
+              "enabled": true,
+              "params": {
+                "Level": 18,
+                "Decay": 24,
+                "PreDelay": 18,
+                "Liveliness": 35
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Avenged Sevenfold — Unholy Confessions — Lead Riffs guitar tone for NUX Mighty Plug. Synyster Gates lead parts and riffs; saturated distortion.",
+          "timestamp": "2026-07-12T13:49:30.668Z"
+        }
+      ],
+      "songsterrData": {
+        "url": "https://www.songsterr.com/a/wsa/avenged-sevenfold-unholy-confessions-tab-s580",
+        "artist": "Avenged Sevenfold",
+        "title": "Unholy Confessions",
+        "trackType": "Guitar",
+        "suggestedPart": "Lead Riffs"
+      },
+      "id": "gen_mrhuo3b6_y4jf95nnb",
+      "status": "ready"
+    },
+    {
+      "timestamp": "2026-07-12T13:47:55.138Z",
+      "originalPrompt": "Powerwolf — Sanctified with Dynamite — main riff guitar tone for NUX Mighty Space. Distorted power-metal rhythm tone.",
+      "proDescription": {
+        "tone_title": "Sanctified with Dynamite — Main Riff",
+        "genre": "Power Metal / Modern Metal",
+        "sound_description": "Highly aggressive, tight, and saturated distortion with clear note definition; thick low end, pronounced mids for cut, crisp attack, and a controlled high end. Punchy and dynamic, with minimal muddiness, designed to cut through a dense mix while retaining clarity during fast palm-muted riffs.",
+        "guitar_rig_description": "1. Noise Gate: Used to suppress unwanted noise and hum from high-gain settings, ensuring tight stops and starts. 2. Compressor: Not used, as natural picking dynamics and high gain provide enough sustain and punch. 3. Overdrive/Boost: Used as a clean boost in front of the amp to further tighten the amp’s response, enhancing attack and articulation. 4. Amplifier: High-gain modern metal amp model, emulating a Peavey 5150 or Mesa/Boogie Dual Rectifier, set for heavy distortion with tight low end and focused mids. 5. Cabinet: 4x12” closed-back cab model with V30-style speakers, emphasizing midrange punch and controlled bass. 6. EQ: Post-amp EQ block used for further sculpting—slight low-cut to prevent boominess, gentle mid boost for presence, and mild high-cut to tame fizz. 7. Modulation: Not used, as a dry and direct rhythm tone is preferred for this part. 8. Delay: Not used, as rhythm parts require tightness and immediacy. 9. Reverb: Subtle plate or room reverb after the cab for a hint of space without washing out the attack.",
+        "references": [
+          "Powerwolf — Sanctified with Dynamite",
+          "Sabaton — Ghost Division",
+          "Judas Priest — Painkiller"
+        ],
+        "song_part": "main rhythm riff",
+        "preferred_pickup": "bridge humbucker, tone = 7",
+        "additional_info": "Use a guitar with high-output humbuckers for maximum clarity and punch. Palm-muting technique is crucial for the percussive chug. Medium to heavy gauge strings (10-52 or 11-49) recommended for tight low end. Pick attack should be firm for maximum articulation. Keep amp’s gain high but avoid excessive saturation to retain clarity."
+      },
+      "realRig": {
+        "pedalboard": [
+          "ISP Decimator II Noise Reduction Pedal",
+          "Maxon OD808 Overdrive (as clean boost: Drive low, Level high, Tone at noon)",
+          "MXR 10-Band EQ (post-amp/cab in FX loop)"
+        ],
+        "amplifier": "Peavey 6505+ Head",
+        "cabinet": "Mesa/Boogie Rectifier Standard 4x12 Cabinet loaded with Celestion Vintage 30 speakers",
+        "settings": {
+          "amp": {
+            "Lead Channel": true,
+            "Pre-Gain": 6.5,
+            "Low": 5,
+            "Mid": 7,
+            "High": 5,
+            "Resonance": 6,
+            "Presence": 5,
+            "Post-Gain": 4.5
+          },
+          "overdrive": {
+            "Drive": 0.5,
+            "Tone": 5,
+            "Level": 8.5
+          },
+          "noise_gate": {
+            "Threshold": "-40dB"
+          },
+          "eq": {
+            "31Hz": "-4dB",
+            "62Hz": "-2dB",
+            "125Hz": "0dB",
+            "250Hz": "+1dB",
+            "500Hz": "+2dB",
+            "1kHz": "+1dB",
+            "2kHz": "+2dB",
+            "4kHz": "+1dB",
+            "8kHz": "0dB",
+            "16kHz": "-2dB"
+          },
+          "cab": {
+            "Mic position": "center edge between dust cap and cone",
+            "Mic type": "dynamic (Shure SM57 or similar)"
+          },
+          "reverb": {
+            "Type": "Plate (Strymon BlueSky or amp’s built-in if available)",
+            "Mix": "5%",
+            "Decay": "Short"
+          }
+        }
+      },
+      "finalChain": {
+        "noisegate": {
+          "type": "Noise Gate",
+          "enabled": true,
+          "params": {
+            "Sensitivity": 50,
+            "Decay": 35
+          }
+        },
+        "compressor": {
+          "type": "K Comp",
+          "enabled": false,
+          "params": {
+            "Level": 50,
+            "Sustain": 50,
+            "Clipping": 50
+          }
+        },
+        "modulation": {
+          "type": "CE-1",
+          "enabled": false,
+          "params": {
+            "Rate": 50,
+            "Depth": 50,
+            "Intensity": 50
+          }
+        },
+        "effect": {
+          "type": "T Screamer",
+          "enabled": true,
+          "params": {
+            "Level": 70,
+            "Drive": 20,
+            "Tone": 65
+          }
+        },
+        "amplifier": {
+          "type": "Dual Rect",
+          "enabled": true,
+          "params": {
+            "Gain": 78,
+            "Master": 60,
+            "Bass": 55,
+            "Middle": 70,
+            "Treble": 58,
+            "Presence": 60
+          }
+        },
+        "cabinet": {
+          "type": "RECT 412",
+          "enabled": true,
+          "params": {
+            "Level": 53,
+            "LowCut": 58,
+            "HighCut": 44
+          }
+        },
+        "eq": {
+          "type": "10-Band",
+          "enabled": true,
+          "params": {
+            "31": 42,
+            "62": 45,
+            "125": 48,
+            "250": 54,
+            "500": 58,
+            "1000": 65,
+            "2000": 67,
+            "4000": 58,
+            "8000": 44,
+            "16000": 38,
+            "Vol": 52
+          }
+        },
+        "reverb": {
+          "type": "Plate",
+          "enabled": true,
+          "params": {
+            "Level": 23,
+            "Decay": 36
+          }
+        },
+        "delay": {
+          "type": "Analog Delay",
+          "enabled": false,
+          "params": {
+            "Intensity": 50,
+            "Rate": 50,
+            "Echo": 50
+          }
+        }
+      },
+      "versions": [
+        {
+          "chain": {
+            "noisegate": {
+              "type": "Noise Gate",
+              "enabled": true,
+              "params": {
+                "Sensitivity": 50,
+                "Decay": 35
+              }
+            },
+            "compressor": {
+              "type": "K Comp",
+              "enabled": false,
+              "params": {
+                "Level": 50,
+                "Sustain": 50,
+                "Clipping": 50
+              }
+            },
+            "modulation": {
+              "type": "CE-1",
+              "enabled": false,
+              "params": {
+                "Rate": 50,
+                "Depth": 50,
+                "Intensity": 50
+              }
+            },
+            "effect": {
+              "type": "T Screamer",
+              "enabled": true,
+              "params": {
+                "Level": 70,
+                "Drive": 20,
+                "Tone": 65
+              }
+            },
+            "amplifier": {
+              "type": "Dual Rect",
+              "enabled": true,
+              "params": {
+                "Gain": 78,
+                "Master": 60,
+                "Bass": 55,
+                "Middle": 70,
+                "Treble": 58,
+                "Presence": 60
+              }
+            },
+            "cabinet": {
+              "type": "RECT 412",
+              "enabled": true,
+              "params": {
+                "Level": 53,
+                "LowCut": 58,
+                "HighCut": 44
+              }
+            },
+            "eq": {
+              "type": "10-Band",
+              "enabled": true,
+              "params": {
+                "31": 42,
+                "62": 45,
+                "125": 48,
+                "250": 54,
+                "500": 58,
+                "1000": 65,
+                "2000": 67,
+                "4000": 58,
+                "8000": 44,
+                "16000": 38,
+                "Vol": 52
+              }
+            },
+            "reverb": {
+              "type": "Plate",
+              "enabled": true,
+              "params": {
+                "Level": 23,
+                "Decay": 36
+              }
+            },
+            "delay": {
+              "type": "Analog Delay",
+              "enabled": false,
+              "params": {
+                "Intensity": 50,
+                "Rate": 50,
+                "Echo": 50
+              }
+            }
+          },
+          "prompt": "Powerwolf — Sanctified with Dynamite — main riff guitar tone for NUX Mighty Space. Distorted power-metal rhythm tone.",
+          "timestamp": "2026-07-12T13:47:55.138Z"
+        }
+      ],
+      "id": "gen_mrhum1lm_kil4lksfs",
+      "status": "ready"
+    },
+    {
       "timestamp": "2026-03-19T17:18:11.116Z",
       "originalPrompt": "Elvis Presley Jailhouse Rock Lead Guitar Scotty Moore Style",
       "proDescription": {
@@ -44322,6 +49701,6 @@
   ],
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-03-19T17:19:10.064Z"
+    "lastUpdated": "2026-07-12T13:53:15.461Z"
   }
 }
